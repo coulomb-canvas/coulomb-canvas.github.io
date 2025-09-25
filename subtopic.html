@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subtopic - Coulomb Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+  </script>
+</head>
+<body>
+  <header>
+    <h1 id="subtopic-title">Loading...</h1>
+    <div class="back-links">
+      <a href="index.html">← Back to Topics</a>
+      |   
+      <a id="back-to-topic" href="#">  ← Back to Subtopics</a>
+    </div>
+
+  </header>
+
+  <main class="subtopic-page" id="subtopic-content">
+    <!-- Content loaded by JS -->
+  </main>
+
+  <script src="data/subtopics.js"></script>
+  <script src="data/topics.js"></script>
+  <div id="floating-nav-container">
+    <button id="nav-toggle">☰</button>
+    <div id="floating-nav"></div>
+  </div>
+
+  <main id="subtopic-list" class="subtopic-list"></main>
+
+
+
+  <div id="navigation-buttons" style="display: flex; justify-content: space-between; margin-top: 40px;">
+    <button id="back-subtopic-button">← Back</button>
+    <button id="next-subtopic-button">Next →</button>
+  </div>
+
+  <div id="bottom-shadow"></div>
+  <div id="bottom-subtopic-name">Hello</div>
+
+
+
+  <script>
+    const param = new URLSearchParams(window.location.search).get("subid");
+    const sub = subtopics[param];
+
+    if (sub) {
+      document.getElementById("subtopic-title").textContent = sub.title;
+      document.getElementById("bottom-subtopic-name").textContent = sub.title;
+
+      const main = document.getElementById("subtopic-content");
+
+      const p = document.createElement("div");
+      p.innerHTML = sub.content; // now supports rich HTML
+      p.className = "subtopic-text"; // Optional class for styling
+
+      console.log(document.querySelectorAll('h3'));
+
+      setTimeout(() => {
+        generateFloatingNav();
+      }, 100);
+
+      setTimeout(() => {
+        const toggleBtn = document.getElementById('nav-toggle');
+        const navPanel = document.getElementById('floating-nav');
+
+        if (toggleBtn && navPanel) {
+          toggleBtn.addEventListener('click', () => {
+            navPanel.classList.toggle('visible');
+          });
+        } else {
+          console.error("Toggle button or nav panel not found.");
+        }
+      }, 100);
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const headings = document.querySelectorAll("h3");
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("flash-lime");
+              // Remove class after animation so it can trigger again if user scrolls back
+              setTimeout(() => entry.target.classList.remove("flash-lime"), 1000);
+            }
+          });
+        }, {
+          threshold: 0.5 // Trigger when 50% of the element is visible
+        });
+
+        headings.forEach(h3 => observer.observe(h3));
+      });
+
+      
+
+      if (window.MathJax) {
+        MathJax.typeset();
+      }
+
+     // p.setAttribute("contenteditable", "true");  // 👈 editable
+      // p.className = "editable-text";
+
+      const img = document.createElement("img");
+      img.src = sub.image;
+      img.alt = sub.title;
+
+      main.appendChild(p);
+      //main.appendChild(img);
+    } else {
+      document.getElementById("subtopic-title").textContent = "Subtopic not found.";
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const subId = urlParams.get("subid");
+    const topicId = urlParams.get("topic");
+
+    // Set up the "Back to Topic" link
+    const topicLink = document.getElementById("back-to-topic");
+    const topic = topics.find(t => t.id === topicId);
+
+    if (topic && topic.id && topic.title && topicLink) {
+      topicLink.href = `topic.html?topic=${topic.id}`;
+      topicLink.textContent = `← Back to "${topic.title}"`;
+    } else {
+      topicLink.href = "index.html";
+      topicLink.textContent = "← Back to Topic (not found)";
+    }
+
+    const bottomSubtopicName = document.getElementById("bottom-subtopic-name");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        bottomSubtopicName.classList.add("show");
+      } else {
+        bottomSubtopicName.classList.remove("show");
+      }
+    });
+
+    
+
+    document.addEventListener("click", function (e) {
+    // Show popup
+      if (e.target.matches(".popup-trigger")) {
+        const popupId = e.target.getAttribute("data-popup-id");
+        const popup = document.getElementById(popupId);
+        if (popup) {
+          popup.style.display = "flex";
+          // Force reflow before adding class
+          void popup.offsetWidth;
+          popup.classList.add("show");
+        }
+      }
+
+      // Close popup
+      if (e.target.matches(".popup-close")) {
+        const popup = e.target.closest(".popup");
+        if (popup) {
+          popup.classList.remove("show");
+          setTimeout(() => {
+            popup.style.display = "none";
+          }, 400); // Wait for transition to finish
+        }
+      }
+    });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const subtopicId = urlParams.get("subid");
+  const currentIndex = topic.subtopics.findIndex(s => s.subid === subtopicId);
+
+  if (topicId && subtopicId) {
+    if (topic) {
+      
+      const nextSubtopic = topic.subtopics[currentIndex + 1];
+
+      if (nextSubtopic) {
+        const nextButton = document.getElementById("next-subtopic-button");
+        if (nextButton) {
+          nextButton.addEventListener("click", () => {
+            window.location.href = `subtopic.html?subid=${nextSubtopic.subid}&topic=${topicId}`;
+          });
+        }
+      } else {
+        // Optionally disable or hide the button if it's the last subtopic
+        const nextButton = document.getElementById("next-subtopic-button");
+        if (nextButton) {
+          nextButton.style.display = "none";
+        }
+      }
+    }
+  }
+  const backButton = document.getElementById("back-subtopic-button");
+
+  if (currentIndex > 0 && backButton) {
+    const previousSubtopic = topic.subtopics[currentIndex - 1];
+    backButton.addEventListener("click", () => {
+      window.location.href = `subtopic.html?subid=${previousSubtopic.subid}&topic=${topicId}`;
+    });
+  } else if (backButton) {
+    backButton.style.display = "none"; // hide if it's the first subtopic
+  }
+});
+
+document.querySelectorAll(".image").forEach(box => {
+  box.addEventListener("mouseenter", () => document.body.classList.add("dimmed"));
+  box.addEventListener("mouseleave", () => document.body.classList.remove("dimmed"));
+});
+
+// Hydrogen Emission Spectrum Simulation - FIXED
+console.log("DEBUG: Script has started running.");
+
+const energyLevels = { 1: -13.6, 2: -3.4, 3: -1.51, 4: -0.85, 5: -0.54 };
+let currentLevel = 1;
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DEBUG: DOM is fully loaded.");
+
+    // --- 1. FIRST, define decayElectron ---
+    function decayElectron() {
+        console.log("DECAY: Starting decay from level", currentLevel);
+        const electron = document.getElementById('electron');
+        if (!electron || currentLevel === 1) {
+            console.log("DECAY: Cannot decay from ground state.");
+            return;
+        }
+
+        // Find all possible lower levels
+        const possibleLevels = Object.keys(energyLevels)
+            .map(Number)
+            .filter(level => level < currentLevel);
+
+        // Randomly select a lower level to decay to
+        const finalLevel = possibleLevels[Math.floor(Math.random() * possibleLevels.length)];
+        console.log("DECAY: Decaying to level", finalLevel);
+
+        // Calculate energy of emitted photon
+        const energyDiff = (energyLevels[finalLevel] - energyLevels[currentLevel]).toFixed(2);
+        const wavelength = (1240 / Math.abs(energyDiff)).toFixed(0); // in nm
+
+        // Update equation display
+        const energyCalcEl = document.getElementById('energy-calculation');
+        const wavelengthCalcEl = document.getElementById('wavelength-calculation');
+        if (energyCalcEl && wavelengthCalcEl) {
+            energyCalcEl.textContent = `ΔE = ${energyLevels[finalLevel]}eV - (${energyLevels[currentLevel]}eV) = ${Math.abs(energyDiff)}eV`;
+            wavelengthCalcEl.textContent = `λ = hc/ΔE ≈ ${wavelength}nm`;
+        }
+
+        // Highlight the corresponding spectral line
+        const lineId = `line-${currentLevel}-${finalLevel}`;
+        const spectralLine = document.getElementById(lineId);
+        if (spectralLine) {
+            spectralLine.style.opacity = '1';
+            spectralLine.style.height = '30px';
+            setTimeout(() => {
+                spectralLine.style.opacity = '0.3';
+                spectralLine.style.height = '20px';
+            }, 2000);
+        }
+
+        // Move electron to final level
+        const radius = 30 + (finalLevel - 1) * 30;
+        electron.style.transform = `translate(${radius}px, -50%)`;
+        currentLevel = finalLevel;
+    }
+
+    // --- 2. THEN, define exciteElectron (which uses decayElectron) ---
+    function exciteElectron(targetLevel) {
+        console.log("EXCITE: Moving to level:", targetLevel);
+        const electron = document.getElementById('electron');
+        if (!electron || targetLevel <= currentLevel) return;
+
+        const radius = 30 + (targetLevel - 1) * 30;
+        electron.style.transform = `translate(${radius}px, -50%)`;
+        currentLevel = targetLevel;
+
+        // This will now work because decayElectron is defined above
+        setTimeout(decayElectron, 1000);
+    }
+
+    // --- 3. FINALLY, setup the event listeners ---
+    console.log("DEBUG: Adding event listener to the document.");
+    document.addEventListener('click', function(event) {
+        if (event.target.id === 'level-1') {
+            exciteElectron(1);
+        } else if (event.target.id === 'level-2') {
+            exciteElectron(2);
+        } else if (event.target.id === 'level-3') {
+            exciteElectron(3);
+        } else if (event.target.id === 'level-4') {
+            exciteElectron(4);
+        } else if (event.target.id === 'level-5') {
+            exciteElectron(5);
+        }
+    });
+
+    // Initialize electron
+    const electron = document.getElementById('electron');
+    if (electron) {
+        electron.style.transform = 'translate(30px, -50%)';
+        console.log("DEBUG: Electron initialized.");
+    } else {
+        console.error("ERROR: Electron element not found.");
+    }
+});
+
+  const velocitySlider = document.getElementById("velocity");
+  const vValue = document.getElementById("vValue");
+  const rod = document.getElementById("rod");
+  const lengthValue = document.getElementById("lengthValue");
+
+  const L0 = 400; // rest length in px
+  const c = 1;    // normalized speed of light (v/c)
+
+  velocitySlider.addEventListener("input", () => {
+    let v = velocitySlider.value / 100; // fraction of c
+    vValue.textContent = v.toFixed(2);
+
+    let gamma = Math.sqrt(1 - v*v); // Lorentz contraction factor
+    let L = L0 * gamma;
+
+    rod.style.width = L + "px";
+    lengthValue.textContent = Math.round(L);
+  });
+
+
+
+ 
+
+
+
+
+      
+
+  </script>
+  <script src="script.js"></script>
+
+  
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  
+  
+</body>
+</html>

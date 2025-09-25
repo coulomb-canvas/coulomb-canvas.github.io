@@ -1,0 +1,992 @@
+:root {
+  --bg: #0f1117;
+  --text: #f0f4ff;
+  --accent: #4f8cff;
+  --subtle: #7f8aa3;
+  /**/
+  --card: #1c1f26;
+}
+
+@font-face {
+  font-family: "Njal";
+  src: url("fonts/Njal Bold.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: light;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  font-family: "Verdana", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;          /* <- change the base size */
+  line-height: 1.5;         /* <- increase for more vertical space */
+  text-align: justify;
+  position: relative;
+  z-index: 0; /* <- ensure body is behind other elements */
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+header {
+  padding: 0rem 0rem;
+  font-family: "Njal", sans-serif;
+  padding-top: 0%;
+}
+
+h3 {
+  font-family: "Njal", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  color: var(--accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 40px;
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.1);  
+}
+
+@keyframes flash-lime {
+  0% { color: var(--accent); }
+  50% { color: rgba(132, 255, 1, 0.827); }
+  100% { color: var(--accent); }
+}
+
+.flash-lime {
+  animation: flash-lime .5s ease;
+}
+
+
+h1 {
+  font-size: 4rem;
+  color: var(--accent);
+  align-items: center;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  padding-bottom: 0px;
+  animation: bob 3s ease-in-out infinite;
+}
+
+p {
+  color: var(--subtle);
+}
+
+.formula-box p {
+  color: var(--text)
+}
+
+li {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--subtle);
+}
+
+/* .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+} */
+
+.topic-image {
+  width: 100px;
+  height: auto;
+  margin: 20px;
+  transition: transform 0.2s ease;
+  border-radius: 0px;
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* MIGHT wanna get rid of this */
+}
+
+.topic-image:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.topic-image-link {
+  display: inline-block;
+  text-align: center;
+}
+
+
+.topic-btn {
+  background: var(--card);
+  padding: 1.2rem;
+  text-align: center;
+  border-radius: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.topic-btn:hover {
+  background: #2b303a;
+}
+
+.circle-wrapper {
+  position: relative;
+  width: 70vmin;   /* always fits within viewport */
+  height: 70vmin;  /* keeps it square */
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+
+.circle-center {
+  position: absolute;
+  transform: translate(+88%, 0%);
+  z-index: 0;
+}
+
+.circle-center img {
+  width: 200px;
+  height: auto;
+}
+
+.circle-menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+}
+
+.topic-image-link {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transform-origin: center center;
+  z-index: 1;
+}
+
+.topic-image {
+  width: 20vmin;  
+  height: 20vmin;
+  transition: transform 0.3s ease;
+}
+
+.topic-image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.topic-button {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.topic-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.topic-title {
+  margin-top: -50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 20px;
+  font-family: "Njal", sans-serif;
+  opacity: 0.7;
+  transition: opacity 0.3s, background-color 0.3s;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.topic-image-link:hover .topic-title {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+
+
+
+.back-link {
+  position: relative;
+  display: flex;
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+  text-decoration: none;
+  justify-content: center;
+  padding-top: 0%;
+  top: -20px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #39b6ff
+}
+
+.subtopic-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  margin-top: 
+  0px;
+}
+
+.subtopic-image-link {
+  display: block;
+  text-align: center;
+}
+
+.subtopic-image {
+  width: 1200px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.subtopic-image:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+.subtopic {
+  background: var(--card);
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+.subtopic h2 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+.subtopic img {
+  max-width: 100%;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+.subtopic-link {
+  font-size: 1.3rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.subtopic-link:hover {
+  text-decoration: underline;
+}
+
+
+.back-links {
+  margin: 0rem;
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+  align-items: center;
+  padding-top: 0%;
+  top: -20px;
+}
+
+.back-links a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.back-links a:hover {
+  text-decoration: underline;
+  color: #39b6ff
+}
+
+.subtopic-text {
+  padding: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  background-color: #111; /* optional: subtle background */
+  border-radius: 25px;
+}
+
+/* ------------ Orange link pop-up ------------ */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px #000;
+  position: relative;
+  transform: translateY(-30px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.popup.show .popup-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.popup-trigger {
+  color: #ff5500;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.popup-trigger:hover {
+  color: #ffaa00;
+}
+
+.example .popup-trigger {
+  width: 30px;
+  animation: bob 3s ease-in-out infinite;
+}
+
+.example .popup-trigger:hover {
+  transform: scale(1.2);
+}
+
+.container {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 40px; /* Space between image and text */
+}
+
+.text p {
+  margin: 0; /* Remove default paragraph margins */
+}
+
+/* ------------ Container for the floating images ------------ */
+
+.image img {
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  z-index: 30;
+}
+
+.image-floater {
+  display: inline-block;
+  animation: bob 3s ease-in-out infinite;
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+}
+
+.image-floater:hover {
+  animation-play-state: paused;
+  z-index: 50;
+}
+
+.image-floater:hover::after {
+  z-index: 30;
+}
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(8px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+/* Overlay that darkens the screen */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+body.dimmed::before {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* zoom on the img */
+.pop-image {
+  border-radius: 12px;
+  transition: transform .3s ease, box-shadow .3s ease;
+  transform-origin: center;
+  position: relative;
+  
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack vertically on smaller screens */
+  }
+}
+
+.image-box {
+  position: relative;
+  padding: 10px; /* space between image and border */
+  border: 5px solid rgb(1, 221, 255); /* static border */
+  border-radius: 16px; /* optional for rounded corners */
+  overflow: hidden; /* hide the animated pseudo-element overflow */
+  z-index: 30;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.5) translateX(-30px);
+  z-index: 30;
+}
+
+.image-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%; /* Expand width so it still covers the full box */
+  height: 100%;
+  border: 3px solid rgb(173, 244, 255);
+  border-radius: 12px;
+  box-sizing: border-box;
+  animation: flash-border 1s linear infinite;
+  z-index: 30;
+}
+/* White flash tracing around the border */
+.image-box::after {
+  position: relative;
+  transition: transform 0.3s ease;
+  top: 0;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 12px; /* match the box */
+  box-sizing: border-box;
+  animation: trace-border 1s linear infinite;
+  pointer-events: none; /* so hover works on image */
+  mask-image: linear-gradient(to right, rgb(255, 255, 255) 30%, transparent 70%);
+  mask-repeat: no-repeat;
+  mask-size: 300% 100%;
+  z-index: 50;
+}
+
+/* Animate the mask to create the traveling flash effect */
+@keyframes trace-border {
+  0% {
+    mask-position: 100% 0;
+  }
+  100% {
+    mask-position: -200% 0;
+  }
+}
+
+@keyframes flash-border {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+  25% {
+    clip-path: inset(0 0 100% 0);
+  }
+  50% {
+    clip-path: inset(0 0 0 100%);
+  }
+  75% {
+    clip-path: inset(100% 0 0 0);
+  }
+  100% {
+    clip-path: inset(0 100% 0 0);
+  }
+}
+
+.image-tooltip {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  font-family: "Njal", sans-serif;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image:hover .image-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-250px);
+}
+
+/* ------------ Container for the formulae box ------------ */
+
+.formula-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hover-wrapper {
+  position: relative;
+  display: inline-block;
+  left: calc(45%); /* center on page */
+}
+
+.formula-tooltip {
+  position: absolute;
+  left: 110%; /* Show to the right */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  font-family: "Njal", sans-serif;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hover-wrapper:hover .formula-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(5px);
+}
+
+.formula-box {
+  position: relative;
+  color: white;
+  /* display: inline-block; */
+  padding: 10px 15px;
+  margin: 15px 0;
+  border: 5px solid rgb(255, 149, 0);
+  border-radius: 10px;
+  z-index: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo {
+  position: relative;
+  /* display: inline-block; */
+  padding: 10px 15px;
+  margin: 15px 0;
+  border: 5px solid rgb(0, 64, 255);
+  border-radius: 10px;
+  z-index: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formula-box:hover {
+  transform: scale(1.08); /* formula grows slightly */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.formula-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%; /* Expand width so it still covers the full box */
+  height: 100%;
+  border: 4px solid rgb(255, 210, 112);
+  border-radius: 4px;
+  box-sizing: border-box;
+  animation: flash-border 1s linear infinite;
+  z-index: 30;
+}
+
+.formula-box::after {
+  position: relative;
+  transition: transform 0.3s ease;
+  top: 0;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 12px; /* match the box */
+  box-sizing: border-box;
+  animation: trace-border 1s linear infinite;
+  pointer-events: none; /* so hover works on image */
+  mask-image: linear-gradient(to right, rgb(255, 255, 255) 30%, transparent 70%);
+  mask-repeat: no-repeat;
+  mask-size: 300% 100%;
+  z-index: 50;
+}
+
+@keyframes gradient-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optional: Glow effect on formula text */
+.formula-box:hover mjx-container {
+  filter: drop-shadow(0 0 10px white);
+}
+
+
+/* ------------ Container for the floating navigation ------------ */
+
+#floating-nav {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  max-width: 150px;
+}
+
+#floating-nav button {
+  display: block;
+  margin: 5px 0;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+#floating-nav button:hover {
+  background-color: #004c99;
+}
+
+#floating-nav-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#nav-toggle {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#floating-nav {
+  margin-top: 10px;
+  background-color: rgba(30, 30, 30, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  max-width: 150px;
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.3s ease;
+  padding: 0 10px; /* prevents content flicker */
+}
+
+/* Visible state */
+#floating-nav.visible {
+  opacity: 1;
+  max-height: 500px;
+  padding: 10px;
+}
+
+
+#floating-nav button {
+  display: block;
+  margin: 5px 0;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+#floating-nav button:hover {
+  background-color: #004c99;
+}
+
+#next-subtopic-button {
+  position: fixed;
+  left: 91vw;
+  top: 94vh;
+  z-index: 50;
+}
+
+#back-subtopic-button {
+  position: fixed;
+  left: 3.2vw;
+  top: 94vh;
+  z-index: 50;
+}
+
+#bottom-shadow {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, black, transparent);
+  pointer-events: none; /* allows clicks through the shadow */
+  z-index: 40;
+}
+
+#bottom-subtopic-name {
+  position: fixed;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "Njal", sans-serif;
+  font-size: 24px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  z-index: 45;
+  pointer-events: none; /* allows clicks through the text */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+#bottom-subtopic-name.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#navigation-buttons button {
+  background-color: #0066cc;
+  color: white;
+  font-family: "Njal", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#navigation-buttons button:hover {
+  background-color: #004a99;
+}
+
+.definition {
+  position: relative;
+  cursor: help; /* shows ? cursor */
+  color: #4db8ff; /* highlight key terms */
+}
+
+.definition::after {
+  content: attr(data-definition);
+  position: absolute;
+  bottom: -2.6em; /* position below the word */
+  left: 50%;      /* anchor at middle */
+  background: #222;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.definition:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.simulation-content {
+    display: flex;
+    flex-direction: row; /* Place items side by side */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 2rem; /* Space between the atom and spectrum */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: center; /* Center the items */
+    margin: 20px 0;
+}
+
+/* Atom container styling */
+.atom-container {
+    flex: 0 0 auto; /* Don't grow or shrink */
+    width: 300px; /* Fixed width */
+    height: 300px;
+    margin: 0; /* Remove any default margins */
+    /* Your existing styles below */
+    left: -10%;
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    background: #ffffff00;
+}
+
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #e74c3c;
+    border-radius: 50%;
+}
+
+.energy-levels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.energy-level {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px dashed #ccc;
+    border-radius: 50%;
+}
+
+.energy-level[data-level="1"] { width: 60px; height: 60px; }
+.energy-level[data-level="2"] { width: 120px; height: 120px; }
+.energy-level[data-level="3"] { width: 180px; height: 180px; }
+.energy-level[data-level="4"] { width: 240px; height: 240px; }
+.energy-level[data-level="5"] { width: 300px; height: 300px; }
+
+.electron {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #3498db;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+}
+
+.controls {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.energy-buttons button {
+    margin: 5px;
+    padding: 8px 15px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.energy-buttons button:hover {
+    background: #2980b9;
+}
+
+.spectrum-display {
+    flex: 1; /* Allow it to grow and fill available space */
+    min-width: 250px; /* Minimum width before wrapping */
+    max-width: 400px; /* Maximum width */
+    /* Your existing styles below */
+    margin: 0;
+    padding: 20px;
+    background: #2c3e50;
+    border-radius: 5px;
+    height: 300px; /* Match the atom container height */
+    overflow-y: auto; /* Add scrollbar if many spectrum lines */
+}
+
+@media (max-width: 768px) {
+    .simulation-content {
+        flex-direction: column; /* Stack on top of each other on mobile */
+        align-items: center;
+    }
+    
+    .spectrum-display {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.spectrum-line {
+    height: 20px;
+    margin: 5px 0;
+    opacity: 0.3;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.spectrum-line::after {
+    content: attr(data-transition);
+    position: absolute;
+    right: -50px;
+    color: white;
+    font-size: 12px;
+}
+
+/* Colors for different spectral series */
+.spectrum-line[data-transition$="→1"] { background: violet; width: 50px; }
+.spectrum-line[data-transition$="→2"] { background: blue; width: 100px; }
+.spectrum-line[data-transition$="→3"] { background: green; width: 150px; }
+.spectrum-line[data-transition$="→4"] { background: red; width: 200px; }
+
+.equation-display {
+    background: #ecf0f100;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+}

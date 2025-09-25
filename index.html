@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coulomb Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <header>
+    <h1>Coulomb Academy ⚡</h1>
+    <p>Explore visual notes by topic</p>
+  </header>
+  <div id="topic-container"></div>
+
+  <div class="circle-wrapper">
+    <div class="circle-center">
+      <img src="images/Avatar/Avatar.png" alt="Center" />
+    </div>
+
+    <div class="circle-menu" id="topic-container">
+      <!-- Topic image buttons will go here via JS -->
+    </div>
+  </div>
+
+
+  <script src="data/topics.js"></script>
+  <script>
+    const topicContainer = document.getElementById("topic-container");
+
+    topics.forEach(topic => {
+      const link = document.createElement("a");
+      link.href = `topic.html?topic=${topic.id}`;
+      link.classList.add("topic-image-link");
+
+      const img = document.createElement("img");
+      img.src = topic.image;
+      img.alt = topic.title;
+      img.classList.add("topic-image");
+
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const topicContainer = document.getElementById("topic-container");
+      const numberOfTopics = topics.length;
+      const radius = 320; // distance from center
+
+      topics.forEach((topic, index) => {
+        const angle = ((index / numberOfTopics) * (2 * Math.PI))-(Math.PI / 2);
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+
+        const link = document.createElement("a");
+        link.href = `topic.html?topic=${topic.id}`;
+        link.classList.add("topic-image-link");
+        link.style.left = `calc(50% + ${x}px - 120px)`; // 40px = half image width
+        link.style.top = `calc(50% + ${y}px - 115px)`;
+
+        const img = document.createElement("img");
+        img.src = topic.image;
+        img.alt = topic.title;
+        img.classList.add("topic-image");
+
+        const titleOverlay = document.createElement("div");
+        titleOverlay.classList.add("topic-title");
+        titleOverlay.textContent = topic.title;
+
+        link.appendChild(img);
+        link.appendChild(titleOverlay);
+        topicContainer.appendChild(link);
+
+        
+      });
+    });
+
+
+  </script>
+
+</body>
+</html>

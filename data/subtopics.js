@@ -34,7 +34,7 @@ const subtopics = {
       time possible. Iku ze!
     </p> `
   },
-  "difficulty": {
+  "features": {
     content: `
 
     <p>If you look any of the topics, you'll see 3 main features</p>
@@ -82,8 +82,20 @@ const subtopics = {
     <p> On the very top right, you will see a grey square with what could be interpreted as the chinese symbol for three.
     But it's not. It represents a list. And if you click said list, you will get a list of all the subsections within the
     topic. You can click whatever subsection you want to go to, and it will take you straight there</p>S
-    <p>And that's it for now!</p>
-    <p> To give you an introduction to what one of these looks like, yo
+
+    `
+  },
+
+  "features2": {
+    content: `
+     <p>First, we have these light blue underlined links. These will point out key definitions which you should learn. 
+     Hovering over them will reveal the deininition.</p>
+     <p>If you know anything about physics, you'd know that there are a lot of formulae. At first, they may seem
+     random, but once you see the derivations, you realise that they do make sense. Slight problem though... some 
+     of these derivations are a <em>pain</em> in the arse. Others are significantly less painful, but not necessary
+     for you to know. In either case, if there is a derivation which I think you could probably do without, I will
+     put an orange link like this. Clicking this will give you the derivation</p>
+     <p>Next, the images are contained within these 
     `
   },
 
@@ -2377,9 +2389,8 @@ const subtopics = {
             <img src="images/Special Relativity/Frames S and S'.png" alt="Frames S and S'" style="max-width: 100%;
             border-radius: 8px; left: -0px;" class="pop-image"/>
           </div>
-          <span class="image-tooltip" style="left:-130%;"> <div style="color: #006aff;
-          font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-          Figure 1: Frames S and S'</div><div style="color:white; font-size:20px; line-height: 1.2;">
+          <span class="image-tooltip" style="left:-130%;"> <div class="image-tooltip-title">
+          Figure 1: Frames S and S'</div><div class="image-tooltip-desc">
           The land frame S is stationary, and the ferry frame S' is moving <br> at speed u in the x-direction.</div></span>
         </div>
       </div>
@@ -2449,9 +2460,8 @@ const subtopics = {
             <img src="images/Special Relativity/Michelson-Morley.png" alt="Michelson-Morley Experiment" style="max-width:100%; 
             border-radius: 8px;" class="pop-image"/>
           </div>
-          <span class="image-tooltip" style="left:-400px"> <div style="color: #006aff; 
-          font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-          Figure 2: Michelson-Morley Experiment</div><div style="color:white; font-size:20px; line-height: 1.2;">
+          <span class="image-tooltip" style="left:-400px"> <div class="image-tooltip-title">
+          Figure 2: Michelson-Morley Experiment</div><div class="image-tooltip-desc">
           The light is split up by the half-silvered mirror in the middle. Then, due to the <br> 
           movement of the aether (or movement the earth through the aether depending <br> on which
           frame you choose to use) they are reflected back to the half-silvered <br> mirror at
@@ -2541,9 +2551,8 @@ const subtopics = {
               <img src="images/Special Relativity/Space-time S'.png" alt="Simultaneity S'" style="max-width: 100%; 
               border-radius: 8px;" class="pop-image"/>
             </div>
-            <span class="image-tooltip"> <div style="color: #006aff; 
-            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-            Figure 3a: Simultaneity in the S' Frame</div><div style="color:white; font-size:20px; line-height: 1.2;">
+            <span class="image-tooltip"> <div class="image-tooltip-title">
+            Figure 3a: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
             In the S' frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
             equidistant from her. The light reaches both of them at the same time, <br> 
             so the events are simultaneous.</div></span>
@@ -2575,9 +2584,8 @@ const subtopics = {
               <img src="images/Special Relativity/Space-time S.png" alt="Simultaneity S" style="max-width: 100%; 
               border-radius: 8px;" class="pop-image"/>
             </div>
-            <span class="image-tooltip"> <div style="color: #006aff; 
-            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-            Figure 3b: Simultaneity in the S' Frame</div><div style="color:white; font-size:20px; line-height: 1.2;">
+            <span class="image-tooltip"> <div class="image-tooltip-title">
+            Figure 3b: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
             In the S frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
             equidistant from her, but in this frame, the light reaches them at different <br> 
             times. The events are no longer simultaneous.</div></span>
@@ -3398,9 +3406,8 @@ const subtopics = {
           <div class="image-box">
             <img src="images/Thermal Physics/van der waals pv graph.png" class="pop-image" style="width: 300px"/>
           </div>
-          <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
-            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-            Figure 1:Van de Waals' graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
+          <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
+            Figure 1:Van de Waals' graph</div><div class="image-tooltip-desc">
             The adiabats appear steeper than the isotherms</div></span>
         </div>
       </div>
@@ -3839,9 +3846,8 @@ const subtopics = {
           <div class="image-box">
             <img src="images/Thermal Physics/Piston.png" class="pop-image" style="width: 300px"/>
           </div>
-          <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
-            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-            Figure 1: Cylinder and piston</div><div style="color:white; font-size:20px; line-height: 1.2;">
+          <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
+            Figure 1: Cylinder and piston</div><div class="image-tooltip-desc">
             The adiabats appear steeper than the isotherms</div></span>
         </div>
       </div>
@@ -3946,9 +3952,8 @@ const subtopics = {
           <div class="image-box">
             <img src="images/Thermal Physics/Adiabat vs Isotherm.png" class="pop-image" style="width: 300px"/>
           </div>
-          <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
-            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-            Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
+          <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
+            Figure 1: Adiabats VS Isotherms on a p-V graph</div><div class="image-tooltip-desc">
             The adiabats appear steeper than the isotherms</div></span>
         </div>
       </div>
@@ -7595,9 +7600,8 @@ const subtopics = {
               <img src="images/Astronomy/Celestial sphere.png" alt="Celestial Sphere" style="max-width: 100%; 
               border-radius: 8px; left: -0px;" class="pop-image"/>
             </div>
-            <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
-            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-            Figure 1: The celestial sphere</div><div style="color:white; font-size:20px; line-height: 1.2;">
+            <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
+            Figure 1: The celestial sphere</div><div class="image-tooltip-desc">
             Key aspects of the celestial sphere, viewed from the outside, with the observer <br> at
             its centre. Relative to the observer, the celestial sphere spins daily about <br> its North-South axis
             in a clockwise sense when viewed from above the North <br> Celestial Pole (NCP). The Sun travels

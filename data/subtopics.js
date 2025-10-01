@@ -3048,8 +3048,7 @@ const subtopics = {
 
     // Subtopics for Thermal Physics
   "thermal-intro": {
-    title: `Introduction to Thermal Physics:\n
-    Turn up the Heat, Odd-eyes Pendulum Dragon!`,
+    title: `Introduction to Thermal Physics:\nTurn up the Heat, Odd-eyes Pendulum Dragon!`,
     content: `
     <p> Temperature, in normal human language, is a measure of how hot something is. But </p>
     `
@@ -3058,7 +3057,6 @@ const subtopics = {
   "heat": {
     title: "Heat and Temperature",
     content: ` 
-      <h3>Temperature</h3>
 
       <p>Let’s talk about temperature. We’re talking about <strong>temperature</strong> — the physical property that tells us how much kinetic energy the atoms or molecules in a system have.</p>
 
@@ -3302,9 +3300,7 @@ const subtopics = {
   "properties": {
     title: "Thermal Properties of Matter",
     content: `
-    <h3>Thermal Properties of Matter</h3>
-
-    <p>Right. Let’s talk about heat. We’re talking about <strong>thermal physics</strong> — the science of why stuff 
+    <p>Right. Let’s talk about <strong>thermal physics</strong> — the science of why stuff 
     expands when you heat it, why gases don’t stay gases forever, and why your kettle boils at 100°C (unless you’re in a lab, or on a mountain, or in a submarine).</p>
 
     <h3>The Ideal Gas Law</h3>

@@ -49,7 +49,7 @@
 
       function updateRadiusAndLayout() {
         if (mq.matches) {
-          radius = window.innerWidth / 2.5;
+          radius = window.innerWidth / 2.4;
         } else {
           radius = 320;
         }
@@ -67,8 +67,9 @@
             const link = document.createElement("a");
             link.href = `topic.html?topic=${topic.id}`;
             link.classList.add("topic-image-link");
-            link.style.left = `calc(50% + ${x}px - 100px)`; // 40px = half image width
-            link.style.top = `calc(50% + ${y}px - 100px)`;
+            link.style.left = `calc(50vw + ${x}px)`; // 40px = half image width
+            link.style.transform = 'translateX(-50%) translateY(-50%)';
+            link.style.top = `calc(50vh + ${y}px`;
 
             const img = document.createElement("img");
             img.src = topic.image;

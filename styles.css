@@ -37,6 +37,7 @@ body {
   overflow-x: hidden;
 }
 
+
 header {
   padding: 0rem 0rem;
   font-family: "Njal", sans-serif;
@@ -108,9 +109,11 @@ li {
 } */
 
 .topic-image {
+  margin-top: 0%;
+  margin-bottom: 0%;
   width: 100px;
   height: auto;
-  margin: 20px;
+  margin: 0px;
   transition: transform 0.2s ease;
   border-radius: 0px;
   /* box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* MIGHT wanna get rid of this */
@@ -144,9 +147,10 @@ li {
 
 .circle-wrapper {
   position: relative;
-  width: 100vh;
-  /* always fits within viewport */
   height: 100vh;
+  width: auto;
+  /* always fits within viewport */
+  
   /* keeps it square */
   margin: 0 auto;
   border-radius: 50%;
@@ -154,10 +158,12 @@ li {
 }
 
 .circle-center {
-  position: absolute;
-  transform: translate(140%, 40%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* full viewport height */
   z-index: 0;
-  height: calc(100vh/1.77);
 }
 
 .circle-center img {
@@ -165,18 +171,34 @@ li {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  .circle-center {
+    width: 100vw;
+    height: 100vh;
+    
+  }
+
+    .circle-center img {
+    position: fixed;
+    width: 29.3vw;
+    height: auto;
+
+  }
+}
+
+
 .circle-menu {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
+  top: 0vh;
+  left: 0vw;
 }
 
 .topic-image-link {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 155px;
+  height: 155px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,6 +206,13 @@ li {
   text-decoration: none;
   transform-origin: center center;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .topic-image-link {
+    width: auto;
+    height: auto;
+  }
 }
 
 .topic-image {
@@ -201,7 +230,7 @@ li {
   position: relative;
   width: 120px;
   height: 120px;
-  margin: 10px;
+  margin: 0px;
   cursor: pointer;
 }
 
@@ -210,13 +239,14 @@ li {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  margin: 0px;
 }
 
 .topic-title {
   margin-top: -50px;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 4px 8px;
+  padding: 0px;
   border-radius: 4px;
   font-size: 20px;
   font-family: "Njal", sans-serif;
@@ -224,21 +254,20 @@ li {
   transition: opacity 0.3s, background-color 0.3s;
   z-index: 3;
   pointer-events: none;
+  white-space: pre-line
 }
 
 @media (max-width: 768px) {
-  .topic-title {
-    margin-top: calc(-1*(100vh / 20));
-    font-size: calc(100vw / 39);
+  #topic-title {
+    font-size: calc(100vw / 12);
+
   }
 
-  .circle-center img {
-  width: calc(100vw / 4);
-}
+  .topic-title {
+    font-size: calc(100vw / 39);
+    margin-top: -5vw;
+  }
 
-.circle-center {
-  transform: translate(35vw,  calc(80% - 27vw));
-}
 
 
 }
@@ -269,6 +298,13 @@ li {
   color: #39b6ff
 }
 
+@media (max-width: 768px) {
+  .back-link {
+    font-size: 2.5vw;
+    top: auto;
+  }
+}
+
 .subtopic-list {
   display: flex;
   flex-direction: column;
@@ -284,7 +320,7 @@ li {
 }
 
 .subtopic-image {
-  width: 1200px;
+  width: 100vw;
   height: auto;
   border-radius: 12px;
   transition: transform 0.3s ease;
@@ -294,6 +330,7 @@ li {
   transform: scale(1.05);
   cursor: pointer;
 }
+
 
 
 .subtopic {
@@ -348,6 +385,13 @@ li {
   top: -20px;
 }
 
+@media (max-width: 768px) {
+  .back-links {
+    padding-top: 5%;
+    font-size: 0.8rem;
+  }
+}
+
 .back-links a {
   color: var(--accent);
   text-decoration: none;
@@ -361,11 +405,12 @@ li {
 
 .subtopic-text {
   padding: 3rem;
-  margin-top: 1rem;
+  margin-top: 0rem;
   margin-bottom: 2rem;
   background-color: #111;
   /* optional: subtle background */
   border-radius: 25px;
+  padding-top: 0%;
 }
 
 
@@ -703,6 +748,7 @@ body.dimmed::before {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 59;
 }
 
 .hover-wrapper:hover .formula-tooltip {
@@ -960,10 +1006,16 @@ body.dimmed::before {
   visibility: visible;
 }
 
+  #subtopic-title {
+    white-space: pre-line;
+    line-height: 1;
+  }
+
 @media (max-width: 768px) {
   .subtopic-text {
     padding: 1rem;
-    margin-top: 1rem;
+    padding-top: 0%;
+    margin-top: 0rem;
     margin-bottom: 2rem;
     background-color: #111;
     /* optional: subtle background */
@@ -972,6 +1024,7 @@ body.dimmed::before {
 
   #subtopic-title {
     font-size: 2rem;
+    
   }
 
   #bottom-subtopic-name {

@@ -271,7 +271,7 @@ const topics = [
   },
    {
     id: "e-m",
-    title: "Coming soon: Electricity & Magnetism",
+    title: "Coming soon: \nElectricity & Magnetism",
     image: "images/Avatar/Topics 1/e&m.png",
     subtopics: [
       {
@@ -350,7 +350,7 @@ const topics = [
   },
    {
     id: "quantum1",
-    title: "Coming soon: Quantum Phenomena I",
+    title: "Coming soon:\nQuantum Phenomena I",
     image: "images/Avatar/Topics 1/quantum1.png",
     subtopics: [
       {
@@ -393,7 +393,7 @@ const topics = [
   },
    {
     id: "quantum2",
-    title: "Coming soon: Quantum Phenomena II",
+    title: "Coming soon: \nQuantum Phenomena II",
     image: "images/Avatar/Topics 1/quantum2.png",
     subtopics: [
       {
@@ -448,7 +448,7 @@ const topics = [
   },
    {
     id: "astro",
-    title: "Coming soon: Astrophysics",
+    title: "Coming soon: \nAstrophysics",
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {

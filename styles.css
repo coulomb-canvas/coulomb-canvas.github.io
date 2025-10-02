@@ -37,6 +37,14 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+
+
 
 header {
   padding: 0rem 0rem;
@@ -52,6 +60,15 @@ h3 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   font-size: 40px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+  font-family: "Njal", sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: white;
+  font-size: 20px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -93,10 +110,37 @@ p {
   color: var(--text)
 }
 
+
+
 li {
   list-style-type: disc;
   padding-left: 1.5rem;
   color: var(--subtle);
+}
+
+#logo {
+  position: absolute;
+  margin:10px;
+  top: -100vh;
+  left: 20px;
+  width: 300px;
+  height: auto;
+  animation: bob 3s ease-in-out infinite;
+}
+
+@media (max-width: 630px) {
+  #logo {
+    width: 98vw;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  #logo {
+    top: -90vh
+  }
 }
 
 /* .grid {
@@ -150,7 +194,7 @@ li {
   height: 100vh;
   width: auto;
   /* always fits within viewport */
-  
+
   /* keeps it square */
   margin: 0 auto;
   border-radius: 50%;
@@ -175,10 +219,10 @@ li {
   .circle-center {
     width: 100vw;
     height: 100vh;
-    
+
   }
 
-    .circle-center img {
+  .circle-center img {
     position: fixed;
     width: 29.3vw;
     height: auto;
@@ -1006,10 +1050,10 @@ body.dimmed::before {
   visibility: visible;
 }
 
-  #subtopic-title {
-    white-space: pre-line;
-    line-height: 1;
-  }
+#subtopic-title {
+  white-space: pre-line;
+  line-height: 1;
+}
 
 @media (max-width: 768px) {
   .subtopic-text {
@@ -1024,7 +1068,7 @@ body.dimmed::before {
 
   #subtopic-title {
     font-size: 2rem;
-    
+
   }
 
   #bottom-subtopic-name {

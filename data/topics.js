@@ -1,20 +1,23 @@
 const topics = [
     {
     id: "welcome",
-    title: "Welcome to Coulomb Academy!",
+    title: "Welcome to Coulomb Canvas!",
     image: "images/Avatar/Topics 1/welcome.png",
     subtopics: [
       {
         subid: "welcome-intro",
         title: "Maths! The best thing ever!",
         text: "I mean, c'mon, did you REALLY think you could get away with studying physics without knowing some maths?",
-        image: "images/time-dilation.png"
       },
       {
-        subid: "difficulty",
-        title: "Difficulty",
+        subid: "features1",
+        title: "Features of the website",
         text: "Get ready for the rush",
-        image: "images/time-dilation.png"
+      },
+            {
+        subid: "features2",
+        title: "More features of the website",
+        text: "Get ready for the rush",
       },
       {
         subid: "dimension",

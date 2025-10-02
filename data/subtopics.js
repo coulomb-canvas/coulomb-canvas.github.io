@@ -34,26 +34,59 @@ const subtopics = {
       time possible. Iku ze!
     </p> `
   },
-  "features": {
+  "features1": {
+    title: 'Features of the website',
     content: `
+
+    <p>Over this 'subtopic' and the next, I will run through all the different features this website has.</p>
+    <p>But before I do, I must make something ABUNDANTLY clear...</p>
+    <p>This website is a WORK IN PROGRESS</p>
+    <p>For example, you may wonder why this website is called 'Coulomb Canvas'. I mean you probably know how
+    'Coulomb' relates to physics... but canvas? Basically the main thing I wanted to do for this website was to
+    use it as a platform to publicise my visual notes, which are drawn ('drawn' on my laptop, not on paper, I'm
+    not a billion years old), and canvases are things you use for drawing.</p>
+    <p>However, most of my visual notes are based on the sections which A) I haven't completed and B) you probably
+    shouldn't be worrying about considering you joined this university 10 seconds ago. So for now they are just
+    my wacky text explanations. Don't worry though, they don't take <em>too</em> long to make, so when I'm done, 
+    I'll update this website so you'll be able to download 'em</p>
+
+    <p>Anywho, time to delve into the different features of the one, the only, Coulomb Canvas!</p>
+
+    <h3>The subtopic image buttons</h3>
 
     <p>If you look any of the topics, you'll see 3 main features</p>
 
-    // Picture of this subtopic with everything
+      <div class="container">
+      <div class="text">
+        <p> Naturally, these are intended to give you an idea about what's to come up before you actually look into it.
+        You'll notice a few things: the triangle on the left, the title, the little comment, the difficulty and some
+        other number. Here I'll explain what they all do.</p>
+      </div>
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box">
+            <img src="images/Avatar/Topics 1/quantum1 subtopics/quantum-mechanics.png" class="pop-image" style="width: 300px"/>
+          </div>
+          <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
+            Figure 1: Subtopic Title Image</div><div style="color:white; font-size:20px; line-height: 1.2;">
+            You saw this something like this when you clicked onto this topic</div></span>
+        </div>
+      </div>
+    </div>
 
-    Naturally, these are intended to give you an idea about what's to come up before you actually look into it
+   
 
     <p>First up, you've got the title. Pretty self-explanatory.</p>
     <p>Underneath it (or above it in the case of the introductions and conclusions), you have a little comment about the
     topic at hand. This can be anything from a description of what's going on to an arbitrary reference which is vaguely
     related, to something completely random which is only relevant by some colourful interpretation. And ff I'm completely 
     honest, it's pretty much there to fill space. If anything, you can use it as a fun way to remember the topic in 
-    question, by trying to figure out their relevance.</p>
+    question, by trying to figure out their relevance. I mean, look in this example I've given you. Obviously if you 
+    exist there is a 100% chance of you doing something somewhere, but <em>why</em> is that there? Don't pretend you
+    aren't curious...</p>
     <p>Then in the triangle to the left of all this, there's the picture. Or there might be. I'm typing this before I can
     be bothered to add them, so it might just be a big orange (or red) triangle. Just know it's supposed to have an image
     in it </p>
-
-    <h3>The subtopics</h3>
     
     <p>Next to the title and silly comment, you'll see one of four ratings:
 
@@ -74,19 +107,23 @@ const subtopics = {
     the maths isn't something to worry about in terms of difficulty. 10 also doesn't mean it is exclusively maths, but
     that the content isn't something to worry about in terms of difficulty.
     </p>
-    <p>    However, both the difficulty and the maths rating are subjective, so take with a pinch of salt
+    <p>However, both the difficulty and the maths rating are subjective, so take with a pinch of salt
     </p> 
     <p> Once you are on a subtopic, you will see a few things too</p>
     <p> At the top you will see the title, below which you'll see the 'Back to Topics' and 'Back to "Subtopic"' buttons.
     I can't lie, I'm wasting my time typing this, ain't it obvious what they do?</p>
     <p> On the very top right, you will see a grey square with what could be interpreted as the chinese symbol for three.
     But it's not. It represents a list. And if you click said list, you will get a list of all the subsections within the
-    topic. You can click whatever subsection you want to go to, and it will take you straight there</p>S
+    topic. You can click whatever subsection you want to go to, and it will take you straight there</p>
+    <p>Just a disclaimer, once you click on it and the list appears, you'd think that pressing anywhere on the screen 
+    which isn't on the list would automatically cause it to retract. However, due to me being rubbish at programming,
+    that unfortunately doesn't work. Instead, you have to click on the chinese-3 thing again. Yes I know it's partially
+    covered, yes I know it's a pain, just deal with it, k?</p>
 
     `
   },
-
   "features2": {
+    title: 'More features of the website',
     content: `
      <p>First, we have these light blue underlined links. These will point out key definitions which you should learn. 
      Hovering over them will reveal the deininition.</p>
@@ -95,8 +132,22 @@ const subtopics = {
      of these derivations are a <em>pain</em> in the arse. Others are significantly less painful, but not necessary
      for you to know. In either case, if there is a derivation which I think you could probably do without, I will
      put an orange link like this. Clicking this will give you the derivation</p>
-     <p>Next, the images are contained within these 
-    `
+     <p>Next, the images are contained within these blue boxes. If I need to explain to you what an image does then...
+     I feel sorry for you. Anyway, one think you maybe didn't know is that you can hover over these images to get more
+     information about them. After that, you can move the mouse away from it and continue reading (and if you are on
+     mobile you can just click on and click off). These are pretty neat, try it for yourself: </p>
+     <p>We also have a similar thing in orange, but these ones are for formulae. Just like with the images, you can
+     hover over these ones and get more information about the formula</p>
+     <p>I should probably specify: you know how I was very clear at the beginning of this whole thing that this 
+     website is a work in progress? Yeah, well for that reason, some of the formula tooltips might be stuck with
+     "Figure 1: Linear Expansion. <i>This one is quite obvious</i>". A) Because the linear expansion formula <em>is</em>
+     piss obvious, and B) because I just copy-pasted the code for the sake of getting them working. I'll change them
+     soon, don't you worry.</p>
+     <p>In fact, I could change them now. This time I have spent typing this could have definitely got me started, I
+     mean if you look at the code, it's literally a matter of just replacing it. But I won't lol, so get wrecked.</p>
+     <p>I am considering adding an option to see all the formulae which pertain to the topic, but for now, beggars
+     can't be choosers. Not that you are beggars, but... you know what I mean...</p>
+     `
   },
 
   // Subtopics for Maths for
@@ -283,13 +334,13 @@ const subtopics = {
       <h3>Vector Notation Methods</h3>
 
       <p>There are quite a few different ways to represent vectors. One of which is to put a kind of arrow over the quantity 
-      you are vector-ifying. Like this: <span style="text-decoration: overline;">v</span></p>
+      you are vector-ifying. Like this: \\(\\vec{v}\\)</p>
 
       <p>This was my favourite way to do it at first, simply because I have a severe vanity problem and the arrow looks 
       the most novel. But you’ll soon come to realise that drawing the little arrow each time is quite time consuming in 
       the long run, so I don’t recommend it.</p>
 
-      <p>The next method is to write the variable in <strong>bold font</strong>, like this: <strong>v</strong></p>
+      <p>The next method is to write the variable in <strong>bold font</strong>, like this: \\(\\mathbf{v}\\)</p>
 
       <p>This is also pretty nifty, although slight problem... no-one can consistently write in bold font. If you don’t 
       make it obvious that this is supposed to be a bold fonted vector, your examiner might not be able to tell the 
@@ -309,11 +360,11 @@ const subtopics = {
       <p>And the answer is, yes you can. I mean, you have free will, don’t you? You can do what you want. However, 
       if you want to be precise (and if you want to get marks on your examination), you will have to use one of these 
       methods. Just using the variable without any vector notation will give you the magnitude of the vector, but not 
-      the direction. So, in the example I gave you before, if <span style="text-decoration: overline;">v</span> is 
-      “7m in the <em>x</em>-direction", then <em>v</em> on its own is just the number 7. You might not think it 
+      the direction. So, in the example I gave you before, if \\(v\\) is 
+      “7m in the \\(x\\)-direction", then \\(v\\) on its own is just the number 7. You might not think it 
       matters now, but don’t worry, you’ll realise how important it is soon enough.</p>
 
-      <h2>Unit Vectors</h2>
+      <h3>Unit Vectors</h3>
 
       <p>NEway, there is one more type of vector we must learn about: the <strong>unit vector</strong>. This is how we 
       describe the direction of the vector with respect to its magnitude. These are represented with a circumflex, or 
@@ -321,7 +372,7 @@ const subtopics = {
       7<strong>î</strong> is 7 units in the <em>x</em>-direction. This means that any vector can be written as a 
       combination of its magnitude and a unit vector:</p>
 
-      <p><strong>v</strong> = |<strong>v</strong>| <strong>û</strong></p>
+      <p>\\(\\vec{v} = |\\vec{v}|\\hat{v}\\)</p>
 
       <p>And an annoying little thing for you to get used to: for some unknown reason, instead of using <em>x</em>, 
       <em>y</em> and <em>z</em>, which is the normal thing to do, mathematicians decided to use <strong>î</strong>, 
@@ -331,7 +382,23 @@ const subtopics = {
 
       <h4>Addition and Subtraction</h4>
       <p>Addition and subtraction are exactly what you’d imagine: add or subtract each <strong>î</strong>, 
-      <strong>ĵ</strong> and <strong>k̂</strong> to get a resultant vector.</p>
+      <strong>ĵ</strong> and <strong>k̂</strong> to get a resultant vector. For example, say you want to take
+      these two vectors:</p>
+      \\[
+       \\vec{a} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\quad \\text{and} \\quad
+       \\vec{b} = \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix}
+      \\]
+      <p>We add the top two to get the top value of our new vector. Then add the middle two for the middle value
+      of our vector, and then the bottom two for the bottom value of our vector. Like so:</p>
+      \\[
+        \\vec{a}+\\vec{b}= \\begin{pmatrix} 1+2 \\\\ 4-3 \\\\ 2+1 \\end{pmatrix} 
+        = \\begin{pmatrix} 3 \\\\ 1 \\\\ 1 \\end{pmatrix}
+      \\]
+      <p>And by the way, if it wasn't obvious, this big brackets with the three numbers inside is just a new and improved
+      way of writing vectors. In that case we can see that \\(\\vec{a}\\) can also be written in the ijk form from earlier,
+      as \\(\\hat{i}+4\\hat{j}+2\\hat{k}\\), and \\(\\vec{b}\\) as \\( 2 \\hat{i}-3\\hat{j}+\\hat{k}\\). And whilst both 
+      versions are completely acceptable, I personally prefer the bracket-with-numbers-down-the-middle method. Especially
+      when it comes to vector operations, it's just visually easier to deal with.</p>
 
       <h4>Multiplication</h4>
       <p>Multiplication is where this gets a bit trickier, because there are two types. We’ll begin with what I 
@@ -342,27 +409,84 @@ const subtopics = {
       <strong>k̂</strong>’s, before adding them all together. This means that the result of a dot product between 
       two vectors is actually a <em>scalar</em>.</p>
 
+      <p>So taking our trusty \\(\\vec{a}\\) and \\(\\vec{b}\\) as examples, if we were to take the dot product of these
+      two vectors, we'd get:</p>
+      \\[
+       \\vec{a} \\cdot \\vec{b} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\cdot
+      \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} = 
+       (1\\times 2)+(4\\times -3)+(2\\times 1) = -8
+      \\]
+      <p>In a way, you can think of the dot product as a measure of how much one vector 'aligns' with the other one.
+      This means that for a vector with magnitude \\(|\\vec{a}|\\) and a vector with magnitude \\(|\\vec{b}|\\), the 
+      dot product will change depending on where the vectors point. If they point in the same direction, then
+      \\(\\vec{a} \\cdot \\vec{b}\\) (pronounced <em> a dot b</em>) is at its maximum positive value, as they are 
+      at maximum alignment. If they point in completely opposite directions, then \\(\\vec{a} \\cdot \\vec{b}\\)
+      is at its manimum negative value. And if they are perpendicular to each other, then \\(\\vec{a} \\cdot \\vec{b}\\)
+      is \\(0\\), because they aren't aligned at all</p>
+
       <p>The <strong>vector product</strong>, more commonly known as the <strong>cross product</strong>, is represented 
-      by a cross (wow, which genius is coming up with these names?) between the two vectors.</p>
+      by a cross (wow, which genius is coming up with these names?) between the two vectors. In this case, instead of
+      measuring how much two vectors align, the cross product gives you a new vector which aligns the least with the
+      two vectors. In other words, it give you a vector which is perpendicular to them both.</p>
+      <p>Let's take our two volunteers, \\(\\vec{a}\\) and \\(\\vec{b}\\). If we calculate the cross product of
+      these two vectors (I'll show you how in a minute, just be patient, ok?), you end up with:</p>
+      \\[
+        \\vec{a} \\times \\vec{b} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\times
+      \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 10 \\\\ 3 \\\\ -11 \\end{pmatrix}
+      \\]
+      <p>We've already agreed that two vectors are perpendicular when the dot product is \\(0\\). Go ahead. Calculate
+      the dot product between \\(\\vec{a}\\), \\(\\vec{b}\\) and the new vector, \\(\\vec{a} \\times \\vec{b}\\),
+      you'll find that it's \\(0\\) for both of them. And this works for any two vectors.</p>
+      <p>Now, how do we calculate this? I've deliberately procrastinated this explanation, because it's a bit 
+      tricky to explain if you don't know about matrices. Anyway, I can't delay anymore. I'll stop talking
+      about how to calculate it and actually show you how to calculate it. Because talking abut how to calculate 
+      something isn't very useful. Which I why I'm going to stop talking and start showing. No more mindless
+      talking from me. Nope. None. Whatsoever. It's about time I actually show you. So let me do just that.
+      I'll show you now, without just talking about showing you, because that's the best thing to do in this
+      scenario.</p>
+      <p>Take two general vectors:</p>
+      \\[
+        \\vec{u}=\\begin{pmatrix} u_1 \\\\ u_2 \\\\ u_3 \\end{pmatrix} \\quad \\text{and} \\quad
+        \\vec{v}=\\begin{pmatrix} v_1 \\\\ v_2 \\\\ v_3 \\end{pmatrix}
+      \\]
+      <p>If you <em>do</em> know about matrices, then the easy way is just to calculate the determinant of this 
+      matrix:</p>
+      \\[
+        \\vec{u} \\times \\vec{v} = det\\begin{pmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\
+        u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{pmatrix}
+      \\]
+      <p>If you didn't do matrices, then you have to use a slightly more arbitrary method, which I've been dreading
+      to explain because it's quite difficult to explain, but I'll finally show you. I won't keep rambling.
+      I'll shut up. No more complaining. I'm not gonna say anoth...</p>
+      <p>I don't know what I'm complaining about, it's literally just a formula...</p>
+      \\[\\mathbf{u} \\times \\mathbf{v} =
+      \\left(
+        u_2 v_3 - u_3 v_2,\\;\\;
+        u_3 v_1 - u_1 v_3,\\;\\;
+        u_1 v_2 - u_2 v_1
+      \\right) \\]
 
       <h3>Coordinate Systems</h3>
 
       <h4>Cartesian Coordinates</h4>
-      <p>Cartesian co-ordinates are the ones you have been using all this while, with <em>x</em>, <em>y</em> and 
-      <em>z</em> (just kidding, it’s <strong>î</strong>, <strong>ĵ</strong>, and <strong>k̂</strong> now, remember?). 
+      <p>Cartesian co-ordinates are the ones you have been using all this while, with \\(x\\), \\(y\\) and 
+      \\(z\\) (just kidding, it’s \\(\\hat{i}\\), \\(\\hat{j}\\), and \\(\\hat{k}\\) now, remember?). 
       If you really must, you can write the basis vectors out (in column form):</p>
 
-      <pre>
-  <strong>î</strong> = [1, 0, 0]<sup>T</sup>
-  <strong>ĵ</strong> = [0, 1, 0]<sup>T</sup>
-  <strong>k̂</strong> = [0, 0, 1]<sup>T</sup>
+      \\[
+        \\hat{i} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\quad
+        \\hat{j} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}\\quad
+        \\hat{k} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix}
+      \\]
       </pre>
 
       <h4>Polar Coordinates</h4>
       <p>Polar co-ordinates are more convenient for systems which have circular symmetry. Instead of just stating how 
       far along the <em>x</em> or <em>y</em> axis a point is, we can describe a point by its distance from the origin 
-      and the angle that it makes with the positive <em>x</em>-axis. You can also nicely switch between Cartesian and 
-      polar co-ordinates using these juicy transformations:</p>
+      and the angle that it makes with the positive <em>x</em>-axis. That means instead of the \\((x,y)\\) we all 
+      know and love, we now use \\((r, \\theta)\\)</p> 
+
+      <p>You can also nicely switch between Cartesian and polar co-ordinates using these juicy transformations:</p>
 
       <p><em>x</em> = <em>r</em> cos(θ)<br>
       <em>y</em> = <em>r</em> sin(θ)<br>
@@ -373,7 +497,7 @@ const subtopics = {
       <p>Spherical co-ordinates are more convenient for systems which have spherical symmetry. It’s fundamentally 
       identical to polar and cylindrical co-ordinates, but now we have two angles to worry about.</p>
     `
-  
+
   },
   "odes": {
     title: "First Order ODES",
@@ -488,7 +612,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how confused you are.  
       It only cares about the derivative.</p>
     `
-  
+
   },
   "series": {
     title: "Series",
@@ -673,7 +797,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how many terms you use.  
       It only cares if the series converges.</p>
     `
-  
+
   },
   "multivariable": {
     title: "Multivariable Calculus",
@@ -861,7 +985,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how lost you are on a hill.  
       It only cares about the gradient.</p>
     `
-  
+
   },
   "multiple-integrals": {
     title: "Multiple Integrals",
@@ -973,7 +1097,7 @@ const subtopics = {
       </p>
 
     `
-  
+
   },
   "line-integrals": {
     title: "Line Integrals",
@@ -1113,7 +1237,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how many dimensions you integrate over.  
       It only cares about the answer.</p>
     `
-  
+
   },
   "fourier": {
     title: "Fourier Series",
@@ -1300,22 +1424,27 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how jagged your function is.  
       It only cares about the wiggles.</p>
     `
-  
+
   },
   "matrices": {
     title: "Matrices",
     content: `
-      <h3>Linear Algebra</h3>
-      <p>Time to talk about <strong>Linear Algebra</strong>. I know what you're thinking,
-      <em>"Great, more maths..."</em>. But trust me, this stuff is the absolute
-      bedrock of a huge amount of physics, especially quantum mechanics. If you want to
-      understand QM, you <strong>have</strong> to understand this.</p>
+      <i>Hey, I'll let you in on a little secret... my lecturer for multiple integrals up until
+      matrices was actual ass, so I really didn't pay much attention to what he was saying, especially
+      this part upon matrices. Worst part is, I did further maths, which means I already did matrices,
+      but understood it less upon attending his lectures than I did before. Crazy innit?</i>
+      <p>This next section is called <strong>Linear Algebra</strong>, although from what I gather, it's
+      just matrices. I don't has a clue as to why they call it Linear Algebra, and in fact I'm not too
+      sure why most of the stuff I've learnt about matrices is even useful. But it's here, so let's
+      have a crack, shall we?</p>
 
-      <p>The whole thing is about using <em>matrices</em>—which are just organised grids of
-      numbers—to solve systems of equations and to figure out how things get
-      stretched, squashed, and rotated in space.</p>
+      <p>For those of you who didn't do Edexcel Further Maths for A-Level and therefore might not know,
+      a <em>matrix</em> is just an organised grids of numbers. As of right now, the only way I can think
+      of it being used is as an alternative way of describing transformations, like squashes,
+      stretches, rotations etc.</p>
 
-      <p>A matrix is just a rectangular array of numbers. For example, these are matrices:</p>
+      <p>Enough talking about them, about time I showed you one. I mentioned that a matrix is a 
+      rectangular array of numbers, but what does that look like? Here are a couple examples of matrices:</p>
       
       <p>\\(\\begin{pmatrix}2&3 \\\\ 4&2 \\end{pmatrix}\\)</p>
       <p>\\(\\begin{pmatrix}1&0&2 \\\\ 0&1&3 \\\\ 4&0&1 \\end{pmatrix}\\)</p>
@@ -1323,14 +1452,31 @@ const subtopics = {
       
       <p>We're mainly going to be dealing with <strong>square matrices</strong>, which as
       you can probably infer, are matrices with as many rows as columns, in this case \\(A\\) and
-      \\(B\\)</p>
+      \\(B\\). Don't worry about actually interpreting these matrices or anything, just focus on
+      the maths for now.</p>
 
       <h3>Matrix Operations</h3>
       <p>You can add matrices and multiply them by scalars, and it works exactly like
       you'd think. Add each individual value from one matrix with the corresponding value
       in the next matrix:</p>
-      <p>\\(\\begin{pmatrix}1&2 \\\\ 3&4 \\end{pmatrix} + \\begin{pmatrix}5&6 \\\\ 7&8 \\end{pmatrix} = 
-      \\begin{pmatrix}1+5&2+6 \\\\ 3+7&4+8 \\end{pmatrix} = \\begin{pmatrix}6&8 \\\\ 10&12 \\end{pmatrix}\\)</p>
+      <p>
+        \\(
+        \\begin{pmatrix}
+        {\\color{red}1} & {\\color{red}2} \\\\
+        {\\color{red}3} & {\\color{red}4}
+        \\end{pmatrix}
+        +
+        \\begin{pmatrix}
+        {\\color{cyan}5} & {\\color{cyan}6} \\\\
+        {\\color{cyan}7} & {\\color{cyan}8}
+        \\end{pmatrix}
+        =
+        \\begin{pmatrix}
+        {\\color{red}1}+{\\color{cyan}5} & {\\color{red}2}+{\\color{cyan}6} \\\\
+        {\\color{red}3}+{\\color{cyan}7} & {\\color{red}4}+{\\color{cyan}8}
+        \\end{pmatrix}
+        \\)
+      </p>
 
       <p><strong>Matrix multiplication</strong> is a whole different beast. It's a bit
       of a bully and doesn't follow the rules you're used to. To get the element in the
@@ -1468,10 +1614,10 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how confused you are by matrices.  
       It only cares about the eigenvalues.</p>
     `
-  
+
   },
 
-    // Subtopics for Classical Mechanics
+  // Subtopics for Classical Mechanics
   "mechanics-intro": {
     title: "Introduction to Mechanics: You will become a prophet!!!",
     content: `
@@ -2326,9 +2472,9 @@ const subtopics = {
     <p>And remember: the universe doesn’t care how hard you try.  
     It only cares about the conservation laws.</p>
         `
-  }, 
+  },
 
-    // Subtopics for Special Relativity
+  // Subtopics for Special Relativity
   "relativity-intro": {
     title: 'Introduction to relativity: "c" what the Lord has done!',
     content: `
@@ -2503,10 +2649,10 @@ const subtopics = {
     </div>
     `,
     image: "images/newton-laws.png"
-  },   
+  },
   "lorentz": {
-      title: "Lorentz Transformations",
-      content: `
+    title: "Lorentz Transformations",
+    content: `
       <p>Recapping from last time, we saw that light doesn’t change speed, even in a moving frame of reference. 
       This clearly goes against the results derived from the Galilean transformations. But how can this be the 
       case? The derivation seemed so simple after all?</p>
@@ -2866,10 +3012,11 @@ const subtopics = {
       <p>And this is real btw, I’m not joking. In fact, satellites have to account for relativistic effects 
       too. If they didn’t, your phone would think you’re in the middle of the ocean instead of your living room. 
       Funny, yes, but useless. Good thing we know about relativity, eh?</p>
-      `,},
+      `,
+  },
   "relative-energy": {
-      title: "Relative Energy and Momentum",
-      content: `
+    title: "Relative Energy and Momentum",
+    content: `
       
       <p>Let’s try something fun.</p>
 
@@ -2997,8 +3144,8 @@ const subtopics = {
       
       `},
   "relativity-summary": {
-      title: "Summary of Special Relativity",
-      content: `
+    title: "Summary of Special Relativity",
+    content: `
       <p>One important thing we’ve learnt during this topic is that nothing moves faster than light speed. 
       But <em>why</em>? What makes light so special?
 
@@ -3046,13 +3193,13 @@ const subtopics = {
       <p>Thank you, thank you!</p>
       `},
 
-    // Subtopics for Thermal Physics
+  // Subtopics for Thermal Physics
   "thermal-intro": {
     title: `Introduction to Thermal Physics:\nTurn up the Heat, Odd-eyes Pendulum Dragon!`,
     content: `
     <p> Temperature, in normal human language, is a measure of how hot something is. But </p>
     `
-  
+
   },
   "heat": {
     title: "Heat and Temperature",
@@ -4046,8 +4193,8 @@ const subtopics = {
     `,
   },
   "thermodynamics2": {
-  title: "The Second Law of Thermodynamics",
-  content: `
+    title: "The Second Law of Thermodynamics",
+    content: `
     <h3>The Second Law of Thermodynamics</h3>
 
     <p>Right. Let’s talk about the <strong>Second Law</strong>.</p>
@@ -4215,8 +4362,8 @@ const subtopics = {
     `,
   },
   "entropy": {
-  title: "Entropy",
-  content: `
+    title: "Entropy",
+    content: `
     <h3>Entropy</h3>
 
     <p>Building on from the Second Law of Thermodynamics (which you forgot about, smh...), I think it's time to talk
@@ -4323,16 +4470,16 @@ const subtopics = {
     `,
   },
   "thermal-summary": {
-  title: "Turn up the heat, Soulburner!",
-  content: `
+    title: "Turn up the heat, Soulburner!",
+    content: `
 
     `,
   },
 
-    // Subtopics for Wave Phenomena
+  // Subtopics for Wave Phenomena
   "waves-intro": {
     title: "Introduction to Waves: Wibble-wobble wibble-wobble",
-    content:`
+    content: `
     <h3>Wave Phenomena</h3>
 
     <p>Right. Let’s talk about <strong>waves</strong>.</p>
@@ -4808,7 +4955,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how loud you play your music.  
       It only cares about the wave equation.</p>
       `,
-    },
+  },
   "standing-waves": {
     title: "Standing Waves",
     content: `
@@ -4996,7 +5143,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how many times you pluck a string.  
       It only cares about the boundary conditions.</p>
       `,
-    },
+  },
   "polarisation": {
     title: "Polarisation",
     content: `
@@ -5123,7 +5270,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how bright your sunglasses are.  
       It only cares about the polarisation.</p>
       `,
-    },
+  },
   "refraction": {
     title: "Refraction",
     content: `
@@ -5297,21 +5444,21 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how shiny your car is.  
       It only cares about the refractive index.</p>
       `,
-    },
+  },
   "waves-summary": {
     title: "Summary: Wave Goodbye!",
     content: `
 
       `,
-    },
+  },
 
-    // Subtopics for Electricity & Magnetism
+  // Subtopics for Electricity & Magnetism
   "e-m-intro": {
     title: "Introduction to E&M: Magic Floaty Metal!", //https://www.popularmechanics.com/space/rockets/a65924333/engineer-overcoming-earths-gravity/
     content: `
 
       `,
-    },
+  },
   "dc-circuits": {
     title: "DC Circuits",
     content: `
@@ -5522,7 +5669,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how many resistors you have.  
       It only cares about conservation of charge and energy.</p>
       `,
-    },
+  },
   "charge": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -5596,7 +5743,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how charged you feel.  
       It only cares about the electric field.</p>
       `,
-    },
+  },
   "gauss-law": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -5656,7 +5803,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how many surfaces you draw.  
       It only cares about the flux.</p>
       `,
-    },
+  },
   "potential": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -5743,7 +5890,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how many volts you have.  
       It only cares about the potential difference.</p>
       `,
-    },
+  },
   "capacitance": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -5822,7 +5969,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how much charge you store.  
       It only cares about the electric field.</p>
       `,
-    },
+  },
   "magnetic-fields": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -5897,7 +6044,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how fast your motor spins.  
       It only cares about the cross product.</p>
       `,
-    },
+  },
   "magnetic-sources": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -5951,7 +6098,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how much current you have.  
       It only cares about the enclosed current.</p>
       `,
-    },
+  },
   "induction": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -6008,7 +6155,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how much emf you induce.  
       It only cares about the rate of change.</p>
       `,
-    },
+  },
   "inductance": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -6071,7 +6218,7 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how fast you change the current.  
       It only cares about the inductance.</p>
       `,
-    },
+  },
   "ac-circuits": {
     title: "Turn up the heat, Soulburner!",
     content: `
@@ -6141,18 +6288,18 @@ const subtopics = {
       <p>And remember: the universe doesn’t care how much your phone charger buzzes.  
       It only cares about the impedance.</p>
       `,
-    },
+  },
   "e-m-summary": {
     title: "Turn up the heat, Soulburner!",
     content: `
 
       `,
-    },
+  },
 
   // Subtopics for Quantum I
   "quantumI-intro": {
-      title: "Physics is bare weird y'know...",
-      content: `
+    title: "Physics is bare weird y'know...",
+    content: `
         
       <i>Fun fact, if you've ever wondered how I got the idea to create this website, in preparation for my Quantum Phenomena
       exam, I made the summary sheets that I have at the end of each topic for both Quantum I & II. I then put it in my 
@@ -6198,10 +6345,10 @@ const subtopics = {
 
         <p>Have fun!!!</p>
       `,
-    },
+  },
   "photons": {
-      title: "Photons",
-      content: `
+    title: "Photons",
+    content: `
         
       <i>By the way, this is one of the first pages I've worked on, despite it being towards the end of all the content.
       Nevertheless, I can tell I'm probably going to be making a lot of Yu-Gi-Oh references in my notes (Galaxy Eyes Photon
@@ -6257,10 +6404,10 @@ const subtopics = {
       work function), such that the escape energy, \\(E = h\\nu - \\phi_0\\).
 
       `,
-    },
+  },
   "mass-spectra": {
-      title: "Mass And Spectra",
-      content: `
+    title: "Mass And Spectra",
+    content: `
         
       <i>Jokey little intro again</i>
 
@@ -6521,10 +6668,10 @@ const subtopics = {
           </div>
         </div>
       `,
-    },
+  },
   "quantum-mechanics": {
-      title: "Quantum Mechanics",
-      content: `
+    title: "Quantum Mechanics",
+    content: `
         
       <i>Jokey little intro </i>
 
@@ -6676,10 +6823,10 @@ const subtopics = {
       \\]
       And we've got it! The Schrödinger equation! </p>
       `,
-    },
+  },
   "use-equation": {
-      title: "How to solve the Schrödinger equation",
-      content: `
+    title: "How to solve the Schrödinger equation",
+    content: `
         
       <i>Jokey little intro </i>
 
@@ -6733,10 +6880,10 @@ const subtopics = {
       <h3>Another Egg Sample! Infinite Potential Well</h3>
 
       `,
-    },
+  },
   "quantumI-summary": {
-      title: "The numbers don't lie...",
-      content: `
+    title: "The numbers don't lie...",
+    content: `
         
       <i>Fun fact, if you've ever wondered how I got the idea to create this website, in preparation for my Quantum Phenomena
       exam, I made the summary sheets that I have at the end of each topic for both Quantum I & II. I then put it in my 
@@ -6759,7 +6906,7 @@ const subtopics = {
           </a> </p>
 
       `,
-    },
+  },
 
   // Subtopics for Quantum II
   "quantumII-intro": {
@@ -7517,7 +7664,7 @@ const subtopics = {
           </a> </p>
     `
   },
- 
+
 
   // Subtopics for Astronomy
   "astro-intro": {

@@ -12,7 +12,7 @@ const subtopics = {
       undergrad. I have a notably quite novel way of explaining things, and therefore I felt like making this website
       to help people who are also studying physics.
     </p>
-
+    <p>Before you begin using my site, there are a few disclaimers I should probably make:</p>
     <p>Firstly, everything I do is based off my lecture notes from my specific university. I would imagine that different
       universities have different curricula, use different convensions, and assess different things. Therefore, unless you
       attend Warwick Uni, the stuff here is probably gonna vary from what you do at your own uni. Not that you can't use my
@@ -38,25 +38,34 @@ const subtopics = {
     title: 'Features of the website',
     content: `
 
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+
     <p>Over this 'subtopic' and the next, I will run through all the different features this website has.</p>
     <p>But before I do, I must make something ABUNDANTLY clear...</p>
     <p>This website is a WORK IN PROGRESS</p>
-    <p>For example, you may wonder why this website is called 'Coulomb Canvas'. I mean you probably know how
-    'Coulomb' relates to physics... but canvas? Basically the main thing I wanted to do for this website was to
+    <p>For example, you may be wondering what the deal is with that massive red banner which says "Sorry, the 
+    summary image doesn't exist yet :(". And You may wonder why this website is called 'Coulomb Canvas'. I mean 
+    you probably know how 'Coulomb' relates to physics... but canvas? 
+    Basically the main thing I wanted to do for this website was to
     use it as a platform to publicise my visual notes, which are drawn ('drawn' on my laptop, not on paper, I'm
     not a billion years old), and canvases are things you use for drawing.</p>
     <p>However, most of my visual notes are based on the sections which A) I haven't completed and B) you probably
     shouldn't be worrying about considering you joined this university 10 seconds ago. So for now they are just
     my wacky text explanations. Don't worry though, they don't take <em>too</em> long to make, so when I'm done, 
     I'll update this website so you'll be able to download 'em</p>
+    <p>Do keep looking out for them though, as I have arranged the into three categories, the "Sorry, the summary
+    image doesn't exist yet :(" category, the "It's still not completely done but I've started, so you can download it 
+    and have a look anyway (and also I just enjoy the thrill of putting my work on the internet)" category, and
+    eventually, you'll get the "I'm done with the image for this topic! Download now!" category."</p>
 
     <p>Anywho, time to delve into the different features of the one, the only, Coulomb Canvas!</p>
 
     <h3>The subtopic image buttons</h3>
 
-    <p>If you look any of the topics, you'll see 3 main features</p>
+    <p>At the beginning, you saw the big circle of topics, from which you clicked the "Welcome to Coulomb Canvas"
+    topic. Upon clicking the topic, you saw a list of subtopics, within their little orange panels.</p>
 
-      <div class="container">
+    <div class="container">
       <div class="text">
         <p> Naturally, these are intended to give you an idea about what's to come up before you actually look into it.
         You'll notice a few things: the triangle on the left, the title, the little comment, the difficulty and some
@@ -74,8 +83,6 @@ const subtopics = {
       </div>
     </div>
 
-   
-
     <p>First up, you've got the title. Pretty self-explanatory.</p>
     <p>Underneath it (or above it in the case of the introductions and conclusions), you have a little comment about the
     topic at hand. This can be anything from a description of what's going on to an arbitrary reference which is vaguely
@@ -86,14 +93,10 @@ const subtopics = {
     aren't curious...</p>
     <p>Then in the triangle to the left of all this, there's the picture. Or there might be. I'm typing this before I can
     be bothered to add them, so it might just be a big orange (or red) triangle. Just know it's supposed to have an image
-    in it </p>
+    in it.</p>
     
-    <p>Next to the title and silly comment, you'll see one of four ratings:
-
-    // Four ratings image
-
-    This is also quite self-explanatory: a rating of how hard I think the subject at hand is.
-
+    <p>Next to the title and silly comment, you'll see one of four ratings: 'Pretty easy', 'Not too bad', 'Kinda tough',
+    and 'Very hard'. This is also quite self-explanatory: a rating of how hard I think the subject at hand is.
     </p>
 
     <p>
@@ -109,6 +112,8 @@ const subtopics = {
     </p>
     <p>However, both the difficulty and the maths rating are subjective, so take with a pinch of salt
     </p> 
+
+    <h3>Subtopic page features</h3>
     <p> Once you are on a subtopic, you will see a few things too</p>
     <p> At the top you will see the title, below which you'll see the 'Back to Topics' and 'Back to "Subtopic"' buttons.
     I can't lie, I'm wasting my time typing this, ain't it obvious what they do?</p>
@@ -125,13 +130,34 @@ const subtopics = {
   "features2": {
     title: 'More features of the website',
     content: `
+
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+
      <p>First, we have these light blue underlined links. These will point out key definitions which you should learn. 
-     Hovering over them will reveal the deininition.</p>
+     Hovering over them will reveal the deininition. Try it out with these ones. I mean, you probably know about
+     something like <span class="definition" data-definition="The spreading out of waves as they pass through a gap 
+     or around an obstacle"> diffraction </span>, but what about the <span class="definition" 
+     data-definition="An imaginary sphere carrying stars that spins around the observer"> celestial sphere </span>?
+     Aren't you interested? If so, then just hover over the links, they'll give you the definitions.
+     </p>
      <p>If you know anything about physics, you'd know that there are a lot of formulae. At first, they may seem
      random, but once you see the derivations, you realise that they do make sense. Slight problem though... some 
      of these derivations are a <em>pain</em> in the arse. Others are significantly less painful, but not necessary
      for you to know. In either case, if there is a derivation which I think you could probably do without, I will
-     put an orange link like this. Clicking this will give you the derivation</p>
+     put an orange link like this. Clicking this will give you the derivation. Take this for example. You've might
+     be familiar with the Schrodinger Equation:</p>
+      \\[
+      i\\hbar\\frac{\\partial \\Psi}{\\partial t}=  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\Psi}{\\partial t^2}
+      \\]
+    <p>Now, actually using this equation isn't too bad (I know it may look bad at first, but trust me, they are
+    just differential equations, you'll be fine), but it is a bit random. So naturally, I won't bother with the
+    <span class="popup-trigger" data-popup-id="schrodinger-intro">stupid derivation</span>... Then again, aren't you
+    curious? Don't you want to assure yourself that this <em>is</em> actually logically sound, and that
+    Schrodinger didn't pull it out of his arsehole? No? <em>Okayyyy</em>, if you say so... but that orange link
+    is <em>right</em> there, if you ever change your name. In bright, grab-your-attention, please-click-me
+    orange.</p>
+
+
      <p>Next, the images are contained within these blue boxes. If I need to explain to you what an image does then...
      I feel sorry for you. Anyway, one think you maybe didn't know is that you can hover over these images to get more
      information about them. After that, you can move the mouse away from it and continue reading (and if you are on
@@ -147,15 +173,68 @@ const subtopics = {
      mean if you look at the code, it's literally a matter of just replacing it. But I won't lol, so get wrecked.</p>
      <p>I am considering adding an option to see all the formulae which pertain to the topic, but for now, beggars
      can't be choosers. Not that you are beggars, but... you know what I mean...</p>
+
+    <div class="popup" id="schrodinger-intro" style="font-size:12px">
+      <div class="popup-content">
+        <button class="popup-close">&times;</button>
+        <h4 style="font-family: 'Njal', sans-serif; font-size: 30px; text-decoration: underline; 
+        margin-bottom: 0px; margin-top: 0px;">Deriving the Schrodinger equation</h4>
+        <p>
+          This was actually a pretty stupid example, considering in the Quantum Phenomena section (which is off limits
+          for now) I end up deriving this within the actual page, since it was, quote, 'really cool'. Also
+          you probably don't know half the science of maths required but whatever, I do what I want. </p>
+        <p> Every object has a de Broglie wavelength, \\(\\lambda = \\frac{h}{p}\\). And waves can be described with
+        this formula:</p>
+          \\[
+          \\Psi(x,t)=Ae^{i(kx-\\omega t)}
+          \\]
+          <p>Differentiate with respect to \\(x\\) and \\(t\\):</p>
+          \\[
+          \\frac{\\partial^2 \\Psi}{\\partial x^2} = -k^2\\Psi, \\quad
+
+          \\frac{\\partial \\Psi}{\\partial t} = -i\\omega\\Psi
+          \\]
+          <p> If we multiply the first equation by -1 and the second equation by \\(i\\), we get:</p>
+          \\[
+          k^2\\Psi \\rightarrow -\\frac{\\partial^2 \\Psi}{\\partial x^2}, \\quad
+          \\omega\\Psi \\rightarrow i\\frac{\\partial \\Psi}{\\partial t}
+          \\]
+          
+          <p>We know that the total energy of a particle is given by: </p>
+          \\[
+          E = \\frac{p^2}{2m}
+          \\]
+          <p>Since \\(p = \\hbar k\\) and \\(E = \\hbar \\omega\\), we get</p>
+          \\[
+          \\hbar \\omega = \\frac{\\hbar^2 k^2}{2m} , \\;\\; \\therefore \\hbar \\omega - \\frac{\\hbar^2 k^2}{2m} = 0
+          \\]
+          <p>Then we multiply this equation by \\(\\Psi\\) because we can, and then use the arrow formulae:</p>
+          \\[
+          i\\hbar\\frac{\\partial \\Psi}{\\partial t}=  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\Psi}{\\partial t^2}
+          \\]
+        </p>
+      </div>
+    </div>
      `
   },
 
   // Subtopics for Maths for
+
+  "maths-intro": {
+    title: "Maths! The best thing ever!",
+    content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+    <p>Now there is a bright side. If you did Further Maths at A-Level, like I did, then you will have propably
+    done 90% of the stuff here already. You know what that means... you can sit in lectures and do nothing!
+    Or at least significantly less. But whatever you do, don't not go. Go to your lectures. Because if you don't,
+    then the monster who lives under the bed will eat you up. It's true, I spoke with the monster who lives under
+    yours personally, and that's what he said. As to whether or not you believe that is up to you though...</p>
+    `
+  },
   "complex-numbers": {
     title: `Complex Numbers`,
     content: `
-      <h3>The imaginary number</h3>
-
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>Hi there. Here's an equation. You are required by law to solve it now.
 
       <p>\\( x^2 + 1 = 0 \\)</p>
@@ -324,7 +403,8 @@ const subtopics = {
   "vectors": {
     title: "Vectors",
     content: `
-      <h3>Vectors</h3>
+      <a href="Physics Images/maths/vectors.png" download class="incomplete-summary-image">
+      The summary sheet is partially complete, click to download</a>
 
       <p>Normally a number only has a magnitude. For example, the number “7” tells us how much we have, but it doesn’t 
       point anywhere. Even if I say, “7 metres”, is that 7m north? South? Forwards? Who knows? <strong>Vectors</strong> 
@@ -466,6 +546,41 @@ const subtopics = {
         u_1 v_2 - u_2 v_1
       \\right) \\]
 
+
+      <h3>Advanced Vector Operations</h3>
+      <h4>Scalar Triple Product</h4>
+      <p>The scalar triple product combines both the dot product and the cross product:</p>
+      \\[
+        [\\vec{u}, \\vec{w}, \\vec{v}] \\equiv \\vec{u} \\cdot (\\vec{w} \\times \\vec{v})
+      \\]
+      <p>Since we know that the cross product \\(\\vec{w} \\times \\vec{v}\\) gives us another vector,
+      the scalar triple product is essentially just a dot product between two vectors, which gives us a scalar
+      (hence why it's called the scalar triple product).</p>
+      <p>Moreover, it can be proven that:</p>
+      \\[
+        \\vec{u} \\cdot (\\vec{w} \\times \\vec{v}) = (\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}
+      \\]
+      <p>Fun fact, did you know that a 3D shape with a parallelogram base is known as a 'parallelopiped'?
+      So like if you were to take a cuboid and slant it a little bit, you get the parallelopiped.
+      Mental, there was a whole stir in our lecture hall when the lecturer mentioned that. Michael Pounds,
+      the goat. In fact, cubes, cuboids and <em>rhombohedrons</em> (never knew that's what they were called,
+      but then again, what else would you call them?) are all special parallelopipeds. </p>
+      <p>With that out the way, if you were to take all three vectors from the origin and draw out the
+      parallelopiped they formed, the scalar triple product will give you the volume of that shape.</p>
+
+      <h4>Vector Triple Product</h4>
+      <p>In a similar way, we can also get ourselves the vector triple product, by replacing the dot with a cross:</p>
+      \\[
+        \\text{Vector Triple Product} \\equiv \\vec{u} \\times (\\vec{w} \\times \\vec{v})
+      \\]
+      <p>There is no interesting geometry for this one, although there is an interesting identity, known as the BAC-CAB
+      rule:</p>
+      \\[
+        \\vec{A} \\times (\\vec{B} \\times \\vec{C}) = \\vec{B}(\\vec{A} \\cdot \\vec{C}) - \\vec{C}(\\vec{A} \\cdot \\vec{B})
+      \\]
+
+
+
       <h3>Coordinate Systems</h3>
 
       <h4>Cartesian Coordinates</h4>
@@ -478,7 +593,6 @@ const subtopics = {
         \\hat{j} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}\\quad
         \\hat{k} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix}
       \\]
-      </pre>
 
       <h4>Polar Coordinates</h4>
       <p>Polar co-ordinates are more convenient for systems which have circular symmetry. Instead of just stating how 
@@ -486,16 +600,50 @@ const subtopics = {
       and the angle that it makes with the positive <em>x</em>-axis. That means instead of the \\((x,y)\\) we all 
       know and love, we now use \\((r, \\theta)\\)</p> 
 
-      <p>You can also nicely switch between Cartesian and polar co-ordinates using these juicy transformations:</p>
+      <p>Using some relatively simple trigonometry, you can also nicely switch between Cartesian and polar co-ordinates 
+      using these juicy transformations:</p>
+      <p>Converting polar to cartesian:</p>
+      \\[
+        x = r\\cos{\\theta}, \\quad 
+        y = r\\sin{\\theta}
+      \\]
+      <p>And now converting cartesian to polar:</p>
+      \\[
+        r = \\sqrt{x^2 + y^2}, \\quad 
+        \\theta = \\tan^{-1}{\\frac{y}{x}}
+      \\]
 
-      <p><em>x</em> = <em>r</em> cos(θ)<br>
-      <em>y</em> = <em>r</em> sin(θ)<br>
-      <em>r</em> = √(<em>x</em>² + <em>y</em>²)<br>
-      θ = tan⁻¹(<em>y</em>/<em>x</em>)</p>
+
+      <h4>Cylindrical Co-ordinates</h4>
+      <p>Polar co-ordinated are cool and all, but there is a <em>sliiiight</em> problem: they only deal with two
+      dimensions. Most physical systems are three-dimensional, so we need a way to feature that third dimension in.</p>
+      <p>One kinda lazy way to include it is to... literally just stick it in. We have polar equivalents to \\(x\\)
+      and \\(y\\), why not just stick a \\(z\\) in just for completion? The transformations for polar co-ordinates
+      now become this:</p>
+      \\[
+        x = r\\cos{\\theta}, \\quad 
+        y = r\\sin{\\theta}, \\quad
+        z = z
+      \\]
+      <p>Bloody \\(z=z\\), how bloody lazy is that mate?</p>
+      <p>Uninteresting as it is, it's actually pretty useful in a lot of cases. For example, in the upcoming
+      "Electricity & Magnetism" section, we will deal with solenoids, which are basically just coils. Coils of
+      course have a cylindrical shape, so we can use our newfound cylindrical co-ordinates to figure out how
+      the electric field strength changes in different positions.</p>
 
       <h4>Spherical Coordinates</h4>
-      <p>Spherical co-ordinates are more convenient for systems which have spherical symmetry. It’s fundamentally 
-      identical to polar and cylindrical co-ordinates, but now we have two angles to worry about.</p>
+      <p>Slightly more interestingly, we also have spherical co-ordinates. These are more convenient for systems 
+      which have spherical symmetry (surprise!!!). It’s fundamentally identical to polar and cylindrical 
+      co-ordinates, but instead of lazily adding a \\(z\\) now we lazily add a new angle, \\(\\phi\\). This 
+      angle is in the azimuthal direction, so like how \\(\\theta\\) was in the x-y plane,
+      \\(\\phi\\) is now in the x-z plain.</p>
+      <p>Using similar trigonometry, we can get new transformations for our spherical system:</p>
+      \\[
+        x = r\\sin{\\theta}\\cos{\\phi}, \\quad 
+        y = r\\sin{\\theta}\\sin{\\phi},  \\quad 
+        z = r\\cos{\\theta}
+      \\]
+
     `
 
   },
@@ -503,6 +651,7 @@ const subtopics = {
     title: "First Order ODES",
     content: `
         <h3>Ordinary Differential Equations (ODEs)</h3>
+        <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
         <p>An <strong>ODE (ordinary differential equation)</strong> is an equation involving only ordinary
         derivatives, and no partial derivatives. What’s a partial derivative you ask? If you don’t
         know what they are, then <em>don’t worry too much</em>.</p>
@@ -617,6 +766,7 @@ const subtopics = {
   "series": {
     title: "Series",
     content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>
           So, picture the scene. You're deep into a physics problem, everything's going 
           great, and then <strong>BAM</strong>. You get hit with some god-awful 
@@ -802,6 +952,7 @@ const subtopics = {
   "multivariable": {
     title: "Multivariable Calculus",
     content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <h3>Multivariable Calculus: Slopes in 3D</h3>
       <p>
           By now, you’re probably familiar with \\(f(x)\\). This refers to a function which depends only on a 
@@ -990,12 +1141,12 @@ const subtopics = {
   "multiple-integrals": {
     title: "Multiple Integrals",
     content: `
-      <h3>Multiple Integrals</h3>
-      <p>
+      <i>
           Hey, remember when you started learning about integration, and your maths teacher told you to include 
           the dx after the integral, but you never bothered, because you thought it weren’t important? 
           <strong>Well now it is important!</strong>
-      </p>
+      </i>
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>
           Alright, so you know how to integrate in one dimension to find the area under a curve. Easy stuff. 
           But what if you want to find the <strong>volume</strong> under a 3D surface? For that, we need to 
@@ -1103,6 +1254,7 @@ const subtopics = {
     title: "Line Integrals",
     content: `
       <h3>Line Integrals</h3>
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>
           So far, we've been integrating over whole areas and volumes. But what if you only care about what 
           happens along a specific, curvy path? For that, you need a <strong>line integral</strong>.
@@ -1243,6 +1395,7 @@ const subtopics = {
     title: "Fourier Series",
     content: `
       <h3>Fourier Series</h3>
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>
           Alright, so you've got some function. It's probably a bit of a mess, but it repeats itself. Think 
           of a square wave or a sawtooth wave—they're not nice and smooth like the functions we're used to, 
@@ -1433,6 +1586,7 @@ const subtopics = {
       matrices was actual ass, so I really didn't pay much attention to what he was saying, especially
       this part upon matrices. Worst part is, I did further maths, which means I already did matrices,
       but understood it less upon attending his lectures than I did before. Crazy innit?</i>
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>This next section is called <strong>Linear Algebra</strong>, although from what I gather, it's
       just matrices. I don't has a clue as to why they call it Linear Algebra, and in fact I'm not too
       sure why most of the stuff I've learnt about matrices is even useful. But it's here, so let's
@@ -1625,23 +1779,13 @@ const subtopics = {
     <i>Haha! This is really exciting! Basically this is the first page I’ve worked on for 
     this website, and I’m actually producing something real! Isn’t that just the coolest? 
     Anyway erm, what were we here for, kinematics innit?.</i>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
-    <h2>Introduction to Kinematics</h2>
       <p>So let me be honest, the whole prophecy thing was a bit of a grift. You <i>probably won’t</i> 
       be a prophet, but you will be able to tell how high a ball will go if you throw it with a certain 
       amount of force. This concept is quite simple (and, in my honest opinion, quite boring) but is 
       nevertheless one of the foundational parts of physics.</p>
 
-      <h3>Equations of Motion</h3>
-      <ul>
-        <li><code>v = u + at</code></li>
-        <li><code>s = ut + ½at²</code></li>
-        <li><code>v² = u² + 2as</code></li>
-      </ul>
-
-      <img src="images/kinematics-diagram.png" alt="Kinematics Diagram" style="max-width: 100%; border-radius: 8px;" />
-      
-      <p>These equations are derived under the assumption of constant acceleration.</p>
     `,
     image: "images/kinematics.png"
   },
@@ -1650,6 +1794,7 @@ const subtopics = {
     content: `
     
     <h3>Newton's Laws of Motion</h3>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
     <p> Now, for convenience's sake, instead of constantly refering to "Newton's nth law of motion," I'll instead
     refer to them as <b>N1</b>, <b>N2</b> and <b>N3</b> respectively. </p>
     <p> <b>N1</b>: <i>An object will remain at rest or in uniform motion unless acted upon by an external force.</i> </p>
@@ -1835,7 +1980,7 @@ const subtopics = {
     content: `
     
     <h3>Work and Energy</h3>
-
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
     <p>You are likely familiar with the concept of <em>kinetic energy</em>. In baby terms, this is
     the energy something has when it moves. You're also probably familiar with the formula for kinetic
     energy:</p>
@@ -2006,7 +2151,7 @@ const subtopics = {
     content: `
     
     <h3>Oscillations</h3>
-
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
     <p>An oscillation is when something moves between two points repeatedly. This happens when something is
     displaced from its resting position (more properly known as its <strong>equilibrium position</strong>), 
     and for whatever reason, there is a restoring force which tries to bring it back to that position, but 
@@ -2260,9 +2405,10 @@ const subtopics = {
   "circular-motion": {
     title: "Circular Motion",
     content: `
-    <p>I'll let you in on a little secret: I personally <em>hate</em> circular motion. I don't know
+    <i>I'll let you in on a little secret: I personally <em>hate</em> circular motion. I don't know
     why, something about it just makes it so difficult for me to wrap my head around. So, in typing
-    these notes, I'll also kinda be teaching it to myself.</p>
+    these notes, I'll also kinda be teaching it to myself.</i>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
     <p>Circular motion is something which probably doesn't need much introduction. A wheel rotating
     a planet orbiting a star, a car going around a roundabout, these are all examples of circular motion
     which you have seen. And whilst you probably knew that, what you maybe didn't know is that any 
@@ -2378,6 +2524,7 @@ const subtopics = {
     title: "Collisions",
     content: `
     <h3>Collisions in 1D</h3>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
     <p>Let’s talk about collisions.</p>
 
@@ -2479,6 +2626,7 @@ const subtopics = {
     title: 'Introduction to relativity: "c" what the Lord has done!',
     content: `
     <i>Based on the second part of PX155</i>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
 
     <h3>What is Relativity?</h3>
@@ -2653,6 +2801,7 @@ const subtopics = {
   "lorentz": {
     title: "Lorentz Transformations",
     content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>Recapping from last time, we saw that light doesn’t change speed, even in a moving frame of reference. 
       This clearly goes against the results derived from the Galilean transformations. But how can this be the 
       case? The derivation seemed so simple after all?</p>
@@ -2912,10 +3061,9 @@ const subtopics = {
         <div class="popup-content">
           <button class="popup-close">&times;</button>
           <h4 style="font-family: 'Njal', sans-serif; font-size: 30px; text-decoration: underline; 
-          margin-bottom: 0px; margin-top: 0px;">Take the L, or take the L'?</h4>
+          margin-bottom: 0px; margin-top: 0px;">G'day m8</h4>
           <p>
-          As I mentioned before, it can be quite tricky to get your head around which one is L and which one is L',
-          especially when trying to interpret a question, and 
+          Hi, ignore this for now, I'm working on something...
           </p>
         </div>
       </div>
@@ -2926,9 +3074,9 @@ const subtopics = {
         <div class="popup-content">
           <button class="popup-close">&times;</button>
           <h4 style="font-family: 'Njal', sans-serif; font-size: 30px; text-decoration: underline; 
-          margin-bottom: 0px; margin-top: 0px;">Kore wa Egguzanpuru da</h4>
+          margin-bottom: 0px; margin-top: 0px;">Hola!</h4>
           <p>
-          This is where the next example goes
+          Ignore this too please...
           </p>
         </div>
       </div>
@@ -3017,7 +3165,7 @@ const subtopics = {
   "relative-energy": {
     title: "Relative Energy and Momentum",
     content: `
-      
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>Let’s try something fun.</p>
 
       <p>Take two particles with the same mass, \\( m \\), and the same speed, \\( u \\), and have them move towards 
@@ -3146,8 +3294,9 @@ const subtopics = {
   "relativity-summary": {
     title: "Summary of Special Relativity",
     content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>One important thing we’ve learnt during this topic is that nothing moves faster than light speed. 
-      But <em>why</em>? What makes light so special?
+      But <em>why</em>? What makes light so special?</p>
 
       <p>To answer that, let me draw your attention to something you’ve probably ignored. Light speed is usually 
       represented by the letter \\( c \\). But <em>why</em>? I mean it’s no surprise that physicists aren’t great 
@@ -3204,8 +3353,8 @@ const subtopics = {
   "heat": {
     title: "Heat and Temperature",
     content: ` 
-
-      <p>Let’s talk about temperature. We’re talking about <strong>temperature</strong> — the physical property that tells us how much kinetic energy the atoms or molecules in a system have.</p>
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <p>Let’s talk about <strong>temperature</strong> — the physical property that tells us how much kinetic energy the atoms or molecules in a system have.</p>
 
       <p>In other words, it’s a measure of how hyper the particles are. In the words of one of the A-level physics
       YouTube guys, don't remember who, "If I were to heat you up, you'd start moving too."</p>
@@ -3447,8 +3596,10 @@ const subtopics = {
   "properties": {
     title: "Thermal Properties of Matter",
     content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
     <p>Right. Let’s talk about <strong>thermal physics</strong> — the science of why stuff 
-    expands when you heat it, why gases don’t stay gases forever, and why your kettle boils at 100°C (unless you’re in a lab, or on a mountain, or in a submarine).</p>
+    expands when you heat it, why gases don’t stay gases forever, and why your kettle boils at 100°C 
+    (unless you’re in a lab, or on a mountain, or in a submarine).</p>
 
     <h3>The Ideal Gas Law</h3>
 
@@ -3882,6 +4033,7 @@ const subtopics = {
     title: "The First Law of Thermodynamics",
     content: `
     <h3>The First Law of Thermodynamics</h3>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
     <p>Unless you're first time learning about physics was yesterday evening, you probably know the first law of
     thermodynamics, even if not by name. It's the classic "energy cannot be created nor destroyed, only transferred.</p>
@@ -4196,6 +4348,7 @@ const subtopics = {
     title: "The Second Law of Thermodynamics",
     content: `
     <h3>The Second Law of Thermodynamics</h3>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
     <p>Right. Let’s talk about the <strong>Second Law</strong>.</p>
 
@@ -4365,6 +4518,7 @@ const subtopics = {
     title: "Entropy",
     content: `
     <h3>Entropy</h3>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
     <p>Building on from the Second Law of Thermodynamics (which you forgot about, smh...), I think it's time to talk
     about <strong>entropy</strong>!!!</p>
@@ -4472,6 +4626,7 @@ const subtopics = {
   "thermal-summary": {
     title: "Turn up the heat, Soulburner!",
     content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
     `,
   },
@@ -4481,6 +4636,7 @@ const subtopics = {
     title: "Introduction to Waves: Wibble-wobble wibble-wobble",
     content: `
     <h3>Wave Phenomena</h3>
+    
 
     <p>Right. Let’s talk about <strong>waves</strong>.</p>
 
@@ -4499,8 +4655,9 @@ const subtopics = {
   "wave-phenomena": {
     title: "The wave function",
     content: `
-  
+    
     <h3>The Wavefunction: U(x, t)</h3>
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
     <p>To describe a wave, we need a function that depends on both <strong>position</strong> and <strong>time</strong>.</p>
 
@@ -4785,7 +4942,7 @@ const subtopics = {
     title: "Mechanical Waves",
     content: `
       <h3>Mechanical Waves</h3>
-
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>Now for mechanical waves. These are waves which make things move, <em> without</em> making things move.</p>
       <p>What an explanation, I know! Anyway, if you want a more technical definition (not that you'd need one, being as 
       my explanation was flawless), they are waves where energy is propagated, but matter doesn't move with it. These
@@ -4960,6 +5117,7 @@ const subtopics = {
     title: "Standing Waves",
     content: `
         <h3>Reflections at Fixed and Free Ends</h3>
+        <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
         <p>What happens to waves when they hit a boundary is important for, like, everything. Pianos, guitars, quantum 
         particles... you name it.</p>
@@ -5148,6 +5306,7 @@ const subtopics = {
     title: "Polarisation",
     content: `
   <h3>The Nature of Light</h3>
+  <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
   <p>So, we all know light's a wave, right? But it's not some common wave you get on a string. Nah, this is a top-tier, 
   VIP wave. An electromagnetic wave. Maxwell cooked up a set of equations to describe all of electricity and magnetism, 
@@ -5276,8 +5435,7 @@ const subtopics = {
     content: `
       <p><i>Fun fact, did you know that it's actually quite bad for a child to be raised being too clean? 'Cus it don't 
       allow their immune system to develop or something. So mud is actually good for them!</i></p>
-
-      <h3>Light in Matter</h3>
+      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
       <p>In a vacuum, light moves at speed \\(c\\), the ultimate speed limit. But what happens when it tries to go 
       through, say, glass? You probably know that it slows down in glass and other stuff, hence Newton's 
@@ -5448,6 +5606,7 @@ const subtopics = {
   "waves-summary": {
     title: "Summary: Wave Goodbye!",
     content: `
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
       `,
   },
@@ -5456,7 +5615,7 @@ const subtopics = {
   "e-m-intro": {
     title: "Introduction to E&M: Magic Floaty Metal!", //https://www.popularmechanics.com/space/rockets/a65924333/engineer-overcoming-earths-gravity/
     content: `
-
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       `,
   },
   "dc-circuits": {

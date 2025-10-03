@@ -457,6 +457,41 @@ li {
   padding-top: 0%;
 }
 
+.no-summary-image {
+  padding: 0.5rem;
+  position: relative;
+  background-color: rgb(229, 26, 26);
+  font-family: "Njal", sans-serif;
+  Font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+}
+
+.no-summary-image:hover {
+  background-color: rgba(212, 22, 48, 0.865);
+}
+
+.incomplete-summary-image {
+  padding: 0.5rem;
+  position: relative;
+  background-color: rgb(251, 188, 29);
+  color: white;
+  font-family: "Njal", sans-serif;
+  Font-size: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+}
+
+.incomplete-summary-image:hover {
+  background-color: rgba(212, 149, 22, 0.865);
+}
+
+
+
 
 /* ------------ Orange link pop-up ------------ */
 

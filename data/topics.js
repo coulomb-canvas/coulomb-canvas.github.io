@@ -34,7 +34,7 @@ const topics = [
       {
         subid: "maths-intro",
         title: "Maths! The best thing ever!",
-        text: "I mean, c'mon, did you REALLY think you could get away with studying physics without knowing some maths?",
+        text: "Universe Duolingo",
         image: "images/time-dilation.png"
       },
       {

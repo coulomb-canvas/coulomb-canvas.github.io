@@ -23,6 +23,11 @@ const topics = [
         subid: "dimension",
         title: "Dimensional Analysis",
         text: "Z-Arc! What?!"
+      },
+      {
+        subid: "welcome-summary",
+        title: "Dimensional Analysis",
+        text: "Z-Arc! What?!"
       }
     ]
   },

@@ -5,7 +5,7 @@ const subtopics = {
     content: `
 
     <p>Hi there!</p>
-    <p>Welcome to Coulomb Academy!</p>
+    <p>Welcome to Coulomb Canvas!</p>
 
     <h3>What exactly am I here to do?</h3>
     <p>I am a second year student at the University of Warwick, and I am studying (believe it or not) physics for my
@@ -217,18 +217,124 @@ const subtopics = {
     </div>
      `
   },
+  "dimension": {
+    title: "Dimensional Analysis",
+    content: `
+    
+    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+    <p> Let's start this with something very simple. You are walking around a park or something, and you see two
+    kids playing on the swings. Now, you don't know their names, how old they are, where they are from, frankly
+    you have never seen or spoken to these guys before... and yet by some miracle (i.e. Jon Duffy's exceptional
+    note writing skills), you know that one of them weighs 80kg and the other 60kg.</p>
+    <p> And of course, of all the things you could possibly do in this scenario, you ask the all important question:</p>
+    <p><em>Who swings faster?</em></p>
+    <p>There is obviously only one way for you to figure this out: determine the 
+    <span class="definition" data-definition="The time taken for one complete oscillation of a periodic motion (one
+    swing in this case)"> time period, \\(T\\)</span>, for each person, and then just compare them. Now you could
+    obviously just watch them and use a timer or something, but for some reason (i.e. Jon Duffy's exceptional note
+    writing skills, plus the fact that watching children play on swings is a questionable use of free will), you
+    want to find a formula to calculate \\(T\\) instead.</p>
+    <p>And once again, we could just take out our phones and look up the formula, but for some reason (i.e. Jon Duffy's
+    exceptional note writing skills), you can't, you have to invent the formula yourself. Or maybe a better way of
+    looking at it: how did the person who invented the formula do it anyway?</p>
+    <h3>Conducting Dimensional Analysis</h3>
+    <p> First things first: what variables could the time period depend on?</p>
+    <p> Perhaps the length of the swing, \\(l\\). I'd imagine that the strength of gravity, \\(g\\), would probably
+    make a difference. And of course, the mass of the people, \\(m\\). I'd like to think we didn't go out of our
+    way to get their weights for no reason...</p>
+    <p>With our 3 proposed variables, we can describe the time period as a function of length, gravitational field
+    strength and mass;</p>
+    \\[T = f(l, g, m)\\]
+    <p>This just means that \\(T\\) is a function of \\(l\\), \\(g\\) and \\(m\\). Bare in mind, for any mathematical
+    equation, the units on the left hand side must be the same as the units of the right hand side. Since \\(T\\) will 
+    obviously have units of seconds, \\(f(l, g, m)\\) must also have units of seconds.</p>
+    <p>This one idea of getting the same units on both sides is the basis of dimensional analysis. The challenge is
+    to take the three variables we have on the right hand side and try to combine them in such a way that they get
+    the units "seconds".</p>
+    <p>To do this, let's first note down what units each quantity has.</p>
+    <p>In SI units, we know that length obviously has units of metres, \\(m\\), acceleration due to gravity is an
+    acceleration, meaning it has units \\(ms^2\\), and mass has units of \\(kg\\).</p>
+    <p>Remember, we want the units \\(s\\), not \\(m\\) and not \\(kg\\)</p>
+    <p>The only quantity which has an \\(s\\) in it is \\(g\\). However, the units for \\(g\\) have that pesky
+    \\(m\\) in it, which we need to get rid of. Luckily, we have \\(l\\) which has units of \\(m\\), so if we divide
+    \\(l\\) by \\(g\\), the \\(m\\)s will cancel out, leaving us with:</p>
+    \\[\\frac{l}{g} = \\frac{m}{ms^{-2}} = s^2\\]
+    <p>Ooh, \\(s^2\\), that looks good! So if we want to get the \\(s\\) we are looking for, we just take the square
+    root:</p>
+    \\[
+      \\sqrt{\\frac{l}{g}} = s
+    \\]
+    <p>Brilliant! This now gives us the formula for the time period:</p>
+    \\[T = \\text{constant}\\sqrt{\\frac{l}{g}}\\]
+    <p>Using dimensional analysis, we were able to figure out the formula for the time period. However, there are two
+    problems. For one, we don't know what that constant is. I mean, if you are already familiar with the equation, then
+    you <em>do</em> know that the constant here is \\(2\\pi\\). However, in any other case, you wouldn't be so
+    lucky</p>
+    <p>And secondly... we did creepily obtain the weights of two random people for no reason, because it seems like
+    the \\(m\\) was never used.</p>
 
+    <h3>Dimensions</h3>
+    <p>In this little example, we considered <em>units</em>. However, from now on we will start using dimensions 
+    instead. These are quite similar, but unlike units can't change. Take length for example: a length could
+    have units \\(m\\), \\(cm\\), \\(km\\) or even \\(inches\\). However, the dimension of length is always
+    \\(L\\). Some examples of dimensions are:</p>
+    <ul>
+      <li>Length: \\(L\\)</li>
+      <li>Mass: \\(M\\)</li>
+      <li>Time: \\(T\\)</li>
+      <li>Electric Current: \\(I\\)</li>
+      <li>Temperature: \\(\\Theta\\)</li>
+      <li>Amount of Substance: \\(N\\)</li>
+      <li>Luminous Intensity: \\(J\\)</li>
+    </ul>
+    <p>From these, you can derive the dimensions of other quantities:</p>
+    <ul>
+      <li>Velocity: \\(LT^{-1}\\)</li>
+      <li>Area: \\(L^2\\)</li>
+      <li>Kinetic Energy: \\(ML^2T^{-2}\\)</li>
+    </ul>
+
+    
+    `},
+  "welcome-summary": {
+    title: "Be free, my child",
+    content: `
+    <p> And with that, you have all the information you need to use this website. I hope you have a great time
+    using it, and I hope it helps you in your studies. </p>
+    <p> Please remember though, this website is a work in progress. Many of the features are not refined, most
+    of the images are incomplete or non-existent, and there are probably a fair few errors. I will be trying to refine
+    and add to this website as much as I can, but I am only one person, and I do have a life outside of this website,
+    so erm... just wait, k?</p>
+    `},
   // Subtopics for Maths for
 
   "maths-intro": {
     title: "Maths! The best thing ever!",
     content: `
+    <i>I believe there was some one guy who said "Mathematics is the language with which God created the universe".
+    That makes this section seem way more philosophical than it probably is. Anyway, you get to learn the language
+    of the universe. By the time you're done, you will be able to order a coffee and ask for directions in
+    God's language.</i>
+    <p></p>
     <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
-    <p>Now there is a bright side. If you did Further Maths at A-Level, like I did, then you will have propably
+    
+    <p>People often say, if you want to study maths at university, don't study maths at university. I don't know
+    if you've seen the stuff they do in maths, but it's certainly strange. Things like analysis, or proving
+    that 0 is not 1, or having to verify every individual step of a calculation is valid.</p>
+    <p>If you want to do actual maths, similar to the stuff you did at A-level, then physics is probably a much
+    better choice. Here we actually use integration, differentiation, complex numbers and what not, and we use
+    'em pretty early. My maths friends didn't touch differentiation until second or third term.</p>
+    <p>Slight problem though... that means for those of us who wanted to do physics for the sake of doing physics,
+    you are now burdened with having to learn all of the maths.</p>
+    <p>Now there is a bright side. If you did Further Maths at A-Level, like I did, then you will have probably
     done 90% of the stuff here already. You know what that means... you can sit in lectures and do nothing!
     Or at least significantly less. But whatever you do, don't not go. Go to your lectures. Because if you don't,
     then the monster who lives under the bed will eat you up. It's true, I spoke with the monster who lives under
     yours personally, and that's what he said. As to whether or not you believe that is up to you though...</p>
+    <p>However, if you didn't do Further Maths, have fun <em>actually paying attention</em> in the lectures <em>
+    you are definitely attending</em>. Then again, what did you expect? You are doing a degree in physics,
+    you had to be good at maths to do A-Level physics, why would it be different here?</p>
+    <p> But whatever, have fun!</p>
     `
   },
   "complex-numbers": {
@@ -404,7 +510,12 @@ const subtopics = {
     title: "Vectors",
     content: `
       <a href="Physics Images/maths/vectors.png" download class="incomplete-summary-image">
-      The summary sheet is partially complete, click to download</a>
+        The summary sheet is partially complete, click to download
+        <span class="image-preview">
+          <img src="Physics Images/maths/vectors.png" alt="Preview" />
+        </span>
+      </a>
+
 
       <p>Normally a number only has a magnitude. For example, the number “7” tells us how much we have, but it doesn’t 
       point anywhere. Even if I say, “7 metres”, is that 7m north? South? Forwards? Who knows? <strong>Vectors</strong> 
@@ -766,7 +877,12 @@ const subtopics = {
   "series": {
     title: "Series",
     content: `
-    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <a href="Physics Images/maths/series.png" download class="incomplete-summary-image">
+        The summary sheet is partially complete, click to download
+        <span class="image-preview">
+          <img src="Physics Images/maths/series.png" alt="Preview" />
+        </span>
+      </a>
       <p>
           So, picture the scene. You're deep into a physics problem, everything's going 
           great, and then <strong>BAM</strong>. You get hit with some god-awful 
@@ -1394,8 +1510,13 @@ const subtopics = {
   "fourier": {
     title: "Fourier Series",
     content: `
-      <h3>Fourier Series</h3>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <a href="Physics Images/maths/fourier.png" download class="incomplete-summary-image">
+        The summary sheet is partially complete, click to download
+        <span class="image-preview">
+          <img src="Physics Images/maths/fourier.png" alt="Preview" />
+        </span>
+      </a>
+
       <p>
           Alright, so you've got some function. It's probably a bit of a mess, but it repeats itself. Think 
           of a square wave or a sawtooth wave—they're not nice and smooth like the functions we're used to, 
@@ -1417,15 +1538,14 @@ const subtopics = {
           \\[f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} [a_n\\cos(\\frac{n\\pi x}{L}) + b_n\\sin(\\frac{n\\pi x}{L})]\\]
       </p>
       <p>
-          Here, <em>f(x)</em> is your original function, the <em>sin</em> and <em>cos</em> terms are your simple 
-          "notes", and the coefficients <em>aₙ</em> and <em>bₙ</em> tell you the "volume" of each note in 
+          Here, \\(f(x)\\) is your original function, the \\(\\sin\\) and \\(\\cos\\) terms are your simple 
+          "notes", and the coefficients \\(a_n\\) and \\(b_n\\) tell you the "volume" of each note in 
           the mix. The formula is basically just the average value of the function you are trying to produce, 
           plus an infinite combination of sine and cosine waves to get the desired shape.
       </p>
-
-      <h4>Why Bother?</h4>
       <p>
-          Honestly, this is a game-changer.
+          Then again, why bother? Why approximate the function as sine and cosine waves when you could just...
+          use the function?
       </p>
       <ul>
           <li>
@@ -1443,13 +1563,13 @@ const subtopics = {
           </li>
       </ul>
 
-      <h4>Finding the Coefficients</h4>
+      <h3>Finding the Coefficients</h3>
       <p>
           So how do you find the <em>aₙ</em> and <em>bₙ</em> coefficients for your function? You use a clever 
           trick called <strong>orthogonality</strong>.
       </p>
       <p>
-          Basically, over an interval like <em>[-L, L]</em>, different sine and cosine waves are 
+          Basically, over an interval like \\([-L, L]\\), different sine and cosine waves are 
           "perpendicular" to each other. If you multiply two different ones and integrate, you get zero. 
           The only way you get a non-zero answer is if you integrate a wave with itself.
       </p>
@@ -1488,12 +1608,12 @@ const subtopics = {
           \\[a_0 = \\frac{1}{L} \\int f(x) dx\\]
       </p>
 
-      <h4>Symmetries</h4>
+      <h3>Symmetries</h3>
       <p>
           Doing all those integrals is a proper pain in the arse. But if you're clever, you can save 
           yourself a massive amount of work by checking for symmetry first. <strong>Always sketch the function!</strong>
       </p>
-      <h5>Even Functions (Symmetric)</h5>
+      <h4>Even Functions (Symmetric)</h4>
       <p>
           If your function is a perfect mirror image around the y-axis (like \\(x^2\\) or \\(|x|\\)), it's 
           <strong>even</strong>.
@@ -1503,7 +1623,7 @@ const subtopics = {
           <li><strong>The Result:</strong> You know immediately that <strong>all the <em>bₙ</em> coefficients are zero</strong>. 
           Don't even bother calculating them. Just find \\(a_0\\) and \\(a_n\\). Job done.</li>
       </ul>
-      <h5>Odd Functions (Anti-symmetric)</h5>
+      <h4>Odd Functions (Anti-symmetric)</h4>
       <p>
           If your function has rotational symmetry about the origin (like <em>x</em> or \\(x^3\\)), it's 
           <strong>odd</strong>.
@@ -1514,23 +1634,19 @@ const subtopics = {
           are zero</strong>. You only need to calculate the <em>bₙ</em> coefficients. Half the work, just like that.</li>
       </ul>
 
-      <h4>The Fine Print</h4>
-      <p>
-          There are a few final details you need to know about how these series behave.
-      </p>
-      <h5>Convergence</h5>
+      <h3>Convergence</h3>
       <p>
           At any point where your function is nice and continuous, the Fourier series will match it perfectly 
           (with an infinite number of terms that is). However, at a <strong>discontinuity</strong> (a sharp 
           jump), the series does something clever: it converges to the <strong>exact midpoint of the jump</strong>.
       </p>
-      <h5>Periodic Extensions</h5>
+      <h3>Periodic Extensions</h3>
       <p>
           Your Fourier series is made of infinitely repeating sines and cosines. So, even if your original 
           function was only defined from <em>-L</em> to <em>L</em>, the series will just copy and paste that 
           shape over and over again for all <em>x</em>. It creates a <strong>periodic extension</strong>.
       </p>
-      <h5>The Gibbs Phenomenon</h5>
+      <h3>The Gibbs Phenomenon</h3>
       <p>
           At a sharp jump, the series doesn't just settle for the midpoint. It actually 
           <strong>overshoots</strong> the mark on either side. Even with an infinite number of terms, this 
@@ -1574,8 +1690,7 @@ const subtopics = {
         <li>Used in signals, heat, quantum, compression</li>
       </ul>
 
-      <p>And remember: the universe doesn’t care how jagged your function is.  
-      It only cares about the wiggles.</p>
+      <p>And remember: Sines and cosines are always on their best behaviour!</p>
     `
 
   },
@@ -1779,12 +1894,23 @@ const subtopics = {
     <i>Haha! This is really exciting! Basically this is the first page I’ve worked on for 
     this website, and I’m actually producing something real! Isn’t that just the coolest? 
     Anyway erm, what were we here for, kinematics innit?.</i>
-    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
       <p>So let me be honest, the whole prophecy thing was a bit of a grift. You <i>probably won’t</i> 
       be a prophet, but you will be able to tell how high a ball will go if you throw it with a certain 
       amount of force. This concept is quite simple (and, in my honest opinion, quite boring) but is 
       nevertheless one of the foundational parts of physics.</p>
+      <p>Classical mechanics is home to some of the most iconic physics equations and concepts in all of
+      physics. For example, we meet the Dark Magician of physics: \\(F=ma\\). You are probably quite 
+      familiar with this equation — I mean, you'd have to be in order to be studying physics at
+      university. In that case, you are also probably familiar with the Blue-Eyes White Dragon of 
+      physics: \\(\\text{speed} = \\text{distance} \\div \\text{time}\\), or \\(u=\\frac{s}{t}\\), which also 
+      features here.</p>
+      <p>Fun fact about me, my first discovery of \\(F=ma\\) equation wasn't actually during school at all 
+      — it was actually when I had learnt about \\(s=ut\\) (or a similarly easy equation, I don't actually
+      remember), and then in an attempt be a nerdy mathematician, I started typing other random letter in
+      the form [random letter 1] = [random letter 2] [random letter 3]. Lo and behold, I stumbles across
+      \\(F=ma\\)</p>
+      <p>There... really isn't much else to say is there? Well, have fun I guess!</p>
 
     `,
     image: "images/kinematics.png"
@@ -1792,9 +1918,10 @@ const subtopics = {
   "newton-laws": {
     title: "Newton's Laws",
     content: `
-    
-    <h3>Newton's Laws of Motion</h3>
+
     <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+    <p>We've all heard of 'em, and it's about time we actually started using them! Newton's laws of motion govern
+    pretty much all of our everyday interactions.</p>
     <p> Now, for convenience's sake, instead of constantly refering to "Newton's nth law of motion," I'll instead
     refer to them as <b>N1</b>, <b>N2</b> and <b>N3</b> respectively. </p>
     <p> <b>N1</b>: <i>An object will remain at rest or in uniform motion unless acted upon by an external force.</i> </p>
@@ -2107,7 +2234,7 @@ const subtopics = {
     <p>Since we know that total energy is conserved, we can say that:</p>
     <p>\\( E_i = E_f \\text{ or } T_i + U_i = T_f + U_f \\)</p>
 
-    <h3>Now, here’s a fun one: escape velocity.</h3>
+    <h3>Escape velocity.</h3>
 
     <p>How fast do you need to go to escape Earth’s gravity?</p>
 
@@ -2121,7 +2248,7 @@ const subtopics = {
 
     <p>So if you’re a rocket, or a very ambitious kangaroo, that’s your ticket out.</p>
 
-    <h3>And finally: power.</h3>
+    <h3>Power</h3>
 
     <p>Power is work done per unit time. Simple.</p>
 
@@ -2137,12 +2264,11 @@ const subtopics = {
       <li>Work = \\( \\int \\vec{F} \\cdot d\\vec{r} \\)</li>
       <li>For conservative forces, \\( W = -\\Delta U \\) → total energy conserved</li>
       <li>For non-conservative forces, energy is lost (usually to heat)</li>
-      <li>Escape velocity? \\( \\sqrt{\\frac{2GM}{R}} \\)</li>
-      <li>Power? \\( \\vec{F} \\cdot \\vec{v} \\) — because speed matters when you’re in a rush</li>
+      <li>Escape velocity: \\( \\sqrt{\\frac{2GM}{R}} \\)</li>
+      <li>Power: \\( \\vec{F} \\cdot \\vec{v} \\) — because speed matters when you’re in a rush</li>
     </ul>
 
-    <p>And remember: the universe doesn’t care how hard you tried.  
-    It only cares about the dot product.</p>
+    <p>And remember: don't piss off conservatives.</p>
     `,
     image: "images/newton-laws.png"
   },
@@ -2150,7 +2276,13 @@ const subtopics = {
     title: "Simple Harmonic Motion",
     content: `
     
-    <h3>Oscillations</h3>
+    <i>For any of you who watched Yu-Gi-Oh Arc-V... surely I'm not alone in thinking that this series was
+    seriously dissapointing. I'm not even one of those people who talk about it like it's the worst show
+    in existence, I did genuinely quite like the show. But they had such a cool idea and then they just
+    executed it in the least ideal way. And Z-Arc looked so weird. Especially since they already showed
+    what Z-Arc looked like in the original dimension, why did he end up just looking like Yuya but
+    deformed? Did Yuto, Yugo and Yuri just... do nothing?</i>
+    <p></p>
     <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
     <p>An oscillation is when something moves between two points repeatedly. This happens when something is
     displaced from its resting position (more properly known as its <strong>equilibrium position</strong>), 
@@ -2616,8 +2748,7 @@ const subtopics = {
       <li>Need more info to solve — usually energy or angles</li>
     </ul>
 
-    <p>And remember: the universe doesn’t care how hard you try.  
-    It only cares about the conservation laws.</p>
+    <p>And remember: moment and torque are apparently the same thing.</p>
         `
   },
 
@@ -2739,7 +2870,6 @@ const subtopics = {
         through air. This hypothetical medium was called the luminiferous aether, and it was thought that light moves at 
         speed \\(c\\) relative to this aether. So if we were to move through the aether at speed \\(i\\), then the speed of 
         light would be \\(-u\\) in the direction of motion, and c+u in the opposite direction. </p>
-        <p> .</p>
         <p> The Michelson-Morley experiment was designed to detect the motion of the Earth through the aether. In short, the
         light comes from the source and is split into two beams. One goes straight through and the other is reflected and goes
         up. They both hit their respective mirrors and then are reflected back to the splitty thing, which the light goes through 
@@ -2751,7 +2881,7 @@ const subtopics = {
       <div class="image">
         <div class="image-floater">
           <div class="image-box">
-            <img src="images/Special Relativity/Michelson-Morley.png" alt="Michelson-Morley Experiment" style="max-width:100%; 
+            <img src="images/Special Relativity/Michelson-Morley.png" alt="Michelson-Morley Experiment" style="max-width: 20vw; 
             border-radius: 8px;" class="pop-image"/>
           </div>
           <span class="image-tooltip" style="left:-400px"> <div class="image-tooltip-title">
@@ -2840,19 +2970,22 @@ const subtopics = {
       asserted it, because it’s obvious, y’know. So let’s actually try and prove it.</p>
 
       <div class="container">
+      <div class="left-bracket"></div> 
         <div class="image">
+        
           <div class="image-floater">
-            <div class="image-box" style="width:80%;">
+            <div class="image-box left-box" >
               <img src="images/Special Relativity/Space-time S'.png" alt="Simultaneity S'" style="max-width: 100%; 
               border-radius: 8px;" class="pop-image"/>
             </div>
-            <span class="image-tooltip"> <div class="image-tooltip-title">
+            <span class="image-tooltip left-box" style="left:12vw"> <div class="image-tooltip-title">
             Figure 3a: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
             In the S' frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
             equidistant from her. The light reaches both of them at the same time, <br> 
             so the events are simultaneous.</div></span>
           </div>
         </div>
+        <div class="right-bracket"></div> 
         <div class="text">
           <p>Let’s imagine a scenario where we have three people: Ava, Breanna and Caitlyn. They are in a moving 
           frame, \\(S'\\), and each of them an equal distance apart. (This is simply represented by them being 
@@ -2879,7 +3012,7 @@ const subtopics = {
               <img src="images/Special Relativity/Space-time S.png" alt="Simultaneity S" style="max-width: 100%; 
               border-radius: 8px;" class="pop-image"/>
             </div>
-            <span class="image-tooltip"> <div class="image-tooltip-title">
+            <span class="image-tooltip" style="left:-33vw"> <div class="image-tooltip-title">
             Figure 3b: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
             In the S frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
             equidistant from her, but in this frame, the light reaches them at different <br> 

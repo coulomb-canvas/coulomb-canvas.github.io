@@ -479,7 +479,7 @@ li {
   background-color: rgb(251, 188, 29);
   color: white;
   font-family: "Njal", sans-serif;
-  Font-size: 3vw;
+  font-size: 3vw;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -490,7 +490,29 @@ li {
   background-color: rgba(212, 149, 22, 0.865);
 }
 
+/* Hide preview by default */
+.image-preview {
+  display: none;
+  position: absolute;
+  top: 105%;
+  left: 0;
+  z-index: 100;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding-bottom: 0px;
+}
 
+/* Show preview on hover */
+.incomplete-summary-image:hover .image-preview {
+  display: block;
+}
+
+/* Optional: limit preview size */
+.image-preview img {
+  width: 20vw;
+  height: auto;
+  pointer-events: none;
+}
 
 
 /* ------------ Orange link pop-up ------------ */
@@ -566,9 +588,42 @@ li {
   /* Space between image and text */
 }
 
+.text {
+  background-color: #9fa4c432;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .text p {
-  margin: 0;
-  /* Remove default paragraph margins */
+  color: rgba(255, 255, 255, 0.89);
+}
+
+.right-bracket {
+  width: 30px;        /* thickness */
+  height: 250px; /* nearly as tall as text container, tweak with padding/margin if needed */
+  border: 10px solid #9fa4c432;
+  border-left: none;
+  border-radius: 5px;
+  margin-left: -30px;  /* spacing from image */
+  margin-right: -20px; /* spacing to text */
+  background: transparent;
+}
+
+.left-bracket {
+  width: 30px;        /* thickness */
+  height: 250px; /* nearly as tall as text container, tweak with padding/margin if needed */
+  border: 10px solid #9fa4c432;
+  border-right: none;
+  border-radius: 5px;
+  margin-right: -30px;  /* spacing from image */
+  margin-left: 0px; /* spacing to text */
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .left-bracket, .right-bracket {
+    display: none;
+  }
 }
 
 /* ------------ Container for the floating images ------------ */
@@ -588,6 +643,8 @@ li {
   position: relative;
   z-index: 1;
 }
+
+
 
 .image-floater:hover {
   animation-play-state: paused;
@@ -661,9 +718,22 @@ body.dimmed::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .image-box {
+    width: 70vw;
+    /* Stack vertically on smaller screens */
+  }
+}
+
 .image-box:hover {
   transition: transform 0.3s ease;
-  transform: scale(1.5) translateX(-30px);
+  transform: scale(1.5) translateX(-5vw);
+  z-index: 30;
+}
+
+.image-box.left-box:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.5) translateX(5vw);
   z-index: 30;
 }
 
@@ -681,6 +751,7 @@ body.dimmed::before {
   animation: flash-border 1s linear infinite;
   z-index: 30;
 }
+
 
 /* White flash tracing around the border */
 .image-box::after {
@@ -750,7 +821,12 @@ body.dimmed::before {
 
 .image:hover .image-tooltip {
   opacity: 1;
-  transform: translateY(-50%) translateX(-250px);
+  transform: translateY(-50%) translateX(-30vw);
+}
+
+.image:hover .image-tooltip.left-box {
+  opacity: 1;
+  transform: translateY(-50%) translateX(30vw);
 }
 
 .image-tooltip-title {
@@ -781,10 +857,19 @@ body.dimmed::before {
     transform: scale(1.05) translateX(0px);
   }
 
+  .image-box.left-box:hover {
+    transform: scale(1.05) translateX(0px);
+  }
+
   .image:hover .image-tooltip {
     opacity: 1;
     transform: translateY(-50%) translateX(0px);
   }
+
+  .image:hover .image-tooltip.left-box {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0px);
+}
 
   .image-tooltip-title {
 
@@ -830,7 +915,7 @@ body.dimmed::before {
   z-index: 59;
 }
 
-.hover-wrapper:hover .formula-tooltip {
+.formula-container:hover .formula-tooltip {
   opacity: 1;
   transform: translateY(-50%) translateX(5px);
 }

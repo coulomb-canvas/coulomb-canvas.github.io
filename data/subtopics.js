@@ -2,16 +2,29 @@
 
 const subtopics = {
   "welcome-intro": {
+    title: 'Welcome to Coulomb Canvas!',
     content: `
 
     <p>Hi there!</p>
     <p>Welcome to Coulomb Canvas!</p>
 
-    <h3>What exactly am I here to do?</h3>
+    <h3>Who the bloody hell are you, m8?</h3>
+    <p>A bit rude, don't you think? Not even a "Hello" or a "How are you"? SMH...</p> 
     <p>I am a second year student at the University of Warwick, and I am studying (believe it or not) physics for my
       undergrad. I have a notably quite novel way of explaining things, and therefore I felt like making this website
       to help people who are also studying physics.
     </p>
+    <p>You obviously don't know who I am, and frankly, I don't need you to know who I am. I am a phantom who
+      floats through the confides of Warwick University. Therefore if you attend Warwick Uni, I've probably walked
+      passed you a fair few times. And you didn't even bloody notice 🤭
+    </p>
+    <p>Anyway, my goal with this website is to give you a sexy little resource to help you with your learning. You
+      don't know me yet, but you'll soon agree with me that I am a very wierd human. And whilst this isn't great for
+      socialising, it is AMAZING for understanding physics. This means I can draw connections and create analogies
+      which socially useful people can't. 
+    </p>
+
+    <h3>Terms and Conditions</h3>
     <p>Before you begin using my site, there are a few disclaimers I should probably make:</p>
     <p>Firstly, everything I do is based off my lecture notes from my specific university. I would imagine that different
       universities have different curricula, use different convensions, and assess different things. Therefore, unless you
@@ -44,20 +57,29 @@ const subtopics = {
     <p>But before I do, I must make something ABUNDANTLY clear...</p>
     <p>This website is a WORK IN PROGRESS</p>
     <p>For example, you may be wondering what the deal is with that massive red banner which says "Sorry, the 
-    summary image doesn't exist yet :(". And You may wonder why this website is called 'Coulomb Canvas'. I mean 
-    you probably know how 'Coulomb' relates to physics... but canvas? 
-    Basically the main thing I wanted to do for this website was to
-    use it as a platform to publicise my visual notes, which are drawn ('drawn' on my laptop, not on paper, I'm
-    not a billion years old), and canvases are things you use for drawing.</p>
+      summary image doesn't exist yet :(". And You may wonder why this website is called 'Coulomb Canvas'. I mean 
+      you probably know how 'Coulomb' relates to physics... but canvas? 
+      Basically the main thing I wanted to do for this website was to
+      use it as a platform to publicise my visual notes, which are drawn ('drawn' on my laptop, not on paper, I'm
+      not a billion years old), and canvases are things you use for drawing.
+    </p>
     <p>However, most of my visual notes are based on the sections which A) I haven't completed and B) you probably
-    shouldn't be worrying about considering you joined this university 10 seconds ago. So for now they are just
-    my wacky text explanations. Don't worry though, they don't take <em>too</em> long to make, so when I'm done, 
-    I'll update this website so you'll be able to download 'em</p>
+      shouldn't be worrying about considering you joined this university 10 seconds ago. So for now they are just
+      my wacky text explanations. Don't worry though, they don't take <em>too</em> long to make, so when I'm done, 
+      I'll update this website so you'll be able to download 'em
+    </p>
     <p>Do keep looking out for them though, as I have arranged the into three categories, the "Sorry, the summary
-    image doesn't exist yet :(" category, the "It's still not completely done but I've started, so you can download it 
-    and have a look anyway (and also I just enjoy the thrill of putting my work on the internet)" category, and
-    eventually, you'll get the "I'm done with the image for this topic! Download now!" category."</p>
-
+      image doesn't exist yet :(" category, the "It's still not completely done but I've started, so you can download it 
+      and have a look anyway (and also I just enjoy the thrill of putting my work on the internet)" category, and
+      eventually, you'll get the "I'm done with the image for this topic! Download now!" category."
+    </p>
+    <p>Also, if you use enough of my website, you'll be aquainted to my usual style of speaking (typing?). You will
+      also notice certain small sections which don't quite match that style. That's because, for the sake of finishing
+      things quickly, I used a smidgem of AI. Yes, I know, I'm useless, but Qwen AI is really nice to me and offered
+      to help me. Anyway, what it wrote is accurate, but... not quite me. It did try its best to match my style, but
+      there is no-one who can match my style except me. I think it's pretty obvious which parts Qwen wrote, you see
+      if you can find them.
+    </p>
     <p>Anywho, time to delve into the different features of the one, the only, Coulomb Canvas!</p>
 
     <h3>The subtopic image buttons</h3>
@@ -74,10 +96,11 @@ const subtopics = {
       <div class="image">
         <div class="image-floater">
           <div class="image-box">
-            <img src="images/Avatar/Topics 1/quantum1 subtopics/quantum-mechanics.png" class="pop-image" style="width: 300px"/>
+            <img src="images/Avatar/Topics 1/quantum1 subtopics/quantum-mechanics.png" class="pop-image" 
+            style="max-width: 100%; width: 150vw"/>
           </div>
-          <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
-            Figure 1: Subtopic Title Image</div><div style="color:white; font-size:20px; line-height: 1.2;">
+          <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+            Figure 1: Subtopic Title Image</div><div class="image-tooltip-desc">
             You saw this something like this when you clicked onto this topic</div></span>
         </div>
       </div>
@@ -85,33 +108,33 @@ const subtopics = {
 
     <p>First up, you've got the title. Pretty self-explanatory.</p>
     <p>Underneath it (or above it in the case of the introductions and conclusions), you have a little comment about the
-    topic at hand. This can be anything from a description of what's going on to an arbitrary reference which is vaguely
-    related, to something completely random which is only relevant by some colourful interpretation. And ff I'm completely 
-    honest, it's pretty much there to fill space. If anything, you can use it as a fun way to remember the topic in 
-    question, by trying to figure out their relevance. I mean, look in this example I've given you. Obviously if you 
-    exist there is a 100% chance of you doing something somewhere, but <em>why</em> is that there? Don't pretend you
-    aren't curious...</p>
+      topic at hand. This can be anything from a description of what's going on to an arbitrary reference which is vaguely
+      related, to something completely random which is only relevant by some colourful interpretation. And ff I'm completely 
+      honest, it's pretty much there to fill space. If anything, you can use it as a fun way to remember the topic in 
+      question, by trying to figure out their relevance. I mean, look in this example I've given you. Obviously if you 
+      exist there is a 100% chance of you doing something somewhere, but <em>why</em> is that there? Don't pretend you
+      aren't curious...
+    </p>
     <p>Then in the triangle to the left of all this, there's the picture. Or there might be. I'm typing this before I can
-    be bothered to add them, so it might just be a big orange (or red) triangle. Just know it's supposed to have an image
-    in it.</p>
+      be bothered to add them, so it might just be a big orange (or red) triangle. Just know it's supposed to have an image
+      in it.
+    </p>
     
     <p>Next to the title and silly comment, you'll see one of four ratings: 'Pretty easy', 'Not too bad', 'Kinda tough',
-    and 'Very hard'. This is also quite self-explanatory: a rating of how hard I think the subject at hand is.
+      and 'Very hard'. This is also quite self-explanatory: a rating of how hard I think the subject at hand is.
     </p>
 
-    <p>
-    Next to it, there is a rating from 1 to 10. What does this symbolise? It's a way for you to know where the difficulty
-    lies in a particular subject. A rating of 10 means that the subject is only difficult because it requires you to
-    follow a lot of maths, rather than the subject being difficult itself. A rating of one is of course the opposite,
-    meaning the maths isn't something you are likely to struggle with.
+    <p>Next to it, there is a rating from 1 to 10. What does this symbolise? It's a way for you to know where the difficulty
+      lies in a particular subject. A rating of 10 means that the subject is only difficult because it requires you to
+      follow a lot of maths, rather than the subject being difficult itself. A rating of one is of course the opposite,
+      meaning the maths isn't something you are likely to struggle with.
     </p>
-    <p>  Now let me be clear: this isn't (intended to be) a rating of how much maths there is, but rather how difficult the 
-    maths is when compared to the actual content. A subject with a rating of 1 doesn't mean there is no maths, but that 
-    the maths isn't something to worry about in terms of difficulty. 10 also doesn't mean it is exclusively maths, but
-    that the content isn't something to worry about in terms of difficulty.
+    <p>Now let me be clear: this isn't (intended to be) a rating of how much maths there is, but rather how difficult the 
+      maths is when compared to the actual content. A subject with a rating of 1 doesn't mean there is no maths, but that 
+      the maths isn't something to worry about in terms of difficulty. 10 also doesn't mean it is exclusively maths, but
+      that the content isn't something to worry about in terms of difficulty.
     </p>
-    <p>However, both the difficulty and the maths rating are subjective, so take with a pinch of salt
-    </p> 
+    <p>However, both the difficulty and the maths rating are subjective, so take with a pinch of salt.</p> 
 
     <h3>Subtopic page features</h3>
     <p> Once you are on a subtopic, you will see a few things too</p>
@@ -125,6 +148,18 @@ const subtopics = {
     that unfortunately doesn't work. Instead, you have to click on the chinese-3 thing again. Yes I know it's partially
     covered, yes I know it's a pain, just deal with it, k?</p>
 
+    <h3>TL:DR</h3>
+
+      <ul>
+        <li>This website is a work in progress.</li>
+        <li>Look out for the summary images.</li>
+        <li>Qwen AI is really nice to me.</li>
+        <li>Most of the features mentioned here are pretty obvious.</li>
+        <li>The number on the title icon represents how mathematically rigorous the subject is.</li>
+        <li>The three lines lists out all the subtopics.</li>
+        <li>I am bad at programming, so you have to click the half-covered three line icon again to remove the list.</li>
+      </ul>
+
     `
   },
   "features2": {
@@ -136,8 +171,8 @@ const subtopics = {
      <p>First, we have these light blue underlined links. These will point out key definitions which you should learn. 
      Hovering over them will reveal the deininition. Try it out with these ones. I mean, you probably know about
      something like <span class="definition" data-definition="The spreading out of waves as they pass through a gap 
-     or around an obstacle"> diffraction </span>, but what about the <span class="definition" 
-     data-definition="An imaginary sphere carrying stars that spins around the observer"> celestial sphere </span>?
+     or around an obstacle"> diffraction</span>, but what about the <span class="definition" 
+     data-definition="An imaginary sphere carrying stars that spins around the observer">celestial sphere</span>?
      Aren't you interested? If so, then just hover over the links, they'll give you the definitions.
      </p>
      <p>If you know anything about physics, you'd know that there are a lot of formulae. At first, they may seem
@@ -341,9 +376,9 @@ const subtopics = {
     title: `Complex Numbers`,
     content: `
       <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
-      <p>Hi there. Here's an equation. You are required by law to solve it now.
+      <p>Hi there. Here's an equation. You are required by law to solve it now.</p>
 
-      <p>\\( x^2 + 1 = 0 \\)</p>
+      \\[ x^2 + 1 = 0 \\]
 
       <p>Well then, don't just stand (sit?) there, solve it you pillock.</p>
       <p>Excuse me? On about "I cAn'T sOlVe ThIs", it's just basic algebra, and you're telling me you can't solve it? 
@@ -391,13 +426,32 @@ const subtopics = {
 
       <h3>The Complex Plane</h3>
 
-      <p>We can plot complex numbers on a plane — the <strong>Argand diagram</strong>.</p>
 
-      <p>The Argand diagram is a lot like a normal x-y graph, but used to plot complex numbers. The real part goes on 
-      the \\( x \\)-axis, and the imaginary part goes on the \\( y \\)-axis. So \\( z = x + iy \\) becomes the point 
-      \\( (x, y) \\).</p>
+      <div class="container">
+        <div class="text">
+          <p>We can plot complex numbers on a plane — the <strong>Argand diagram</strong>.</p>
+
+          <p>The Argand diagram is a lot like a normal x-y graph, but used to plot complex numbers. The real part goes on 
+          the \\( x \\)-axis, and the imaginary part goes on the \\( y \\)-axis. So \\( z = x + iy \\) becomes the point 
+          \\( (x, y) \\).</p>
+        </div>
+        <div class="image">
+          <div class="image-floater">
+            <div class="image-box">
+              <img src="images/Maths For Physicists/Argand Diagram.png" class="pop-image" 
+              style="max-width: 100%; width: 50vw"/>
+            </div>
+            <span class="image-tooltip" style="left:-80%;"> <div class="image-tooltip-title">
+              Figure 1: Argand Diagram</div><div class="image-tooltip-desc">
+              Argand diagrams represent complex numbers on a graph, with the x-axis <br>
+              representing the real part and the y-axis representing the imaginary <br>
+              part.</div></span>
+          </div>
+        </div>
+      </div>
 
       <h3>Modulus and Argument: The Polar Form</h3>
+      
 
       <p>The benefit of using these Argand diagrams is that it allows us to consider other things. Instead of \\( x \\) 
       and \\( y \\), we can use the distance of the co-ordinate from the origin and the angle from the positive
@@ -2138,7 +2192,7 @@ const subtopics = {
     different, we just use vectors instead of scalars:</p>
     <p>\\(W = \\int \\vec{F} \\cdot d\\vec{r} \\)</p>
 
-    <p>Hey, lookey here, it's a dot product! If I remember correctly, the dot product of two vectors is the
+    <p>Hey, looky here, it's a dot product! If I remember correctly, the dot product of two vectors is the
     product of their magnitudes and the cosine of the angle between them. Or in other words, the dot product
     picks out the component of the force which is actually in the direction of motion. You know what that means?
     Take an object and push it with all your might. If if doesn't move, congratulations, you did zero work! Nice
@@ -2820,9 +2874,6 @@ const subtopics = {
         </div>
       </div>
     </div>
-
-    
-
 
     <p>Well, in this case, it's quite easy. The x-coordinate of the event in the ferry frame \\(S'\\) (so \\(x'\\)) is the
     x-coordinate of the event in the land frame \\(S\\) (so \\(x\\)) minus the distance the ferry has travelled in the time
@@ -4788,15 +4839,35 @@ const subtopics = {
   "wave-phenomena": {
     title: "The wave function",
     content: `
+    <i>Matplotlib is peak! This is the first subtopic in which I am using matplotlib to generate graphs. Not
+    gonna lie, it's really convenient and easy. As much as I am not a Python guy, this is revolutionary! Erm,
+    anyway, where were we? Wave function...</i>
+    <p></p>
     
-    <h3>The Wavefunction: U(x, t)</h3>
     <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+    <p></p>
 
-    <p>To describe a wave, we need a function that depends on both <strong>position</strong> and <strong>time</strong>.</p>
+    <div class="container">
+      <div class="text">
+        <p>To describe a wave, we need a function that depends on both <strong>position</strong> and 
+        <strong>time</strong>. This function is appropriately referred to as the <em>wave function</em>
+        (or sometimes it's combined into one word, <em>wavefunction</em>), and is represented mathematically
+        as \\( U(x, t) \\).</p>
 
-    <p>Enter: \\( U(x, t) \\).</p>
-
-    <p>It tells you the displacement of the wave at position \\( x \\) and time \\( t \\).</p>
+        <p>It tells you the displacement of the wave at position \\( x \\) and time \\( t \\).</p>
+      </div>
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box">
+            <img src="images/Waves/U(x,t).png" class="pop-image" style="width: 30vw"/>
+          </div>
+          <span class="image-tooltip" style="left:-80%;"> <div style="color: #006aff; 
+            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+            Figure 1: The wave function, \\(U(x, t)\\)</div><div style="color:white; font-size:20px; line-height: 1.2;">
+            This is the wave function</div></span>
+        </div>
+      </div>
+    </div>
 
     <p>Now some of you might be thinking (or at least I was when my lecturer mentioned this, IDK maybe I'm just a nerd...),
     "Hold on, U? Isn't the wave function supposed to be \\(\\Psi\\)? </p>
@@ -4814,8 +4885,8 @@ const subtopics = {
             <p>\\( U(x, t) = A \\cos(kx - \\omega t) \\)</p>
           </div>
           <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
-          Formula to calculate length for a bar stationary in the moving frame</div></span>
+          Formula 1: The wave function, \\(U(x, t)\\)</div><div style="color:white; font-size:20px">
+          General formula to describe any wave</div></span>
         </div>
       </div>
     
@@ -4845,18 +4916,18 @@ const subtopics = {
             <p>\\( v = \\frac{\\lambda}{T} = f\\lambda = \\frac{\\omega}{k} \\)</p>
           </div>
           <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
-          Formula to calculate length for a bar stationary in the moving frame</div></span>
+          Formula 2: Wave speed</div><div style="color:white; font-size:20px">
+          Formula to calculate the speed at which energy propagates in a wave</div></span>
         </div>
       </div>
 
     <p>Some of you may be tempted to say that, since to get a speed from a distance function, we differentiate
     with respect to \\(t\\), then the wave speed must be \\( \\frac{\\partial U}{\\partial t} \\). And if you that, not
-    only are you <strong>wrong</strong>, but you're a flipping geek as well. What, you thought that differetiating
+    only are you <strong>wrong</strong>, but you're a flipping geek as well. What, you thought that differentiating
     was the correct method, instead of just, oh I dunno, speed = distance over time? Geek...
     <p> If you must know, \\( \\frac{\\partial U}{\\partial t} \\) is actually how fast the medium is moving up and 
     down. So how quickly the bumps go up and down. Now let's be honest, I don't think any of you really thought
-    that partial derivatives were the way to go, but the lecutre notes made sure to clarify, so I'm
+    that partial derivatives were the way to go, but the lecture notes made sure to clarify, so I'm
     also making sure to clarify.</p>
 
     <h3>Transverse vs Longitudinal</h3>
@@ -4883,11 +4954,11 @@ const subtopics = {
     <p>So, in case you've forgotten (or you are just too lazy to scroll up like 10 bloody percent of the page...), the
     wave function is:</p>
 
-    <p>\\( U(x, t) = A \\cos(kx - \\omega t) \\)</p>
+    \\[ U(x, t) = A \\cos(kx - \\omega t) \\]
 
     <p>Differentiating twice with respect to time gives us the acceleration of the medium</p>
 
-    <p>\\( \\frac{\\partial^2 U}{\\partial t^2} = -A \\omega^2 \\cos(kx - \\omega t) = -\\omega^2 U(x, t) \\)</p>
+    \\[ \\frac{\\partial^2 U}{\\partial t^2} = -A \\omega^2 \\cos(kx - \\omega t) = -\\omega^2 U(x, t) \\]
 
     <p>And if you remember, this equation we have here is actually in the form of a simple harmonic oscillator, that
     form being \\( \\frac{d^2x}{dt^2} = -\\omega^2 x \\). So this means that the medium is oscillating in simple 
@@ -4895,12 +4966,12 @@ const subtopics = {
 
     <p>Differentiating twice with respect to the distance gives us... I don't actually know what quantity this would
     be tbh, I believe it refers to curvature in space or something. But I <em>can</em> differentiate, so here it is:</p>
-    <p>\\( \\frac{\\partial^2 U}{\\partial x^2} = -A k^2 \\cos(kx - \\omega t) = -k^2 U(x, t) \\)</p>
+    \\[ \\frac{\\partial^2 U}{\\partial x^2} = -A k^2 \\cos(kx - \\omega t) = -k^2 U(x, t) \\]
 
-    <p>Well lookey here! Upon partially differentiating twice with respect to each variable, we now have two equations
+    <p>Well looky here! Upon partially differentiating twice with respect to each variable, we now have two equations
     which <em>both</em> still include \\( U(x, t) \\). From there, we can rearrange both equations to get:</p>
 
-    <p>\\( \\frac{\\partial^2 U}{\\partial t^2} = \\frac{\\omega^2}{k^2} \\frac{\\partial^2 U}{\\partial x^2} \\)</p>
+    \\[ \\frac{\\partial^2 U}{\\partial t^2} = \\frac{\\omega^2}{k^2} \\frac{\\partial^2 U}{\\partial x^2} \\]
 
     <p>And since we know that \\( \\frac{\\omega}{k} = v \\), we can simplify this to:</p>
 
@@ -4910,12 +4981,10 @@ const subtopics = {
             <p>\\( \\frac{\\partial^2 U}{\\partial t^2} = v^2 \\frac{\\partial^2 U}{\\partial x^2} \\)</p>
           </div>
           <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
-          Formula to calculate length for a bar stationary in the moving frame</div></span>
+          Formula 3: The wave equation</div><div style="color:white; font-size:20px">
+          All waves obey this formula.</div></span>
         </div>
       </div>
-
-    
 
     <p>In useful English, this says that the acceleration of the wave (in time) is proportional to its curvature 
     (in space). And this equation works for <em>all</em> waves, left-travelling waves, right-travelling waves, 
@@ -4923,7 +4992,7 @@ const subtopics = {
 
     <p>And also, quite interestingly in my opinion, the wave equation for an electromagnetic wave is this:</p>
 
-    <p>\\( \\frac{\\partial^2 E}{\\partial t^2} = \\frac{1}{\\mu_0 \\epsilon_0} \\frac{\\partial^2 E}{\\partial x^2} \\)</p>
+    \\[ \\frac{\\partial^2 E}{\\partial t^2} = \\frac{1}{\\mu_0 \\epsilon_0} \\frac{\\partial^2 E}{\\partial x^2} \\]
 
     <p>Bearing in mind that the speed squared is the term attached to the partial diferentiation with respect to x, that 
     means that \\(v^2=\\frac{1}{\\mu_0 \\epsilon_0}\\), making the speed \\( v = \\frac{1}{\\mu_0 \\epsilon_0}\\).
@@ -4933,69 +5002,112 @@ const subtopics = {
     <h3>Superposition</h3>
 
     <p>Another important thing to consider is the ability to add waves together. The easiest scenario is when you have
-    two waves which have the same phase. In that case the peaks align with the peaks and the troughs align with the 
-    troughs, which makes the same wave but a bit bigger. However, life isn't that easy, so we're gonna have to do a
-    <em>little</em> bit more work than that.</p>
+      two waves which have the same phase. In that case the peaks align with the peaks and the troughs align with the 
+      troughs, which makes the same wave but a bit bigger. However, life isn't that easy, so we're gonna have to do a
+      <em>little</em> bit more work than that.
+    </p>
     <p>To begin, remember our original wave equation:</p>
-    <p>\\(U(x,t)=A\\cos{kx-\\omega t}\\)</p>
+    \\[U(x,t)=A\\cos{kx-\\omega t}\\]
     <p>The little \\(kx-\\omega t\\) within the cosine is what's known as the phase of the wave, which is how far along
-    the wave we are. This probably makes sense, considering that the cosine function is itself a wave, in which case
-    \\(kx-\\omega t\\) is like the angle. Slight problem though, if we set the conditions \\(x=0\\) and \\(t=0\\), that
-    means \\(U(x,t)\\) automatically equals 0. In other words, the wave must always start in the middle. But what
-    if I really really <em>really</em> don't want it to start in the middle? I mean I <em>reeeeeally</em> don't
-    want it to? Then what?</p>
+      the wave we are. This probably makes sense, considering that the cosine function is itself a wave, in which case
+      \\(kx-\\omega t\\) is like the angle. Slight problem though, if we set the conditions \\(x=0\\) and \\(t=0\\), that
+      means \\(U(x,t)\\) automatically equals 0. In other words, the wave must always start in the middle. But what
+      if I really really <em>really</em> don't want it to start in the middle? I mean I <em>reeeeeally</em> don't
+      want it to? Then what?
+    </p>
     <p>The solution is actually quite simple actually, just add one more term, \\(\\phi\\), which tells us where
-    abouts the wave begins. So now we have a brand new spanking wave function:</p>
-    <p>\\(U(x,t)=A\\cos{kx-\\omega t+\\phi}\\)</p>
+      abouts the wave begins. So now we have a brand new spanking wave function:
+    </p>
+    \\[U(x,t)=A\\cos{kx-\\omega t+\\phi}\\]
     <p>Reminding ourselves that \\(\\phi\\) is an angle, we can give it a value, either between \\(0\\) and \\(2\\pi\\),
-    or between \\(-\\pi\\) and \\(\\pi\\).</p>
+      or between \\(-\\pi\\) and \\(\\pi\\).
+    </p>
     <p> We are one step closer to being able to fuse our waves together! But before that, I should introduce a 
-    trigonometric equation which should come in handy:</p>
-    <p>\\(\\cos{P}+\\cos{Q}=2\\cos{\\frac{P+Q}2}\\cos{\\frac{P-Q}2}\\)</p>
+      trigonometric equation which should come in handy:
+    </p>
+    \\[\\cos{P}+\\cos{Q}=2\\cos{\\frac{P+Q}2}\\cos{\\frac{P-Q}2}\\]
 
     <p>I'm <em>pretty</em> sure this equation will be given to you in examinations, it's peak for you if it isn't lol.
-    Anyways, this formula allows us to add two different cosine waves together. By replacing \\(\\cos{P}\\) and
-    \\(\\cos{Q}\\) with \\(A \\cos(kx - \\omega t + \\phi_1) \\) and \\(A \\cos(kx - \\omega t + \\phi_2) \\) to
-    indicate two waves with different phases. Now we can activate Polymerization to fuse the two waves together to
-    make the total wave:</p>
+      Anyways, this formula allows us to add two different cosine waves together. By replacing \\(\\cos{P}\\) and
+      \\(\\cos{Q}\\) with \\(A \\cos(kx - \\omega t + \\phi_1) \\) and \\(A \\cos(kx - \\omega t + \\phi_2) \\) to
+      indicate two waves with different phases. Now we can activate Polymerization to fuse the two waves together to
+      make the total wave:
+    </p>
 
-      <div class="hover-wrapper" style="left: 210px;">
+      <div class="hover-wrapper">
         <div class="formula-container" >
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
             <p>\\( U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
             \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\)</p>
           </div>
           <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
-          Formula to calculate length for a bar stationary in the moving frame</div></span>
+          Formula 4: Superposition of waves</div><div style="color:white; font-size:20px">
+          The combined wavefunction of two waves.</div></span>
         </div>
       </div>
-    
 
-    <p>Now, if \\( \\phi_1 - \\phi_2 = 0 \\), they’re <strong>in phase</strong>, which is the easy option I was on
-    about before. Then if \\( \\phi_1 - \\phi_2 = \\pi \\), they’re <strong>out of phase</strong>, so they cancel out
-    and then become nothing. That’s <strong>interference</strong> — and it’s why noise-cancelling headphones work.</p>
+    <div class="container">
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box">
+            <img src="images/Waves/Superposition1.png" class="pop-image" style="width: 30vw"/>
+          </div>
+          <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+            Figure 2: Superposition</div><div class="image-tooltip-desc">
+            When two waves (of the same amplitude in this case) are combined, the result is a brand new wave</div></span>
+        </div>
+      </div>
+      <div class="text">
+        <p>Now, if \\( \\phi_1 - \\phi_2 = 0 \\), they’re <strong>in phase</strong>, which is the easy option I was on
+          about before. Then if \\( \\phi_1 - \\phi_2 = \\pi \\), they’re <strong>out of phase</strong>, so they cancel out
+          and then become nothing. That’s <strong>interference</strong> — and it’s why noise-cancelling headphones work.
+        </p>
+      </div>
+    </div>
+
 
     <h3>Beats</h3>
 
     <p>We've dealt with different phases, now let's think about different frequencies! Now imagine two waves with 
     <em>very</em> slightly different frequencies:</p>
 
-    <p>\\( \\omega_1 = \\omega + \\Delta\\omega \\)</p>
-    <p>\\( \\omega_2 = \\omega - \\Delta\\omega \\)</p>
+    \\[ \\omega_1 = \\omega + \\Delta\\omega \\]
+    \\[ \\omega_2 = \\omega - \\Delta\\omega \\]
 
     <p>We can put both of our omegas into two different wave functions, and then add them up:</p>
 
-    <p>\\( U_{\\text{total}} = 2A \\cos(kx - \\omega t) \\cos(\\Delta k x - \\Delta\\omega t) \\)</p>
+    \\[ U_{\\text{total}} = 2A \\cos(kx - \\omega t) \\cos(\\Delta k x - \\Delta\\omega t) \\]
 
     <p>Now if you look very carefully, you'll realise that this kinda looks like two waves, and I know what you're 
     thinking, "you flipping idiot, of course it looks like two waves, you just added two together." Yes, that's not
     what I'm bloody on about though, is it? I mean, you have a wave with frequency \\( \\omega \\), id est
     \\(\\cos(kx - \\omega t)\\), but its amplitude is <em>modulated</em> at frequency \\( \\Delta\\omega \\), id
     est \\(\\cos(\\Delta k x - \\Delta\\omega t)\\).</p>
-    <p>I'll be honest, this is one of those things which are kinda hard to explain, but when you get it you get it.
-    Hopefully I'll remember to put an image here so you'll be able to see what I mean. In fact, hopefully you
-    just get it. </p>
+    
+
+    <div class="container">
+      <div class="text">
+        <p>I'll be honest, this is one of those things which are kinda hard to explain, but when you get it you get it.
+        Hopefully I'll remember to put an image here so you'll be able to see what I mean. In fact, hopefully you
+        just get it. </p>
+        <p>It's me in the future, after indeed remembering to put the image here! It's a bit clumsy, but hey, hopefully
+        you get what I'm trying to say...</p>
+      </div>
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box">
+            <img src="images/Waves/Superposition2.png" class="pop-image" style="width: 30vw"/>
+          </div>
+          <span class="image-tooltip" style="left:-95%;"> <div style="color: #006aff; 
+            font-size:45px; text-decoration: underline; text-underline-offset: 7px line-height: 1">
+            Figure IDK: Superposition of 2 waves with <br>slightly different frequencies</div>
+            <div style="color:white; font-size:20px; line-height: 1.2;">
+            When you combine two waves with slightly different frequencies (the two blue waves),<br>
+            they superpose into a new wave (the orange wave). The orange wave kinda looks like <br>
+            another wave with a much lower frequency. (the red wave)</div></span>
+        </div>
+      </div>
+    </div>
 
     <p>But anyway, an implication of this is that whenever you play two notes with very similar frequencies at the same
     time, you end up actually hearing two completely different frequencies: the average frequency of the two notes played

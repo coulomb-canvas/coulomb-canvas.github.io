@@ -2932,7 +2932,7 @@ const subtopics = {
       <div class="image">
         <div class="image-floater">
           <div class="image-box">
-            <img src="images/Special Relativity/Michelson-Morley.png" alt="Michelson-Morley Experiment" style="max-width: 20vw; 
+            <img src="images/Special Relativity/Michelson-Morley.png" alt="Michelson-Morley Experiment" style="max-width: 100%; 
             border-radius: 8px;" class="pop-image"/>
           </div>
           <span class="image-tooltip" style="left:-400px"> <div class="image-tooltip-title">
@@ -2940,7 +2940,7 @@ const subtopics = {
           The light is split up by the half-silvered mirror in the middle. Then, due to the <br> 
           movement of the aether (or movement the earth through the aether depending <br> on which
           frame you choose to use) they are reflected back to the half-silvered <br> mirror at
-          different times, causing an interference pattern. This <i> should </i> have <br> caused a
+          different times, causing an interference pattern. This should have <br> caused a
           detectable shift in the pattern.</div></span>
         </div>
       </div>
@@ -3020,7 +3020,7 @@ const subtopics = {
       \\(t = t'\\), although now that I think about it, we didn’t really prove it, did we? Kinda just 
       asserted it, because it’s obvious, y’know. So let’s actually try and prove it.</p>
 
-      <div class="container">
+      <div class="container left-container">
       <div class="left-bracket"></div> 
         <div class="image">
         
@@ -3032,7 +3032,7 @@ const subtopics = {
             <span class="image-tooltip left-box" style="left:12vw"> <div class="image-tooltip-title">
             Figure 3a: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
             In the S' frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
-            equidistant from her. The light reaches both of them at the same time, <br> 
+            equidistant from her. The light reaches both of them at the  <br> same time, 
             so the events are simultaneous.</div></span>
           </div>
         </div>
@@ -3066,7 +3066,7 @@ const subtopics = {
             <span class="image-tooltip" style="left:-33vw"> <div class="image-tooltip-title">
             Figure 3b: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
             In the S frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
-            equidistant from her, but in this frame, the light reaches them at different <br> 
+            equidistant from her, but in this frame, the light reaches them <br>at different  
             times. The events are no longer simultaneous.</div></span>
           </div>
         </div>
@@ -5277,7 +5277,7 @@ const subtopics = {
 
       <p>For steel: \\( v \\approx 5 \\times 10^3 \\, \\text{m/s} \\).</p>
 
-      <h3>Shear Waves: When You Hit It Sideways</h3>
+      <h3>Shear Waves</h3>
 
       <p>If you hit the side of a rod, you create a transverse wave — but now it’s called a <strong>shear wave</strong>.</p>
 
@@ -5287,7 +5287,7 @@ const subtopics = {
 
       <p>For steel: \\( v \\approx 3.1 \\times 10^3 \\, \\text{m/s} \\) — slower than longitudinal.</p>
 
-      <h3>Bulk Waves in Solids: P and S Waves</h3>
+      <h3>Bulk Waves in Solids</h3>
 
       <p>In 3D solids, we have two types:</p>
       <ul>
@@ -5297,7 +5297,7 @@ const subtopics = {
 
       <p>S-waves don’t travel through liquids — so when earthquakes happen, scientists use this to study Earth’s interior.</p>
 
-      <h3>Sound Waves: The Air Molecules Are Just Bouncing Around</h3>
+      <h3>Sound Waves</h3>
 
       <p>Sound is a longitudinal wave in air — high and low pressure regions travel through the gas.</p>
 
@@ -5317,7 +5317,7 @@ const subtopics = {
 
       <p>For air: \\( v \\approx 344 \\, \\text{m/s} \\).</p>
 
-      <h3>The Doppler Effect: Why Ambulances Sound Higher-Pitched When They’re Coming Toward You</h3>
+      <h3>The Doppler Effect</h3>
 
       <p>The Doppler effect is the change in observed frequency when source and observer are moving.</p>
 

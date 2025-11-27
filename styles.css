@@ -69,6 +69,7 @@ h4 {
   text-decoration: underline;
   text-underline-offset: 2px;
   color: white;
+  border-top: 1px dotted rgba(255, 255, 255, 0.417);
   font-size: 20px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
@@ -793,14 +794,29 @@ body.dimmed::before {
 
 .image-tooltip-title {
   color: #006aff;
-  font-size: 45px;
+  font-size: 3.5vw;
   text-decoration: underline;
-  text-underline-offset: 7px;
+  line-height: 1;
+  text-underline-offset: 0.5vw;
 }
 
 .image-tooltip-desc {
+  padding-top: 1vw;
   color: white;
-  font-size: 20px;
+  font-size: 1.5vw;
+  line-height: 1.2;
+}
+
+.formula-tooltip-title {
+  color: #ff8800;
+  font-size: 2.2vw;
+  text-decoration: underline;
+  text-underline-offset: 0.5vh;
+}
+
+.formula-tooltip-desc {
+  color: white;
+  font-size: 1.4vw;
   line-height: 1.2;
 }
 
@@ -842,7 +858,8 @@ body.dimmed::before {
 
   .image-tooltip-title {
     font-size: 5vw;
-    text-underline-offset: 3px;
+    text-underline-offset: 1vw;
+    align-items: center;
     display: flex;
     justify-content: center;
   }

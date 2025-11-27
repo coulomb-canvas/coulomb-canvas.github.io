@@ -193,10 +193,10 @@ const subtopics = {
     orange.</p>
 
 
-     <p>Next, the images are contained within these blue boxes. If I need to explain to you what an image does then...
-     I feel sorry for you. Anyway, one think you maybe didn't know is that you can hover over these images to get more
-     information about them. After that, you can move the mouse away from it and continue reading (and if you are on
-     mobile you can just click on and click off). These are pretty neat, try it for yourself: </p>
+    <p>Next, the images are contained within these blue boxes. If I need to explain to you what an image does then...
+      I feel sorry for you. Anyway, one think you maybe didn't know is that you can hover over these images to get more
+      information about them. After that, you can move the mouse away from it and continue reading (and if you are on
+      mobile you can just click on and click off). These are pretty neat, try it for yourself: </p>
      <p>We also have a similar thing in orange, but these ones are for formulae. Just like with the images, you can
      hover over these ones and get more information about the formula</p>
      <p>I should probably specify: you know how I was very clear at the beginning of this whole thing that this 
@@ -399,7 +399,18 @@ const subtopics = {
       minus 1, and so they created one, and called it \\( i \\). For imaginary. The number is literally a figment
       of their imagination for flips sake...</p>
 
-      <p>\\( i^2 = -1 \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( i^2 = -1 \\)</p>
+            <p>\\( i = \\sqrt{-1}\\)
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: The imaginary number, i</div><div class="formula-tooltip-desc">
+          The square root of -1 is denoted with the letter i</div></span>
+        </div>
+      </div>
+
 
       <p>This number was pretty much spawned out of necessity. We're reaching the point in time where we kinda just do
       things for the sake of doing them, and worry about how useful it is later. Although, to be fair, in this particular
@@ -409,7 +420,17 @@ const subtopics = {
 
       <p>A complex number has two parts:</p>
 
-      <p>\\( z = x + iy \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( z = x + iy \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2: The complex number</div><div class="formula-tooltip-desc">
+          Complex numbers have a real part (x) and an imaginary part (iy)</div></span>
+        </div>
+      </div>
+      
 
       <p>Where \\( x \\) and \\( y \\) are real numbers.</p>
 
@@ -424,8 +445,7 @@ const subtopics = {
 
       <p>So real numbers are just a subset of complex numbers. Like how a square is a rectangle, but not vice versa.</p>
 
-      <h3>The Complex Plane</h3>
-
+      <h3>Argand Diagrams and Modulus-Argument Form</h3>
 
       <div class="container">
         <div class="text">
@@ -434,6 +454,18 @@ const subtopics = {
           <p>The Argand diagram is a lot like a normal x-y graph, but used to plot complex numbers. The real part goes on 
           the \\( x \\)-axis, and the imaginary part goes on the \\( y \\)-axis. So \\( z = x + iy \\) becomes the point 
           \\( (x, y) \\).</p>
+
+          <p>The distance from the origin to the point on the Argand diagram is known as the modulus, \\(r\\). We can 
+          calculate this just by using good old Pythagoras. Since in this case, \\(x^2+y^2 = r^2\\), we can rearrange 
+          for \\(r\\) to get:</p>
+          \\[
+            r = \\sqrt{x^2 + y^2}
+          \\]
+          <p>Then, just like in polar co-ordinates, we also need to know the angle that the distance makes with the
+          positive \\(x\\)-axis. This angle is the argument, \\(\\theta\\), and we can find this by using trigonometry:
+          \\[
+            \\theta = \\tan^{-1}({\\frac{y}{x}})
+          \\]
         </div>
         <div class="image">
           <div class="image-floater">
@@ -450,56 +482,68 @@ const subtopics = {
         </div>
       </div>
 
-      <h3>Modulus and Argument: The Polar Form</h3>
+      <p>Why is all of this knowledge useful? Well let's take our complex number \\(z\\). We know from before that
+        \\(z=x+iy\\). Let's instead replace our \\(x\\) and \\(y\\), so that they are in terms of \\(r\\) and
+        \\(\\theta\\).
+      </p>
+      <p> Using trigonometry (SOH-CAH-TOA), we can prove that:</p>
       
+        \\[
+          x = r\\cos{\\theta}, \\quad y = r\\sin{\\theta}
+        \\]
 
-      <p>The benefit of using these Argand diagrams is that it allows us to consider other things. Instead of \\( x \\) 
-      and \\( y \\), we can use the distance of the co-ordinate from the origin and the angle from the positive
-      x axis</p>
-      <ul>
-        <li><strong>Modulus</strong> \\( r \\): distance from origin → \\( r = \\sqrt{x^2 + y^2} \\)</li>
-        <li><strong>Argument</strong> \\( \\theta \\): angle from positive \\( x \\)-axis → \\( \\tan\\theta = y/x \\)</li>
-      </ul>
+      <p> Substituting that back into our complex number formula gives us:</p>
 
-      <p>Then:</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( z = r(\\cos{\\theta} + i\\sin{\\theta}) \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3: Modulus-Argument Form</div><div class="formula-tooltip-desc">
+          Complex numbers can be written in terms of polar co-ordinates</div></span>
+        </div>
+      </div>
 
-      <p>\\( z = r(\\cos\\theta + i\\sin\\theta) \\)</p>
+      <p>This is what we call <strong>modulus-argument form</strong>, and it's pretty useful. In fact, it becomes even
+        more useful when we consider this identity:
+      </p>
 
-      <p>But here’s the magic:</p>
+        \\[ \\cos\\theta + i\\sin\\theta = e^{i\\theta} \\]
 
-      <p>\\( \\cos\\theta + i\\sin\\theta = e^{i\\theta} \\)</p>
+      <p>So we can now rewrite our modulus argument form as:</p>
 
-      <p>So we can write:</p>
+      \\[ z = re^{i\\theta} \\]
 
-      <p>\\( z = re^{i\\theta} \\)</p>
+      <p>This is the <strong>polar form</strong>, and it makes multiplication, division, and powers *so much easier*.</p>
 
-      <p>This is the <strong>polar form</strong> — and it makes multiplication, division, and powers *so much easier*.</p>
 
-      <h3>Euler’s Formula</h3>
+      <h3>De Moivre’s Theorem</h3>
 
-      <p>When \\( \\theta = \\pi \\), we get:</p>
+      <p>Next up, how to we raise a complex number \\( z \\) to a higher power, \\( z^n \\)? If we consider our new
+        polar form, we can answer this question more easily. If \\( z = re^{i\\theta} \\), then:
+      </p>
 
-      <p>\\( e^{i\\pi} + 1 = 0 \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( z^n = r^n e^{in\\theta} = r^n (\\cos n\\theta + i\\sin n\\theta) \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 4: De Moivre's Theorem</div><div class="formula-tooltip-desc">
+          To take a complex number (written in Modulus-Argument form), raise the <br>
+          modulus to the power of n (\\( r^n \\) )</div></span>
+        </div>
+      </div>
 
-      <p>It links five fundamental constants: \\( e \\), \\( i \\), \\( \\pi \\), 1, and 0.</p>
+      <p>This is <strong>De Moivre’s Theorem</strong> — and it’s your best friend for finding powers and roots. Let's
+        take this very basic example: calling on our good friend, \\( z = r(\\cos{\\theta} + i\\sin{\\theta}) \\), 
+        solve \\( z^3 = 1 \\).
+      </p>
 
-      <p>And it’s stunning.</p>
-
-      <p>No wonder people say it’s the most beautiful equation in mathematics.</p>
-
-      <h3>De Moivre’s Theorem: Powers Made Easy</h3>
-
-      <p>Now, what’s \\( z^n \\)?</p>
-
-      <p>If \\( z = re^{i\\theta} \\), then:</p>
-
-      <p>\\( z^n = r^n e^{in\\theta} = r^n (\\cos n\\theta + i\\sin n\\theta) \\)</p>
-
-      <p>This is <strong>De Moivre’s Theorem</strong> — and it’s your best friend for finding powers and roots.</p>
-
-      <p>Example: solve \\( z^3 = 1 \\)</p>
-
-      <p>Write \\( z = e^{i\\theta} \\), so \\( z^3 = e^{i3\\theta} = 1 \\)</p>
+      <p>Before we would have had to try and do some long annoying expansion to solve, but thanks to de Moivre, this
+      equation is easy! Because \\( z = e^{i\\theta} \\), we can use our usual exponential rules to write 
+      \\( z^3 = e^{3i\\theta} = 1 \\)</p>
 
       <p>Then \\( 3\\theta = 0, 2\\pi, 4\\pi \\) → \\( \\theta = 0, \\frac{2\\pi}{3}, \\frac{4\\pi}{3} \\)</p>
 
@@ -510,21 +554,57 @@ const subtopics = {
         <li>\\( z_3 = -\\frac{1}{2} - i\\frac{\\sqrt{3}}{2} \\)</li>
       </ul>
 
-      <p>They form an equilateral triangle on the unit circle. Neat.</p>
+      <p>If you plot those three points on an Argand diagram, you will end up with an equilateral triangle. And this
+        is no co-incidence, and it's not even limited to the parametres of this questions. Whenever you use de
+        Moivre's theorem to find the roots of an equation \\( z^n = \\text{[WHATEVER]} \\), if you plot 
+        \\( z_1 \\) through \\( z_n \\), you will end up with an \\( n \\)-sided polygon. These are known as
+        <strong>roots of unity</strong> </p>
 
-      <h3>Complex Conjugate: The Mirror Image</h3>
+      <h3>Complex Conjugate</h3>
 
-      <p>For \\( z = x + iy \\), the conjugate is:</p>
+      <p>For \\( z = x + iy \\), the complex conjugate is:</p>
 
-      <p>\\( \\bar{z} = x - iy \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( z^* = x - iy \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 5: Complex conjugate</div><div class="formula-tooltip-desc">
+          To get the complex conjugate of a complex number (z = x + iy), take the imaginary <br>
+          pert of the number and negate it (z* = x - iy) </div></span>
+        </div>
+      </div>
 
-      <p>On the Argand diagram, it’s the reflection across the real axis.</p>
+      <p>For example, for complex numbers \\( z_1 = 3-2i \\), \\( z_2 = 1 + i \\) and \\( z_3 = 4i \\), their 
+      complex conjugates are \\( z_1^* = 3+2i \\), \\( z_2^* = 1 - i \\) and \\( z_3^* = -4i \\). On the Argand 
+      diagram, it’s the reflection across the real axis.</p>
 
-      <p>And it’s useful because:</p>
+      <p>You are probably wondering what good such a random, arbitrary piece of information is. Well, by taking
+      our new found complex conjugate and multiplying it by its original vector, we can get the magnitude of the
+      complex number:</p>
 
-      <p>\\( z\\bar{z} = x^2 + y^2 = |z|^2 \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( zz^* = x^2 + y^2 = |z|^2 \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 6: Modulus squared of a complex number</div><div class="formula-tooltip-desc">
+          The modulus squared of a complex number is obtained by multiplying the <br>
+          complex number z with its complex conjugate z*</div></span>
+        </div>
+      </div>
 
-      <p>Which is real. And positive. And helpful.</p>
+
+      <p>You can kinda understand this with Pythagoras:</p>
+
+      <p> Always remember that when you are asked to determine the square modulus of a complex number, that it's the
+        complex number multiplied by it's complex conjugate, not just the complex number squared. Why I say this? Because
+        this comes up somewhere in Electricity and Magnetism, where you need the modulus squared of a complex number, and
+        I spent a significant section of the lectures just being confused as hell, because I never paid this any attention
+      </p>
+
 
       <h3>Why Are Complex Numbers Useful?</h3>
 
@@ -538,9 +618,19 @@ const subtopics = {
         <li><strong>Signal processing</strong>: Fourier transforms</li>
       </ul>
 
-      <p>So yes — they’re “imaginary.”</p>
+      <p> I've already mentioned its use with AC Circuits in Electricity & Magnetism, so let me give you another
+        example: Quantum mechanics!
+      </p>
 
-      <p>But they’re also <strong>incredibly real in their applications</strong>.</p>
+      <p> To give you some preliminary context, you'll soon learn (relearn?) that all particles are secretly waves,
+        and that each of these waves can be described by its wavefunction, \\( \\Psi(x,t) \\). The probability
+        distribution of the wave describes how likely the particle is to be in a given location, and is determined
+        simply by taking the modulus squared of the (complex) wavefunction:
+      </p>
+
+      \\[
+        \\text{Probability Density} = | \\Psi(x,t) |^2
+      \\]
 
       <h3>TL;DR</h3>
 
@@ -563,6 +653,7 @@ const subtopics = {
   "vectors": {
     title: "Vectors",
     content: `
+
       <a href="Physics Images/maths/vectors.png" download class="incomplete-summary-image">
         The summary sheet is partially complete, click to download
         <span class="image-preview">
@@ -571,10 +662,43 @@ const subtopics = {
       </a>
 
 
-      <p>Normally a number only has a magnitude. For example, the number “7” tells us how much we have, but it doesn’t 
-      point anywhere. Even if I say, “7 metres”, is that 7m north? South? Forwards? Who knows? <strong>Vectors</strong> 
-      are special quantities which have both magnitude <em>and</em> direction. So, for instance, we could say 7m in the 
-      \\(x\\)-direction.</p>
+    <p> Normally a number only has a magnitude. For example, the number “7” tells us how much we have, but it doesn’t 
+      point anywhere. Even if I say, “7 metres”, is that 7m north? South? Forwards? Who knows? 
+    </p>
+    <div class="container">
+      <div class="text">
+        
+        <p> <strong>Vectors</strong> are special quantities which have both magnitude <em>and</em> direction. 
+          So, for instance, we could say 7m in the \\(x\\)-direction, or 5m/s in the \\(y\\)-direction, or even
+          3 Newtons in the \\(x\\)-direction and 4 Newtons in the \\(y\\)-direction.
+        </p>
+        <p>Many physical quantities that you are probably familiar with are actually vectors. For example:</p>
+        <ul>
+          <li>Displacement</li>
+          <li>Velocity</li>
+          <li>Acceleration</li>
+          <li>Force</li>
+        </ul>
+        <p>All of these quantities (as well as others) act in a certain direction, which needs to be specified. Unlike
+          scalars, which are quantities that only have magnitude, like mass, temperature, energy and time. You didn't
+          boil your water 100 degrees <em>to the left</em>, did you? Nor did you <em>attend your lectures</em> 
+          on time <em>upwards</em>. But you did walk <em>forwards</em> to the lecture theatre.
+        </p>
+      </div>
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box">
+            <img src="images/Maths For Physicists/Single_Vector.png" class="pop-image" 
+            style="max-width: 100%; width: 50vw"/>
+          </div>
+          <span class="image-tooltip" style="left:-100%;"> <div class="image-tooltip-title">
+            Figure 1: Vectors</div><div class="image-tooltip-desc">
+            A vector has both magnitude and direction. This vector goes 2 units <br>
+            to the right (in the x-direction) and 3 units up (in the y-direction). <br>
+            Hence, \\(\\vec{v}\\)  = 2x + 3y.</div></span>
+        </div>
+      </div>
+    </div>
 
       <h3>Vector Notation Methods</h3>
 
@@ -617,17 +741,47 @@ const subtopics = {
       7<strong>î</strong> is 7 units in the <em>x</em>-direction. This means that any vector can be written as a 
       combination of its magnitude and a unit vector:</p>
 
-      <p>\\(\\vec{v} = |\\vec{v}|\\hat{v}\\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\(\\vec{v} = |\\vec{v}|\\hat{v}\\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: Vector notation</div><div class="formula-tooltip-desc">
+          A vector is equal to the magnitude/length of the vector, multiplied <br>
+          by the direction the vector points in, i.e. the unit vector.</div></span>
+        </div>
+      </div>
 
-      <p>And an annoying little thing for you to get used to: for some unknown reason, instead of using <em>x</em>, 
-      <em>y</em> and <em>z</em>, which is the normal thing to do, mathematicians decided to use <strong>î</strong>, 
-      <strong>ĵ</strong>, and <strong>k̂</strong>. Dunno why, they just did.</p>
+      <p>And an annoying little thing for you to get used to: for some unknown reason, instead of using \\( x \\), 
+      \\( y \\) and \\( z \\), which is the normal thing to do, mathematicians decided to use \\( \\hat{i} \\), 
+      \\( \\hat{j} \\), and \\( \\hat{k} \\). Dunno why, they just did.</p>
 
       <h3>Vector Operations</h3>
 
+      <p>Now that we know what vectors are and how to write them, we can start to use them. Things like addition
+        and multiplication can be done to vectors as they can be done with scalars (that's what we'll start calling
+        regular numbers now). 
+      </p>
+      <p>Actually I kinda lied: you can't do it <em>exactly</em> like you can scalars; after all, they are blatantly
+        not the same thing. But you <em>can</em> add them, and you can multiply them. In fact, random piece of 
+        information: we originally were taught as kids that multiplication is represented with a little cross 
+        ( \\( \\times \\) ). But then eventually we were introduced to the idea that multiplication can be represented
+         using a dot ( \\( \\cdot \\) ).
+      </p>
+      <p>If you are anything like me, you really don't like using different symbols to describe the same bloody thing,
+        so you stopped to think about the reason, and concluded it's to avoid confusion with \\( x \\), which is often
+        used in algebra, until you realised that it now just looks exactly like a bloody decimal point, so you hardly
+        prevented any confusion? NVM maybe I just over think things...
+      </p>
+      <p> Anyway, it turns out the cross and the dot actually describe different operations. It just so happens that
+        the result is the same for scalars. But not for vectors! Let's look into these vector operations now!
+      </p>
+
+
       <h4>Addition and Subtraction</h4>
-      <p>Addition and subtraction are exactly what you’d imagine: add or subtract each <strong>î</strong>, 
-      <strong>ĵ</strong> and <strong>k̂</strong> to get a resultant vector. For example, say you want to take
+      <p>Addition and subtraction are exactly what you’d imagine: add or subtract each \\( \\hat{i} \\), 
+      \\( \\hat{j} \\) and \\( \\hat{k} \\) to get a resultant vector. For example, say you want to take
       these two vectors:</p>
       \\[
        \\vec{a} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\quad \\text{and} \\quad
@@ -645,7 +799,39 @@ const subtopics = {
       versions are completely acceptable, I personally prefer the bracket-with-numbers-down-the-middle method. Especially
       when it comes to vector operations, it's just visually easier to deal with.</p>
 
-      <h4>Multiplication</h4>
+      <i>Random bit of my useless thoughts, is it obvious to everyone that ijk is meant to be pronounced "eye-jay-kay"?
+        Or has someone actually just read that as ick with a j sound in the middle? Or is there someone who speaks
+        Dutch who thought it was 'iyk'? </i>
+
+    <div class="container">
+      <div class="text">
+        <p> Here we can see a visual representation of vector addition. You take the tail of the second vector and place it
+          at the head of the first vector. The resultant vector is then drawn from the tail of the first vector to the head of 
+          the second vector. 
+        </p>
+        <p>And by the way, you will probably notice that with all of my matplotlib diagrams, I only have them in two dimensions,
+          whereas in the rest of the notes here I am using 3 dimensions. This is because a) I don't know how to make 3D
+          plots with Python, and b) 2D plots are infinitely easier to visualise. But in most cases, the principles are the same.
+          When dealing with 2D vectors, you just ignore the \\( \\hat{k} \\) component. If you can't "ignore" it, then
+          just set it to zero.
+        </p>
+      </div>
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box">
+            <img src="images/Maths For Physicists/Vector_Addition.png" class="pop-image" 
+            style="max-width: 100%; width: 100vw"/>
+          </div>
+          <span class="image-tooltip" style="left:-80%;"> <div class="image-tooltip-title">
+            Figure 2: Vector Addition</div><div class="image-tooltip-desc">
+            Starting from the origin, the vector \\(\\vec{a}\\) is drawn. Then, starting from <br>
+            where \\(\\vec{a}\\) finished, vector \\(\\vec{b}\\) is also drawn. The resultant <br>
+            vector \\(\\vec{a}+\\vec{b}\\) points from the origin to where \\(\\vec{b}\\) ends.</div></span>
+        </div>
+      </div>
+    </div>
+
+      <h4>Multiplication: Scalar product</h4>
       <p>Multiplication is where this gets a bit trickier, because there are two types. We’ll begin with what I 
       think is the easiest one: the <strong>dot product</strong>.</p>
 
@@ -661,14 +847,36 @@ const subtopics = {
       \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} = 
        (1\\times 2)+(4\\times -3)+(2\\times 1) = -8
       \\]
-      <p>In a way, you can think of the dot product as a measure of how much one vector 'aligns' with the other one.
-      This means that for a vector with magnitude \\(|\\vec{a}|\\) and a vector with magnitude \\(|\\vec{b}|\\), the 
-      dot product will change depending on where the vectors point. If they point in the same direction, then
-      \\(\\vec{a} \\cdot \\vec{b}\\) (pronounced <em> a dot b</em>) is at its maximum positive value, as they are 
-      at maximum alignment. If they point in completely opposite directions, then \\(\\vec{a} \\cdot \\vec{b}\\)
-      is at its manimum negative value. And if they are perpendicular to each other, then \\(\\vec{a} \\cdot \\vec{b}\\)
-      is \\(0\\), because they aren't aligned at all</p>
+    <div class="container">
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box left-box">
+            <img src="images/Maths For Physicists/Dot_Product.png" class="pop-image" 
+            style="max-width: 100%; width: 100vw"/>
+          </div>
+          <span class="image-tooltip left-box" style="left: 30%;"> <div class="image-tooltip-title">
+            Figure 3: Dot Product</div><div class="image-tooltip-desc">
+            The dot product, \\(\\vec{a} \\cdot \\vec{b}\\), measures how 'far along' the longer vector <br>
+            (\\(\\vec{a}\\) in this case) the shorter vector (\\(\\vec{b}\\)) travelled. </div></span>
+        </div>
+      </div>
+      <div class="text">
+        <p>In a way, you can think of the dot product as a measure of how much one vector 'aligns' with the other one.
+          This means that for a vector with magnitude \\(|\\vec{a}|\\) and a vector with magnitude \\(|\\vec{b}|\\), the 
+          dot product will change depending on where the vectors point. If they point in the same direction, then
+          \\(\\vec{a} \\cdot \\vec{b}\\) (pronounced <em> a dot b</em>) is at its maximum positive value, as they are 
+          at maximum alignment. If they point in completely opposite directions, then \\(\\vec{a} \\cdot \\vec{b}\\)
+          is at its minimum negative value. And if they are perpendicular to each other, then \\(\\vec{a} \\cdot \\vec{b}\\)
+          is \\(0\\), because they aren't aligned at all.
+        </p>
+        <p>This is hopefully better demonstrated with the diagram to the left. By taking \\( \\vec{a} \\) to be parallel
+          with the \\( x \\)-axis, we can see that the dot product of \\( \\vec{a} \\) with \\( \\vec{b} \\) is at its
+      </div>
+     
+    </div>
 
+
+      <h4>Multiplication: Vector product</h4>
       <p>The <strong>vector product</strong>, more commonly known as the <strong>cross product</strong>, is represented 
       by a cross (wow, which genius is coming up with these names?) between the two vectors. In this case, instead of
       measuring how much two vectors align, the cross product gives you a new vector which aligns the least with the
@@ -696,35 +904,73 @@ const subtopics = {
       \\]
       <p>If you <em>do</em> know about matrices, then the easy way is just to calculate the determinant of this 
       matrix:</p>
-      \\[
-        \\vec{u} \\times \\vec{v} = det\\begin{pmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\
-        u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{pmatrix}
-      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( \\vec{u} \\times \\vec{v} = det\\begin{pmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\
+               u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{pmatrix} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2a: The Cross Product (determinant)</div><div class="formula-tooltip-desc">
+          The cross product of two vectors is the determinant <br>
+          of this matrix.</div></span>
+        </div>
+      </div>
+
       <p>If you didn't do matrices, then you have to use a slightly more arbitrary method, which I've been dreading
       to explain because it's quite difficult to explain, but I'll finally show you. I won't keep rambling.
       I'll shut up. No more complaining. I'm not gonna say anoth...</p>
       <p>I don't know what I'm complaining about, it's literally just a formula...</p>
-      \\[\\mathbf{u} \\times \\mathbf{v} =
-      \\left(
-        u_2 v_3 - u_3 v_2,\\;\\;
-        u_3 v_1 - u_1 v_3,\\;\\;
-        u_1 v_2 - u_2 v_1
-      \\right) \\]
 
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( \\vec{u} \\times \\vec{v} =
+                  \\begin{pmatrix} u_2 v_3 - u_3 v_2 \\\\
+                  u_3 v_1 - u_1 v_3 \\\\
+                  u_1 v_2 - u_2 v_1 \\end{pmatrix} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2b: The Cross Product (formula)</div><div class="formula-tooltip-desc">
+          The cross product of 2 vectors can be found with this formula, <br>
+          which is actually just the formula for the determinant of the <br>
+          aforementioned matrix.</div></span>
+        </div>
+      </div>
 
       <h3>Advanced Vector Operations</h3>
       <h4>Scalar Triple Product</h4>
       <p>The scalar triple product combines both the dot product and the cross product:</p>
-      \\[
-        [\\vec{u}, \\vec{w}, \\vec{v}] \\equiv \\vec{u} \\cdot (\\vec{w} \\times \\vec{v})
-      \\]
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p> \\( [\\vec{u}, \\vec{w}, \\vec{v}] \\equiv \\vec{u} \\cdot (\\vec{w} \\times \\vec{v}) \\) </p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3: Scalar Triple Product</div><div class="formula-tooltip-desc">
+          The scalar triple product of three vectors is the cross product of the <br>
+          final two vectors dotted with the first vector. This produces a scalar.</div></span>
+        </div>
+      </div>
+
       <p>Since we know that the cross product \\(\\vec{w} \\times \\vec{v}\\) gives us another vector,
       the scalar triple product is essentially just a dot product between two vectors, which gives us a scalar
       (hence why it's called the scalar triple product).</p>
       <p>Moreover, it can be proven that:</p>
-      \\[
-        \\vec{u} \\cdot (\\vec{w} \\times \\vec{v}) = (\\vec{u} \\times \\vec{v}) \\cdot \\vec{w}
-      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( \\vec{u} \\cdot (\\vec{w} \\times \\vec{v}) = (\\vec{u} \\times \\vec{v}) \\cdot \\vec{w} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3b: Commutability of the Scalar Product</div><div class="formula-tooltip-desc">
+          The cross product of two vectors can be calculated directly from <br>
+          their components.</div></span>
+        </div>
+      </div>
+
       <p>Fun fact, did you know that a 3D shape with a parallelogram base is known as a 'parallelopiped'?
       So like if you were to take a cuboid and slant it a little bit, you get the parallelopiped.
       Mental, there was a whole stir in our lecture hall when the lecturer mentioned that. Michael Pounds,
@@ -735,18 +981,41 @@ const subtopics = {
 
       <h4>Vector Triple Product</h4>
       <p>In a similar way, we can also get ourselves the vector triple product, by replacing the dot with a cross:</p>
-      \\[
-        \\text{Vector Triple Product} \\equiv \\vec{u} \\times (\\vec{w} \\times \\vec{v})
-      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( \\text{Vector Triple Product} \\equiv \\vec{u} \\times (\\vec{w} \\times \\vec{v}) \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4a: Vector Triple Product
+          </div>
+          <div class="formula-tooltip-desc">
+            The vector triple product is what you get when you take the cross<br>
+            product of 3 vectors.
+          </div></span>
+        </div>
+      </div>
+
       <p>There is no interesting geometry for this one, although there is an interesting identity, known as the BAC-CAB
       rule:</p>
-      \\[
-        \\vec{A} \\times (\\vec{B} \\times \\vec{C}) = \\vec{B}(\\vec{A} \\cdot \\vec{C}) - \\vec{C}(\\vec{A} \\cdot \\vec{B})
-      \\]
 
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( \\vec{A} \\times (\\vec{B} \\times \\vec{C}) = \\vec{B}(\\vec{A} \\cdot \\vec{C}) - \\vec{C}(\\vec{A} \\cdot \\vec{B}) \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4b: The BAC-CAB Rule
+          </div><div class="formula-tooltip-desc">
+            The vector triple product can be expanded using the BAC-CAB rule.
+          </div></span>
+        </div>
+      </div>
 
 
       <h3>Coordinate Systems</h3>
+
 
       <h4>Cartesian Coordinates</h4>
       <p>Cartesian co-ordinates are the ones you have been using all this while, with \\(x\\), \\(y\\) and 
@@ -768,15 +1037,36 @@ const subtopics = {
       <p>Using some relatively simple trigonometry, you can also nicely switch between Cartesian and polar co-ordinates 
       using these juicy transformations:</p>
       <p>Converting polar to cartesian:</p>
-      \\[
-        x = r\\cos{\\theta}, \\quad 
-        y = r\\sin{\\theta}
-      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( x = r\\cos{\\theta}, \\quad y = r\\sin{\\theta} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 5a: Cartesian to Polar Transformations
+          </div><div class="formula-tooltip-desc">
+            You can switch from cartesian co-ordinates (x, y) to <br>
+            polar co-ordinates (r, θ) using these transformations.
+          </div></span>
+        </div>
+      </div>
+
       <p>And now converting cartesian to polar:</p>
-      \\[
-        r = \\sqrt{x^2 + y^2}, \\quad 
-        \\theta = \\tan^{-1}{\\frac{y}{x}}
-      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( r = \\sqrt{x^2 + y^2}, \\quad \\theta = \\tan^{-1}{\\frac{y}{x}} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 5b: Polar to Cartesian Transformations
+          </div><div class="formula-tooltip-desc">
+            You can likewise change from polar co-ordinates (r, θ) to <br>
+            cartesian co-ordinates (x, y) using these transformations.
+          </div></span>
+        </div>
+      </div>
 
 
       <h4>Cylindrical Co-ordinates</h4>
@@ -785,11 +1075,21 @@ const subtopics = {
       <p>One kinda lazy way to include it is to... literally just stick it in. We have polar equivalents to \\(x\\)
       and \\(y\\), why not just stick a \\(z\\) in just for completion? The transformations for polar co-ordinates
       now become this:</p>
-      \\[
-        x = r\\cos{\\theta}, \\quad 
-        y = r\\sin{\\theta}, \\quad
-        z = z
-      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( x = r\\cos{\\theta}, \\quad y = r\\sin{\\theta}, \\quad z=z \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 6: Cartesian to Cylindrical
+          </div><div class="formula-tooltip-desc">
+            Cylindrical co-ordinates are just polar co-ordinates with <br>
+            a z-dimension lazily plopped on top.
+          </div></span>
+        </div>
+      </div>
+
       <p>Bloody \\(z=z\\), how bloody lazy is that mate?</p>
       <p>Uninteresting as it is, it's actually pretty useful in a lot of cases. For example, in the upcoming
       "Electricity & Magnetism" section, we will deal with solenoids, which are basically just coils. Coils of
@@ -801,22 +1101,150 @@ const subtopics = {
       which have spherical symmetry (surprise!!!). It’s fundamentally identical to polar and cylindrical 
       co-ordinates, but instead of lazily adding a \\(z\\) now we lazily add a new angle, \\(\\phi\\). This 
       angle is in the azimuthal direction, so like how \\(\\theta\\) was in the x-y plane,
-      \\(\\phi\\) is now in the x-z plain.</p>
+      \\(\\phi\\) is now in the x-z plane.</p>
       <p>Using similar trigonometry, we can get new transformations for our spherical system:</p>
-      \\[
-        x = r\\sin{\\theta}\\cos{\\phi}, \\quad 
-        y = r\\sin{\\theta}\\sin{\\phi},  \\quad 
-        z = r\\cos{\\theta}
-      \\]
 
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( x = r\\sin{\\theta}\\cos{\\phi}, \\quad 
+                   y = r\\sin{\\theta}\\sin{\\phi},  \\quad 
+                   z = r\\cos{\\theta} \\)  </p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 7: Cartesian to Spherical
+          </div><div class="formula-tooltip-desc">
+            You can switch from cartesian co-ordinates (x, y, z) to <br>
+            spherical co-ordinates (r, θ, φ) using these <br> transformations.
+          </div></span>
+        </div>
+      </div>
+
+      <p>These are the transformations to convert from cartesian to polar.</p>
+
+      <h3>Reciprocal Vectors</h3>
+      <p>We've already seen that whenever you take the cross product of two perpendicular unit vectors, you get 
+      \\(0\\), whereas if you take the dot product of the same unit vector, the result if \\(1\\). For example:</p>
+      \\[
+          \\hat{i} \\cdot \\hat{j} = 0, \\quad 
+          \\hat{j} \\cdot \\hat{k} = 0, \\quad 
+          \\hat{i} \\cdot \\hat{i} = 1, \\quad 
+      \\]
+      <p>There is a much classier way of describing this rule instead of just writing the whole thing in words or
+      showing every individual dot product for each cartesian basis vector. And it uses one of my favourite objects...
+      the Kronecker Delta!</p>
+
+      \\[
+        e_i \\cdot e_j = \\delta_{ij}
+      \\]
+      <p>The Kronecker delta is something you may come across a fair bit: it basically equals \\(1\\) when \\(i=j\\),
+        and \\(0\\) whe \\(i \\neq j\\). We can see how this works for our vectors: if we take \\(\\hat{i}\\), 
+        \\(\\hat{j}\\) and \\(\\hat{k}\\) to be \\(e_1\\), \\(e_2\\) and \\(e_3\\), then we can use the formula to say
+        that when \\(i\\) and \\(j\\) are the same (i.e. the same cartesian unit vector), the result becomes
+        \\(\\delta_{ij} = 1\\). When \\(i\\) and \\(j\\) are different (i.e. different Cartesian unit vectors), the
+        result becomes \\(\\delta_{ij} = 0\\). Cool right?
+      </p>
+      <p> But why am I showing you this? As much as I love the Kronecker delta, I love purpose way more.</p>
+      <p> Well unfortunately, this whole \\(e_i \\cdot e_j = \\delta_{ij}\\) which we have kinda taken for granted up
+        until now is based on a very big assumption (a reasonable assumption imo, but an assumption nonetheless): The
+        assumption that the three unit vectors in question are actually perpendicular to each other.
+      </p>
+      <p> In the case of cartesian co-ordinates this is indeed the case, but apparently there are scenarios in which
+      having none-perpendicular axes is actually useful. </p>
+      <p>Crazy, innit? Well if it's any consolation, you won't need to deal with any of these none-perpendicular
+      axes anytime soon. But you will have to learn how to deal with them. So let's get going!!</p>
+      <p> A reciprocal vector (which will be represented with primes, \\(e'_1\\), \\(e'_2\\) and \\(e'_3\\),) is a 
+        remix of the basis vectors we were already using which is designed to actually it the definition before. So
+        now:
+      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( e_i \\cdot e'_j = \\delta_{ij} \\)  </p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 8: Dot Product of Basis Vectors <br>(feat. Kronecker Delta)
+          </div><div class="formula-tooltip-desc">
+            The dot product of basis vectors is given by the Kronecker <br>
+            delta, which is 1 when indices are equal and 0 otherwise.
+          </div></span>
+        </div>
+      </div>
+
+      <p>So how do we get \\(e'_1\\), \\(e'_2\\) and \\(e'_3\\)? You simply use these formulae </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( e'_1=\\frac{e_2 \\times e_3}{e_1 \\cdot (e_2 \\times e_3)} \\)  </p>
+            <p>\\( e'_2=\\frac{e_3 \\times e_1}{e_1 \\cdot (e_2 \\times e_3)} \\) </p>
+            <p>\\( e'_3=\\frac{e_1 \\times e_2}{e_1 \\cdot (e_2 \\times e_3)} \\)  </p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 9: Reciprocal Basis Vectors
+          </div><div class="formula-tooltip-desc">
+            Reciprocal basis vectors for potentially non-orthogonal <br>
+            systems, related via the cross and dot product.
+          </div></span>
+        </div>
+      </div>
+
+      <p> You can check yourself that these formulae work. In fact you can arguably just derive these from intuition:
+        If we want the dot product of two vectors to equal one, we simply need the numerator and the denominator to be
+        equal to each other. By using the scalar triple product we had earlier on \\(e_1\\), \\(e_2\\) and \\(e_3\\),
+        we can put that on the denominator and then the cross product of the 2 remaining basis vectors on the
+        numerator.
+      </p>
+      <p> Also, something I should definitely point out: You will notice that the subscripts for the basis vectors in the 
+        numerator kinda follow a cycle, going from 1 to 2 to 3, and then back to one. I've noticed this pattern in a lot
+        of subjects, and I've just learnt now that this is called a cyclic permutation. So look out for them, they will
+        make memorising certain formulae a lot easier.
+      </p>
+
+    <h3>TL;DR</h3>
+    <p>So what have we learnt today?</p>
+    <ul>
+      <li>Vectors have both magnitude and direction</li>
+      <li>Vectors can be represented with a bold font, an arrow on top, or a line under</li>
+      <li>Unit vectors denote the direction the vector is pointing in, represented with a circumflex</li>
+      <li>To add two vectors, you simply add each of the vectors respective components together to form a new vector</li>
+      <li>To take the scalar/dot product, you multiply each of the two vectors respective components and then add them
+      together to form a scalar:
+        \\[
+          \\vec{u} \\cdot \\vec{v} = u_1 v_1 + u_2 v_2 + u_3 v_3
+        \\]
+      </li>
+      <li>To take the vector/cross product, you can either calculate the determinant of a matrix, or use the formula:
+        \\[
+          \\vec{u} \\times \\vec{v} = \\begin{pmatrix} u_2 v_3 - u_3 v_2 \\\\
+                  u_3 v_1 - u_1 v_3 \\\\
+                  u_1 v_2 - u_2 v_1 \\end{pmatrix}
+        \\]
+      </li>
+      <li>The scalar triple product:
+        \\[
+          [\\vec{u}, \\vec{w}, \\vec{v}] \\equiv \\vec{u} \\cdot (\\vec{w} \\times \\vec{v})
+        \\]
+      </li>
+      <li>The vector triple product:
+        \\[
+          \\vec{u} \\times (\\vec{w} \\times \\vec{v}) 
+        \\]
+      </li>
+      <li></li>
+    </ul>
+
+    <p>And remember: Michael Pounds is the GOAT.</p>
     `
 
   },
   "odes": {
-    title: "First Order ODES",
+    title: "Ordinary Differential Equations (ODEs)",
     content: `
-        <h3>Ordinary Differential Equations (ODEs)</h3>
+
         <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+
         <p>An <strong>ODE (ordinary differential equation)</strong> is an equation involving only ordinary
         derivatives, and no partial derivatives. What’s a partial derivative you ask? If you don’t
         know what they are, then <em>don’t worry too much</em>.</p>
@@ -838,13 +1266,49 @@ const subtopics = {
         example, if I imposed the boundary conditions of \\(y=8\\) and \\(x>0\\), we now know for a
         fact that \\(x=2\\). This would be the particular solution for these conditions.</p>
 
-        <h3>The Simplistic Method</h3>
-        <p>If our equation involves differentiation, just integrate both sides to get the answer back.</p>
+        <h3>Solving First-Order ODEs</h3>
+        <p>Remember, a <strong>first-order ODE</strong> is an ODE with \\(dy/dx\\) as the highest order derivative.
+          For example:
+        </p>
 
-        <h3>Separation of Variables</h3>
+        \\[ \\frac{dy}{dx} + y = x \\]
+        \\[ \\frac{dy}{dx} = \\sin{x} \\]
+        \\[ \\frac{dy}{dx} = \\frac{y}{x} + (\\frac{y}{x})^2 \\]
+
+        <p>There are all first-order ODEs. So how do we solve them?</p>
+
+        <p>For some of these, the answer is pretty obvious: If our equation involves differentiation, just integrate 
+          both sides to get the answer back. For example, if we have:
+        </p>
+
+        \\[ \\frac{dy}{dx} = x^2 \\]
+
+        <p>We can integrate both sides with respect to \\(x\\):</p>
+
+        \\[ \\int \\frac{dy}{dx} \\, dx = \\int x^2 \\, dx \\implies y = \\frac{1}{3}x^3 + C \\]
+
+        <p>Where \\(C\\) is the constant of integration, which you obviously <em>didn't forget to include</em>.
+          In this case, we don't have to do much work at all!
+        </p>
+
         <p>However, as you are probably aware, life isn’t usually that easy. You’ll find that simply
-        integrating both sides doesn’t usually work. Especially when you have an equation which uses
-        different variables or derivatives of different orders. But never fear!</p>
+          integrating both sides doesn’t usually work. Especially when you have an equation which uses
+          different variables or derivatives of different orders. But never fear!
+        </p>
+
+        <p>There are three different techniques we can use to solve first order ODES, namely:</p>
+
+        <ul>
+          <li>Separation of Variables</li>
+          <li>Substitution</li>
+          <li>Integrating Factor</li>
+        </ul>
+        
+        <p>Each of these methods relies on doing a clever rearrangement of the equation to get it into a 
+        form where we <em>can</em> just integrate both sides. Let’s go through each of them now.</p>
+
+        <h4>Separation of Variables</h4>
+        
         <p><strong>Separation of variables</strong> is a technique which involves treating the differential
         like it’s an actual fraction, as in \\(dy\\) divided by \\(dx\\). In which case, you just collect
         like terms onto each side of the equation via division and multiplication. For example, with
@@ -859,7 +1323,7 @@ const subtopics = {
         care about abusing notation, we only care about results. Heck, why stop at abuse, I’ll kidnap,
         defame and murder the notation, if the answer is correct then we’re good to go m8.</p>
 
-        <h3>Substitution</h3>
+        <h4>Substitution</h4>
         <p>What about an equation like this:</p>
         \\[ \\frac{dy}{dx} = \\frac{y}{x} + (\\frac{y}{x})^2 \\]
         <p>I can’t help but notice that there is a recurring theme on the right-hand side of the
@@ -883,7 +1347,7 @@ const subtopics = {
         the hardest part of any mathematics is not the techniques themselves but figuring out when to
         use them. And that just requires practice.</p>
 
-        <h3>Integrating Factor</h3>
+        <h4>Integrating Factor</h4>
         <p>Now what if we have an equation which is in this form:</p>
         \\[ \\frac{dy}{dx} + P(x)y = Q(x) \\]
         <p>Woah woah woah, that’s a bloody arbitrary form for an equation to be in, isn’t it?</p>
@@ -960,9 +1424,18 @@ const subtopics = {
           can rewrite it as an infinite polynomial around some point \\(x=a\\). We're 
           gonna have to trust that this works, because the proof is a bit clunky. 
       </p>
-      <p>
-          \\(f(x) = A_0 + A_1(x-a) + A_2(x-a)^2 + A_3(x-a)^3 + \\dots\\) 
-      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\(f(x) = A_0 + A_1(x-a) + A_2(x-a)^2 + A_3(x-a)^3 + \\dots\\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1a: Taylor Expansion</div><div class="formula-tooltip-desc">
+          Any function can be approximated using this formula.</div></span>
+        </div>
+      </div>
+
       <p>
           We just need to find the coefficients. And don't worry, there's a dead 
           simple pattern. 
@@ -985,15 +1458,23 @@ const subtopics = {
           You get the picture. There's a long-ass derivation for the rest of them, but 
           let me just save you the effort. The final formula is this beauty: 
       </p>
-      <p>
-          \\(f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n\\) 
-      </p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\(f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n\\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1b: Taylor Expansion 改</div><div class="formula-tooltip-desc">
+          A more concise rendering of the Taylor expansion</div></span>
+        </div>
+      </div>
+
       <p>
           Most of the time, you'll be doing this around \\(a=0\\), which makes life 
           easier. This special case is called a <strong>Maclaurin Series</strong>. 
       </p>
       <p>
-          Right, let's go back to that pesky <em>sin(x)</em> and do a Maclaurin series 
+          Right, let's go back to that pesky \\( sin(x) \\) and do a Maclaurin series 
           (\\(a=0\\)). First, the derivatives at 0: 
       </p>
       <ul>
@@ -1017,11 +1498,35 @@ const subtopics = {
       <p>
           \\(sin(x) = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots\\) 
       </p>
+      <div class="container">
+        <div class="text">
+          <p> 
+            And there you have it! Look at that very first term. For small angles, the 
+            \\(x^3\\) and \\(x^5\\) terms are so tiny they're basically irrelevant. So you 
+            can just say \\(\\sin{x} \\approx x\\). It's not magic, it's just being lazy and 
+            ignoring the small stuff. 
+          </p>
+        </div>
+        <div class="image">
+          <div class="image-floater">
+            <div class="image-box">
+              <img src="images/Maths For Physicists/Maclauren_Approximation.png" class="pop-image" 
+              style="max-width: 100%; width: 70vw"/>
+            </div>
+            <span class="image-tooltip" style="left:-100%;"> <div class="image-tooltip-title">
+              Figure 1: Maclauren approximation<br> of a sine wave</div><div class="image-tooltip-desc">
+              The Maclauren expansion is being used to produce an approximation for a sine <br>
+              wave (red). Only including the first term in the approximation gives a poor <br>
+              approximation, particularly for larger values of x (purple). As you include <br>
+              more terms, the approximation gets better and better, and the range of values <br>
+              of x which the approximation is good for increases (magenta and pink). If we <br>
+              to include an infinite number of terms, it would match the original sine wave <br>
+              perfectly.</div></span>
+          </div>
+        </div>
+      </div>
       <p>
-          And there you have it! Look at that very first term. For small angles, the 
-          \\(x^3\\) and \\(x^5\\) terms are so tiny they're basically irrelevant. So you 
-          can just say \\(\\sin{x} \\approx x\\). It's not magic, it's just being lazy and 
-          ignoring the small stuff. 
+          
       </p>
       <h3>
           Tests of Convergence 
@@ -1168,9 +1673,19 @@ const subtopics = {
           for it, of course. You calculate all the second-order partial derivatives (\\(f_{xx}\\), \\(f_{yy}\\), 
           \\(f_{xy}\\)) and plug them into this magic number:
       </p>
-      <p>
-          \\(\\Delta = f_{xx} f_{yy} - (f_{xy})^2\\)
-      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( \\Delta = f_{xx}f_{yy} - (f_{xy})^2 \\)</p>
+          </div>
+          <span class="formula-tooltip">
+            <div class="formula-tooltip-title">Formula 1: Second Derivative Test (Discriminant)</div>
+            <div class="formula-tooltip-desc">Used to classify stationary points (maxima, minima, or saddle points) <br>
+            for functions of two variables.</div>
+          </span>
+        </div>
+      </div>
       <p>
           Which, my mathematician friends pointed out, is the same of finding the determinant of this matrix.
       </p>
@@ -1249,8 +1764,19 @@ const subtopics = {
           function <em>f(x, y, z)</em>, the gradient, written as \\(\\nabla f\\), is:
       </p>
       <p>
-          \\(\\nabla f = \\frac{\\partial f}{\\partial x}\\hat{i} + \\frac{\\partial f}{\\partial y}\\hat{j} + 
-          \\frac{\\partial f}{\\partial z}\\hat{k}\\)
+          <div class="hover-wrapper">
+            <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                <p>\\( \\nabla f = \\frac{\\partial f}{\\partial x} \\hat{i} + \\frac{\\partial f}{\\partial y} \\hat{j} + \\frac{\\partial f}{\\partial z} \\hat{k} \\)</p>
+              </div>
+              <span class="formula-tooltip">
+                <div class="formula-tooltip-title">Formula 2: Gradient of a Scalar Field</div>
+                <div class="formula-tooltip-desc">Creates a vector from all partial derivatives, pointing in the <br>
+                  direction of steepest increase of the function.
+                </div>
+              </span>
+            </div>
+          </div>
       </p>
       <p>
           This is the important bit. The gradient vector \\(\\nabla f\\) at any point tells you two crucial things:
@@ -1323,7 +1849,7 @@ const subtopics = {
           upgrade from a single integral to a <strong>multiple integral</strong>.
       </p>
 
-      <h4>Double Integrals</h4>
+      <h3>Double Integrals</h3>
       <p>
           Instead of adding up an infinite number of tiny rectangular strips under a 2D line, we're now adding 
           up an infinite number of tiny, skinny columns under a 3D surface. This is called a 
@@ -1337,11 +1863,22 @@ const subtopics = {
           while pretending <em>x</em> is just a constant. Then you take the result of that—which will just be a 
           function of <em>x</em>—and integrate it normally. Done.
       </p>
-      <p>
-          \\(I = \\int(\\int f(x,y) dy) dx\\)
-      </p>
 
-      <h4>Dealing With Awkward Shapes</h4>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( I = \\int \\left( \\int f(x, y)\\, dy \\right) dx \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 1: Double Integral Structure
+          </div><div class="formula-tooltip-desc">
+            Integrates a function of two variables over a region by performing <br>
+            two successive integrations, first with respect to one variable, then <br>
+            the other.
+          </div></span>
+        </div>
+      </div>
+
       <p>
           Of course, you're not always going to be integrating over a nice, neat rectangle. What if your 
           domain is a triangle, a circle, or some weird blob?
@@ -1363,7 +1900,7 @@ const subtopics = {
           \\(dy dx\\)) to make the maths way less painful.
       </p>
 
-      <h4>Changing Coordinates</h4>
+      <h3>Co-ordinate systems and The Volume Element</h3>
       <p>
           Let's be honest, trying to describe a sphere or a cylinder using <em>x</em>, <em>y</em>, and <em>z</em> is a 
           complete nightmare. The maths gets disgusting really fast, as the notes show when trying to find 
@@ -1379,8 +1916,6 @@ const subtopics = {
               the distance from the centre, z is the height, and theta is the angle.
           </li>
       </ul>
-
-      <h4>The Volume Element</h4>
       <p>
           Here's the one thing you absolutely have to remember, and I tend to forget so please don’t. The 
           tiny chunk of volume, <strong>dV</strong>, is different in each system. Why? Because \\(d\\theta\\) and 
@@ -1388,16 +1923,63 @@ const subtopics = {
           multiply by a radius.
       </p>
       <ul>
-          <li><strong>Cartesian:</strong> The tiny box is a perfect cube. \\(dV = dx dy dz\\)</li>
-          <li><strong>Cylindrical:</strong> The tiny box is a curved wedge. Its volume is (thickness)×(height)×(arc length). \\(dV = r dr d\\theta dz\\)</li>
-          <li><strong>Spherical:</strong> The tiny box is a chunk of an onion. Its volume is (thickness)×(north-south length)×(east-west length). \\(dV = r^2 \\sin(\\theta) dr d\\theta d\\phi\\)</li>
+          <li><strong>Cartesian:</strong> The tiny box is a perfect cube.</li>
+
+          <div class="hover-wrapper">
+            <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                <p>\\(dV = dx \\, dy \\, dz\\)</p>
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                Formula 2: Volume Element (Cartesian)</div><div class="formula-tooltip-desc">
+                The differential volume element for Cartesian coordinates. Represents <br>
+                a tiny cube in 3D space.
+              </div></span>
+            </div>
+          </div>
+
+          <p></p>
+          <li><strong>Cylindrical:</strong> The tiny box is a curved wedge. Its volume is (thickness) × (height) × (arc length).</li>
+          <p></p>
+
+          <div class="hover-wrapper">
+            <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                <p>\\( dV = r\\, dr\\, d\\theta\\, dz \\)</p>
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                Formula 3: Volume Element (Cylindrical)</div><div class="formula-tooltip-desc">
+                The differential volume element in cylindrical coordinates, used for <br>
+                problems with circular symmetry. The wedge-shaped volume accounts <br>
+                for radius, angle, and height.
+              </div></span>
+            </div>
+          </div>
+
+          <p></p>
+          <li><strong>Spherical:</strong> The tiny box is a chunk of an onion. Its volume is 
+          (thickness) × (north-south length) × (east-west length).</li>
+          <p></p>
+
+          <div class="hover-wrapper">
+            <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                <p>\\( dV = r^2 \\sin(\\theta)\\, dr\\, d\\theta\\, d\\phi \\)</p>
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                Formula 4: Volume Element (Spherical)</div><div class="formula-tooltip-desc">
+                The differential volume element in spherical coordinates, describing a <br>
+                tiny chunk of a sphere. Accounts for curvature and angles.
+              </div></span>
+            </div>
+          </div>
+
       </ul>
       <p>
           <strong>Please remember to add the \\(r\\) and the \\(r^2\\sin(\\theta)\\), I always forget it, and I don’t want 
           you to suffer like I did...</strong>
       </p>
 
-      <h4>Volume of a Sphere</h4>
       <p>
           Remember in the notes how they calculated the volume of a sphere using Cartesian coordinates? It 
           was a horrible mess of substitutions and trig identities. <em>Absolute nightmare fuel.</em>
@@ -1408,8 +1990,22 @@ const subtopics = {
           <em>a</em>, \\(\\phi\\) goes all the way around from 0 to \\(2\\pi\\), and \\(\\theta\\) goes from the north pole to 
           the south pole, 0 to \\(\\pi\\).
       </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\(V = \\int_0^a \\int_0^{2\\pi} \\int_0^\\pi r^2 \\sin(\\theta) d\\theta d\\phi dr\\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 5: Volume of a Sphere</div><div class="formula-tooltip-desc">
+            Calculates the volume of a sphere with radius <em>a</em> using spherical <br>
+            coordinates and the appropriate volume element. Integrate over <br> 
+            all spherical angles and from the center out to the surface.
+          </div></span>
+        </div>
+      </div>
       <p>
-          \\(V = \\int_0^a \\int_0^{2\\pi} \\int_0^\\pi r^2 \\sin(\\theta) d\\theta d\\phi dr\\)
+          
       </p>
       <p>
           This integral is trivial to solve and gives you \\((4/3) \\pi a^3\\) straight away. Solve it yourself 
@@ -1438,9 +2034,18 @@ const subtopics = {
       <p>
           The formula looks like this:
       </p>
-      <p>
-          \\[W = \\int_C \\vec{F} \\cdot d\\vec{l}\\]
-      </p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( W = \\int_C \\vec{F} \\cdot d\\vec{l} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: Work as a Line Integral</div><div class="formula-tooltip-desc">
+          Calculates total work done by a force \\( \\vec{F} \\) along a path C, summing only <br>
+           the force component in the direction of the path at each step via the <br> dot product.
+          </div></span>
+        </div>
+      </div>
       <p>
           Here, <em>C</em> is your path, <em>F</em> is the force field, and <em>dl</em> is a tiny vector pointing 
           along your path at every step.
@@ -1473,9 +2078,21 @@ const subtopics = {
           important), the line integral only depends on the value of the potential <em>U</em> at the start and 
           end points.
       </p>
-      <p>
-          \\[\\int_a^b \\vec{F} \\cdot d\\vec{l} = U(a) - U(b)\\]
-      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( \\int_a^b \\vec{F} \\cdot d\\vec{l} = U(a) - U(b) \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 2: Path Independence in <br> Conservative Fields</div>
+          <div class="formula-tooltip-desc">
+            For conservative force fields, the line integral from point a to b <br>
+            depends only on the potential \\( U \\) at those endpoints, not on the actual <br> path taken.
+          </div></span>
+        </div>
+      </div>
+
       <p>
           It's a beautiful shortcut. It means for gravity, the work done lifting a book only depends on the 
           change in height, not whether you lifted it straight up or carried it up a flight of stairs.
@@ -1588,9 +2205,21 @@ const subtopics = {
       <p>
           The formula looks like this:
       </p>
-      <p>
-          \\[f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} [a_n\\cos(\\frac{n\\pi x}{L}) + b_n\\sin(\\frac{n\\pi x}{L})]\\]
-      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} [a_n\\cos(\\frac{n\\pi x}{L}) + b_n\\sin(\\frac{n\\pi x}{L})] \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: Fourier Series Expansion</div><div class="formula-tooltip-desc">
+            Expresses any periodic function as an infinite sum of sine <br>
+            and cosine waves with coefficients \\( a_n \\) and \\( b_n \\), representing <br>
+            the contribution of each frequency.
+          </div></span>
+        </div>
+      </div>
+
       <p>
           Here, \\(f(x)\\) is your original function, the \\(\\sin\\) and \\(\\cos\\) terms are your simple 
           "notes", and the coefficients \\(a_n\\) and \\(b_n\\) tell you the "volume" of each note in 
@@ -1645,22 +2274,54 @@ const subtopics = {
       <p>
           We can rearrange this to get the value for an:
       </p>
-      <p>
-          \\[a_n = \\frac{1}{L} \\int f(x) \\cos(\\frac{n\\pi x}{L}) dx\\]
-      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( a_n = \\frac{1}{L} \\int f(x) \\cos(\\frac{n\\pi x}{L}) \\, dx \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2: Cosine Coefficient \\( a_n \\)</div><div class="formula-tooltip-desc">
+            Finds the strength of the cosine component at frequency \\( n \\); <br>
+            uses orthogonality of cosines over the interval.
+          </div></span>
+        </div>
+      </div>
+
       <p>
           Using a similar method, multiplying by sine gives us
       </p>
-      <p>
-          \\[b_n = \\frac{1}{L} \\int f(x) \\sin(\\frac{n\\pi x}{L}) dx\\]
-      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( b_n = \\frac{1}{L} \\int f(x) \\sin(\\frac{n\\pi x}{L}) \\, dx \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3: Sine Coefficient \\( b_n \\)</div><div class="formula-tooltip-desc">
+            Finds the strength of the sine component at frequency \\( n \\); <br>
+            uses orthogonality of sines over the interval.
+          </div></span>
+        </div>
+      </div>
+
       <p>
           Finally, if we just integrate the functions without multiplying by either, we see that \\(a_0 L = 
           \\int f(x) dx\\), which rearranges to
       </p>
-      <p>
-          \\[a_0 = \\frac{1}{L} \\int f(x) dx\\]
-      </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( a_0 = \\frac{1}{L} \\int f(x) \\, dx \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4: Mean (Average) Value \\( a_0 \\)</div><div class="formula-tooltip-desc">
+            Represents the average (constant) term in the Fourier series, <br>
+            found by integrating the function over the interval.
+          </div></span>
+        </div>
+      </div>
 
       <h3>Symmetries</h3>
       <p>
@@ -2889,8 +3550,8 @@ const subtopics = {
           <p>\\(y'=y\\)</p>
           <p>\\(z'=z\\)</p>
         </div>
-        <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-        Formula 1: Galilean Transformations</div><div style="color:white; font-size:20px">
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+        Formula 1: Galilean Transformations</div><div class="formula-tooltip-desc">
         Formulae to switch from one frame to another</div></span>
       </div>
     </div>
@@ -2976,6 +3637,16 @@ const subtopics = {
         </p>
       </div>
     </div>
+
+    <h3>TL;DR</h3>
+    <ul>
+      <li>Nothing has an objective velocity: how fast something is going can only be described relative to something else
+        which is considered stationary.</li>
+      <li>Light moves at a constant speed \\(c\\), regardless of what frame you view it from.</li>
+      <li>The 'obvious' methods of switching from one frame to another (i.e. Galilean transformations) don't account for
+      this, so are insufficient when considering very high speeds.</li>
+      <li>Einstein's two postulates are the foundation for special relativity</li>
+    </ul>
     `,
     image: "images/newton-laws.png"
   },
@@ -3090,8 +3761,8 @@ const subtopics = {
             <p>\\( y' = y \\)</p>
             <p>\\( z' = z \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 1a: Lorentz Transformations</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1a: Lorentz Transformations</div><div class="formula-tooltip-desc">
           Formulae to switch from the S frame to the S' frame</div></span>
         </div>
       </div>
@@ -3107,8 +3778,8 @@ const subtopics = {
             <p>\\( y = y' \\)</p>
             <p>\\( z = z' \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 1b: Lorentz Transformations</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1b: Lorentz Transformations</div><div class="formula-tooltip-desc">
           Formulae to switch from the S' frame to the S frame</div></span>
         </div>
       </div>
@@ -3122,8 +3793,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( \\gamma = \\gamma(u) = \\frac{1}{\\sqrt{1 - u^2/c^2}} \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 2: Lorentz Factor</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2: Lorentz Factor</div><div class="formula-tooltip-desc">
           Formulae to calculate the Lorentz factor</div></span>
         </div>
       </div>
@@ -3152,8 +3823,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( L' = \\gamma L \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
           Formula to calculate length for a bar stationary in the moving frame</div></span>
         </div>
       </div>
@@ -3174,8 +3845,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( L = \\gamma L' \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
           Formula to calculate length for a bar stationary in the moving frame</div></span>
         </div>
       </div>
@@ -3288,12 +3959,12 @@ const subtopics = {
 
       <p>Anyway, plug the times into the LT:</p>
 
-      <p>\\( t_1 = \\gamma(t_1' + ux_1'/c^2) \\)</p>
-      <p>\\( t_2 = \\gamma(t_2' + ux_2'/c^2) \\)</p>
+      \\[ t_1 = \\gamma(t_1' + ux_1'/c^2) \\]
+      \\[ t_2 = \\gamma(t_2' + ux_2'/c^2) \\]
 
       <p>And now subtract accordingly, to get our new formula:</p>
 
-      <p>\\( \\Delta t = t_2 - t_1 = \\gamma(t_2' - t_1') + \\gamma u(x_2' - x_1')/c^2 \\)</p>
+      \\[ \\Delta t = t_2 - t_1 = \\gamma(t_2' - t_1') + \\gamma u(x_2' - x_1')/c^2 \\]
 
       <p>Now you may be wondering, what are we supposed to do with all that \\( x' \\) stupidity at the end? 
       Well luckily for you, it turns out that, since the clock is at rest in \\( S' \\), its position doesn’t 
@@ -3306,8 +3977,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( \\Delta t = \\gamma \\Delta t' \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 4a: Time dilation</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 4a: Time dilation</div><div class="formula-tooltip-desc">
           Formula to calculate length for a bar stationary in the moving frame</div></span>
         </div>
       </div>
@@ -3327,8 +3998,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( \\Delta t_u = \\gamma \\Delta t_0 \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 4b: Time dilation</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 4b: Time dilation</div><div class="formula-tooltip-desc">
           Formula to calculate length for a bar stationary in the moving frame</div></span>
         </div>
       </div>
@@ -3344,6 +4015,19 @@ const subtopics = {
       <p>And this is real btw, I’m not joking. In fact, satellites have to account for relativistic effects 
       too. If they didn’t, your phone would think you’re in the middle of the ocean instead of your living room. 
       Funny, yes, but useless. Good thing we know about relativity, eh?</p>
+
+      <h3>TL;DR</h3>
+      <ul>
+        <li>The spacetime graphs used in relativity measure the distance an object travels against the distance light
+        travels in the same amount of time.</li>
+        <li>The speed is therefore related to the angle of the line makes from the \\(x\\)-axis, with \\(90º\\) representing
+        lightlike movement (light speed), above \\(90º\\) representing timelike (below light speed) movement, and below
+        \\(90º\\) representing spacelike (above light speed, which is impossible) motion</li>
+        <li>By considering a light beam moving in a stationary and then a moving frame, it can be shown that time actually
+        varies between frames, i.e. \\(t \\neq t'\\).</li>
+        <li>The more accurate replacement for the Galilean transformations are the</li>
+        <li></li>
+      </ul>
       `,
   },
   "relative-energy": {
@@ -3401,8 +4085,8 @@ const subtopics = {
             <p>\\( m = \\gamma m_0 \\)</p>
             <p>\\( p = \\gamma m_0 v \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 1: Relativistic mass and momentum</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: Relativistic mass and momentum</div><div class="formula-tooltip-desc">
           Formulae to calculate relativistic mass and momentum</div></span>
         </div>
       </div>
@@ -3428,8 +4112,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( E_K = (\\gamma - 1) m_0 c^2 \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 2: Relativistic Kinetic Energy</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2: Relativistic Kinetic Energy</div><div class="formula-tooltip-desc">
           Formulae to calculate relativistic kinetic energy</div></span>
         </div>
       </div>
@@ -3460,8 +4144,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( E = mc^2 \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3: Mass-energy relation</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3: Mass-energy relation</div><div class="formula-tooltip-desc">
           The GOAT formula! It shows that mass is just scrunched up energy</div></span>
         </div>
       </div>
@@ -3592,8 +4276,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( L = L_0 + \\Delta L \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 2: Linear thermal expansion</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2: Linear thermal expansion</div><div class="formula-tooltip-desc">
           This one is quite obvious:</div></span>
         </div>
       </div>
@@ -3611,8 +4295,8 @@ const subtopics = {
             <p>Or:</p>
             <p>\\( \\alpha = \\frac{1}{L_0} \\frac{\\Delta L}{\\Delta T} \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 2: Linear thermal expansion</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2: Linear thermal expansion</div><div class="formula-tooltip-desc">
           This one is quite obvious:</div></span>
         </div>
       </div>
@@ -3638,8 +4322,8 @@ const subtopics = {
             <p>Or:</p>
             <p>\\( \\Delta V = \\beta V_0 \\Delta T \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3: Volume expansion</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3: Volume expansion</div><div class="formula-tooltip-desc">
           This one is quite obvious:</div></span>
         </div>
       </div>
@@ -3721,8 +4405,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( \\frac{dQ}{dt} = -\\kappa A \\frac{dT}{dx} \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
           Formula to calculate length for a bar stationary in the moving frame</div></span>
         </div>
       </div>
@@ -3752,8 +4436,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( P = \\frac{dQ}{dt} = \\epsilon \\sigma A T^4 \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
           Formula to calculate length for a bar stationary in the moving frame</div></span>
         </div>
       </div>
@@ -4026,8 +4710,8 @@ const subtopics = {
         <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
           <p>\\( t_{\\text{mean}} = \\frac{V}{4\\pi \\sqrt{2} r^2 v_{\\text{rms}} N} \\)</p>
         </div>
-        <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-        Formula 1a: Mean time between collisions</div><div style="color:white; font-size:20px">
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+        Formula 1a: Mean time between collisions</div><div class="formula-tooltip-desc">
         The average amount of time a gas molecule <br>can move before it hits another particle</div></span>
       </div>
     </div>
@@ -4044,8 +4728,8 @@ const subtopics = {
 
           <p>\\( \\lambda = \\frac{k_B T}{4\\pi \\sqrt{2} r^2 p} \\)</p>
         </div>
-        <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-        Formula 1b: Mean Free Path</div><div style="color:white; font-size:20px">
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+        Formula 1b: Mean Free Path</div><div class="formula-tooltip-desc">
         The average distance a gas molecule can move <br> before it hits another particle</div></span>
       </div>
     </div>
@@ -4068,8 +4752,8 @@ const subtopics = {
         <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
           <p>\\( C_V = \\frac{1}{n} \\frac{dQ}{dT} \\)</p>
         </div>
-        <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-        Formula 2: Heat Capacity at constant volume</div><div style="color:white; font-size:20px">
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+        Formula 2: Heat Capacity at constant volume</div><div class="formula-tooltip-desc">
         amount of energy required to heat something up <br> by 1ºC without allowing the volume to change.</div></span>
       </div>
     </div>
@@ -4102,8 +4786,8 @@ const subtopics = {
             <p>\\(C_V=\\frac{1}{n} \\frac{dK_{\\text{tr}}}{dT}=\\frac{3}{2} R = 12.47 \\, 
               \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
           Formula to calculate length for a bar stationary in the moving frame</div></span>
         </div>
       </div>
@@ -4258,8 +4942,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             <p>\\( \\Delta U = Q - W \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 1: First Law of Thermodynamics</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: First Law of Thermodynamics</div><div class="formula-tooltip-desc">
           The change of internal energy is the (heat) energy in, <br> take away the (work done) energy out.</div></span>
         </div>
       </div>
@@ -4313,8 +4997,8 @@ const subtopics = {
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
                 <p>\\( W = \\int_{V_1}^{V_2} p  dV \\)</p>
               </div>
-              <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-              Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
               Formula to calculate length for a bar stationary in the moving frame</div></span>
             </div>
           </div>
@@ -4369,8 +5053,8 @@ const subtopics = {
             <p>For the isotherm, <br>\\( pV = \\text{constant} \\) </p>
 
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 1: First Law of Thermodynamics</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: First Law of Thermodynamics</div><div class="formula-tooltip-desc">
           The change of internal energy is the (heat) energy in, <br> take away the (work done) energy out.</div></span>
         </div>
       </div>
@@ -4415,8 +5099,8 @@ const subtopics = {
 
               <p>\\( p V^\\gamma = \\text{constant} \\)</p>
             </div>
-            <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-            Formula 3a: Length contraction</div><div style="color:white; font-size:20px">
+            <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
             Formula to calculate length for a bar stationary in the moving frame</div></span>
           </div>
         </div><br><br>
@@ -4884,8 +5568,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
             <p>\\( U(x, t) = A \\cos(kx - \\omega t) \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 1: The wave function, \\(U(x, t)\\)</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 1: The wave function, \\(U(x, t)\\)</div><div class="formula-tooltip-desc">
           General formula to describe any wave</div></span>
         </div>
       </div>
@@ -4915,8 +5599,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
             <p>\\( v = \\frac{\\lambda}{T} = f\\lambda = \\frac{\\omega}{k} \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 2: Wave speed</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 2: Wave speed</div><div class="formula-tooltip-desc">
           Formula to calculate the speed at which energy propagates in a wave</div></span>
         </div>
       </div>
@@ -4980,8 +5664,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
             <p>\\( \\frac{\\partial^2 U}{\\partial t^2} = v^2 \\frac{\\partial^2 U}{\\partial x^2} \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 3: The wave equation</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 3: The wave equation</div><div class="formula-tooltip-desc">
           All waves obey this formula.</div></span>
         </div>
       </div>
@@ -5040,8 +5724,8 @@ const subtopics = {
             <p>\\( U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
             \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\)</p>
           </div>
-          <span class="formula-tooltip"><div style="color:#ff8800; font-size:30px">
-          Formula 4: Superposition of waves</div><div style="color:white; font-size:20px">
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+          Formula 4: Superposition of waves</div><div class="formula-tooltip-desc">
           The combined wavefunction of two waves.</div></span>
         </div>
       </div>

@@ -375,7 +375,6 @@ const subtopics = {
   "complex-numbers": {
     title: `Complex Numbers`,
     content: `
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       <p>Hi there. Here's an equation. You are required by law to solve it now.</p>
 
       \\[ x^2 + 1 = 0 \\]
@@ -632,8 +631,14 @@ const subtopics = {
         \\text{Probability Density} = | \\Psi(x,t) |^2
       \\]
 
+      <p> Andd since the wavefunction \\( \\Psi(x,t) \\) can be complex, that means to get the probability density,
+        you take the wavefunction and multiply it by it's complex conjugate, rather than just squaring it as one might
+        expect. </p>
+
       <h3>TL;DR</h3>
 
+      <p> And just like that, we have learnt everything there is to know (or at least everything you probably need to know)
+        about complex numbers! So what did we learnt today?</p>
       <ul>
         <li>\\( i^2 = -1 \\)</li>
         <li>Complex number: \\( z = x + iy \\)</li>
@@ -646,8 +651,7 @@ const subtopics = {
         <li>Roots of unity form regular polygons</li>
       </ul>
 
-      <p>And remember: the universe doesn’t care if you think \\( i \\) is fake.  
-      It only cares if the math works.</p>
+      <p> And remember: All you have to do... is cheat!!! </p>
     `
   },
   "vectors": {
@@ -767,7 +771,7 @@ const subtopics = {
         not the same thing. But you <em>can</em> add them, and you can multiply them. In fact, random piece of 
         information: we originally were taught as kids that multiplication is represented with a little cross 
         ( \\( \\times \\) ). But then eventually we were introduced to the idea that multiplication can be represented
-         using a dot ( \\( \\cdot \\) ).
+        using a dot ( \\( \\cdot \\) ).
       </p>
       <p>If you are anything like me, you really don't like using different symbols to describe the same bloody thing,
         so you stopped to think about the reason, and concluded it's to avoid confusion with \\( x \\), which is often
@@ -1372,11 +1376,43 @@ const subtopics = {
         <p>One additional consideration, what about the one in a billion chance where we have
         <strong>repeated roots</strong>? Repeated roots are what happens when you solve a quadratic
         equation and end up with two of the same answer, \\(m_1 = m_2 = m\\).</p>
-        <p>For some strange reason, when you get repeated roots, you end up multiplying one of the
-        constants by \\(x\\), giving you:</p>
+        <p>The reasonn this is a problem is because when you solve an nth order differential equation, you
+        <em>must</em> end up with n solutions. But if two of your solutions are the same, then it only counts
+        as one solution, which breaks the special rule. To stop this, when you get repeated roots, you end up 
+        multiplying one of the constants by \\(x\\), giving you:</p>
         \\[ y(x) = Ae^{mx} + Bxe^{mx} = (A+Bx)e^{mx} \\]
+        <p> And you can try and decipher the exact reason behind all this if you want, but I'd advise
+          you to just remember it for now. </p>
+        <p>Here's an example:</p>
+
+        \\[
+          \\frac{d^2 y}{dx^2} + 2 \\frac{dy}{dx} + y = 0
+        \\]
+
+        <p> Using the 'pretend it's a polynomial' method as before:</p>
+
+        \\[
+          m^2 + 2m + 1 = 0
+        \\]
+
+        \\[
+          \\downarrow
+        \\]
+
+        \\[
+          m_1 = m_2 = -1 \\pm \\frac{\\sqrt{4-4}}{2} = -1
+        \\]
+
+        <p> Since we have a repeated root here, instead of rendering the solution as \\( y = Ae^{-x} + Be^{-x} \\),
+        we instead write: </p>
+
+        \\[
+          y = Ae^{-x} + Bxe^{-x}
+        \\]
 
       <h3>TL;DR</h3>
+
+      <p> And that's how we go about working with differential equations! So what did we learn?</p>
 
       <ul>
         <li>First-order ODE: \\( dy/dx = f(x,y) \\)</li>
@@ -1387,8 +1423,7 @@ const subtopics = {
         <li>Coupled ODEs describe interacting systems (e.g. predator-prey)</li>
       </ul>
 
-      <p>And remember: the universe doesn’t care how confused you are.  
-      It only cares about the derivative.</p>
+      <p>And remember: nobody cares about 'gross abuses of notation'.</p>
     `
 
   },
@@ -1461,7 +1496,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\(f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n\\)</p>
+            <p>\\[f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n\\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1b: Taylor Expansion 改</div><div class="formula-tooltip-desc">
@@ -1534,9 +1569,23 @@ const subtopics = {
       <p>
           This infinite series thing is great, but only if the terms add up to a 
           proper number. If they get smaller and settle on a value, we say the series 
-          <strong>converges</strong>. If they just get bigger and fly off to 
-          infinity, it <strong>diverges</strong>, and it's completely useless to us. 
+          <strong>converges</strong>. For example:
       </p>
+
+      \\[
+        S_1 = \\sum^\\infty_{n=1} \\frac{1}{n^2} = 1 + \\frac14 + \\frac19 + \\frac1{16}+ ... = \\frac{\\pi^2}{6}
+      \\]
+
+      <p>
+          If they just get bigger and fly off to infinity, it <strong>diverges</strong>, and it's completely useless 
+          to us. An example of this is:
+      </p>
+
+      \\[
+        S_2 = \\sum^\\infty_{n=1} \\frac{1}{n} = 1 \\; + \\frac12 \\; + \\frac13 \\; + \\frac14 \\; 
+        + \\; ...  \\; \\rightarrow \\infty
+      \\]
+
       <p>
           How do we figure this out? By playing a little game, of course! There are a 
           few tests we can use to see if an infinite series converges to a certain 
@@ -1605,6 +1654,53 @@ const subtopics = {
       <p>
           ...then it does converge. 
       </p>
+
+      <h3>Estimating the Sum of a Series</h3>
+
+      <p> Arguably slightly more useful than knowing <em>if</em> a series converges is knowing <em>what</em> a series
+        converges to. I already graced you with an example of \\( S_1 \\), which converges to \\( \\pi / 6 \\), but
+        how do we know that?
+      </p>
+
+      <p> Consider this prototype series, \\( S = \\sum a_n \\), where \\(a_n\\) is more than zero, and \\(S\\) 
+        is a series which <strong>converges</strong> (meaning it tends to a value which isn't infinity, remember?).
+        The aim of <em>this</em> game is to try and model the increasing values as some sort of increasing function.
+        That way, we can integrate the function to get the area, which will correspond to the sum of the insinite series.
+      </p>
+
+      <p> We can do this simply by replacing \\(n\\) with \\(x\\). If you think about it, if \\(n\\) is really really big,
+        that's when the series looks a lot like a function. In this image, I'll use \\( S_1 = \\sum^\\infty_{n=1} 
+        \\frac{1}{n^2} \\), which for really really big values of \\(n\\), can be approximated like a function of
+        \\( \\frac1{x^2} \\).
+      </p>
+
+      <p> Now I'll invite you to take a gander at this image which i've <strong>obviously remembered to include</strong>,
+        because this requires a little bit of visualising. If we start by looking at the sum of \\( f(N) \\) (the blue
+        area), it's clear that is is less than the total area underneath \\( \\frac1{x^2} \\). In other words:
+      </p>
+      
+      \\[
+        A_N = S - S_N \\leq \\int^\\infty_N f(x)dx
+      \\]
+
+      <p>
+        However it we look at the
+        sum of \\( f(N+1) \\) (the orange area), it's MORE than the total area underneath \\( \\frac1{x^2} \\). In other words:
+      </p>
+      
+      \\[
+        A_{N+1} = S - S_N \\geq \\int^\\infty_{N+1} f(x)dx \\text{OR} A_{N+1} + S_N \\leq S 
+      \\]
+
+      <p> That tells us that the total area underneath \\( \\frac1{x^2} \\) is somewhere in between. In other words: </p>
+
+      <p> Since getting an exact value here is probably a bit tedious and frankly unnecessary, we can end up with a pretty
+      decent estimate just by calculating the average of the two sums: </p>
+
+      \\[
+        S \\approx S_N + \\frac12(A_N + A_{N+1}) 
+      \\]
+
 
       <h3>TL;DR</h3>
 
@@ -1677,7 +1773,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( \\Delta = f_{xx}f_{yy} - (f_{xy})^2 \\)</p>
+            <p>\\[ \\Delta = f_{xx}f_{yy} - (f_{xy})^2 \\]</p>
           </div>
           <span class="formula-tooltip">
             <div class="formula-tooltip-title">Formula 1: Second Derivative Test (Discriminant)</div>
@@ -1867,7 +1963,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( I = \\int \\left( \\int f(x, y)\\, dy \\right) dx \\)</p>
+            <p>\\[ I = \\int \\left( \\int f(x, y)\\, dy \\right) dx \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 1: Double Integral Structure
@@ -1928,7 +2024,7 @@ const subtopics = {
           <div class="hover-wrapper">
             <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                <p>\\(dV = dx \\, dy \\, dz\\)</p>
+                <p>\\[dV = dx \\, dy \\, dz\\]</p>
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                 Formula 2: Volume Element (Cartesian)</div><div class="formula-tooltip-desc">
@@ -1945,7 +2041,7 @@ const subtopics = {
           <div class="hover-wrapper">
             <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                <p>\\( dV = r\\, dr\\, d\\theta\\, dz \\)</p>
+                <p>\\[ dV = r\\, dr\\, d\\theta\\, dz \\]</p>
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                 Formula 3: Volume Element (Cylindrical)</div><div class="formula-tooltip-desc">
@@ -1964,7 +2060,7 @@ const subtopics = {
           <div class="hover-wrapper">
             <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                <p>\\( dV = r^2 \\sin(\\theta)\\, dr\\, d\\theta\\, d\\phi \\)</p>
+                <p>\\[ dV = r^2 \\sin(\\theta)\\, dr\\, d\\theta\\, d\\phi \\]</p>
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                 Formula 4: Volume Element (Spherical)</div><div class="formula-tooltip-desc">
@@ -1994,7 +2090,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\(V = \\int_0^a \\int_0^{2\\pi} \\int_0^\\pi r^2 \\sin(\\theta) d\\theta d\\phi dr\\)</p>
+            <p>\\[V = \\int_0^a \\int_0^{2\\pi} \\int_0^\\pi r^2 \\sin(\\theta) d\\theta d\\phi dr\\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 5: Volume of a Sphere</div><div class="formula-tooltip-desc">
@@ -2037,12 +2133,12 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( W = \\int_C \\vec{F} \\cdot d\\vec{l} \\)</p>
+            <p>\\[ W = \\int_C \\vec{F} \\cdot d\\vec{l} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: Work as a Line Integral</div><div class="formula-tooltip-desc">
           Calculates total work done by a force \\( \\vec{F} \\) along a path C, summing only <br>
-           the force component in the direction of the path at each step via the <br> dot product.
+          the force component in the direction of the path at each step via the <br> dot product.
           </div></span>
         </div>
       </div>
@@ -2082,7 +2178,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( \\int_a^b \\vec{F} \\cdot d\\vec{l} = U(a) - U(b) \\)</p>
+            <p>\\[ \\int_a^b \\vec{F} \\cdot d\\vec{l} = U(a) - U(b) \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2: Path Independence in <br> Conservative Fields</div>
@@ -2160,6 +2256,70 @@ const subtopics = {
           science and requires a good bit of geometric intuition that only comes with practice.
       </p>
 
+      <p> Did you understant what I just said? I just reread what I wrote and I didn't get it. So let me try and explain
+      it better... with an example!!!</p>
+
+      <p> Say we have this line integral</p>
+
+      \\[
+        I = \\int_C \\vec{P} \\cdot d\\vec{l}
+      \\]
+
+      \\[
+        \\vec{P} = 5y^2 \\hat{i} + 2xy \\hat{j}
+      \\]
+
+      <p> and \\(C_1\\) is the line connecting the origin and the point \\( (1,1) \\). </p>
+
+      <p> <em>Parameterisation</em> is basically the process of figuring out what the \\( d\\vec{l} \\) is, in 
+      terms of x and y (or i and j). We'll start by trying to get a formula which describes the path, \\( \\vec{l} \\),
+      and in this case, it's quite simple, it's just: </p>
+
+      \\[
+        \\vec{l} = x \\hat{i} + y \\hat{j}
+      \\]
+
+      <p> and since on \\( C_1 \\), x = y:
+
+      \\[
+        \\vec{l} = x \\hat{i} + x \\hat{j}
+      \\]
+      
+      <p> I hope you can see why that's true, because IDK how else to explain it. Your
+      job is just to find a definition of the path (or paths) in terms of i's and j's. </p>
+
+      <p> Now for \\( d\\vec{l} \\), just differentiate and rearrange: </p>
+
+      \\[
+        \\frac{d \\vec{l}}{dx} = 1 \\hat{i} + 1 \\hat{j}
+      \\]
+
+      \\[
+        d \\vec{l} = (1 \\hat{i} + 1 \\hat{j})dx = dx \\hat{i} + dx \\hat{j}
+      \\]
+
+      <p> Now that we have a value for \\( d\\vec{l} \\), we can solve the integral as usual: </p>
+
+      \\[
+        I = \\int_C \\vec{P} \\cdot d\\vec{l}
+      \\]
+
+      \\[
+        I = \\int_C \\left( 5y^2 \\hat{i} + 2xy \\hat{j} \\right) \\cdot \\left( dx \\hat{i} + dx \\hat{j} \\right)
+      \\]
+
+      \\[
+        I = \\int_C \\begin{pmatrix} 5x^2 \\\\ 2x^2 \\end{pmatrix} \\cdot \\begin{pmatrix} dx \\\\ dx \\end{pmatrix}
+      \\]
+
+      \\[
+        I = \\int_0^1 7x^2 dx 
+      \\]
+
+      \\[
+        I = \\frac73
+      \\]
+
       <h3>TL;DR</h3>
 
       <ul>
@@ -2209,7 +2369,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} [a_n\\cos(\\frac{n\\pi x}{L}) + b_n\\sin(\\frac{n\\pi x}{L})] \\)</p>
+            <p>\\[ f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left[ a_n\\cos(\\frac{n\\pi x}{L}) + b_n\\sin(\\frac{n\\pi x}{L}) \\right] \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: Fourier Series Expansion</div><div class="formula-tooltip-desc">
@@ -2278,7 +2438,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( a_n = \\frac{1}{L} \\int f(x) \\cos(\\frac{n\\pi x}{L}) \\, dx \\)</p>
+            <p>\\[ a_n = \\frac{1}{L} \\int f(x) \\cos(\\frac{n\\pi x}{L}) \\, dx \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 2: Cosine Coefficient \\( a_n \\)</div><div class="formula-tooltip-desc">
@@ -2295,7 +2455,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( b_n = \\frac{1}{L} \\int f(x) \\sin(\\frac{n\\pi x}{L}) \\, dx \\)</p>
+            <p>\\[ b_n = \\frac{1}{L} \\int f(x) \\sin(\\frac{n\\pi x}{L}) \\, dx \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 3: Sine Coefficient \\( b_n \\)</div><div class="formula-tooltip-desc">
@@ -2313,7 +2473,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( a_0 = \\frac{1}{L} \\int f(x) \\, dx \\)</p>
+            <p>\\[ a_0 = \\frac{1}{L} \\int f(x) \\, dx \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 4: Mean (Average) Value \\( a_0 \\)</div><div class="formula-tooltip-desc">
@@ -2338,6 +2498,11 @@ const subtopics = {
           <li><strong>The Result:</strong> You know immediately that <strong>all the <em>bₙ</em> coefficients are zero</strong>. 
           Don't even bother calculating them. Just find \\(a_0\\) and \\(a_n\\). Job done.</li>
       </ul>
+
+      <p> When you think about it, this makes sense: if the end goal function is a reflection about the y-axis, then
+      it makes sense that it would only be made up of functions which are reflected about the y-axis </p>
+
+
       <h4>Odd Functions (Anti-symmetric)</h4>
       <p>
           If your function has rotational symmetry about the origin (like <em>x</em> or \\(x^3\\)), it's 
@@ -2355,6 +2520,9 @@ const subtopics = {
           (with an infinite number of terms that is). However, at a <strong>discontinuity</strong> (a sharp 
           jump), the series does something clever: it converges to the <strong>exact midpoint of the jump</strong>.
       </p>
+
+      <p> There are four types of convergence: </p>
+
       <h3>Periodic Extensions</h3>
       <p>
           Your Fourier series is made of infinitely repeating sines and cosines. So, even if your original 
@@ -2396,6 +2564,7 @@ const subtopics = {
 
       <h3>TL;DR</h3>
 
+
       <ul>
         <li>Fourier series: \\( f(x) = \\frac{a_0}{2} + \\sum (a_n \\cos nx + b_n \\sin nx) \\)</li>
         <li>\\( a_n = \\frac{1}{\\pi} \\int f(x) \\cos nx  dx \\), \\( b_n = \\frac{1}{\\pi} \\int f(x) \\sin nx  dx \\)</li>
@@ -2429,10 +2598,15 @@ const subtopics = {
 
       <p>Enough talking about them, about time I showed you one. I mentioned that a matrix is a 
       rectangular array of numbers, but what does that look like? Here are a couple examples of matrices:</p>
-      
-      <p>\\(\\begin{pmatrix}2&3 \\\\ 4&2 \\end{pmatrix}\\)</p>
-      <p>\\(\\begin{pmatrix}1&0&2 \\\\ 0&1&3 \\\\ 4&0&1 \\end{pmatrix}\\)</p>
-      <p>\\(\\begin{pmatrix}1&2&3&4 \\\\ 5&6&7&8 \\end{pmatrix}\\)</p>  
+
+      <u>2x2 matrix</u>
+      \\[\\begin{pmatrix}2&3 \\\\ 4&2 \\end{pmatrix}\\]
+
+      <u>3x3 matrix</u>
+      \\[\\begin{pmatrix}1&0&2 \\\\ 0&1&3 \\\\ 4&0&1 \\end{pmatrix}\\]
+
+      <u>4x2 matrix</u>
+      \\[\\begin{pmatrix}1&2&3&4 \\\\ 5&6&7&8 \\end{pmatrix}\\]
       
       <p>We're mainly going to be dealing with <strong>square matrices</strong>, which as
       you can probably infer, are matrices with as many rows as columns, in this case \\(A\\) and
@@ -2443,8 +2617,8 @@ const subtopics = {
       <p>You can add matrices and multiply them by scalars, and it works exactly like
       you'd think. Add each individual value from one matrix with the corresponding value
       in the next matrix:</p>
-      <p>
-        \\(
+     
+        \\[
         \\begin{pmatrix}
         {\\color{red}1} & {\\color{red}2} \\\\
         {\\color{red}3} & {\\color{red}4}
@@ -2459,8 +2633,8 @@ const subtopics = {
         {\\color{red}1}+{\\color{cyan}5} & {\\color{red}2}+{\\color{cyan}6} \\\\
         {\\color{red}3}+{\\color{cyan}7} & {\\color{red}4}+{\\color{cyan}8}
         \\end{pmatrix}
-        \\)
-      </p>
+        \\]
+      
 
       <p><strong>Matrix multiplication</strong> is a whole different beast. It's a bit
       of a bully and doesn't follow the rules you're used to. To get the element in the
@@ -2470,7 +2644,7 @@ const subtopics = {
       <p>That was a lot of words, I promise you it's not as clumsy as it sounds in practice, albeit still
       a bit of a pain. Here's an example:</p>
       <p>Say you have these two 2x2 matrices which you want to multiply together:</p>
-      <p>\\(A = \\begin{pmatrix}1&2 \\\\ 3&4 \\end{pmatrix}, B = \\begin{pmatrix}5&6 \\\\ 7&8 \\end{pmatrix}\\)</p>
+      \\[A = \\begin{pmatrix}1&2 \\\\ 3&4 \\end{pmatrix}, \\quad B = \\begin{pmatrix}5&6 \\\\ 7&8 \\end{pmatrix}\\]
       <p>To find the element in the first row and first column of the resulting matrix, you take the
       two numbers in the first row of \\(A\\) (1 and 2) and the two numbers in the first column of
       \\(B\\) (5 and 7). Multiply the first numbers together (1*5 = 5), then the second numbers
@@ -2489,7 +2663,7 @@ const subtopics = {
       together (4*8 = 32), and add them up (18 + 32 = 50). So the element in the second row and
       second column of the new matrix is 50.</p>
       <p>Putting it all together, the resulting matrix \\(C = AB\\) is:</p>
-      <p>\\(C = \\begin{pmatrix}19&22 \\\\ 43&50 \\end{pmatrix}\\)</p>
+      \\[C = \\begin{pmatrix}19&22 \\\\ 43&50 \\end{pmatrix}\\]
 
       <p>The most important thing you need to burn into your brain is this:</p>
       <p>\\[AB \\neq BA\\]</p>
@@ -2556,30 +2730,138 @@ const subtopics = {
       to get the eigenvalues \\(\\lambda\\), then plug them back into the main equation to find
       the eigenvectors \\(\\mathbf{x}\\).</p>
 
-      <h3>Special Matrices & Diagonalization</h3>
-      <p><strong>Special Matrices:</strong> You'll run into special types all the time.
-      <em>Symmetric/Hermitian</em> matrices are important in QM because they have real
-      eigenvalues (which is good, because you can't measure imaginary energy).
-      <em>Orthogonal/Unitary</em> matrices represent pure rotations.</p>
-      <p><strong>Diagonalization:</strong> This is the ultimate goal. For most matrices, you
-      can find a special basis—made up of the matrix's own eigenvectors—where the
-      matrix becomes <em>diagonal</em> (numbers on the diagonal, zeros everywhere else).
-      Diagonal matrices are dead simple to work with. Diagonalizing a matrix is like
-      finding the simplest possible point of view from which to look at the problem.
-      In QM, diagonalizing the energy matrix is how you find the energy levels of an
-      atom.</p>
+      <h3>Special Matrices</h3>
 
-    <h3>The Common Traps</h3>
-    <ul>
-        <li><strong>Matrix Multiplication:</strong> I'm saying it again. \\(AB \\neq BA\\).
-        Don't forget it.</li>
-        <li><strong>The Grind:</strong> Gaussian elimination and finding determinants is a
-        long arithmetic slog. Be neat, be careful, and check your work as you go. One
-        slip-up and it's all wrong.</li>
-        <li><strong>Eigenvectors are weird:</strong> When you solve for an eigenvector,
-        you're supposed to get a system with infinite solutions. Remember to introduce a
-        parameter \\(t\\) to describe the whole line/plane of possible vectors.</li>
-    </ul>
+      <h4>Symmetric Matrices</h4>
+
+        <p>If a matrix is the same as it's own transpose:</p>
+        \\[
+          A = A^T
+        \\]
+        <p>...then that means it is symmetric. In more visual terms, a matrix which has the same values on either
+        side of the diagonal are symmetric. For example:</p>
+        
+        <u>Symmetric 2x2 Matrix</u>
+        \\[
+          \\begin{pmatrix} 1&2 \\\\ 2&4 \\end{pmatrix}
+        \\]
+
+        <u>Symmetric 3x3 Matrix</u>
+
+        \\[
+          \\begin{pmatrix} 1&2&3 \\\\ 2&4&5 \\\\ 3&5&6 \\end{pmatrix}
+        \\]
+
+      <h4>Antisymmetric Matrices</h4>
+
+        <p>As the name possibly implies, it's the same as a symmetric matrix, but negative:</p>
+        \\[
+          A = -A^T
+        \\]
+        <p>In more visual terms, if the values on one side of a diagonal are the same as the values on the other side,
+        except with a different sign, it is antisymmetric. For example:</p>
+        
+        <u>Antisymmetric 2x2 Matrix</u>
+        \\[
+          \\begin{pmatrix} 1&-2 \\\\ 2&4 \\end{pmatrix}
+        \\]
+
+        <u>Antisymmetric 3x3 Matrix</u>
+
+        \\[
+          \\begin{pmatrix} 1&-2&-3 \\\\ 2&4&-5 \\\\ 3&5&6 \\end{pmatrix}
+        \\]
+
+      <h4>Hermitian Matrix</h4>
+        <p>We've had the transpose, the negative transpose, now whachu know 'bout the complex conjugate
+          of the transpose?! </p>
+
+        \\[
+          A = {A^T}^*
+        \\]
+
+        <p> And therefore similarly to the last two, if the numbers on each side of the diagonals are the same,
+          except for differing signs on the \\(i\\), then you have a hermitian matrix. By the way, this would also
+          mean that symmetric matrices with non-complex values are technically hermitian too (\\(\\pm 0i \\)). </p>
+
+        <p>And here are some examples:</p>
+
+        <u>Hermitian 2x2 Matrix</u>
+        \\[
+          \\begin{pmatrix} 3&2+i \\\\ 2-i&1 \\end{pmatrix}
+        \\]
+
+        <u>Hermitian 3x3 Matrix</u>
+
+        \\[
+          \\begin{pmatrix} 1&i&3 \\\\ -i&4&1-3i \\\\ 3&1+3i&6 \\end{pmatrix}
+        \\]
+
+      <h4>Antihermitian Matrix</h4>
+        <p> As you can potentially guess, an antihermitian matrix is one which is the same as the negative complex
+          conjugate of the transpose:</p>
+
+        \\[
+          A = -{A^T}^*
+        \\]
+
+        <p> This then looks like a matrix, where the values on each side of the diagonal are the same, except
+        all the real numbers are negative.</p>
+
+        <p>And here are some examples:</p>
+
+        <u>Antihermitian 2x2 Matrix</u>
+        \\[
+          \\begin{pmatrix} 3&2+i \\\\ -2+i&1 \\end{pmatrix}
+        \\]
+
+        <u>Antihermitian 3x3 Matrix</u>
+
+        \\[
+          \\begin{pmatrix} 1&i&-3 \\\\ i&4&1-3i \\\\ 3&-1-3i&6 \\end{pmatrix}
+        \\]
+
+      <h3> Diagonalisation </h3>
+
+      <p> Right, so you've found yourself some eigenvalues and eigenvectors. Cool. Now what? Well, if you're 
+      lucky (which in most cases in physics you will be), you can diagonalise it! </p>
+
+      <p> Diagonalisation is the process of taking your messy, complicated matrix \\(A\\) and rewriting 
+        it in a form where it's basically just a bunch of numbers on the diagonal and zeros everywhere 
+        else. Why would you want to do this? Because diagonal matrices are dead easy to work with. Want 
+        to calculate \\( A^{100} \\)? Easy. Want to solve a system of coupled differential equations? Easy. 
+        Want to understand normal modes in classical mechanics? EX PZ Lemon Squeezy. </p>
+
+      <p> Here's the big idea: if you have a square matrix \\( A \\) with \\( n \\) linearly independent 
+      eigenvectors (which most "nice" matrices do), then you can write:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <p>\\( A = S\\Lambda S^{-1} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            If \\(A\\) has \\(n\\) linearly independent eigenvectors, then \\( A = S \\Lambda S^{-1}\\),<br> 
+            where \\(S\\) is the matrix whose columns are the eigenvectors, and \\(\\Lambda\\) <br> is a 
+            diagonal matrix with the eigenvalues on the diagonal.
+          </div></span>
+        </div>
+      </div>
+
+      <p> Let me break it down for you: </p>
+      <ol>
+        <li> \\(S\\) is a matrix whose columns are your eigenvectors. So if you have eigenvectors 
+          \\(\\vec{x}_1\\), \\(\\vec{x}_2\\), and \\(\\vec{x}_3\\), then 
+          \\(S = [\\vec{x}_1 | \\vec{x}_2 | \\vec{x}_3]\\). </li>
+        <li> \\(\\Lambda\\) (capital lambda, fancy innit?) is a diagonal matrix with your eigenvalues on 
+          the diagonal. So if your eigenvalues are \\( \\lambda_1, \\lambda_2, \\lambda_3 \\) then:
+          \\[
+            \\Lambda = \\begin{pmatrix} \\lambda_1&0&0 \\\\ 0&\\lambda_2&0 \\\\ 0&0&\\lambda_3 \\end{pmatrix}
+          \\] </li>
+        <li> \\( S^{-1} \\) is the inverse of \\(S\\). You remember how to find inverses, right?
+      </ol>
 
 
       <h3>TL;DR</h3>
@@ -2680,7 +2962,19 @@ const subtopics = {
     intents and purposes yes, gravity is a force. And more importantly a non-contact force.</p>
     <p> To calculate the force between two masses, \\(m_1\\) and \\(m_2\\), a distance \\(r\\) apart, we use Newton's
     Law of Gravity:</p>
-    <p>\\(F=\\frac{Gm_1m_2}{r^2}, \\text{ or in vector form, }\\mathbf{\\vec{F}}_{12}=-\\frac{Gm_1m_2}{r^2}\\hat{r}\\)</p>
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ F=\\frac{Gm_1m_2}{r^2}, \\text{ or in vector form, }\\mathbf{\\vec{F}}_{12}=-\\frac{Gm_1m_2}{r^2}\\hat{r} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
     <p>And I know what you're thinking, "why is there a twelve there?" Well, thou silliest of sausages, that's not a
     twelve, it's actually just a one followed by a two, which yes is a twelve now that I've said it aloud, but just here
     me out, k?</p>
@@ -2697,11 +2991,36 @@ const subtopics = {
     <p> For uniform, symmetrical bodies, it is just the centre of the object. But for other continuous bodies which
     have funky shapes (like maybe a semicircle) or don't have uniform density, it's not quite that simple.</p>
     <p> Instead we must use this trusty formula here:</p>
-    <p> \\(\\mathbf{\\vec{r}}_{CoM}=\\frac{\\int\\mathbf{\\vec{r}}dm}{\\int dm}\\) </p>
+    
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\mathbf{\\vec{r}}_{CoM}=\\frac{\\int\\mathbf{\\vec{r}}dm}{\\int dm} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
     <p> ...where \\(dm\\) is an infinitesimally small component of the mass</p>
     <p> Since \\(\\mathbf{\\vec{r}}_{CoM}\\) is a vector, it can be broken up into its \\(x\\), \\(y\\) and \\(z\\)
     components. So that means we can get (for instance) the \\(x\\) component of the CoM by doing: </p>
-    <p> \\(x_{CoM}=\\frac{\\int xdm}{\\int dm}\\) </p>
+
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ x_{CoM}=\\frac{\\int xdm}{\\int dm} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
     
     <h3>Forces Out of Balance</h3>
 
@@ -2742,9 +3061,21 @@ const subtopics = {
 
     <p>I won't bother deriving them, so here they are:</p>
 
-    <p>\\( v = u + at \\)</p>
-    <p>\\( s = ut + \\frac{1}{2}at^2 \\)</p>
-    <p>\\( v^2 = u^2 + 2as \\)</p>
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ v = u + at \\]
+            \\[ s = ut + \\frac{1}{2}at^2 \\]
+            \\[ v^2 = u^2 + 2as \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
 
     <p>These are the <strong>SUVAT equations</strong> — the bread and butter of kinematics.</p>
 
@@ -2758,7 +3089,7 @@ const subtopics = {
 
     <p>If acceleration changes with time — say \\( a = a(t) \\) — then you can’t use SUVAT. You have to integrate:</p>
 
-    <p>\\( v - u = \\int_0^t a(t') dt' \\)</p>
+    \\[ v - u = \\int_0^t a(t') dt' \\]
 
     <p>Then integrate again to get position.</p>
 
@@ -2777,11 +3108,11 @@ const subtopics = {
 
     <p>We can then rearrange that to get:</p>
 
-    <p>\\( v dv = a(x) dx \\)</p>
+    \\[ v dv = a(x) dx \\]
 
     <p>Integrate both sides:</p>
 
-    <p>\\( \\frac{1}{2}(v^2 - u^2) = \\int_0^x a(x) dx \\)</p>
+    \\[ \\frac{1}{2}(v^2 - u^2) = \\int_0^x a(x) dx \\]
 
     <p>Now you can calculate the right-hand side — if you know \\( a(x) \\). Then, if you’re lucky, you can 
     integrate again to get \\( x(t) \\).</p>
@@ -2792,11 +3123,11 @@ const subtopics = {
 
     <p>So:</p>
 
-    <p>\\( \\frac{dv}{dt} = a(v) \\)</p>
+    \\[ \\frac{dv}{dt} = a(v) \\]
 
     <p>Separate variables:</p>
 
-    <p>\\( \\int_u^v \\frac{dv}{a(v)} = \\int_0^t dt' = t \\)</p>
+    \\[ \\int_u^v \\frac{dv}{a(v)} = \\int_0^t dt' = t \\]
 
     <p>So you can solve for \\( v(t) \\), then integrate to get \\( x(t) \\). As usual — whether this works 
     depends on the form of \\( a(v) \\). But the method is solid.</p>
@@ -2826,24 +3157,51 @@ const subtopics = {
     <p>You are likely familiar with the concept of <em>kinetic energy</em>. In baby terms, this is
     the energy something has when it moves. You're also probably familiar with the formula for kinetic
     energy:</p>
-    <p>\\(T=\\frac{1}{2}mv^2=\\frac{p^2}{2m}\\)</p>
+    \\[T=\\frac{1}{2}mv^2=\\frac{p^2}{2m}\\]
+
     <p>Now for some reason, the lecture notes have started using \\(T\\) for kinetic energy instead of
     \\(E_K\\) which I personally prefer. A bit random, but whatever I don't care.</p>
     <p>And if you couldn't tell, the second equation comes from remembering that we can define momentum
     as mass \\(\\times\\) velocity, \\(p=mv\\). With a bit of techy rearranging, we get that equation.</p>
     <p>Next, what is work? In physics, work is done when a force moves an object through a distance. We
     can define it mathematically as:</p>
-    <p>\\( W = \\Delta T = T_2 - T_1 \\)</p>
+    \\[ W = \\Delta T = T_2 - T_1 \\]
+
     <p>...which, if you were paying attention, you'll notice is the same as the change in kinetic energy.
     If you do positive work on an object, you increase its kinetic energy, or speed it up. If you do 
     negative work, you decrease its kinetic energy or slow it down.</p>
     <p> How do we calculate work? The easy option is when the force is constant, in which case we use the
     formula we are all super familiar with:</p>
-    <p>\\( W = Fd \\)</p>
+
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ W = Fd \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
     <p> Work done equals force times distance. Nothing new. <em>However...</em> if the force isn't constant,
     then our trusty GCSE formula don't work no more. This means we have to use a new formula, and by "new"
     I mean, it's just a slightly sexier version of the same formula:</p>
-    <p>\\( W = \\int F dx \\)</p>
+
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ W = \\int F dx \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
     <h3>Work in 3D.</h3>
 
@@ -2900,11 +3258,11 @@ const subtopics = {
     <p> What do we have here? It appears we have two formulae for work done. That means we can combine them! </p>
     <p>\\( W = \\Delta T \\text{and} W = -\\Delta U \\)</p>
     <p>So:</p>
-    <p>\\( \\Delta T = -\\Delta U \\)</p>
-    <p>Rearranging:</p>
-    <p>\\( \\Delta T + \\Delta U = 0 \\)</p>
-    <p>Or:</p>
-    <p>\\( \\Delta (T + U) = 0 \\)</p>
+    \\[ \\Delta T = -\\Delta U \\]
+    \\[ \\downarrow \\]
+    \\[ \\Delta T + \\Delta U = 0 \\]
+    \\[ \\downarrow \\]
+    \\[ \\Delta (T + U) = 0 \\]
     <p>Which means:</p>
     <p>\\( T + U = E = \\text{constant} \\)</p>
     <p>This new value \\( E \\) is the total mechanical energy, and it is conserved when only Tory forces 
@@ -4221,11 +4579,11 @@ const subtopics = {
   "heat": {
     title: "Heat and Temperature",
     content: ` 
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
-      <p>Let’s talk about <strong>temperature</strong> — the physical property that tells us how much kinetic energy the atoms or molecules in a system have.</p>
 
-      <p>In other words, it’s a measure of how hyper the particles are. In the words of one of the A-level physics
-      YouTube guys, don't remember who, "If I were to heat you up, you'd start moving too."</p>
+      <p><strong>Temperature</strong> is the physical property that tells us how much kinetic energy the atoms or 
+        molecules in a system have. In other words, it’s a measure of how hyper the particles are. In the words of 
+        one of the A-level physics YouTube guys, don't remember who, "If I were to heat you up, you'd start moving 
+        too."</p>
 
       <p>This energy making the particles hyper is called the <strong>internal energy</strong>, \\( U \\). It includes 
       translational kinetic energy, vibrational energy, and all the other ways particles can jiggle and wiggle.</p>
@@ -4242,10 +4600,26 @@ const subtopics = {
         <li>Expansion of a gas</li>
       </ul>
       <p>What do all these have in common, you (probably don't) ask? They all contain a substance which
-      expands predictably with increasing temperature. Ideally, we want a linear relationship between the 
-      measured property and temperature, or in mathmaticianese:</p>
+      expands predictably with increasing temperature. </p>
+      
+      <p> When working with a substance which expands with temperature, we'd ideally want a linear relationship 
+      between the measured property (the length or volume in this case) and temperature. This means that for
+      every degree celcius the substance increases, the property increases by a constant amount, or in 
+      mathmaticianese:</p>
 
-      <p>\\( X(T) = X_0 + cT \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ X(T) = X_0 + cT \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 1: Linear expansion
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+      
 
       <p>Where \\( X(T) \\) is the value of the property at temperature \\( T \\). To calibrate it, we use 
       two fixed points - freezing and boiling will do the trick - and a substance to use, like water!</p>
@@ -4256,7 +4630,18 @@ const subtopics = {
 
       <p>Then any temperature between them can be found using:</p>
 
-      <p>\\( T(X) = \\frac{100(X - X(0))}{X(100) - X(0)} \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ T(X) = \\frac{100(X - X(0))}{X(100) - X(0)} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 2
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
       <p>Assuming linearity — which is a fair assumption for small ranges.</p>
 
@@ -4267,14 +4652,14 @@ const subtopics = {
       separation increases. That’s why the liquid in a thermometer rises. </p> 
       <p>Of course, this assumes the liquid expands a lot more than the glass does.</p>
 
-      <h3>Linear Expansion</h3>
+      <h4>Linear Expansion</h4>
 
       <p>For expansion in one dimension:</p>
 
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( L = L_0 + \\Delta L \\)</p>
+            \\[ L = L_0 + \\Delta L \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 2: Linear thermal expansion</div><div class="formula-tooltip-desc">
@@ -4291,9 +4676,9 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( \\Delta L = \\alpha L_0 \\Delta T \\)</p>
+            \\[ \\Delta L = \\alpha L_0 \\Delta T \\]
             <p>Or:</p>
-            <p>\\( \\alpha = \\frac{1}{L_0} \\frac{\\Delta L}{\\Delta T} \\)</p>
+            \\[ \\alpha = \\frac{1}{L_0} \\frac{\\Delta L}{\\Delta T} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 2: Linear thermal expansion</div><div class="formula-tooltip-desc">
@@ -4309,7 +4694,7 @@ const subtopics = {
         <li>Steel: \\( 1.2 \\times 10^{-5} \\, \\text{K}^{-1} \\)</li>
       </ul>
 
-      <h3>Volume Expansion</h3>
+      <h4>Volume Expansion</h4>
 
       <p>Volume expansion is the same thing as linear expansion, except... it's not linear? It goes from one-dimension
       to three-dimension. We now have the <strong>volume expansion coefficient</strong> \\( \\beta \\), which is again,
@@ -4318,9 +4703,9 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( \\beta = \\frac{1}{V_0} \\frac{\\Delta V}{\\Delta T} \\)</p>
+            <p>\\[ \\beta = \\frac{1}{V_0} \\frac{\\Delta V}{\\Delta T} \\]</p>
             <p>Or:</p>
-            <p>\\( \\Delta V = \\beta V_0 \\Delta T \\)</p>
+            <p>\\[ \\Delta V = \\beta V_0 \\Delta T \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 3: Volume expansion</div><div class="formula-tooltip-desc">
@@ -4336,7 +4721,7 @@ const subtopics = {
         <li>Glass: \\( \\approx 2 \\times 10^{-5} \\, \\text{K}^{-1} \\)</li>
       </ul>
 
-      <h3>Comments</h3>
+      <h4>Comments</h4>
 
       <p>Some materials don’t follow this model:</p>
       <ul>
@@ -4361,9 +4746,40 @@ const subtopics = {
 
       <p>We define:</p>
       <ul>
-        <li><strong>Molar heat capacity</strong>: \\( C \\), \\( Q = nC\\Delta T \\)</li>
-        <li><strong>Specific heat capacity</strong>: \\( c \\), \\( Q = mc\\Delta T \\)</li>
+        <li><strong>Molar heat capacity</strong>: \\( C \\), the amount of energy required to increase the temperature
+          of one mole of a substance by \\(1ºC\\)
       </ul>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ Q = nC\\Delta T \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <ul>
+        <li><strong>Specific heat capacity</strong>: \\( C \\), the amount of energy required to increase the temperature
+          of one kilogram of a substance by \\(1ºC\\)
+      </ul>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ Q = mc\\Delta T  \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
       <p>For water: \\( C = 75.4 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\), 
       \\( c = 4190 \\, \\text{J kg}^{-1}\\text{K}^{-1} \\)</p>
@@ -4474,7 +4890,19 @@ const subtopics = {
     <p>The ideal gas equation describes the relationship between pressure, volume and temperature in a gas. You’ve probably
     seen this one before:</p>
 
-    <p>\\( pV = nRT \\)</p>
+
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ pV = nRT \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
     <p>Where:</p>
     <ul>
@@ -4486,7 +4914,18 @@ const subtopics = {
 
     <p>Or, if you wanna be a bit funkier:</p>
 
-    <p>\\( pV = Nk_B T \\)</p>
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ pV = Nk_B T \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
     <p>Where \\( N \\) is the number of molecules, and \\( k_B \\) is the Boltzmann constant = 
     \\( 1.38 \\times 10^{-23} \\, \\text{J K}^{-1} \\)</p>
@@ -4542,7 +4981,18 @@ const subtopics = {
 
     <p>Put them together and you get:</p>
 
-    <p>\\( \\left(p + \\frac{a n^2}{V^2}\\right)(V - nb) = nRT \\)</p>
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\left(p + \\frac{a n^2}{V^2}\\right)(V - nb) = nRT \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
     <p>This is the <strong>van der Waals equation of state</strong> — the ideal gas law with pizazz.</p>
 
@@ -4641,11 +5091,11 @@ const subtopics = {
 
     <p>We therefore know that the number of collisions within an infinitely small time interval is</p>
 
-    <p>\\(n_{col}=\\frac12\\frac{N}{V}Av_xdt\\)</p>
+    \\[n_{col}=\\frac12\\frac{N}{V}Av_xdt\\]
 
     <p>So total momentum change is</p>
 
-    <p>\\( dQ = n_{col} \\times 2mv_x = \\frac{N}{V} A m v_x^2 dt \\)</p>
+    \\[ dQ = n_{col} \\times 2mv_x = \\frac{N}{V} A m v_x^2 dt \\]
 
     <p>Woah woah woah woah woah, Q? Where did Q come from?</p>
 
@@ -4657,25 +5107,56 @@ const subtopics = {
     also know that pressure is the force of the particles per unit are, or \\( p = F/A \\). Sub both of those in,
     and you get:</p>
 
-    <p>\\( p = \\frac{N}{V} m v_x^2 \\)</p>
+    \\[ p = \\frac{N}{V} m v_x^2 \\]
 
     <p>But in 3D, \\( v^2 = v_x^2 + v_y^2 + v_z^2 = 3v_x^2 \\). So:</p>
 
-    <p>\\( p = \\frac{1}{3} \\frac{N}{V} m \\langle v^2 \\rangle \\)</p>
+    \\[ p = \\frac{1}{3} \\frac{N}{V} m \\langle v^2 \\rangle \\]
 
     <p>Multiply both sides by \\( V \\), and boom:</p>
 
-    <p>\\( pV = \\frac{1}{3} N m \\langle v^2 \\rangle = N k_B T \\)</p>
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ pV = \\frac{1}{3} N m \\langle v^2 \\rangle = N k_B T \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
     <p>So the ideal gas law comes from molecules bouncing around. Neat.</p>
 
     <h3>Maxwell-Boltzmann Distribution</h3>
 
-    <p>Not all molecules move at the same speed. They follow the <strong>Maxwell-Boltzmann distribution</strong>:</p>
 
-    <p>\\( f(v) = 4\\pi \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} v^2 \\exp\\left( -\\frac{m v^2}{2 k_B T} \\right) \\)</p>
+    <div class="container">
+      <div class="text">
+        <p>Not all molecules move at the same speed. They follow the <strong>Maxwell-Boltzmann distribution</strong>, which
+          creates a graph showing how many molecules (y-axis) have what energy (x-axis) for a given temperature. 
+          The distribution looks like this:</p>
 
-    <p>It’s a curve that:</p>
+        \\[ f(v) = 4\\pi \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} v^2 \\exp\\left( -\\frac{m v^2}{2 k_B T} \\right) \\]
+
+        <p>Whilst I don't think you'll have to remember the formula, you should get familiar with the shape
+        it produces, because you <em>will</em> likely have to identify and interpret its features. It's a curve that:</p>
+      </div>
+      <div class="image">
+        <div class="image-floater">
+          <div class="image-box">
+            <img src="images/Thermal Physics/maxwell-boltzmann-dist.png" class="pop-image" style="width: 300px"/>
+          </div>
+          <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+            font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+            Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
+            The adiabats appear steeper than the isotherms</div></span>
+        </div>
+      </div>
+    </div>
+
     <ul>
       <li>Peaks at the <strong>most probable speed</strong>: \\( v_{\\text{prob}} = \\sqrt{\\frac{2k_B T}{m}} \\)</li>
       <li>Has average speed: \\( v_{\\text{av}} = \\sqrt{\\frac{8k_B T}{\\pi m}} \\)</li>
@@ -4684,9 +5165,8 @@ const subtopics = {
 
     <p>As temperature increases, the peak shifts right and the curve flattens.</p>
 
-    <p>There are still slow molecules at high \\( T \\), and fast ones at low \\( T \\).</p>
-
-    <p>That’s statistics for you.</p>
+    <p>Interestingly, even at lower temperatures, there are always some particles which move with higher
+      speed, if only a few. And there are also slow moving particles at higher temperatures.</p>
 
     <h3>kBT</h3>
 
@@ -4770,11 +5250,11 @@ const subtopics = {
     is essentially the kinetic energy of the particles. That means in this case, we could technically just replace 
     \\(Q\\) with \\(K_{\\text{tr}}\\). We already learnt before that:</p>
 
-    <p>\\(K_{\\text{tr}}=\\frac32k_BT\\)</p>
+    \\[K_{\\text{tr}}=\\frac32k_BT\\]
 
     <p>For n moles, we can use our ideal gas equations, replacing \\(k_BT\\) with nRT. This means:</p>
 
-    <p>\\(K_{\\text{tr}}=\\frac{3n}2RT\\)</p>
+    \\[K_{\\text{tr}}=\\frac{3n}2RT\\]
 
     <p> And like I said earlier, we are assuming that all the heat energy which goes in becomes translational kinetic
     energy, or in other words, \\(Q=K_{\\text{tr}}\\). That means we can replace the \\(Q\\) in our equation for 
@@ -4798,20 +5278,20 @@ const subtopics = {
     <p>Introducing our first three contestants, Helium, Argon and Neon. Let's see what their heat capacity is at
     constant volume.</p>
     
-    <p>For Helium, \\( C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
-    <p>For Neon, \\( C_V = 12.7 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
-    <p>For Argon, \\( C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
+    \\[ \\text{For Helium,} \\quad C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+    \\[ \\text{For Neon,} \\quad C_V = 12.7 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+    \\[ \\text{For Argon,} \\quad C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
 
     <p>Hey, not bad! It looks like our calculation is accurate, or at least close enough. And it looks like we have four
     more contestants! Krypton, Nitrogen, Hydrogen and Oxygen. Let's see wagwan now:</p>
 
-    <p>For Krypton, \\( C_V = 12.3 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
+    \\[ \\text{For Krypon,} \\quad C_V = 12.3 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
 
     <p>So far so good!</p>
 
-    <p>For Nitrogen, \\( C_V = 20.8 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
-    <p>For Hydrogen, \\( C_V = 20.4 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
-    <p>For Oxygen, \\( C_V = 21.1 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
+    \\[ \\text{For Nitrogen,} \\quad C_V = 20.8 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+    \\[ \\text{For Hydrogen,} \\quad C_V = 20.4 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+    \\[ \\text{For Oxygen,} \\quad C_V = 21.1 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
 
     <p>...Huh? What happened? It was going so well. Why did it stop working?</p>
     <p>Well, let's look carefully. Helium, Neon, Argon and Krypton all seem to work just fine. But when I go to Nitrogen,
@@ -4900,13 +5380,11 @@ const subtopics = {
   "thermodynamics1": {
     title: "The First Law of Thermodynamics",
     content: `
-    <h3>The First Law of Thermodynamics</h3>
-    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
     <p>Unless you're first time learning about physics was yesterday evening, you probably know the first law of
     thermodynamics, even if not by name. It's the classic "energy cannot be created nor destroyed, only transferred.</p>
 
-    <h3>States and Processes: The Drama of p, V, and T</h3>
+    <h3>States and Processes</h3>
 
     <p>Remember our trusty piston? Cylinder. Movable lid. Gas inside. Number of molecules fixed. That’s our system.</p>
 
@@ -4933,14 +5411,14 @@ const subtopics = {
 
     <p>Each one has its own rules. Its own drama. Its own place on the pV diagram.</p>
 
-    <h3>The First Law: ∆U = Q – W </h3>
+    <h3>The First Law Defined</h3>
 
     <p>The formal definition of the First Law is:</p>
 
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( \\Delta U = Q - W \\)</p>
+            <p>\\[ \\Delta U = Q - W \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: First Law of Thermodynamics</div><div class="formula-tooltip-desc">
@@ -4978,7 +5456,7 @@ const subtopics = {
 
     <p>Energy is conserved. Always. But it can move around.</p>
 
-    <h3>Work: The pV Diagram Tells the Story</h3>
+    <h3>Work</h3>
 
     <div class="container">
       <div class="text">
@@ -4986,16 +5464,16 @@ const subtopics = {
           or pulling the piston,\\( dx \\), work is done \\( dW = F dx \\), which is either positive or negative depending on
           whether the piston was pushed in (done <em>on</em>, negative) or pushed out out (done <em>by</em>, positive).</p>
 
-          <p>But \\( F = pA \\), and \\( Adx = dV \\), so:</p><br>
+          <p>But \\( F = pA \\), and \\( Adx = dV \\), so:</p>
 
-          <p>\\( dW = p  dV \\)</p><br>
+          \\[ dW = p  dV \\]
 
-          <p>We can now integrate over a path:</p><br>
+          <p>We can now integrate over a path:</p>
 
-          <div class="hover-wrapper" style="left:100px;">
+          <div class="hover-wrapper" >
             <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
-                <p>\\( W = \\int_{V_1}^{V_2} p  dV \\)</p>
+                \\[ W = \\int_{V_1}^{V_2} p  dV \\]</p>
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
@@ -5019,25 +5497,25 @@ const subtopics = {
     <p>This is the **area under the curve** on a pV diagram. And unfortunately, the bloody path actually matters. Work 
     is <strong>not a state function</strong>, so it depends on how you get from A to B.</p>
 
-    <h3>Isothermal Expansion: When ∆U = 0</h3>
+    <h3>Isothermal Expansion</h3>
 
     <p>Hopefully you remember which process isothermal is: No change in temperature. One thing always worth having in
     the back of your mind is that, in the isothermal process, since there is no change in temperature, the particles
     in the system don't change their vibration speed. This means their internal energy isn't changing, or in 
     mathematicianese: </p>
 
-    <p>\\( \\Delta U = 0 \\)</p>
+    \\[ \\Delta U = 0 \\]
 
     <p>Because \\( U = \\frac{3}{2}nRT \\), and \\( T \\) is constant.</p>
 
     <p>Now since we are obviously operating the piston by having it move inwards or outwards, the volume is going to
     be changing. Therefore, work is done:</p>
 
-    <p>\\( W = \\int_{V_1}^{V_2} p  dV = \\int_{V_1}^{V_2} \\frac{nRT}{V} dV = nRT \\ln\\left(\\frac{V_2}{V_1}\\right) \\)</p>
+    \\[ W = \\int_{V_1}^{V_2} p  dV = \\int_{V_1}^{V_2} \\frac{nRT}{V} dV = nRT \\ln\\left(\\frac{V_2}{V_1}\\right) \\]
 
     <p>Then from the First Law:</p>
 
-    <p>\\( Q = W \\)</p>
+    \\[ Q = W \\]
 
     <p>To translate this into words, when we operate a piston without changing the temperature, the heat we put into the
     system is the same as the work done by the system. So the gas absorbs heat equal to the work it does. No change in 
@@ -5062,9 +5540,9 @@ const subtopics = {
     <h3>Adiabatic Expansion</h3>
 
     <p>Do you remember what the adiabatic process is? It's when there is no heat transfer, so \\( Q = 0 \\). Going back
-    to Wquation 1, we now have:</p>
+    to Equation 1, we now have:</p>
 
-    <p>\\( \\Delta U = -W \\)</p>
+    \\[ \\Delta U = -W \\]
 
     <p>All the work done comes from internal energy, meaning the internal energy will decrease as the work is done. Since
     internal energy corresponds to temperature, less internal energy means the gass cools down. Moreover, since W is 
@@ -5072,38 +5550,47 @@ const subtopics = {
 
     <p>Now, using \\( dU = nC_V dT \\) and \\( dW = p dV \\), we get:</p>
 
-    <p>\\( nC_V dT = -p dV \\)</p>
+    \\[ nC_V dT = -p dV \\]
 
     <p>By substituting \\( p = nRT/V \\) and then rearranging, we now have:</p>
 
-    <p>\\( \\frac{dT}{T} = -\\frac{R}{C_V} \\frac{dV}{V} \\)</p>
+    \\[ \\frac{dT}{T} = -\\frac{R}{C_V} \\frac{dV}{V} \\]
 
-    <p>Let \\( \\gamma = C_P / C_V \\), and \\( R = C_P - C_V \\), so \\( R/C_V = \\gamma - 1 \\)</p>
+    <p>Let's now introduce a couple of new characters, \\(\\gamma\\) and \\( R \\), where: </p>
+    
+    \\[ \\gamma = \\frac{C_P}{C_V} \\]
+    \\[ R = C_P - C_V \\]
+    
+    <p>With our two new buddies, we get this new equation: </p>
+    
+    \\[ R/C_V = \\gamma - 1 \\]
 
     <p>Then integrate:</p>
 
-    <p>\\( \\ln T + (\\gamma - 1) \\ln V = \\text{constant} \\)</p>
+    \\[ \\ln T + (\\gamma - 1) \\ln V = \\text{constant} \\]
 
     <p>So:</p>
 
-    <div class="container">
-      <div class="text">
-        <div class="hover-wrapper" style="left: 100px;">
+    <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
               <p>For the adiabat:</p>
             
-              <p>\\( T V^{\\gamma - 1} = \\text{constant} \\)</p><br>
+              \\[ T V^{\\gamma - 1} = \\text{constant} \\]</p><br>
 
-              <p>Using \\( pV = nRT \\), we also get:</p><br>
+              <p>Using \\( pV = nRT \\), we also get:</p>
 
-              <p>\\( p V^\\gamma = \\text{constant} \\)</p>
+              \\[ p V^\\gamma = \\text{constant} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
             Formula to calculate length for a bar stationary in the moving frame</div></span>
           </div>
-        </div><br><br>
+        </div>
+
+    <div class="container">
+      <div class="text">
+        <br><br>
 
 
         <p>Which means the adiabat is <strong>steeper</strong> than the isotherm on a pV diagram. Because \\( \\gamma > 1 \\),
@@ -5122,11 +5609,11 @@ const subtopics = {
       </div>
     </div>
 
-    <h3>Work Along the Adiabat: W = –nC_V ∆T</h3>
+    <h3>Work Along the Adiabat</h3>
 
     <p>Since \\( \\Delta U = -W \\) and \\( \\Delta U = nC_V \\Delta T \\), then:</p>
 
-    <p>\\( W = -nC_V (T_2 - T_1) \\)</p>
+    \\[ W = -nC_V (T_2 - T_1) \\]
 
     <p>Even though volume changes, we use \\( C_V \\), not \\( C_P \\). Because it’s the change in internal energy 
     that matters — and for an ideal gas, \\( U \\) only depends on \\( T \\).</p>
@@ -5137,26 +5624,50 @@ const subtopics = {
 
     <p>We already know:</p>
 
-    <p>\\( C_V = \\frac{1}{n} \\frac{dQ}{dT} \\quad \\text{(at constant volume)} \\)</p>
+    \\[ C_V = \\frac{1}{n} \\frac{dQ}{dT} \\quad \\text{(at constant volume)} \\]
 
-    <p>But what about \\( C_P \\)? That’s at constant pressure. When pressure is constant, work is done: 
-    \\( W = p \\Delta V \\)</p>
+    <p> Well \\(C_V\\) has now decided to introduce you to her best friend: \\( C_P \\)! As you might have been 
+    able to guess, this is the heat capacity at constant pressure. When pressure is constant, the work done is
+    related to how much the volume of the gas changed: </p>
+  
+    \\[ W = p \\Delta V \\]
 
     <p>So from the First Law:</p>
 
-    <p>\\( dQ = dU + p dV \\)</p>
+    \\[ dQ = dU + p dV \\]
 
     <p>Then:</p>
 
-    <p>\\( n C_P dT = n C_V dT + p dV \\)</p>
+    \\[ n C_P dT = n C_V dT + p dV \\]
 
-    <p>But \\( p dV = nR dT \\) (from ideal gas law)</p>
+    <p>Now considering the ideal gas law, we know that \\( p dV = nR dT \\). Therefore, by replacing that last term
+    with \\(nRdT\\) and then cancelling out all the \\(ndT\\)s which are common to all the terms, we end up with a 
+    value for \\(C_P\\):</p>
 
-    <p>So:</p>
+    \\[ n C_P dT = n C_V dT + nR dT \\]
 
-    <p>\\( C_P = C_V + R \\)</p>
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ C_P = C_V + R  \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-    <p>And for monatomic gases: \\( C_V = \\frac{3}{2}R \\), so \\( C_P = \\frac{5}{2}R \\), \\( \\gamma = 5/3 \\)</p>
+
+
+    <p>We got the different values of \\(C_V\\) for monotomic and diatomic molecules in the previous topic.
+    If you remember, for a monotomic gas, \\( C_V = \\frac{3}{2}R \\), and for a diatomic gas its
+    \\( C_V = \\frac{5}{2}R \\), with \\( \\frac12R \\) for each degree or motion. This means we can now also 
+    get their \\( C_P \\) values, just by adding \\( R \\):</p>
+    
+    \\[ \\text{Monotomic: } \\quad C_P = \\frac{5}{2}R, \\quad \\gamma = 5/3 \\]
+    \\[ \\text{Diatomic: } \\quad C_P = \\frac{7}{2}R, \\quad \\gamma = 7/5 \\]
 
     <p>For diatomic: \\( C_V = \\frac{5}{2}R \\), \\( C_P = \\frac{7}{2}R \\), \\( \\gamma = 7/5 \\)</p>
 
@@ -5215,24 +5726,22 @@ const subtopics = {
   "thermodynamics2": {
     title: "The Second Law of Thermodynamics",
     content: `
-    <h3>The Second Law of Thermodynamics</h3>
-    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
 
-    <p>Right. Let’s talk about the <strong>Second Law</strong>.</p>
+    <p>Previously we took a good look at the first law of thermodynamics, which stated that energy cannont be created
+    nor destroyed, or more formally, that the change in a system's internal energy is the difference between the energy
+    flowing into the system and the work done by the system itself:</p>
+    
+    \\[
+      \\Delta U = Q - W
+    \\]
+    
+    <p> Now with that out of the way, let's get to the next best thing. Have you ever wondered why you can’t un-burn 
+    wood, un-mix coffee, or un-splash water? It's because of the Second Law of thermodynamics. In short, this law
+    states that the universe will take any chance to become more and more chaotic!!</p>
 
-    <p>No, not the one about robots not hurting people. We’re talking about <strong>thermodynamics</strong> — the universe’s way of saying:</p>
+    <h3>Kelvin-Planck vs Clausius</h3>
 
-    <blockquote>“<em>You can’t win. You can’t break even. You can’t even get out of the game.</em>”</blockquote>
-
-    <p>It’s not about energy conservation — that’s the First Law.</p>
-
-    <p>No, the Second Law is about <strong>direction</strong>. About <strong>irreversibility</strong>. About why you can’t un-burn wood, un-mix coffee, or un-splash water.</p>
-
-    <p>It’s the law of <strong>disorder</strong>. And it’s coming for you.</p>
-
-    <h3>Two Ways to Say It: Kelvin-Planck vs Clausius</h3>
-
-    <p>There are two classic ways to state the Second Law — and both say the same thing in different ways, that
+    <p>There are two classic ways to state the Second Law, and both say the same thing in different ways, that
     the universe wants money, and you can't avoid paying it.</p>
 
     <h4>Kelvin-Planck (The “Engine” Statement)</h4>
@@ -5279,15 +5788,23 @@ const subtopics = {
     dividing it by how much energy we actually gave it, \\(Q_H\\). This gives us a decimal less than one (or a 
     percentage less than 100%) as per the second law.</p>
 
-    <p>\\( \\varepsilon = \\frac{W}{Q_H} = 1 - \\frac{|Q_C|}{Q_H} \\)</p>
-
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\varepsilon = \\frac{W}{Q_H} = 1 - \\frac{|Q_C|}{Q_H} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
     <p>(If you can't tell, the second part of the formula comes from using \\( W = Q_H - |Q_C| \\)).</p>
 
     <h3>The Carnot Cycle</h3>
 
-    <p>Enter the <strong>Carnot cycle</strong> — the most efficient heat engine possible.</p>
-
-    <p>It’s not real. It’s ideal. It’s like a physics thought experiment on steroids.</p>
+    <p> The Carnot cycle is a theoretical heat engine which has 100% efficiency. That's a lot of percents.</p>
 
     <p>It has four stages:</p>
     <ol>
@@ -5324,12 +5841,25 @@ const subtopics = {
 
     <p>Oh yes, the efficiency. We know from earlier that </p>
 
-    <p>\\( \\varepsilon = 1 - \\frac{|Q_C|}{Q_H} \\)</p>
-    <p>If we then plug in our formulae for \\(W\\) and \\(Q_H\\), we get:</p>
-    <p>\\( \\varepsilon = 1 - \\frac{|nRT_C\\ln{\\frac{V_3}{V_4}}|}{nRT_H\\ln{\\frac{V_1}{V_2}}} \\)</p>
-    <p>Remember that \\(\\frac{V_1}{V_2}=\\frac{V_3}{V_4}\\), then do a bit of cancellation:,/p>
+    \\[ \\varepsilon = 1 - \\frac{|Q_C|}{Q_H} \\]
 
-    <p>\\( \\varepsilon_\\text{carnot} = 1 - \\frac{T_C}{T_H} \\)</p>
+    <p>If we then plug in our formulae for \\(W\\) and \\(Q_H\\), we get:</p>
+
+    \\[ \\varepsilon = 1 - \\frac{|nRT_C\\ln{\\frac{V_3}{V_4}}|}{nRT_H\\ln{\\frac{V_1}{V_2}}} \\]
+    <p>Remember that \\(\\frac{V_1}{V_2}=\\frac{V_3}{V_4}\\), then do a bit of cancellation:</p>
+
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\varepsilon_\\text{carnot} = 1 - \\frac{T_C}{T_H} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
     <p>Where temperatures are in <strong>Kelvin</strong> — because the universe doesn’t like Celsius.</p>
 
@@ -5430,7 +5960,7 @@ const subtopics = {
 
     <p>We define a small change in spaztication as:</p>
 
-    <p>\\( dS = \\frac{dQ_{\\text{rev}}}{T} \\)</p>
+    \\[ dS = \\frac{dQ_{\\text{rev}}}{T} \\]
 
     <p>Where:</p>
     <ul>
@@ -5440,11 +5970,11 @@ const subtopics = {
 
     <p>So for a finite process:</p>
 
-    <p>\\( \\Delta S = \\int \\frac{dQ_{\\text{rev}}}{T} \\)</p>
+    \\[ \\Delta S = \\int \\frac{dQ_{\\text{rev}}}{T} \\]
 
     <p>If \\( T \\) is constant (an isothermal process), this simplifies to:</p>
 
-    <p>\\( \\Delta S = \\frac{Q}{T} \\)</p>
+    \\[ \\Delta S = \\frac{Q}{T} \\]
 
     <h3>Reversible vs Irreversible Processes</h3>
 
@@ -5494,7 +6024,8 @@ const subtopics = {
   "thermal-summary": {
     title: "Turn up the heat, Soulburner!",
     content: `
-    <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+    
+    <p> And we're done! A pretty easy subject I think! </p>
 
     `,
   },
@@ -5662,7 +6193,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container" >
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
-            <p>\\( \\frac{\\partial^2 U}{\\partial t^2} = v^2 \\frac{\\partial^2 U}{\\partial x^2} \\)</p>
+            \\[ \\frac{\\partial^2 U}{\\partial t^2} = v^2 \\frac{\\partial^2 U}{\\partial x^2} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 3: The wave equation</div><div class="formula-tooltip-desc">
@@ -5721,8 +6252,8 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container" >
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
-            <p>\\( U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
-            \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\)</p>
+            \\[ U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
+            \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 4: Superposition of waves</div><div class="formula-tooltip-desc">
@@ -5820,7 +6351,20 @@ const subtopics = {
     frequency/wave number of the two waves and the frequency/wave number of one of them). If we make that difference
     infinitesimally small, we can replace the deltas for d's and make it into a differencial equation:</p>
 
-    <p>\\( v_g = \\frac{d\\omega}{dk} \\)</p>
+
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ v_g = \\frac{d\\omega}{dk} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
 
     <p>In the vast majority of cases, \\(v_p\\) and \\(v_g\\) are different. This is the case when \\( v_p \\) depends 
     on wavelength, meaning the waves are <strong>dispersive</strong>.</p>
@@ -5847,7 +6391,20 @@ const subtopics = {
     </ul>
 
     <p>The dispersion relationship can be described like this:</p>
-    <p>\\( \\omega = \\omega(k)\\)</p>
+
+    <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\omega = \\omega(k) \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
     <p>which means that the angular frequency is a function of (i.e. depends on) the wavenumber. Or less nerdily,
     frequency depends on the wavelength.</p>
 
@@ -5870,8 +6427,7 @@ const subtopics = {
   "mechanical-waves": {
     title: "Mechanical Waves",
     content: `
-      <h3>Mechanical Waves</h3>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+
       <p>Now for mechanical waves. These are waves which make things move, <em> without</em> making things move.</p>
       <p>What an explanation, I know! Anyway, if you want a more technical definition (not that you'd need one, being as 
       my explanation was flawless), they are waves where energy is propagated, but matter doesn't move with it. These
@@ -5889,7 +6445,7 @@ const subtopics = {
       <p>Now, if you want to derive the wave equation, you’d have to consider a lot of things. But boring you with long
       stupid derivations is not my style. Instead, here’s the result:</p>
 
-      <p>\\( \\frac{\\partial^2 y}{\\partial t^2} = \\frac{T}{\\mu} \\frac{\\partial^2 y}{\\partial x^2} \\)</p>
+      \\[ \\frac{\\partial^2 y}{\\partial t^2} = \\frac{T}{\\mu} \\frac{\\partial^2 y}{\\partial x^2} \\]
 
       <p>Where:</p>
       <ul>
@@ -5900,7 +6456,19 @@ const subtopics = {
       <p>Now I dunno about you lot, but that looks <em>awfully</em> similar to the wave equation we saw last time. If
       my hypothesis is correct then, then we should be able to extract the wave speed as so:</p>
 
-      <p>\\( v = \\sqrt{\\frac{T}{\\mu}} \\)</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ v = \\sqrt{\\frac{T}{\\mu}} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
       <p>which tells me that the wave speed for a wave on a string is proportional to the <strong>square root of the
       tension</strong>, and inversely proportional to the <strong>mass per unit length</strong>. Or in useful English,
@@ -5916,7 +6484,7 @@ const subtopics = {
       <p>If we have a wave with wave function \\( y(x,t) = A \\cos(kx - \\omega t) \\), the power of the wave can be
       shown to be:</p>
 
-      <p>\\( P = TA^2 k \\omega \\sin^2(kx - \\omega t) \\)</p>
+      \\[ P = TA^2 k \\omega \\sin^2(kx - \\omega t) \\]
 
       <p>Now you may wonder, "Wait, wasn't the wave function U? Why are we using a y all of a sudden?" Well that's simple!
       That's because... erm... because that's what the lecture notes say. If you have a problem, make sure to send David
@@ -5927,77 +6495,184 @@ const subtopics = {
       <strong>average power</strong>. Since \\(\\sin^2\\) waves just jump between 0 and 1, the average of such a
       wave is just 0.5. So we get an average power of:</p>
 
-      <p>\\( P_{\\text{av}} = \\frac{1}{2} TA^2 k \\omega \\)</p>
+      \\[ P_{\\text{av}} = \\frac{1}{2} TA^2 k \\omega \\]
 
       <p>But wait! We can <em>simplify</em> this equation, to make it <em>simpler</em>, meaning the equation can be made
       <em>less complicated</em>! Remember that for any wave, the wave speed (specifically the phase velocity, but these
       waves aren't dispersive, so \\(v_p=v_g\\) and therefore clarifying is kinda pointless ngl) is\\(v=\\omega / k\\).
       We also know from not long ago that \\( v = \\sqrt{\\frac{T}{\\mu}} \\). Plug some numbers in and rearrange for
       \\(k\\), we now have:</p>
-      <p>\\(k=\\omega\\sqrt{\\frac{\\mu}{T}}\\)</p>
+
+      \\[k=\\omega\\sqrt{\\frac{\\mu}{T}}\\]
+
       <p>We are now one step closer to being able to <em>simplify</em> our equation! All we need to do now is substitute 
       this into our average power equation, which gives us:</p>
 
-      <p>\\( P_{\\text{av}} = \\frac{1}{2} \\omega^2 A^2 \\sqrt{T\\mu} \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ P_{\\text{av}} = \\frac{1}{2} \\omega^2 A^2 Z \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>Where \\( Z = \\sqrt{T\\mu} \\) is the impedance of the string.</p>
+
+      <p>...</p>
 
       <p>Actually, on second thoughts, this is a pretty rubbish simplification innit? It looks basically just as 
       complex, don't it? So much for <em>simplification</em>...</p>
 
-      <p>Where \\( Z = \\sqrt{T\\mu} \\) is the impedance of the string.</p>
+      <p>Anyway, as for this new <strong>impedance</strong> quantity, it comes back up in the Electricity and Magnetism
+        module, but don't worry about it too much for now. It's basically just a slightly more interesting version
+        of resistance, which you should know about from GCSE and A-Levels. </p>
 
-      <p>So power depends on frequency, amplitude, and impedance. And yes — this applies to all mechanical waves.</p>
+      <p>In conclusion, power depends on frequency, amplitude, and impedance. This applies to all mechanical waves.</p>
 
       <h3>Longitudinal Waves</h3>
 
-      <p>Now imagine hitting the end of a rod. You create a compression that travels down it.</p>
+      <p> Now say we have a metal rod, which we hit the end of. This also produces a wave, but instead of the
+        wibbly-wobbly up and down propagation we had before, we now get a series of compressions which travel
+        down the rod. </p>
 
-      <p>This is a <strong>longitudinal wave</strong> — the motion is parallel to the direction of the wave.</p>
+      <p>This is a <strong>longitudinal wave</strong>, where the direction of oscillation is parallel to the 
+        direction of the wave. Hopefully this isn't your first time coming across these!</p>
 
-      <p>For a rod, the wave speed is:</p>
+      <p> Now that we are talking about compressions, we need to introduce stress and strain. Starting with
+        stress, this describes the force an object 'feels' per unit area. </p>
 
-      <p>\\( v = \\sqrt{\\frac{Y}{\\rho}} \\)</p>
+        \\[
+          \\text{stress} = \\frac{F}A
+        \\]
 
-      <p>Where \\( Y \\) is Young’s modulus, and \\( \\rho \\) is density.</p>
+      <p>Strain is a measure of how much something is stretched or squashed, \\(\\Delta L\\), from its original
+        length, \\( L \\):</p>
 
-      <p>For steel: \\( v \\approx 5 \\times 10^3 \\, \\text{m/s} \\).</p>
+      \\[
+        \\text{strain} = \\frac{\\Delta L}L
+      \\]
+
+      <p> And last but not least, we have the Young's modulus, \\(Y\\), which measures the... wait 'ang on a
+        minute \\( Y \\)? Since when was Young's modulus \\( Y \\)? Could've sworn it was \\( E \\), no? Well
+        anyway, the Young's modulus, \\(Y\\), which measures the ratio between the two:</p>
+
+      \\[
+        Y = \\frac{\\text{stress}}{\\text{strain}}
+      \\]
+
+      <p>Now we get the speed of the squishy-squashy in the rod:</p>
+
+      \\[ v = \\sqrt{\\frac{Y}{\\rho}} \\]
+
+      <p>...where \\( \\rho \\) is the density of the material of the rod. For example, the wave speed
+      in steel is about \\( v \\approx 5 \\times 10^3 \\, \\text{m/s} \\).</p>
+
+      <p><em>Am I bugging? It <strong>was</strong> \\(E\\) weren't it?</em></p>
 
       <h3>Shear Waves</h3>
 
-      <p>If you hit the side of a rod, you create a transverse wave — but now it’s called a <strong>shear wave</strong>.</p>
+      <p>Now what if we were to hit the side of the rod such that it would instead create a transverse wave? Well...
+      you'd be successful I guess, but I hate you and I don't want you to succeed, so no, this is NOT a transverse
+      wave, this is a, erm... <em>Hmm, what should I call it instead of a transverse wave? How about</em> SHEAR wave!
+      Yep, that's what we're calling them!</p>
 
-      <p>Speed: \\( v = \\sqrt{\\frac{G}{\\rho}} \\)</p>
+      <p> And now we must welcome in a new character, the <em>Shear Modulus</em>, \\( G \\). You use it to calculate
+        the wave speed more or less exactly how you'd use the Young's Modulus, just replace it to get the speed
+        of shear waves: </p>
 
-      <p>Where \\( G \\) is the shear modulus.</p>
+      \\[ v_{shear} = \\sqrt{\\frac{G}{\\rho}} \\]
 
-      <p>For steel: \\( v \\approx 3.1 \\times 10^3 \\, \\text{m/s} \\) — slower than longitudinal.</p>
+      <p>For steel: \\( v_{shear} \\approx 3.1 \\times 10^3 \\, \\text{m/s} \\), meaning in steel, hitting a bar
+        from the top produces waves which are slower than longitudinal waves.</p>
 
       <h3>Bulk Waves in Solids</h3>
 
-      <p>In 3D solids, we have two types:</p>
-      <ul>
-        <li><strong>P-waves</strong>: compressional waves → \\( v_p = \\sqrt{\\frac{B + \\frac{4}{3}G}{\\rho}} \\)</li>
-        <li><strong>S-waves</strong>: shear waves → \\( v_s = \\sqrt{\\frac{G}{\\rho}} \\)</li>
-      </ul>
+      <p>Up until now we have only considered one-dimensional rods. But what happens when we want to enter 
+        three dimensions? Well now we need to consider 2 different kinds of waves, <em>primary waves</em> 
+        (p-waves for short) and <em>secondary waves</em> (s-waves for short), each with their own wavespeeds
+        \\( v_p \\) and \\( v_s \\) respectively. </p>
 
-      <p>S-waves don’t travel through liquids — so when earthquakes happen, scientists use this to study Earth’s interior.</p>
+      <p> We can start with the s-waves, considering we've actually already done them: they are just the
+        shear waves we calculated like half a second ago. So if you can't be arsed to look up like a third of
+        the page, the wave speed for s-waves is: </p>
+
+      \\[ v_{\\text{s}} = \\sqrt{\\frac{G}{\\rho}} \\]
+
+      <p> Interestingly, s-waves are part of the reason we know the Earth has a liquid core. S-waves can't travel 
+        through liquids, and when an earthquake takes place, you will not be able to detect s-waves on the other
+        side of the planet. This suggests there is a liquid blocking the s-waves from travelling but allowing
+        p-waves to travel. </p>
+
+      <p> Speaking on p-waves, how do you determine their wave speed? Since s-waves turned out to just be shear
+        waves from just a moment ago, does that mean p-waves are just the longitudinal waves, with the Young's
+        Modulus \\( Y \\) and everything? </p>
+
+      <p> Unfortunately not, my friend, you are wrong as usual. We now have to introduce another character: the 
+        Bulk modulus, \\( B \\). And since you are apparently an Olympic champion of getting things wrong, I'm
+        sure you'll also be pleased to know that the idea you are currently having of just replacing \\(Y\\) with
+        \\(B\\) is also wrong. The wave speed has a slightly more interesting equation: </p>
+
+      \\[ v_p = \\sqrt{\\frac{B + \\frac{4}{3}G}{\\rho}} \\]
+
+      <p>Notice that the shear modulus \\( G \\) has made a cute little reappearance here. Why it's here, and why
+        we need four thirds of it, who knows and who cares, but it's here nevertheless, and it really really would
+        appreciate it if you didn't ignore it, kk? Lovely!</p>
 
       <h3>Sound Waves</h3>
 
-      <p>Sound is a longitudinal wave in air — high and low pressure regions travel through the gas.</p>
+      <p>We've looked at waves in 3D solids, now let's look at waves in 3D gases. Let's take sound as our example.
+        It's hopefully no secret that sound waves are longitudinal waves, made up of areas of lower and higher 
+        air pressures. The pressure at a given point is calculates like so:</p>
 
-      <p>The pressure variation is:</p>
+      \\[ p = AkB \\sin(kx - \\omega t) \\]
 
-      <p>\\( p = Ak_B \\sin(kx - \\omega t) \\)</p>
+      <p>Hey, the Bulk modulus is back! And it will make another reappearance when we want ot consider the
+        wave speed in a gas. We return back to the cute square-root-of-modulus-over-density format we had 
+        before:</p>
 
-      <p>And the speed of sound is:</p>
+      \\[ v = \\sqrt{\\frac{B}{\\rho}} \\]
 
-      <p>\\( v = \\sqrt{\\frac{B}{\\rho}} \\)</p>
+      <p>Now this is cool and all, but we can actually simplify this quite a bit. Let's take the medium that the
+        sound is travelling in is an ideal gas, and then assume that the speed of sound is so fast, that heat 
+        doesn't have time to transfer. Do you remember from the thermal physics section which process has no heat 
+        transfer? </p>
+        
+      <p>That's right, the <em>adiabatic</em> process. We also learnt that in the adiabatic process, this relationship
+        between the pressure and the volume is true:</p>
+        
+      \\[
+        pV^\\gamma = \\text{constant}
+      \\]
 
-      <p>But for an ideal gas, the process is adiabatic — no heat exchange. So:</p>
+      <p>Where \\( \\gamma \\) was the ratio between the heat capacity at constant volume and the heat capacity at
+      constant pressure, \\( C_V / C_P \\). The Bulk modulus is actually defined as so:</p>
+      
+      \\[
+        B = -V \\frac{\\partial p}{\\partial V}
+      \\]
+      
+      <p> A bit arbitrary I know, but you'll have to take my word for it. Anyway, now we can rearrange the relationship
+        we have for the adiabatic process to get \\( p \\), and substitute that into the formula for Bulk modulus: </p>
+        
+      \\[
+        pV^\\gamma = \\text{constant}
+      \\]
+      \\[
+        p = \\text{constant} \\times V^{-\\gamma}
+      \\]
+      \\[
+        \\frac{\\partial p}{\\partial V} = \\text{constant} \\times -\\frac{\\gamma}{V} \\times V^{-\\gamma}
+      \\]
+      \\[
+        B = \\gamma p
+      \\]
 
       <p>\\( v_{\\text{sound}} = \\sqrt{\\frac{\\gamma k_B T}{M}} \\)</p>
-
-      <p>Where \\( \\gamma = C_P/C_V \\), \\( T \\) is temperature, and \\( M \\) is molar mass.</p>
 
       <p>For air: \\( v \\approx 344 \\, \\text{m/s} \\).</p>
 
@@ -6542,7 +7217,8 @@ const subtopics = {
 
   // Subtopics for Electricity & Magnetism
   "e-m-intro": {
-    title: "Introduction to E&M: Magic Floaty Metal!", //https://www.popularmechanics.com/space/rockets/a65924333/engineer-overcoming-earths-gravity/
+    title: "Introduction to E&M: Magic Floaty Metal!", 
+    //https://www.popularmechanics.com/space/rockets/a65924333/engineer-overcoming-earths-gravity/
     content: `
     <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
       `,
@@ -6740,7 +7416,8 @@ const subtopics = {
       <p>\\[Q(t) = Q_0 e^{-t/RC}\\]</p>
       <p>\\[I(t) = I_0 e^{-t/RC}\\]</p>
 
-      <p>And that's it! The current flows <i>backwards</i> compared to the charging case as the capacitor empties itself out. Again, the time constant \\(\tau = RC\\) tells you how long it takes to discharge.</p>
+      <p>And that's it! The current flows <i>backwards</i> compared to the charging case as the capacitor empties itself 
+      out. Again, the time constant \\(\\tau = RC\\) tells you how long it takes to discharge.</p>
 
       <h3>TL;DR</h3>
 
@@ -6759,66 +7436,254 @@ const subtopics = {
       `,
   },
   "charge": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Electric Charge and Electric Field",
     content: `
-      <h3>Electric Charge and Field: When Stuff Starts to Push</h3>
 
-      <p>Right. Let’s talk about <strong>electric charge</strong>.</p>
+      <p>So far we've covered some mostly very basic stuff about circuits, things like ... . Hopefully none
+        of that was new to you; it should be revision from GCSE and A-level.</p>
 
-      <p>No, not the kind you pay for your phone. We’re talking about <strong>q</strong> — the property that makes things attract or repel.</p>
+      <p>This next topic is similarly quite revision-y, but we will be introducing some newer stuff too, so prepare
+        for some grade-A cranium expansion! </p>
 
-      <p>There are two types: positive and negative. Like charges repel. Opposites attract. Simple.</p>
+      <p> Beginning with what you should hopefully know, charge is a fundamental quality of a particle, and is measured
+        in... ha... haha! I'll tell you what they are bloody measured in. They are measured in, drumroll please!!</p>
 
-      <h3>Coulomb’s Law: The Force Between Charges</h3>
+      <p> COULOMBS!! </p>
 
-      <p>For two point charges:</p>
+      <p>You get it? Like the name of this website?! </p>
 
-      <p>\\( \\vec{F} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r^2} \\hat{r} \\)</p>
+      <p> Anyway, compose yourself, because we've got work to do. We can measure a single quantum of charge, \\( e \\),
+      and when we do, we find out that \\( e = 1.60 \\times 10^{-27}C\\). Electrons have a charge of \\( -e \\), and 
+      protons have a charge of \\( +e \\). And as you probably already know, opposite charges attract, and like charges
+      repel </p>
 
-      <p>Where \\( \\epsilon_0 \\) is the permittivity of free space.</p>
+      <h3> Coulomb's Law </h3>
 
-      <p>Direction? Along the line joining them. Repulsive if same sign, attractive if opposite.</p>
+      <p> Time to turn things up a notch. Coulomb's law is an empirical law which basically tells us that the way particles
+      attract or repel each other via electromagnetic forces is analogous to the way masses attract each other by
+      gravity. This means that if we have two charges, \\( q_1 \\) and \\( q_2 \\), the force is proportional to the
+      magnitude of their charges and inversely proportional to the square of their separation. Or as an equation: </p>
 
-      <h3>Electric Field: Force Per Unit Charge</h3>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{F} = \\frac{q_1 q_2}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-      <p>The electric field at a point is the force a test charge would feel, divided by its charge:</p>
+      <p>Notice that instead of the gravitational constant, \\( G \\), we now have this new constant 
+      \\( \\frac1{4\\pi \\varepsilon_0} \\), where \\( \\varepsilon_0 \\) is the permittivity of free space,
+      which is about \\( 8.85 \\times 10^{-12} \\, m^{-3} \\, kg^{-1} \\, s^4 \\, A^2 \\)</p>
 
-      <p>\\( \\vec{E} = \\frac{\\vec{F}}{q_0} \\)</p>
+      <p>Protip: since \\( \\varepsilon_0 \\) isn't the prettiest number, it might be easier to remember the
+        value for \\( \\frac1{4\\pi \\varepsilon_0} \\) on its own, often referred to as a constant \\( k \\)
+        to make the equation look more like the gravitational one:</p>
 
-      <p>For a point charge:</p>
+      \\[
+        k = \\frac1{4\\pi \\varepsilon_0} \\approx 9 \\times 10^{9}
+      \\]
 
-      <p>\\( \\vec{E} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q}{r^2} \\hat{r} \\)</p>
+      <h3>Electric Field</h3>
 
-      <p>Field lines point away from positive, toward negative.</p>
+      <p>Before we go into what electric fields are, time to introduce a new friend: the test charge!</p>
 
-      <h3>Superposition: Fields Add, Not Cancel</h3>
+      <p>A test charge is a hypothetical charge which can interact with an electric field, but doesn't change it in
+        any way. This is of course impossible irl, but for the sake of probing the electric field it'll have to
+        do. </p>
 
-      <p>For multiple charges, the total field is the vector sum of individual fields.</p>
+      <p> And I've been talking about electric fields for a while, so it's about time I defined what one is. At
+        any given point in space, the electric field \\( \\vec{E} \\) at that point is the amount of force per 
+        unit charge that our new friend, the test charge, experiences there. In equation form: </p>
+        
+      \\[
+        \\vec{E}(\\vec{r}) = \\frac{\\vec{F}}{q}
+      \\]
+      <p>  In other words, the stronger the 
+        electric field at a point, the faster the test charge will end up leaving that point. So you could think 
+        of \\( \\vec{E} \\) as a measure of how much the test charge dislike the scenary in a particular place, 
+        and therefore how much it wants to leave. </p>
 
-      <p>So yes — you have to add them as vectors. No shortcuts.</p>
+      <p>By using the formula for electric force from earlier (Equation 1), we can get a new and improved formula
+        for electric field: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{E}(\\vec{r}) = \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>Also bare in mind that electric fields are vector fields which point away from positive charge and 
+        towards negative charge. In other words, the electric fields describe the force experienced by a 
+        <em>positive</em> test charge. We can draw this out using electric field lines: They go out of 
+        positive charges (like proton) and go into negative charges (like electrons).</p>
+
+      <h3>The Principle of Linear Superposition</h3>
+
+      <p> So far we have dealt with forces only between 2 particles and single electric fields, but what if
+        we have a bunch of 'em? </p>
+
+      <p> This is where the principle of linear superposition makes a comeback from classical mechanics. In the
+        same way that you can simply add forces together in classical mechanics, to calculate the net electric
+        force on a particle, you simply need to add up all the individual forces on the individual particles. </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{F} = \\sum^N_{i=1} \\vec{F}_i = \\frac{q}{4 \\pi \\varepsilon} \\sum^N_{i=1} 
+              \\frac{q_i (\\vec{r}_0 - \\vec{r}_i)}{|\\vec{r}_0 - \\vec{r}_i|^3} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> And the same is true of electric fields. </p>
+
+      <p> There's... not very much to say for this section is there?</p>
+
+      <p> Guess not, moving on then...</p>
 
       <h3>Continuous Charge Distributions</h3>
 
-      <p>For a line, surface, or volume of charge:</p>
+      <p> We've been dealing with individual particles, but as usual, life ain't discrete, it's continuous! Meaning
+        we are gonna have to end up using that dreaded integration to analyse distributions. </p>
 
-      <p>\\( \\vec{E} = \\int \\frac{1}{4\\pi\\epsilon_0} \\frac{dq}{r^2} \\hat{r} \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ d\\vec{E} = \\frac{1}{4\\pi\\epsilon_0} \\frac{dq}{r^2} \\hat{r} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-      <p>Where \\( dq = \\lambda dl \\), \\( \\sigma dA \\), or \\( \\rho dV \\).</p>
+      <p> And this formula doesn't seem too bad at first, after all, we can probably get \\( r \\) from whatever
+        question or situation we are dealing with, and then there is that chunky constant at the front, which
+        in integration just sits at the front and has a good time. Until you realise that there is a pesky little
+        \\( dq \\) at the front. How are we supposed to get \\(dq \\)? </p>
 
-      <p>And yes — the integral is usually a pain. But symmetry helps.</p>
+      <p> It's quite simple actually, you just introduce the charge density. This basically measures how much
+        charge there is per unit length, area, or volume (depending on how many dimensions the problem is in),
+        and there is a different charge density depending on which one. </p>
 
-      <h3>Dipoles: When You’ve Got +q and -q Close Together</h3>
+      <p> When dealing with only one dimension, we use the linear charge density, \\( \\lambda \\). That means for a
+        teeny weeny length, \\( dl \\), there is a charge \\( dq = \\lambda dl \\). </p>
+      <p> If we have 2 dimensions, we use the surface charge density, \\( \\sigma \\). So for a
+        teensy tiny area, \\( dA \\), there is a charge \\( dq = \\sigma dA \\). </p>
+      <p> And finally, if we are using 3 dimensions, we use the volume charge density, \\( \\rho \\). Therefore in a
+        likkle volume, \\( dV \\) (or \\( d\\tau \\), depending on who you ask), there is a charge 
+        \\( dq = \\rho dV \\). </p>
 
-      <p>A dipole has zero net charge, but still creates a field.</p>
+      <p>These integrals can be quite the pain in the arse. Protip from moi: always look out for symmetry!</p>
 
-      <p>Dipole moment: \\( \\vec{p} = q \\vec{d} \\), from -q to +q.</p>
+      <h3>Electric dipoles</h3>
 
-      <p>On the axis: \\( E \\approx \\frac{1}{4\\pi\\epsilon_0} \\frac{2p}{r^3} \\)</p>
+      <p>Final thing before you go, what happens if you have two opposite charged within an electric field?</p>
 
-      <p>Perpendicular: \\( E \\approx \\frac{1}{4\\pi\\epsilon_0} \\frac{p}{r^3} \\)</p>
+      <p>What's that you say? "Well, opposites attract, so the positive charge will attract the negative one,
+        and the negative one will attract the positive one, and they'll come together and kiss, like obviously,
+        this is like GCSE stuff why are you asking my this m8?"</p>
+
+      <p>Well, smart arse, I'm asking you because as usual, you're wrong. Whilst that may be true for 2 charges
+        on their own, if you listened to (read?) what I said properly, you would have heard me mention that there
+        is now an <em>electric field</em> in play. Why does this matter, you ask?</p>
+
+      <p>If there is an electric field, the positive charge will feel a force in the direction of the field lines.
+        However, the negative charge will also feel a force of equal magnitude in the opposite direction. That means
+        that, parallel to the field lines, there are two forces competing: the particle's desire to kiss 
+        (electrostatic attraction), and the particle's hatred for the scenary (electric force from the field). Is their
+        love for each other stronger for their differing opinions? Find out next time on Dragon Ball Z!! </p>
+
+      <p>Welcome back to Dragon Ball Z! Where were we? Oh yes, the horny charged particles...</p>
+
+      <p>Like I said before, there left and right position is fighting, but there is nothing stopping either one
+        from going up or down. So they move so that they are vertically aligned, whilst their horizontal desires
+        battle. This vertical movement looks a bit like the two particles have rotated. </p>
+
+      <p>Now let's take a step back, and welcome another member of the cast, the <em> magnetic dipole moment</em>, 
+        \\( \\vec{p} \\):
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{p} = q \\vec{d} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> Remember, from classical mechanics, the MOMENT is calculated by crossing the position with the force:</p>
+
+      \\[
+        \\vec{\\tau} = \\vec{r} \\times \\vec{F}
+      \\]
+
+      <p> If we then recall from up the page that \\( \\vec{F} = q\\vec{E} \\), and recognise that 
+        \\( \\vec{d} = 2\\vec{r} \\), we can get a formula for MOMENT in terms of magnetic dipole moment and
+        electric field strength: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{\\tau} = \\vec{p} \\times \\vec{E} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> Look at all this cool new physics we have unearthed, simply by applying an electric field! </p>
+
+      <p>...</p>
+
+      <p>Go on, then...</p>
+
+      <p>What do you mean, 'what am I waiting for?' Are you not going to apologise for calling me stupid earlier?
+        It hurt my feelings.</p>
+
+      <p>Huh?! What the– what do you mean you didn't say that? You're saying you WEREN'T thinking "Well, opposites 
+        attract, so the positive charge will attract the negative one, and the negative one will attract the positive 
+        one, and they'll come together and kiss, like obviously, this is like GCSE stuff why are you asking my this 
+        m8?" </p>
+
+      <p> So you're calling me a liar? C'mon now, when have I EVER accused you of thinking things you weren't
+        thinking? </p>
+
+      <p>...</p>
+
+      <p>Hey, that TL;DR down below me looks cool!!</p>
 
       <h3>TL;DR</h3>
 
+      <p> Why thank you, me from about 15 seconds ago who typed that I look cool! And I am cool! Just see for
+        yourself!! </p>
       <ul>
         <li>Coulomb’s Law: \\( F = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r^2} \\)</li>
         <li>Electric field: \\( \\vec{E} = \\vec{F}/q_0 \\)</li>
@@ -6828,42 +7693,164 @@ const subtopics = {
         <li>Dipole: \\( \\vec{p} = q \\vec{d} \\)</li>
       </ul>
 
-      <p>And remember: the universe doesn’t care how charged you feel.  
-      It only cares about the electric field.</p>
+      <p>Pretty cool huh?</p>
       `,
   },
   "gauss-law": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Gauss' Law",
     content: `
-      <h3>Gauss’s Law</h3>
+      <i> I'm quite fond of Gauss' Law </i>
 
-      <p>Right. Let’s talk about <strong>Gauss’s Law</strong>.</p>
+      <p>Remember how last time we were looking at some crazy integrals to try and determine electric field
+        strength on a line or a surface or a volume? And how I mentioned that these integrals can be quite 
+        nasty at times? Well here comes a neat little trick to make your life that little bit less painful!</p>
 
-      <p>No, not the mathematician. We’re talking about the law that says:</p>
+      <p> Last time I mentioned the electric field lines as an imaginary visual indicator of field strength,
+        where the closer the lines are together, the stronger the field. Now imagine we were to put a circle
+        in the electric field, such that some of the electric field lines pass through it. </p>
 
-      <p>\\( \\Phi_E = \\frac{Q_{\\text{encl}}}{\\epsilon_0} \\)</p>
+      <p> And here, we have our brand new quantity: electric flux, \\( \\Phi_E \\). For a given surface (I used
+        a circle for the example, but it can be any shape, even up to 3-dimensions), the flux measures how many
+        electric field lines would pass through the surface if they were real. </p>
 
-      <p>Where \\( \\Phi_E = \\oint \\vec{E} \\cdot d\\vec{A} \\) is the electric flux through a closed surface.</p>
+      <h3>Calculating flux</h3>
+      <p> Next question, how do we calculate flux? Let's start by giving our surface a nickname. I think
+        she'll like the name \\( S \\). And to be honest, I ain't giving her no choice, so she better get 
+        used to it. </p>
 
-      <p>It’s not about calculating \\( E \\) directly. It’s about using symmetry to make it easy.</p>
+      <p> Remember flux is counting the amount of electric field lines through a surface. The number of
+        field lines is the electric field strength, \\( E \\), so we know that electric field strength is
+        part of the equation. </p>
+        
+      <p> Now draw your attention to  \\( S \\). I mentioned that she's the surface in question,
+        but what I didn't mention is how exactly. If we consider her vector form, \\( \\vec{S} \\), she
+        points <em>perpendicular to the surface</em>. </p>
 
-      <h3>When to Use Gauss’s Law</h3>
+      <p> Now think about this carefully: if we have our surface, let's use a square one this time, and we
+        want to change the number of field lines through that surface, how can we do that? We've already
+        mentioned field strength \\( E \\), so what else could affect it? If we want to maximise the number
+        of lines through the surface we have to place the surface perpendicular to the field line direction.
+        But if we want to minimise the number of field lines through a surface, we simply rotate the surface
+        until it's parallel to the surface, where no lines can pass through. </p>
 
-      <p>Only when there’s symmetry:</p>
-      <ul>
-        <li><strong>Spherical</strong>: point charge, charged sphere</li>
-        <li><strong>Cylindrical</strong>: infinite line of charge</li>
-        <li><strong>Planar</strong>: infinite sheet of charge</li>
-      </ul>
+      <p> This means that alongside the field strength, the direction of the surface also matters. Now
+        since we've defined \\( \\vec{S} \\) to point perpendicular to the surface itself, that means
+        that when the surface is perpendicular to the field lines, \\( \\vec{S} \\) is parallel. </p>
 
-      <p>If no symmetry? Use Coulomb’s Law or integration.</p>
+      <p>So flux is a maximum when \\( \\vec{S} \\) is parallel to \\( \\vec{E} \\), and a minimum when
+        \\( \\vec{S} \\) is perpendicular to \\( \\vec{E} \\). What operation is a maximum when two vectors
+        are parallel and a minimum when they are perpendicular? </p>
 
-      <h3>How to Apply It</h3>
+      <p> That's it, the dot product! Giving us our equation: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\Phi_E = \\vec{E} \\cdot \\vec{S} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> This is great for flat surfaces, but what about things like spheres, where the surface changes? All we
+        do differently is, instead of a single surface vector \\( \\vec{S} \\), we take multiple infinitely small
+        vectors, \\( d\\vec{S} \\), and integrate it over all space: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\Phi_E = \\iint_S \\vec{E} \\cdot d\\vec{S} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>... and if it is a closed surface, like a sphere:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\Phi_E = \\oint_S \\vec{E} \\cdot d\\vec{S} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <h3>Gauss' Law</h3>
+
+      <p> Now we have formulae for flux, we can now worry about what exactly Gauss's law is.</p>
+
+      <p>Gauss' (pronounced Gow-siz) Law states that the flux through a closed surface is proportional to
+        the total charge enclosed in that surface, \\( Q_{\\text{encl}} \\):</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac{ Q_{\\text{encl}} }{ \\varepsilon_0 } \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>And going back to what we had last time with charge densities, if instead of a bunch of individual
+        charges, surface \\( S \\) encloses a volume \\( V \\) with a charge distribution \\(rho\\), then
+        we can rewrite Gauss' Law like this: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac1{ \\varepsilon_0 } \\iiint_V \\rho \\; dV \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>We can now use Gauss' Law to figure our the amount of charge enclosed in a surface \\(S\\). That brings
+        us onto our next question, how do we know which surface \\( S \\) is? </p>
+
+      <p>In short... it don't matter</p>
+
+      <p>I mean it, it actually don't matter. As long as whatever charge you are looking for is enclosed someway
+        somehow, your surface can be a sphere, a cuboid, a parallelopiped, a tetrahedron, heck it could even be
+        an arbitrary blob. The world is your oyster! </p>
+
+      <p>Just remember, whatever shape you end up picking to enclose the surface, you will end up having to do the
+          maths for. So whilst you could use an arbitrary blob, it would make defining \\( d\\vec{S} \\) pretty
+          bloody difficult. For that reason, a sphere or a cylinder is usually the best choice for your
+          Gaussian surface. And if you can't use one of those two, then Coulomb's law and the integration from
+          last time are probably your best bets.</p>
+
+      <p>Oh and by the way, <em>Gaussian surface</em> is \\( S \\)'s full government name, if you were wondering. </p>
+
+      <h3>How to use Gauss' Law</h3>
+
+      <p> Solving Gauss' Law involves 5 steps: </p>
 
       <ol>
         <li>Choose a Gaussian surface that matches the symmetry.</li>
         <li>Make sure \\( \\vec{E} \\) is constant and perpendicular to the surface.</li>
-        <li>Calculate \\( \\oint \\vec{E} \\cdot d\\vec{A} = E \\times \\text{area} \\)</li>
+        <li>Calculate \\( \\oint \\vec{E} \\cdot d\\vec{A} \\), which is basically just
+          \\( E \\times \\text{surface area} \\)</li>
         <li>Find \\( Q_{\\text{encl}} \\)</li>
         <li>Solve for \\( E \\)</li>
       </ol>
@@ -6893,55 +7880,139 @@ const subtopics = {
       `,
   },
   "potential": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Electric Potential and Potential Energy",
     content: `
-      <h3>Electric Potential and Potential Energy: When Voltage Isn’t Just a Battery Thing</h3>
+      <p>.</p>
 
-      <p>Right. Let’s talk about <strong>electric potential</strong>.</p>
+      <h3>Work and Potential Energy</h3>
 
-      <p>No, not the kind where you *could* do something if you tried. We’re talking about <strong>electric potential energy</strong> — the energy stored when you move charges around in an electric field.</p>
+      <p>From classical mechanics, we know that when a force acts on something, it does work proportional
+        to the distance the force moved:</p>
 
-      <p>Think of it like gravity. Lift a book, you do work. The energy goes into gravitational potential energy. Same idea here — but with charges and fields.</p>
+      \\[ W = \\vec{F} \\cdot \\vec{d} \\]
 
-      <h3>Work and Potential Energy: The Physics of Effort</h3>
+      <p> By turning this into a line integral, we can generalise this formula so that it applies to wiggly paths
+        as well as straight lines:</p>
 
-      <p>When a force acts on something, it can do work:</p>
+      \\[ W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{l} \\]
 
-      <p>\\( W = \\vec{F} \\cdot \\vec{d} \\)</p>
+      <p>Or for a closed path (when it starts and ends in the same place):</p>
 
-      <p>For a conservative force (like the electric force), the work done depends only on start and end points — not the path.</p>
+      \\[ W = \\oint_C \\vec{F} \\cdot d\\vec{l} \\]
 
-      <p>So we define <strong>potential energy</strong> \\( U \\) such that:</p>
+      <p>For a conservative force (like the electric force), the work done depends only on start and end points.
+        Since the path doesn't matter, we can think of work done in terms of a change in potential energy. 
+        So we define <strong>potential energy</strong> \\( U \\) such that:</p>
 
-      <p>\\( W_{a \\to b} = U_a - U_b \\)</p>
+      \\[ W_{a \\to b} = U_a - U_b \\]
 
-      <p>And for two point charges:</p>
+      <p>Now that we have 2 equations for \\( W_{a \\to b} \\), we can equate them to get a value for electric
+        potential: </p>
 
-      <p>\\( U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r} \\)</p>
+      \\[
+        W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{l}
+      \\]
+
+      \\[
+        W_{a \\rightarrow b} = \\frac{q_1 q_2}{4\\pi \\varepsilon_0} \\int_a^b \\frac{1}{r^2} dr
+      \\]
+
+      \\[ U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r} \\]
 
       <p>Positive if same sign (repulsive), negative if opposite (attractive).</p>
 
-      <h3>Electric Potential: Energy Per Unit Charge</h3>
+      <h3>Electric Potential</h3>
 
-      <p>Now, what if you want to know how much energy a *test charge* would have at a point?</p>
+      <p>Now that we have dealt with potential energy, we look to a similar but different quantity: the electric
+        potential, \\( V \\). This is a measure of how much energy a test charge would have in a particular place,
+        per unit charge.</p>
 
-      <p>That’s <strong>electric potential</strong>, \\( V \\):</p>
+      <p>And, by the way, since it is just energy per unit charge, it can be worked out simply by dividing the
+        potential energy, \\( U \\), by charge:</p>
 
-      <p>\\( V = \\frac{U}{q_0} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q}{r} \\)</p>
+      \\[ V = \\frac{U}{q_0} = \\frac{1}{4\\pi\\epsilon_0} \\frac{q}{r} \\]
 
-      <p>Units: volts. 1 V = 1 J/C.</p>
+      <p>Why a \\( V \\) of all letters, you ask? Well firstly, a slightly tapped question to be asking NOW,
+        considering we've had potential energy as \\( U \\) all this while, and it didn't seem to bother
+        you. But secondly, what happens if we calculate the potential energy at one point, calculate potential
+        energy at another point, and then determine the difference?</p>
 
-      <p>And yes — potential is a scalar. No vectors. No mess.</p>
+      <p>Well, you end up with a difference in potential, or... a potential difference! That's a voltage!</p>
+
+      <p>And if you take a close look at that equation... well go on, look at it!</p>
+
+      <p>If you look at the equation you'll see that there are no vectors involved. That means that electric
+        potential is a scalar field</p>
+
+      <p> Once again, the principle of linear superposition applies, meaning you can calculate net potential by
+        adding up individual potentials:</p>
+
+      \\[ V = \\frac{1}{4\\pi\\epsilon_0} \\sum_{i=1}^N \\frac{q_i}{|\\vec{r}-\\vec{r_i}|} \\]
+
+      <p> And once again (again), if there is a charge distribution \\( \\rho \\) instead of individual charges,
+        we can integrate it over the volume... oh wait, slight problem. We want to integrate over volume
+        \\( V \\), but \\( V \\) is already taken by potential. So what do we do?</p>
+
+      <p> <em>Mhm... yes... ok... alright thanks, bye *Hangs up phone*</em> Sorry, I was just on the phone to my
+        advisor, she says that we should replace the \\( V \\) for volume with a \\( \\rlap{-}V' \\). A strikethough
+        and a prime? A bit overdecorated, I'd say, but whatever. </p>
+
+      <p>Anyway, where were we? Ah yes, integrating a charge density: </p>
+
+      \\[
+        V = \\frac{1}{4\\pi\\epsilon_0} \\iiint_{\\rlap{-}V'} \\frac{\\rho(\\vec{r})}{|\\vec{r}-\\vec{r_i}|}d\\rlap{-}V'
+      \\]
 
       <h3>Calculating Potential from Field</h3>
 
-      <p>You can also get potential from the electric field:</p>
+      <p>Alternatively, if that big ass triple integral fancy V equation isn't your cup of tea, you <em>could</em> get it
+        by relating the work done by the field to move an object between two points. For that we need a line integral! </p>
 
-      <p>\\( V_a - V_b = \\int_b^a \\vec{E} \\cdot d\\vec{l} \\)</p>
+      <p>Remember that work done is just force times distance. Here the force is the electrical force required to move a
+        point charge, \\(E\\), and the distance is an infinitely small distance, \\( d \\vec{l} \\), which we will 
+        integrate over the path the charge is moving along, between points \\( a \\) and \\( b \\):</p>
 
-      <p>So potential difference is the line integral of the field.</p>
+      \\[ V_a - V_b = \\int_b^a \\vec{E} \\cdot d\\vec{l} \\]
 
-      <p>And if you know \\( V \\), you can get \\( \\vec{E} \\) back:</p>
+      <p>Now of course, you would never doubt me, because you know I'm overpowered and I know everything. But say,
+        hypothetically, someone <em>were</em> to doubt me. Well in that situation I would use this new way of calculating
+        potential and prove that it actually arrives back at the old equation.</p>
+
+      <p>Let's say we have 2 particles, particle \\( a \\) a distance \\( r_a \\) away from the origin, and particle
+        \\( b \\) a distance \\( r_b \\) away from the origin. Now, like I said before, no-one would dare to doubt me,
+        but in the hypothetical case that someone would and wouldd therefore need this explanation, they might also
+        wonder why we have 2 charges here when before we only had one. The simple andwer is... shush mate. I know what
+        I'm bloody doing, just relax, k?</p>
+
+      <p>Anyway, in order to use our new integration formula, we need an \\( \\vec{E} \\) and a \\( d\\vec{l} \\).
+        And getting these two is pretty simple. We know what \\( \\vec{E} \\) should be fromm a while back:</p>
+
+      \\[ \\vec{E}(\\vec{r}) = \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\]
+
+      <p> Next, since we are only increasing the distance from the charge and not changing the angle, that means that
+        \\( d\\vec{l} \\) only works in the \\( \\hat{r} \\). In other words: </p>
+
+      \\[
+        d\\vec{l} = \\hat{r} dr
+      \\]
+
+      <p>Now just stick 'em in, and see wagwan:</p>
+
+      \\[ 
+        \\begin{align} V_a - V_b &= \\int_{r_b}^{r_a} \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\cancel{\\hat{r} \\cdot \\hat{r}} dr \\\\
+        &= \\frac{q}{4 \\pi \\varepsilon_0} \\int_{r_b}^{r_a} \\frac1{r^2} dr \\\\
+        &= \\frac{q}{4 \\pi \\varepsilon_0} \\left( \\frac1{r_a} - \\frac1{r_b} \\right) \\end{align}
+      \\]
+
+      <p>Since potential is the energy required to move one coulomb of charge from a certain point to infinity, that 
+        means that at infinity, the potential is zero, or  \\( \\lim_{r \\to \\infty}V(\\vec{r}) = 0 \\). Therefore
+        by putting the point \\( b \\) at infinity, the potential at \\( b \\), becomes 0, and therefore 
+        \\( V_a - V_b \\) just becomes the potential at \\( a \\), \\( V_a \\):</p>
+
+      \\[ V_a = \\frac{q}{4 \\pi \\varepsilon_0} \\left( \\frac1{r_a} \\right) \\]
+
+      <p>which is what we had before! So what did we learn? Never ever ever doubt me!!</p>
+
 
       <p>\\( \\vec{E} = -\\nabla V \\)</p>
 
@@ -6980,56 +8051,259 @@ const subtopics = {
       `,
   },
   "capacitance": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Capacitance, Dielectrics, and Current Flow",
     content: `
-      <h3>Capacitance, Dielectrics, and Current Flow: When You Store Energy in Empty Space</h3>
 
-      <p>Right. Let’s talk about <strong>capacitors</strong>.</p>
+      <p>Let's say you have two parallel plate, both with area \\( A \\) and a distance \\( d \\) away. Then you
+        take a battery, and connect one plate with the positive side and another plate with the negative side. Over
+        time, the electrons will build up on one of the plates with a charge \\( -Q \\), leaving the other plate 
+        lonely.</p>
 
-      <p>No, not the kind that makes your washing machine start. We’re talking about <strong>devices that store charge and energy in an electric field</strong>.</p>
+      <p>However, it turns out electrons are bad company, so the plate with a bunch of 'em is super negative. Then
+        the plate with no electrons sees the other plate, and in a moment of Schadenfreude, the electron-less plate
+        becomes super positive, with a charge \\( +Q \\). </p>
 
-      <h3>Capacitance: How Much Charge Per Volt?</h3>
+      <p> The positively charged and negatively charged plate create an electric field pointing from positive to
+        negative, with a potential difference equal to the EMF of the battery. This system is what we call a 
+        <em> capacitor</em>. </p>
 
-      <p>Capacitance \\( C \\) is defined as:</p>
+      <h3>Capacitance</h3>
 
-      <p>\\( C = \\frac{Q}{V} \\)</p>
+      <p>Capacitance, \\( C \\), is a measurement of how much charge is stored per unit of potential difference
+        (i.e. per volt). In other words, the higher the capacitance, the more depressed the negative plate gets
+        and the more schadenfreude the positive plate feels for the same voltage. In mathematical form:</p>
 
-      <p>More capacitance = more charge stored per volt.</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ C = \\frac{Q}{V} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-      <p>Examples:</p>
-      <ul>
-        <li><strong>Parallel plate</strong>: \\( C = \\epsilon_0 A / d \\)</li>
-        <li><strong>Cylindrical</strong>: \\( C = 2\\pi\\epsilon_0 L / \\ln(b/a) \\)</li>
-        <li><strong>Spherical</strong>: \\( C = 4\\pi\\epsilon_0 ab/(b-a) \\)</li>
-      </ul>
+      <p>So if you have the charge and the voltage, you can get the capacitance. But what if you don't have those?</p>
+
+      <p>Hmm... this is a bit of a sticky one. Perhaps we can get them in another form. Take our voltage, \\( V \\). 
+        Recall from last time that voltage is just a rebranding of electric potential, which is just the electric
+        field strength multiplied by a distance. We can write that out like this: </p>
+
+      \\[
+        V = \\vec{E} \\cdot \\vec{r} = Ed
+      \\]
+
+      <p>Then we can use Gauss' Law to calculate the electric field from the plate. I think we did this example already,
+        just let me erm <em>*Checks "Gauss' Law" subtopic*</em> Hmm, ok, it appears as of the time of me typing this code,
+        I actually <em>haven't</em> gone through how to do this yet. But for now, the electric field on any one plate with is
+        \\( -\\frac{\\sigma}{2\\varepsilon_0} \\), where \\( \\sigma \\) is the charge density, \\( \\frac{Q}A \\). 
+        Since we have 2, it's doubled:</p>
+
+      \\[
+        \\begin{align}
+          E &= E_\\text{top} + E_\\text{bottom} \\\\
+            &= -\\frac{\\sigma}{\\varepsilon_0} \\\\
+            &= -\\frac{Q}{\\varepsilon_0 A}
+        \\end{align}
+      \\]
+
+      <p> That gives us a new and improved equation for capacitance: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ C = \\frac{\\varepsilon_0 A}{d} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <h3>Capacitors in series and parallel</h3>
+
+      <p> Back when we were dealing with DC circuits, we looked at what happened when you put resistors in series
+        and parallel. When they are in series, the net resistance is the total of the individual resistors</p>
+
+      <p> Unfortunately, our people waiting in a line analogies don't work here, because capacitance is a bit of a
+        wanker. Why do I say this? Capacitance, bellend that it is, decided to increase... in PARALLEL, and then
+        decrease in series i.e. the opposite of resistors. Well thanks a lot, ya plonker, now you've made things
+        unnecessarily confusing. And for what? No really for what?</p>
+
+      <p> Never fear though, while our previous analogies don't work, you can still rationalise this a little bit.
+        For instance, let's look at capacitors in series: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\frac1{C_{\\text{series}}} = \\frac1{C_1} + \\frac1{C_2} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> If we write out the capacitances in terms of distance and area, we get this:</p>
+
+      \\[
+        \\begin{align}
+        \\frac1{C_{\\text{series}}} &= \\frac{d}{\\varepsilon_0 A} + \\frac{d}{\\varepsilon_0 A} \\\\
+                                    &= \\frac{2d}{\\varepsilon_0 A}
+        \\end{align}
+      \\]
+
+      <p> Notice how when we flip this back right side up, we get the capacitance formula from before, except
+        the distance is now doubled (\\( d \\) is now \\( 2d \\)). This means ...</p>
+
+      <p> Now let's do the same thing, but putting them in parallel: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ C_\\text{parallel} = C_1 + C_2 \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> Use the distance and area thing: </p>
+
+      \\[
+        \\begin{align}
+        C_{\\text{parallel}} &= \\frac{\\varepsilon_0 A}{d} + \\frac{\\varepsilon_0 A}{d} \\\\
+                            &= \\frac{\\varepsilon_0 [2A]}{d}
+        \\end{align}
+      \\]
+
+      <p>Now the area has doubled. This makes sense, because if you put them next to each other in parallel, it's 
+        a bit like you now have a single bigger plate. </p>
 
       <h3>Energy Stored in a Capacitor</h3>
 
-      <p>When you charge a capacitor, you do work. That energy is stored:</p>
+      <p>You may be wondering, "you said that the capacitor stores energy, but HOW MUCH energy does it store exactly?"
+        That's a good question. A very good question actually. </p>
 
-      <p>\\( U = \\frac{1}{2} C V^2 = \\frac{Q^2}{2C} = \\frac{1}{2} Q V \\)</p>
+      <p> Since each plate has a charge, either \\( +Q \\) or \\( -Q \\), we can call one of these plates \\( q_1 \\)
+        and the other one \\( q_2 \\). The strategy is then to calculate the potential energy as if these were normal
+        point charges. </p>
+        
+      <p> From the ... section, we know that potential energy is electric potential times the charge. So now we can get
+        the potential at the first plate due to the second one, \\( V_1(r) \\), and the potential at the second plate due 
+        to the first one, \\( V_2(r) \\): </p>
 
-      <p>But where is it stored?</p>
+      ...
 
-      <p>In the <strong>electric field</strong>.</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ 
+            \\begin{align}
+            U &= \\frac{1}{2} Q V \\\\
+              &= \\frac{1}{2} C V^2 \\\\
+              &= \\frac{Q^2}{2C}
+            \\end{align}
+            \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-      <p>We define <strong>energy density</strong>:</p>
+      <p>If you can't tell, the other 2 formula come from using the original capacitance formula and just replacing
+        and rearranging. I'm personally quite fond of the second version, because it looks like \\( \\frac12 mv^2 \\)
+        for kinetic energy. But you can use whichever one you like!</p>
 
-      <p>\\( u = \\frac{1}{2} \\epsilon_0 E^2 \\)</p>
+      <p>Now we know how much is stored, I gues the next question to ask is <em>where</em> is it stored? You, being you,
+        are probably tempted to think that the energy is just stored within the plates. And you are right!!!</p>
 
-      <p>So yes — energy is stored in the field, not the plates.</p>
+      <p>Sike! You're wrong! Again! As usual. It's actually stored in the electric field itself, kinda just floating
+        in the abyss of fieldy-ness. To make this a bit more tangible, we intorduce a new character: the energy
+        density of the electric field, \\( u \\), which is the energy per unit volume, and remember we are still
+        using the fancy \\( \\rlap{-}V \\) symbol for volume, because potential is renting ount volume's body
+        for a bit:</p>
 
-      <h3>Dielectrics: When You Make a Capacitor Better</h3>
+      \\[
+        \\text{energy density} = \\frac{U}{\\rlap{-}V} = u
+      \\]
 
-      <p>Insert a dielectric (insulator) between the plates?</p>
+      <p> Now by setting the energy to \\( U = \\frac12 CV^2 \\), setting the volume of the electric field to 
+        \\( \\rlap{-}V = Ad \\), and then rewriting capacitance as \\( C = \\frac{\\varepsilon_0 A}{d} \\), we
+        can do some cute rearranging to end up with:
 
-      <p>Capacitance increases by a factor \\( \\epsilon_r \\), the <strong>relative permittivity</strong>.</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ u = \\frac{1}{2} \\varepsilon_0 E^2 \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-      <p>Why? The dielectric polarizes — creates an opposing field — so you can store more charge at the same voltage.</p>
+      <h3>Dielectrics</h3>
 
-      <p>But there’s a limit: <strong>dielectric breakdown</strong>. Too high a field → it conducts → capacitor dies.</p>
+      <p>Capacitors are cool and all, but what if we could upgrade it? What if there where a way to increase it's 
+        capacitance, i.e. reduce the amount of voltage through the capacitor, but store the same amount of charge? </p>
+        
+      <p> Up until now we've only used conductors when dealing with electricity. Which is a pretty natural assumption,
+        after all, only conductors tranfer electricity, there would be no point in using an insulator at all, since
+        they don't interact with electric fields at all, right?</p>
 
-      <p>For air: \\( E_{\\text{max}} \\approx 3 \\times 10^6 \\, \\text{V/m} \\).</p>
+      <p>...right? *Snickers*</p>
+
+      <p>Wrong! Wrong wrong wrong wrong WROOOONG!! You're wrong! Incorrect! Insulators <em>do</em> interact with
+        electric fields! </p>
+
+      <p> And I'm sure you are probably quaking in awe rn, wondering how on earth a non-conducty thing can interact
+        with an electric field. And it's quite simple actually. Even though insulators don't allow charged particles
+        to move <em>freely</em> in the metal... they <em>can</em> still move. </p>
+
+      <p> Did you forget that insulators are still made of atoms, which have positive nuclei and negative electrons?
+        If you apply an electric field to one, the positive nuclei move slightly in the direction of the field
+        lines, whereas the electrons move slightly in the opposite direction. This now means one side of the 
+        insulator is slightly more positive, and the other side is slightly more negative. </p>
+
+      <p> This in turn means that the insulator now has its own electric field, pointing in the other direction, and
+        therefore reducing the total electric field strength. Since voltage is proportional to electric field
+        strength, this means the voltage has reduced. However, the charge stored has remained the same, meaning
+        we have successfully increased the capacitance! </p>
+
+      <p>When an insulator is place in between the plate of a capacitor to increase its capacitance, that insulator
+        is now called a dielectric.</p>
+
+      <p> How much a dielectric can boost capacitance is defined by the relative permittivity, \\( \\varepsilon_r \\),
+        which is just a ratio of the new capacitance with the dielectric in against the old one with nothing in: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\varepsilon_r = \\frac{C_\\text{dielectric}}{C_\\text{vacuum}}\\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
       <h3>Current and Resistance</h3>
 
@@ -7059,19 +8333,36 @@ const subtopics = {
       `,
   },
   "magnetic-fields": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Magnetic forces and magnetic fields",
     content: `
-      <h3>Magnetic Forces and Magnetic Fields: When Moving Charges Get Pushed</h3>
+      
+      <p>
 
-      <p>Right. Let’s talk about <strong>magnetic forces</strong>.</p>
+      <h3>The Lorentz Force</h3>
 
-      <p>No, not the kind that makes you fall in love. We’re talking about the force on a <strong>moving charge</strong> in a magnetic field.</p>
+      <p>First on the menu is the Lorentz force. Back in the <em>Electric Charges and Fields</em> topic, we learnt
+        that the force a particle experience is the electric field strength times the charge of the particle:</p>
 
-      <h3>The Lorentz Force: The Full EM Force</h3>
+      \\[
+        \\vec{F} = q\\vec{E}
+      \\]
 
-      <p>The total electromagnetic force on a charge is:</p>
+      <p>Slight problem: that assumes we are dealing with a charge which isn't already moving. But as we now know, if
+        a charged particle moves, there's also a magnetic field, which will affect the net force. The Lorentz force is
+        the total force you get with all things considered: </p>
 
-      <p>\\( \\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B}) \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B}) \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
       <p>The \\( \\vec{v} \\times \\vec{B} \\) part is the magnetic force.</p>
 
@@ -7081,33 +8372,278 @@ const subtopics = {
 
       <h3>Magnetic Flux and Field Lines</h3>
 
-      <p>Magnetic field lines show the direction of \\( \\vec{B} \\).</p>
+      <p> Like electric field lines, magnetic field lines show the direction of the force applies when a 
+        positive moving charge interacts with the field at that point. Negative charges move in an opposite
+        direction. And like electric flux, the magnetic flux of a surface is determined by integrating the 
+        magnetic field over the full area of the surface:</p>
 
-      <p>They form closed loops — no start, no end.</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\Phi_B = \\iint_S \\vec{B} \\cdot d\\vec{S} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-      <p>Because: \\( \\nabla \\cdot \\vec{B} = 0 \\) — no magnetic monopoles.</p>
+      <p>So far electric and magnetic fields have been quite similar. There is one key difference between 'em
+        unlike electricity, where we can have point charges as sources of electric field lines, there is no
+        equivalent for magnetic fields. Magnetic field lines dont converge into a certain point, or flow out
+        of a certain point.</p>
 
-      <p>Flux: \\( \\Phi_B = \\int \\vec{B} \\cdot d\\vec{A} \\)</p>
+      <p>Instead, magnetic field lines all form loops, with no beginning and no end. Because of this, when you
+        think about it, that means that for any closed surface, there is no flux. Any magnetic field lines which
+        enter the closed surface must leave it someway somehow.</p>
 
-      <p>Units: webers (Wb).</p>
+      <p>In mathematicianese, that looks like this equation here:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\oint \\vec{B} \\cdot d\\vec{S} = 0 \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>This is known as the solenoidal condition, and unlike it's twin Gauss' law, is actually quite useless, since
+        you can't use it to get magnetic field strength or anything. But it's good to know I guess. And it must be kept
+        at all times. </p>
 
       <h3>Work Done by Magnetic Field</h3>
 
-      <p>Here’s the kicker: the magnetic force does <strong>zero work</strong>.</p>
+      <i> For some reason, I'm really reluctant to type this part out. I guess I just find the derivation really
+        boring and long. But anyway, I don't think I have a choice, so let's go... </i>
 
-      <p>Because it’s always perpendicular to velocity — so it changes direction, not speed.</p>
+      <p>Since we are now dealing with a moving charge, a whole new world of questions opens up. If we have a charge
+        \\( q \\) moving at velocity \\( \\vec{v} \\), what happens to its path? Does it speed up? Slow down? Twist
+        and turn?</p>
 
-      <p>So magnetic fields don’t speed up charges. They just bend their paths.</p>
+      <p> To answer this question, direct your attention to our good friend, the velocity vector, \\( \\vec{v} \\). 
+        You and it were just chilling together minding your business, having a little talk about politics. Your mate
+        \\( \\vec{v} \\) then starts talking about how much he dislikes the French revolution. You are about to
+        agree, until you hear someone breaking through the door, at which point you realise you are actually in 
+        1793 France. </p>
+        
+      <p> As a result, \\( \\vec{v} \\) is seized, strapped to the guillotine, and then cut into a component parallel 
+        to the magnetic field, \\( \\vec{v}_\\parallel \\), and a component perpendicular to the magnetic field,
+        \\( \\vec{v}_\\perp \\): </p>
+
+      \\[
+        \\vec{v} = \\vec{v}_\\parallel + \\vec{v}_\\perp
+      \\]
+
+      <p>Now let's calculate the Lorentz force, except you now have to use each slice of your diseased friend
+        separately:</p>
+
+      \\[
+        \\vec{F} = (q\\vec{v}_\\parallel \\times \\vec{B}) + (q\\vec{v}_\\perp \\times \\vec{B})
+      \\]
+
+      <p> Since \\( \\vec{v}_\\parallel \\) and \\( \\vec{B} \\) are parallel by definition, taking their cross
+        product would just leave you with zero, getting rid of the first term. So that leaves: </p>
+
+      \\[
+        \\vec{F} = q\\vec{v}_\\perp \\times \\vec{B} \\text{, or in magnitude, } F = |q|v_{\\perp}B
+      \\]
+
+      <p>Once again, the velocity here is characteristically perpendicular to the magnetic, and therefore the force
+        is parallel to the velocity. What happens when we have a force perpendicular to a velocity?</p>
+
+      <p>That's right, you get circular motion!</p>
+
+      <p> So when a charge is moving in a magnetic field, it does a cute little loop-de-loop. But I wonder <em>how</em>
+        cute and little this loop-de-loop is (if you can't tell, I'm talking about finding the radius of the loop). The
+        first step is to recognise that since we have now entered circular motion territory, we can start using circular
+        motion equations. Since we know from circular motion that the centrifugal force is given by 
+        \\( \\frac{mv_\\perp^2}{r} \\), just equate that to the force we have here and do a wee bit o' rearranging:</p>
+
+      \\[
+        |q|v_{\\perp}B = \\frac{mv_\\perp^2}{R_L}
+      \\]
+
+      \\[
+        \\downarrow
+      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ R_L = \\frac{mv_\\perp}{|q|B} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>Oh and btw you may have noticed that the radius has changes his avatar, from \\( r \\) to \\( R_L \\).
+        This is what we call the Larmor radius. Don't worry about this too much, it's just what we call the radius
+        of the loop-de-loop the moving charge in a magnetic field make.</p>
+
+      <p> Now that I think about it, this section is called "<em>Work done</em> by a magnetic field, but we are yet
+        to talk about it. Recall that work done is force times distance, which we can write as a line integral: </p>
+
+      \\[
+        W = \\int \\vec{F} \\cdot d\\vec{l}
+      \\]
+
+      <p> \\( \\vec{F} \\) here is the force due to the magnetic field, \\( \\vec{F} = q(\\vec{v} \\times \\vec{B}) \\),
+        and since \\( d\\vec{l} \\) is a distance, and distance = speed \\( \\times \\) time, we can split it up into
+        \\( d\\vec{l} = \\vec{v}dt \\). By subbing those in, we get: </p>
+
+      \\[
+        W = \\int q(\\vec{v} \\times \\vec{B}) \\cdot \\vec{v}dt
+      \\]
+
+      <p> But here's where the beat drops: we know that the cross product of two vectors gives us another vector which
+        is perpendicular to both of them, meaning \\( \\vec{v} \\times \\vec{B} \\) is perpendicular to \\( \\vec{v} \\).
+        And when you take the dot product of two perpendicular vectors, you get \\( 0 \\), meaning:
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ W = \\int q(\\vec{v} \\times \\vec{B}) \\cdot \\vec{v}dt = 0 \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>So for a static magnetic field, there is no work done!</p>
 
       <h3>Force on a Current-Carrying Wire</h3>
 
-      <p>Wire of length \\( L \\), current \\( I \\), in field \\( \\vec{B} \\):</p>
+      <p> This is cool and all, but in reality, we won't usually be dealing only with individual point charges, but a
+        bunch of electrons all moving together, like in a wire. So it's time to see what that looks like.</p>
 
-      <p>\\( \\vec{F} = I \\vec{L} \\times \\vec{B} \\)</p>
+      <p>Take a wire of length \\( L \\), with a current \\( I \\), in field \\( \\vec{B} \\). Let's put this into
+        the formula for magnetic force. </p>
 
-      <p>Because current is moving charges — and they all get pushed.</p>
+      <p>"What? Just put it in? But that equation requires, magnetic field strength, charge and velocity. Right now
+        we only have field strength! What are you planning?"</p>
+
+      <p>Sure, you may not <em>explicitly</em> have those values, but if you look closely, you'll see that they are still
+        there. Current is just charge per unit time. By multiplying it by the distance the electrons are travelling
+        (i.e. the length), you get charge times the distance per unit time:</p>
+
+      \\[
+        I\\vec{L} = q\\vec{v}
+      \\]
+
+      <p>And then by simply crossing it with \\( \\vec{B} \\), we end up with a new equation for force:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{F} = I \\vec{L} \\times \\vec{B} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>We can get a similar result when we consider the drift velocity, \\( \\vec{v}_d \\), which is just a techy
+        way of saying the velocity of the electrons in a current. Since the drift velocity is pointing in the same
+        direction that the wire is pointing in (so \\( \\vec{v}_d \\) and  \\( \\vec{L} \\), just potentially
+        different magnitudes). Remember this, because it'll be important in about 30 seconds.</p>
+
+      <p> We have a wire with a cross-sectional area \\( A \\), with a number density of electrons \\( n \\). 
+        Now let's consider an itty bitty length of wire \\( dl \\), and see what itty bitty force it produces, 
+        \\( d\\vec{F} \\). </p>
+
+      <p>And quick note, just so you don't get confused like me and my flatmate were when we were trying to work through
+        this derivation (the 'gross abuse of notation' guy i mentioned in the ODE subtopic): the \\( n \\) is
+        <strong>NOT</strong> the number of electrons. It's the number of electrons <em>per unit area</em>. Now if
+        you ask me, this is one of those moments where literally any other letter would have been better, but
+        whatever who cares...</p>
+
+      <p> Using the equation for magnetic force, but placing some d's here and there:</p>
+
+      \\[
+        d\\vec{F} = dq \\vec{v}_d \\times \\vec{B}
+      \\]
+
+      <p>...where \\( dq \\) is the itty bitty charge in the itty bitty length \\( dl \\). We can rewrite this
+        as the charge times the number of particles, giving:</p>
+
+      \\[
+        dq = qnAdl
+      \\]
+
+      <p>...remembering that \\( n \\) is number of particles <em>per unit volume</em>, and the volume is the
+        cross-sectional area \\( A \\) times the length, \\( dl \\), meaning the number of particles is
+        \\( nAdl \\). Now we can put this in the equation: </p>
+
+      \\[
+        d\\vec{F} = qnAdl \\vec{v}_d \\times \\vec{B}
+      \\]
+
+      <p>And remember from earlier that \\( \\vec{v}_d \\) and  \\( \\vec{L} \\), point in the same direction,
+        meaning \\( \\vec{v}_ddl \\) is the same as \\( v_d d\\vec{l} \\). So let's do a quick little
+        switcheroo:</p>
+
+      \\[
+        d\\vec{F} = qnAv_d d\\vec{l} \\times \\vec{B}
+      \\]
+
+      <p>Since \\( qnAv_d = I \\), we now have:</p>
+
+      \\[
+        d\\vec{F} = I d\\vec{l} \\times \\vec{B}
+      \\]
+
+      \\[
+        \\downarrow
+      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[  \\vec{F} = \\int I d\\vec{l} \\times \\vec{B} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>...meaning that if there is a current in a magnetic field, there will be a force, so long as the current and
+        the field arent pointing in the same direction.</p>
 
       <h3>Torque on a Current Loop</h3>
+
+      <p>Now for something slightly more interesting. Take a rectangular loop of wire:</p>
+      <ul>
+        <li>One pair of sides length a aligned along z</li>
+        <li>Other pair length b in the xy plane at angle θ to the x axis</li>
+        <li>Current I going around</li>
+        <li>Uniform external field \\( B = B\\hat{x}\\)</li>
+      </ul>
+      
+      <p>Label the sides 1→2, 2→3, 3→4, 4→1. Let's find the force on each:</p>
+
+      ...
+
+      <p>Add the forces and what do you get? Zero!</p>
 
       <p>Loop with area \\( A \\), current \\( I \\), in field \\( \\vec{B} \\):</p>
 
@@ -7116,6 +8652,20 @@ const subtopics = {
       <p>Where \\( \\vec{\\mu} = I \\vec{A} \\) is the magnetic moment.</p>
 
       <p>This is how motors work.</p>
+
+      <h3>The Hall Effect</h3>
+
+      <p>Right, this is actually pretty cool. The Hall effect is a practical application of the Lorentz 
+      force that lets you figure out important properties of materials. Interestingly, it was discovered 
+      before the electron and before Lorentz even came up with his force equation. Well weird, innit? </p>
+
+      <p> Here's the setup: pass a current along a strip of material while applying a magnetic field 
+      perpendicular to it. The Lorentz force pushes the charge carriers to one side. They pile up 
+      there, creating an electric field across the material and a potential difference between the edges.<p>
+
+      <p> The charge carriers keep getting more and more squashed, meaning the electric field gets stronger and stronger,
+        until the electric field strength matches the magnetic field strength. If you measure the potential
+        difference, you will then know which charge carriers make up the current. </p>
 
       <h3>TL;DR</h3>
 
@@ -7129,50 +8679,169 @@ const subtopics = {
         <li>\\( \\vec{\\tau} = \\vec{\\mu} \\times \\vec{B} \\)</li>
       </ul>
 
-      <p>And remember: the universe doesn’t care how fast your motor spins.  
-      It only cares about the cross product.</p>
+      <p>And remember: Guillotine.</p>
       `,
   },
   "magnetic-sources": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Sources of Magnetic Fields",
     content: `
-      <h3>Sources of Magnetic Field: When Currents Make Fields</h3>
 
-      <p>Right. Let’s talk about <strong>where magnetic fields come from</strong>.</p>
+      <p>Last time on Dragon Ball Likes Bees, we learnt that moving charges interact with magnetic fields. But it
+        turns out they create magnetic fields themselves.</p>
 
-      <p>No, not the Earth’s core (well, yes, but not just that). We’re talking about <strong>moving charges</strong> — aka currents.</p>
+      <h3>Biot-Savart Law</h3>
 
-      <h3>Biot-Savart Law: The Magnetic Version of Coulomb</h3>
+      <p>The Biot-Savart Law is our best friend for this section. If we have a charge at position \\( \\vec{r}' \\)
+        at velocity \\( \\vec{v} ' \\), then we can measure the magnetic field strength at point \\( \\vec{r} \\):</p>
 
-      <p>For a moving charge or current element:</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{B}(r,t) = \\frac{\\mu_0}{4\\pi}q \\frac{\\vec{v}' \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+      
+      <p>Point of possible confusion: r prime ( \\( \\vec{r}' \\) ) is the position of the moving charge, whereas regular
+        old r (\\( \\vec{r} \\)) is the position at which we want to know the field strength. It really isn't helpful that 
+        the position of the charge and the point of measurement have practically identical symbols, despite being
+        completely separate things, but this is how they always quote the formula. It's probably easier to try not to
+        think of \\( \\vec{r} \\) and \\( \\vec{r}' \\) separately, but think of \\( \\vec{r} - \\vec{r}' \\) as one 
+        concept, the distance from the charge to the measurement point.</p>
 
-      <p>\\( d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I d\\vec{l} \\times \\hat{r}}{r^2} \\)</p>
+      <p> If you really want, you can just assume we are always measuring from the origin (i.e. \\( \\vec{r} = 0 \\)).
+        Then \\( \\vec{r} - \\vec{r}' \\) just becomes \\( -\\vec{r}' \\). And since \\( |-\\vec{r}'| = r \\), we
+        get a cuter version of the Biot-Savart Law:</p>
 
-      <p>It’s like Coulomb’s Law, but with a cross product.</p>
+      \\[
+        \\vec{B}(r,t) = \\frac{\\mu_0}{4\\pi}q \\frac{\\vec{v}' \\times \\hat{r} }{r^2}
+      \\]
 
-      <p>Direction? Right-hand rule again.</p>
+      <p>Although it's proooobably better to learn the first version for calculation, this one is a lot more
+        aesthetically pleasing. Plus, we can more easily see what the ...</p>
 
-      <h3>Applications</h3>
+      <p>Hey, I've been thinking, we've been through a lot together. You know me and I know you, we're like family.
+        For that reason, I'll let you in on a little secret... I'm in a gang. Yep, you heard me. Man's in a gang and
+        that. It's called the Coulomb Gang, and man thinks you should join styll. You ready, big man?</p>
 
-      <p><strong>Long straight wire</strong>: \\( B = \\frac{\\mu_0 I}{2\\pi r} \\)</p>
+      <p>What, you don't wanna join the gang? Well too bad, you're already enrolled, blud.</p>
 
-      <p><strong>Centre of loop</strong>: \\( B = \\frac{\\mu_0 I}{2a} \\)</p>
+      <p>Now that you are part of my gang, let me start teaching you some physics gang symbols. Here's the first one,
+        the right-hand grip. Hold your right hand up like you are doing a thumbs up. Then point your thumb in the
+        direction of the moving charge's velocity. Then the direction in which your fingers are pointing is the direction
+        of the magnetic field lines.</p>
 
-      <p><strong>Solenoid</strong>: \\( B = \\mu_0 n I \\) (inside, ideal)</p>
+      <p>Remember that you are pointing your thumb in the direction a <em>positive</em> charge is moving. So if you
+        have an electron, point your thumb in the opposite direction.</p>
 
-      <h3>Ampère’s Law: The Gauss’s Law of Magnetism</h3>
+      <h3>Current Carrying Wire</h3>
 
-      <p>\\( \\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{encl}} \\)</p>
+      <p> You've been 'ere long enough, you know the drill. Time to turn these individual charges into a full current,
+        using integration! We'll do this by splitting the wire into a bunch of tiny \\( d\\vec{r}^\\prime \\) sized sections,
+        and considering the magnetic field generated by each little section.</p>
 
-      <p>Use it when there’s symmetry — just like Gauss’s Law.</p>
+      <p> If at point \\( \\vec{r}' \\), a section of length \\( d\\vec{r}^\\prime \\) has a current \\( I \\) going
+        through it, we can calculate its magnetic field strength at \\( \\vec{r} \\). If you remember from last time,
+        \\( dQ \\) can be written like this: </p>
 
-      <p>Examples:</p>
-      <ul>
-        <li>Infinite wire: \\( B = \\mu_0 I / (2\\pi r) \\)</li>
-        <li>Inside wire (uniform current): \\( B \\propto r \\)</li>
-        <li>Solenoid: \\( B = \\mu_0 n I \\)</li>
-      </ul>
+      \\[
+        dQ = nqA dr^\\prime
+      \\]
 
+      <p>where \\( n \\) is the number of charges <em>per unit volume</em>, \\( q \\) is the charge, \\( A \\) is the
+        cross-sectional area, and \\( dr^\\prime \\) is \\( dl \\) from before. Then we just multiply by the drift
+        velocity, \\( \\vec{v}_d \\), and do the little vector switcheroo thing we did last time, and then we get:</p>
+
+      \\[
+      \\begin{align}
+        dQ \\vec{v}_d &= nqA \\vec{v}_d dr^\\prime \\\\
+                      &=  nqA v_d d\\vec{r}^\\prime \\\\
+                      &=  I d\\vec{r}^\\prime
+      \\end{align}
+      \\]
+
+      <p>Cool, now all we have to do is rewrite the Biot-Savart law using a bunch of d's, whack it in and see wagwan:</p>
+
+      \\[
+      \\begin{align}
+        d\\vec{B}(r)&= \\frac{\\mu_0}{4\\pi} dQ \\frac{\\vec{v}_d \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\\\
+                    &= \\frac{\\mu_0}{4\\pi} I \\frac{d\\vec{r}' \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3}
+      \\end{align}
+      \\]
+
+      <p>Whack in an intergrand, and now we have:</p>
+      
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{B}(r) = \\frac{\\mu_0}{4\\pi}\\int I \\frac{d\\vec{r}^\\prime \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <h3>Ampère’s Law</h3>
+
+      <p> Remember how in the last subtopic, I mentioned the solenoidal condition, and said that is was a parallel to
+        Gauss' Law, just more useless? Turns out that's not completely true. There is a more useful...</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{encl}} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>You use it pretty much the same way you'd use Gauss' Law:</p>
+
+      <ol>
+        <li>Choose a surface that matches the symmetry.</li>
+        <li>Make sure \\( \\vec{B} \\) is constant and perpendicular to the surface.</li>
+        <li>Calculate \\( \\oint \\vec{B} \\cdot d\\vec{l} \\), which is basically just
+          \\( B \\times \\text{surface area} \\)</li>
+        <li>Find \\( I_{\\text{encl}} \\)</li>
+        <li>Solve for \\( B \\)</li>
+      </ol>
+
+      <h3>Magnetic materials</h3>
+
+      <p> We have looked into how moving charges can generate magnetic fields. And we had a lot of fun doing
+        so, looking at both the Biot-Savart law and Ampere's law. And whilst I'm quite fond of both of them
+        I can't help but notice that you (yes, YOU) ignored the most obvious sources of magnetic fields. </p>
+
+      <p> And don't try to pretend like I'm lying, YOU are currently forgetting the baitest source of them
+        all. Go on, take your time to think about it, I'll wait.</p>
+
+      <p>...</p>
+      <p>...</p>
+
+      <p>Don't worry, take your time.</p>
+
+      <p>...</p>
+      <p>...</p>
+
+      <p>Right so you didn't think about iron? How's that magnetic then? You didn't think that it'd have to
+        be a source of a magnetic field for it to be magnetic, you jokeman?</p>
+
+      <h4>Paramagnetism</h4>
+
+      <p>If the magnetic susceptability is negative (i.e. \\( \\chi_M < 0 \\)), 
       <h3>TL;DR</h3>
 
       <ul>
@@ -8009,7 +9678,8 @@ const subtopics = {
 
       <p>Right. Let’s talk about <strong>particle physics</strong>.</p>
 
-      <p>No, not the kind where you split atoms. We’re talking about <strong>what everything is made of</strong> — and why you’re basically just a walking bag of quarks, leptons, and a whole lot of empty space.</p>
+      <p>No, not the kind where you split atoms. We’re talking about <strong>what everything is made of</strong> — 
+      and why you’re basically just a walking bag of quarks, leptons, and a whole lot of empty space.</p>
 
       <p>And yes — your mass isn’t from protons and neutrons. It’s from the energy of the gluons holding them together.</p>
 
@@ -8545,7 +10215,8 @@ const subtopics = {
 
       <p>Right. Let’s talk about <strong>where particles come from</strong>.</p>
 
-      <p>No, not the kind that appear in your kitchen at 3am. We’re talking about <strong>natural sources of high-energy particles</strong> — the ones that rain down on Earth from space, burst out of the Sun, or seep up from the radioactive core of the planet.</p>
+      <p>No, not the kind that appear in your kitchen at 3am. We’re talking about <strong>natural sources of 
+      high-energy particles</strong> — the ones that rain down on Earth from space, burst out of the Sun, or seep up from the radioactive core of the planet.</p>
 
       <p>And yes — you’re being bombarded. Right now.</p>
 
@@ -8635,7 +10306,9 @@ const subtopics = {
 
       <p>Right. Let’s talk about <strong>how we detect particles</strong>.</p>
 
-      <p>No, not the kind where you see a flash and say “got it.” We’re talking about <strong>detectors that catch the invisible</strong> — electrons, muons, neutrinos, photons — things that barely interact with matter.</p>
+      <p>No, not the kind where you see a flash and say “got it.” We’re talking about 
+      <strong>detectors that catch the invisible</strong> — electrons, muons, neutrinos, 
+      photons — things that barely interact with matter.</p>
 
       <p>And yes — it’s hard. But we do it anyway.</p>
 
@@ -9556,7 +11229,7 @@ function scrollToSection(id) {
   }
 }
 
-function generateFloatingNav() {
+function generateFloatingNav() {   
   const headings = document.querySelectorAll('h3');
   const nav = document.getElementById('floating-nav');
   if (!nav || headings.length === 0) return;

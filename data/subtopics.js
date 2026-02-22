@@ -8839,9 +8839,115 @@ const subtopics = {
       <p>Right so you didn't think about iron? How's that magnetic then? You didn't think that it'd have to
         be a source of a magnetic field for it to be magnetic, you jokeman?</p>
 
+      <p> First off, we need to look at the Bohr Magneton. Even though there are no magnetic monopoles, magnetic
+        dipole moment is quantised, similarly to how charge is quantised in chunks of \\( e = 1.6 \\times 10^{-27} \\).
+      </p>
+
+      <p> Magnetic dipole moment, \\( \\vec{\\mu} \\), basically measures how strong a magnetic field something
+        creates, as well as how quickly the needle on a compass would rotate to point to it. </p>
+
+      <p> This magnetic dipole moment is quantised in chunks of \\( \\mu_B = 9.27 \\times 10^{-24} \\)</p>
+
+      \\[
+        \\mu = n \\mu_B
+      \\]
+
+      <p> Now think of each atom in a material as a tiny little magnet, with a magnetic dipole moment \\( \\vec{\\mu}_i \\).
+        If we add all these tiny atom magnet strengths together (i.e. \\( \\sum_i \\vec{\\mu}_i \\)), and then divide
+        by the volume \\( \\rlap{-}V \\), we can get the magnet strength of one cubic metre of the material. We call
+        this magnet strength per unit volume the magnetisation, \\( vec{M} \\). </p>
+
+      \\[
+        \\vec{M} = \\frac1{\\rlap{-}V} \\sum_i \\vec{\\mu}_i
+      \\]
+
+      <p> Alongside the material's internal magnetism caused by the atoms, we can also choose to add another magnetic
+        field to the mix. Thanks to none other than God himself, we were created with free will, meaning we could
+        manually add to (or take away from) the magnetic field using wires, coils, whatever we like. This field
+        we add is called the H-field, represented by the vector \\( \\vec{H} \\).</p>
+
+      <p> And as you could probably imagine, the total magnetic field, \\( \\vec{B} \\), is just a combination
+        of both of these fields. </p>
+
+      \\[
+        \\vec{B} = \\mu_0(\\vec{H} + \\vec{M})
+      \\]
+
+      <p> However, free will comes with consequences, and what you failed to realise is that when you applied your
+        H-field, you actually caused the atoms to freak out a bit, meaning that their tiny magnet strengths all
+        changed, meaning the overall magnetisation \\( \\vec{M} \\) changed. And this will happen everytime you
+        change your H-field: as  \\( \\vec{H} \\) changes,  \\( \\vec{M} \\) changes with it. </p>
+
+      <p> You then to take a closer look at these little atom magnets, to see how much they change whenever you
+        alter the H-field. And as it turns out, in most cases the overall magnetisation \\( \\vec{M} \\) is actually
+        proportional to the H-field you added,  \\( \\vec{H} \\). That means  \\( \\vec{M} \\) is equal to
+        \\( \\vec{H} \\) times some constant of proportionality: </p>
+
+      \\[
+        \\vec{M} = \\chi_M \\vec{H}
+      \\]
+        
+      <p> Our new pal \\( \\chi_M \\) is what we call the magnetic susceptibility, and it measures how strongly
+        a material is magnetised when you place it in a H-field, i.e. how strong of a magnet the material becomes
+        when you apply another magnetic field to it. </p>
+
+      <p> This gives us a new and improved formula for the total magnetic field:</p>
+
+      \\[
+      \\begin{align}
+        \\vec{B}  &= \\mu_0(\\vec{H} + \\vec{M}) \\\\
+                  &= \\mu_0(\\vec{H} + \\chi_M \\vec{H}) \\\\
+                  &= \\mu_0(1+\\chi_M)\\vec{H} \\\\
+                  &= \\mu_0\\mu_r\\vec{H}
+      \\end{align}
+      \\]
+
+      <p> What we are really worried about here is that magnetic susceptability (\\( \\chi_M \\)) quantity, because 
+        this is the main parameter controlling how magnetic a material is. So for now we'll stick to this equation: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\vec{B} = \\mu_0(1+\\chi_M)\\vec{H} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>  
+
       <h4>Paramagnetism</h4>
 
-      <p>If the magnetic susceptability is negative (i.e. \\( \\chi_M < 0 \\)), 
+      <p>If the magnetic susceptability is positive (i.e. \\( \\chi_M > 0 \\)) then the magnetisation points in the same 
+        direction of the field you applied. That means the combines field is greater than the applied field (because you
+        have the applied field, plus \\( \\vec{M} \\) which is in the same direction). <p>
+
+      <p> Also notice that since \\( \\vec{M} \\) is proportional to \\( \\vec{H} \\), that means that when 
+        \\( \\vec{H} = 0 \\), then \\( \\vec{M} = 0 \\) too. In other words, if you don't apply a H-field yourself, the
+        material doesn't magnetise at all: all the tiny atom magnets are in a giant uneven kerfuffle, and only begin
+        to align when you apply a field to it. </p>
+
+      <h4>Diamagnetism</h4>
+
+      <p>If the magnetic susceptability is negaitive (i.e. \\( \\chi_M < 0 \\)), then this basically means the opposite:
+        as you apply the field, the tiny atom magnets align in the opposite direction to the field you applied,
+        weakening it.</p>
+
+      <h4>Ferromagnetism (And Hysteresis)</h4>
+
+      <p>And last but certainly not least (quite the opposite actually), if you have a really really <em>really</em>
+        chunky magnetic susceptability (i.e. \\( \\chi_M \\gg 1 \\)) then the proportionality ting we were on about
+        earlier kinda breaks down. Once you apply the field, the tiny atom magnets neatly align. But even after you
+        remove the H-field, \\( \\vec{M} \\)... doesn't go back to zero? It stays pretty large, and only becomes zero
+        when you make the H-field negative </p>
+
+      <p> Then if you set the H-field to the same strength in the opposite direction, \\( \\vec{M} \\) becomes
+        maximally negative. Put \\( \\vec{H} \\) back to zero, \\( \\vec{M} \\) stays positive, until a certain
+        value of \\( \\vec{H} \\). This weird leaf shape is called a hysteresis loop.</p>
+
+
       <h3>TL;DR</h3>
 
       <ul>
@@ -8857,17 +8963,52 @@ const subtopics = {
       `,
   },
   "induction": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Electromagnetic Induction",
     content: `
-      <h3>Electromagnetic Induction: When Changing Fields Make Voltage</h3>
+
+      <i> All this while I thought \\( \\mathcal{E} \\) was supposed to be a larger variation of epsilon. I tried to
+        type it using LaTeX as I do for all my formuae. The symbol \\( \\varepsilon \\) has the LaTeX code "\\varepsilon," 
+        and if you want to take a Greek letter and capitalise it, you just capitalise the first letter of the LaTeX 
+        code. So in principle, a capital epsilon should be "\\Varepsilon". Problem: there is no capital epsilon (I mean, 
+        there is, it's just \\( E \\)), so this obviously didn't work.</i>
+
+      <i> I then consulted Professor Google, who told me that the correct LaTeX code is "\\mathcal{E}". Which means that
+        all this while, \\( \\mathcal{E} \\) weren't even a bloody epsilon?! It was a regular old E, just in a fancy font?</i>
 
       <p>Right. Let’s talk about <strong>induction</strong>.</p>
 
       <p>No, not the kind at work. We’re talking about <strong>Faraday’s Law</strong> — when a changing magnetic field creates an electric field.</p>
 
-      <h3>Faraday’s Law: emf from Changing Flux</h3>
+      <h3>Faraday’s Law</h3>
 
-      <p>\\( \\varepsilon = -\\frac{d\\Phi_B}{dt} \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\mathcal{E} = -\\frac{d\\Phi_B}{dt} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p></p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\mathcal{E} = -N\\frac{d\\Phi_B}{dt} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+
 
       <p>The induced emf is equal to the rate of change of magnetic flux.</p>
 
@@ -8878,6 +9019,19 @@ const subtopics = {
       <p>Move a conductor in a magnetic field? Charges inside feel a force \\( \\vec{F} = q\\vec{v} \\times \\vec{B} \\).</p>
 
       <p>So emf is induced:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\mathcal{E} = \\oint (\\vec{v} \\times \\vec{B}) \\cdot d\\vec{l} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
       <p>\\( \\varepsilon = B l v \\)</p>
 
@@ -8895,7 +9049,19 @@ const subtopics = {
 
       <p>A changing \\( \\vec{B} \\) creates a curly \\( \\vec{E} \\) — even in empty space.</p>
 
-      <p>\\( \\oint \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi_B}{dt} \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\mathcal{E} = \\oint \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi_B}{dt} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
 
       <p>So \\( \\vec{E} \\) is no longer conservative.</p>
 

@@ -8970,16 +8970,18 @@ const subtopics = {
         type it using LaTeX as I do for all my formuae. The symbol \\( \\varepsilon \\) has the LaTeX code "\\varepsilon," 
         and if you want to take a Greek letter and capitalise it, you just capitalise the first letter of the LaTeX 
         code. So in principle, a capital epsilon should be "\\Varepsilon". Problem: there is no capital epsilon (I mean, 
-        there is, it's just \\( E \\)), so this obviously didn't work.</i>
+        there is, it's just \\( E \\)), so this obviously didn't work.</i><p></p>
 
       <i> I then consulted Professor Google, who told me that the correct LaTeX code is "\\mathcal{E}". Which means that
         all this while, \\( \\mathcal{E} \\) weren't even a bloody epsilon?! It was a regular old E, just in a fancy font?</i>
 
-      <p>Right. Let’s talk about <strong>induction</strong>.</p>
-
-      <p>No, not the kind at work. We’re talking about <strong>Faraday’s Law</strong> — when a changing magnetic field creates an electric field.</p>
+      <p>Here's another revision-y one from A-Level: electromagnetic induction. When you move a loop through a magnetic
+        field, such that the flux through the loop is changing, it will induce an EMF in the coil</p>
 
       <h3>Faraday’s Law</h3>
+
+      <p> Something that should be pretty familiar: the EMF induced in a coil is proportional to the rate of change of
+        flux:</p>
 
       <div class="hover-wrapper">
         <div class="formula-container">
@@ -8994,7 +8996,22 @@ const subtopics = {
         </div>
       </div>
 
-      <p></p>
+      <p>Remembering that the flux measures how many field lines pass through a surface (or a hole in the case of this 
+        loop).</p>
+
+      \\[
+        \\Phi_B = \\iint_S \\vec{B} \\cdot d\\vec{S}
+      \\]
+
+      <p> It's negative due to Lenz's law, so that the current used to make the magnetic field points in the opposite
+        direction to the EMF being induced. This should hopefully also be familiar to you from A-level. But if not,
+        never fear! We'll talk more about in a moment, but don't worry about it too much for now. Just know it's
+        negative, k?</p>
+
+      <p> If instead of a single loop-de-loop, we have a bunch of loop-de-loops (so a coil basically), then they will all
+        induce their own EMF, resulting in the total EMF induced being a combination of all these EMFs. That means that if
+        there are \\( N \\) coils, that the induced EMF is ACTUALLY:</p>
+
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -9009,14 +9026,85 @@ const subtopics = {
       </div>
 
 
+      <h3>Motional EMF</h3>
 
-      <p>The induced emf is equal to the rate of change of magnetic flux.</p>
+      <p>Here we'll be using the classic example: you have a bit of wire which loops round, and a crossbar of length
+        \\( L \\) made of a conducting material, such that placing the conducting crossbar on the bendy wire completes 
+        the loop.</p>
+        
+      <p> This episode also features:</p>
 
-      <p>Minus sign? That’s Lenz’s Law — the induced current opposes the change.</p>
+      <ul>
+        <li>A magnetic field pointing into the page, \\( \\vec{B} = B(-\\hat{z}) \\) </li>
+        <li>A current \\( I \\) moving anticlockwise (remember that current measures positive charge, so an
+          anticlockwise current means the electrons are actually moving clockwise). </li>
+      </ul>
 
-      <h3>Motional emf</h3>
+      <p> Mr Crossbar over here decides to move to the right with a velocity \\( \\vec{v} \\). That means in a time
+        interval \\( \\Delta t \\), Mr Crossbar moves a distance \\( v \\Delta t \\). That means the area of the loop
+        is also getting bigger by \\( \\Delta A = L \\Delta x = Lv \\Delta t  \\).</p>
 
-      <p>Move a conductor in a magnetic field? Charges inside feel a force \\( \\vec{F} = q\\vec{v} \\times \\vec{B} \\).</p>
+      <p> Now that the loop is getting bigger, more magnetic field lines can go through it, meaning the magnetic
+        flux is getting bigger:</p>
+        
+      \\[ 
+      \\begin{align}
+        \\Delta \\Phi_B &= B \\Delta A \\\\
+                        &= BLv \\Delta t
+      \\end{align}
+      \\]
+
+      <p>That means the rate of change of flux is given by:</p>
+
+      \\[
+        \\frac{\\Delta \\Phi_B}{\\Delta t} = BLv
+      \\]
+
+      <p> By making the changes in flux and time infinitesimally small (in other words replace the 
+        \\( \\Delta \\)'s with d's), we can then use Faraday's law:</p>
+
+      \\[
+        \\mathcal{E} = -\\frac{d\\Phi_B}{dt} = -BLv
+      \\]
+
+      <p> But we can go a step further! Do you remember from way in the beginning when we learnt about
+        Ohm's law? </p>
+
+      \\[
+        \\mathcal{E} = IR \\quad \\therefore \\quad I = \\frac{\\mathcal{E}}R
+      \\]
+
+      <p> Let's put our new found EMF to calculate the current (stay with me now):</p>
+
+      \\[
+        I = \\frac{BLv}R
+      \\]
+
+      <p> And then we can use our formula from a couple sections ago, where we can use a current to get
+        the Lorentz force (stay with me now, I promise I'm going somewhere with this):</p>
+
+      \\[
+        d\\vec{F} = Id\\vec{l} \\times \\vec{B}
+      \\]
+
+      \\[
+      \\begin{align}
+        \\vec{F}  &= IL(\\hat{y}) \\times B(-\\hat{z}) \\\\
+                  &= ILB(-\\hat{x}) \\\\
+                  &= \\frac{B^2L^2v}R (-\\hat{x})
+      \\end{align}
+      \\]
+
+      <p> Look at that! The change in flux induces an EMF (Faraday's law), which produces a current (Ohm's law),
+        which produces a force (Ampere's law) in the \\( -\\hat{x} \\) direction, acting in the opposite 
+        direction to the direction that Mr Crossbar is moving in. Turns out Faraday's, Ohm's and Ampere's
+        laws are all related. </p>
+
+      <p> And this relationship results in a new law from a new guy: Lenz's law (the one we mentioned earlier!).
+        It tells us that whatever you do to induce an EMF will end up creating a force to try and undo that
+        action. </p>
+
+      
 
       <p>So emf is induced:</p>
 
@@ -9033,26 +9121,72 @@ const subtopics = {
         </div>
       </div>
 
-      <p>\\( \\varepsilon = B l v \\)</p>
-
-      <p>Like in a generator.</p>
-
-      <h3>Lenz’s Law: Nature Says “No” to Change</h3>
-
-      <p>The induced current creates a field that opposes the change in flux.</p>
-
-      <p>So if flux is increasing, the induced field points opposite.</p>
-
-      <p>It’s like the universe is conservative — hates change.</p>
 
       <h3>Induced Electric Fields</h3>
 
-      <p>A changing \\( \\vec{B} \\) creates a curly \\( \\vec{E} \\) — even in empty space.</p>
+      <p>Let me draw your attention to something cool. Thus far we have been talking about how a moving
+        charge in a magnetic field can induce an EMF, due to changing flux. So in principle, that should
+        mean that without a moving charge, and certainly without a magnetic field, there should be no
+        EMF induced. </p>
+
+      <p> Well then let's see if you are correct. Take the solenoid we had before. From using Ampere's 
+        law, we were able to calculate the magnetic field strength inside the solenoid:</p>
+
+      \\[
+        \\vec{B} = \\mu_0 n I_s(t) \\hat{z}
+      \\]
+
+      <p> Now we can use Faraday's and Ohm's law to determine the EMF and the current this magnetic
+        field induced: </p>
+
+      \\[
+      \\begin{align}
+        \\Phi_B &= \\iint \\vec{B} \\cdot d\\vec{S} \\\\
+                &= \\mu_0 n I_s(t) A
+      \\end{align}
+      \\]
+
+      \\[
+        \\big\\Downarrow
+      \\]
+
+      \\[
+      \\begin{align}
+        \\mathcal{E}  &= -\\frac{d\\vec{B}}{dt}\\\\
+                      &= -\\mu_0 n A \\frac{dI_s(t)}{dt} \\\\
+      \\end{align}
+      \\]
+
+      \\[
+        \\big\\Downarrow
+      \\]
+
+      \\[
+      \\begin{align}
+        I_\\text{induced} &= \\frac{\\mathcal{E}}R \\\\
+                          &= -\\frac{\\mu_0 n A}R \\frac{dI_s(t)}{dt}
+      \\end{align}
+      \\]
+
+
+      \\[
+      \\begin{align}
+        \\vec{F}  &= ILB(-\\hat{x}) \\\\
+                  &= -\\frac{\\mu_0 n ALB}R \\frac{dI_s(t)}{dt} (-\\hat{x})
+      \\end{align}
+      \\]
+
+      <p> Huh, that's strange. It seems that there IS a counter-force, despite no moving wire and no magnetic 
+        field. Since there are no magnetic components, by using the Lorentz force formula we can see that this
+        must instead be due to the electric field induced by the varying current. </p>
+
+      <p> Remembering that EMF is basically just a voltage, and that voltage is a potential, we can actually
+        use the closed integral we used to define potential a while ago to calculate the EMF here: </p>
 
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\mathcal{E} = \\oint \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi_B}{dt} \\]
+            \\[ \\mathcal{E} = \\oint_\\text{loop} \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi_B}{dt} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula X
@@ -9063,7 +9197,11 @@ const subtopics = {
       </div>
 
 
-      <p>So \\( \\vec{E} \\) is no longer conservative.</p>
+      <p>And this is where the bass drops! Back in the day, we said that the potential in a closed loop is 
+        \\( 0 \\) (\\( \\oint_\\text{loop} \\vec{E} \\cdot d\\vec{l} = 0 \\)), since the electric field is
+        conservative. But now that we have a varying current, it no longer equals \\( 0 \\). That's because
+        all this while, we have been using magnetostatics (nothing changes, except position maybe). When the
+        magnetic field changes, all of our assumptions break down. </p>
 
       <h3>TL;DR</h3>
 
@@ -9075,58 +9213,399 @@ const subtopics = {
         <li>Changing \\( \\vec{B} \\) → \\( \\vec{E} \\)</li>
       </ul>
 
-      <p>And remember: the universe doesn’t care how much emf you induce.  
-      It only cares about the rate of change.</p>
+      <p>And remember: \\( \\mathcal{E} \\) is a fancy E, not an epsilon.</p>
       `,
   },
   "inductance": {
-    title: "Turn up the heat, Soulburner!",
+    title: "Inductance",
     content: `
-      <h3>Inductance: When Coils Fight Change</h3>
 
-      <p>Right. Let’s talk about <strong>inductance</strong>.</p>
+      <p>We've had wires, coils, resistors, capacitors. Let's give a thunderous round of applause for our brand new
+        component... the inductor!!</p>
 
-      <p>No, not the kind that makes you zone out. We’re talking about <strong>inductors</strong> — coils that resist changes in current.</p>
+      <p>Well, go on, clap then.</p>
+
+      <p> I'll wait... </p>
+
+      <p> Hmm, I guess you don't find her that interesting. Maybe if I tell you more about her, you'll realise she in
+        fact does deserve a round of applause. </p>
 
       <h3>Mutual Inductance</h3>
 
-      <p>Two coils close together: current in one induces emf in the other.</p>
+      <p>Just as resistors have resistance and capacitors have capacitance, inductors have inductance. Now the all
+        important question: what the bloody hell is inductance? </p>
 
-      <p>\\( \\varepsilon_2 = -M \\frac{dI_1}{dt} \\)</p>
+      <p> Let's take our trusty solenoid. In fact, since the solenoid has been so faithful, let's bring two. Take
+        one solenoid and wrap another one around it. </p>
 
-      <p>\\( M \\) is mutual inductance — depends on geometry and alignment.</p>
+      <p> From last time, we know that when you change the current in one of these coils, you induce an EMF in the other
+        coil. The <em>mutual inductance</em>, \\( M \\) is a measure of how much EMF a change in current will actually 
+        induce in the other coil: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\mathcal{E}_2 = -M \\frac{dI_1}{dt} \\quad \\text{and} \\quad \\mathcal{E}_1 = -M \\frac{dI_2}{dt}\\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+        
+      <p>And you'll not believe what the units of inductance are. Go on, guess!</p>
+
+      <p> It's measured in <em>Henries</em>, \\( H \\). Like Horrid Henry! I mean Amperes, Ohms, Coulombs, they're all
+        names, but this one just feels... different for some reason?</p>
+
+      <p> Anyway, Horrid Henries are very very VERY big, a bit like Farads, so we'll oftern be dealing with microhenries
+      usually. </p>
+
+      <p> We know how to calculate the magnetic field strength in a solenoid: </p>
+
+      \\[
+        B_1 = \\frac{\\mu_0 N_1 I_1}{l_1}
+      \\]
+
+      <p> From this we can calculate the induced EMF: </p>
+
+      \\[
+      \\begin{align}
+        \\mathcal{E}  &= -N_2\\frac{d\\Phi_B}{dt} \\\\
+                      &= -N_2\\frac{d}{dt} \\left( \\frac{\\mu_0 N_1 A_1 I_1}{l_1} \\right) \\\\
+                      &=  -N_2 \\frac{\\mu_0 N_1 A_1}{l_1}\\frac{dI_1}{dt}
+      \\end{align}
+      \\]
+
+      <p>Well, well, well, don't that look familiar? Now we have an induced EMF in terms of \\(\\frac{dI_1}{dt}\\),
+        just like our mutual inductance thingy from a bit earlier. With that, we can compare coefficients to find
+        a formula for \\( M \\):</p>
+
+      \\[
+        M = - \\frac{\\mu_0 N_1 N_2 A_1}{l_1}
+      \\]
+
+      <h3>Transformers</h3>
+
+      <p> Here's an example of mutual inductance which you likely came across during A-level. A transformer is made
+        of a <em>ferromagnetic</em> core, and a coil wrapped around each coil, a primary coil with \\( N_p \\) turns
+        and a current \\( I_p \\), and a secondary coil with \\( N_s \\) turns and a current \\( I_s \\) </p>
+
+      <p> The purpose of the ferromagnetic core is to kidnap the magnetic field lines, and force them to go through
+        the two coils against their will, such that the flux inside the primary coil is the same as the flux in the
+        secondary coil. It needs to be ferromagnetic because ferromagnets are the only magnets strong enough (the
+        whole \\( \\chi_X \\gg 1 \\) shebang, remember?), so all the relevant field lines remain in the core. </p>
+        
+      <p> Let's vary the current through the primary coil, \\( I_p = I_p(t) \\). As a matter of fact, equal rights,
+        so let's to the same through the secondary coil, \\( I_s = I_s(t) \\). Then using Faraday's law, we get
+        the EMF induced in each: </p>
+
+      \\[
+        \\mathcal{E}_p = -N_p \\frac{d\\Phi_B}{dt} \\quad \\text{and} \\quad \\mathcal{E}_s = -N_s \\frac{d\\Phi_B}{dt}
+      \\]
+
+      <p> Thanks to our ferromagnetic core forcing the field lines to enter both coils, we end up with the same flux.
+        That means we can calculate the rate of change of flux in both: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\frac{d\\Phi_B}{dt} = \\frac{\\mathcal{E}_p}{N_p} = \\frac{\\mathcal{E}_s}{N_s} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> This is just revolutionary! I mean think about what this means. If you have a given EMF going through a primary
+        coil with a given number of turns, dividing them gives you the ratio \\( \\frac{\\mathcal{E}_p}{N_p} \\). That 
+        means that if you then increase the number of coils on the other coil such that \\( N_s > N_p \\), then the 
+        EMF in the second coil will also be larger than the one in the first coil. Conversely, if you reduce the number
+        of coils such that \\( N_s < N_p \\), the EMF in the second coil will also be smaller than that of the first
+        coil.</p>
+
+      <p> This whimsical devise with which we can increase or decrease an EMF simply by increasing or decreasing the 
+        number of turns on the secondary coil, at the low low cost of removing the magnetic field lines' autonomy,
+        is what we call a transformer! </p>
 
       <h3>Self Inductance</h3>
 
-      <p>A single coil resists changes in its own current:</p>
+      <p>All that mutual inductance stuff was cool, but <em>usually</em> when we talk about inductance, we are talking
+        about SELF-inductance, which we can define just like this:</p>
 
-      <p>\\( \\varepsilon = -L \\frac{dI}{dt} \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\mathcal{E} = -L \\frac{dI}{dt} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
-      <p>\\( L \\) is self-inductance. Unit: henry (H).</p>
+      <p> Instead of \\( M \\) for mutual inductance, we go to the next letter in the alphabet, \\( L \\), for
+        self-inductance. And I know what you're thinking, but don't worry, self-inductance is STILL measured in 
+        Horrid Henries.</p>
 
-      <p>For a solenoid: \\( L = \\mu_0 n^2 A l \\)</p>
+      <p> The difference between \\( M \\) and \\( L \\) is quite self-explanatory: \\( M \\) is between two or
+        more components, whereas \\( L \\) is the inductance a component has on itself. How this is possible you
+        ask? Well let's bring back the solenoid, who's magnetic field strength we already know: </p>
+        
+        \\[
+          B = \\frac{\\mu_0 N I}l 
+        \\]
+
+      <p> And let's use Faraday's law again: </p>
+
+      \\[
+        \\mathcal{E} = -\\frac{d(N\\Phi_B)}{dt}
+      \\]
+
+      <p> You might notice I've placed the \\( N \\) with the \\( \\Phi_B \\). It doesn't really make a difference
+        mathematically, considering the number of turns doesn't depend on time, but it does allow us to consider the
+        flux linkage, \\( N\\Phi_B \\). And I'll be real with you... I don't know why we need to think of it this
+        way, but most resources do this, so I guess we'll stick with it. Either way, we can calculate flux linkage
+        like so: </p>
+
+      \\[
+        N\\Phi_B = NBA =  \\frac{\\mu_0 N^2 IA}l 
+      \\]
+
+      <p> Once again we can whack this in our EMF formula and see wagwan: </p>
+
+      \\[
+        \\mathcal{E} = -\\frac{\\mu_0 N^2 A}l \\frac{dI}{dt}
+      \\]
+
+      <p>That gives us an equation for self-inductance:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ L = \\frac{\\mu_0 N^2 A}l \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> Which now that I think about it is literally just the same as mutual inductance, except without all
+        the 1s and 2s, which we'd expect considering self-inductance is the same as mutual inductance, but with
+        one coil. </p>
+
+      <p> Now that we know what inductance is, we can think about inductors as part of a circuit. By the way, they
+        are represented by this cute little wiggle, which I think is supposed to look like a coil, like the
+        solenoid. </p>
+
+      <p> Also, you might not know this, but resistors, capacitors and inductors are actually very good friends,
+        ergo we will often consider them together. As we will do right now. Let's consider the voltage of all
+        three of these. </p>
+
+      <p> Beginning with the capacitor, because it's the easiest, \\( Q = VC \\), so by doing a cute little
+        rearranging:</p>
+
+        \\[
+          V_C = \\frac{Q}C
+        \\]
+
+      <p> Resistors are also pretty easy, we just use Ohm's law, \\( V = IR \\). And since we are already in the 
+        business of using the letter \\( Q \\), let's replace our current \\( I \\) with \\( \\frac{dQ}{dt} \\),
+        since current is the flow (or rate of change) of charge:</p>
+
+      \\[
+        V_R = R\\frac{dQ}{dt}
+      \\]
+
+      <p> And finally inductance. You might think we don't know this, but turns out we do, since we have the
+        EMF. So if the battery has an EMF \\( \\mathcal{E} \\), and the inductor has an EMF 
+        \\( -L \\frac{dI}{dt} \\), and the total EMF... </p>
+
+        \\[
+          V_L = L\\frac{d^2Q}{dt^2}
+        \\]
+
+      <p> Remember these \\( Q \\)-formulae, they will become way more important in a bit.</p>
 
       <h3>Energy Stored in an Inductor</h3>
 
-      <p>Energy is stored in the magnetic field:</p>
+      <p> If you remember, back when you considered capacitors, you idiotically suggested that energy is stored within
+        the plates of the capacitor. Then I graciously corrected you by informing you that the energy is ACTUALLY stored
+        within the electric field, not the plates. It's a similar story with inductors, the energy is stored in the 
+        magnetic field, not the coil itself.</p>
 
-      <p>\\( U = \\frac{1}{2} L I^2 \\)</p>
+      <p> You can prove it if you'd like, but let's just cut to the chase: </p>
 
-      <p>Energy density: \\( u = \\frac{1}{2\\mu_0} B^2 \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ U = \\frac{1}{2} L I^2 \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> Hey, it looks a bit like \\( \\frac12 mv^2 \\)! Ain't that something? </p>
+
+      <p> Like before we can get the energy density by dividing this magnetic field energy by the volume
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ u = \\frac{1}{2\\mu_0} B^2 \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
 
       <h3>Inductors in Series and Parallel</h3>
 
-      <p><strong>Series</strong>: \\( L_{\\text{eq}} = L_1 + L_2 + \\cdots \\)</p>
+      <p> Unlike capacitors which were unnecessarily contrarian, inductors in series and in parallel work exactly
+        like resistors do. When you put them in series, they nicely add up: </p>
 
-      <p><strong>Parallel</strong>: \\( \\frac{1}{L_{\\text{eq}}} = \\frac{1}{L_1} + \\frac{1}{L_2} + \\cdots \\)</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[  L_{\\text{series}} = L_1 + L_2 + \\cdots \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> And then in parallel they do the one over stupidity:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\frac{1}{L_{\\text{parallel}}} = \\frac{1}{L_1} + \\frac{1}{L_2} + \\cdots \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>That's it! Easy, innit?</p>
 
       <h3>LRC Circuits</h3>
 
-      <p>Resistor, inductor, capacitor in series — driven by AC.</p>
+      <i> You know Warwick University are actually snakes? My first lab report was on LRC circuits, but we did the
+        experiment and the report in the first term... BEFORE we knew what these were. So I went through all the
+        effort of finding books and resources to try and understand wagwan, just for Neil Wilson to do a lecture
+        explaining wagwan? </i>
 
-      <p>Impedance: \\( Z = R + i(\\omega L - 1/\\omega C) \\)</p>
+      <p> Like I said, resistors, capacitors and inductors are pretty good friends. Such good friends in fact, that
+        they even had a 3 person groupchat, known as an LRC circuit (which is just a inductor, a resistor, and a
+        capacitor in series.</p>
 
-      <p>Resonance at \\( \\omega_0 = 1/\\sqrt{LC} \\)</p>
+      <p> Keyword, had. It turns out the resistor and the capacitor had a recent falling out: the resistor was upset
+        at the capacitor for not having capacitance nicely add up when they are in series. So C and R both created
+        their own groupchats with L, called the LC circuit and the LR circuit. Luckily, me and L are also good friends,
+        so she let me in with some of the affairs of each GC. </p>
+
+      <h4>The LC Circuit</h4>
+
+      <p> We have an inductor in series with a capacitor and a switch. The switch is off at first, and then at time
+        \\( t=0 \\), it's switched on. By using Kirchoff's loop rule, we know that the EMF from the battery is the
+        same as the total voltage drop across each component. The inductor has voltage \\( V_L = L\\frac{dI}{dt} \\) 
+        and the resistor has voltage \\( V_R = IR \\). Adding those two up and equating it to the EMF from the
+        battery \\( \\mathcal{E} \\) gives us: </p>
+
+      \\[
+        \\mathcal{E} = IR + L\\frac{dI}{dt}
+      \\]
+
+      <p> Now rearrange it so that it becomes a first order differential equation: </p>
+
+      \\[
+        \\frac{dI(t)}{dt} = \\frac{\\mathcal{E}}L - \\frac{R}LI(t)
+      \\]
+
+      <p> And then just solve it: </p>
+
+      \\[
+        I(t) = \\frac{\\mathcal{E}}R \\left( 1-e^{-\\frac{R}Lt} \\right)
+      \\]
+
+      <p> So what does that mean? At \\( t=0 \\), the current \\( I(t) \\) is also zero. And as \\( t \\) tends
+        towards infinity, \\( I(t) \\) tends towards \\( \\frac{\\mathcal{E}}R \\). Based on the \\( e \\) to
+        the negative power term, we can see that this must be a gradual increase in current. </p>
+
+      <p> Also, notice how \\( I(t) \\) tends towards \\( \\frac{\\mathcal{E}}R \\)? Since \\( \\frac{\\mathcal{E}}R \\)
+        has no dependance on inductance but only on resistance, that suggests that overtime, all the power is being 
+        transferred <em>from</em> the inductor <em>to</em> the resistor. </p>
+
+      <h4> LC circuit </h4>
+
+      <p> Now what's the gosh over here on this groupchat? <i>"What's the gosh" is a posh white Southerner phrase, which
+        I believe translates to "What's the gossip?" or something, for those of us who don't speak Tory.</i></p>
+
+      <p> A similar set-up, although this time there is no battery, just a charged capacitor. So at time \\( t=0 \\),
+        the capacitor is fully charged (\\( Q(t=0) = Q_0 \\)), and like before the switch is off until time \\( t=0 \\)
+        (\\( I(t=0) = 0 \\)). </p>
+
+      <p> Again, let's do Kirchoff's loop ting to see wagwan. Since there is no battery, \\( \\mathcal{E} \\) is zero,
+        which is equal to the total voltage of all the components. And we'll be using the \\( Q \\)-formulae from before
+        this time: </p>
+
+      \\[
+        0 = L\\frac{d^2Q}{dt^2} + \\frac1QC \\quad \\therefore \\quad \\frac{d^2Q}{dt^2} = -\\frac1{LC}Q
+      \\]
+
+      <p> Hey, now we have a second order differential equation. More importantly, we have simple harmonic motion! We 
+        can solve it using the pretend-it's-a-quadratic method, and with the tap of the hat, we get the expected
+        conditions for SHM, with an interesting value for frequency: </p>
+
+      \\[
+        Q(t) = Q_0 \\cos{\\omega t}, \\quad \\text{where} \\quad \\omega = \\frac1{\\sqrt{LC}}
+      \\]
+
+      <p> And remember that when ... there is no damping </p>
+
+
+      <h4>The LRC circuit</h4>
+
+      <p> Luckily, R and C were able to accept each other's differences, and hence revive the LRC groupchat. So let's
+        see what cancellable stuff they've been talking about. </p>
+
+      <p> Same starting conditions as the LC circuit, fully charged capacitor at \\( t=0 \\) (\\( Q(t=0) = Q_0 \\)), 
+        and the switch is off until time \\( t=0 \\) (\\( I(t=0) = 0 \\)). Now let's loopy-loopy, remembering that
+        there still ain't no battery, so \\( \\mathcal{E} \\) is still zero:</p>
+
+      \\[
+        0 = L\\frac{d^2Q}{dt^2} + R\\frac{dQ}{dt} + \\frac1QC 
+      \\]
+
+      <p> This is second order, pretend-it's-a-quadratic method, blah blah blah, and we get:</p>
+
+      \\[
+        Q(t) = Q_0 e^{-\\alpha t}\\cos{\\omega t}, \\quad \\text{where} \\quad 
+        \\alpha = \\frac{R}{2L}, \\quad \\omega = \\frac1{\\sqrt{\\frac1{LC} - \\alpha^2}}
+      \\]
 
       <h3>TL;DR</h3>
 
@@ -9145,13 +9624,213 @@ const subtopics = {
   "ac-circuits": {
     title: "Turn up the heat, Soulburner!",
     content: `
-      <h3>AC Circuits: When Electrons Can’t Make Up Their Mind</h3>
 
-      <p>Right. Let’s talk about <strong>AC circuits</strong>.</p>
+      <p>We started the E&M topic talking about DC, now we'll end it talking about AC</p>
 
-      <p>No, not the kind with air conditioning. We’re talking about <strong>alternating current</strong> — where voltage and current flip direction 50 times a second.</p>
+      <p>Alternating current is different to direct current, since now it wibbles and wobbles. What do I mean by this?
+        Unlike before where batteries produced a single \\( V \\) voltage, they now produce voltages in sine waves:</p>
 
-      <p>It’s chaos. But we can handle it.</p>
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ V = V_0 \\cos{\\omega t} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> And from like a billion years ago, you know that sines and cosines can be rewritten as a complex 
+        exponential:</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ V = \\text{Re}[\\tilde{V}], \\quad \\text{where} \\quad \\tilde{V} = V_0 e^{j\\omega t} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p>Of course, we have the \\( \\text{Re} \\) to ensure we get the real part, because imaginary numbers are
+        pointless for real people and physical situations. </p>
+
+      <p> Oh, and, let me address the elephant in the room. You might have notices that the exponential power
+        uses a \\( j \\) instead of an \\( i \\). Now just to be clear, this is the same \\( \\sqrt{-1} \\) from
+        before. But scientists have decided that when it comes to electronics, they will use a \\( j \\). The
+        reason for this (brace yourself...), the letter \\( i \\) for \\( \\sqrt{-1} \\) apparently could get
+        confused with \\( I \\) for current. </p>
+
+      <p> My question... HOW?!???!!
+
+      <p>Are scientists actually braindead? WDYM confused? At your big ages you are trying to tell me that you
+        don't know the difference between a lowercase i and an uppercase I? They teach this in reception you
+        know, nursery even...</p>
+
+      <p> Anyway, since we've now introduced our wave-voltage thingy, \\( \\tilde{V} \\), that must now mean
+        that like regular waves, AC voltages can also have phase differences, \\( \\phi \\). So the wibble-wobble
+        voltage equation is actually more accurately defined like this: </p>
+
+      \\[
+        \\tilde{V} = V_0 e^{j(\\omega t + \\phi)}
+      \\]
+
+      <p> Just like regular complex numbers, we can actually plot this on an Argand diagram. Now technically when 
+        you use an Argand diagram to plot voltages, they are no longer called Argand diagrams, and instead called 
+        a <em>phasor diagram</em>. But for all intents and purposed they are the same thing, so call 'em whatever
+        you want. </p>
+
+      <p> Now you may be thinking, why the bloody hell are you plotting a voltage on an Argand diagram for? Answer:
+        just wait and see... </p>
+
+      <h3> Complex Impedance </h3>
+
+      <p> Do you remember back when we were doing waves, and we introduced \\( Z = \\sqrt{T\\mu} \\), and I said
+        not to worry about it? Well now it's time to WORRY!!! (Yay, worrying, my favourite!!)</p>
+
+      <p> Well, to be fair it's nothing that interesting. The impedance is just the proper name for the wavy
+        resistance. So remember how with DC, we had Ohm's law as \\( V = IR \\)? Now that we are working with DC,
+        it's near enough the same thing, except you replace the \\( R \\) with a \\( Z \\), and give 'em all
+        little wiggles on top to show they are wibbling and wobbling: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\tilde{V} = \\tilde{I}\\tilde{\\mathcal{Z}} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> ...where \\( \\tilde{\\mathcal{Z}} \\) is the complex impedance (or just 'impedance' is you don't have 
+        much time), and it is also in units of Ohms, \\( \\Omega \\). This also means that the series-parallel 
+        relations are exactly the same as with regular resistors: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[  \\tilde{\\mathcal{Z}}_{\\text{series}} = \\tilde{\\mathcal{Z}}_1 + \\tilde{\\mathcal{Z}}_2 + \\cdots \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p></p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\frac{1}{\\tilde{\\mathcal{Z}}_{\\text{parallel}}} = \\frac{1}{\\tilde{\\mathcal{Z}}_1} + \\frac{1}{\\tilde{\\mathcal{Z}}_2} + \\cdots \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+
+      <p> Now we know what impedance is, let's see if we can calculate the impedance of the big 3, resistors,
+        capacitors and inductors. For resistors we basically already have it, considering impedance is just
+        a more decorated version of resistance anyway: </p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\tilde{\\mathcal{Z}}_R = R \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      
+
+      <p> For the other 2, we'll have to do a little bit more work to get their impedances. We do this by looking
+        for a relationship between voltage and current, and then rearranging to get \\( \\frac{\\tilde{V}}{\\tilde{I}} \\).
+      </p>
+
+      <p> Starting with a capacitor, we know that \\( Q = CV \\), which gives us a \\( V \\), but not an \\( I \\). And
+        you were about to lose hope, until I saved the day by reminding you that the current \\(I\\) is just a rate of
+        change of charge, \\( I = \\frac{dQ}{dt} \\). So that means we CAN get an impedance after all. Gosh, what
+        would you do without me? </p>
+
+      \\[
+        \\frac{dQ}{dt} = \\tilde{I} = C \\frac{d\\tilde{V}}{dt}
+      \\]
+
+      <p> Plug in.. </p>
+
+      \\[
+        \\tilde{I} = C \\frac{d\\tilde{V}}{dt} = j\\omega C \\tilde{V}
+      \\]
+
+      <p> And rearrange to get \\( \\frac{\\tilde{V}}{\\tilde{I}} \\):</p>
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\tilde{\\mathcal{Z}}_C = \\frac1{j\\omega C} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+      <p> Inductors are a bit easier, since there is already an equation linking potential difference and 
+        inductance: </p>
+
+      \\[
+        V = L\\frac{dI}{dt}
+      \\]
+
+      <p> Add some wiggles on top of the relevant letters, and then recall that 
+        \\( \\tilde{I} = I_0e^{-j\\omega t} \\):</p>
+
+      \\[
+        \\tilde{V} = L\\frac{d\\tilde{I}}{dt} = jL\\omega\\tilde{I}
+      \\]
+
+      \\[
+        \\downarrow
+      \\]
+
+      <div class="hover-wrapper">
+        <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\tilde{\\mathcal{Z}}_L = j\\omega L \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+          </div><div class="formula-tooltip-desc">
+            ...
+          </div></span>
+        </div>
+      </div>
+
+    
 
       <h3>RMS Values: The Average That Actually Works</h3>
 
@@ -9162,30 +9841,6 @@ const subtopics = {
       <p>\\( V_{\\text{rms}} = \\frac{V_0}{\\sqrt{2}} \\), \\( I_{\\text{rms}} = \\frac{I_0}{\\sqrt{2}} \\)</p>
 
       <p>This gives the equivalent DC value for power dissipation.</p>
-
-      <h3>Complex Impedance: The One Formula to Rule Them All</h3>
-
-      <p>Impedance \\( Z \\) is like resistance, but for AC.</p>
-
-      <p>It’s complex: \\( Z = R + iX \\), where \\( X \\) is reactance.</p>
-
-      <ul>
-        <li><strong>Resistor</strong>: \\( Z_R = R \\)</li>
-        <li><strong>Capacitor</strong>: \\( Z_C = \\frac{1}{i\\omega C} \\)</li>
-        <li><strong>Inductor</strong>: \\( Z_L = i\\omega L \\)</li>
-      </ul>
-
-      <p>Now you can use \\( \\tilde{V} = \\tilde{I} Z \\), just like Ohm’s Law.</p>
-
-      <h3>Series LRC Circuit: The Classic Example</h3>
-
-      <p>Total impedance:</p>
-
-      <p>\\( Z = R + i\\left(\\omega L - \\frac{1}{\\omega C}\\right) \\)</p>
-
-      <p>Resonance when \\( \\omega L = 1/\\omega C \\) → \\( \\omega_0 = 1/\\sqrt{LC} \\)</p>
-
-      <p>At resonance, \\( Z = R \\), current is max, power is max.</p>
 
       <h3>Power in AC Circuits</h3>
 

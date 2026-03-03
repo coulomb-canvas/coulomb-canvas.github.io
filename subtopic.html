@@ -125,7 +125,7 @@
     const topic = topics.find(t => t.id === topicId);
 
     if (topic && topic.id && topic.title && topicLink) {
-      topicLink.href = `topic.html?topic=${topic.id}`;
+      topicLink.href = `topic.html?topic=${topic.id}&year=${topic.subyear}`;
       topicLink.textContent = `← Back to "${topic.title}"`;
     } else {
       topicLink.href = "index.html";
@@ -169,6 +169,7 @@
       }
     });
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const subtopicId = urlParams.get("subid");
@@ -183,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const nextButton = document.getElementById("next-subtopic-button");
         if (nextButton) {
           nextButton.addEventListener("click", () => {
-            window.location.href = `subtopic.html?subid=${nextSubtopic.subid}&topic=${topicId}`;
+            window.location.href = `subtopic.html?subid=${nextSubtopic.subid}&topic=${topicId}&year=${topic.subyear}`;
           });
         }
       } else {
@@ -200,12 +201,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (currentIndex > 0 && backButton) {
     const previousSubtopic = topic.subtopics[currentIndex - 1];
     backButton.addEventListener("click", () => {
-      window.location.href = `subtopic.html?subid=${previousSubtopic.subid}&topic=${topicId}`;
+      window.location.href = `subtopic.html?subid=${previousSubtopic.subid}&topic=${topicId}&year=${topic.subyear}`;
     });
   } else if (backButton) {
     backButton.style.display = "none"; // hide if it's the first subtopic
   }
 });
+
+
 
 document.querySelectorAll(".image").forEach(box => {
   box.addEventListener("mouseenter", () => document.body.classList.add("dimmed"));

@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-03T13:34:40.579Z
+// Generated: 2026-03-03T06:34:51.426Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 80 existing hand-written entries
-//   - 2 Markdown-generated entries
+//   - 1 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -10951,85 +10951,14 @@ const subtopics = {
       <p>which for this example we will write in exponential form:</p>
 
       \\[
-        \\phi_1(x) = Ie^{ikx} + Re^{-ikx}
+        \\phi_1(x) = e^{ikx} + Re^{-ikx}
       \\]
 
       \\[
         \\phi_2(x) = Te^{ik'x} + Se^{-ik'x}
       \\]
 
-      <p> Now the letters may seem random, but there is actually some logic to them. \\( I \\) is for incident or
-        initial. This is the amplitude of the initial wave being produced. \\( R \\) is for reflected. When that
-        initial wave hits the boundary, some of it is reflected back, which is why this is a left-travelling
-        wave (\\(e^{-ikx}\\)). And if some is reflected, we know that the other part is <em>transmitted</em>, hence
-        the \\( T \\). </p>
-
-      <p> And the \\( S \\)... <em>is</em> just a random letter icl. In theory it would refer to a wave coming from
-        the right for some reason, but there IS no reason any waves should be coming from the right, so that means
-        \\( S=0 \\). Also for simplicity, we'll say that the incident wave has an amplitude of one, so \\( I=1 \\).</p>
-
-      \\[
-        \\phi_1(x) = e^{ikx} + Re^{-ikx}
-      \\]
-
-      \\[
-        \\phi_2(x) = Te^{ik'x}
-      \\]
-
-      <p> Now it's only \\(R\\) and \\(T\\) we need to work out, which we can do by using the continuity boundary
-        conditions we had from before. Starting with the first one</p>
-
-      \\[
-        \\phi_1(x=0) = \\phi_2(x=0)
-      \\]
-      \\[
-        \\downarrow
-      \\]
-      \\[
-        e^{ik0} + Re^{-ik0} = Te^{ik'0}
-      \\]
-      \\[
-        \\downarrow
-      \\]
-      \\[
-        1 + R = T
-      \\]
-
-      <p> And then the second one:</p>
-
-      \\[
-        \\frac{d\\phi_1(x=0)}{dx} = \\frac{d\\phi_2(x=0)}{dx}
-      \\]
-      \\[
-        \\downarrow
-      \\]
-      \\[
-        ike^{ik0} - ikRe^{-ik0} = ik'Te^{ik'0}
-      \\]
-      \\[
-        \\downarrow
-      \\]
-      \\[
-        ik(1-R) = ik'T
-      \\]
-
-      <p> And I'm lazy so I can't be bothered to do it myself but if you do some substituting and then play the
-        shell game with the variables, you get formulae for \\(R\\) and \\(T\\).
-
-      <div class="hover-wrapper">
-        <div class="formula-container">
-          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ R = \\frac{k-k'}{k-k'}, \\quad \\text{and} \\quad T = \\frac{2k'}{k+k'} \\]
-          </div>
-          <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
-          </div><div class="formula-tooltip-desc">
-            ...
-          </div></span>
-        </div>
-      </div>
-
-
+      <p> Now the letters may seem random, but there is actually some logic
 
 
       <h3>Another Egg Sample! Infinite Potential Well</h3>
@@ -11072,66 +11001,181 @@ const subtopics = {
   },
 
   "fundamental": {
-    title: "Fundamental Forces and Particles",
+    title: "Fundamental Particles and Forces",
     content: `
-      <p><em>For the negative 2 people who care, the way the code for this website works it that, instead of creating a seperate HTML file for each page, I have a JavaScript file with a list, containing the HTML in a string. Then when you click a subtopic, the relevant HTML is pasted into the 'subtopic.html' file, via <code>page.innerHTML = subtopics.content</code>. There are two problems with this though. For one, writing this much HTML is a faf, because I have to use a bunch of tags. So I have to use p tags every time I want to do a new sentence etc. Secondly, since I'm writing HTML in a JavaScript string, I don't even get the benefits of VS code's autocomplete or colouring, bc thinks its just a giant string so it's just a big brown mess.</em></p>
-      <p><em>However, I've now developed a way to use Node.js to create a system where I just type what I want into a Markdown file, and then put <code>npm run generate</code> in the terminal, and it automatically converts it into HTML and places it in the string for me. And this is the first file I'll be writing this way!</em></p>
-      <h3>Fundamental Forces</h3>
-      <p>The <strong>electromagnetic force</strong>, EM force for short, acts on anything with an electric charge</p>
-      <p>The <strong>weak nuclear force</strong>, or just the weak force, acts on anything with a 'weak charge'. And don't let the name fool you, it's actually pretty strong, stronger than the so-called strong force. It just has a much smaller range, which makes it <em>look</em> weak. What the bloody hell is a weak charge, you ask? I ain't got a clue so don't ask me...</p>
-      <p>And finally, the <strong>strong nuclear force</strong>, or the strong force (I introduced him after labeling him as weaker than the weak force, sorry bro) acts between particles with 'colour charge'. Colour? That sounds interesting, can't wait to learn about that!!</p>
-      <p>Oh yeah, and there's also <strong>gravity</strong> too, but it's actually really really <em>really</em> weak, so like we'll ignore it for this topic. Plus it's been the focus of like everything up until now, let's give the other ones a change, ey?</p>
-      <h3>Fundamental Particles</h3>
-      <p>We know about protons, electrons and neutrons, and up until now these have been the fundamental particles. But there are more. Much much more. In fact, protons and neutrons can be split up into smaller parts.</p>
-      <h4>Fermions</h4>
-      <p>Fermions are very much the main characters. In short these are / make up the particles we've been used to all this while, protons, neutrons and electrons. And the fermions are also split into two groups</p>
+      <h3>Particle Physics: When You Realise Everything Is Made of Stuff You Can’t See</h3>
+
+      <p>Right. Let’s talk about <strong>particle physics</strong>.</p>
+
+      <p>No, not the kind where you split atoms. We’re talking about <strong>what everything is made of</strong> — 
+      and why you’re basically just a walking bag of quarks, leptons, and a whole lot of empty space.</p>
+
+      <p>And yes — your mass isn’t from protons and neutrons. It’s from the energy of the gluons holding them together.</p>
+
+      <p>But we’ll get to that.</p>
+
+      <h3>Relativistic Energy: When Mass Is Just a Form of Energy</h3>
+
+      <p>Remember Einstein’s famous equation?</p>
+
+      <p>\\( E = mc^2 \\)</p>
+
+      <p>It’s not the full story.</p>
+
+      <p>The full version is:</p>
+
+      <p>\\( E^2 = (pc)^2 + (mc^2)^2 \\)</p>
+
+      <p>Where:</p>
       <ul>
-      <li>First we have the <strong>leptons</strong>, which include the one and only electron. So for now just think of leptons as relatives of the electron. There are two kinds of leptons, the ones which are also negatively charged like the electron (i.e. the muon and the tauon), and the neutrinos (electron neutrino, muon neutrino, and the tauon neutrino) which have no charge. Neutrinos are also very very small compared to the rest of the family.</li>
-      <li>Secondly we have the <strong>quarks</strong>, which make up the protons and neutrons. These can also be thought of as being split into two groups: the quarks with a +2/3 charge (up quarks, charm quarks and top quarks) and the ones with a -1/3 charge (down quarks, strange quarks and top quarks).</li>
+        <li>\\( E \\) = total energy</li>
+        <li>\\( p \\) = momentum</li>
+        <li>\\( m \\) = rest mass</li>
       </ul>
-      <p>And for some bloody reason (nobody knows why...) they all come in 3 generations. So we have muons which are heavier electrons and tauons which are heavier muons (same is true of their neutrino counterparts). There are charm quarks which are heavy up quarks, and top quarks which are heavy charm quarks. And there are strange quarks which are heavy down quarks and bottom quarks which are heavy strange quarks.</p>
-      <p>What makes this especially freaky is the fact that... the heavier versions don't bloody do anything? Well not that they don't do anything but like... pretty much everything in the universe uses the lightest version. We mostly deal with electrons, as well as protons and neutrons (which are made up of up and down quarks), and the other versions kinda just... show up? (Like how we mentioned muons that one time in Special Relativity). So why the universe insists on creating heavier versions, God alone knows.</p>
-      <h4>Bosons</h4>
-      <p>Here's something a bit newer. Up until now we've thought of forces as just things which happen. Turns out there are tiny particles which do the work. These are called <strong>Bosons</strong>.</p>
+
+      <p>If the particle is at rest (\\( p = 0 \\))? Then \\( E = mc^2 \\).</p>
+
+      <p>If it’s massless (\\( m = 0 \\))? Then \\( E = pc \\) — like for photons.</p>
+
+      <h3>Mass in Natural Units: When c = 1 and eV = Mass</h3>
+
+      <p>In particle physics, we’re lazy. So we set \\( c = 1 \\), and measure mass in energy units.</p>
+
+      <p>Example: proton mass = 938 MeV/c².</p>
+
+      <p>But since \\( c = 1 \\), we just say “938 MeV” and everyone knows we mean mass.</p>
+
+      <p>To convert back to kg?</p>
+
+      <p>\\( m = \\frac{938 \\times 10^6 \\times 1.602 \\times 10^{-19}}{(3 \\times 10^8)^2} = 1.67 \\times 10^{-27} \\, \\text{kg} \\)</p>
+
+      <p>But honestly? Nobody does that. We stick with MeV.</p>
+
+      <h3>The Standard Model: The Periodic Table of Fundamental Particles</h3>
+
+      <p>Everything in the universe is made from a few fundamental particles — and they come in two types:</p>
+
       <ul>
-      <li>The first boson is one we all know and love, the <strong>photon</strong>, or more accurately, the <strong>virtual photon</strong>. The virtual photon is what carries the electromagnetic force.</li>
-      <li>The <strong>gluon</strong> is what carries the strong nuclear force (because it <em>glues</em> the nucleus together).</li>
-      <li>The weak force actually has 3 potential candidates to choose from, the positive W boson, the negative W boson, and the neutral \\(Z^0\\) boson. Which one it picks depends on the interaction, as we will soon see!</li>
+        <li><strong>Fermions</strong>: the stuff that makes matter (like you)</li>
+        <li><strong>Bosons</strong>: the stuff that carries forces (like photons)</li>
       </ul>
-      <h4>Antiparticles</h4>
-      <p>Another cool phenomenon is the existance of <strong>antiparticles</strong>. Each fermion and boson has an antiparticle, which has the same mass, same spin, same pretty much everything, except it has an opposite charge.</p>
-      <p>So for example, the up quark has an evil twin brother known as the antiup quark. The electron has an evil twin sister known as the positron. The bottom quark has an evil twin brother called the antibottom. Every particle's evil twin has the same name with the 'anti-' suffix at the front (except the electron).</p>
-      <h3>Leptons</h3>
-      <p>Now it's time for use to look at these particle types in more detail. Like I said before, there are the normal leptons like electrons and muons, and then their neutrino counterparts (I know that's probably slightly neutrinophobic, in that I'm suggesting neutrinos are weird, but I don't know what else to call the non-neutrinos so 'normal' will have to do). The normal leptons have a -1 charge, and the neutrinos have 0 charge.</p>
-      <p>When it comes to learning about these different particle types, the main challenge ('challenge' is probably overhyping the difficulty, it's quite simple but takes up some of your Hippocampus' RAM) is remembering which particles feel which forces. In the case of leptons, these are particles which feal the <em>weak force</em> and the <em>EM force</em> (actually nvm, neutrinos don't actually experience the EM force bc they don't have electric charge, but you get the point). Leptons have no relationship with the strong force. No matter how much strong force there is, the leptons just won't respond.</p>
-      <p>BTW, since leptons experience the weak force, this must mean they have a weak charge (or <em>weak isospin</em> if you want to be a nerd). And they do! The normal leptons have a positive weak charge (\\(T_W = +1/2\\)) and neutrinos have a negative weak charge (\\(T_W = -1/2\\)), and these isospins are what bosons use to tell the neutrinos and normal leptons apart. Unfortunately W bosons don't have very good eyesight, so they can't see how massive the leptons are or what charge they are. They also don't have very good taste buds, so they can't taste the difference between different flavours.</p>
-      <p>Why do these isospins matter? Because the \\(W\\)-bosons have them! That means by interacting with one of these bosons, you can turn a non-neutrino into a neutrino, or a neutrino into a non-neutrino.</p>
-      <p>The \\(W^+\\) boson has a \\(T_W = +1\\) weak charge. So if a \\(W^+\\) boson gets eaten up by a neutrino – let's say a muon neutrino – that means the neutrino's isospin will increase by 1. Neutrinos have isospins of \\(T_W = -1/2\\), so increasing it by one changes it to \\(T_W = +1/2\\), which means it's now a non-neutrino! We can write this as a formula:</p>
-      <p>\\[ \\mu^- + W^+ = \\nu_\\mu \\]</p>
-      <p>The final thing to learn about is <strong>lepton number</strong>. Each lepton and lepton neutrino has a lepton number of \\( L=+1 \\), and each antilepton and antineutrino has a lepton number of \\( L=-1 \\). In fact, each individual flavour of leptons and neutrinos has their own lepton number (\\( L_e=+1, ~ L_\\mu=+1, ~ L_\\tau=+1 \\)) and each antilepton and antineutrino has their own lepton number (\\( L_e=-1, ~ L_\\mu=-1, ~ L_\\tau=-1 \\)).</p>
-      <p>And for some strange unknown reason, in any interation, the total lepton number before the interaction must be the same as the total lepton number after the interaction. This will come in handy a bit later down the line.</p>
-      <h3>Quarks</h3>
-      <p>Echoing what I said earlier, some quarks have a \\(+2/3\\) charge (the up, charm and top), and the others have a \\(-1/3\\) charge (the down, strange and bottom). The positively charged quarks have a \\(T_W = +1/2\\) weak charge and the negatively charged quarks have a \\(T_W = -1/2\\). Like with leptons, that means quarks can eat or spit out a \\(W\\)-boson to change from a top-row quark to a bottom-row quark.</p>
-      <p>Since all quarks have electric charge and weak charge, quarks can feel the EM force and the weak force. They also have something called colour charge, which means they interact with the strong force. What is colour, you ask? There are 3 versions of the strong nuclear force, red (\\(r\\)), green (\\(g\\)), and blue (\\(b\\)). Each quark will have one of these colours associated with them. The quarks' evil twin relatives also have colours, but these are anticolours: antired (\\(\\bar{r}\\)), antiblue (\\(\\bar{b}\\)) and antigreen (\\(\\bar{g}\\)).</p>
-      <p>Any <em>hadron</em> (that's the proper name for a particle made by combining quarks, such as a proton or a neutron) must overall be colourless. This can be done either by combining a colour with an anticolour (i.e. \\( r\\bar{r}\\), \\( b\\bar{b}\\) or \\( g\\bar{g}\\)) or by combining all three (i.e. \\(rgb\\) or \\(\\bar{rgb}\\)).</p>
-      <p>And depending on whether you put 2 together (quark-antiquark pair) or 3 together, the combined particle is given a different name.</p>
+
+      <p>And yes — you’re made of fermions. The forces you feel are carried by bosons.</p>
+
+      <h3>Fermions: The Matter Particles</h3>
+
+      <p>Fermions have half-integer spin: \\( \\frac{1}{2}\\hbar, \\frac{3}{2}\\hbar, \\ldots \\)</p>
+
+      <p>They come in two flavours:</p>
+
+      <h4>Leptons</h4>
       <ul>
-      <li><strong>Baryons</strong> are what we get when we combine 3 quarks or 3 antiquarks, and contain the particles we all know and love, the protons and neutrons. Protons contain 2 up quarks and one down quark (\\( uud \\)) and neutrons contain 2 down quarks and one up quark (\\(udd\\)). If you add up the charges, you'll see that this actually produces the positive and the neutral charge of each particle respectively. There are also a bunch of other ones you probably ain't heard of, like the sigma particle, \\( \\Sigma^0(uds) \\).</li>
-      <li><strong>Mesons</strong> are a combination of 1 quark and one antiquark. You can't just combine any two though, the overall charge needs to be either zero or some integer. An example of this is the \\( D^0(c\\bar{u})\\) particle</li>
+        <li>Electron (\\( e^- \\)), muon (\\( \\mu^- \\)), tau (\\( \\tau^- \\)) — all charged</li>
+        <li>Neutrinos (\\( \\nu_e, \\nu_\\mu, \\nu_\\tau \\)) — neutral, very light</li>
       </ul>
-      <p>And technically it doesn't have to stop at 2 or 3, you can have four quarks (called tetraquarks) or even five quarks (called pentaquarks) together so long as the result is colourless. But these are quite rare as they require a lot of energy, so we'll stick with these for now.</p>
-      <p>And a bit like how leptons had lepton numbers, hadrons have <strong>baryon numbers</strong>, which describe how baryon-eqsue a particle is. Baryons have a baryon number of \\( B=1 \\) and antibaryons have a number of \\( B=-1\\). Mesons have a baryon number of \\( B=0 \\), because they ain't flipping baryons.</p>
-      <h3>Conservation Laws</h3>
-      <p>You've seen conservation of energy and conservation of momentum.</p>
-      <p>When it comes to particle interactions, there are also a number of things which need to be conserved</p>
-      <ol>
-      <li>Electric charge: Every interaction must conserve electric charge</li>
-      <li>Colour charge: Well only the strong force sees colour, so only the strong force 'needs' to conserve it. Either way the colour before the interaction must be the same as the colour after the interaction</li>
-      <li>Baryon number: The number of quarks on both sides of the interaction must be the same in any interaction</li>
-      <li>Lepton number: This only needs to be conserved by the weak interaction, since the EM interaction can't change leptons and the strong force don't see leptons</li>
-      <li>Quark flavour: This needs to be conserved by the strong and EM interactions. Like I said before, \\(W\\)-bosons can change quark flavour by making a top-row quark a bottom-row quark. But the weak interaction is the only one which can do this.</li>
-      <li>Kinematics: Energy and momentum still need to be conserved. C'mon now, the basics are still important y'know.</li>
-      </ol>
+
+      <p>Each has a corresponding antiparticle (e.g. \\( e^+ \\)).</p>
+
+      <p>And each carries a “family” lepton number: \\( L_e, L_\\mu, L_\\tau \\).</p>
+
+      <p>And yes — lepton number is conserved. For now.</p>
+
+      <h4>Quarks</h4>
+      <ul>
+        <li>Up, down</li>
+        <li>Charm, strange</li>
+        <li>Top, bottom</li>
+      </ul>
+
+      <p>They make up protons and neutrons. But you never see them alone — they’re always confined.</p>
+
+      <p>And they carry three types of charge:</p>
+      <ul>
+        <li><strong>Electric charge</strong>: up = +2/3, down = -1/3</li>
+        <li><strong>Weak isospin</strong>: couples to W and Z bosons</li>
+        <li><strong>Colour charge</strong>: red, green, blue — the source of the strong force</li>
+      </ul>
+
+      <h3>Bosons: The Force Carriers</h3>
+
+      <p>Bosons have integer spin: \\( 0\\hbar, 1\\hbar, 2\\hbar, \\ldots \\)</p>
+
+      <p>They mediate the forces:</p>
+
+      <ul>
+        <li><strong>Photon (\\( \\gamma \\))</strong>: electromagnetic force — infinite range</li>
+        <li><strong>W±, Z⁰ bosons</strong>: weak force — short range (~10⁻¹⁸ m)</li>
+        <li><strong>Gluons</strong>: strong force — binds quarks, range ~10⁻¹⁵ m</li>
+        <li><strong>Higgs boson</strong>: gives mass to fundamental particles</li>
+      </ul>
+
+      <p>And yes — the weak force is “weak” because it’s short-ranged, not because it’s feeble.</p>
+
+      <h3>Hadrons: When Quarks Get Together</h3>
+
+      <p>Quarks don’t exist alone. They form composite particles called <strong>hadrons</strong>.</p>
+
+      <p>Two types:</p>
+
+      <h4>Mesons</h4>
+      <ul>
+        <li>Quark + antiquark (\\( q\\bar{q} \\))</li>
+        <li>Colour-neutral (e.g. red + antired)</li>
+        <li>Examples: \\( K^+ = u\\bar{s} \\), \\( D^0 = c\\bar{u} \\), \\( B^- = b\\bar{u} \\)</li>
+      </ul>
+
+      <h4>Baryons</h4>
+      <ul>
+        <li>Three quarks (\\( qqq \\)) — one red, one green, one blue → colourless</li>
+        <li>Examples: proton = \\( uud \\), neutron = \\( udd \\)</li>
+      </ul>
+
+      <p>There are also exotic hadrons — like tetraquarks and pentaquarks — but they’re rare and unstable.</p>
+
+      <h3>Conservation Laws: The Rules of the Game</h3>
+
+      <p>In any particle reaction, certain quantities must be conserved:</p>
+
+      <ul>
+        <li><strong>Electric charge</strong>: total before = total after</li>
+        <li><strong>Baryon number (B)</strong>: baryons = +1, antibaryons = -1</li>
+        <li><strong>Lepton number (L)</strong>: leptons = +1, antileptons = -1</li>
+        <li><strong>Colour</strong>: all observed particles are colourless</li>
+      </ul>
+
+      <p>Example: Is this reaction possible?</p>
+
+      <p>\\( \\pi^- (d\\bar{u}) + p (uud) \\to \\pi^0 (u\\bar{u}) + n (udd) + \\pi^- (d\\bar{u}) + \\pi^+ (u\\bar{d}) \\)</p>
+
+      <p>Check charge: -1 + 1 = 0 + 0 -1 + 1 → 0 = 0 ✓</p>
+      <p>Baryon number: 0 + 1 = 0 + 1 + 0 + 0 → 1 = 1 ✓</p>
+      <p>Lepton number: 0 = 0 ✓</p>
+      <p>Colour: all colourless ✓</p>
+
+      <p>So yes — it’s allowed.</p>
+
+      <p>But this one?</p>
+
+      <p>\\( \\nu_\\mu + p \\to \\mu^+ + n \\)</p>
+
+      <p>Lepton number: \\( L_\\mu = +1 + 0 = +1 \\), but final: \\( L_\\mu = -1 + 0 = -1 \\) → not conserved.</p>
+
+      <p>So no. It’s forbidden.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>\\( E^2 = (pc)^2 + (mc^2)^2 \\)</li>
+        <li>Mass in MeV/c² — but we just say MeV</li>
+        <li>Fermions: matter (leptons, quarks)</li>
+        <li>Bosons: force carriers (photon, W/Z, gluons, Higgs)</li>
+        <li>Quarks have colour, electric, and weak charge</li>
+        <li>Hadrons: mesons (\\( q\\bar{q} \\)), baryons (\\( qqq \\))</li>
+        <li>Conserved: charge, baryon number, lepton number, colour</li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care how many particles you know.  
+      It only cares about the conservation laws.</p>
     `
   },
 
@@ -12527,7 +12571,7 @@ const subtopics = {
   "mathtrial": {
     title: "Maths! The best thing ever!",
     content: `
-      <p>I believe in God, there was some one guy who said &quot;Mathematics is the language with which God created the universe&quot;. That makes this section seem way more philosophical than it probably is. Anyway, you get to learn the language of the universe. By the time you're done, you will be able to order a coffee and ask for directions in God's language.</p>
+      <p>I believe there was some one guy who said &quot;Mathematics is the language with which God created the universe&quot;. That makes this section seem way more philosophical than it probably is. Anyway, you get to learn the language of the universe. By the time you're done, you will be able to order a coffee and ask for directions in God's language.</p>
       <p>People often say, if you want to study maths at university, don't study maths at university. I don't know if you've seen the stuff they do in maths, but it's certainly strange. Things like analysis, or proving that 0 is not 1, or having to verify every individual step of a calculation is valid.</p>
     `
   }

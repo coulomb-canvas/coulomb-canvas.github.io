@@ -1,9 +1,9 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-03T13:34:40.579Z
+// Generated: 2026-03-03T09:30:05.411Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 80 existing hand-written entries
+//   - 79 existing hand-written entries
 //   - 2 Markdown-generated entries
 
 const subtopics = {
@@ -11076,12 +11076,12 @@ const subtopics = {
     content: `
       <p><em>For the negative 2 people who care, the way the code for this website works it that, instead of creating a seperate HTML file for each page, I have a JavaScript file with a list, containing the HTML in a string. Then when you click a subtopic, the relevant HTML is pasted into the 'subtopic.html' file, via <code>page.innerHTML = subtopics.content</code>. There are two problems with this though. For one, writing this much HTML is a faf, because I have to use a bunch of tags. So I have to use p tags every time I want to do a new sentence etc. Secondly, since I'm writing HTML in a JavaScript string, I don't even get the benefits of VS code's autocomplete or colouring, bc thinks its just a giant string so it's just a big brown mess.</em></p>
       <p><em>However, I've now developed a way to use Node.js to create a system where I just type what I want into a Markdown file, and then put <code>npm run generate</code> in the terminal, and it automatically converts it into HTML and places it in the string for me. And this is the first file I'll be writing this way!</em></p>
-      <h3>Fundamental Forces</h3>
+      <h1>Fundamental Forces</h1>
       <p>The <strong>electromagnetic force</strong>, EM force for short, acts on anything with an electric charge</p>
       <p>The <strong>weak nuclear force</strong>, or just the weak force, acts on anything with a 'weak charge'. And don't let the name fool you, it's actually pretty strong, stronger than the so-called strong force. It just has a much smaller range, which makes it <em>look</em> weak. What the bloody hell is a weak charge, you ask? I ain't got a clue so don't ask me...</p>
       <p>And finally, the <strong>strong nuclear force</strong>, or the strong force (I introduced him after labeling him as weaker than the weak force, sorry bro) acts between particles with 'colour charge'. Colour? That sounds interesting, can't wait to learn about that!!</p>
       <p>Oh yeah, and there's also <strong>gravity</strong> too, but it's actually really really <em>really</em> weak, so like we'll ignore it for this topic. Plus it's been the focus of like everything up until now, let's give the other ones a change, ey?</p>
-      <h3>Fundamental Particles</h3>
+      <h1>Fundamental Particles</h1>
       <p>We know about protons, electrons and neutrons, and up until now these have been the fundamental particles. But there are more. Much much more. In fact, protons and neutrons can be split up into smaller parts.</p>
       <h4>Fermions</h4>
       <p>Fermions are very much the main characters. In short these are / make up the particles we've been used to all this while, protons, neutrons and electrons. And the fermions are also split into two groups</p>
@@ -11107,31 +11107,11 @@ const subtopics = {
       <p>BTW, since leptons experience the weak force, this must mean they have a weak charge (or <em>weak isospin</em> if you want to be a nerd). And they do! The normal leptons have a positive weak charge (\\(T_W = +1/2\\)) and neutrinos have a negative weak charge (\\(T_W = -1/2\\)), and these isospins are what bosons use to tell the neutrinos and normal leptons apart. Unfortunately W bosons don't have very good eyesight, so they can't see how massive the leptons are or what charge they are. They also don't have very good taste buds, so they can't taste the difference between different flavours.</p>
       <p>Why do these isospins matter? Because the \\(W\\)-bosons have them! That means by interacting with one of these bosons, you can turn a non-neutrino into a neutrino, or a neutrino into a non-neutrino.</p>
       <p>The \\(W^+\\) boson has a \\(T_W = +1\\) weak charge. So if a \\(W^+\\) boson gets eaten up by a neutrino – let's say a muon neutrino – that means the neutrino's isospin will increase by 1. Neutrinos have isospins of \\(T_W = -1/2\\), so increasing it by one changes it to \\(T_W = +1/2\\), which means it's now a non-neutrino! We can write this as a formula:</p>
-      <p>\\[ \\mu^- + W^+ = \\nu_\\mu \\]</p>
+      <p>\\[
+      \\mu^- + W^+ = \\nu_\\mu
+      \\]</p>
       <p>The final thing to learn about is <strong>lepton number</strong>. Each lepton and lepton neutrino has a lepton number of \\( L=+1 \\), and each antilepton and antineutrino has a lepton number of \\( L=-1 \\). In fact, each individual flavour of leptons and neutrinos has their own lepton number (\\( L_e=+1, ~ L_\\mu=+1, ~ L_\\tau=+1 \\)) and each antilepton and antineutrino has their own lepton number (\\( L_e=-1, ~ L_\\mu=-1, ~ L_\\tau=-1 \\)).</p>
       <p>And for some strange unknown reason, in any interation, the total lepton number before the interaction must be the same as the total lepton number after the interaction. This will come in handy a bit later down the line.</p>
-      <h3>Quarks</h3>
-      <p>Echoing what I said earlier, some quarks have a \\(+2/3\\) charge (the up, charm and top), and the others have a \\(-1/3\\) charge (the down, strange and bottom). The positively charged quarks have a \\(T_W = +1/2\\) weak charge and the negatively charged quarks have a \\(T_W = -1/2\\). Like with leptons, that means quarks can eat or spit out a \\(W\\)-boson to change from a top-row quark to a bottom-row quark.</p>
-      <p>Since all quarks have electric charge and weak charge, quarks can feel the EM force and the weak force. They also have something called colour charge, which means they interact with the strong force. What is colour, you ask? There are 3 versions of the strong nuclear force, red (\\(r\\)), green (\\(g\\)), and blue (\\(b\\)). Each quark will have one of these colours associated with them. The quarks' evil twin relatives also have colours, but these are anticolours: antired (\\(\\bar{r}\\)), antiblue (\\(\\bar{b}\\)) and antigreen (\\(\\bar{g}\\)).</p>
-      <p>Any <em>hadron</em> (that's the proper name for a particle made by combining quarks, such as a proton or a neutron) must overall be colourless. This can be done either by combining a colour with an anticolour (i.e. \\( r\\bar{r}\\), \\( b\\bar{b}\\) or \\( g\\bar{g}\\)) or by combining all three (i.e. \\(rgb\\) or \\(\\bar{rgb}\\)).</p>
-      <p>And depending on whether you put 2 together (quark-antiquark pair) or 3 together, the combined particle is given a different name.</p>
-      <ul>
-      <li><strong>Baryons</strong> are what we get when we combine 3 quarks or 3 antiquarks, and contain the particles we all know and love, the protons and neutrons. Protons contain 2 up quarks and one down quark (\\( uud \\)) and neutrons contain 2 down quarks and one up quark (\\(udd\\)). If you add up the charges, you'll see that this actually produces the positive and the neutral charge of each particle respectively. There are also a bunch of other ones you probably ain't heard of, like the sigma particle, \\( \\Sigma^0(uds) \\).</li>
-      <li><strong>Mesons</strong> are a combination of 1 quark and one antiquark. You can't just combine any two though, the overall charge needs to be either zero or some integer. An example of this is the \\( D^0(c\\bar{u})\\) particle</li>
-      </ul>
-      <p>And technically it doesn't have to stop at 2 or 3, you can have four quarks (called tetraquarks) or even five quarks (called pentaquarks) together so long as the result is colourless. But these are quite rare as they require a lot of energy, so we'll stick with these for now.</p>
-      <p>And a bit like how leptons had lepton numbers, hadrons have <strong>baryon numbers</strong>, which describe how baryon-eqsue a particle is. Baryons have a baryon number of \\( B=1 \\) and antibaryons have a number of \\( B=-1\\). Mesons have a baryon number of \\( B=0 \\), because they ain't flipping baryons.</p>
-      <h3>Conservation Laws</h3>
-      <p>You've seen conservation of energy and conservation of momentum.</p>
-      <p>When it comes to particle interactions, there are also a number of things which need to be conserved</p>
-      <ol>
-      <li>Electric charge: Every interaction must conserve electric charge</li>
-      <li>Colour charge: Well only the strong force sees colour, so only the strong force 'needs' to conserve it. Either way the colour before the interaction must be the same as the colour after the interaction</li>
-      <li>Baryon number: The number of quarks on both sides of the interaction must be the same in any interaction</li>
-      <li>Lepton number: This only needs to be conserved by the weak interaction, since the EM interaction can't change leptons and the strong force don't see leptons</li>
-      <li>Quark flavour: This needs to be conserved by the strong and EM interactions. Like I said before, \\(W\\)-bosons can change quark flavour by making a top-row quark a bottom-row quark. But the weak interaction is the only one which can do this.</li>
-      <li>Kinematics: Energy and momentum still need to be conserved. C'mon now, the basics are still important y'know.</li>
-      </ol>
     `
   },
 

@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-03T13:34:40.579Z
+// Generated: 2026-03-03T13:12:10.499Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -11120,18 +11120,6 @@ const subtopics = {
       <li><strong>Mesons</strong> are a combination of 1 quark and one antiquark. You can't just combine any two though, the overall charge needs to be either zero or some integer. An example of this is the \\( D^0(c\\bar{u})\\) particle</li>
       </ul>
       <p>And technically it doesn't have to stop at 2 or 3, you can have four quarks (called tetraquarks) or even five quarks (called pentaquarks) together so long as the result is colourless. But these are quite rare as they require a lot of energy, so we'll stick with these for now.</p>
-      <p>And a bit like how leptons had lepton numbers, hadrons have <strong>baryon numbers</strong>, which describe how baryon-eqsue a particle is. Baryons have a baryon number of \\( B=1 \\) and antibaryons have a number of \\( B=-1\\). Mesons have a baryon number of \\( B=0 \\), because they ain't flipping baryons.</p>
-      <h3>Conservation Laws</h3>
-      <p>You've seen conservation of energy and conservation of momentum.</p>
-      <p>When it comes to particle interactions, there are also a number of things which need to be conserved</p>
-      <ol>
-      <li>Electric charge: Every interaction must conserve electric charge</li>
-      <li>Colour charge: Well only the strong force sees colour, so only the strong force 'needs' to conserve it. Either way the colour before the interaction must be the same as the colour after the interaction</li>
-      <li>Baryon number: The number of quarks on both sides of the interaction must be the same in any interaction</li>
-      <li>Lepton number: This only needs to be conserved by the weak interaction, since the EM interaction can't change leptons and the strong force don't see leptons</li>
-      <li>Quark flavour: This needs to be conserved by the strong and EM interactions. Like I said before, \\(W\\)-bosons can change quark flavour by making a top-row quark a bottom-row quark. But the weak interaction is the only one which can do this.</li>
-      <li>Kinematics: Energy and momentum still need to be conserved. C'mon now, the basics are still important y'know.</li>
-      </ol>
     `
   },
 

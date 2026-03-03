@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-03T13:34:40.579Z
+// Generated: 2026-03-03T09:34:08.838Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -11110,28 +11110,6 @@ const subtopics = {
       <p>\\[ \\mu^- + W^+ = \\nu_\\mu \\]</p>
       <p>The final thing to learn about is <strong>lepton number</strong>. Each lepton and lepton neutrino has a lepton number of \\( L=+1 \\), and each antilepton and antineutrino has a lepton number of \\( L=-1 \\). In fact, each individual flavour of leptons and neutrinos has their own lepton number (\\( L_e=+1, ~ L_\\mu=+1, ~ L_\\tau=+1 \\)) and each antilepton and antineutrino has their own lepton number (\\( L_e=-1, ~ L_\\mu=-1, ~ L_\\tau=-1 \\)).</p>
       <p>And for some strange unknown reason, in any interation, the total lepton number before the interaction must be the same as the total lepton number after the interaction. This will come in handy a bit later down the line.</p>
-      <h3>Quarks</h3>
-      <p>Echoing what I said earlier, some quarks have a \\(+2/3\\) charge (the up, charm and top), and the others have a \\(-1/3\\) charge (the down, strange and bottom). The positively charged quarks have a \\(T_W = +1/2\\) weak charge and the negatively charged quarks have a \\(T_W = -1/2\\). Like with leptons, that means quarks can eat or spit out a \\(W\\)-boson to change from a top-row quark to a bottom-row quark.</p>
-      <p>Since all quarks have electric charge and weak charge, quarks can feel the EM force and the weak force. They also have something called colour charge, which means they interact with the strong force. What is colour, you ask? There are 3 versions of the strong nuclear force, red (\\(r\\)), green (\\(g\\)), and blue (\\(b\\)). Each quark will have one of these colours associated with them. The quarks' evil twin relatives also have colours, but these are anticolours: antired (\\(\\bar{r}\\)), antiblue (\\(\\bar{b}\\)) and antigreen (\\(\\bar{g}\\)).</p>
-      <p>Any <em>hadron</em> (that's the proper name for a particle made by combining quarks, such as a proton or a neutron) must overall be colourless. This can be done either by combining a colour with an anticolour (i.e. \\( r\\bar{r}\\), \\( b\\bar{b}\\) or \\( g\\bar{g}\\)) or by combining all three (i.e. \\(rgb\\) or \\(\\bar{rgb}\\)).</p>
-      <p>And depending on whether you put 2 together (quark-antiquark pair) or 3 together, the combined particle is given a different name.</p>
-      <ul>
-      <li><strong>Baryons</strong> are what we get when we combine 3 quarks or 3 antiquarks, and contain the particles we all know and love, the protons and neutrons. Protons contain 2 up quarks and one down quark (\\( uud \\)) and neutrons contain 2 down quarks and one up quark (\\(udd\\)). If you add up the charges, you'll see that this actually produces the positive and the neutral charge of each particle respectively. There are also a bunch of other ones you probably ain't heard of, like the sigma particle, \\( \\Sigma^0(uds) \\).</li>
-      <li><strong>Mesons</strong> are a combination of 1 quark and one antiquark. You can't just combine any two though, the overall charge needs to be either zero or some integer. An example of this is the \\( D^0(c\\bar{u})\\) particle</li>
-      </ul>
-      <p>And technically it doesn't have to stop at 2 or 3, you can have four quarks (called tetraquarks) or even five quarks (called pentaquarks) together so long as the result is colourless. But these are quite rare as they require a lot of energy, so we'll stick with these for now.</p>
-      <p>And a bit like how leptons had lepton numbers, hadrons have <strong>baryon numbers</strong>, which describe how baryon-eqsue a particle is. Baryons have a baryon number of \\( B=1 \\) and antibaryons have a number of \\( B=-1\\). Mesons have a baryon number of \\( B=0 \\), because they ain't flipping baryons.</p>
-      <h3>Conservation Laws</h3>
-      <p>You've seen conservation of energy and conservation of momentum.</p>
-      <p>When it comes to particle interactions, there are also a number of things which need to be conserved</p>
-      <ol>
-      <li>Electric charge: Every interaction must conserve electric charge</li>
-      <li>Colour charge: Well only the strong force sees colour, so only the strong force 'needs' to conserve it. Either way the colour before the interaction must be the same as the colour after the interaction</li>
-      <li>Baryon number: The number of quarks on both sides of the interaction must be the same in any interaction</li>
-      <li>Lepton number: This only needs to be conserved by the weak interaction, since the EM interaction can't change leptons and the strong force don't see leptons</li>
-      <li>Quark flavour: This needs to be conserved by the strong and EM interactions. Like I said before, \\(W\\)-bosons can change quark flavour by making a top-row quark a bottom-row quark. But the weak interaction is the only one which can do this.</li>
-      <li>Kinematics: Energy and momentum still need to be conserved. C'mon now, the basics are still important y'know.</li>
-      </ol>
     `
   },
 

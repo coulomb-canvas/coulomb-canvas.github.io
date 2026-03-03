@@ -29,49 +29,46 @@
     <img id="logo" src="images/logo.png"/>
   </div>
 
+  <div id="year-navigation-buttons">  
+    <button id="previous-year-button">← Back</button>
+    <button id="next-year-button">Next </button>
+  </div>
+
 
   <script src="data/topics.js"></script>
   <script>
     document.body.style.overflow = "hidden";
     const topicContainer = document.getElementById("topic-container");
+    let year = 1;
 
-    topics.forEach(topic => {
-      const link = document.createElement("a");
-      link.href = `topic.html?topic=${topic.id}`;
-      link.classList.add("topic-image-link");
-
-      const img = document.createElement("img");
-      img.src = topic.image;
-      img.alt = topic.title;
-      img.classList.add("topic-image");
-
-    });
-
+    const mq = window.matchMedia("(max-width: 768px)");
+    function updateRadiusAndLayout() {
+          
+          if (mq.matches) {
+            radius = window.innerWidth / 2.4;
+          } else {
+            radius = 320;
+          }}
+    
     document.addEventListener("DOMContentLoaded", () => {
-      const topicContainer = document.getElementById("topic-container");
-      const numberOfTopics = topics.length;
-      let radius = 320; // distance from center
-      const mq = window.matchMedia("(max-width: 768px)");
-
-      function updateRadiusAndLayout() {
-        if (mq.matches) {
-          radius = window.innerWidth / 2.4;
-        } else {
-          radius = 320;
-        }
+      function reset() {
+        const topicContainer = document.getElementById("topic-container");
+        const numberOfTopics = topics.filter(t => t.subyear === year).length;
+        let radius = 320;
+        const mq = window.matchMedia("(max-width: 768px)");
 
         // REMOVE OLD ELEMENTS:
         topicContainer.innerHTML = "";
 
         // Now re-generate/render your elements with the new radius:
         topics.forEach((topic, index) => {
-          topics.forEach((topic, index) => {
+          if (topic.subyear == year) {
             const angle = ((index / numberOfTopics) * (2 * Math.PI)) - (Math.PI / 2);
             const x = Math.cos(angle) * radius;
             const y = Math.sin(angle) * radius;
 
             const link = document.createElement("a");
-            link.href = `topic.html?topic=${topic.id}`;
+            link.href = `topic.html?topic=${topic.id}&year=${topic.subyear}`;
             link.classList.add("topic-image-link");
             link.style.left = `calc(50vw + ${x}px)`; // 40px = half image width
             link.style.transform = 'translateX(-50%) translateY(-50%)';
@@ -82,6 +79,7 @@
             img.alt = topic.title;
             img.classList.add("topic-image");
 
+            
             const titleOverlay = document.createElement("div");
             titleOverlay.classList.add("topic-title");
             titleOverlay.textContent = topic.title;
@@ -90,10 +88,12 @@
             link.appendChild(titleOverlay);
             topicContainer.appendChild(link);
 
+          }
 
-          });
         });
       }
+      reset()
+      
 
       // Hook to resize and media query changes:
       window.addEventListener("resize", updateRadiusAndLayout);
@@ -102,10 +102,61 @@
       // Initial render:
       updateRadiusAndLayout();
 
+      // Year buttons:
+      const urlParams = new URLSearchParams(window.location.search);
+      const subtopicYear = urlParams.get("subyear");
+      const nextYearButton = document.getElementById("next-year-button");
+      const prevYearButton = document.getElementById("previous-year-button")
+
+      prevYearButton.style.display = "none"
+      const suffix = ["st", "nd", "rd", "th"]
+
+      function setYears() {
+          nextYearButton.textContent = year+1 + suffix[year] + " year"
+          prevYearButton.textContent = year-1 + suffix[year-2] + " year"
+      };
+      setYears();
+
+
+      if (nextYearButton) {
+        nextYearButton.addEventListener("click", () => {
+          year = year + 1;
+          setYears();
+          console.log(year)
+          reset()
+          if (year > 1) {
+            prevYearButton.style.display = "inline-block"
+          }
+          if (year == 4) {
+            nextYearButton.style.display = "none"
+          }
+        })
+      }
+
+
+      if (prevYearButton) {
+        prevYearButton.addEventListener("click", () => {
+          year = year - 1;
+          setYears();
+          reset()
+          console.log(year)
+          if (year < 4) {
+            nextYearButton.style.display = "inline-block"
+          }
+          if (year == 1) {
+            prevYearButton.style.display = "none"
+          }
+        })
+      }
+
+
+      
+
 
 
 
     });
+
 
 
   </script>

@@ -112,6 +112,46 @@ p {
   color: var(--text)
 }
 
+.left-speech {
+  background-color: white;
+  display: inline-block;
+  padding: 1vw;
+  color: var(--card);
+  font-size: 1.7vw;
+  font-weight: bold;
+  font-family: Njal;
+  opacity: 0.8;
+  line-height: 100%;
+  border-radius: 1vw;
+}
+
+.left-speech:hover {
+  background-color: rgb(110, 187, 255);
+  transition: background-color 0.2s ease;
+}
+
+.right-speech {
+  background-color: white;
+  display: inline-block;
+  padding: 1vw;
+  color: var(--card);
+  font-size: 1.7vw;
+  font-weight: bold;
+  font-family: Njal;
+  opacity: 0.8;
+  line-height: 100%;
+  border-radius: 1vw;
+}
+
+.right-speech p {
+  text-align: right;
+}
+
+.right-speech:hover {
+  background-color: rgb(255, 110, 110);
+  transition: background-color 0.2s ease;
+}
+
 u {
   display: flex;
   justify-content: center;
@@ -167,6 +207,7 @@ li {
   height: auto;
   margin: 0px;
   transition: transform 0.2s ease;
+
   border-radius: 0px;
   /* box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* MIGHT wanna get rid of this */
 }
@@ -949,6 +990,8 @@ body.dimmed::before {
 }
 
 
+
+
 /* ------------ Container for the formulae box ------------ */
 
 .formula-container {
@@ -1173,14 +1216,14 @@ body.dimmed::before {
 #next-subtopic-button {
   position: fixed;
   left: 91vw;
-  top: 94vh;
+  top: 90vh;
   z-index: 50;
 }
 
 #back-subtopic-button {
   position: fixed;
   left: 3.2vw;
-  top: 94vh;
+  top: 90vh;
   z-index: 50;
 }
 
@@ -1188,11 +1231,41 @@ body.dimmed::before {
   #next-subtopic-button {
     position: fixed;
     left: 79vw;
-    top: 92vh;
+    top: 88vh;
     z-index: 50;
   }
 
   #back-subtopic-button {
+    position: fixed;
+    left: 4vw;
+    top: 88vh;
+    z-index: 50;
+  }
+}
+
+#next-year-button {
+  position: fixed;
+  left: 89vw;
+  top: 90vh;
+  z-index: 50;
+}
+
+#previous-year-button {
+  position: fixed;
+  left: 3.2vw;
+  top: 90vh;
+  z-index: 50;
+}
+
+@media (max-width: 768px) {
+  #next-year-button {
+    position: fixed;
+    left: 79vw;
+    top: 92vh;
+    z-index: 50;
+  }
+
+  #previous-year-button {
     position: fixed;
     left: 4vw;
     top: 92vh;
@@ -1284,6 +1357,31 @@ body.dimmed::before {
 
 @media (max-width: 768px) {
   #navigation-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+  }
+}
+
+#year-navigation-buttons button {
+  background-color: #0066cc;
+  color: white;
+  font-family: "Njal", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#year-navigation-buttons button:hover {
+  background-color: #004a99;
+}
+
+@media (max-width: 768px) {
+  #year-navigation-buttons button {
     padding: 5px 10px;
     border: none;
     border-radius: 7px;

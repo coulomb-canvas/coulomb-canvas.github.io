@@ -1,6 +1,7 @@
 const topics = [
     {
     id: "welcome",
+    subyear: 1,
     title: "Welcome to Coulomb Canvas!",
     image: "images/Avatar/Topics 1/welcome.png",
     subtopics: [
@@ -33,6 +34,7 @@ const topics = [
   },
      {
     id: "maths",
+    subyear: 1,
     title: "Mathematics for Physics",
     image: "images/Avatar/Topics 1/maths.png",
     subtopics: [
@@ -100,6 +102,7 @@ const topics = [
   },
   {
     id: "mechanics",
+    subyear: 1,
     title: "Classical Mechanics",
     image: "images/Avatar/Topics 1/mechanics.png",
     subtopics: [
@@ -149,6 +152,7 @@ const topics = [
   },
   {
     id: "relativity",
+    subyear: 1,
     title: "Special Relativity",
     image: "images/Avatar/Topics 1/relativity.png",
     subtopics: [
@@ -180,6 +184,7 @@ const topics = [
   },
   {
     id: "thermal",
+    subyear: 1,
     title: "Thermal Physics",
     image: "images/Avatar/Topics 1/thermal.png",
     subtopics: [
@@ -230,6 +235,7 @@ const topics = [
    {
 
     id: "waves",
+    subyear: 1,
     title: "Waves",
     image: "images/Avatar/Topics 1/waves.png",
     subtopics: [
@@ -279,7 +285,8 @@ const topics = [
   },
    {
     id: "e-m",
-    title: "Coming soon: \nElectricity & Magnetism",
+    subyear: 1,
+    title: "Electricity & Magnetism",
     image: "images/Avatar/Topics 1/e&m.png",
     subtopics: [
       {
@@ -358,7 +365,8 @@ const topics = [
   },
    {
     id: "quantum1",
-    title: "Coming soon:\nQuantum Phenomena I",
+    subyear: 1,
+    title: "Quantum Phenomena I",
     image: "images/Avatar/Topics 1/quantum1.png",
     subtopics: [
       {
@@ -401,6 +409,7 @@ const topics = [
   },
    {
     id: "quantum2",
+    subyear: 1,
     title: "Coming soon: \nQuantum Phenomena II",
     image: "images/Avatar/Topics 1/quantum2.png",
     subtopics: [
@@ -454,8 +463,9 @@ const topics = [
       },
     ]
   },
-   {
+  {
     id: "astro",
+    subyear: 1,
     title: "Coming soon: \nAstrophysics",
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
@@ -544,6 +554,141 @@ const topics = [
         image: "images/time-dilation.png"
       },
     ]
-  }
+  },
+  {
+    id: "solar",
+    subyear: 2,
+    title: "The solar system",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "welback",
+    subyear: 2,
+    title: "Welcome Back",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "maths2",
+    subyear: 2,
+    title: "Mathematical Methods",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "computation",
+    subyear: 2,
+    title: "Computational Physics",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "stat",
+    subyear: 2,
+    title: "Statistical Mechanics",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "eto",
+    subyear: 2,
+    title: "Electromagnetic Theory",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "hamiltonian",
+    subyear: 2,
+    title: "Hamiltonian Mechanics",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "fluid",
+    subyear: 2,
+    title: "Fluid Mechanics",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "qaia1",
+    subyear: 2,
+    title: "Quantum and its Applications I",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "qaia2",
+    subyear: 2,
+    title: "Quantum and its Applications II",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  {
+    id: "stars",
+    subyear: 2,
+    title: "Stars",
+    image: "images/Avatar/Topics 1/astro.png",
+    subtopics: [
+      {
+        subid: "astro-intro",
+        title: "Aren't planets and stars cool?",
+      },
+    ]
+  },
+  
+  
+  
   // Add the rest of your topics here...
 ];

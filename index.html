@@ -40,10 +40,10 @@
     document.body.style.overflow = "hidden";
     const topicContainer = document.getElementById("topic-container");
     let year = 1;
+    let radius = 320;
 
     const mq = window.matchMedia("(max-width: 768px)");
     function updateRadiusAndLayout() {
-          
           if (mq.matches) {
             radius = window.innerWidth / 2.4;
           } else {
@@ -54,11 +54,12 @@
       function reset() {
         const topicContainer = document.getElementById("topic-container");
         const numberOfTopics = topics.filter(t => t.subyear === year).length;
-        let radius = 320;
+        
         const mq = window.matchMedia("(max-width: 768px)");
 
         // REMOVE OLD ELEMENTS:
         topicContainer.innerHTML = "";
+        updateRadiusAndLayout();
 
         // Now re-generate/render your elements with the new radius:
         topics.forEach((topic, index) => {
@@ -101,6 +102,7 @@
 
       // Initial render:
       updateRadiusAndLayout();
+      reset()
 
       // Year buttons:
       const urlParams = new URLSearchParams(window.location.search);
@@ -156,6 +158,8 @@
 
 
     });
+
+    
 
 
 

@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-05T11:52:16.629Z
+// Generated: 2026-03-03T13:34:40.579Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 80 existing hand-written entries
-//   - 4 Markdown-generated entries
+//   - 2 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -694,7 +694,11 @@ const subtopics = {
             <li>Acceleration</li>
             <li>Force</li>
           </ul>
-          
+          <p>All of these quantities (as well as others) act in a certain direction, which needs to be specified. Unlike
+            scalars, which are quantities that only have magnitude, like mass, temperature, energy and time. You didn't
+            boil your water 100 degrees <em>to the left</em>, did you? Nor did you <em>attend your lectures</em> 
+            on time <em>upwards</em>. But you did walk <em>forwards</em> to the lecture theatre.
+          </p>
         </div>
         <div class="image">
           <div class="image-floater">
@@ -710,12 +714,6 @@ const subtopics = {
           </div>
         </div>
       </div>
-
-      <p>All of these quantities (as well as others) act in a certain direction, which needs to be specified. Unlike
-            scalars, which are quantities that only have magnitude, like mass, temperature, energy and time. You didn't
-            boil your water 100 degrees <em>to the left</em>, did you? Nor did you <em>attend your lectures</em> 
-            on time <em>upwards</em>. But you did walk <em>forwards</em> to the lecture theatre.
-          </p>
 
         <h3>Vector Notation Methods</h3>
 
@@ -11140,114 +11138,259 @@ const subtopics = {
   "feynman-diagrams": {
     title: "Feynman Diagrams",
     content: `
-      <p>Feynman diagrams are really cool, because they are one of those things which people blindly mention when they are talking about physics, alongside characters like \\(E = mc^2\\).</p>
-      <p>They're basically little poorly drawn comics describing the interactions between the particles.</p>
-      <p>And quick note: if you did AQA Physics for A-level, you'll remember we did this with time on the \\(y\\)-axis and space on the \\(x\\)-axis for some bloody reason. Well my lecturer said that this is dumb, and decided to draw them the more intuitive way, with time on the \\(x\\)-axis and space on the \\(y\\)-axis.</p>
-      <p>Each comic has 3 chapters:</p>
-      <ol>
-      <li>The <strong>external lines</strong> - basically the reactants and the products. They are at the beginning and the end of the story (id est the &quot;exposition and denouement&quot; if we are using proper GCSE terminology).</li>
-      <li>The <strong>internal lines</strong> - this describes the point where the two (or more) particles interact, and a boson is exchanged. A bit like the &quot;climax&quot; in English</li>
-      <li>The <strong>vertices</strong> - the points where the internal and external lines meet, and is the point at which the particles interact. These are the rising and falling action in a story.</li>
-      </ol>
-      <p>So you know how you thought that the stuff you learnt in GCSE English wasn't gonna be useful? Turns of it <em>is</em> useful, useful for making sense of <em>my</em> analogy. All those years of doing the worst subject in existance built up to this moment.</p>
-      <p>On top of those, we also need to know what exactly the different lines and squiggles represent.</p>
-      <p>An arrow going to the right is a fermion. Any old fermion, like a quark or a lepton. Quite confusingly though, you can also have an arrow going to the left. You might be confused, since going left on a time axis would imply the fermion is going back in time. But it turns out it's actually the fermion's evil twin, the antifermion. It likes to pretend it can go back in time, but it's not actually.</p>
-      <p>The usual sine wavy squiggle is a photon, which we've been using for electromagnetic waves up until now, so that shouldn't be too much of a problem. \\(W\\)-bosons also have the same squiggle though, so remember that I guess.</p>
-      <p>The \\(Z^0\\) boson is drawn with a dotted line, and the gluon is drawn with a coil-type thingy. There is actually no reason for any particular squiggle other than convention, so you'll have to just learn them.</p>
-      <h3>Drawing Feynman Diagrams</h3>
-      <p>Now we know a bit about how to read 'em, now it's time to figure out how to draw them ourselves. Starting with our first law:</p>
-      <p>&quot;All the conservation laws must be applied at every vortex&quot;</p>
-      <p>What does this mean? This is kinda like the particle physics version of Kirchoff's first law. In a circuit, the amount of charge exiting a junction must be the same as the amount of charge entering a junction. Likewise, the amount of electric charge entering a vortex must equal the amount of charge exiting the vortex.</p>
-      <p>Take this example here: ...</p>
-      <p>What makes this a tad more fiddly is that when it comes to particle physics, it's not just electric charge that needs conserving. It's also baryon number, and lepton number, and colour charge, and quark flavour, AND momentum which needs to be conserved. At EVERY vortex.</p>
-      <p>We can see that again in our example: ...</p>
-      <p>We also have our second law:</p>
-      <p>&quot;The particles emitted must match up with the force applied in the interaction&quot;</p>
-      <p>This should be fairly obvious tbf, but in case it ain't, all I'm trying to say is that you need to also think about what force is being used. If there is an electromagnetic interaction (such as 2 electrons repelling), it will only release the gauge boson for the EM force, id est the virtual photon. They won't randomly release a \\(W\\)-boson for no bloody reason, since there is no weak force taking place. These particles are actually quite principled, so they won't emit or absorb unrelated gauge bosons no matter how conserved the other stuff is.</p>
-      <h3>Drawing Feynman Diagrams</h3>
-      <p>Here is a step by step guide to drawing Feynmann diagrams</p>
-      <h4>Step 1: Figure out which force in involved</h4>
-      <p>Like I said before, particles are very principled. They will only emit particles corresponding to their force. So a good place to start would be identifying which force is actually responsible.</p>
-      <p>Last time I mentioned how a neutrino can become a lepton, or a bottom-row quark can become a top-row quark, by eating or spitting out a \\(W\\)-boson. So that means if a quark changes flavour or a neutrino is created or destroyed, then the weak interaction is involved.</p>
-      <p>Again, if there's a photon, then the interaction is electromagnetic.</p>
-      <h4>Step 2: Determine which particles are irrelevant</h4>
-      <p>Irrelevant?! A bit rude, but it's lowkey true. Write out a list of all the individual quarks and leptons before the interaction. Then write out a list of all the quarks and leptons after the interaction. You may well notice that you'll get some of the same stuff on both sides.</p>
-      <p>Once you figure out which particles are wastemen, your diagram becomes a bit simpler.</p>
-      <h4>Step 3: Look at what has changed</h4>
-      <p>Now we know what force and what particles are involved, here's the fun part: trying to figure out which gauge boson is the culprit. Fun as it is though, it can be a slightly annoying process, since at first it feels like we just have to remember a tonne of random rules. But there is a method to the madness.</p>
+      <h3>Feynman Diagrams: How to Draw the Invisible (And Not Look Stupid)</h3>
+
+      <p>Right. Let’s talk about <strong>Feynman diagrams</strong>.</p>
+
+      <p>No, not the kind you doodle in the margin. We’re talking about <strong>pictures that describe how particles interact</strong> — like a comic strip for quantum physics.</p>
+
+      <p>And yes — they’re not just art. They’re math. And they’re powerful.</p>
+
+      <h3>What Is a Feynman Diagram?</h3>
+
+      <p>A Feynman diagram is a cartoon of a particle interaction.</p>
+
+      <p>It shows:</p>
       <ul>
-      <li>
-      <p>Like I've said a quintillion times by now, if a quark changes flavour or a neutrino becomes a lepton (or vice versa), then the \\(W\\)-boson is the culprit.</p>
-      </li>
-      <li>
-      <p>If there is the same stuff before and after the interaction, then it was probably just a photon, since they don't change anything. It could also be a gluon, since they are equally pacifistic.</p>
-      </li>
-      <li>
-      <p>What happens if you end up with a quark-antiquark pair (not like a meson, as in seperately) of the same flavour? This is a form of pair production, where a boson kinda just spontaneously splits into a particle and its evil twin. Since quarks interact with all three forces (EM, weak and strong), any one of their bosons (virtual photon, \\(Z^0\\) or gluon respectively) could be responsible.</p>
-      </li>
-      <li>
-      <p>Now what happens if instead we get a charged lepton-antilepton pair? This is another form of spontaneous boson splitting, but since leptons don't interact with the strong force, a gluon couldn't be the culprit, so only virtual photons and \\(Z^0\\)s could be responsible.</p>
-      </li>
-      <li>
-      <p>What about a neutrino-antineutrino pair? Same logic as with the charged leptons, but since neutrinos aren't charged, they don't interact with the EM force, meaning they can't have been formed from the photon, but only the \\(Z^0\\) particle.</p>
-      </li>
+        <li><strong>What goes in</strong> (initial state)</li>
+        <li><strong>What comes out</strong> (final state)</li>
+        <li><strong>What happens in between</strong> (the interaction)</li>
       </ul>
+
+      <p>But here’s the kicker: <strong>you can’t see what happens in the middle</strong>.</p>
+
+      <p>It’s like watching two people walk into a dark room, then two people walk out. You don’t know what happened in there — but you can guess.</p>
+
+      <h3>The Rules of the Game</h3>
+
+      <p>Every diagram has:</p>
+      <ul>
+        <li><strong>External lines</strong>: incoming and outgoing particles — the ones you can measure</li>
+        <li><strong>Internal lines</strong>: particles that exist only during the interaction — like the photon in electron scattering</li>
+        <li><strong>Vertices</strong>: points where particles meet and interact</li>
+      </ul>
+
+      <p>Time usually goes left to right. But some people draw it top to bottom. Either way — pick one and stick with it.</p>
+
+      <h3>Example: Electron-Electron Scattering</h3>
+
+      <p>Two electrons approach. They don’t touch. But they exchange a photon — a virtual photon.</p>
+
+      <p>That photon carries the electromagnetic force.</p>
+
+      <p>The diagram looks like this:</p>
+
+      <ul>
+        <li>Two electron lines coming in</li>
+        <li>A wavy photon line connecting them</li>
+        <li>Two electron lines going out</li>
+      </ul>
+
+      <p>Simple. But it represents a full quantum field theory calculation.</p>
+
+      <h3>Virtual Particles: The Ones That Break the Rules (But Only Briefly)</h3>
+
+      <p>The photon in that diagram? It’s <strong>virtual</strong>.</p>
+
+      <p>Which means: it doesn’t obey \\( E^2 = p^2 c^2 + m^2 c^4 \\).</p>
+
+      <p>It can have “wrong” energy. “Wrong” momentum. It’s basically cheating.</p>
+
+      <p>But only for a short time — thanks to the uncertainty principle:</p>
+
+      <p>\\( \\Delta E \\Delta t \\approx \\hbar \\)</p>
+
+      <p>So the more it violates energy conservation, the shorter it can exist.</p>
+
+      <p>That’s why virtual particles are <strong>unobservable</strong>. You can’t measure them. You can only infer them.</p>
+
+      <h3>Time Order Matters (Or Doesn’t)</h3>
+
+      <p>Sometimes, the order of vertices matters. Sometimes, it doesn’t.</p>
+
+      <p>For electron-electron scattering, there are two possible time orderings:</p>
+      <ol>
+        <li>Electron 1 emits photon → electron 2 absorbs it</li>
+        <li>Electron 2 emits photon → electron 1 absorbs it</li>
+      </ol>
+
+      <p>Both are valid. So we draw a diagram with a vertical internal line — meaning “both happen.”</p>
+
+      <p>Quantum mechanics: always the drama.</p>
+
+      <h3>The Three Forces: EM, Weak, and Strong</h3>
+
+      <p>We’re focusing on three of the four forces. Gravity? Too weak. Not relevant here.</p>
+
+      <h4>Electromagnetic Force</h4>
+      <ul>
+        <li>Carrier: photon (\\( \\gamma \\))</li>
+        <li>Acts on: anything with electric charge</li>
+        <li>Range: infinite</li>
+        <li>Strength: \\( \\alpha = 1/137 \\)</li>
+      </ul>
+
+      <p>It’s responsible for atoms, chemistry, light, and your phone not falling through the table.</p>
+
+      <h4>Weak Force</h4>
+      <ul>
+        <li>Carriers: \\( W^\\pm \\), \\( Z^0 \\) bosons</li>
+        <li>Massive: \\( W \\approx 80 \\, \\text{GeV}/c^2 \\), \\( Z \\approx 91 \\, \\text{GeV}/c^2 \\)</li>
+        <li>Range: ~10⁻¹⁸ m — super short</li>
+        <li>Responsible for: beta decay, neutrino interactions, flavour changes</li>
+      </ul>
+
+      <p>Example: \\( \\tau^- \\to \\mu^- + \\bar{\\nu}_\\mu + \\nu_\\tau \\)</p>
+
+      <p>Here, a \\( \\tau^- \\) turns into a \\( \\nu_\\tau \\) and a \\( W^- \\), which then decays to \\( \\mu^- \\) and \\( \\bar{\\nu}_\\mu \\).</p>
+
+      <h4>Charged vs Neutral Current</h4>
+
+      <p><strong>Charged current</strong>: involves \\( W^\\pm \\) → changes particle flavour (e.g. \\( s \\to u \\))</p>
+
+      <p><strong>Neutral current</strong>: involves \\( Z^0 \\) → no flavour change, just momentum transfer</p>
+
+      <p>Example: \\( \\nu_\\mu + e^- \\to \\nu_\\mu + e^- \\) — elastic scattering via \\( Z^0 \\)</p>
+
+      <h4>Strong Force</h4>
+      <ul>
+        <li>Carrier: gluon (\\( g \\))</li>
+        <li>Acts on: anything with colour charge (quarks and gluons)</li>
+        <li>Range: ~10⁻¹⁵ m — about the size of a proton</li>
+        <li>Unique property: gluons themselves carry colour → they interact with each other</li>
+      </ul>
+
+      <p>This leads to **confinement** — you never see free quarks or gluons.</p>
+
+      <p>And **asymptotic freedom** — at very short distances, the strong force gets weaker.</p>
+
+      <h3>Example: Kaon Decay</h3>
+
+      <p>Consider \\( K^+ (u\\bar{s}) \\to \\pi^+ (u\\bar{d}) + \\pi^0 (u\\bar{u}) \\)</p>
+
+      <p>The \\( u \\) quark is a spectator. The real action is \\( \\bar{s} \\to \\bar{u} + W^+ \\), then \\( W^+ \\to \\bar{d} + u \\)</p>
+
+      <p>So it’s a charged weak interaction — because flavour changes, and \\( W^+ \\) is involved.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>Feynman diagrams: cartoons of particle interactions</li>
+        <li>External lines: real, measurable particles</li>
+        <li>Internal lines: virtual particles (unobservable)</li>
+        <li>Vertices: interaction points</li>
+        <li>Virtual particles: break energy-momentum conservation briefly</li>
+        <li>EM force: photon, infinite range</li>
+        <li>Weak force: \\( W^\\pm, Z^0 \\), short range, changes flavour</li>
+        <li>Strong force: gluons, colour charge, confinement</li>
+        <li>Charged current: \\( W^\\pm \\), flavour change</li>
+        <li>Neutral current: \\( Z^0 \\), no flavour change</li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care how messy your diagram is.  
+      It only cares about the conservation laws.</p>
     `
   },
 
   "symmetries": {
     title: "Symmetries",
     content: `
-      <p>Pfft, symmetry? Are we prepubescent? Why are we learning about bloody symmetry? You know we are actually in university?!</p>
-      <p>In particle physics, a symmetry is an operation you apply to the system which leaves the system unchanged. Take a square for example. Rotate it 90 degrees. Has it changed? Not really. So 90 degree rotation is a symmetry of a square.</p>
-      <p>There are 3 flavours of symmetry:</p>
-      <h3>Continuous Symmetries</h3>
-      <h4>Time</h4>
-      <p>Take an experiment, say the Michaelson Morley experiment why not.  Let's have the experiment begin at time \\(t=0\\). We of course get the LOL-worthy result of no shift in the diffraction pattern, which means no luminiferous aether.</p>
-      <p>Now they did the experiment just out of curiosity, but what they didn't know is that, in the year 2400 AD, this discovery that there was no luminiferous aether would somehow cause the universe to end. Luckily, right before the universe ends, a couple of survivors manage to build a time machine and in Yu-Gi-5Ds / Inazuma Eleven GO Chronos Stones fashion, travel back in time to stop this discovery being made.</p>
-      <p>Now the easy option would be to just kill Michaelson and Morley so that they can't do the experiment, but that wouldn't make for a very interesting plot, so instead they do the typical &quot;I can travel to any point in time to try and stop you, yet I pick the moment RIGHT before it's too lake&quot; strategy. They meet Michaelson and Morley and distract them for a little bit, in hopes that if the experiment were to take place at a different time, the result would be different.</p>
-      <p>They were able to distract them for about 50 seconds. That means the experiment now begins at time \\(t=50\\). And they run the experiment aaaand... no shift in the diffraction pattern, no luminiferous aether, skip a few steps and hey ho, the universe has ended.</p>
-      <p>Clearly they failed, so they try again, but this time help Michaelson and Morley set up the experiment, such that it cuts off 2 and a half minutes of setting up, meaning they start the experiment 2 and a half minutes earlier \\(t=-150\\). They run the experiment and... womp womp.</p>
-      <p>What does this stupid little story have to do with symmetries? What it tells us is that all times are indistinguishable, meaning that it doesn't matter <em>when</em> you do the experiment, the result will be the same (assuming any other conditions don't change).</p>
-      <h4>Linear position</h4>
-      <p>So clearly different times don't work. But our time-travelling friends are determined to get the universe back. So they return back to the time when the experiment is being set up, and beg the two scientists to build their experiment 2 metres to the left of where they were originally going to put it. Michaelson and Morley are a bit confused, but ultimately accept. Perhaps if the experiment is done in a different place, the result would change.</p>
-      <p>They run the experiment, and once again, there is no shift. Michaelson and Morley are about to explain their findings to the wider scientific community, but Kylo and Lusine aren't going down with out a fight. They beg and plead for the scientists tro try another location.</p>
-      <p>And another</p>
-      <p>And another</p>
-      <p>And another</p>
-      <p>But no matter how many places they tried, the result was the same.</p>
-      <p>This reflects another symmetry: no matter where in space you are, the effect of changing a system are the same.</p>
-      <h4>Angular position</h4>
-      <p>The two time travellers are beginning to loose hope. But Kylo has one last suggestion: what if they rotate the system? At which point Lusine gives him a monumental slap to the face.</p>
-      <p>&quot;Kylo you idiot!&quot; she says. &quot;The whole point of the experiment is to rotate the mirror-thingy and see what happens. Of course they'll have tried rotating the bloody system!&quot;</p>
-      <p>Michaelson and Morley are a bit confused, considering at this point, they actually HADN'T tried rotating the system. So they did and it turns out Lusine was correct, nothing changed. This therefore reflects the final continuous symmetry: no matter which way you are pointing, the effect of changing a system are the same.</p>
-      <h3>Internal symmetry</h3>
-      <p>Internal symmetries, or gauge symmetries, are the most physically useless symmetries, since they are pretty much only mathematical. But they exist so guess we have to mention 'em too.</p>
+      <h3>Symmetries and Conservation Laws: When the Universe Says “Nothing Changes”</h3>
+
+      <p>Right. Let’s talk about <strong>symmetries</strong>.</p>
+
+      <p>No, not the kind where your face is perfectly balanced. We’re talking about <strong>how the laws of physics stay the same no matter where, when, or how you look at them</strong>.</p>
+
+      <p>And yes — this isn’t just philosophy. It’s the foundation of all modern physics.</p>
+
+      <h3>What Is a Symmetry?</h3>
+
+      <p>A symmetry is an operation that you can do to a system without changing its physics.</p>
+
+      <p>Rotate it? Shift it in space? Flip time? If the laws stay the same, you’ve got a symmetry.</p>
+
+      <p>Example: do an experiment today. Do it tomorrow. Same result? That’s <strong>time translation symmetry</strong>.</p>
+
+      <p>Move it to the left? Still works? That’s <strong>spatial translation symmetry</strong>.</p>
+
+      <p>And thanks to <strong>Noether’s Theorem</strong>, every continuous symmetry gives you a <strong>conserved quantity</strong>.</p>
+
+      <p>Yes — <em>Emmy Noether</em> dropped one of the biggest bombs in physics history and most people don’t even know her name.</p>
+
+      <h3>Continuous Symmetries: The Big Three</h3>
+
       <ul>
-      <li>Wavefunction phase: you can quite easily prove that the probability density of a function doesn't change with phase</li>
-      <li>Upness and downness or quarks: Up quarks and down quarks have the same physics</li>
-      <li>Colour: the colour of a particle doesn't change the physics of the system</li>
+        <li><strong>Time translation</strong> → energy is conserved</li>
+        <li><strong>Spatial translation</strong> → linear momentum is conserved</li>
+        <li><strong>Rotation</strong> → angular momentum is conserved</li>
       </ul>
-      <p>See this section is so filler that I didn't even give each one their own h4 section. Anyway, moving on...</p>
-      <h3>Discrete symmetry</h3>
-      <p>Kylo and Lusine return to the future, upset about the fact that nothing they did worked. They bring out their secret weapon: the discrete-symmetry-inator! A powerful tool which can shift the dynamics of the whole universe.</p>
-      <h4>Parity (\\(\\hat{P}\\))</h4>
-      <p>The discrete-symmetry-inator has 3 different buttons: the first of which has a P with a circumflex (\\(\\hat{P}\\)). This represents <em>parity</em>. Parity means taking the whole universe and flipping it like a pancake. So left is right, right is left. All position and momentum vectors become negative.</p>
-      <p>Under parity, \\( \\vec{r} \\to -\\vec{r} \\) and \\( \\vec{p} \\to -\\vec{p} \\)</p>
-      <p>So right before the experiment is conducted, they press the \\(\\hat{P}\\) button to pancake-ify the universe. Hopefully that should do something, right?</p>
-      <p>Guess what?! The experiment worked exactly the same, again!</p>
-      <h4>Charge conjugation (\\(\\hat{C}\\))</h4>
-      <p>The second button had a C with a circumflex (\\(\\hat{C}\\)), for <em>charge conjugation</em>. This means that every single charge and quantum number flips. So positive charges become negative, negative charges become positive. Particles become antiparticles, antiparticles become particle. Baryon numbers switch, lepton numbers switch, the whole universe is turned inside out.</p>
-      <p>And you'd think that surely this would do <em>something</em>, right? So Lusine takes the discrete-symmetry-inator, and presses the \\(\\hat{C}\\) button. The experiment is rerun... and the result is still the exact same!!</p>
-      <h4>Time Reversal (\\(\\hat{T}\\))</h4>
-      <p>At this point, Kylo and Lusine has run out of options, so</p>
-      <p>Time reversal is exactly what it sounds like, run time backwards. The main idea is that if you had two reactants becoming two products (so something like \\( A + B \\to C + D \\)) and this reaction has a 30% chance of happening, then by running the reaction in reverse (getting the reactants back from the products \\( C + D \\to A + B \\)), it would have the same 30% probability.</p>
-      <h4>The weak force</h4>
-      <p>Now remember that in this particular case, we've been referring to the diffraction of light waves, which involves the electromagnetic force. Therefore in this case, the electromagnetic force doesn't change when you pancake the universe, or when you flip it inside out. Moreover running the experiment in reverse undoes the effect.</p>
-      <p>This is also true of the strong force (and gravity too probably), but it's not actually always true. God knows how they measured this, but somehow particle physicists were able to prove that if you pancake the universe, the weak force actually <em>does</em> change (i.e. the weak force is NOT parity-invariant). That means some of the interactions which take place in our universe couldn't take place if the universe was mirrored.</p>
-      <p>In fact, the weak force is a bit of a rebel, because not only does it choose not to comply in a mirrored universe, but it actually doesn't comply with any of these transformations. Again, God knows how they measured this, but if you replace all positive charge with negative charge, the weak force behaves differently. And if you reverse time, the probability of getting the reactants back is different to if you were to run the reaction in the forward direction.</p>
-      <p>As a matter of fact, even if Kylo and Lusine were to press the \\(\\hat{P}\\) button and the \\(\\hat{C}\\) button at the same time (\\(\\hat{P}\\hat{C}\\), meaning the universe is both pancaked and antiparticle-ified), the weak interaction still isn't the same. The only way you can get the weak force to listen is if you combine all 3 of the transformations (\\(\\hat{T}\\hat{C}\\hat{T}\\), a pancaked, antiparticle-ified and time reversed universe).</p>
-      <p>Now as it stands, quantum theory is defined in such a way that all forces MUST abide by the \\(\\hat{T}\\hat{C}\\hat{T}\\) rule, including the weak force. For some reason the weak force took grave offence to this and decided to ignore everything else. God knows why, but it just does.</p>
+
+      <p>So yes — conservation laws aren’t random. They’re baked into the fabric of spacetime.</p>
+
+      <h3>Internal Symmetries: When the Universe Doesn’t Care About Labels</h3>
+
+      <p>These aren’t about space or time. They’re about the properties of particles.</p>
+
+      <ul>
+        <li><strong>Electroweak charge</strong>: physics is the same for up and down quarks → conservation of charge</li>
+        <li><strong>Colour symmetry</strong>: physics is the same for red, green, blue quarks → conservation of colour</li>
+      </ul>
+
+      <p>These are <strong>gauge symmetries</strong> — and they’re why the strong and electromagnetic forces exist.</p>
+
+      <h3>Discrete Symmetries: The Mirror, the Twin, and the Rewind Button</h3>
+
+      <p>These aren’t smooth. They’re sudden flips.</p>
+
+      <h4>Parity (P)</h4>
+      <p>Flip all spatial coordinates: \\( \\vec{r} \\to -\\vec{r} \\).</p>
+      <p>Like looking in a mirror.</p>
+      <p>Electromagnetism and strong force? Respect it.</p>
+      <p>Weak force? <strong>Violates it</strong>. In the 1950s, this blew everyone’s mind.</p>
+
+      <h4>Charge Conjugation (C)</h4>
+      <p>Swap particles with antiparticles.</p>
+      <p>Weak force? Also violates this.</p>
+
+      <h4>Time Reversal (T)</h4>
+      <p>Run time backwards.</p>
+      <p>Weak force? Violates this too.</p>
+
+      <h3>The Ultimate Symmetry: CPT</h3>
+
+      <p>Now here’s the kicker:</p>
+
+      <p>Even though the weak force breaks C, P, T, and even CP —</p>
+
+      <p>It <strong>never</strong> breaks <strong>CPT</strong>.</p>
+
+      <p>If you:</p>
+      <ol>
+        <li>Flip space (P)</li>
+        <li>Swap particles with antiparticles (C)</li>
+        <li>Run time backwards (T)</li>
+      </ol>
+
+      <p>Then the universe looks exactly the same.</p>
+
+      <p>This is a fundamental requirement of quantum field theory. No exceptions.</p>
+
+      <p>So yes — the weak force is a rebel. But even rebels have rules.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>Symmetry → conserved quantity (Noether’s Theorem)</li>
+        <li>Time symmetry → energy conserved</li>
+        <li>Space symmetry → momentum conserved</li>
+        <li>Rotation → angular momentum conserved</li>
+        <li>P, C, T: discrete symmetries</li>
+        <li>Weak force violates P, C, T, and CP</li>
+        <li>But <strong>CPT is always conserved</strong></li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care about your intuition.  
+      It only cares about symmetry.</p>
     `
   },
 
@@ -12390,33 +12533,6 @@ const subtopics = {
   }
 };
 
-
-
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3');
-  const nav = document.getElementById('floating-nav');
-  if (!nav || headings.length === 0) return;
-
-  nav.innerHTML = ''; // Clear previous buttons
-
-  headings.forEach((heading, index) => {
-    if (!heading.id) {
-      heading.id = `section-${index + 1}`;
-    }
-
-    const btn = document.createElement('button');
-    btn.textContent = heading.textContent;
-    btn.onclick = () => scrollToSection(heading.id);
-    nav.appendChild(btn);
-  });
-}
 // Export for Node.js
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { subtopics };

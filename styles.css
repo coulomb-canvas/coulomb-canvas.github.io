@@ -24,7 +24,7 @@ body {
   font-family: "Verdana", sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-size: 1.1vw;
+  font-size: 2.08vh;
   /* <- change the base size */
   line-height: 1.5;
   /* <- increase for more vertical space */
@@ -37,7 +37,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   body {
     font-size: 10px;
   }
@@ -56,11 +56,11 @@ h3 {
   font-family: "Njal", sans-serif;
   text-decoration: underline;
   text-underline-offset: 7px;
-  border-top: 1px solid var(--accent);
+  border-top: 0.5vh solid var(--accent);
   color: var(--accent);
-  margin-top: 1.5rem;
+  margin-top: 3.5rem;
   margin-bottom: 0.5rem;
-  font-size: 2.75vw;
+  font-size: 7vh;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,9 +69,10 @@ h4 {
   text-decoration: underline;
   text-underline-offset: 2px;
   color: white;
-  border-top: 1px dotted rgba(255, 255, 255, 0.417);
-  font-size: 20px;
+  border-top: 0.2vh dotted rgba(255, 255, 255, 0.417);
+  font-size: 4vh;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3vh;
 }
 
 @keyframes flash-lime {
@@ -255,16 +256,18 @@ li {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   /* full viewport height */
   z-index: 0;
 }
 
 .circle-center img {
-  width: 200px;
+  position: fixed;
+  width: 23.04vh;
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .circle-center {
     width: 100vw;
     height: 100vh;
@@ -273,7 +276,7 @@ li {
 
   .circle-center img {
     position: fixed;
-    width: 29.3vw;
+    width: 21.46vw;
     height: auto;
 
   }
@@ -290,8 +293,8 @@ li {
 
 .topic-image-link {
   position: absolute;
-  width: 155px;
-  height: 155px;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,7 +304,7 @@ li {
   z-index: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .topic-image-link {
     width: auto;
     height: auto;
@@ -336,12 +339,12 @@ li {
 }
 
 .topic-title {
-  margin-top: -50px;
+  margin-top: -5vh;
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0px;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: calc(100vh / 39);
   font-family: "Njal", sans-serif;
   opacity: 0.7;
   transition: opacity 0.3s, background-color 0.3s;
@@ -350,7 +353,7 @@ li {
   white-space: pre-line
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   #topic-title {
     font-size: calc(100vw / 12);
 
@@ -391,7 +394,7 @@ li {
   color: #39b6ff
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .back-link {
     font-size: 2.5vw;
     top: auto;
@@ -439,7 +442,7 @@ li {
   color: var(--accent);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   h3 {
     font-size: 30px;
     text-decoration: underline;
@@ -478,7 +481,7 @@ li {
   top: -20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .back-links {
     padding-top: 5%;
     font-size: 0.8rem;
@@ -497,7 +500,7 @@ li {
 }
 
 .subtopic-text {
-  padding: 3rem;
+  padding: 6vw;
   margin-top: 0rem;
   margin-bottom: 2rem;
   background-color: #111;
@@ -698,7 +701,6 @@ body.dimmed::before {
   z-index: 10;
 }
 
-/* zoom on the img */
 .pop-image {
   border-radius: 12px;
   transition: transform .3s ease, box-shadow .3s ease;
@@ -707,11 +709,14 @@ body.dimmed::before {
 
 }
 
-/* Responsive behavior */
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .container {
     flex-direction: column;
     /* Stack vertically on smaller screens */
+  }
+
+  .pop-image {
+    max-width: 50vh !important;
   }
 }
 
@@ -729,7 +734,7 @@ body.dimmed::before {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .image-box {
     width: 70vw;
     /* Stack vertically on smaller screens */
@@ -867,7 +872,7 @@ body.dimmed::before {
   line-height: 1.2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .hover-wrapper:hover .formula-tooltip {
     transform: translateY(100%);
   }
@@ -921,7 +926,7 @@ body.dimmed::before {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .container {
     display: flex;
     flex-direction: column;
@@ -981,7 +986,7 @@ body.dimmed::before {
   background: transparent;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
 
   .left-bracket,
   .right-bracket {
@@ -1109,7 +1114,7 @@ body.dimmed::before {
   filter: drop-shadow(0 0 10px white);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .hover-wrapper:hover .formula-tooltip {
     transform: translateY(50%);
   }
@@ -1127,7 +1132,7 @@ body.dimmed::before {
 
 #floating-nav {
   position: fixed;
-  top: 20px;
+  top: 45px;
   right: 20px;
   background-color: rgba(30, 30, 30, 0.8);
   padding: 10px;
@@ -1227,7 +1232,7 @@ body.dimmed::before {
   z-index: 50;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   #next-subtopic-button {
     position: fixed;
     left: 79vw;
@@ -1257,7 +1262,7 @@ body.dimmed::before {
   z-index: 50;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   #next-year-button {
     position: fixed;
     left: 79vw;
@@ -1314,7 +1319,7 @@ body.dimmed::before {
   line-height: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .subtopic-text {
     padding: 1rem;
     padding-top: 0%;
@@ -1355,7 +1360,7 @@ body.dimmed::before {
   background-color: #004a99;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   #navigation-buttons button {
     padding: 5px 10px;
     border: none;
@@ -1380,7 +1385,7 @@ body.dimmed::before {
   background-color: #004a99;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   #year-navigation-buttons button {
     padding: 5px 10px;
     border: none;
@@ -1563,7 +1568,7 @@ body.dimmed::before {
   /* Add scrollbar if many spectrum lines */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 100vh) {
   .simulation-content {
     flex-direction: column;
     /* Stack on top of each other on mobile */

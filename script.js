@@ -6,8 +6,8 @@ function getQueryParam(name) {
 const topicId = getQueryParam("topic");
 const topic = topics.find(t => t.id === topicId);
 
-// || topic.id == "quantum2" || topic.id = "e-m"
-if (!topic  || topic.id == "quantum2" || topic.id == "astro") {
+// || topic.id == "quantum2" || topic.id = "e-m"|| topic.id == "quantum2"
+if (!topic   || topic.id == "astro") {
   document.getElementById("topic-title").textContent = "Sorry m8, I ain't done with this one yet...";
 } else {
   document.getElementById("topic-title").textContent = topic.title.toUpperCase();

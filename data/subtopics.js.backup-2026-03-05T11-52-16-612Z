@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-05T11:52:16.629Z
+// Generated: 2026-03-05T10:02:51.336Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -694,7 +694,11 @@ const subtopics = {
             <li>Acceleration</li>
             <li>Force</li>
           </ul>
-          
+          <p>All of these quantities (as well as others) act in a certain direction, which needs to be specified. Unlike
+            scalars, which are quantities that only have magnitude, like mass, temperature, energy and time. You didn't
+            boil your water 100 degrees <em>to the left</em>, did you? Nor did you <em>attend your lectures</em> 
+            on time <em>upwards</em>. But you did walk <em>forwards</em> to the lecture theatre.
+          </p>
         </div>
         <div class="image">
           <div class="image-floater">
@@ -710,12 +714,6 @@ const subtopics = {
           </div>
         </div>
       </div>
-
-      <p>All of these quantities (as well as others) act in a certain direction, which needs to be specified. Unlike
-            scalars, which are quantities that only have magnitude, like mass, temperature, energy and time. You didn't
-            boil your water 100 degrees <em>to the left</em>, did you? Nor did you <em>attend your lectures</em> 
-            on time <em>upwards</em>. But you did walk <em>forwards</em> to the lecture theatre.
-          </p>
 
         <h3>Vector Notation Methods</h3>
 
@@ -11232,22 +11230,8 @@ const subtopics = {
       <h3>Discrete symmetry</h3>
       <p>Kylo and Lusine return to the future, upset about the fact that nothing they did worked. They bring out their secret weapon: the discrete-symmetry-inator! A powerful tool which can shift the dynamics of the whole universe.</p>
       <h4>Parity (\\(\\hat{P}\\))</h4>
-      <p>The discrete-symmetry-inator has 3 different buttons: the first of which has a P with a circumflex (\\(\\hat{P}\\)). This represents <em>parity</em>. Parity means taking the whole universe and flipping it like a pancake. So left is right, right is left. All position and momentum vectors become negative.</p>
-      <p>Under parity, \\( \\vec{r} \\to -\\vec{r} \\) and \\( \\vec{p} \\to -\\vec{p} \\)</p>
-      <p>So right before the experiment is conducted, they press the \\(\\hat{P}\\) button to pancake-ify the universe. Hopefully that should do something, right?</p>
-      <p>Guess what?! The experiment worked exactly the same, again!</p>
       <h4>Charge conjugation (\\(\\hat{C}\\))</h4>
-      <p>The second button had a C with a circumflex (\\(\\hat{C}\\)), for <em>charge conjugation</em>. This means that every single charge and quantum number flips. So positive charges become negative, negative charges become positive. Particles become antiparticles, antiparticles become particle. Baryon numbers switch, lepton numbers switch, the whole universe is turned inside out.</p>
-      <p>And you'd think that surely this would do <em>something</em>, right? So Lusine takes the discrete-symmetry-inator, and presses the \\(\\hat{C}\\) button. The experiment is rerun... and the result is still the exact same!!</p>
       <h4>Time Reversal (\\(\\hat{T}\\))</h4>
-      <p>At this point, Kylo and Lusine has run out of options, so</p>
-      <p>Time reversal is exactly what it sounds like, run time backwards. The main idea is that if you had two reactants becoming two products (so something like \\( A + B \\to C + D \\)) and this reaction has a 30% chance of happening, then by running the reaction in reverse (getting the reactants back from the products \\( C + D \\to A + B \\)), it would have the same 30% probability.</p>
-      <h4>The weak force</h4>
-      <p>Now remember that in this particular case, we've been referring to the diffraction of light waves, which involves the electromagnetic force. Therefore in this case, the electromagnetic force doesn't change when you pancake the universe, or when you flip it inside out. Moreover running the experiment in reverse undoes the effect.</p>
-      <p>This is also true of the strong force (and gravity too probably), but it's not actually always true. God knows how they measured this, but somehow particle physicists were able to prove that if you pancake the universe, the weak force actually <em>does</em> change (i.e. the weak force is NOT parity-invariant). That means some of the interactions which take place in our universe couldn't take place if the universe was mirrored.</p>
-      <p>In fact, the weak force is a bit of a rebel, because not only does it choose not to comply in a mirrored universe, but it actually doesn't comply with any of these transformations. Again, God knows how they measured this, but if you replace all positive charge with negative charge, the weak force behaves differently. And if you reverse time, the probability of getting the reactants back is different to if you were to run the reaction in the forward direction.</p>
-      <p>As a matter of fact, even if Kylo and Lusine were to press the \\(\\hat{P}\\) button and the \\(\\hat{C}\\) button at the same time (\\(\\hat{P}\\hat{C}\\), meaning the universe is both pancaked and antiparticle-ified), the weak interaction still isn't the same. The only way you can get the weak force to listen is if you combine all 3 of the transformations (\\(\\hat{T}\\hat{C}\\hat{T}\\), a pancaked, antiparticle-ified and time reversed universe).</p>
-      <p>Now as it stands, quantum theory is defined in such a way that all forces MUST abide by the \\(\\hat{T}\\hat{C}\\hat{T}\\) rule, including the weak force. For some reason the weak force took grave offence to this and decided to ignore everything else. God knows why, but it just does.</p>
     `
   },
 
@@ -12390,33 +12374,6 @@ const subtopics = {
   }
 };
 
-
-
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3');
-  const nav = document.getElementById('floating-nav');
-  if (!nav || headings.length === 0) return;
-
-  nav.innerHTML = ''; // Clear previous buttons
-
-  headings.forEach((heading, index) => {
-    if (!heading.id) {
-      heading.id = `section-${index + 1}`;
-    }
-
-    const btn = document.createElement('button');
-    btn.textContent = heading.textContent;
-    btn.onclick = () => scrollToSection(heading.id);
-    nav.appendChild(btn);
-  });
-}
 // Export for Node.js
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { subtopics };

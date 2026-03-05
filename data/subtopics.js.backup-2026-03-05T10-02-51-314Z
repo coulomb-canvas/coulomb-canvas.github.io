@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-05T11:52:16.629Z
+// Generated: 2026-03-04T16:27:16.603Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 80 existing hand-written entries
-//   - 4 Markdown-generated entries
+//   - 3 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -694,7 +694,11 @@ const subtopics = {
             <li>Acceleration</li>
             <li>Force</li>
           </ul>
-          
+          <p>All of these quantities (as well as others) act in a certain direction, which needs to be specified. Unlike
+            scalars, which are quantities that only have magnitude, like mass, temperature, energy and time. You didn't
+            boil your water 100 degrees <em>to the left</em>, did you? Nor did you <em>attend your lectures</em> 
+            on time <em>upwards</em>. But you did walk <em>forwards</em> to the lecture theatre.
+          </p>
         </div>
         <div class="image">
           <div class="image-floater">
@@ -710,12 +714,6 @@ const subtopics = {
           </div>
         </div>
       </div>
-
-      <p>All of these quantities (as well as others) act in a certain direction, which needs to be specified. Unlike
-            scalars, which are quantities that only have magnitude, like mass, temperature, energy and time. You didn't
-            boil your water 100 degrees <em>to the left</em>, did you? Nor did you <em>attend your lectures</em> 
-            on time <em>upwards</em>. But you did walk <em>forwards</em> to the lecture theatre.
-          </p>
 
         <h3>Vector Notation Methods</h3>
 
@@ -11198,56 +11196,102 @@ const subtopics = {
   "symmetries": {
     title: "Symmetries",
     content: `
-      <p>Pfft, symmetry? Are we prepubescent? Why are we learning about bloody symmetry? You know we are actually in university?!</p>
-      <p>In particle physics, a symmetry is an operation you apply to the system which leaves the system unchanged. Take a square for example. Rotate it 90 degrees. Has it changed? Not really. So 90 degree rotation is a symmetry of a square.</p>
-      <p>There are 3 flavours of symmetry:</p>
-      <h3>Continuous Symmetries</h3>
-      <h4>Time</h4>
-      <p>Take an experiment, say the Michaelson Morley experiment why not.  Let's have the experiment begin at time \\(t=0\\). We of course get the LOL-worthy result of no shift in the diffraction pattern, which means no luminiferous aether.</p>
-      <p>Now they did the experiment just out of curiosity, but what they didn't know is that, in the year 2400 AD, this discovery that there was no luminiferous aether would somehow cause the universe to end. Luckily, right before the universe ends, a couple of survivors manage to build a time machine and in Yu-Gi-5Ds / Inazuma Eleven GO Chronos Stones fashion, travel back in time to stop this discovery being made.</p>
-      <p>Now the easy option would be to just kill Michaelson and Morley so that they can't do the experiment, but that wouldn't make for a very interesting plot, so instead they do the typical &quot;I can travel to any point in time to try and stop you, yet I pick the moment RIGHT before it's too lake&quot; strategy. They meet Michaelson and Morley and distract them for a little bit, in hopes that if the experiment were to take place at a different time, the result would be different.</p>
-      <p>They were able to distract them for about 50 seconds. That means the experiment now begins at time \\(t=50\\). And they run the experiment aaaand... no shift in the diffraction pattern, no luminiferous aether, skip a few steps and hey ho, the universe has ended.</p>
-      <p>Clearly they failed, so they try again, but this time help Michaelson and Morley set up the experiment, such that it cuts off 2 and a half minutes of setting up, meaning they start the experiment 2 and a half minutes earlier \\(t=-150\\). They run the experiment and... womp womp.</p>
-      <p>What does this stupid little story have to do with symmetries? What it tells us is that all times are indistinguishable, meaning that it doesn't matter <em>when</em> you do the experiment, the result will be the same (assuming any other conditions don't change).</p>
-      <h4>Linear position</h4>
-      <p>So clearly different times don't work. But our time-travelling friends are determined to get the universe back. So they return back to the time when the experiment is being set up, and beg the two scientists to build their experiment 2 metres to the left of where they were originally going to put it. Michaelson and Morley are a bit confused, but ultimately accept. Perhaps if the experiment is done in a different place, the result would change.</p>
-      <p>They run the experiment, and once again, there is no shift. Michaelson and Morley are about to explain their findings to the wider scientific community, but Kylo and Lusine aren't going down with out a fight. They beg and plead for the scientists tro try another location.</p>
-      <p>And another</p>
-      <p>And another</p>
-      <p>And another</p>
-      <p>But no matter how many places they tried, the result was the same.</p>
-      <p>This reflects another symmetry: no matter where in space you are, the effect of changing a system are the same.</p>
-      <h4>Angular position</h4>
-      <p>The two time travellers are beginning to loose hope. But Kylo has one last suggestion: what if they rotate the system? At which point Lusine gives him a monumental slap to the face.</p>
-      <p>&quot;Kylo you idiot!&quot; she says. &quot;The whole point of the experiment is to rotate the mirror-thingy and see what happens. Of course they'll have tried rotating the bloody system!&quot;</p>
-      <p>Michaelson and Morley are a bit confused, considering at this point, they actually HADN'T tried rotating the system. So they did and it turns out Lusine was correct, nothing changed. This therefore reflects the final continuous symmetry: no matter which way you are pointing, the effect of changing a system are the same.</p>
-      <h3>Internal symmetry</h3>
-      <p>Internal symmetries, or gauge symmetries, are the most physically useless symmetries, since they are pretty much only mathematical. But they exist so guess we have to mention 'em too.</p>
+      <h3>Symmetries and Conservation Laws: When the Universe Says “Nothing Changes”</h3>
+
+      <p>Right. Let’s talk about <strong>symmetries</strong>.</p>
+
+      <p>No, not the kind where your face is perfectly balanced. We’re talking about <strong>how the laws of physics stay the same no matter where, when, or how you look at them</strong>.</p>
+
+      <p>And yes — this isn’t just philosophy. It’s the foundation of all modern physics.</p>
+
+      <h3>What Is a Symmetry?</h3>
+
+      <p>A symmetry is an operation that you can do to a system without changing its physics.</p>
+
+      <p>Rotate it? Shift it in space? Flip time? If the laws stay the same, you’ve got a symmetry.</p>
+
+      <p>Example: do an experiment today. Do it tomorrow. Same result? That’s <strong>time translation symmetry</strong>.</p>
+
+      <p>Move it to the left? Still works? That’s <strong>spatial translation symmetry</strong>.</p>
+
+      <p>And thanks to <strong>Noether’s Theorem</strong>, every continuous symmetry gives you a <strong>conserved quantity</strong>.</p>
+
+      <p>Yes — <em>Emmy Noether</em> dropped one of the biggest bombs in physics history and most people don’t even know her name.</p>
+
+      <h3>Continuous Symmetries: The Big Three</h3>
+
       <ul>
-      <li>Wavefunction phase: you can quite easily prove that the probability density of a function doesn't change with phase</li>
-      <li>Upness and downness or quarks: Up quarks and down quarks have the same physics</li>
-      <li>Colour: the colour of a particle doesn't change the physics of the system</li>
+        <li><strong>Time translation</strong> → energy is conserved</li>
+        <li><strong>Spatial translation</strong> → linear momentum is conserved</li>
+        <li><strong>Rotation</strong> → angular momentum is conserved</li>
       </ul>
-      <p>See this section is so filler that I didn't even give each one their own h4 section. Anyway, moving on...</p>
-      <h3>Discrete symmetry</h3>
-      <p>Kylo and Lusine return to the future, upset about the fact that nothing they did worked. They bring out their secret weapon: the discrete-symmetry-inator! A powerful tool which can shift the dynamics of the whole universe.</p>
-      <h4>Parity (\\(\\hat{P}\\))</h4>
-      <p>The discrete-symmetry-inator has 3 different buttons: the first of which has a P with a circumflex (\\(\\hat{P}\\)). This represents <em>parity</em>. Parity means taking the whole universe and flipping it like a pancake. So left is right, right is left. All position and momentum vectors become negative.</p>
-      <p>Under parity, \\( \\vec{r} \\to -\\vec{r} \\) and \\( \\vec{p} \\to -\\vec{p} \\)</p>
-      <p>So right before the experiment is conducted, they press the \\(\\hat{P}\\) button to pancake-ify the universe. Hopefully that should do something, right?</p>
-      <p>Guess what?! The experiment worked exactly the same, again!</p>
-      <h4>Charge conjugation (\\(\\hat{C}\\))</h4>
-      <p>The second button had a C with a circumflex (\\(\\hat{C}\\)), for <em>charge conjugation</em>. This means that every single charge and quantum number flips. So positive charges become negative, negative charges become positive. Particles become antiparticles, antiparticles become particle. Baryon numbers switch, lepton numbers switch, the whole universe is turned inside out.</p>
-      <p>And you'd think that surely this would do <em>something</em>, right? So Lusine takes the discrete-symmetry-inator, and presses the \\(\\hat{C}\\) button. The experiment is rerun... and the result is still the exact same!!</p>
-      <h4>Time Reversal (\\(\\hat{T}\\))</h4>
-      <p>At this point, Kylo and Lusine has run out of options, so</p>
-      <p>Time reversal is exactly what it sounds like, run time backwards. The main idea is that if you had two reactants becoming two products (so something like \\( A + B \\to C + D \\)) and this reaction has a 30% chance of happening, then by running the reaction in reverse (getting the reactants back from the products \\( C + D \\to A + B \\)), it would have the same 30% probability.</p>
-      <h4>The weak force</h4>
-      <p>Now remember that in this particular case, we've been referring to the diffraction of light waves, which involves the electromagnetic force. Therefore in this case, the electromagnetic force doesn't change when you pancake the universe, or when you flip it inside out. Moreover running the experiment in reverse undoes the effect.</p>
-      <p>This is also true of the strong force (and gravity too probably), but it's not actually always true. God knows how they measured this, but somehow particle physicists were able to prove that if you pancake the universe, the weak force actually <em>does</em> change (i.e. the weak force is NOT parity-invariant). That means some of the interactions which take place in our universe couldn't take place if the universe was mirrored.</p>
-      <p>In fact, the weak force is a bit of a rebel, because not only does it choose not to comply in a mirrored universe, but it actually doesn't comply with any of these transformations. Again, God knows how they measured this, but if you replace all positive charge with negative charge, the weak force behaves differently. And if you reverse time, the probability of getting the reactants back is different to if you were to run the reaction in the forward direction.</p>
-      <p>As a matter of fact, even if Kylo and Lusine were to press the \\(\\hat{P}\\) button and the \\(\\hat{C}\\) button at the same time (\\(\\hat{P}\\hat{C}\\), meaning the universe is both pancaked and antiparticle-ified), the weak interaction still isn't the same. The only way you can get the weak force to listen is if you combine all 3 of the transformations (\\(\\hat{T}\\hat{C}\\hat{T}\\), a pancaked, antiparticle-ified and time reversed universe).</p>
-      <p>Now as it stands, quantum theory is defined in such a way that all forces MUST abide by the \\(\\hat{T}\\hat{C}\\hat{T}\\) rule, including the weak force. For some reason the weak force took grave offence to this and decided to ignore everything else. God knows why, but it just does.</p>
+
+      <p>So yes — conservation laws aren’t random. They’re baked into the fabric of spacetime.</p>
+
+      <h3>Internal Symmetries: When the Universe Doesn’t Care About Labels</h3>
+
+      <p>These aren’t about space or time. They’re about the properties of particles.</p>
+
+      <ul>
+        <li><strong>Electroweak charge</strong>: physics is the same for up and down quarks → conservation of charge</li>
+        <li><strong>Colour symmetry</strong>: physics is the same for red, green, blue quarks → conservation of colour</li>
+      </ul>
+
+      <p>These are <strong>gauge symmetries</strong> — and they’re why the strong and electromagnetic forces exist.</p>
+
+      <h3>Discrete Symmetries: The Mirror, the Twin, and the Rewind Button</h3>
+
+      <p>These aren’t smooth. They’re sudden flips.</p>
+
+      <h4>Parity (P)</h4>
+      <p>Flip all spatial coordinates: \\( \\vec{r} \\to -\\vec{r} \\).</p>
+      <p>Like looking in a mirror.</p>
+      <p>Electromagnetism and strong force? Respect it.</p>
+      <p>Weak force? <strong>Violates it</strong>. In the 1950s, this blew everyone’s mind.</p>
+
+      <h4>Charge Conjugation (C)</h4>
+      <p>Swap particles with antiparticles.</p>
+      <p>Weak force? Also violates this.</p>
+
+      <h4>Time Reversal (T)</h4>
+      <p>Run time backwards.</p>
+      <p>Weak force? Violates this too.</p>
+
+      <h3>The Ultimate Symmetry: CPT</h3>
+
+      <p>Now here’s the kicker:</p>
+
+      <p>Even though the weak force breaks C, P, T, and even CP —</p>
+
+      <p>It <strong>never</strong> breaks <strong>CPT</strong>.</p>
+
+      <p>If you:</p>
+      <ol>
+        <li>Flip space (P)</li>
+        <li>Swap particles with antiparticles (C)</li>
+        <li>Run time backwards (T)</li>
+      </ol>
+
+      <p>Then the universe looks exactly the same.</p>
+
+      <p>This is a fundamental requirement of quantum field theory. No exceptions.</p>
+
+      <p>So yes — the weak force is a rebel. But even rebels have rules.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>Symmetry → conserved quantity (Noether’s Theorem)</li>
+        <li>Time symmetry → energy conserved</li>
+        <li>Space symmetry → momentum conserved</li>
+        <li>Rotation → angular momentum conserved</li>
+        <li>P, C, T: discrete symmetries</li>
+        <li>Weak force violates P, C, T, and CP</li>
+        <li>But <strong>CPT is always conserved</strong></li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care about your intuition.  
+      It only cares about symmetry.</p>
     `
   },
 
@@ -12390,33 +12434,6 @@ const subtopics = {
   }
 };
 
-
-
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3');
-  const nav = document.getElementById('floating-nav');
-  if (!nav || headings.length === 0) return;
-
-  nav.innerHTML = ''; // Clear previous buttons
-
-  headings.forEach((heading, index) => {
-    if (!heading.id) {
-      heading.id = `section-${index + 1}`;
-    }
-
-    const btn = document.createElement('button');
-    btn.textContent = heading.textContent;
-    btn.onclick = () => scrollToSection(heading.id);
-    nav.appendChild(btn);
-  });
-}
 // Export for Node.js
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { subtopics };

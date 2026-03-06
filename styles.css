@@ -356,12 +356,12 @@ li {
 
 @media (max-width: 100vh) {
   #topic-title {
-    font-size: calc(100vh / 12);
+    font-size: calc(100vw / 12);
 
   }
 
   .topic-title {
-    font-size: calc(100vh / 39);
+    font-size: calc(100vw / 39);
     margin-top: -5vw;
   }
 

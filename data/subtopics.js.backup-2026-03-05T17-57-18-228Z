@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-06T10:33:02.309Z
+// Generated: 2026-03-05T17:56:30.358Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -11265,9 +11265,9 @@ const subtopics = {
               \\[ N(t) = N_0e^{-\\Gamma t} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula 1: Particle Decay
+              Formula X
               </div><div class="formula-tooltip-desc">
-              The number of particles in the ensemble diminishes exponentially with time
+              ...
               </div></span>
           </div>
       </div>
@@ -12337,7 +12337,8 @@ function generateFloatingNav() {
   });
 }
 
-// Export for Node.js
+// At the very end of subtopics.js, add:
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { subtopics };
 }
+

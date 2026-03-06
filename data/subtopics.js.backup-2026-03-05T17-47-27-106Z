@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-06T10:33:02.309Z
+// Generated: 2026-03-05T11:52:16.629Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 80 existing hand-written entries
-//   - 5 Markdown-generated entries
+//   - 4 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -694,7 +694,7 @@ const subtopics = {
             <li>Acceleration</li>
             <li>Force</li>
           </ul>
-
+          
         </div>
         <div class="image">
           <div class="image-floater">
@@ -11246,32 +11246,111 @@ const subtopics = {
       <p>Now remember that in this particular case, we've been referring to the diffraction of light waves, which involves the electromagnetic force. Therefore in this case, the electromagnetic force doesn't change when you pancake the universe, or when you flip it inside out. Moreover running the experiment in reverse undoes the effect.</p>
       <p>This is also true of the strong force (and gravity too probably), but it's not actually always true. God knows how they measured this, but somehow particle physicists were able to prove that if you pancake the universe, the weak force actually <em>does</em> change (i.e. the weak force is NOT parity-invariant). That means some of the interactions which take place in our universe couldn't take place if the universe was mirrored.</p>
       <p>In fact, the weak force is a bit of a rebel, because not only does it choose not to comply in a mirrored universe, but it actually doesn't comply with any of these transformations. Again, God knows how they measured this, but if you replace all positive charge with negative charge, the weak force behaves differently. And if you reverse time, the probability of getting the reactants back is different to if you were to run the reaction in the forward direction.</p>
-      <p>As a matter of fact, even if Kylo and Lusine were to press the \\(\\hat{P}\\) button and the \\(\\hat{C}\\) button at the same time (\\(\\hat{P}\\hat{C}\\), meaning the universe is both pancaked and antiparticle-ified), the weak interaction still isn't the same. The only way you can get the weak force to listen is if you combine all 3 of the transformations (\\(\\hat{P}\\hat{C}\\hat{T}\\), a pancaked, antiparticle-ified and time reversed universe).</p>
-      <p>Now as it stands, quantum theory is defined in such a way that all forces MUST abide by the \\(\\hat{P}\\hat{C}\\hat{T}\\) rule, including the weak force. For some reason the weak force took grave offence to this and decided to ignore everything else. God knows why, but it just does.</p>
+      <p>As a matter of fact, even if Kylo and Lusine were to press the \\(\\hat{P}\\) button and the \\(\\hat{C}\\) button at the same time (\\(\\hat{P}\\hat{C}\\), meaning the universe is both pancaked and antiparticle-ified), the weak interaction still isn't the same. The only way you can get the weak force to listen is if you combine all 3 of the transformations (\\(\\hat{T}\\hat{C}\\hat{T}\\), a pancaked, antiparticle-ified and time reversed universe).</p>
+      <p>Now as it stands, quantum theory is defined in such a way that all forces MUST abide by the \\(\\hat{T}\\hat{C}\\hat{T}\\) rule, including the weak force. For some reason the weak force took grave offence to this and decided to ignore everything else. God knows why, but it just does.</p>
     `
   },
 
   "probing": {
-    title: "Probing Particle Physics",
+    title: "Physics Probing",
     content: `
-      <p><em>We've gone three entire subtopics without any equations?! It feels like an enormous dopamine release to finally see that orange formula box thing again.</em></p>
-      <h3>Decay</h3>
-      <p>If you've made it this far in the course, you are probably familiar with the formula for radioactive decay. The number of particles at a certain time is equal to the initial amount, decaying exponentially with time.</p> \\[N(t) = N_0e^{-\\lambda t}\\]
-      <p>However, it's not only radioactive nuclei which decay. As a matter of fact, all particles - except protons, neutrinos and electrons - decay into more stable particles. For instance tauons and muons will always decay into electrons eventually.</p>
-      <p>And in the same way we can use the exponential decay formula to predict radioactive decay, you can use an eerily similar version of the equation to predict particle stabilisation decay:</p>
-      <div class="hover-wrapper">
-          <div class="formula-container">
-              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              \\[ N(t) = N_0e^{-\\Gamma t} \\]
-              </div>
-              <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula 1: Particle Decay
-              </div><div class="formula-tooltip-desc">
-              The number of particles in the ensemble diminishes exponentially with time
-              </div></span>
-          </div>
-      </div>
-      <p>And you might be thinking, &quot;ALL particles? Wouldn't that include neutrons? I thought they were stable?&quot; Well... apparently not actually? They also decay into protons.</p>
+      <h3>Particle Decays and Relativistic Kinematics: When Things Fall Apart (At Nearly the Speed of Light)</h3>
+
+      <p>Right. Let’s talk about <strong>particle decays</strong>.</p>
+
+      <p>No, not the kind that smell bad. We’re talking about <strong>unstable particles turning into other particles</strong> — because nothing lasts forever, especially in particle physics.</p>
+
+      <p>And yes — we need relativity. Because these things are moving so fast, Newton’s laws are useless.</p>
+
+      <h3>Particle Decays: When a Particle Can’t Hold Itself Together</h3>
+
+      <p>Some particles are unstable. They decay into lighter particles.</p>
+
+      <p>Example: muon decay:</p>
+
+      <p>\\( \\mu^- \\to e^- + \\bar{\\nu}_e + \\nu_\\mu \\)</p>
+
+      <p>Conserved: charge, lepton numbers \\( L_e, L_\\mu \\).</p>
+
+      <p>Not conserved: mass. The muon is heavier than the electron — the extra energy goes into kinetic energy of the products.</p>
+
+      <h3>Rest Frame vs Lab Frame</h3>
+
+      <p>In the **rest frame** of the decaying particle, total momentum is zero.</p>
+
+      <p>So the decay products fly out back-to-back.</p>
+
+      <p>In the **lab frame**, the parent particle might be moving — so the decay products are boosted in that direction.</p>
+
+      <p>This matters for detectors — the decay products aren’t isotropic.</p>
+
+      <h3>Relativistic Invariants: The Numbers That Never Change</h3>
+
+      <p>In relativity, energy and momentum change with frame.</p>
+
+      <p>But some things don’t.</p>
+
+      <p>The most important is the **invariant mass**:</p>
+
+      <p>\\( s = (E_1 + E_2)^2 - (\\vec{p}_1 + \\vec{p}_2)^2 c^2 \\)</p>
+
+      <p>For a single particle, \\( s = m^2 c^4 \\).</p>
+
+      <p>For a system, \\( \\sqrt{s} \\) is the total energy in the centre-of-mass frame.</p>
+
+      <p>This is what colliders like the LHC quote — “\\( \\sqrt{s} = 13 \\, \\text{TeV} \\)” means the COM energy is 13 TeV.</p>
+
+      <h3>Centre-of-Mass (COM) Frame: Where Physics Is Simple</h3>
+
+      <p>In the COM frame, total momentum is zero:</p>
+
+      <p>\\( \\sum \\vec{p}_{\\text{initial}} = 0 \\)</p>
+
+      <p>So for two colliding particles:</p>
+
+      <p>\\( \\vec{p}_1 = -\\vec{p}_2 \\)</p>
+
+      <p>This is the natural frame for studying collisions — because symmetry makes the maths easier.</p>
+
+      <h3>Two-Body Decay: Energy and Momentum Sharing</h3>
+
+      <p>When a particle of mass \\( M \\) decays into two particles of masses \\( m_1 \\) and \\( m_2 \\), their energies in the rest frame are:</p>
+
+      <p>\\( E_1 = \\frac{M^2 + m_1^2 - m_2^2}{2M} c^2 \\)</p>
+
+      <p>\\( E_2 = \\frac{M^2 + m_2^2 - m_1^2}{2M} c^2 \\)</p>
+
+      <p>And their momenta are equal and opposite.</p>
+
+      <p>Useful for calculating what detectors see.</p>
+
+      <h3>Cosmic Ray Example</h3>
+
+      <p>A high-energy proton hits the atmosphere → creates pions.</p>
+
+      <p>Charged pions decay: \\( \\pi^\\pm \\to \\mu^\\pm + \\nu_\\mu \\) or \\( \\bar{\\nu}_\\mu \\)</p>
+
+      <p>Then muons decay: \\( \\mu^- \\to e^- + \\bar{\\nu}_e + \\nu_\\mu \\)</p>
+
+      <p>But muons live longer when they’re moving fast — thanks to time dilation.</p>
+
+      <p>So they reach the ground. Otherwise, they’d decay in the upper atmosphere.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>Unstable particles decay to lighter ones</li>
+        <li>Conserved: energy, momentum, charge, lepton/baryon number</li>
+        <li>Rest frame: decay products back-to-back</li>
+        <li>\\( s = (\\sum E)^2 - (\\sum \\vec{p})^2 c^2 \\) = invariant mass squared</li>
+        <li>\\( \\sqrt{s} \\) = COM energy</li>
+        <li>COM frame: total \\( \\vec{p} = 0 \\)</li>
+        <li>Two-body decay: energies fixed by kinematics</li>
+        <li>Time dilation lets cosmic muons reach Earth</li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care how short your lifetime is.  
+      It only cares about the reference frame.</p>
     `
   },
 
@@ -12311,6 +12390,8 @@ const subtopics = {
   }
 };
 
+
+
 function scrollToSection(id) {
   const section = document.getElementById(id);
   if (section) {
@@ -12336,7 +12417,6 @@ function generateFloatingNav() {
     nav.appendChild(btn);
   });
 }
-
 // Export for Node.js
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { subtopics };

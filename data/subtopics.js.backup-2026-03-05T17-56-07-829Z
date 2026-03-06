@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-06T10:33:02.309Z
+// Generated: 2026-03-05T17:55:46.297Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -11256,18 +11256,18 @@ const subtopics = {
     content: `
       <p><em>We've gone three entire subtopics without any equations?! It feels like an enormous dopamine release to finally see that orange formula box thing again.</em></p>
       <h3>Decay</h3>
-      <p>If you've made it this far in the course, you are probably familiar with the formula for radioactive decay. The number of particles at a certain time is equal to the initial amount, decaying exponentially with time.</p> \\[N(t) = N_0e^{-\\lambda t}\\]
+      <p>If you've made it this far in the course, you are probably familiar with the formula for radioactive decay. The number of particles at a certain time is equal to the initial amount, decaying exponentially with time.</p> [N(t) = N_0e^{-lambda t}]
       <p>However, it's not only radioactive nuclei which decay. As a matter of fact, all particles - except protons, neutrinos and electrons - decay into more stable particles. For instance tauons and muons will always decay into electrons eventually.</p>
       <p>And in the same way we can use the exponential decay formula to predict radioactive decay, you can use an eerily similar version of the equation to predict particle stabilisation decay:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              \\[ N(t) = N_0e^{-\\Gamma t} \\]
+              [ N(t) = N_0e^{-Gamma t} ]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula 1: Particle Decay
+              Formula X
               </div><div class="formula-tooltip-desc">
-              The number of particles in the ensemble diminishes exponentially with time
+              ...
               </div></span>
           </div>
       </div>
@@ -12310,32 +12310,6 @@ const subtopics = {
     `
   }
 };
-
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3');
-  const nav = document.getElementById('floating-nav');
-  if (!nav || headings.length === 0) return;
-
-  nav.innerHTML = ''; // Clear previous buttons
-
-  headings.forEach((heading, index) => {
-    if (!heading.id) {
-      heading.id = `section-${index + 1}`;
-    }
-
-    const btn = document.createElement('button');
-    btn.textContent = heading.textContent;
-    btn.onclick = () => scrollToSection(heading.id);
-    nav.appendChild(btn);
-  });
-}
 
 // Export for Node.js
 if (typeof module !== 'undefined' && module.exports) {

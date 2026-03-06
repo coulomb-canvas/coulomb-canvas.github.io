@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-06T10:33:02.309Z
+// Generated: 2026-03-05T17:57:18.244Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -12310,32 +12310,6 @@ const subtopics = {
     `
   }
 };
-
-function scrollToSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3');
-  const nav = document.getElementById('floating-nav');
-  if (!nav || headings.length === 0) return;
-
-  nav.innerHTML = ''; // Clear previous buttons
-
-  headings.forEach((heading, index) => {
-    if (!heading.id) {
-      heading.id = `section-${index + 1}`;
-    }
-
-    const btn = document.createElement('button');
-    btn.textContent = heading.textContent;
-    btn.onclick = () => scrollToSection(heading.id);
-    nav.appendChild(btn);
-  });
-}
 
 // Export for Node.js
 if (typeof module !== 'undefined' && module.exports) {

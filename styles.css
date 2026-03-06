@@ -24,7 +24,7 @@ body {
   font-family: "Verdana", sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-size: 2.08vh;
+  font-size: 2.15vh;
   /* <- change the base size */
   line-height: 1.5;
   /* <- increase for more vertical space */
@@ -39,7 +39,7 @@ body {
 
 @media (max-width: 100vh) {
   body {
-    font-size: 10px;
+    font-size: 1.9vh;
   }
 }
 
@@ -68,6 +68,7 @@ h4 {
   font-family: "Njal", sans-serif;
   text-decoration: underline;
   text-underline-offset: 2px;
+  font-weight: lighter;
   color: white;
   border-top: 0.2vh dotted rgba(255, 255, 255, 0.417);
   font-size: 4vh;
@@ -355,12 +356,12 @@ li {
 
 @media (max-width: 100vh) {
   #topic-title {
-    font-size: calc(100vw / 12);
+    font-size: calc(100vh / 12);
 
   }
 
   .topic-title {
-    font-size: calc(100vw / 39);
+    font-size: calc(100vh / 39);
     margin-top: -5vw;
   }
 
@@ -381,12 +382,13 @@ li {
   position: relative;
   display: flex;
   margin: 1rem;
-  font-size: 1.2rem;
+  font-size: 4vh;
   color: var(--accent);
   text-decoration: none;
   justify-content: center;
   padding-top: 0%;
   top: -20px;
+  opacity: 70%;
 }
 
 .back-link:hover {
@@ -396,7 +398,7 @@ li {
 
 @media (max-width: 100vh) {
   .back-link {
-    font-size: 2.5vw;
+    font-size: 3vh;
     top: auto;
   }
 }
@@ -444,13 +446,14 @@ li {
 
 @media (max-width: 100vh) {
   h3 {
-    font-size: 30px;
+    font-size: 6vh;
     text-decoration: underline;
     text-underline-offset: 2px;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     line-height: 1.1;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+    justify-content: left;
   }
 }
 
@@ -474,17 +477,18 @@ li {
 .back-links {
   margin: 0rem;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 4vh;
   text-align: center;
   align-items: center;
   padding-top: 0%;
   top: -20px;
+  opacity: 70%
 }
 
 @media (max-width: 100vh) {
   .back-links {
     padding-top: 5%;
-    font-size: 0.8rem;
+    font-size: 3vh;
   }
 }
 
@@ -1331,7 +1335,7 @@ body.dimmed::before {
   }
 
   #subtopic-title {
-    font-size: 2rem;
+    font-size: 6vh;
 
   }
 

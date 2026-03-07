@@ -245,6 +245,32 @@ const fileContent = `// AUTO-GENERATED FILE - Contains ${Object.keys(mergedSubto
 
 const subtopics = ${formatSubtopics(mergedSubtopics)};
 
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+  
+function generateFloatingNav() {   
+  const headings = document.querySelectorAll('h3');
+  const nav = document.getElementById('floating-nav');
+  if (!nav || headings.length === 0) return;
+
+  nav.innerHTML = ''; // Clear previous buttons
+
+  headings.forEach((heading, index) => {
+    if (!heading.id) {
+      heading.id = \`section-\${index + 1}\`;
+    }
+
+    const btn = document.createElement('button');
+    btn.textContent = heading.textContent;
+    btn.onclick = () => scrollToSection(heading.id);
+    nav.appendChild(btn);
+  });
+}
+
 // Export for Node.js
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { subtopics };

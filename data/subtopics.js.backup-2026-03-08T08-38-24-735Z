@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-08T10:02:21.636Z
+// Generated: 2026-03-07T22:53:18.798Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 80 existing hand-written entries
-//   - 6 Markdown-generated entries
+//   - 5 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -11393,24 +11393,94 @@ const subtopics = {
   },
 
   "sources": {
-    title: "Particle Sources",
+    title: "Sources of Particles",
     content: `
-      <h3>Beta Decay</h3>
-      <p>The easiest to understand of the three, and also most common, is the beta decay. When a neutron decays into a proton, it also releases an electron (to conserve charge) and an electron antineutrino (to conserve lepton number)</p> \\[ n \\to p + e^- + \\bar{\\nu}_e \\]
-      <p>This process is called <em>beta decay</em> (specifically <em>beta minus decay</em>), since the electron in this case is called a <em>beta particle</em>. I believe it's called that since this is the exact process responsible for <em>beta decay</em>.</p>
-      <p>Protons can also experience beta decay, decaying into a neutron, a positron and an electron neutrino, a process known as <em>beta plus decay</em>. That might come as a surprise, since neutrons are heavier than protons and I said last time that particles decay only into lighter versions of themselves. Technically that's true, but if the neutron is in a nucleus (which is usually is), it can actually borrow some of the nucleus' binding energy. Since energy is just unprocessed mass, this additional energy gives the particle the ability to decay:</p>\\[ p \\to n + e^+ + \\nu_e \\]
-      <h3>Cosmic Ray Air Showers</h3>
-      <p>Luckily, the universe is also very kind to us, so gives us a lot of high energy particles from outer space for free. And when I'm talking about high energy, I mean <strong>really</strong> high energy, like between \\( 10^9 \\) and \\(10^21\\) electron volts worth of energy. Since the energy is so high, this is more than enough energy for our particles to decay into more particles. And then those particles can decay into even more particles. And then <em>those</em> particles can decay into <em>even more</em> particles. And so on and so forth.</p>
-      <p>Let me walk you through the process. Most of the particles the universe gives us are protons. These high energy protons collide with oxygen and nitrogen, causing them to split into pions, neutrons and more protons.</p>
-      <p>The newly formed protons will also keep on splitting into pions, neutrons and more protons until they run out of energy.</p>
-      <p>The charged pions (\\( \\pi^+ \\) and \\( \\pi^- \\)) also decay into pions neutrons and protons, until they eventually have low enough energy to do the pion-to-muon think I spoke about last time, where they form muons and muon neutrinos. The muons could then decay into electrons, but if we are lucky, some of them reach the surface before they have time to, and hence we can capture muons.</p>
-      <p>The neutral pions (\\( \\pi^0 \\)) split into photons, which through pair production split into electrons and positrons, which then become photons, which through pair production split into electrons and positrons, which then become photons, which through pair production split into electrons and positrons...</p>
-      <p>This continual splitting of particles forms a cosmic ray air shower.</p>
-      <h3>The Sun</h3>
-      <p>In addition, our big bright neighbour the sun also sends particles our way.</p>
-      <h4>Solar Wind</h4>
-      <p>The</p>
-      <h4>Solar neutrinos</h4>
+      <h3>Sources of Particles: When the Universe Floods You With Stuff You Didn’t Ask For</h3>
+
+      <p>Right. Let’s talk about <strong>where particles come from</strong>.</p>
+
+      <p>No, not the kind that appear in your kitchen at 3am. We’re talking about <strong>natural sources of 
+      high-energy particles</strong> — the ones that rain down on Earth from space, burst out of the Sun, or seep up from the radioactive core of the planet.</p>
+
+      <p>And yes — you’re being bombarded. Right now.</p>
+
+      <h3>β⁻ Decay: When Neutrons Have a Midlife Crisis</h3>
+
+      <p>Inside unstable atomic nuclei, neutrons can’t keep it together.</p>
+
+      <p>So they decay:</p>
+
+      <p>\\( n \\to p + e^- + \\bar{\\nu}_e \\)</p>
+
+      <p>This is <strong>beta-minus decay</strong> — and it’s everywhere.</p>
+
+      <p>In rocks. In bananas. In your bones (thanks, potassium-40).</p>
+
+      <p>And the antineutrinos it produces? They’re called <strong>geoneutrinos</strong> when they come from Earth’s core.</p>
+
+      <p>We can’t drill to the centre of the Earth. But we *can* detect these ghostly particles — and use them to probe how much radioactive material is down there.</p>
+
+      <p>And yes — β⁻ decay is responsible for about <strong>half of Earth’s internal heat</strong>. The other half is leftover from when the planet formed.</p>
+
+      <p>So your GPS works because of radioactive decay. No big deal.</p>
+
+      <h3>Cosmic Ray Air Showers: When a Single Proton Makes a Whole Cascade</h3>
+
+      <p>High-energy protons — mostly from supernovae or active galaxies — slam into the top of the atmosphere at nearly the speed of light.</p>
+
+      <p>They hit a nitrogen or oxygen nucleus. Boom.</p>
+
+      <p>That collision creates pions, kaons, more protons, neutrons — a whole shower of particles.</p>
+
+      <p>Those decay or collide again. More particles. More energy.</p>
+
+      <p>By the time it reaches the ground, you’ve got a **particle avalanche** — millions of secondary particles spread over kilometers.</p>
+
+      <p>And the muons? They’re the survivors.</p>
+
+      <p>They live longer than they should because of **time dilation** — Einstein saves them from decaying in the upper atmosphere.</p>
+
+      <p>So yes — relativity is why muons reach your detector (or your body).</p>
+
+      <h3>Particles from the Sun: Solar Wind, Flares, and Neutrinos</h3>
+
+      <p>The Sun isn’t just a big ball of hot gas. It’s a particle factory.</p>
+
+      <ul>
+        <li><strong>Solar wind</strong>: a steady stream of electrons and protons flying out at 400–800 km/s</li>
+        <li><strong>Solar flares</strong>: magnetic explosions on the Sun’s surface → high-energy protons and electrons</li>
+        <li><strong>Coronal mass ejections (CMEs)</strong>: billion-ton plasma blobs hurled into space → can trigger geomagnetic storms</li>
+        <li><strong>Solar neutrinos</strong>: from nuclear fusion in the core → 65 billion neutrinos per second pass through every cm² of your body</li>
+      </ul>
+
+      <p>And yes — they’re nearly impossible to detect. But we do it. Because physics.</p>
+
+      <h3>Other Sources: The Universe Is Loud</h3>
+
+      <p>It’s not just Earth and Sun.</p>
+
+      <ul>
+        <li><strong>Pulsars</strong>: spinning neutron stars that beam particles and radiation</li>
+        <li><strong>Supernovae</strong>: explode and accelerate particles to insane energies</li>
+        <li><strong>Active galactic nuclei</strong>: supermassive black holes eating stuff → jets of particles at near-light speed</li>
+        <li><strong>Big Bang relics</strong>: cosmic microwave background photons, and maybe even dark matter</li>
+      </ul>
+
+      <p>The universe is basically a giant particle accelerator. And we’re in the splash zone.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>β⁻ decay: \\( n \\to p + e^- + \\bar{\\nu}_e \\)</li>
+        <li>Geoneutrinos: probe Earth’s radioactive core</li>
+        <li>Cosmic rays: high-energy protons → air showers → muons</li>
+        <li>Muons reach ground due to time dilation</li>
+        <li>Sun: solar wind, flares, CMEs, and solar neutrinos</li>
+        <li>Pulsars, supernovae, AGNs: extra-solar particle sources</li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care if you’re ready.  
+      It only cares about particle production.</p>
     `
   },
 

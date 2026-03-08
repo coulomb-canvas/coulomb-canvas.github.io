@@ -73,6 +73,14 @@
           toggleBtn.addEventListener('click', () => {
             navPanel.classList.toggle('visible');
           });
+
+          document.addEventListener('click', (e) => {
+            // if click is NOT inside navPanel and NOT on toggle button
+            if (!navPanel.contains(e.target) && e.target !== toggleBtn) {
+              navPanel.classList.remove('visible');
+            }
+          });
+
         } else {
           console.error("Toggle button or nav panel not found.");
         }

@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-08T10:02:21.636Z
+// Generated: 2026-03-08T08:38:24.768Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -11396,21 +11396,9 @@ const subtopics = {
     title: "Particle Sources",
     content: `
       <h3>Beta Decay</h3>
-      <p>The easiest to understand of the three, and also most common, is the beta decay. When a neutron decays into a proton, it also releases an electron (to conserve charge) and an electron antineutrino (to conserve lepton number)</p> \\[ n \\to p + e^- + \\bar{\\nu}_e \\]
+      <p>The easiest to understand of the three, and also most common, is the beta decay. When a neutron decays into a proton, it also releases an electron (to conserve charge) and an electron antineutrino (to conserve lepton number)</p> \\[ n \\to p + e^- + \\bar{\\nu_e} \\]
       <p>This process is called <em>beta decay</em> (specifically <em>beta minus decay</em>), since the electron in this case is called a <em>beta particle</em>. I believe it's called that since this is the exact process responsible for <em>beta decay</em>.</p>
-      <p>Protons can also experience beta decay, decaying into a neutron, a positron and an electron neutrino, a process known as <em>beta plus decay</em>. That might come as a surprise, since neutrons are heavier than protons and I said last time that particles decay only into lighter versions of themselves. Technically that's true, but if the neutron is in a nucleus (which is usually is), it can actually borrow some of the nucleus' binding energy. Since energy is just unprocessed mass, this additional energy gives the particle the ability to decay:</p>\\[ p \\to n + e^+ + \\nu_e \\]
-      <h3>Cosmic Ray Air Showers</h3>
-      <p>Luckily, the universe is also very kind to us, so gives us a lot of high energy particles from outer space for free. And when I'm talking about high energy, I mean <strong>really</strong> high energy, like between \\( 10^9 \\) and \\(10^21\\) electron volts worth of energy. Since the energy is so high, this is more than enough energy for our particles to decay into more particles. And then those particles can decay into even more particles. And then <em>those</em> particles can decay into <em>even more</em> particles. And so on and so forth.</p>
-      <p>Let me walk you through the process. Most of the particles the universe gives us are protons. These high energy protons collide with oxygen and nitrogen, causing them to split into pions, neutrons and more protons.</p>
-      <p>The newly formed protons will also keep on splitting into pions, neutrons and more protons until they run out of energy.</p>
-      <p>The charged pions (\\( \\pi^+ \\) and \\( \\pi^- \\)) also decay into pions neutrons and protons, until they eventually have low enough energy to do the pion-to-muon think I spoke about last time, where they form muons and muon neutrinos. The muons could then decay into electrons, but if we are lucky, some of them reach the surface before they have time to, and hence we can capture muons.</p>
-      <p>The neutral pions (\\( \\pi^0 \\)) split into photons, which through pair production split into electrons and positrons, which then become photons, which through pair production split into electrons and positrons, which then become photons, which through pair production split into electrons and positrons...</p>
-      <p>This continual splitting of particles forms a cosmic ray air shower.</p>
-      <h3>The Sun</h3>
-      <p>In addition, our big bright neighbour the sun also sends particles our way.</p>
-      <h4>Solar Wind</h4>
-      <p>The</p>
-      <h4>Solar neutrinos</h4>
+      <p>Protons can also experience beta decay, which might come as a surprise, since neutrons are heavier than protons and I said last time that particles decay only into lighter versions of themselves. Technically that's true, but if the neutron is in a nucleus (which is usually is), it can actually borrow some of the nucleus' binding energy. Since energy is just unprocessed mass, this additional energy gives the particle the ability to decay:</p>\\[ p \\to e + e^+ + \\nu_e \\]
     `
   },
 

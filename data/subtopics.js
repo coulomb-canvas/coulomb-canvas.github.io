@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 80 subtopics
-// Generated: 2026-03-08T10:02:21.636Z
+// AUTO-GENERATED FILE - Contains 81 subtopics
+// Generated: 2026-03-09T12:48:14.953Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 80 existing hand-written entries
-//   - 6 Markdown-generated entries
+//   - 81 existing hand-written entries
+//   - 8 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -59,7 +59,7 @@ const subtopics = {
     title: "Features of the website",
     content: `
 
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
       <p>Over this 'subtopic' and the next, I will run through all the different features this website has.</p>
       <p>But before I do, I must make something ABUNDANTLY clear...</p>
@@ -175,7 +175,7 @@ const subtopics = {
     title: "More features of the website",
     content: `
 
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
         <p>First, we have these light blue underlined links. These will point out key definitions which you should learn. 
         Hovering over them will reveal the deininition. Try it out with these ones. I mean, you probably know about
@@ -1260,7 +1260,7 @@ const subtopics = {
     title: "Ordinary Differential Equations (ODEs)",
     content: `
 
-        <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+        <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
         <p>An <strong>ODE (ordinary differential equation)</strong> is an equation involving only ordinary
         derivatives, and no partial derivatives. What’s a partial derivative you ask? If you don’t
@@ -1736,7 +1736,7 @@ const subtopics = {
   "multivariable": {
     title: "Multivariable Calculus",
     content: `
-          <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+          <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
             <h3>Multivariable Calculus: Slopes in 3D</h3>
             <p>
                 By now, you’re probably familiar with \\(f(x)\\). This refers to a function which depends only on a 
@@ -1952,7 +1952,7 @@ const subtopics = {
           the dx after the integral, but you never bothered, because you thought it weren’t important? 
           <strong>Well now it is important!</strong>
       </i>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>
           Alright, so you know how to integrate in one dimension to find the area under a curve. Easy stuff. 
           But what if you want to find the <strong>volume</strong> under a 3D surface? For that, we need to 
@@ -2130,7 +2130,7 @@ const subtopics = {
     title: "Line Integrals",
     content: `
       <h3>Line Integrals</h3>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>
           So far, we've been integrating over whole areas and volumes. But what if you only care about what 
           happens along a specific, curvy path? For that, you need a <strong>line integral</strong>.
@@ -2599,7 +2599,7 @@ const subtopics = {
       matrices was actual ass, so I really didn't pay much attention to what he was saying, especially
       this part upon matrices. Worst part is, I did further maths, which means I already did matrices,
       but understood it less upon attending his lectures than I did before. Crazy innit?</i>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>This next section is called <strong>Linear Algebra</strong>, although from what I gather, it's
       just matrices. I don't has a clue as to why they call it Linear Algebra, and in fact I'm not too
       sure why most of the stuff I've learnt about matrices is even useful. But it's here, so let's
@@ -2928,7 +2928,7 @@ const subtopics = {
     title: "Newton's Laws",
     content: `
 
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>We've all heard of 'em, and it's about time we actually started using them! Newton's laws of motion govern
       pretty much all of our everyday interactions.</p>
       <p> Now, for convenience's sake, instead of constantly refering to "Newton's nth law of motion," I'll instead
@@ -3165,7 +3165,7 @@ const subtopics = {
     content: `
 
       <h3>Work and Energy</h3>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>You are likely familiar with the concept of <em>kinetic energy</em>. In baby terms, this is
       the energy something has when it moves. You're also probably familiar with the formula for kinetic
       energy:</p>
@@ -3368,7 +3368,7 @@ const subtopics = {
       what Z-Arc looked like in the original dimension, why did he end up just looking like Yuya but
       deformed? Did Yuto, Yugo and Yuri just... do nothing?</i>
       <p></p>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>An oscillation is when something moves between two points repeatedly. This happens when something is
       displaced from its resting position (more properly known as its <strong>equilibrium position</strong>), 
       and for whatever reason, there is a restoring force which tries to bring it back to that position, but 
@@ -3625,7 +3625,7 @@ const subtopics = {
       <i>I'll let you in on a little secret: I personally <em>hate</em> circular motion. I don't know
       why, something about it just makes it so difficult for me to wrap my head around. So, in typing
       these notes, I'll also kinda be teaching it to myself.</i>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>Circular motion is something which probably doesn't need much introduction. A wheel rotating
       a planet orbiting a star, a car going around a roundabout, these are all examples of circular motion
       which you have seen. And whilst you probably knew that, what you maybe didn't know is that any 
@@ -3741,7 +3741,7 @@ const subtopics = {
     title: "Collisions",
     content: `
       <h3>Collisions in 1D</h3>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
       <p>Let’s talk about collisions.</p>
 
@@ -3841,7 +3841,7 @@ const subtopics = {
     title: "Introduction to relativity: \"c\" what the Lord has done!",
     content: `
       <i>Based on the second part of PX155</i>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
 
       <h3>What is Relativity?</h3>
@@ -4022,7 +4022,7 @@ const subtopics = {
   "lorentz": {
     title: "Lorentz Transformations",
     content: `
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
         <p>Recapping from last time, we saw that light doesn’t change speed, even in a moving frame of reference. 
         This clearly goes against the results derived from the Galilean transformations. But how can this be the 
         case? The derivation seemed so simple after all?</p>
@@ -4403,7 +4403,7 @@ const subtopics = {
   "relative-energy": {
     title: "Relative Energy and Momentum",
     content: `
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>Let’s try something fun.</p>
 
       <p>Take two particles with the same mass, \\( m \\), and the same speed, \\( u \\), and have them move towards 
@@ -4534,7 +4534,7 @@ const subtopics = {
   "relativity-summary": {
     title: "Summary of Special Relativity",
     content: `
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
         <p>One important thing we’ve learnt during this topic is that nothing moves faster than light speed. 
         But <em>why</em>? What makes light so special?</p>
 
@@ -4895,7 +4895,7 @@ const subtopics = {
   "properties": {
     title: "Thermal Properties of Matter",
     content: `
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p>Right. Let’s talk about <strong>thermal physics</strong> — the science of why stuff 
       expands when you heat it, why gases don’t stay gases forever, and why your kettle boils at 100°C 
       (unless you’re in a lab, or on a mountain, or in a submarine).</p>
@@ -5934,7 +5934,7 @@ const subtopics = {
     title: "Entropy",
     content: `
       <h3>Entropy</h3>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
       <p>Building on from the Second Law of Thermodynamics (which you forgot about, smh...), I think it's time to talk
       about <strong>entropy</strong>!!!</p>
@@ -6078,7 +6078,7 @@ const subtopics = {
       anyway, where were we? Wave function...</i>
       <p></p>
 
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
       <p></p>
 
       <div class="container">
@@ -6742,7 +6742,7 @@ const subtopics = {
     title: "Standing Waves",
     content: `
         <h3>Reflections at Fixed and Free Ends</h3>
-        <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+        <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
         <p>What happens to waves when they hit a boundary is important for, like, everything. Pianos, guitars, quantum 
         particles... you name it.</p>
@@ -6932,7 +6932,7 @@ const subtopics = {
     title: "Polarisation",
     content: `
       <h3>The Nature of Light</h3>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
       <p>So, we all know light's a wave, right? But it's not some common wave you get on a string. Nah, this is a top-tier, 
       VIP wave. An electromagnetic wave. Maxwell cooked up a set of equations to describe all of electricity and magnetism, 
@@ -7062,7 +7062,7 @@ const subtopics = {
     content: `
       <p><i>Fun fact, did you know that it's actually quite bad for a child to be raised being too clean? 'Cus it don't 
       allow their immune system to develop or something. So mud is actually good for them!</i></p>
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
       <p>In a vacuum, light moves at speed \\(c\\), the ultimate speed limit. But what happens when it tries to go 
       through, say, glass? You probably know that it slows down in glass and other stuff, hence Newton's 
@@ -7234,7 +7234,7 @@ const subtopics = {
   "waves-summary": {
     title: "Summary: Wave Goodbye!",
     content: `
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
 
     `
   },
@@ -7242,7 +7242,7 @@ const subtopics = {
   "e-m-intro": {
     title: "Introduction to E&M: Magic Floaty Metal!",
     content: `
-      <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div>
+      <!-- <div class="no-summary-image">Sorry, the summary image doesn't exist yet :(</div> -->
     `
   },
 
@@ -11409,124 +11409,95 @@ const subtopics = {
       <h3>The Sun</h3>
       <p>In addition, our big bright neighbour the sun also sends particles our way.</p>
       <h4>Solar Wind</h4>
-      <p>The</p>
+      <p>The sun has a pretty freaky magnetic field. Although we don't really know how it works, it can somehow interact with the sun's plasma to create a giant space laser, aimed at planet Earth, shooting us with electrons, protons and alpha particles. Now this may seem scary, but don't worry, they aren't super energetic particles, only a couple thousand electron volts.</p>
+      <p>You'll get a more detailed explanation if you look into astronomy a bit more. But in short, the surface of the sun is pretty crazy. Sometimes the magnetic fields shoot off into space instead of looping back to the sun (forming darks spots on the sun called <em>coronal holes</em>). Sometimes magnetic field lines randomly align in a weird way, such that the sun just vomits out a bunch of mass (called <em>coronal mass ejections</em>, or CMEs for short). These cause plasma from the sun to be shot into the solar system.</p>
+      <p>I know like half a second ago I was talking about how this isn't anything to worry about since the particles aren't super energetic. Now I didn't exactly lie to you, but I did fib a little. It doesn't do much to US here on planet earth, since we have a magnetic field which directs the plasma to the poles (which creates the northern / southern lights). However for planets like Mars which had lost their magnetic fields, the solar winds was able to slowly but surely rob it of its atmosphere.</p>
+      <p>And even on Earth, CMEs can interfere with GPSs and electricity distribution.</p>
       <h4>Solar neutrinos</h4>
+      <p>The sun also donates a lot of electron neutrinos, produced from the fusion processes which keeps it going. This gives a neutrino flux (the number of neutrinos which are sent through one squared centimetre per second) of about \\( 7 \\times 10^{10} \\text{neutrinos cm}^{-2}\\text{s}^{-1} \\). That's 70 <em>billion</em> neutrinos through a single square centimetre... per second?! That's a bloody lot, innit?</p>
+      <p>Having so many neutrinos coming our way really comes in handy, because it's one of the few ways we can get an inkling into the workings of the solar core. Slightly more relevant to this section though, this process has taught us a fair bit about neutrinos themselves. For example, it turns out that scientists are EXTREMELY greedy, such that despite having <em>billions</em> of neutrinos to work with, they were still expecting AT LEAST 30% more! Their greed sickens me...</p>
+      <p>This was dubbed the <em>solar neutrino problem</em>, and was eventually solved by stating that neutrinos (like the electron neutrinos from the sun) can change flavour (into muon and tauon neutrinos) as they travel from the sun to earth. Since the original experiment only detected electron neutrinos, they missed the remaining non-electron neutrinos which were detected later with better experiments. And since different flavoured neutrinos oscillate at different phases, and the phase difference is proportional to mass, this must mean that the neutrino flavours have some mass.</p>
+      <h3>TL:DR</h3>
+      <p>Just so we are on the same page, you likely won't need to remember the amounts of energies or the fluxes, you just need a decent enough understanding of the process itself. With that in mind, here's what you'll need to know (probably):</p>
+      <ul>
+      <li>Beta minus decay produces protons, electrons and antineutrinos</li>
+      <li>Beta plus decay produces neutrons, positrons and neutrinos, and can only take place in atoms where there is a high enough binding energy</li>
+      <li>High energy particles from outer space (mostly protons) collide with oxygen and nitrogen in the atmosphere to produce more particles</li>
+      <li>High energy photons produce neutrons, pions and lower energy protons</li>
+      <li>High energy charged pions also become neutrons, protons and lower energy pions, and sometimes produce muons</li>
+      <li>Neutral pions split into photons, which split into electrons and positrons (pair production), which become more photons, and so on and so forth</li>
+      <li>Solar wind happens when the sun's magnetic field aligns in such a way that it aims solar plasma (containing protons, electrons and alpha particles) towards us</li>
+      <li>The fusion processes in the sun produces <em>billions</em> of neutrinos</li>
+      <li>Solar neutrinos give us incite into the inner workings of the sun's core, and tell us that neutrinos have non-zero mass</li>
+      </ul>
+      <p>And remember: scientists are EXTREMELY greedy.</p>
     `
   },
 
   "detection": {
-    title: "Particle detection",
+    title: "Particle Detection",
     content: `
-      <h3>Detection of Particles: When You Try to Catch the Uncatchable</h3>
-
-      <p>Right. Let’s talk about <strong>how we detect particles</strong>.</p>
-
-      <p>No, not the kind where you see a flash and say “got it.” We’re talking about 
-      <strong>detectors that catch the invisible</strong> — electrons, muons, neutrinos, 
-      photons — things that barely interact with matter.</p>
-
-      <p>And yes — it’s hard. But we do it anyway.</p>
-
-      <h3>Ionisation: When Particles Kick Electrons Off Atoms</h3>
-
-      <p>Charged particles (e⁻, μ⁻, p⁺, etc.) rip through matter and knock electrons off atoms.</p>
-
-      <p>This creates **ion-electron pairs** — and that’s what most detectors look for.</p>
-
-      <p>The amount of ionisation depends on the particle’s charge and speed.</p>
-
-      <p>Fast particles? Less ionisation (they don’t spend much time near atoms).</p>
-
-      <p>Slow particles? More ionisation (they linger and cause chaos).</p>
-
-      <p>This is why particles leave a “track” in cloud chambers, bubble chambers, and wire chambers.</p>
-
-      <h3>Scintillation: When Matter Glows Because a Particle Passed Through</h3>
-
-      <p>Some materials — like NaI crystals or plastic — emit light when a charged particle passes through.</p>
-
-      <p>This is **scintillation**.</p>
-
-      <p>The light is collected by photomultiplier tubes (PMTs) and turned into an electrical signal.</p>
-
-      <p>Used in:</p>
+      <p>We know which particles exist, how they interact with each other, how to probe them and how to get our hands on them. The final thing to do is to learn how we can observe them in the collider</p>
+      <p>Each particle interacts with matter slightly differently, resulting in a visual difference in the collider.</p>
+      <h3>Muons</h3>
+      <p>These are the easiest one to spot, since they actually don't do anything particularly interesting. They just spew out a tiny bit of ionisation as they move through the detector.</p>
+      <p>That means if there is something in the detector which kinda just goes, maybe with a little bend, it's probably a muon</p>
+      <h3>Photons and Electrons</h3>
+      <p>These are a little bit more interesting than the muons. Remember back when I was telling you about cosmic air showers in the <a href="http://127.0.0.1:5500/subtopic.html?subid=sources&amp;topic=quantum2&amp;year=1">Natural Particle Sources</a> section? I mentioned that electrons produce photons, which produce electron and positron pairs via <em>pair production</em>, and they repeat this process a bunch. This is what we call an <em>electromagnetic shower</em> (or <em>electromagnetic cascade</em>), where they continue to split until they run out of energy.</p>
+      <p>Particles can only go so far before they eventually split in one of these ways. If you have a material with thickness \\(x\\), the odds of it coming out without splitting at all is:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P(x) e^{-\\frac{x}{X_0}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>It looks like we have a new guest, \\(X_0\\). This is the <em>radiation length</em>, and its a quality unique to every material, a bit like conductivity or melting point. It tells us (on average) the length of that material required to reduce the probability to about 37%. In other words, it measures how long a distance the material needs to squash the particle's rebellion.</p>
+      <h3>Hadrons</h3>
+      <p>Hadrons are pretty damn similar to photons and electrons with the way they interact with matter, although they interact with the strong force rather than the EM force. They are pretty complicated, way more complicated than anything the electrons and photons are able to produce. But they do follow a similar rule in terms of probabilities:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P(x) e^{-\\frac{x}{\\lambda_I}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Essentially the same formula, except we now have \\(X_0\\)'s cousin, \\(\\lambda_I\\) which is the <em>hadronic interaction length</em>. I mean I shouldn't have to explain this to you should I? It's literally the same thing but for hadrons.</p>
+      <h3>The structure of a collision detector</h3>
+      <p>Now we know all about how the different particles interact with matter, you, yes YOU, can begin to make yourself your very own particle collider. Impressive as they might sound or look, they are actually quite boring in design. In short, you have a thingy in the middle which spews out all the particles, then you have a layer which detects some particles, then another layer which detects the particles the first layer couldn't detect, and then ANOTHER layer which detects the particles those two layers couldn't detect, and the a bunch more layers to detect what the first 3 layers couldn't detect.</p>
+      <p>The 'thingy in the middle which spews out all the particles' is more precisely known as the <em>beam pipe</em>.</p>
+      <h4>Tracking detector</h4>
+      <p>The first layer is the <em>tracking detector</em>. This part has a magnetic field which will cause the charged particles to curve. Once they curve, we capture them, put them in handcuffs and send them to the police to be detained. The police will then be able to determine other qualities about these charged particles, like their momentum.</p>
+      <h4>Electromagnetic Calorimeter</h4>
+      <p>Some of these criminals were detained by the tracking detector. But many of the particles are smarter than that. So we move onto our next strategy: <em>feed 'em a bunch of calories!</em></p>
+      <p>The next layer is the <em>electromagnetic calorimeter</em>, which is really really dense. Since like I said a while ago, only a small amount of particles can go through a layer of material without bremsstrahlung-ing, this dense layer causes most of the photons and electrons to split. This creates a distinctive fingerprint, which looks like a tree branch.</p>
+      <p>Not only will this catch most of the charges particles which escaped the tracking detector, but it will also capture most of the photons.</p>
+      <h4>Hadronic Calorimeter</h4>
+      <p>So now we've caught all our photons and electrons. However the EM calorimeter, despite being of quite dense material, is quite thin. As a result some particles don't feel like eating the EM calories. So we instead give 'em something they can't resist...</p>
+      <p>The next layer is the <em>hadronic calorimetre</em> (I do notice that it's a bit tapped to start these paragraphs of with &quot;the nth layer is the [title of the section], as if I would title it &quot;Hadronic Calorimeter&quot;, just to then have the next layer NOT be the hadronic calorimetre. But whatever I don't know how else to start these paragraphs to just charge it for now). This layer is designed to be very thick, meaning hadrons can't resist but to munch on the thick, creamy dessert. As they are feasting, we capture them, and interrogate them like last time.</p>
+      <h4>Muon Detector</h4>
+      <p>At this point, we have captured and detained all types of particles, except one: the muons.</p>
+      <p>Since muons are charged particles, they were affected by the tracking detector. But since they are trying to eat healthy, they all somehow managed to not consume a single calory, meaning we couldn't catch them.</p>
+      <p>Ok then, no problem. Since you didn't fall for the calory bait, let's make things much more entertaining for ourselves. Let's just put a bunch of charged-particle-spiny things outside of everything else. So then you'll all be put off balance, causing them to spiral out of control and get really really dizzy, so then we can get whatever information we need from them.</p>
+      <h3>TL:DR</h3>
       <ul>
-        <li>Gamma-ray detectors</li>
-        <li>Neutrino experiments (like Super-Kamiokande)</li>
-        <li>Medical imaging (PET scans)</li>
+      <li>Collision detectors are basically just a bunch of different detecty things stacked on top of each other</li>
+      <li>The first layer is the <em>tracking detector</em> which causes charged particles to change direction due to the magnetic field</li>
+      <li>The second layer is the <em>electromagnetic calorimeter</em>, a thin layer which causes photons and electrons to do the bremsstrahlung-splitty-thing</li>
+      <li>The third layer is the <em>hadronic calorimeter</em>, a thicker layer which detains hadrons</li>
+      <li>After that we put a bunch more tracking detectors to observe the remaining muons.</li>
       </ul>
-
-      <p>And yes — it’s basically making matter flash when a particle hits it. Like a cosmic strobe light.</p>
-
-      <h3>Cherenkov Radiation: The Sonic Boom of Light</h3>
-
-      <p>When a charged particle travels faster than the speed of light <em>in a medium</em>, it emits a blue glow.</p>
-
-      <p>No, it’s not breaking relativity — light slows down in water or glass, so particles can outpace it.</p>
-
-      <p>This is **Cherenkov radiation** — and it’s directional.</p>
-
-      <p>The angle of the cone tells you the particle’s speed.</p>
-
-      <p>Used in neutrino detectors like Super-K — where the ring of light reveals the direction and type of particle.</p>
-
-      <h3>Calorimeters: When You Just Want to Stop the Particle and Measure Its Energy</h3>
-
-      <p>Sometimes you don’t care about the path. You just want to know how much energy the particle had.</p>
-
-      <p>So you let it slam into a dense block of material — lead, iron, uranium — and let it create a shower of secondaries.</p>
-
-      <p>You measure the total light or charge produced — that’s proportional to the original energy.</p>
-
-      <p>Two types:</p>
-      <ul>
-        <li><strong>Electromagnetic calorimeters</strong>: for e⁻, γ — shower via bremsstrahlung and pair production</li>
-        <li><strong>Hadronic calorimeters</strong>: for protons, pions, kaons — shower via strong interactions</li>
-      </ul>
-
-      <h3>Tracking Detectors: When You Want to See the Path</h3>
-
-      <p>To see a particle’s trajectory, you need something that records position.</p>
-
-      <ul>
-        <li><strong>Cloud chambers</strong>: supersaturated vapour → condensation along track</li>
-        <li><strong>Bubble chambers</strong>: superheated liquid → bubbles along track</li>
-        <li><strong>Wire chambers</strong>: gas-filled tubes with wires → ionisation creates signal</li>
-        <li><strong>Silicon trackers</strong>: solid-state detectors with high precision</li>
-      </ul>
-
-      <p>Put them in a magnetic field? The track curves — so you can measure momentum.</p>
-
-      <h3>Neutrino Detection: The Ultimate Challenge</h3>
-
-      <p>Neutrinos barely interact. Trillions pass through you every second. You never notice.</p>
-
-      <p>To detect them, you need:</p>
-      <ul>
-        <li>Massive detectors (thousands of tons)</li>
-        <li>Deep underground (to block cosmic rays)</li>
-        <li>Ultra-pure materials (to reduce background)</li>
-      </ul>
-
-      <p>Example: Super-Kamiokande — 50,000 tons of water, lined with PMTs.</p>
-
-      <p>When a neutrino scatters off an electron or nucleus, it produces a charged particle → Cherenkov light → ring pattern.</p>
-
-      <p>And yes — we’ve detected neutrinos from the Sun, supernovae, reactors, and accelerators.</p>
-
-      <h3>TL;DR</h3>
-
-      <ul>
-        <li>Ionisation: charged particles knock off electrons</li>
-        <li>Scintillation: material glows when particle passes</li>
-        <li>Cherenkov: blue light when particle > light speed in medium</li>
-        <li>Calorimeters: absorb particle, measure total energy</li>
-        <li>Tracking: see the path — cloud, bubble, wire, silicon</li>
-        <li>Neutrinos: need massive, shielded, ultra-clean detectors</li>
-      </ul>
-
-      <p>And remember: the universe doesn’t care if you can’t see it.  
-      It only cares about the cross-section.</p>
+      <p>And remember: particles are dirty criminals</p>
     `
   },
 
@@ -12355,6 +12326,98 @@ const subtopics = {
       <p>I believe in God, there was some one guy who said &quot;Mathematics is the language with which God created the universe&quot;. That makes this section seem way more philosophical than it probably is. Anyway, you get to learn the language of the universe. By the time you're done, you will be able to order a coffee and ask for directions in God's language.</p>
       <p>People often say, if you want to study maths at university, don't study maths at university. I don't know if you've seen the stuff they do in maths, but it's certainly strange. Things like analysis, or proving that 0 is not 1, or having to verify every individual step of a calculation is valid.</p>
     `
+  },
+
+  "sources2": {
+    title: "Synthetic Particle Sources",
+    content: `
+      <p>Natural sources are great and all, but they have a slight problem. Namely, they don't always give us what we want. So sometimes, we have to take our own initiative and make our own. And this is expensive, and takes up a lot of space. Is it worth it? Maybe...</p>
+      <p>This is usually done using devices known as <em>particle accelerators</em>, which are nifty machines which can use electric fields to accelerate electrons to very high energies, before having them crash into other electrons.</p>
+      <h3>Linear Accelerators</h3>
+      <p>First up, the OG particle accelerator, the <em>linear accelerator</em> (or <em>linac</em> if you'd like).</p>
+      <p><em>&quot;Can it be? There's a card in rush duels, which looks exactly like me!&quot;</em></p>
+      <p>Linacs are quite simple conceptually: they are basically just long ass tubes with a bunch of radiofrequency cavities which apply an electric field to the particles, which keeps on making the particle faster, and faster, and faster.</p>
+      <p>The benefits of linacs is that building 'em is a piece of piss. I mean it's literally a big tube, that's about as simple as one can get as far as building is concerned. Problem is, the faster we want to accelerate them, the longer the tube has to be. And linacs can get <em>pretty bloody long</em>. This ain't a bit deal if we just wanna accelerate an electron to a moderately high energy (like under a hundred gigaelectron volts), but trying to use these to observe energies of the order of teraelectron volts will be a bit of an issue.</p>
+      <p>This is especially problematic since, due to <em>relativity</em>, once we get to high enough speeds, time itself slows the particle down. That means that the particles isn't actually accelerating as much, meaning you don't get as much energy back given the amount of work you are doing to speed it up. Since the return on investment is quite rubbish at higher speeds, linacs can't really be used here.</p>
+      <h3>Cyclotrons</h3>
+      <p>For my fellow AQA folk, you actually did this at A-level, but I bet you've forgotten about them by now, so let me remind you!</p>
+      <p>A cyclotron is more or less a linac, just now it's round. The cyclotron is made up of two semi-circular thingies, which scientists very creatively called 'Dees' (because the letter D looks like a semi-circle...). The particle begins near the centre of the system and is shot into one of the Dees.</p>
+      <p>We need this particle to accelerate in a circular way instead of in a straight line. Now let's turn our grey matter on: what physical phenomenon do we know of that causes a charged particle to undergo circular motion?</p>
+      <p>That's right, <em>magnetic fields</em>!</p>
+      <p>Remember from Electricity and Magnetism, specifically the section on <a href="http://127.0.0.1:5500/subtopic.html?subid=magnetic-fields&amp;topic=e-m&amp;year=1">Magnetic fields and forces</a>, we learnt that the Larmor radius ...</p>
+      <p>The proper derivation can be seen if you hit the link, but for now, just take the Lorentz force, assume there is no electric field (\\(E=0\\)), and then equate Lorentz force with centripetal force from circular motion, and you get:</p>\\[ F = qvB = \\frac{mv^2}r \\] \\[ \\downarrow \\]\\[ r = \\frac{mv}{qB} = \\frac{p}{qB} \\]
+      <p>If we switch the units from SI units to something more appropriate for particle physics (like GeV/c), and recall that charge is quantised (\\(q=Ze)\\), then we get this equation for the radius in a cyclotron:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ r = \\frac{p}{0.3ZB} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Radius in a cyclotron
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Erm, where were we? Oh yes, the particle is shot into one of the Dees. Then thanks to the magnetic field, it loops around with the radius we just defined until it exits the Dee again. At this point, the magnetic field is switched off to stop it from spinning, and an electric field is switched on to accelerate it across the gap. Then it enters the other Dee, at which point the electric field is switched back off and magnetic field is switched back on.</p>
+      <p>This causes the particle to spiral around again, and since it was sped up by the electric field, it does so with a higher momentum, meaning that by way of Formula 1, it does so with a higher radius. Then it exits the Dee, at which point the magnetic field is switched off and an electric field is switched on to speed it up even more, meaning it has an even bigger radius when it goes into the next Dee.</p>
+      <p>The particle keeps on going around and around with larger and larger speeds and larger and larger radii, gaining more and more energy. Eventually, the radius is large enough that it can leave the cyclotron and be used for whatever the bloody hell we wanna use it for (probably smash it against another cyclotron-ified particle).</p>
+      <p>And I know what your thinking, &quot;hold on, how the hell does the electric field know which way to accelerate the particle? After all, it accelerates it to the left at one moment and to the right at another moment?&quot;</p>
+      <p>Well I mean, it doesn't <em>know</em> anything (electric fields aren't sentient y'know...), we'll obviously have to switch it ourselves, won't we? Everytime the particle is about to enter the gap, the field has to be switched to point in another direction. Which begs the question, how on earth are we supposed to press a button that bloody quickly?</p>
+      <p>Answer, <em>we</em> aren't pressing anything. If you remember from the Electricity and Magnetism section (again), there is such a thing as <em>Alternating Current</em>, or <em>AC</em>, which is just sine-wavy electricity. Since AC automatically switches from positive to negative, all we need to do is adjust the frequency of the current so that it wiggles in time with the particle switching sides.</p>
+      <p>The time a particle spends spiralling is simply the distance travelled in the Dee divided by the velocity, \\(v\\). Since a Dee is just half a circle, the distance travelled inside the Dee is just half the radius of a circle, \\( \\pi r \\). So that means the time spent in a single Dee is</p>\\[ t = \\frac{\\pi r}v = \\frac{\\pi}v \\frac{mv}{qB} \\]\\[ \\downarrow \\]
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ t = \\frac{\\pi m}{qB} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Based on that, you might be tempted to think that the frequency is just 1 over \\( t \\) here. And guess what? You're wrong! 1 over \\( t \\) would give you the rate of a <em>full</em> cycle. But we only want the positive/negative part per Dee, which is half a cycle. Therefore to get the <em>cyclotron frequency</em>, we must halve this frequency (1 over \\( 2t \\)), which gives us:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ f_\\text{cyclotron} = \\frac1{2T} = \\frac{qB}{2\\pi m} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Cyclotron Frequency
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Oh and, er, if you really want, you can calculate the kinetic energy of the particle as it leaves the cyclotron. By rearranging our formula for the cyclotron radius and rearranging for velocity, we get</p>\\[v=\\frac{qBr}m\\]
+      <p>Then to get the kinetic energy, all we need to do is plug this velocity into \\( E_K = \\frac12 mv^2 \\) and then we get:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_K = \\frac{q^2B^2r^2}{2m} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Kinetic Energy
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Cyclotrons are much more compact than linacs, and are also pretty easy to make. Although like the linac, we can't have very high energies because <em>relativity is a wanker</em>. If you reeeeally want to <strong>rev it up</strong>, you'll need a <em>synchrotron</em>.</p>
+      <h3>Synchrotron</h3>
+      <p><em>Synchrotrons</em> take the logic of cyclotrons and flip it on its head. Instead of having a changing radius with a constant magnetic field like a cyclotron, synchrotrons keep a constant radius with a varying magnetic field.</p>
+      <p>Synchrotrons are made up of a circular pipe with some small electromagnets to guide the beam. As the particle gets faster and faster, the magnetic field strength has to get stronger to keep the particles on the racetrack.</p>
+      <p>And whilst this allows us to get particles with a LOT of energy, <em>relativity is still a wanker</em>, although credit where credit is due, it's a wanker in a slightly more interesting way this time. When a particle is accelerating that bloody fast, it starts radiating photons. How this works doesn't matter. What does matter is that it has a fun German name, <em>bremsstrahlung</em>! It probably has some crazy authentic German pronunciation, but my best guess is to just go with <em>brem'-strar-lung</em>.</p>
+      <p>Bremsstrahlung radiation (or <em>braking radiation</em> if you really can't be arsed) causes the particle to loose energy:</p>\\[ \\Delta E = \\frac{e^2E^4}{3\\varepsilon_0(m_0c^2)^4R} \\]
+      <p>I <em>sincerely</em> hope you don't have to memorise this formula (or even use it in fact), which is why I haven't used the orange box animation thing I do for important formulae. If it comes to your exam it you <em>are</em> required to memorise it, then if I were you I'd just log out of life at that point.</p>
+      <p>Whilst you don't have to memorise the exact formula, you should be able to determine what the formula tells us about bremsstrahlung radiation.</p>
+      <ol>
+      <li><em><strong>The energy lost is inversely proportional to the radius</strong></em>. That means in principle, an infinite radius would mean no bremsstrahlung. And you might think &quot;oh well there's no way we can do that,&quot; well turns out you can... because it's literally just a linac all over again.</li>
+      <li><em><strong>The energy lost is inversely proportional to the mass</strong></em>. That means larger particles loose less energy than lighter particles. If you do the maths, that means that electrons loose about 16 <em>TRILLION</em> times the amount of energy protons do. So while proton machines aren't really affected by bremsstrahlung, good luck trying to get an energy above a few GeV with electrons.</li>
+      </ol>
+    `
   }
 };
 
@@ -12366,7 +12429,7 @@ function scrollToSection(id) {
 }
   
 function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3');
+  const headings = document.querySelectorAll('h3, h4');
   const nav = document.getElementById('floating-nav');
   if (!nav || headings.length === 0) return;
 
@@ -12379,6 +12442,13 @@ function generateFloatingNav() {
 
     const btn = document.createElement('button');
     btn.textContent = heading.textContent;
+
+      if (heading.tagName === 'H3') {
+        btn.classList.add('nav-h3');   // style for H3
+      } else if (heading.tagName === 'H4') {
+        btn.classList.add('nav-h4');   // style for H4
+      }
+    
     btn.onclick = () => scrollToSection(heading.id);
     nav.appendChild(btn);
   });

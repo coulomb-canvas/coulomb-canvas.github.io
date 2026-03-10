@@ -410,7 +410,7 @@ const topics = [
    {
     id: "quantum2",
     subyear: 1,
-    title: "Coming soon: \nQuantum Phenomena II",
+    title: "Quantum Phenomena II",
     image: "images/Avatar/Topics 1/quantum2.png",
     subtopics: [
       {
@@ -447,6 +447,12 @@ const topics = [
         subid: "sources",
         title: "Sources of Particles",
         text: "Red Sauce, Brown Sauce, all kinds of sauce!",
+        image: "images/time-dilation.png"
+      },
+      {
+        subid: "sources2",
+        title: "Artificial Particle Sources",
+        text: "There's a card in rush duels... which looks exactly like me!",
         image: "images/time-dilation.png"
       },
       {

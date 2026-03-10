@@ -114,6 +114,17 @@ p {
   color: var(--text)
 }
 
+.subtopic-text a {
+  color: rgb(253, 10, 131);
+  padding: 2px;
+  border-radius: 2px;
+  background-color: #ec11862d;
+}
+
+a:hover {
+  opacity: 70%;
+}
+
 .left-speech {
   background-color: white;
   display: inline-block;
@@ -927,6 +938,10 @@ body.dimmed::before {
     justify-content: center;
     text-align: center;
   }
+  .formula-tooltip-title {
+    font-size: 5vw;
+    text-underline-offset: 0.5vh;
+  }
 
 }
 
@@ -1143,12 +1158,9 @@ body.dimmed::before {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 999;
-  max-width: 150px;
+  max-width: 18.75vw;
 }
 
-#floating-nav button:hover {
-  background-color: #004c99;
-}
 
 #floating-nav-container {
   position: fixed;
@@ -1173,7 +1185,7 @@ body.dimmed::before {
   background-color: rgba(30, 30, 30, 0.9);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  max-width: 25vh;
+  max-width: 20vw;
   overflow: hidden;
   opacity: 0;
   max-height: 0;
@@ -1192,21 +1204,38 @@ body.dimmed::before {
 
 #floating-nav button {
   display: block;
-  margin: 5px 0;
-  background-color: #0066cc;
   color: white;
   border: none;
   font-family: 'Njal';
-  padding: 6px 12px;
   border-radius: 0px;
-  font-size: 2vw;
+  
   cursor: pointer;
   text-align: left;
-  width: 100%;
+  
 }
 
-#floating-nav button:hover {
+.nav-h3 {
+    background-color: #0066cc;
+    padding: 6px 12px;
+    margin: 5px 0;
+    width: 100%;
+    font-size: 2vw;
+}
+
+.nav-h4 {
+  background-color: #1d3e5f;
+  padding: 4px 12px;
+  margin: 5px 20px;
+  width: 90%;
+  font-size: 1.5vw;
+}
+
+.nav-h3:hover {
   background-color: #004c99;
+}
+
+.nav-h4:hover {
+  background-color: #112437;
 }
 
 #next-subtopic-button {

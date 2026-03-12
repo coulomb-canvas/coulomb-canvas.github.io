@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 81 subtopics
-// Generated: 2026-03-12T09:41:49.610Z
+// Generated: 2026-03-11T22:50:34.105Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 81 existing hand-written entries
-//   - 10 Markdown-generated entries
+//   - 9 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -11814,54 +11814,68 @@ const subtopics = {
   "telescopes": {
     title: "Telescopes",
     content: `
-      <h3>Different types of telescope</h3>
-      <h4>Refracting Telescope</h4>
-      <div class="container">
-          <div class="text">
-              <p> 
-                  Refracting telescopes take all the light and focus it onto one point with a lens. Whilst this is not much of a problem for relatively small telescopes, as you try to build telescopes with larger and larger diametres, it becomes more and more difficult to create a lens which can do that well. So for larger diametres, we tend to use the other option:
-              </p>
-          </div>
-          <!-- DIVIDING LINE -->
-          <div class="image">
-              <div class="image-floater">
-                  <div class="image-box">
-                      <img src="images/Astronomy/Refracting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
-                  </div>
-                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                      Figure X
-                  </div><div class="image-tooltip-desc">
-                      ...
-                  </div></span>
-              </div>
-          </div>
-      </div>
-      <h4>Reflecting Telescope</h4>
-      <div class="container">
-          <!-- DIVIDING LINE -->
-          <div class="image">
-              <div class="image-floater">
-                  <div class="image-box">
-                      <img src="images/Astronomy/Reflecting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
-                  </div>
-                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                      Figure X
-                  </div><div class="image-tooltip-desc">
-                      ...
-                  </div></span>
-              </div>
-          </div>
-          <!-- DIVIDING LINE -->
-          <div class="text">
-              <p> 
-                  When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light back into the telescope.
-              </p>
-          </div>
-          <!-- DIVIDING LINE -->
-      </div>
-      <h4>Combining the two</h4>
-      <p>If you're lucky, you might get a telescope which does a bit o' both</p>
-      <h3>Extended Objects</h3>
+      <h3>Telescopes: Giant Eyes in the Sky (or on the Ground)</h3>
+
+      <p>Right. Let’s talk about <strong>telescopes</strong>.</p>
+
+      <p>No, not the kind you point at your neighbour. We’re talking about <strong>light buckets</strong> — giant mirrors and lenses that collect photons from the distant universe.</p>
+
+      <p>And yes — they’re expensive. And huge. And sometimes in space.</p>
+
+      <h3>Light Gathering Power</h3>
+
+      <p>The bigger the aperture, the more light you collect.</p>
+
+      <p>Flux collected \\( \\propto D^2 \\), where \\( D \\) is diameter.</p>
+
+      <p>So a 10 m telescope collects 10,000× more light than your 1 cm eye.</p>
+
+      <p>That’s why we can see galaxies billions of light years away.</p>
+
+      <h3>Angular Resolution</h3>
+
+      <p>How sharp is the image?</p>
+
+      <p>The diffraction limit is:</p>
+
+      <p>\\( \\theta \\approx \\frac{\\lambda}{D} \\)</p>
+
+      <p>So bigger \\( D \\) → sharper image.</p>
+
+      <p>Ground-based telescopes are limited by atmospheric turbulence — unless they use adaptive optics.</p>
+
+      <p>Space telescopes (like Hubble or JWST)? No atmosphere → diffraction-limited.</p>
+
+      <h3>Types of Telescopes</h3>
+
+      <ul>
+        <li><strong>Refractors</strong>: lenses — limited by chromatic aberration and size</li>
+        <li><strong>Reflectors</strong>: mirrors — no chromatic aberration, can be huge</li>
+        <li><strong>Radio telescopes</strong>: dish antennas — for long wavelengths</li>
+      </ul>
+
+      <p>Most big telescopes today are reflectors. Because mirrors don’t sag as much as lenses.</p>
+
+      <h3>JWST and Hubble: The Dynamic Duo</h3>
+
+      <p><strong>Hubble</strong>: visible and UV. In low Earth orbit.</p>
+
+      <p><strong>JWST</strong>: infrared. At L2. Cooled to near absolute zero.</p>
+
+      <p>Why infrared? To see the first galaxies, and to peer through dust clouds.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>Light gathering \\( \\propto D^2 \\)</li>
+        <li>Resolution \\( \\theta \\approx \\lambda / D \\)</li>
+        <li>Reflectors > refractors for large scopes</li>
+        <li>Adaptive optics fixes atmospheric blur</li>
+        <li>JWST: infrared, cold, at L2</li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care how big your mirror is.  
+      It only cares about the signal-to-noise ratio.</p>
     `
   },
 

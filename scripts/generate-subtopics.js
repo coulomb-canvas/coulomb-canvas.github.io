@@ -253,7 +253,7 @@ function scrollToSection(id) {
 }
   
 function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3');
+  const headings = document.querySelectorAll('h3, h4');
   const nav = document.getElementById('floating-nav');
   if (!nav || headings.length === 0) return;
 
@@ -266,6 +266,13 @@ function generateFloatingNav() {
 
     const btn = document.createElement('button');
     btn.textContent = heading.textContent;
+
+      if (heading.tagName === 'H3') {
+        btn.classList.add('nav-h3');   // style for H3
+      } else if (heading.tagName === 'H4') {
+        btn.classList.add('nav-h4');   // style for H4
+      }
+    
     btn.onclick = () => scrollToSection(heading.id);
     nav.appendChild(btn);
   });

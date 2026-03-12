@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 81 subtopics
-// Generated: 2026-03-12T09:41:49.610Z
+// Generated: 2026-03-12T09:39:54.651Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -11854,7 +11854,7 @@ const subtopics = {
           <!-- DIVIDING LINE -->
           <div class="text">
               <p> 
-                  When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light back into the telescope.
+                  When the diametres become too big for refraction, reflection telescopes come to the rescue. These ones reflect the light back into the telescope.
               </p>
           </div>
           <!-- DIVIDING LINE -->

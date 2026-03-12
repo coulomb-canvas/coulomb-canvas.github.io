@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 81 subtopics
-// Generated: 2026-03-12T09:41:49.610Z
+// Generated: 2026-03-11T16:59:23.752Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 81 existing hand-written entries
-//   - 10 Markdown-generated entries
+//   - 9 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -11751,11 +11751,7 @@ const subtopics = {
       <p>Pay attention to the formula and you'll notice that it's just the object's luminosity \\(L\\), divided by the surface area of a sphere with a radius of \\( d \\). If we now consider the sun's energy output in terms of the <em>flux</em>, with \\(L_\\odot \\) and the distance from Earth to the sun (1 astronomical unit, which is about \\( 1.5\\times10^{11}\\) metres), it turns out the flux of the sun is only about \\( 1350 \\text{Wm}^{-2} \\). That's <em>waaaaay</em> more manageable, especially with our atmosphere eating away at half of it.</p>
       <h3>Magnitudes</h3>
       <p>Now back to the stupid ahh brightness system. Basically the aim of the game is to try and upgrade the system from 'because this Greek pillock said so' to 'there is some actually some actual real correlation with reality.'</p>
-      <p>For that we need to consider 2 flavours of magnitude: <em>apparent</em> and <em>absolute</em> magnitude.</p>
-      <h4>Apparent Magnitude</h4>
-      <p><em>Apparent magnitude</em> describes how bright a star <em>appears</em> to our fallible human eyes. Since flux measures the amount of energy from a body that actually reaches us, and that kinda sorta relates to brightness</p>
-      <p>In 1850, in another land full of fairies and mermaids (i.e. England), Norman Pogson suggested that we make the scale logarithmic, such that increasing the magnitude by 5 would mean the actual flux increased by 100.</p>
-      <p>So let's say we have two stars with magnitudes \\(m_1\\) and \\(m_2\\) and with fluxed \\(f_1\\) and \\(f_2\\). Using those assumptions and some techy mathematics, we can get the difference between the two magnitudes:</p>
+      <p>In 1850, in another land full of fairies and mermaids (i.e. England), Norman Pogson suggested that we make the scale logarithmic.</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -11768,100 +11764,77 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>Remember how I mentioned that Hipparcus decided to pull some stupidity by giving brighter stars lower numbers? Turns out there was some logic to it. We know what the <em>brightest</em> star in the night sky is (excluding the sun of course), it's a star called <em>Vega</em>. Since it is the brightest star, we can make it's magnitude as low as possible, zero. If \\( m_\\text{Vega} = 0 \\), then that formula up their can morph into a new form:<p>
-      <div class="hover-wrapper">
-          <div class="formula-container">
-              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ m = -2.5\\log{\\frac{f_2}{f_\\text{Vega}}} \\]
-              </div>
-              <span class="formula-tooltip"><div class="formula-tooltip-title">
-                  Formula X
-              </div><div class="formula-tooltip-desc">
-                  ...
-              </div></span>
-          </div>
-      </div>
-      <p>Since we know the flux of Vega, this can serve as an easier way to determine the apparent magnitude of a star.</p>
-      <h4>Absolute Magnitude</h4>
-      <p>So let's take a look, we now have... a list of how bright stars look to us. Fat load o' good that is, beyonds being able to make our pretty little star catalogue, apparent magnitudes don't really tell us anything of value. Most notably, we don't know WHY the star looks brighter or dimmer. Is it actually emitting more or less energy? Or is it just very close or very far away?</p>
-      <p>And on that note... how DO we determine how close or how far away a star is?</p>
-      <p>In comes the <em>absolute magnitude</em> which tells us how bright the star would look if it were only 10 parsecs away. With that definition in mind, we can use the formula for flux from way earlier and the formula for apparent magnitude to get the apparent magnitude at 10 parsecs:</p>
-      <div class="hover-wrapper">
-          <div class="formula-container">
-              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ m - M = 5\\log{\\frac{d}{10\\text{ parsecs}}} \\]
-              </div>
-              <span class="formula-tooltip"><div class="formula-tooltip-title">
-                  Formula X
-              </div><div class="formula-tooltip-desc">
-                  ...
-              </div></span>
-          </div>
-      </div>
       <h3>TL;DR</h3>
       <p>BTW, to anyone who doesn't believe what I was saying earlier about Ancient Greece having fairies and allat, I've personally been to Ancient Greece, and I saw them there. Dragons even. So what, are you gonna call me a liar? Based off what, have <em>you</em> been to Ancient Greece to verify that fairies and stuff <em>aren't</em> there? Didn't flipping think so. As the proverb says, &quot;if the fish comes out of the water to tell you the crocodile is ill, believe it.&quot;</p>
-      <p>I don't care that I misinterpretted the proverb, and also commited a few logical fallacies. Point is there were fairies in Greece, and I won't have you saying otherwise. Anyway, what did we learn?</p>
-      <ol>
-      <li>Hipparcus don't quite have it all there. Neither to modern scientists</li>
-      <li>Flux is the luminosity over the surface area</li>
-      <li>Apparent magnitude measures how bright something looks</li>
-      <li>We can measure apparent magniture relative to Vega</li>
-      <li>Absolute magnitude measures how bright something would appear if it were only 10 parsecs away</li>
-      </ol>
+      <p>I don't care that I misinterpretted the proverb, and also commited a few logical fallacies. Point is there were fairies in Greece, and I won't have you saying otherwise.</p>
     `
   },
 
   "telescopes": {
     title: "Telescopes",
     content: `
-      <h3>Different types of telescope</h3>
-      <h4>Refracting Telescope</h4>
-      <div class="container">
-          <div class="text">
-              <p> 
-                  Refracting telescopes take all the light and focus it onto one point with a lens. Whilst this is not much of a problem for relatively small telescopes, as you try to build telescopes with larger and larger diametres, it becomes more and more difficult to create a lens which can do that well. So for larger diametres, we tend to use the other option:
-              </p>
-          </div>
-          <!-- DIVIDING LINE -->
-          <div class="image">
-              <div class="image-floater">
-                  <div class="image-box">
-                      <img src="images/Astronomy/Refracting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
-                  </div>
-                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                      Figure X
-                  </div><div class="image-tooltip-desc">
-                      ...
-                  </div></span>
-              </div>
-          </div>
-      </div>
-      <h4>Reflecting Telescope</h4>
-      <div class="container">
-          <!-- DIVIDING LINE -->
-          <div class="image">
-              <div class="image-floater">
-                  <div class="image-box">
-                      <img src="images/Astronomy/Reflecting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
-                  </div>
-                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                      Figure X
-                  </div><div class="image-tooltip-desc">
-                      ...
-                  </div></span>
-              </div>
-          </div>
-          <!-- DIVIDING LINE -->
-          <div class="text">
-              <p> 
-                  When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light back into the telescope.
-              </p>
-          </div>
-          <!-- DIVIDING LINE -->
-      </div>
-      <h4>Combining the two</h4>
-      <p>If you're lucky, you might get a telescope which does a bit o' both</p>
-      <h3>Extended Objects</h3>
+      <h3>Telescopes: Giant Eyes in the Sky (or on the Ground)</h3>
+
+      <p>Right. Let’s talk about <strong>telescopes</strong>.</p>
+
+      <p>No, not the kind you point at your neighbour. We’re talking about <strong>light buckets</strong> — giant mirrors and lenses that collect photons from the distant universe.</p>
+
+      <p>And yes — they’re expensive. And huge. And sometimes in space.</p>
+
+      <h3>Light Gathering Power</h3>
+
+      <p>The bigger the aperture, the more light you collect.</p>
+
+      <p>Flux collected \\( \\propto D^2 \\), where \\( D \\) is diameter.</p>
+
+      <p>So a 10 m telescope collects 10,000× more light than your 1 cm eye.</p>
+
+      <p>That’s why we can see galaxies billions of light years away.</p>
+
+      <h3>Angular Resolution</h3>
+
+      <p>How sharp is the image?</p>
+
+      <p>The diffraction limit is:</p>
+
+      <p>\\( \\theta \\approx \\frac{\\lambda}{D} \\)</p>
+
+      <p>So bigger \\( D \\) → sharper image.</p>
+
+      <p>Ground-based telescopes are limited by atmospheric turbulence — unless they use adaptive optics.</p>
+
+      <p>Space telescopes (like Hubble or JWST)? No atmosphere → diffraction-limited.</p>
+
+      <h3>Types of Telescopes</h3>
+
+      <ul>
+        <li><strong>Refractors</strong>: lenses — limited by chromatic aberration and size</li>
+        <li><strong>Reflectors</strong>: mirrors — no chromatic aberration, can be huge</li>
+        <li><strong>Radio telescopes</strong>: dish antennas — for long wavelengths</li>
+      </ul>
+
+      <p>Most big telescopes today are reflectors. Because mirrors don’t sag as much as lenses.</p>
+
+      <h3>JWST and Hubble: The Dynamic Duo</h3>
+
+      <p><strong>Hubble</strong>: visible and UV. In low Earth orbit.</p>
+
+      <p><strong>JWST</strong>: infrared. At L2. Cooled to near absolute zero.</p>
+
+      <p>Why infrared? To see the first galaxies, and to peer through dust clouds.</p>
+
+      <h3>TL;DR</h3>
+
+      <ul>
+        <li>Light gathering \\( \\propto D^2 \\)</li>
+        <li>Resolution \\( \\theta \\approx \\lambda / D \\)</li>
+        <li>Reflectors > refractors for large scopes</li>
+        <li>Adaptive optics fixes atmospheric blur</li>
+        <li>JWST: infrared, cold, at L2</li>
+      </ul>
+
+      <p>And remember: the universe doesn’t care how big your mirror is.  
+      It only cares about the signal-to-noise ratio.</p>
     `
   },
 
@@ -12435,7 +12408,7 @@ function scrollToSection(id) {
 }
   
 function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3, h4');
+  const headings = document.querySelectorAll('h3');
   const nav = document.getElementById('floating-nav');
   if (!nav || headings.length === 0) return;
 
@@ -12448,13 +12421,6 @@ function generateFloatingNav() {
 
     const btn = document.createElement('button');
     btn.textContent = heading.textContent;
-
-      if (heading.tagName === 'H3') {
-        btn.classList.add('nav-h3');   // style for H3
-      } else if (heading.tagName === 'H4') {
-        btn.classList.add('nav-h4');   // style for H4
-      }
-    
     btn.onclick = () => scrollToSection(heading.id);
     nav.appendChild(btn);
   });

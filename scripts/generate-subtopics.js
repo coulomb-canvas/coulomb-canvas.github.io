@@ -86,12 +86,12 @@ try {
 }
 
 // Create backup
-if (fs.existsSync(outputFile) && Object.keys(existingSubtopics).length > 0) {
+/* if (fs.existsSync(outputFile) && Object.keys(existingSubtopics).length > 0) {
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   const backupFile = `${outputFile}.backup-${timestamp}`;
   fs.copyFileSync(outputFile, backupFile);
   console.log(`✓ Created backup: ${path.basename(backupFile)}\n`);
-}
+} */
 
 // Process Markdown files
 if (!fs.existsSync(articlesDir)) {

@@ -14,7 +14,28 @@ First up, the OG particle accelerator, the *linear accelerator* (or *linac* if y
 
 *"Can it be? There's a card in rush duels, which looks exactly like me!"*
 
-Linacs are quite simple conceptually: they are basically just long ass tubes with a bunch of radiofrequency cavities which apply an electric field to the particles, which keeps on making the particle faster, and faster, and faster.
+<div class="container">
+    <!-- DIVIDING LINE -->
+    <div class="text">
+        <p> 
+            Linacs are quite simple conceptually: they are basically just long ass tubes with a bunch of radiofrequency cavities which apply an electric field to the particles, which keeps on making the particle faster, and faster, and faster.
+        </p>
+    </div>
+    <!-- DIVIDING LINE -->
+    <div class="image">
+        <div class="image-floater">
+            <div class="image-box left-box">
+                <img src="images/Quantum/LINAC.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+            </div>
+            <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                Figure 1: LINACs
+            </div><div class="image-tooltip-desc">
+                ...
+            </div></span>
+        </div>
+    </div>
+    <!-- DIVIDING LINE -->
+</div>
 
 The benefits of linacs is that building 'em is a piece of piss. I mean it's literally a big tube, that's about as simple as one can get as far as building is concerned. Problem is, the faster we want to accelerate them, the longer the tube has to be. And linacs can get *pretty bloody long*. This ain't a bit deal if we just wanna accelerate an electron to a moderately high energy (like under a hundred gigaelectron volts), but trying to use these to observe energies of the order of teraelectron volts will be a bit of an issue.
 
@@ -24,9 +45,31 @@ This is especially problematic since, due to *relativity*, once we get to high e
 
 For my fellow AQA folk, you actually did this at A-level, but I bet you've forgotten about them by now, so let me remind you!
 
-A cyclotron is more or less a linac, just now it's round. The cyclotron is made up of two semi-circular thingies, which scientists very creatively called 'Dees' (because the letter D looks like a semi-circle...). The particle begins near the centre of the system and is shot into one of the Dees.
-
-We need this particle to accelerate in a circular way instead of in a straight line. Now let's turn our grey matter on: what physical phenomenon do we know of that causes a charged particle to undergo circular motion?
+<div class="container">
+    <!-- DIVIDING LINE -->
+    <div class="image">
+        <div class="image-floater">
+            <div class="image-box left-box">
+                <img src="images/Quantum/Cyclotron.png" class="pop-image" style="max-width: 100%; width: 70vw"/>
+            </div>
+            <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                Figure 2: The Cyclotron
+            </div><div class="image-tooltip-desc">
+                ...
+            </div></span>
+        </div>
+    </div>
+    <!-- DIVIDING LINE -->
+    <div class="text">
+        <p> 
+            A cyclotron is more or less a linac, just now it's round. The cyclotron is made up of two semi-circular thingies, which scientists very creatively called 'Dees' (because the letter D looks like a semi-circle...). The particle begins near the centre of the system and is shot into one of the Dees.
+        </p>
+        <p>
+            We need this particle to accelerate in a circular way instead of in a straight line. Now let's turn our grey matter on: what physical phenomenon do we know of that causes a charged particle to undergo circular motion?
+        <p>
+    </div>
+    <!-- DIVIDING LINE -->
+</div>
 
 That's right, *magnetic fields*!
 
@@ -113,9 +156,31 @@ Cyclotrons are much more compact than linacs, and are also pretty easy to make. 
 
 ### Synchrotron
 
-*Synchrotrons* take the logic of cyclotrons and flip it on its head. Instead of having a changing radius with a constant magnetic field like a cyclotron, synchrotrons keep a constant radius with a varying magnetic field. 
-
-Synchrotrons are made up of a circular pipe with some small electromagnets to guide the beam. As the particle gets faster and faster, the magnetic field strength has to get stronger to keep the particles on the racetrack.
+<div class="container">
+    <!-- DIVIDING LINE -->
+    <div class="text">
+        <p> 
+            <em>Synchrotrons</em> take the logic of cyclotrons and flip it on its head. Instead of having a changing radius with a constant magnetic field like a cyclotron, synchrotrons keep a constant radius with a varying magnetic field. 
+        </p>
+        <p> 
+            Synchrotrons are made up of a circular pipe with some small electromagnets to guide the beam. As the particle gets faster and faster, the magnetic field strength has to get stronger to keep the particles on the racetrack.
+        </p>
+    </div>
+    <!-- DIVIDING LINE -->
+    <div class="image">
+        <div class="image-floater">
+            <div class="image-box left-box">
+                <img src="images/Quantum/Synchrotron.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+            </div>
+            <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                Figure 1: LINACs
+            </div><div class="image-tooltip-desc">
+                ...
+            </div></span>
+        </div>
+    </div>
+    <!-- DIVIDING LINE -->
+</div>
 
 And whilst this allows us to get particles with a LOT of energy, *relativity is still a wanker*, although credit where credit is due, it's a wanker in a slightly more interesting way this time. When a particle is accelerating that bloody fast, it starts radiating photons. How this works doesn't matter. What does matter is that it has a fun German name, *bremsstrahlung*! It probably has some crazy authentic German pronunciation, but my best guess is to just go with *brem'-strar-lung*.
 

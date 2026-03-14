@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 81 subtopics
-// Generated: 2026-03-12T09:41:49.610Z
+// Generated: 2026-03-13T12:45:28.592Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 81 existing hand-written entries
-//   - 10 Markdown-generated entries
+//   - 13 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -11474,8 +11474,32 @@ const subtopics = {
       </div>
       <p>Essentially the same formula, except we now have \\(X_0\\)'s cousin, \\(\\lambda_I\\) which is the <em>hadronic interaction length</em>. I mean I shouldn't have to explain this to you should I? It's literally the same thing but for hadrons.</p>
       <h3>The structure of a collision detector</h3>
-      <p>Now we know all about how the different particles interact with matter, you, yes YOU, can begin to make yourself your very own particle collider. Impressive as they might sound or look, they are actually quite boring in design. In short, you have a thingy in the middle which spews out all the particles, then you have a layer which detects some particles, then another layer which detects the particles the first layer couldn't detect, and then ANOTHER layer which detects the particles those two layers couldn't detect, and the a bunch more layers to detect what the first 3 layers couldn't detect.</p>
-      <p>The 'thingy in the middle which spews out all the particles' is more precisely known as the <em>beam pipe</em>.</p>
+      <p>Now we know all about how the different particles interact with matter, you, yes YOU, can begin to make yourself your very own particle collider. Impressive as they might sound or look, they are actually quite boring in design.</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Quantum/Detector.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 4: Particle Detector
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  In short, you have a thingy in the middle which spews out all the particles, then you have a layer which detects some particles, then another layer which detects the particles the first layer couldn't detect, and then ANOTHER layer which detects the particles those two layers couldn't detect, and the a bunch more layers to detect what the first 3 layers couldn't detect.
+              </p>
+              <p>
+                  The 'thingy in the middle which spews out all the particles' is more precisely known as the *beam pipe*.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
       <h4>Tracking detector</h4>
       <p>The first layer is the <em>tracking detector</em>. This part has a magnetic field which will cause the charged particles to curve. Once they curve, we capture them, put them in handcuffs and send them to the police to be detained. The police will then be able to determine other qualities about these charged particles, like their momentum.</p>
       <h4>Electromagnetic Calorimeter</h4>
@@ -11814,6 +11838,8 @@ const subtopics = {
   "telescopes": {
     title: "Telescopes",
     content: `
+      <p><em>Fun fact, did you know that the building in Warwick Uni called the Oculus gets its name from the Latin word for 'eye'? Neat, huh?</em></p>
+      <p>Somewhat impressively, we have managed to go <em>three</em> whole subtopics in a section about mentioning telescopes even once? I think that deserves a round of applause!!</p>
       <h3>Different types of telescope</h3>
       <h4>Refracting Telescope</h4>
       <div class="container">
@@ -11841,10 +11867,10 @@ const subtopics = {
           <!-- DIVIDING LINE -->
           <div class="image">
               <div class="image-floater">
-                  <div class="image-box">
+                  <div class="image-box left-box">
                       <img src="images/Astronomy/Reflecting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
                   </div>
-                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
                       Figure X
                   </div><div class="image-tooltip-desc">
                       ...
@@ -11854,148 +11880,431 @@ const subtopics = {
           <!-- DIVIDING LINE -->
           <div class="text">
               <p> 
-                  When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light back into the telescope.
+                  When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light to a focal point. This means that for a reflecting point, the focal point is actually behind the mirror.
+              </p>
+              <p> 
+                  Now if your like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?"
               </p>
           </div>
           <!-- DIVIDING LINE -->
       </div>
+      <p>Simple answer, don't worry about it too much. Actual reflection telescopes have some additional features which redirect the light into a position we can actually look at. There are many different methods, but they don't matter. Just remember the reflecty stuff and your good.</p>
       <h4>Combining the two</h4>
-      <p>If you're lucky, you might get a telescope which does a bit o' both</p>
+      <div class="container">
+          <div class="text">
+              <p> 
+                  If you're lucky (and rich), you might get a telescope which does a bit o' both, which has a lens <em>and</em> a mirror. Here is an example of one of such telescope structures, called the <em>Dall-Kirkham</em> telescope. The mirrors position the light to a certain point, and the <em>corrector lens</em> positions it neatly to a focal point.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                      <img src="images/Astronomy/Combined telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                      Figure X
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+      </div>
+      <p>I doubt you'll ever have to learn any particular models (or about these combined ones in general to be fair), but it's good info I guess.</p>
+      <p>From this point onwards we'll pretty much only talk about refracting telescopes, because they make the most sense intuitively and are also easier to draw. Having said that everything I'm about to talk about applies to both.</p>
+      <h3>Cameras</h3>
+      <p>Bloody cameras? I thought we were talking about telescopes?</p>
+      <p>Let's say we have two stars, which we'll give the creative names <em>star 1</em> and <em>star 2</em>. Let's say that these 2 stars in the sky are separated by an angle of \\( \\alpha \\).</p>
+      <p>Each star will emits light rays in every possible direction. However, since stars are so bloody far away, the ones that actually reach us are near enough parallel.</p>
+      <div class="container">
+          <div class="text">
+              <p> 
+                  Now we will look at a very basic telescope, which is just a lens with diametre \\( D \\), focusing light on a sheet. As we already know, the distance from the lens to the focal point is the focal length, \\( f \\). We'll also say that the distance between one focal point and the next is \\( l \\).
+              </p>
+              <p> 
+                  If our angle us small enough, then we can use our small angle approximation (\\( \\sin{\\alpha} = \\alpha \\)) to get a relation between the two lengths and the angle:
+              </p>
+              <div class="hover-wrapper">
+                  <div class="formula-container">
+                      <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                          \\[ l = \\alpha f \\]
+                      </div>
+                      <span class="formula-tooltip"><div class="formula-tooltip-title">
+                          Formula X
+                      </div><div class="formula-tooltip-desc">
+                          ...
+                      </div></span>
+                  </div>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                      <img src="images/Astronomy/Camera.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                      Figure X
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+      </div>
       <h3>Extended Objects</h3>
+      <p>Up until now, we've thought about each object as a single point in the night sky. That's not a problem for most stars, since they appear so tiny that they may as well be a single point. But what about the sun? Or the moon? Or planets, comets, nebulae, galaxies?</p>
+      <p>These are what we call <em>extended object</em>, objects which are big enough that we can actually measure what portion of the night sky they take up.</p>
+      <h3>Diffraction Limit</h3>
+      <p>What if we have two objects which are so close together in the sky, that to us it looks like one big object? Well then there's nothing much we can really do. But what I <em>can</em> tell you is the closest together things can get before we can no longer tell 'em apart.</p>
+      <p>The derivation is quite long, with like Bessel functions and stuff (I'd know because, by pure co-incidence, we literally <em>just</em> went through the derivation in our Second Year 'Mathematical Methods for Physics' lecture right before I'm now typing this, fun right?), but the smallest angle between two objects a telescope with a circular lens of diametre \\( D \\) can differentiate between is given by:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\alpha_\\text{min} = 1.22 \\frac{\\lambda}D \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Diffraction limit
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>...with \\( \\lambda \\) being our good friend wavelength. Of course, this is the BEST we can do ever. If the telescope is actually just trash, then it would be larger.</p>
+      <h3>Magnification</h3>
+      <p>The final piece of the puzzle we need to consider when looking at telescopes is the looky thing (MCKA the <em>eyepiece</em>) itself. The job of the looky thing is to take the image which the lens squished into the focal point and make it big enough for our human eye to be able to pick up. In other words, it <em>magnifies</em> the image.</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Astronomy/Magnification.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure X
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  Avert your attention to this here image. The first lens, the objective lens, takes the light from the two stars and squishes them down at their focal points (on a line known as the <em>focal plane</em>). Like I said it's pretty useless at this point, since our eyes can't see stuff which is that bloody small. 
+              </p>
+              <p>
+                  So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. 
+              </p>
+              <p>
+                  So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
+      <p>Notice now there are two alphas, one when the light rays cross the first time (as they enter the objective lens) and another one as they cross the second time (after they are flipped by the ocular lens). We'll name the first one \\( \\alpha_1 \\) and the second one \\( \\alpha_2 \\).</p>
+      <p>There are also two focal lengths, the length between the objective lens and the focal plane (which we'll call \\(f_1\\)), and the length between the ocular lens and the focal plain (which we'll call \\(f_2\\)).</p>
+      <p>Why the heck does this matter you wonder? Well remember how we used a small angle to approximate that little \\( l \\) distance? If you use the exact same logic you did with the first lens, you'll notice that we can actually do the same approximation with the second angle and second focal length:</p>\\[ l = \\alpha_1 f_1 = \\alpha_2 f_2 \\]
+      <p>So since \\( \\alpha_1 f_1 = \\alpha_2 f_2 \\), we can actually figure out how much the image is being magnified. If \\( \\alpha_1 \\) is the actual angular difference of the two objects in the sky. and \\( \\alpha_2 \\) is the angular difference in the eyepiece which we actually see, then we can calculate how many times bigger the image simply by dividing \\( \\alpha_2 \\) by \\( \\alpha_1 \\)</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M = \\frac{\\alpha_2}{\\alpha_1} = \\frac{f_1}{f_2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X: Magnification
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
     `
   },
 
   "colours": {
-    title: "Black-Bodies and Colours",
+    title: "Black-Bodies and Colour",
     content: `
-      <h3>Black-Bodies and Colours: Why Stars Are Different Colours</h3>
-
-      <p>Right. Let’s talk about <strong>black-body radiation</strong>.</p>
-
-      <p>No, not the kind that records your crimes. We’re talking about <strong>how hot objects glow</strong> — from red-hot iron to white-hot stars.</p>
-
-      <p>And yes — stars are nearly perfect black bodies.</p>
-
-      <h3>Black-Body Spectrum</h3>
-
-      <p>A black body emits radiation across all wavelengths — but peaks at a wavelength that depends on temperature.</p>
-
-      <p>Wien’s Law:</p>
-
-      <p>\\( \\lambda_{\\text{max}} T = 2.9 \\times 10^{-3} \\, \\text{m K} \\)</p>
-
-      <p>Hotter star? Bluer peak.</p>
-
-      <p>Cooler star? Redder peak.</p>
-
+      <p>Everything emits and absorbs radiation.</p>
+      <p>Trying to accurately model the energy input and output for any system is a massive pain in the arse. Now, this isn't at all possible, so there is almost no point in me even bringing it up... but <em>what if</em> there was such a body which emitted and absorbed every single wavelength of radiation?</p>
+      <p>That would be a LOT easier to work with. So easy to work with, in fact, that I might just end up writing an entire pages worth of information about how this would hypothetically work, even though this can never ever <em>ever</em> happen!</p>
+      <h3>Black-Body Radiation</h3>
+      <p>JUMPSCARE FORMULA!!</p>\\[ B_\\lambda(T) = \\frac{2 \\pi hc^2 }{ \\lambda^5 (e^{\\frac{hc}{k_BT\\lambda}}-1)}\\]
+      <p>Let me do an impression of how I think you just reacted...</p>
+      <p>&quot;jkshjahjdasjk WHAT? What the bloody 'ell is that m8? Not even a hi, how are things?&quot;</p>
+      <p>This is something called Planck's law, and it tells us how much energy each wavelength emits per second. Never fear, the formula itself is likely not of much used to you, so calm down m8.</p>
+      <div class="container">
+          <div class="text">
+              <p> 
+                  What you will need to know is what this formula looks like in graph mode. There are 5 main things you need to remember:
+                  <ol>
+                      <li>At short wavelengths, it drops very quickly. This is called <em>Wein's tail</em></li>
+                      <li>At larger wavelengths, it drops more gradually. This is called <em>Rayleigh-Jane's tail</em></li>
+                      <li>The spectrum gets taller, sharper and shifts to the right as temperature increases. Also notice it        increases ALL of the wavelengths, hence why the two temperatures will never cross.</li>
+                      <li>The spectrum is smooth, with no cuts in it.</li>
+                  </ol>
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                      <img src="images/Astronomy/Planck's Law.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                      Figure X
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+      </div>
+      <h3>Wien's Displacement law</h3>
+      <p>Since the peaks move to the left with temperature, it would be fair to say that the peak wavelength is inversely proportional to the wavelength. And you'd be correct! Give yourself a pat on the back!</p> \\[ \\lambda_\\text{max} \\propto \\frac1T \\quad \\text{or} \\quad \\lambda_\\text{max}T = \\text{some constant} \\]
+      <p>Luckily for us, Wien (the sharp-falling tail guy) spoke with the game devs and managed to figure out what said constant is:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\lambda_\\text{max} T = 2.898 \\times 10^{−3} \\text{m K}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Wien's Displacement Law
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>I could be wrong here... but I think you <em>do</em> have to remember this. Then again, if 2.898 is too hard of a number for you to remember, they'll probably take 2.9 as a valid answer.</p>
       <h3>Stefan-Boltzmann Law</h3>
-
-      <p>Total power radiated per unit area:</p>
-
-      <p>\\( f = \\sigma T^4 \\)</p>
-
-      <p>So double the temperature? 16× more power.</p>
-
-      <p>That’s why O-stars are so bright.</p>
-
-      <h3>Colour Indices: Measuring Star Colours</h3>
-
-      <p>We use filters: blue (B), visual (V), red (R).</p>
-
-      <p>Colour index: \\( B - V \\)</p>
-
-      <p>Small \\( B-V \\)? Blue star (hot).</p>
-
-      <p>Large \\( B-V \\)? Red star (cool).</p>
-
-      <p>Gaia uses \\( G_{BP} - G_{RP} \\) — same idea.</p>
-
-      <h3>Hertzsprung-Russell Diagram</h3>
-
-      <p>Plot \\( M_G \\) (absolute magnitude) vs \\( G_{BP} - G_{RP} \\) (colour).</p>
-
-      <p>Most stars lie on the <strong>main sequence</strong> — a diagonal band from hot & bright to cool & dim.</p>
-
-      <p>Giants and supergiants? Top right — bright but cool.</p>
-
-      <p>White dwarfs? Bottom left — hot but dim.</p>
-
-      <h3>TL;DR</h3>
-
-      <ul>
-        <li>Wien’s Law: \\( \\lambda_{\\text{max}} T = 2.9 \\times 10^{-3} \\)</li>
-        <li>Stefan-Boltzmann: \\( f = \\sigma T^4 \\)</li>
-        <li>\\( B - V \\) colour index → temperature</li>
-        <li>HR diagram: main sequence, giants, white dwarfs</li>
-        <li>Hot stars = blue, cool stars = red</li>
-      </ul>
-
-      <p>And remember: the universe doesn’t care what colour you paint your star.  
-      It only cares about the temperature.</p>
+      <p>If we want to know the total power per unit area of the body, (we'll call it, erm IDK, how about \\(J\\), is that alright?), we'd have to get the energy output for each individual wavelength (\\(B_\\lambda\\) for each \\( \\lambda \\)) and then add 'em all together. You know what that means, we have to <em>integrate!!</em></p>\\[ J = \\int_0^\\infty B_\\lambda d\\lambda \\]
+      <p>Now I'm sure you'd agree, that is not what I want to be spending my Thursday evening doing. And luckily you don't have to; Stefan and Boltzman spent <em>their</em> Thursday evening doing it instead. And turns out it works out quite nicely actually:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ J = \\sigma T^4  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Stefan-Boltzmann Law
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>...where \\( \\sigma \\) is a brand new constant they magicked up, called the <em>Stefan-Boltzmann constant</em> (real creative guys...), with a value of \\( \\sigma = 5.670 \\times 10^{−8} \\text{ W m}^{−2}\\text{ K}^{−4} \\)</p>
+      <p>And here we're about to come full circle! Remember that luminosity is the amount of energy radiated per second. And what we have here is the amount of energy radiated per second... per unit area. So if we multiply our \\( J \\) with the surface area of a sphere, \\(4 \\pi r^2 \\) (assuming stars are spherical of course, then again they are near enough that it's an assumption worth making), then we get the formula for the luminosity of a star:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ L_* = 4 \\pi R_*^2 \\sigma T_\\text{eff}^4 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Luminosity of a star
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>... where \\( R_* \\) is the radius of the star and \\( T_\\text{eff} \\) is the <em>effective temperature</em> of the star.</p>
+      <p><em>I can't put it into words, but I find something deeply amusing about scientists using an asterist (*) as the symbol for a star. I mean I get that people informally call it a star, but like... you man are scientists, you should be more professional, no? Not complaining tho, keep it that way.</em></p>
+      <p>And BTW, I'm sure you'd like to know what makes this particular temperature so <em>effective</em>. It sounds cool at first but it becomes way less cool one it's explained to you.</p>
+      <p>In sort, when you think about it, stars don't really have one temperature. Their temperature keeps on increasing until you get to the centre. So in order to get a sort of average value of the temperature for a star, they define the effective temperature, which is the temperature at the star's <em>photosphere</em>.</p>
+      <p>Now you might think &quot;hold on, that's still kinda cool, what were you on about?&quot; As much as this whole photosphere thing sounds cool, do you want to know how they decide what the effective temperature is and where the photosphere it?</p>
+      <p>The effective temperature... is literally just the temperature at which the formula just so happens to work.</p>
+      <p>Yes, they define the effective temperature as the temperature at which that relationship is true. And then they define the radius of the photosphere as the radius at which the relation just so happens to be true. *FACEPALM*</p>
+      <p>Slightly circular reasoning, but whatever, we have an exam to write...</p>
+      <h3>Colours</h3>
+      <p>A bit like how we defined Vega as having a magnitude of 0, we also define Vega's colours to be zero.</p>
     `
   },
 
   "masses": {
-    title: "Astronomical Masses",
+    title: "Astronomical Bodies",
     content: `
-
+      <h3>Binary Stars</h3>
+      <p>Usually, trying to figure out the mass of any one star is pretty difficult. However, God has given us one phenomenon to make our lives slightly easier: <em>binary stars</em>!</p>
+      <div class="container">
+          <div class="text">
+              <p> 
+                  Binary stars are two stars which kinda just dance around each other. Although there technically isn't a distinct mass for them to orbit around, the two stars have a combines <em>centre of mass</em>, which they dance around.
+              </p>
+              <p>
+                  If we consider the equations for centre of mass, we will come to the conclusion that for this to happen, the mass times the distance of each star is the same
+              </p> \\[ m_1 r_1 = m_2 r_2 \\]
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                      <img src="images/Astronomy/Binary star.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                      Figure 1: Binary star
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+      </div>
+      <p>That means that the heavier star is closer to the middle and the lighter star is further. Next we can look at their velocities: since they are orbiting in a circle, we can use the equation for centripetal force and equate it to the gravitational force:</p> \\[ \\cancel{m_1} \\omega^2 r_1 = \\frac{G \\cancel{m_1} m_2}{R^2} \\quad \\text{and} \\quad \\cancel{m_2} \\omega^2 r_2 = \\frac{G m_1 \\cancel{m_2}}{R^2} \\]
+      <p>If we shuffle the variables around, we eventually get an equation for the angular frequency (well, angular frequency <em>squared</em>):</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\omega^2 = \\frac{4 \\pi^2}{P^2} = \\frac{G(m_1 + m_2)}{R^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Frequency of binary stars
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Binary star spectroscopy</h3>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Astronomy/Spectra binary.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 2: A spectrum of 2 stars
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  Binary star systems can often rotate <em>reeeeeally</em> quickly, which means that the stars end up being very close together. So close together that we can't tell 'em apart just by looking at them. So whilst their positions are useless to us, their <em>speeds</em> give us something to work with. When stars move at different speeds, their spectra also appear slightly different as a result.
+              </p>
+              <p>
+                  This is all thanks to the <em>Doppler effect</em>, which we described in a bit more detail back in the <a href="http://127.0.0.1:5500/topic.html?topic=relativity">Special Relativity</a> section. In short, when things move towards us, the waves they emit get squashed. When things move away from us, the waves they emit get stretched. The relation between the waves' original wavelength \\( \\lambda_0 \\) and their measure wavelength \\( \\lambda \\) is given by this formula:
+              </p>
+              \\[ 
+                  \\frac{\\lambda}{\\lambda_0} = \\frac{1+\\frac{v}{c}\\cos{\\theta}}{\\sqrt{1-\\left(\\frac{v}{c}\\right)^2}} 
+              \\]
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
+      <p><em>Oh, and you might notice that there's now a cosine that wasn't there when we did relativity. That's because in the relativity section we assumes the waves were coming head on, but now we aren't assuming that, just don't think about it too much.</em></p>
+      <p>Now stars can be pretty quick, but they aren't <em>that</em> quick. Compared to the speed of light, stars move relatively slowly, meaning that \\( \\frac{v}{c} \\) is near enough 0 that the square root denominator term is basically just 1. That means we can ignore it, giving us our new formula for wavelength:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\lambda_\\text{observed} = \\lambda_0 (1+\\frac{v}{c}\\cos{\\theta}) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Doppler shift of stars
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>If we can successfully use this Doppler thing to measure the speeds at which the stars move, then since speed in circular motion is the angular frequency times by the radius (\\( v = \\omega r \\)), we can calculate the radii of the two stars, meaning we can bring back formula 1 and use it to calculate the masses of the stars as before.</p>
+      <h3>Gravitational Lensing</h3>
+      <div class="container">
+          <div class="text">
+              <p> 
+                  We know that gravity attracts masses, but by some miracle (i.e. General relativity), it can also attract light. An object with mass \\( M \\) can cause a light ray to very slightly bend towards it
+              </p>
+              \\[ 
+                  \\Delta \\alpha = \\frac{4GM}{c^2 r} 
+              \\]
+              <p>
+                  ... where \\( \\Delta \\alpha \\) is the angle it's being deflected and \\( r \\) is the distance the light ray is from the mass.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                      <img src="images/Astronomy/Grav Lens.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                      Figure 3: Gravitational Lensing
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+      </div>
+      <p>That means that light coming from behind the object can be bent and concentrated into a single point. Light being squished into a single point, where have I heard that before....</p>
+      <p><em>A lens</em>!</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Astronomy/Einstein Ring.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 3: The Einstein ring
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  Yeah, bet you didn't expect a collab between Astronomical masses and Telescopes did you? This means if there is a light emitting object (like a star) behind a mass, some of that light is bent such that you can see it on the other side.
+              </p>
+              <p>
+                  This is most noticeable during an <em>eclipse</em>. You may have wondered why you can still see the light from the sun when the moon is blocking it. This is why!
+              <p>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
+      <p>That little ring you see around the moon during an eclipse is called the <em>Einstein Ring</em>, and in the instance that the masses are perfectly aligned, the radius of the Einstein ring, \\( \\Theta_E \\), is:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Theta_E = \\sqrt{ \\frac{4GM}{Dc^2} } \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Einstein Ring Radius
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Do remember that this is only if everything aligns PERFECTLY, which it probably won't.</p>
     `
   },
 
   "solar-system": {
-    title: "The solar system",
+    title: "The Solar System",
     content: `
-      <h3>The Solar System: A Messy Family of Planets</h3>
-
-      <p>Right. Let’s talk about <strong>our cosmic backyard</strong>.</p>
-
-      <p>No, not the garden. We’re talking about <strong>the Sun, eight planets, moons, asteroids, comets, and a whole lot of ice</strong>.</p>
-
-      <p>And yes — it’s not as orderly as textbooks make it seem.</p>
-
-      <h3>Terrestrial vs Giant Planets</h3>
-
-      <p><strong>Terrestrial</strong>: Mercury, Venus, Earth, Mars — rocky, dense, small.</p>
-
-      <p><strong>Giant</strong>: Jupiter, Saturn, Uranus, Neptune — gassy, icy, huge.</p>
-
-      <p>The split happened at the <strong>frost line</strong> — where volatiles like water and methane could condense.</p>
-
-      <p>Inside: only rock and metal.</p>
-
-      <p>Outside: ice + rock → bigger cores → gas giants.</p>
-
-      <h3>Kuiper Belt and Oort Cloud</h3>
-
-      <p><strong>Kuiper Belt</strong>: icy bodies beyond Neptune — source of short-period comets.</p>
-
-      <p><strong>Oort Cloud</strong>: spherical shell of comets at ~50,000 AU — source of long-period ones.</p>
-
-      <p>Passing stars can nudge Oort Cloud comets into the inner system.</p>
-
-      <h3>Planetary Temperatures</h3>
-
-      <p>Equilibrium temperature:</p>
-
-      <p>\\( T = \\left( \\frac{L_\\odot}{16\\pi \\sigma d^2} \\right)^{1/4} \\)</p>
-
-      <p>Venus is hotter than expected — thanks to a runaway greenhouse effect.</p>
-
-      <p>Earth? Stable climate — for now.</p>
-
-      <h3>TL;DR</h3>
-
-      <ul>
-        <li>Terrestrial: rocky, inner system</li>
-        <li>Giant: gassy/icy, outer system</li>
-        <li>Frost line: where ices condense</li>
-        <li>Kuiper Belt: short-period comets</li>
-        <li>Oort Cloud: long-period comets</li>
-        <li>Venus: runaway greenhouse</li>
-      </ul>
-
-      <p>And remember: the universe doesn’t care how many planets you have.  
-      It only cares about the frost line.</p>
+      <p><em>Protip, for people who don't attend lectures, firstly what's wrong with you these lectures are without a doubt the best ones to attend. Because they feel more like documentaries than lectures. Having said that, that also means that this section will be alot of me just talking at you.</em></p>
+      <p>The solar system is made up of many parts. The compenent it's named after is the sun. Now I'm sure your thinking, &quot;The Sun? I've never heard of the sun, what's that?&quot; Go outside during the daytime. Notice that bright glowy thing in the sky? That's what we call the <em>Sun</em>.</p>
+      <p>The sun is a star, like Vega or Alpha Centuri. A good way to tell them apart: take a telescope. Now look at the sun. Notice how you can now only see black? That's because the sun is bright as hell and you're now <em>blind</em>. That's a really good way to tell them apart</p>
+      <p><em>Jokes aside, don't look at the sun with a telescope, you will go blind.</em></p>
+      <h3>The Terrestrial Planets</h3>
+      <p>Next we have the four rocky (or terrestrial) planets – Mercury, Venus, Earth (Earth mentioned!!!!) and Mars. These are closer to the sun and are also relatively small compared to some other bodies in the solar system.</p>
+      <p>They have cores made from metals like Iron and Nickel, and mantles made from <em>silicates</em> (which are just rocks basically).</p>
+      <h3>The Gas Giants</h3>
+      <p>After the rocky planets, we get the four bigger and frankly much cooler <em>gas planets</em> – Jupiter, Saturn, Neptune and Uranus (pronounced <strong>Your</strong>-a-nuss, not that there's an alternative, less polite pronunciation anyway, is there?).</p>
+      <p><em>By the way, since the gas giants are essentially the opposite of the terrestrial planets, I think it's fair for me to describe them as the <strong>extra-terrestrial</strong> planets. Just because the thought of them being aliens is always fun.</em></p>
+      <p>In case you were wondering, they are called gas giants, because they are made of this special material, known as <em>gas</em>. For the most part, they are made of these special never-before heard of elements, called hydrogen and helium. Since they are made of gas, they are on average much less dense than the terrestial planets.</p>
+      <p>But don't let the gas fool you, at their centre they are very much solid. Like the terrestrials, these alien planets do have cores made of iron and nickel (and silicates)</p>
+      <p>The gas giants also have a LOT of moons.</p>
+      <h3>Temperatures of Bodies in the Solar System</h3>
+      <p>Like I said, there are no perfect black bodies in the universe, so this next bit is kinda pointless... but what IF bodies in the solar system behaved like black bodies? That would make things a lot easier, right?</p>
+      <p>I mean think about it, we could then just assume that the rate of energy entering the body is the rate of energy exiting the body:</p> \\[ \\text{Power in} = \\text{Power out} \\] \\[ \\downarrow \\] \\[ \\frac{L_\\odot}{4 \\pi d^2} \\cancel{ \\pi R^2 } = 4 \\cancel{ \\pi R^2 } \\sigma T^4 \\]
+      <p>... which would allow you to then rearrange it to get the <em>equilibrium temperature</em> of said body:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ T_\\text{eq} = \\left( \\frac{L_\\odot}{16\\pi\\sigma d^2}\\right)^\\frac14 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula 1: Equilibrium temperature of a body
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>That's a pretty cool formula, eh? Shame that's only for perfect black bodies tho, so we can't use it. I mean, look at Venus for example. This formula would predict that Venus has a surface temperature of about 57°C, and it in fact has a surface temperature of about 460°C, since it has a super duper thick atmosphere which traps a lot more heat in.</p>
+      <p>In general, this formula just ignores a LOT of other features of the planets. But for exams, it's usually good enough.</p>
     `
   },
 
@@ -12342,13 +12651,57 @@ const subtopics = {
       <h3>Linear Accelerators</h3>
       <p>First up, the OG particle accelerator, the <em>linear accelerator</em> (or <em>linac</em> if you'd like).</p>
       <p><em>&quot;Can it be? There's a card in rush duels, which looks exactly like me!&quot;</em></p>
-      <p>Linacs are quite simple conceptually: they are basically just long ass tubes with a bunch of radiofrequency cavities which apply an electric field to the particles, which keeps on making the particle faster, and faster, and faster.</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  Linacs are quite simple conceptually: they are basically just long ass tubes with a bunch of radiofrequency cavities which apply an electric field to the particles, which keeps on making the particle faster, and faster, and faster.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Quantum/LINAC.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 1: LINACs
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
       <p>The benefits of linacs is that building 'em is a piece of piss. I mean it's literally a big tube, that's about as simple as one can get as far as building is concerned. Problem is, the faster we want to accelerate them, the longer the tube has to be. And linacs can get <em>pretty bloody long</em>. This ain't a bit deal if we just wanna accelerate an electron to a moderately high energy (like under a hundred gigaelectron volts), but trying to use these to observe energies of the order of teraelectron volts will be a bit of an issue.</p>
       <p>This is especially problematic since, due to <em>relativity</em>, once we get to high enough speeds, time itself slows the particle down. That means that the particles isn't actually accelerating as much, meaning you don't get as much energy back given the amount of work you are doing to speed it up. Since the return on investment is quite rubbish at higher speeds, linacs can't really be used here.</p>
       <h3>Cyclotrons</h3>
       <p>For my fellow AQA folk, you actually did this at A-level, but I bet you've forgotten about them by now, so let me remind you!</p>
-      <p>A cyclotron is more or less a linac, just now it's round. The cyclotron is made up of two semi-circular thingies, which scientists very creatively called 'Dees' (because the letter D looks like a semi-circle...). The particle begins near the centre of the system and is shot into one of the Dees.</p>
-      <p>We need this particle to accelerate in a circular way instead of in a straight line. Now let's turn our grey matter on: what physical phenomenon do we know of that causes a charged particle to undergo circular motion?</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Quantum/Cyclotron.png" class="pop-image" style="max-width: 100%; width: 70vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 2: The Cyclotron
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  A cyclotron is more or less a linac, just now it's round. The cyclotron is made up of two semi-circular thingies, which scientists very creatively called 'Dees' (because the letter D looks like a semi-circle...). The particle begins near the centre of the system and is shot into one of the Dees.
+              </p>
+              <p>
+                  We need this particle to accelerate in a circular way instead of in a straight line. Now let's turn our grey matter on: what physical phenomenon do we know of that causes a charged particle to undergo circular motion?
+              <p>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
       <p>That's right, <em>magnetic fields</em>!</p>
       <p>Remember from Electricity and Magnetism, specifically the section on <a href="http://127.0.0.1:5500/subtopic.html?subid=magnetic-fields&amp;topic=e-m&amp;year=1">Magnetic fields and forces</a>, we learnt that the Larmor radius ...</p>
       <p>The proper derivation can be seen if you hit the link, but for now, just take the Lorentz force, assume there is no electric field (\\(E=0\\)), and then equate Lorentz force with centripetal force from circular motion, and you get:</p>\\[ F = qvB = \\frac{mv^2}r \\] \\[ \\downarrow \\]\\[ r = \\frac{mv}{qB} = \\frac{p}{qB} \\]
@@ -12413,8 +12766,31 @@ const subtopics = {
       </div>
       <p>Cyclotrons are much more compact than linacs, and are also pretty easy to make. Although like the linac, we can't have very high energies because <em>relativity is a wanker</em>. If you reeeeally want to <strong>rev it up</strong>, you'll need a <em>synchrotron</em>.</p>
       <h3>Synchrotron</h3>
-      <p><em>Synchrotrons</em> take the logic of cyclotrons and flip it on its head. Instead of having a changing radius with a constant magnetic field like a cyclotron, synchrotrons keep a constant radius with a varying magnetic field.</p>
-      <p>Synchrotrons are made up of a circular pipe with some small electromagnets to guide the beam. As the particle gets faster and faster, the magnetic field strength has to get stronger to keep the particles on the racetrack.</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  <em>Synchrotrons</em> take the logic of cyclotrons and flip it on its head. Instead of having a changing radius with a constant magnetic field like a cyclotron, synchrotrons keep a constant radius with a varying magnetic field. 
+              </p>
+              <p> 
+                  Synchrotrons are made up of a circular pipe with some small electromagnets to guide the beam. As the particle gets faster and faster, the magnetic field strength has to get stronger to keep the particles on the racetrack.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Quantum/Synchrotron.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 1: LINACs
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
       <p>And whilst this allows us to get particles with a LOT of energy, <em>relativity is still a wanker</em>, although credit where credit is due, it's a wanker in a slightly more interesting way this time. When a particle is accelerating that bloody fast, it starts radiating photons. How this works doesn't matter. What does matter is that it has a fun German name, <em>bremsstrahlung</em>! It probably has some crazy authentic German pronunciation, but my best guess is to just go with <em>brem'-strar-lung</em>.</p>
       <p>Bremsstrahlung radiation (or <em>braking radiation</em> if you really can't be arsed) causes the particle to loose energy:</p>\\[ \\Delta E = \\frac{e^2E^4}{3\\varepsilon_0(m_0c^2)^4R} \\]
       <p>I <em>sincerely</em> hope you don't have to memorise this formula (or even use it in fact), which is why I haven't used the orange box animation thing I do for important formulae. If it comes to your exam it you <em>are</em> required to memorise it, then if I were you I'd just log out of life at that point.</p>

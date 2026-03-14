@@ -56,9 +56,34 @@ Essentially the same formula, except we now have \\(X_0\\)'s cousin, \\(\\lambda
 
 ### The structure of a collision detector
 
-Now we know all about how the different particles interact with matter, you, yes YOU, can begin to make yourself your very own particle collider. Impressive as they might sound or look, they are actually quite boring in design. In short, you have a thingy in the middle which spews out all the particles, then you have a layer which detects some particles, then another layer which detects the particles the first layer couldn't detect, and then ANOTHER layer which detects the particles those two layers couldn't detect, and the a bunch more layers to detect what the first 3 layers couldn't detect.
+Now we know all about how the different particles interact with matter, you, yes YOU, can begin to make yourself your very own particle collider. Impressive as they might sound or look, they are actually quite boring in design. 
 
-The 'thingy in the middle which spews out all the particles' is more precisely known as the *beam pipe*.
+<div class="container">
+    <!-- DIVIDING LINE -->
+    <div class="image">
+        <div class="image-floater">
+            <div class="image-box left-box">
+                <img src="images/Quantum/Detector.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+            </div>
+            <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                Figure 4: Particle Detector
+            </div><div class="image-tooltip-desc">
+                ...
+            </div></span>
+        </div>
+    </div>
+    <!-- DIVIDING LINE -->
+    <div class="text">
+        <p> 
+            In short, you have a thingy in the middle which spews out all the particles, then you have a layer which detects some particles, then another layer which detects the particles the first layer couldn't detect, and then ANOTHER layer which detects the particles those two layers couldn't detect, and the a bunch more layers to detect what the first 3 layers couldn't detect.
+        </p>
+        <p>
+            The 'thingy in the middle which spews out all the particles' is more precisely known as the *beam pipe*.
+        </p>
+    </div>
+    <!-- DIVIDING LINE -->
+</div>
+
 
 #### Tracking detector
 

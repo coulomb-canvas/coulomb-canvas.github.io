@@ -861,7 +861,7 @@ body.dimmed::before {
 
 .image-tooltip-title {
   color: #006aff;
-  font-size: 3.5vw;
+  font-size: 6vh;/*3.5vw;*/
   text-decoration: underline;
   line-height: 1;
   text-underline-offset: 0.5vw;
@@ -870,7 +870,7 @@ body.dimmed::before {
 .image-tooltip-desc {
   padding-top: 1vw;
   color: white;
-  font-size: 1.5vw;
+  font-size: 2vh;
   line-height: 1.2;
 }
 
@@ -924,7 +924,7 @@ body.dimmed::before {
   }
 
   .image-tooltip-title {
-    font-size: 5vw;
+    font-size: 10vh;
     text-underline-offset: 1vw;
     align-items: center;
     display: flex;
@@ -1240,15 +1240,15 @@ body.dimmed::before {
 
 #next-subtopic-button {
   position: fixed;
-  left: 91vw;
-  top: 90vh;
+  right: 3.2vw; 
+  bottom: 5vh;
   z-index: 50;
 }
 
 #back-subtopic-button {
   position: fixed;
   left: 3.2vw;
-  top: 90vh;
+  bottom: 5vh;
   z-index: 50;
 }
 
@@ -1313,7 +1313,7 @@ body.dimmed::before {
 
 #bottom-subtopic-name {
   position: fixed;
-  bottom: 7px;
+  bottom: 4vh;
   left: 50%;
   transform: translateX(-50%);
   color: white;

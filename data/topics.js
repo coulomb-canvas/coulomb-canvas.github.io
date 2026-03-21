@@ -472,7 +472,7 @@ const topics = [
   {
     id: "astro",
     subyear: 1,
-    title: "Coming soon: \nAstrophysics",
+    title: "Astrophysics",
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {

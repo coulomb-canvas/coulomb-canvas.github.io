@@ -25,9 +25,9 @@ Somewhat impressively, we have managed to go *three* whole subtopics in a sectio
                 <img src="images/Astronomy/Refracting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
             </div>
             <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                Figure X
+                Figure 1: Refracting telescope
             </div><div class="image-tooltip-desc">
-                ...
+                A lens focuses the light beams to a single point (called the focal point). The distance from the lens to that point is called the focal length, \(f\).
             </div></span>
         </div>
     </div>
@@ -54,12 +54,14 @@ Somewhat impressively, we have managed to go *three* whole subtopics in a sectio
         <p> 
             When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light to a focal point. This means that for a reflecting point, the focal point is actually behind the mirror.
         </p>
-        <p> 
+        <p> <span class="hide-on-mobile">
             Now if your like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?"
-        </p>
+       </span> </p>
     </div>
     <!-- DIVIDING LINE -->
 </div>
+
+<span class="show-on-mobile"> Now if your like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?" </span>
 
 Simple answer, don't worry about it too much. Actual reflection telescopes have some additional features which redirect the light into a position we can actually look at. There are many different methods, but they don't matter. Just remember the reflecty stuff and your good.
 
@@ -184,15 +186,21 @@ The final piece of the puzzle we need to consider when looking at telescopes is 
         <p> 
             Avert your attention to this here image. The first lens, the objective lens, takes the light from the two stars and squishes them down at their focal points (on a line known as the <em>focal plane</em>). Like I said it's pretty useless at this point, since our eyes can't see stuff which is that bloody small. 
         </p>
-        <p>
+        <span class="hide-on-mobile"><p>
             So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. 
         </p>
         <p>
-            So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction.
-        </p>
+            So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. 
+        </p></span>
     </div>
     <!-- DIVIDING LINE -->
 </div>
+
+<span class="show-on-mobile">
+<p>So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. </p>
+
+<p>So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. </p>
+</span>
 
 Notice now there are two alphas, one when the light rays cross the first time (as they enter the objective lens) and another one as they cross the second time (after they are flipped by the ocular lens). We'll name the first one \\( \\alpha_1 \\) and the second one \\( \\alpha_2 \\).
 

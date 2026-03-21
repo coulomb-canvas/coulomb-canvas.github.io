@@ -1,10 +1,10 @@
 // AUTO-GENERATED FILE - Contains 81 subtopics
-// Generated: 2026-03-13T12:45:28.592Z
+// Generated: 2026-03-21T15:45:33.570Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
 //   - 81 existing hand-written entries
-//   - 13 Markdown-generated entries
+//   - 19 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -564,7 +564,7 @@ const subtopics = {
       </ul>
 
       <p>If you plot those three points on an Argand diagram, you will end up with an equilateral triangle. And this
-        is no co-incidence, and it's not even limited to the parametres of this questions. Whenever you use de
+        is no coincidence, and it's not even limited to the parametres of this questions. Whenever you use de
         Moivre's theorem to find the roots of an equation \\( z^n = \\text{[WHATEVER]} \\), if you plot 
         \\( z_1 \\) through \\( z_n \\), you will end up with an \\( n \\)-sided polygon. These are known as
         <strong>roots of unity</strong> </p>
@@ -5744,7 +5744,7 @@ const subtopics = {
     title: "The Second Law of Thermodynamics",
     content: `
 
-      <p>Previously we took a good look at the first law of thermodynamics, which stated that energy cannont be created
+      <p>Previously we took a good look at the first law of thermodynamics, which stated that energy cannot be created
       nor destroyed, or more formally, that the change in a system's internal energy is the difference between the energy
       flowing into the system and the work done by the system itself:</p>
 
@@ -5798,7 +5798,7 @@ const subtopics = {
       in from the hot reservoir, \\( Q_H \\), take away the energy which was wasted and sent to the cold reservoir, 
       \\( Q_C \\), id est \\( Q = Q_H - |Q_C| \\). Since, in the end, all the heat energy the engine gained ends up
       leaving it somehow (either as work done or by being sent to the cold reservoir), the engine itself doesn't actually
-      gain or loose any heat energy. This means its internal energy doesn't change, or \\( \\Delta U = 0 \\) over a cycle. 
+      gain or lose any heat energy. This means its internal energy doesn't change, or \\( \\Delta U = 0 \\) over a cycle. 
       Then by using the first law, \\( W = Q_H - |Q_C| \\)</p>
 
       <p>Efficiency, \\( \\varepsilon\\), is calculated by taking how much work was done by the engine, \\(W\\), and 
@@ -5824,27 +5824,53 @@ const subtopics = {
       <p> The Carnot cycle is a theoretical heat engine which has 100% efficiency. That's a lot of percents.</p>
 
       <p>It has four stages:</p>
-      <ol>
-        <li><strong>A→B</strong>: Isothermal expansion at \\( T_H \\). Remember that isothermal means the temperature
-        doesn't change, meaning the internal energy doesn't change, \\( \\Delta U = 0 \\). This means the heat in is 
-        the same as the work out, as per the first law: \\( W_{AB} = Q_{AB} \\). We also know from earlier that the
-        work done in the isothermal process is \\(nRT_H\\ln{\\frac{V_1}{V_2}}\\)</li>
-        <li><strong>B→C</strong>: Adiabatic expansion.  Remember that adiabatic means that there is no heat transfer,
-        \\( Q_{BC} = 0 \\), so as per the first law, \\( \\Delta U = -W \\). We also know that in the adiabatic process,
-        the work done is \\(W_{BC}=-nC_V(T_C-T_H)\\) as the gas cools from \\( T_H \\) to \\( T_C \\)</li>
-        <li><strong>C→D</strong>: Isothermal compression at \\( T_C \\). Pretty similar to the first isotherm, in that
-        \\( \\Delta U = 0 \\) and so \\( W_{CD} = Q_{CD} \\). The work done is almost the same, but done <em>on</em> 
-        the system this time, with \\(W_{CD} = nRT_H\\ln{\\frac{V_3}{V_4}}\\).</li>
-        <li><strong>D→A</strong>: Adiabatic compression. Simalar again to the previous adiabat, \\( Q_{DA} = 0 \\),
-        \\( \\Delta U = -W \\), so \\(W_{DA}=-nC_V(T_H-T_C)=-W_{BC}\\) as it heats back to \\( T_H \\)</li>
-      </ol>
+      <div class="container">
+        <div class="text">
+          <u>A→B: Isothermal expansion at \\( \\; T_H \\)</u>
+            Remember that isothermal means the temperature doesn't change, meaning the internal energy doesn't 
+            change <span class="formula-emph">[ \\( \\mathbf{\\Delta U = 0} \\) ]</span>. This means the heat entering the system is the same as the work done by the
+            system, as per the first law <span class="formula-emph">[ \\( \\mathbf{W_{AB} = Q_{AB}} \\) ]</span>. We also know from earlier that the
+            work done in the isothermal process is \\(nRT_H\\ln{\\frac{V_1}{V_2}}\\)
+
+          <u>B→C: Adiabatic expansion</u>Remember that adiabatic means that there is no heat transfer
+            <span class="formula-emph">[ \\( \\mathbf{Q_{BC} = 0} \\) ] </span> so as per the first law 
+            <span class="formula-emph">[ \\( \\mathbf{\\Delta U = -W} \\) ]</span>. We also know that in 
+            the adiabatic process, the work done is \\(W_{BC}=-nC_V(T_C-T_H)\\) as the gas cools from 
+            \\( T_H \\) to \\( T_C \\)
+
+          <u>C→D: Isothermal compression at \\( \\; T_C \\)</u> Pretty similar to the first isotherm, in that
+            \\( \\Delta U = 0 \\) and so \\( W_{CD} = Q_{CD} \\). The work done is almost the same, but done <em>on</em> 
+            the system this time, with \\(W_{CD} = nRT_C\\ln{\\frac{V_3}{V_4}}\\).
+
+          <u>D→A: Adiabatic compression</u> Similar again to the previous adiabat from B to C, \\( Q_{DA} = 0 \\),
+            \\( \\Delta U = -W \\), so \\(W_{DA}=-nC_V(T_H-T_C)=-W_{BC}\\) as it heats back to \\( T_H \\)
+
+        </div>
+        <div class="image">
+          <div class="image-floater">
+            <div class="image-box">
+              <img src="images/Thermal Physics/Carnot.png" class="pop-image" style="width: 300px"/>
+            </div>
+            <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+              font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+              Figure 1: The Carnot Cycle</div><div style="color:white; font-size:20px; line-height: 1.2;">
+              ...</div></span>
+          </div>
+        </div>
+      </div>
+
 
       <p>For each part of the process, we have a value for internal energy, work done, and heat flow. Let's add 'em
       up to get a total for the whole cycle:</p>
 
-      <p>The total internal energy is \\(0-nC_V(T_C-T_H)+0+-nC_V(T_H-T_C)=0\\)</p>
-      <p>The total heat flow is \\(nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0
-      = nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\). But we know from before that
+      <p>The total internal energy is </p>
+
+      \\[0-nC_V(T_C-T_H)+0+-nC_V(T_H-T_C)=0\\]
+
+      <p>The total heat flow is</p> \\[nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0
+      = nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\]
+
+      <p>But we know from before that
       \\(\\frac{V_1}{V_2}=\\frac{V_3}{V_4}\\), which means that \\(Q=nR(T_H-T_C)\\ln{\\frac{V_1}{V_2}}\\).</p>
       <p>And we've proven that the heat energy in is the same as the work done, which makes sense, as we are
       assuming 100% efficiency, meaning none of the energy ends up in the shadow realm. So
@@ -5891,7 +5917,7 @@ const subtopics = {
       You could run them backwards and no one would know. And once again would be worth quite a lot of money if we could
       extract them from the world of make-believe. Because all real processes are irreversible processes.</p>
 
-      <p>The Carnot cycle is reversible, which is why it’s the most efficient. But Carnot engines ain't real, so it'd
+      <p>The Carnot cycle is reversible, which is why it’s the most efficient. But Carnot engines ain't real, so it's
       kinda just a scientific thought experiment. All real engines are less efficient.</p>
 
       <p>And if you still don't believe me when I say the Carnot cycle is actually just nonsense, let me prove it to
@@ -5940,14 +5966,14 @@ const subtopics = {
       about <strong>entropy</strong>!!!</p>
 
       <p><i>(Goodness gracious me, you <strong>think</strong> it's time? What gave it away, the big blue floating 
-      underlined title which says "entropy"?</i></p>
+      underlined title which says "entropy"?)</i></p>
 
-      <p>Remembering back, we now know that energy spontaneously flows from cold to hot, thus increasing the internal energy
+      <p>Remembering back, we now know that energy spontaneously flows from hot to cold, thus increasing the internal energy
       of the previously cold particles. We also know that an increase in internal energy pertains to an increase in
       kinetic energy, which in turn pertains to how spazticated the molecules are - or in other words, how <strong>
       chaotic</strong> the particles are. <i>Remember this, it'll be important soon</i>.</p>
 
-      <p>Now we can think of the Second Law in terms of particle spaztication. Since energy spontaneously flows to
+      <p>Now we can think of the Second Law in terms of particle spaztication. Since energy spontaneously flows from hotter areas to
       colder, less spazticated areas, we can in a way say that the universe naturally tries to spazticate everything.
       Or in other words, the universe tends towards disorder / chaos.</p>
 
@@ -5960,7 +5986,7 @@ const subtopics = {
       I say \\( S \\) is for spaz, who are you to tell me I'm wrong? Bruv your guess is as good as mine! So for 
       future reference, I will switch between 'entropy' and 'spaztication', but know I'm on about the same thing.</p>
 
-      <p> Entropy is a measure of <strong>disorder</strong> or <strong>randomness</strong> withing a system, with
+      <p> Entropy is a measure of <strong>disorder</strong> or <strong>randomness</strong> within a system, with
       low entropy meaning more ordered and high entropy meaning less ordered.</p>
 
       <p>And the Second Law can be interpreted as saying that <strong>the total entropy of the universe never 
@@ -8950,7 +8976,7 @@ const subtopics = {
       <h4>Paramagnetism</h4>
 
       <p>If the magnetic susceptability is positive (i.e. \\( \\chi_M > 0 \\)) then the magnetisation points in the same 
-        direction of the field you applied. That means the combines field is greater than the applied field (because you
+        direction of the field you applied. That means the combined field is greater than the applied field (because you
         have the applied field, plus \\( \\vec{M} \\) which is in the same direction). <p>
 
       <p> Also notice that since \\( \\vec{M} \\) is proportional to \\( \\vec{H} \\), that means that when 
@@ -11580,10 +11606,10 @@ const subtopics = {
       </p>
       <p>This view was later replaced by <i>heliocentrism</i>, which states that the sun is rather at the centre of the
       universe.</p>
-      <p>Pfft, I know, right? How stupid can you get? I mean, we, the intellegent people of the modern world that we (and our
+      <p>Pfft, I know, right? How stupid can you get? I mean, we, the intelligent people of the modern world that we (and our
       sun) are just one (two?) of many objects which move around through the vast emptiness of space. So realistically 
       both views are just as incorrect as each other</p>
-      <p>Having said this, it is in many ways way more convenient to pretend that the celestial sphere isn't complete
+      <p>Having said this, it is in many ways far more convenient to pretend that the celestial sphere isn't complete
       nonsense. This is because, even objects which are moving at hundreds of kilometres per second look like they don't
       move, even over many years. So let's give this method a go, and see wagwan.</p>
 
@@ -11855,9 +11881,9 @@ const subtopics = {
                       <img src="images/Astronomy/Refracting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
                   </div>
                   <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                      Figure X
+                      Figure 1: Refracting telescope
                   </div><div class="image-tooltip-desc">
-                      ...
+                      A lens focuses the light beams to a single point (called the focal point). The distance from the lens to that point is called the focal length, \\(f\\).
                   </div></span>
               </div>
           </div>
@@ -11882,12 +11908,13 @@ const subtopics = {
               <p> 
                   When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light to a focal point. This means that for a reflecting point, the focal point is actually behind the mirror.
               </p>
-              <p> 
+              <p> <span class="hide-on-mobile">
                   Now if your like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?"
-              </p>
+             </span> </p>
           </div>
           <!-- DIVIDING LINE -->
       </div>
+      <p><span class="show-on-mobile"> Now if your like me you might look at the image and think &quot;wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?&quot; </span></p>
       <p>Simple answer, don't worry about it too much. Actual reflection telescopes have some additional features which redirect the light into a position we can actually look at. There are many different methods, but they don't matter. Just remember the reflecty stuff and your good.</p>
       <h4>Combining the two</h4>
       <div class="container">
@@ -11991,15 +12018,19 @@ const subtopics = {
               <p> 
                   Avert your attention to this here image. The first lens, the objective lens, takes the light from the two stars and squishes them down at their focal points (on a line known as the <em>focal plane</em>). Like I said it's pretty useless at this point, since our eyes can't see stuff which is that bloody small. 
               </p>
-              <p>
+              <span class="hide-on-mobile"><p>
                   So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. 
               </p>
               <p>
-                  So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction.
-              </p>
+                  So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. 
+              </p></span>
           </div>
           <!-- DIVIDING LINE -->
       </div>
+      <span class="show-on-mobile">
+      <p>So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. </p>
+      <p>So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. </p>
+      </span>
       <p>Notice now there are two alphas, one when the light rays cross the first time (as they enter the objective lens) and another one as they cross the second time (after they are flipped by the ocular lens). We'll name the first one \\( \\alpha_1 \\) and the second one \\( \\alpha_2 \\).</p>
       <p>There are also two focal lengths, the length between the objective lens and the focal plane (which we'll call \\(f_1\\)), and the length between the ocular lens and the focal plain (which we'll call \\(f_2\\)).</p>
       <p>Why the heck does this matter you wonder? Well remember how we used a small angle to approximate that little \\( l \\) distance? If you use the exact same logic you did with the first lens, you'll notice that we can actually do the same approximation with the second angle and second focal length:</p>\\[ l = \\alpha_1 f_1 = \\alpha_2 f_2 \\]
@@ -12311,327 +12342,744 @@ const subtopics = {
   "exoplanets": {
     title: "Exoplanets",
     content: `
-      <h3>Exoplanets: Planets Around Other Stars</h3>
-
-      <p>Right. Let’s talk about <strong>exoplanets</strong>.</p>
-
-      <p>No, not the kind in sci-fi movies. We’re talking about <strong>real planets orbiting real stars</strong> — thousands of them.</p>
-
-      <p>And yes — some might be habitable.</p>
-
-      <h3>Detection Methods</h3>
-
-      <ul>
-        <li><strong>Transit</strong>: planet passes in front of star → dip in brightness</li>
-        <li><strong>Radial Velocity</strong>: star wobbles → Doppler shift in spectrum</li>
-        <li><strong>Direct Imaging</strong>: block starlight, take picture</li>
-        <li><strong>Microlensing</strong>: planet bends light of background star</li>
-        <li><strong>Astrometry</strong>: star wobbles on the sky</li>
-      </ul>
-
-      <h3>Transit Method</h3>
-
-      <p>Depth of dip: \\( \\delta = R_p^2 / R_*^2 \\)</p>
-
-      <p>Duration: depends on orbit and star size.</p>
-
-      <p>Atmosphere? Can measure transmission spectrum during transit.</p>
-
-      <h3>Radial Velocity</h3>
-
-      <p>Star’s speed: \\( v_* = \\frac{M_p \\sin i}{M_*} \\sqrt{\\frac{G}{a}} \\)</p>
-
-      <p>Best for massive, close-in planets.</p>
-
-      <h3>Kepler and TESS</h3>
-
-      <p><strong>Kepler</strong>: stared at one patch — found thousands.</p>
-
-      <p><strong>TESS</strong>: surveys whole sky — finds nearby planets.</p>
-
+      <p>Now that we've finished dealing with the solar system, it's about time we answer the question WE have all been wanting to know the answer to.</p>
+      <p>&quot;Which planet in the universe is the prettiest?&quot;</p>
+      <p>Yes, bro, WE are challenging the other planets to a pretty off. It seems that nearly every star has planets which orbit it, which is being signed up for the competition. And I know what you're thinking, &quot;isn't this kind of a vain thing to be worried about? How the hell would we even judge such a thing as how pretty a planet is?&quot;</p>
+      <p>To answer the second question, when I talk about the prettiest planet in the universe, I'm looking for the <em>exoplanet</em> with the most interesting atmosphere (exoplanet being the name of the planet contestants outside of the solar system). We obviously know our own is mostly nitrogen and oxygen, which is pretty bloody interesting if you ask me. The rest of the solar system planets either have hydrogen and helium atmospheres or none at all, which is not as interesting in my humble opinion.</p>
+      <p>So we want to see if there are any planets in the universe with similar or better elements in the atmosphere (better according to me, that is...)</p>
+      <p>And then to answer the first question... yes? What kinda question is that? Surely you've been 'ere long enough to know that 'vanity' is like my middle name or something, right?</p>
+      <p>Then again, even learning about the atmospheres of other solar system planets is pretty difficult, what more planets in other solar systems, or other galaxies even? Well never fear! With a bit of grift, it IS still somewhat possible. So in this section, we'll learn how to get information about exoplanets.</p>
+      <h3>Finding Exoplanets</h3>
+      <p>First we'll go over how exactly to find these exoplanets. And you might think it's as simple as pointing a telescope at a star and looking at them, except for a slight problem. Exoplanets don't reflect a great deal of light, meaning they are really bloody faint, often too faint to be seen with a telescope.</p>
+      <p>For this reason, <em>direct imaging</em> (the proper name for 'just looking at it') is usually off the table. It's not impossible though, we can still use this in the case of planets which are very far apart of very young. If they are far apart, then resolving with a telescope is EZ PZ lemon squeee-Z (ea-zed pea-zed lemon squee-zed?), and if the planet is a newborn baby then it's usually still quite bright from the heat of the moment (the 'moment' in question being its formation).</p>
+      <p>However most planets don't have either of these benefits, so how do we look at them and determine whether they are pretty or not?</p>
+      <p>There are a few workarounds, four of which we'll go over.</p>
+      <h4>1. The Radial Velocity Method</h4>
+      <p>Here's something you may not have considered. We obviously know that planets feel the gravitational pull of the stars they orbit. I mean that's the reason they orbit them anyway, as opposed to just flying off into oblivion.</p>
+      <p>But remember that <em>all</em> masses have a gravitational pull. Meaning the planets also have a relatively slight but non-zero gravitational pull on the star.</p>
+      <p>Using the same 'two-bodies-orbiting-a-common-centre-of-mass' logic from back when we spoke about <a href="http://127.0.0.1:5500/subtopic.html?subid=masses&topic=astro&year=1">binary stars</a>, we know that the masses and radii of two rotating objects are related. Take Jupiter and the sun for example</p> \\[ M_\\odot r_\\odot = M_J r_J \\] \\[ \\downarrow \\] \\[ r_\\odot = \\frac{M_J}{M_\\odot} r_J \\]
+      <p>The sun of course is the reason Jupiter has a circular orbit, but using binary star logic, Jupiter is also giving the sun a much smaller circular orbit. If you look at that from a distance, it will look like the sun has a very slight wobble. We can figure out the speed of this wibbliness by plugging in the appropriate values:</p> \\[ M_J \\approx 0.001 M_\\odot, \\quad r_J \\approx 5.2AU \\] \\[ \\downarrow \\] \\[ r_\\odot = 780000 \\text{ km} \\]
+      <p>Then since speed is just distance over time (distance being \\( 2\\pi r \\) and time being the period of Jupiter's orbit, \\( P_J \\approx 11.9 \\text{ years}\\)), we can get the speed at which the sun moves because of Jupiter:</p> \\[ v_\\odot = 13 \\text{ m s}^{-1} \\]
+      <p>So if we detect a star with a 13 metre per second wobble, we can assume that if the star is similar to our sun, it's being orbitted by a Jupiter-flavoured planet. Which brings us to our next question... <em>HOW</em> do we measure how much a star wobbles?</p>
+      <p>After all, 13 m/s is, in the grand scheme of things, pretty damn small. And it's not like we can just go and measure it can we?</p>
+      <p>Now on the one hand, we could just look at the star and hope that we do just notice this very slight wobble. This is known as <em>astrometry</em>. Then again, For a Jupiter-like planet around a star 10 pc away, this motion amounts to about <strong>1 milliarcsecond</strong>. Which is <em>barely</em> detectable even with modern technology.</p>
+      <p><em>I can NOT be the only person who looked at this the first time and read it as &quot;astronomy&quot;, and thought &quot;ain't astronomy what we've been doing all this while?&quot; before looking at it more carefully and realising it's astro<strong>metry</strong>..</em></p>
+      <p>So then how do we measure this shift? Answer is we use the <em>Doppler effect</em>. As the star wobbles towards us, its light gets slightly blueshifted (since the waves are getting squished). As it wobbles away, slightly redshifted (since the waves are getting stretched). The fractional wavelength shift we're looking for is:</p>\\[ \\frac{\\Delta\\lambda}{\\lambda} = \\frac{v}{c} = \\frac{13}{3\\times10^8} \\approx 4.3\\times10^{-8} \\]
+      <p>And whilst I've proposed this Doppler stuff as a solution, at 550 nm, that's a shift of <strong>0.000024 nm</strong>. Which is still really really <em>really</em> small (4 whole zeros after the decimal point?), meaning you need a very precise detector</p>
+      <h4>2. The Transit Method</h4>
+      <p>Assuming we look at a planet's orbit of its star head-on, then at some point in it's orbit it will cover part of the star it's orbiting. That means that the sun will get very slightly dimmer, due to some of the star's light being covered.</p>
+      <p>We can measure how much dimmer the star will get, simply by taking the area the planet covers (\\( \\pi R_P^2 \\)) and dividing it by the area the star takes up (\\( \\pi R_S^2 \\)), to get a ratio of the two areas. Since the areas of the bodies correlate to the amount of light emitted (by the star) or blocked (by the planet), this'll tell us how much dimmer it gets. And this ratio is called the <em>transit depth</em>, \\( \\delta \\)</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\delta = \\left(\\frac{R_P}{R_S}\\right)^2 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Transit Depth
+              </div><div class="formula-tooltip-desc">
+                  The transit depth is how much dimmer the star gets when an exoplanet goes in front of it. It's just the area of the planet divided by the area of the star.
+              </div></span>
+          </div>
+      </div>
+      <p>A bit like the velocity method though, this only really works for quite big planets. For a Jupiter-sized planet around a Sun-like star, the transit depth is about 1%. But for a planet about the size of Earth, the transit depth is only about 0.01%. I mean think about your TV or something. Do you notice when you drop or increase the brightness setting by 1%? Barely right? Now imagine a hundredth of that, d'you think you'd bloody notice? Didn't think so</p>
+      <p>And in case you are interested, we can also calculate how lond this transit lasts. The <strong>duration</strong> of a transit depends on orbital radius and period:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ D = \\frac{P}{\\pi}\\sin^{-1}\\left(\\frac{R_P + R_S}{a}\\right) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Transit duration
+              </div><div class="formula-tooltip-desc">
+                  The length of time an exoplanet spends in front of its star is given by this long-ass equation here
+              </div></span>
+          </div>
+      </div>
+      <p>A hot Jupiter on a few-day orbit transits for around <strong>4 hours</strong>. An Earth-like planet takes about <strong>12 hours</strong> to cross. And you have to catch it in the act, which means staring at the same star for a very long time. Patience is a virtue. So is a space telescope.</p>
+      <h4>Microlensing</h4>
+      <p>Remember last time where massive objects were able to bend light (<em>gravitational lensing</em>)? Turns out you can use that to find planets too. Exciting right, I can see you on the edge of your seat wondering how the hell this is possible. Well don't worry, I'll tell you!</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Astronomy/Microlensing.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 1: Microlensing
+                  </div><div class="image-tooltip-desc">
+                      At the point where the planet goes in front of the star, the signal peaks slightly, due to gravitational lensing.
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  When a foreground star passes in front of a background star, it acts as a lens and temporarily magnifies the background star's light. This happens in the form of stars magnifying other stars all the time, but in the rare instance that the foreground object just so happens to have a planet, the planet causes an <em>additional</em> blip in the light curve.
+              </p>
+              <p>
+                  The Einstein Ring Radius for a typical star in our galaxy works out to about 1 or 2 Astronomical units. Baring in mind that an astronomical unit is an earth-to-sun distance, that would mean 1-2 AU is round about the Goldilocks Zone (i.e. the inhabitable planet zone). Ain't that convenient, microlensing gives us a way for finding potentially habitable worlds that the other methods would completely miss.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
+      <h3>Exoplanet Atmospheres</h3>
+      <p>Now we know how to locate a few of these exoplanets, now we need to know if they are pretty. We do this by looking at their atmospheres. There are 2 ways we'll look at here:</p>
+      <h4>Transit Spectroscopy</h4>
+      <p>If you scroll us a little bit (or press the hamburger menu and then press the button which says &quot;2. The Transit Method&quot;) you'll realise that I spoke about using stars which go in front of planets as a way to determine the size of these exoplanets, based on the assumption that planets are solid objects which block all light. But think about it. The atmosphere of any planet is made mostly of gas. That wouldn't block light completely.</p>
+      <p>Once the planet transits in front of the star, it actually just illuminates the atmosphere in a weird way. Since different elements absorb different frequencies of light. So if we were to look at the planet transiting across the star at that frequency (using like a filter or something, idk), the planet would look a little bit bigger because the planet AND it's atmosphere are blocking the star. Then by identifying the wavelength and which chemicals absorb it, we can learn a thing or two about what is in the planet's atmosphere.</p>
+      <p>Going back to our previous discussions of transit, we know that the transit depth is the ratio of the planet's area compared to the star's area</p>
+      <p>However at the relevant frequency, we also have to include the height of the atmosphere when considering the area.</p>\\[ \\delta_{R_P + H_\\text{atm}} = \\frac{\\pi (R_P+H_\\text{atm})^2}{\\pi R_S^2} = \\frac{R_P^2 + 2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2} \\] \\[ \\downarrow \\] \\[ \\delta_{R_P + H_\\text{atm}} = \\delta_{R_P} + \\frac{2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2}\\]
+      <p>As much as we do need to consider the height of the atmosphere, it's <em>pretty</em> bloddy small compared to the radius of the planet, and especially when compared to the radius of the sun. As a result, that \\(\\frac{H_\\text{atm}^2}{R_S^2}\\) term is so close to zero, that it might as well be zero.</p>
+      <p>With that in mind, we get a pretty good approximation for how much the atmosphere contributes to the transit depth:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\delta_{atm} = \\frac{2H_\\text{atm}R_P}{R_S^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Transit depth due to the atmosphere
+              </div><div class="formula-tooltip-desc">
+                  If a planet's atmosphere is big enough, it will also contribute to the dip in light when the planet goes in front of the star. You can derive this formula just by taking the transit formula, replacing \\(R_P\\) with \\( R_P + H_\\text{atm} \\) and simplifying.
+              </div></span>
+          </div>
+      </div>
+      <p>This shows pretty much exactly what you'd expect, i.e. that very tall atmospheres are easier to detect than very small atmospheres.</p>
+      <h4>Emission Spectroscopy</h4>
+      <p>Instead of looking at absorbed starlight, we can look at light the planet itself emits when you shine the star's light on it.</p>
+      <p>There is a slight problem: ideally we'd want to know the maximum amount of light the planet reflects, but that would be when the planet is behind the star, meaning we wouldn't be able to see it. So we'll just go with the next best thing: measure the planet's flux <em>just</em> before it passes behing the star.</p>
+      <p>The planetary flux relative to the star is:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{F_P}{F_S} \\approx \\frac{R_P^2 B(T_P)}{R_S^2 B(T_S)} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4: Relative flux
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Since the planet is cooler, it emits mostly in the <strong>infrared</strong>, which also conveniently reduces contamination from the star. We still need fairly hot, large planets to pull this off though.</p>
+      <h4>Scale Height</h4>
+      <p>This one's pretty cool, and left to me alone I'd give it its own full section.</p>
+      <p>Who am I kidding, it <em>is</em> left to me alone, so I'll do just that! Hold on a sec...</p>
+      <h3>Scale Height</h3>
+      <p>We want to know how the pressure in an atmosphere changes as you get higher. We'll start with these two formulae:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dP}{dz} = -\\rho g, \\qquad P = \\frac{\\rho k_B T}{\\mu} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula 5: Hydrostatic equilibrium <br>X Ideal Gas Law
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>The equation on the right is a reskin of the formula we all know and love, the ideal gas equation. We are of course assuming the air in a planet's atmosphere behaves like an ideal gas, which can be debated but whatevs, it gives us something to work with.</p>
+      <p>This equation on the left is the newer one, and might seem like a bit of an arse-pull. It's a pretty common one which we can use by assuming a system is in <em>hydrostatic equilibrium</em>, meaning the force of gravity pushing the air down is the same as the force from the pressure pushing upwards. You can derive it if you want, but for now you'll have to take my word for it, k?</p>
+      <p>Anyway, now that we have these two equations, we can plug the ideal gas equation into the hydrostatic equilibrium equation, and then integrate to get the pressure. We'll have to assume that the temperature is constant, which is a bit optimistic but it'll do for now:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P = P_0 \\exp\\left(-\\frac{z}{h_{atm}}\\right), \\qquad h_{atm} = \\frac{k_B T}{\\mu g} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 6: Scale height
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>&quot;Hey, I think you forgot to capitalise the \\(H\\) in \\(H_{atm}\\)&quot; erm, no I didn't? Believe it or not I <em>do</em> know what I'm doing mate. This \\(h_{atm}\\) isn't the height of the atmosphere. The little \\(h\\) is a new quantity, called the <strong>scale height</strong>. This is the altitude over which pressure drops by a factor of \\(e\\) (meaning it's about 37% of the pressure at the surface). The total atmosphere height is roughly \\(H_{atm} \\approx 5–10\\, h_{atm}\\), after which it gets too thin to absorb anything.</p>
       <h3>TL;DR</h3>
-
+      <p>Using these methods, we have confirmed over 6,100 contestants, whith many more applications waiting to be processed. Having said that, the universe is pretty big, so there could be millions or even billions more contestants, and we'll never know.</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Astronomy/Planets found.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 2: Exoplanets
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  In fact, look at this image. There are only planets within certain areas of the graph, which might tempt you to think that planets only form under those conditions. But no: all it means is that these are the planets which are easiest to detect. The planets found with imaging tend to be bigger and slower, because those are easiest to point a telescope at.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
+      <p>Having said that, that isn't my problem. If you won't make it easy for us to detect your application, then you simply don't get to join the competition. So which planet is the prettiest? Earth, because I said so. Thanks for coming!</p>
       <ul>
-        <li>Transit: dip in light</li>
-        <li>Radial velocity: Doppler wobble</li>
-        <li>Direct imaging: hard, but possible</li>
-        <li>Microlensing: rare, but detects distant planets</li>
-        <li>Kepler & TESS: planet factories</li>
+      <li>Exoplanets are planets which orbit other stars, and there are different methods of finding them</li>
+      <li><strong>Direct imaging</strong>: Just look at them, which is difficult since they aren't very bright or easy to resolve. We can mitigate this by looking at young, hot, far-out planets.</li>
+      <li><strong>Radial velocity</strong>: The star wobbles due to the orbiting planet (like the binary stars we mentioned before), causing a doppler shift in the energy we receive, allowing us to detect the planet.</li>
+      <li><strong>Astrometry</strong>: The star wobbles, but it wobbles enough that we can actually just look at it.</li>
+      <li><strong>Transit</strong>: The planet blocks starlight, causing the brightness to dip, and the planet is detected.</li>
+      <li><strong>Microlensing</strong>: The planet distorts background starlight, causing an extra blip in brightness.</li>
+      <li>Transit/emission spectroscopy lets us probe atmospheres</li>
+      <li><strong>Scale height</strong> is the height at which the pressure drops to 37% of its original pressure: \\[ h_{atm} = \\frac{k_BT}{\\mu g} \\]</li>
       </ul>
-
-      <p>And remember: the universe doesn’t care how many planets you find.  
-      It only cares about the signal-to-noise.</p>
+      <p>And remember: Jupiter-flavoured planets are the best planets (also, thirteen).</p>
     `
   },
 
   "stars": {
     title: "Stars",
     content: `
-      <h3>Stars: How They Live, Burn, and Die</h3>
-
-      <p>Right. Let’s talk about <strong>stars</strong>.</p>
-
-      <p>No, not celebrities. We’re talking about <strong>giant balls of plasma that fuse hydrogen into helium</strong> — and sometimes explode.</p>
-
-      <p>And yes — your Sun will die. But not for 5 billion years.</p>
-
-      <h3>Main Sequence</h3>
-
-      <p>Stars spend 90% of their lives fusing H → He in the core.</p>
-
-      <p>Massive stars: hot, blue, short-lived.</p>
-
-      <p>Low-mass stars: cool, red, live forever (almost).</p>
-
-      <h3>Post-Main Sequence</h3>
-
-      <p>When H runs out in the core, the star evolves.</p>
-
+      <p>Right. So we've had a look at what's in our solar system, we've had a look at some of the exoplanets outside of it. But we haven't actually talked about the big glowy things that all of these planets are orbiting. Which, now that I think about it, is a bit like spending an entire cooking show talking about plates without mentioning the food.</p>
+      <p>So. Stars.</p>
+      <h3>The Hertzsprung-Russell Diagram</h3>
+      <p>About 100 years ago, two astronomers — Hertzsprung and Russell — noticed something interesting. Stars aren't just randomly scattered across a plot of luminosity vs temperature. They cluster in very specific regions. And whenever something in nature clusters in a specific region, that means there's an underlying principle at work that needs understanding.</p>
+      <div class="container">
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box left-box">
+                      <img src="images/Astronomy/HR diagram.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
+                      Figure 1: HR Diagram
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="text">
+              <p> 
+                  The plot they came up with is now called the **Hertzsprung-Russell diagram**, or H-R diagram for short, and it is *the* fundamental tool of stellar astrophysics. HR diagrams have 3 main features. First the big, chunky line of stars in the middle. These are <em>main sequence stars</em>, and include some very popular characters, such as Proxima Centuri, Vega, and the one and only GOAT, the Sun himself!
+              </p>
+              <p> 
+                  There is also a slightly smaller line in the bottom left, which contains <em>white dwarf</em> stars, and a little bundle at the top of the main sequence section, containing <em>red giant</em> stars. You may be familiar with these star types, but if not, don't worry too much, we'll get into them soon. For now, just know that, for once in their lives, scientists were able to create names which match what we see. Red giants are big and red stars, white dwarves are small and white stars.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+      </div>
+      <p>Of course, while they were able to give sensible names for the star types, it didn't take long for them to take the piss once again, since if you look closely at the graph, you'll notice something which makes HR diagrams slightly annoying to read at first (and at second, and third, and fourth, and actually all of the cardinal numbers, it's just annoying no matter when you try and read it): <em>the axes are both flipping backwards</em>.</p>
       <ul>
-        <li>Red giant: H fusion in shell, He core contracts</li>
-        <li>Helium flash: He fusion starts in degenerate core</li>
-        <li>Horizontal branch: He → C in core</li>
-        <li>Asymptotic giant branch: He & H shell fusion</li>
+      <li>Temperature increases to the left. (Yes, left. Hot things are on the left. No, I don't know why they did it this way either.)</li>
+      <li>Luminosity increases upward, but since we often express this as magnitude, and brighter objects have smaller magnitudes, that axis is also inverted.</li>
       </ul>
-
-      <h3>Stellar Endpoints</h3>
-
+      <div class="container">
+          <div class="text">
+              <p> 
+                  The theoretician's version is slightly more sensible, plotting the logarithm of luminosity (\\( \\log_{10} L/L_\\odot \\)) on the y-axis and log temperature (\\( \\log_{10} T \\)) on the x-axis. This means the luminosity is now the right side up! But temperature is still the wrong way around, which is annoying but whatever, it's fine I guess...
+              </p>
+              <p>
+                  Why take logs, you may ask. Well let me show you! Remember from a while ago we had the equation for the luminosity of stars:
+              </p> \\[ L = 4\\pi R^2 \\sigma T_\\text{eff}^4 \\]
+              <p>
+                  Now take the logarithm and see what you get:
+              </p> \\[\\log_{10} L = 4\\log_{10} T_\\text{eff} + \\log_{10}(4\\pi R^2)\\]
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                      <img src="images/Astronomy/Theoretical HR.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                      Figure X
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+      </div>
+      <p>Hey, that kinda looks like a \\( y = mx + c \\) kinda thing! So by making \\( \\log L \\) the y and \\( \\log T \\) the x, that means if we were to take a pencil and draw a line with a gradient of -4 (minus because temperature is inverted, remember?), not only will you damage your screen, but all the stars on that line will have the same radius.</p>
+      <h3>The Stellar Classes</h3>
+      <p>It's about we gave the main sequence, red giant and white dwarf stars a proper introduction</p>
+      <h4>Main Sequence Stars</h4>
+      <p>Like I said before, this is the big chunk in the middle. A diagonal band running from the lower-right (dim, cool, red) to the upper-left (bright, hot, blue). This is where stars spend the vast majority of their lives, fusing hydrogen to helium in their cores.</p>
+      <p>The main sequence is fundamentally a <strong>sequence of mass</strong>. Low mass stars sit at the bottom-right, high mass stars at the top-left. The lowest mass stars are around \\( 0.08 M_\\odot \\) — anything less than this never gets hot enough to start hydrogen fusion and doesn't make the cut. The upper end goes up to around \\( 100 M_\\odot \\), though these monsters are extremely rare and short-lived.</p>
+      <p>Our Sun is a perfectly ordinary main sequence star. Nothing special. Sorry Sun.</p>
+      <h4>Red Giants</h4>
+      <p>Found in the upper-right. Cool, but bright, which means they must be <em>enormous</em> to compensate — radii from \\( 10 R_\\odot \\) up to \\( 1000 R_\\odot \\). For reference, \\( 1 \\text{ AU} \\approx 200 R_\\odot \\), so the biggest red giants could swallow all the inner planets without much effort. Cheerful thought.</p>
+      <p>Red giants are what main-sequence stars become once they run out of hydrogen in their cores. They're rarer than main-sequence stars, but so luminous that they can be seen from much greater distances.</p>
+      <h4>White Dwarfs</h4>
+      <p>Lower-left corner. Hot, but dim — so they must be tiny (typically about \\( 0.01 R_\\odot \\), roughly the size of Earth). They are the final stable state of stars with initial masses up to about  \\(5\\)-\\(8 M_\\odot\\). The vast majority of stars that have ever evolved off the main sequence end up here.</p>
+      <p>White dwarfs are common by number, but so faint that they're hard to spot unless they're nearby.</p>
+      <h4>Brown Dwarfs, Neutron Stars, and Black Holes</h4>
+      <p>These three don't show up prominently on standard H-R diagrams, for various reasons:</p>
       <ul>
-        <li><strong>White dwarf</strong>: Earth-sized, supported by electron degeneracy</li>
-        <li><strong>Neutron star</strong>: city-sized, supported by neutron degeneracy</li>
-        <li><strong>Black hole</strong>: gravity wins</li>
+      <li>
+      <p><strong>Brown dwarfs</strong> ( \\(0.013\\)–\\(0.08 M_\\odot \\)): too cool and faint. They're intermediate between planets and stars — massive enough to fuse deuterium but not hydrogen. They contract and cool over time, powered mainly by gravity.</p>
+      </li>
+      <li>
+      <p><strong>Neutron stars</strong>: remnants of stars initially more massive than \\(5\\)–\\(8 M_\\odot \\). About 10 km in radius. Absurdly dense (about  \\( 10^{18} \\text{kg m}^{-3} \\)). Too rare and faint to appear in typical H-R diagrams, but the physics is <em>wild</em> — we'll come back to these.</p>
+      </li>
+      <li>
+      <p><strong>Black holes</strong>: the end state of the most massive stars (\$ \\gtrsim 25\$–\$40 M_\\odot \$). Produce no light. Can't be plotted. Can't be ignored either.</p>
+      </li>
       </ul>
-
-      <p>Mass determines fate.</p>
-
+      <h3>Star Clusters</h3>
+      <p>Here's a problem with the H-R diagrams we've been looking at: they mix stars of different ages, different compositions, and different origins all in one plot, which makes interpreting <em>evolution</em> quite tricky.</p>
+      <p>Enter <strong>star clusters</strong> — groups of stars that all formed at the same time, from the same cloud of gas. Since they all started together, any differences between them now are purely down to their different masses evolving at different rates. They're basically a naturally occurring controlled experiment.</p>
+      <p>There are two types:</p>
+      <ul>
+      <li><strong>Open clusters</strong>: a few hundred to a few thousand stars, found in the galactic disk. Ages range from under a million years to several billion. Famous examples: the Pleiades, the Hyades.</li>
+      <li><strong>Globular clusters</strong>: much older, much denser, found in the galactic halo. Less useful for studying evolution across a range of ages.</li>
+      </ul>
+      <p>When you plot the H-R diagram of a cluster, you see something very instructive. In a <em>young</em> cluster, you have a full main sequence stretching up to very bright, very massive stars. As the cluster ages, the top of the main sequence gradually disappears — the most massive stars burn out first and leave.</p>
+      <p>The point where the main sequence ends is called the <strong>main-sequence turn-off</strong>, and it's extremely useful because it directly tells you the age of the cluster. The higher up the turn-off, the younger the cluster.</p>
+      <p>You also typically see a <strong>Hertzsprung gap</strong> — an empty region between the main sequence and the red giants. This is because the transition from main-sequence star to red giant happens so fast that you barely catch any stars in the act. In older clusters (\$ \\gtrsim 2 \$ Gyr), this gap fills in and becomes a continuous red giant branch.</p>
+      <p>The schematic to have in your head is this: as a cluster ages, the main sequence gets shorter from the top down, the turn-off creeps lower, and the red giant branch becomes more prominent.</p>
+      <h3>Physical Conditions Inside Stars</h3>
+      <p>How do we know what's actually going on inside a star? We can't exactly pop one open and have a look. Instead, we use the same physics you've been learning all year — gravity, thermodynamics, ideal gases — and make some (admittedly crude) approximations.</p>
+      <h4>Central Pressure</h4>
+      <p>Stars are in <strong>hydrostatic equilibrium</strong> — at every layer, the pressure pushing outward exactly balances the weight of everything above it. The equation for this is:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dP}{dr} = -\\rho g \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Hydrostatic equilibrium
+              </div><div class="formula-tooltip-desc">
+                  Have we seen this before? It looks oddly familiar...
+              </div></span>
+          </div>
+      </div>
+      <p>which should look familiar from the atmosphere scale height we covered in the exoplanets section, except for some reason we are choosing to be more general here by using an \\( r \\) instead of a \\( z \\) for some reason</p>
+      <p>To estimate the central pressure, we integrate this from the surface to the centre. Making the crude approximation that density is roughly constant (\\( \\bar{\\rho} = M / \\frac{4}{3}\\pi R^3 \\)) and gravity is roughly equal to its surface value (\\( g_S = GM/R^2 \\)):</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P_C \\approx \\bar{\\rho} g_S R = \\frac{3GM^2}{4πR^4} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Central pressure
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Of course those are both daft approximations, because well... they aren't constant. They just aren't</p>
+      <p>The key scaling here is \\( P_C \\propto M^2 / R^4 \\). For the Sun this gives a central pressure of around \\( 10^{14} \\) Pa. Not bad for a rough estimate.</p>
+      <h4>Central Temperature</h4>
+      <p>With the pressure, we can estimate the temperature using the <strong>ideal gas equation</strong> (yes, even inside a star — the material is fully ionised and the particles are so small that they still behave like an ideal gas despite the extreme density)</p> \\[ P = \\frac{\\rho k_B T}{\\mu} \\]
+      <p>Combining with the central pressure estimate:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ k_B T_C \\sim \\frac{GM\\mu}{R} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>And once again, we use the 'similar to' symbol rather than equals, because as you might expect, if you take a piss-poor approximation for pressure and use it to derive temperature, you end up with a piss-poor approximation for pressure. For the Sun, this gives \\( T_C \\sim 12 \\times 10^6 \\text{ K} \\). The actual value from computer models is about \\( 15 \\times 10^6 \$ \\text{ K} \\). Which isn't great but it's the best we can do for now.</p>
+      <p>This equation also tells us something deeper: the core temperature of a star scales as \\( T_C \\propto M/R \\). Smaller means hotter. This is why stars that contract get hotter — which is exactly what happens as they evolve.</p>
       <h3>TL;DR</h3>
-
       <ul>
-        <li>Main sequence: H → He fusion</li>
-        <li>Red giant → He flash → horizontal branch</li>
-        <li>White dwarf: < 8 M☉</li>
-        <li>Neutron star: 8–20 M☉</li>
-        <li>Black hole: > 20 M☉</li>
+      <li>The H-R diagram plots luminosity vs temperature — the axes are both inverted, because astronomers love to keep you on your toes</li>
+      <li>Lines of constant radius have gradient 4 on the theoreticians' H-R diagram</li>
+      <li>Main sequence: hydrogen fusing in the core, most of a star's life, runs from cool/dim to hot/bright — it's a sequence of mass</li>
+      <li>Red giants: cool but huge and bright, post-main-sequence stars</li>
+      <li>White dwarfs: hot but tiny and dim, remnants of low-mass stars</li>
+      <li>Star clusters let us study stellar evolution at a fixed age — the main-sequence turn-off tells us how old the cluster is</li>
+      <li>Hydrostatic equilibrium makes a reappearance, ain't that fun: \\( dP/dr = -\\rho g \\) — gravity and pressure in a standoff</li>
       </ul>
-
-      <p>And remember: the universe doesn’t care how bright your star is.  
-      It only cares about its mass.</p>
+      <p>Central pressure: \$P_C \\sim GM^2/R^4\$</p>
+      <p>Central temperature: \$k_B T_C \\sim GM\\mu/R\$ — thermal energy balancing gravitational energy per particle</p>
     `
   },
 
   "star-physics": {
     title: "Stellar Astrophysics",
     content: `
-      <h3>Stellar Astrophysics: How Stars Live, Burn, and Die</h3>
-
-      <p>Right. Let’s talk about <strong>stellar astrophysics</strong>.</p>
-
-      <p>No, not the kind where you stare at stars and feel things. We’re talking about <strong>how stars work, evolve, and eventually die in spectacular fashion</strong>.</p>
-
-      <p>And yes — your Sun will die. But not for 5 billion years. So relax.</p>
-
-      <h3>The Main Sequence: Where Stars Spend 90% of Their Lives</h3>
-
-      <p>Stars fuse hydrogen into helium in their cores.</p>
-
-      <p>More massive stars? Hotter, brighter, bluer, and shorter-lived.</p>
-
-      <p>Less massive? Cooler, dimmer, redder, and live for trillions of years.</p>
-
-      <p>The main sequence is basically a **mass sequence** — from 0.1 \\( M_\\odot \\) at the bottom right to 10 \\( M_\\odot \\) and up at the top left.</p>
-
-      <h3>Post-Main Sequence Evolution</h3>
-
-      <p>When hydrogen runs out in the core, the star evolves off the main sequence.</p>
-
+      <p>Right, so last time we figured out what stars are, how to classify them, and what's going on in their cores. But we left a pretty big question unanswered.</p>
+      <p>What actually <em>happens</em> to a star over time?</p>
+      <p>Glad you asked. Pull up a chair. This is a good one.</p>
+      <h3>Stellar Lifetime</h3>
+      <p>Here's the uncomfortable truth about stars. They're hot. And hot things lose heat. And the energy has to come from somewhere.</p>
+      <p>For a star supported by thermal pressure, the core temperature is:</p>
+      <p>\$\$k_B T_C \\sim \\frac{GM\\mu}{R}\$\$</p>
+      <p>This thermal energy is constantly leaking outward as radiation — that's literally the light and heat the star produces. Since the energy supply is finite, stars must eventually change. <strong>Stellar evolution is not optional.</strong> It's just thermodynamics being thermodynamics.</p>
+      <p>So what's the energy source? The answer is <strong>nuclear fusion</strong>. Specifically, the fusion of hydrogen into helium, which releases about <strong>0.7% of the rest mass energy</strong>:</p>
+      <p>\$\$E_F = 0.007 M_\\odot c^2 \\approx 1.26 \\times 10^{45} \\text{ J}\$\$</p>
+      <p>That's enough to power the Sun at its current luminosity for around \$10^{11}\$ years. In practice, not all of the hydrogen gets used — only about \$0.15, M_\\odot\$ on the main sequence — but even so, the Sun's main-sequence lifetime works out to around <strong>10–15 billion years</strong>. Comfortably long enough for evolution, fossils, and you reading this.</p>
+      <h3>The Mass-Luminosity Relation</h3>
+      <p>Before we get into the life story of a star, there's one relationship worth nailing down, because it underpins basically everything that follows.</p>
+      <p>It turns out that for main-sequence stars, luminosity scales very strongly with mass:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ L \\propto M^4 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Mass-Luminosity Relation
+              </div><div class="formula-tooltip-desc">
+                  The luminosity of a main-sequence star scales roughly as the fourth power of its mass. This is an empirical result which can also be verified with computer models, and it has enormous consequences for stellar lifetimes.
+              </div></span>
+          </div>
+      </div>
+      <p>This is <em>not</em> an obvious result. You might expect luminosity to scale linearly with mass — more fuel, more light — but no. Doubling the mass gives you <em>sixteen times</em> the luminosity. Massive stars are profligate in a way that would make any financial advisor weep.</p>
+      <p>Why does this matter? Because the <strong>main-sequence lifetime</strong> is just the energy supply divided by the rate it's being spent:</p>
+      <p>\$\$t_{MS} \\sim \\frac{E_F}{L} \\sim \\frac{M}{M^4} = M^{-3}\$\$</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ t_{MS} \\propto M^{-3} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Main-sequence lifetime
+              </div><div class="formula-tooltip-desc">
+                  More massive stars burn through their fuel far faster. Using the Sun as a reference point (with a main-sequence lifetime of ~12 Gyr), you can scale to any other mass.
+              </div></span>
+          </div>
+      </div>
+      <p>Using the Sun as a benchmark (\$t_{MS,\\odot} \\approx 12\$ Gyr):</p>
+      <table>
+      <thead>
+      <tr>
+      <th>Star Mass</th>
+      <th>Lifetime</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>\$0.5, M_\\odot\$</td>
+      <td>~100 Gyr (older than the Universe)</td>
+      </tr>
+      <tr>
+      <td>\$1, M_\\odot\$</td>
+      <td>~12 Gyr</td>
+      </tr>
+      <tr>
+      <td>\$5, M_\\odot\$</td>
+      <td>~100 Myr</td>
+      </tr>
+      <tr>
+      <td>\$10, M_\\odot\$</td>
+      <td>~15 Myr</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Let that sink in for a second. A \$0.5, M_\\odot\$ star will still be on the main sequence long after the Universe has celebrated its 100 billionth birthday. Meanwhile, a \$10, M_\\odot\$ star is done before the planet Earth would even have formed. Massive stars live fast, die young, and explode dramatically. Low-mass stars just... quietly persist. Basically the tortoise and the hare, except the hare explodes.</p>
+      <p>This also explains why the <strong>upper main sequence disappears as clusters age</strong> — the most massive, most luminous stars burn out first and leave, progressively peeling the main sequence from the top down. The position of the main-sequence turn-off is essentially a clock.</p>
+      <p>And one more implication worth flagging: if you observe hot, massive stars in a distant galaxy, you <em>know</em> star formation is currently happening there. Those stars are so short-lived that they couldn't have formed long ago and still be around.</p>
+      <hr>
+      <h3>The Life of a Sun-Like Star</h3>
+      <p>Alright. Let's follow a star like the Sun from cradle to grave.</p>
+      <h4>Stage 1: The Main Sequence</h4>
+      <p>This is the bulk of the story — roughly 10–15 billion years of quietly fusing hydrogen into helium in the core.</p>
+      <p>It's not entirely static though. As hydrogen is consumed, the core composition changes. To maintain the fusion rate (which must match the rate of energy loss), the <strong>core temperature gradually rises</strong>, which it can do by slowly contracting (\$T_C \\propto M/R\$, so smaller \$R\$ means higher \$T_C\$). This means the luminosity <em>slowly increases</em> over the main-sequence lifetime. The Sun today is actually about 30% brighter than it was when it first formed. Faint Young Sun problem, if you've heard of it.</p>
+      <h4>Stage 2: Red Giant</h4>
+      <p>Eventually, hydrogen runs out in the <strong>centre</strong> of the star. Hydrogen fusion doesn't stop entirely — it shifts to a <strong>shell</strong> around the inert helium core, continuing to burn outward as the helium core grows.</p>
+      <p>As fusion moves into less dense regions, the temperature has to increase even more to keep things going, and the luminosity rises. Meanwhile, something counterintuitive happens: the <strong>core contracts</strong> but the <strong>envelope expands</strong>. The star puffs up to enormous size, becoming a <strong>red giant</strong>.</p>
+      <p>Why does the envelope expand when the core contracts? Honest answer: it just does — this behaviour emerges from computer models when you account for the fact that the core and envelope have very different compositions and don't mix. There's no simple intuitive reason that I can give you without lying to you, so I won't.</p>
+      <p>The Sun will eventually reach a radius close to Earth's current orbital radius. Whether it actually swallows the Earth depends on a competition between the Sun's expanding radius and Earth's orbit drifting outward as the Sun loses mass. The jury is still out — but either way, the oceans will have boiled away long before we get anywhere near that stage. So, yknow. Don't worry about it.</p>
+      <p>Mercury and Venus are cooked. Mars will probably be fine. Good luck to everyone in between.</p>
+      <h4>Stage 3: Horizontal Branch</h4>
+      <p>The inert helium core keeps contracting and getting hotter. Eventually — at around \$10^8\$ K — <strong>helium fusion ignites</strong>. Three helium nuclei slam together to form one carbon nucleus (the <em>triple-alpha process</em>), and a new energy source kicks in.</p>
+      <p>Helium fusion is <em>extraordinarily</em> temperature sensitive (\$\\propto T^{40}\$). Once it starts, it ramps up almost instantaneously in what is dramatically called the <strong>helium flash</strong>. The core heats up and expands, the envelope contracts in response, and the star shrinks back down to become a <strong>horizontal branch star</strong> — hotter and more compact than the red giant it just was.</p>
+      <h4>Stage 4: Asymptotic Giant Branch</h4>
+      <p>History repeats itself, but with helium now. The helium in the core runs out, leaving a <strong>carbon-oxygen core</strong>. Fusion continues in <em>two</em> shells — a hydrogen-burning shell on the outside and a helium-burning shell underneath.</p>
+      <p>The star takes on an onion-like structure: carbon and oxygen at the centre, helium above that, hydrogen envelope on top. The carbon-oxygen core contracts, the envelope expands once more, and the star returns to the giant branch — this time called the <strong>asymptotic giant branch</strong> (AGB).</p>
+      <h4>Stage 5: White Dwarf (and Planetary Nebula)</h4>
+      <p>The double-shell burning stage is unstable. The star becomes enormously luminous and starts losing mass at a dramatic rate. Eventually so much material is ejected that fusion simply cannot continue, and what's left is just the <strong>exposed core</strong> — roughly \$0.6, M_\\odot\$ of carbon and oxygen, with thin overlying layers of helium and hydrogen. This is the <strong>white dwarf</strong>.</p>
+      <p>But here's the beautiful bit. As the hot core is exposed, the vast cloud of ejected material surrounding it gets <strong>ionised</strong> by the intense ultraviolet radiation. It lights up into a glowing shell of gas called a <strong>planetary nebula</strong> — one of the most visually stunning objects in the universe.</p>
+      <p><em>(They're called planetary nebulae because through a small telescope they look vaguely round and planet-like. They have absolutely nothing to do with planets. Astronomers named them poorly and have been too proud to change it since.)</em></p>
+      <h3>Stellar Remnants</h3>
+      <p>The eventual fate of a star depends almost entirely on its initial mass. Here's the full breakdown:</p>
+      <table>
+      <thead>
+      <tr>
+      <th>Initial Mass</th>
+      <th>Fate</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>\$&lt; 0.08, M_\\odot\$</td>
+      <td>Brown dwarf — never ignites hydrogen, slowly cools forever</td>
+      </tr>
+      <tr>
+      <td>\$0.08\$–\$0.8, M_\\odot\$</td>
+      <td>White dwarf eventually, but so slowly they're still on the main sequence today</td>
+      </tr>
+      <tr>
+      <td>\$0.8\$–\$5\$–\$8, M_\\odot\$</td>
+      <td>White dwarf (via red giant and AGB)</td>
+      </tr>
+      <tr>
+      <td>\$5\$–\$8\$ to \$25\$–\$40, M_\\odot\$</td>
+      <td>Neutron star (via supernova)</td>
+      </tr>
+      <tr>
+      <td>\$&gt; 25\$–\$40, M_\\odot\$</td>
+      <td>Black hole</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>The boundaries are fuzzy because the exact outcome depends on element abundances and how much mass the star sheds during its life — both of which are genuinely hard to model.</p>
+      <p>About <strong>95% of stars that evolve at all</strong> end up as white dwarfs.</p>
+      <h3>White Dwarfs and Degeneracy Pressure</h3>
+      <p>Here's a problem. Thermal pressure requires heat, and heat slowly leaks away. So how does a white dwarf remain stable? Why doesn't it just keep contracting forever?</p>
+      <p>The answer is <strong>quantum mechanics</strong>. Specifically, <strong>Pauli's exclusion principle</strong> — no two electrons can occupy the same quantum state.</p>
+      <p>Here's the rough argument. From de Broglie, every particle has a wavelength:</p>
+      <p>\$\$\\lambda = \\frac{h}{p}\$\$</p>
+      <p>If you insist that two electrons can't overlap — meaning their de Broglie wavelengths can't be larger than their mean separation — then for an electron number density \$n_e\$, the mean spacing is \$n_e^{-1/3}\$, giving:</p>
+      <p>\$\$p \\sim h n_e^{1/3}\$\$</p>
+      <p>This momentum isn't thermal — it exists purely because the electrons are <strong>confined to a finite space</strong>. Confine them more (increase \$n_e\$), and the momentum — and thus the pressure — increases. This is <strong>degeneracy pressure</strong>, and crucially:</p>
+      <p>\$\$E_d \\sim \\frac{p^2}{2m_e} \\sim \\frac{h^2 n_e^{2/3}}{2m_e}\$\$</p>
+      <p><strong>It doesn't depend on temperature.</strong> That's the key point. Unlike thermal pressure, degeneracy pressure doesn't require heat to exist. So as a white dwarf cools over billions of years, the pressure holding it up doesn't diminish. It just... stays stable. Indefinitely. A white dwarf is not dying — it's just waiting.</p>
+      <p>The inverse mass dependence also means electrons carry far higher degeneracy energy than protons or neutrons at the same density — which is why it's the <em>electrons</em> that support white dwarfs, even though the bulk of the mass is in the carbon and oxygen nuclei.</p>
+      <hr>
+      <h3>The Chandrasekhar Limit</h3>
+      <p>Here's where it gets spicy. Degeneracy pressure is not unlimited.</p>
+      <p>Consider how the energies scale with mass \$M\$ and radius \$R\$:</p>
+      <p>\$\$E_d \\propto M^{2/3} R^{-2}, \\qquad E_G \\propto -\\frac{M^2}{R}\$\$</p>
+      <p>If you increase the mass, gravity wins harder (scales as \$M^2\$) compared to degeneracy pressure (scales as \$M^{2/3}\$). The star compensates by contracting, which raises \$E_d\$ faster than \$E_G\$. So far, so stable.</p>
+      <p>But here's the catch: once the density gets high enough (\$\\sim 3.3 \\times 10^8\$ kg m\$^{-3}\$), the electrons become <strong>relativistic</strong>. At that point:</p>
+      <p>\$\$E_d \\propto M^{1/3} R^{-1}\$\$</p>
+      <p>Now \$E_d\$ and \$E_G\$ scale with \$R\$ in <strong>exactly the same way</strong>. Contracting the star no longer rescues it — the balance can't be restored. Above a critical mass, the star collapses.</p>
+      <p>This critical mass is the <strong>Chandrasekhar limit</strong>:</p>
+      <p>\$\$M_{Ch} \\approx 1.44, M_\\odot\$\$</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M_{Ch} \\approx 1.44\\, M_\\odot \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: The Chandrasekhar Limit
+              </div><div class="formula-tooltip-desc">
+                  The maximum mass a white dwarf can have before degeneracy pressure can no longer support it against gravitational collapse. Derived by Subrahmanyan Chandrasekhar in 1930, aged 20, on a boat to England. Some people just don't give others a chance.
+              </div></span>
+          </div>
+      </div>
+      <p>Chandrasekhar worked this out in 1930, aged <strong>20</strong>, on a boat to England. Some people just don't give others a chance.</p>
+      <p>For neutron stars, the same logic applies, but now it's <strong>neutron degeneracy pressure</strong> doing the work rather than electron degeneracy. The equivalent limit is thought to lie somewhere between \$2\$ and \$3, M_\\odot\$ — above which even the neutrons can't hold on, and the star collapses to a black hole.</p>
+      <h3>Neutron Stars</h3>
+      <p>Neutron stars deserve a moment of appreciation, because they are genuinely one of the most extreme objects in the universe.</p>
       <ul>
-        <li><strong>Red giant</strong>: hydrogen shell burning, helium core contracts</li>
-        <li><strong>Helium flash</strong>: in low-mass stars, helium fusion starts suddenly in a degenerate core</li>
-        <li><strong>Horizontal branch</strong>: helium → carbon in the core</li>
-        <li><strong>Asymptotic giant branch (AGB)</strong>: helium and hydrogen shell burning</li>
+      <li>Mass: \$\\sim 1.4, M_\\odot\$</li>
+      <li>Radius: <strong>~10 km</strong> — smaller than London</li>
+      <li>Mean density: \$\\sim 10^{18}\$ kg m\$^{-3}\$ — comparable to an atomic nucleus</li>
+      <li>Surface gravity: \$\\sim 2 \\times 10^{12}\$ m s\$^{-2}\$</li>
       </ul>
-
-      <p>During AGB, stars lose mass via strong winds — creating beautiful planetary nebulae.</p>
-
-      <h3>Stellar Endpoints: What’s Left After the Party?</h3>
-
-      <p>It all depends on mass.</p>
-
-      <ul>
-        <li><strong>White dwarfs</strong>: < 8 \\( M_\\odot \\). Earth-sized, supported by electron degeneracy pressure.</li>
-        <li><strong>Neutron stars</strong>: 8–20 \\( M_\\odot \\). City-sized, supported by neutron degeneracy pressure. Formed in core-collapse supernovae.</li>
-        <li><strong>Black holes</strong>: > 20 \\( M_\\odot \\). Gravity wins. No known force can stop the collapse.</li>
-      </ul>
-
-      <h3>Mass Limits: When Degeneracy Pressure Fails</h3>
-
-      <p><strong>Chandrasekhar limit</strong>: \\( 1.4 \\, M_\\odot \\) — maximum mass for a white dwarf.</p>
-
-      <p><strong>Tolman-Oppenheimer-Volkoff limit</strong>: ~2–3 \\( M_\\odot \\) — maximum for a neutron star.</p>
-
-      <p>Exceed them? You get a black hole.</p>
-
-      <h3>TL;DR</h3>
-
-      <ul>
-        <li>Main sequence: H → He fusion</li>
-        <li>Red giant → helium flash → horizontal branch → AGB</li>
-        <li>White dwarf: < 8 \\( M_\\odot \\)</li>
-        <li>Neutron star: 8–20 \\( M_\\odot \\)</li>
-        <li>Black hole: > 20 \\( M_\\odot \\)</li>
-        <li>Chandrasekhar limit: 1.4 \\( M_\\odot \\)</li>
-        <li>Mass determines fate</li>
-      </ul>
-
-      <p>And remember: the universe doesn’t care how bright your star is.  
-      It only cares about its mass.</p>
+      <p>To put the surface gravity in context: a 1 kg mass dropped from 1 metre would hit the surface at <strong>2000 km/s</strong> and release energy equivalent to <strong>1000 tonnes of TNT</strong>. Climbing a mountain 1 mm tall would require your entire lifetime's energy output.</p>
+      <p>Their magnetic fields range from \$10^8\$ to \$10^{11}\$ T. For comparison, the strongest continuous magnetic fields produced in a lab on Earth are around 45 T. A single cubic centimetre of a \$10^{11}\$ T magnetic field contains enough energy to power the UK National Grid for around <strong>5000 years</strong>.</p>
+      <p>Neutron stars were first discovered as <strong>radio pulsars</strong> in 1967. They spin rapidly and emit beams of radio waves from their magnetic poles — if the beam sweeps past Earth, we detect regular pulses. The most famous is the <strong>Crab pulsar</strong>, the neutron star at the heart of the Crab nebula, remnant</p>
     `
   },
 
   "galaxies": {
     title: "Galaxies",
     content: `
-      <h3>Galaxies: When Billions of Stars Throw a Party</h3>
-
-      <p>Right. Let’s talk about <strong>galaxies</strong>.</p>
-
-      <p>No, not the chocolate bar. We’re talking about <strong>giant collections of billions of stars, gas, dust, and dark matter</strong> — all held together by gravity.</p>
-
-      <p>And yes — they come in different shapes, sizes, and levels of drama.</p>
-
-      <h3>Hubble Classification: The Cosmic Zoo</h3>
-
-      <p>Edwin Hubble sorted galaxies into three main types:</p>
+      <p>Right. So we've done planets, we've done stars, and at this point you might be thinking &quot;surely that's it, what else is there?&quot;</p>
+      <p>Oh, you sweet summer child.</p>
+      <p>Zoom out. Keep going. Further. Even further. No no no, too far, that's <a href="http://127.0.0.1:5500/subtopic.html?subid=universe&amp;topic=astro&amp;year=1">next topic</a>, zoom out a bit. There you go. You've just left the Milky Way. Welcome to the universe of <strong>galaxies</strong> — enormous collections of stars, gas, and dust, all bound together by gravity, doing their thing across incomprehensible distances.</p>
+      <p>There are three main flavours:</p>
       <ul>
-        <li><strong>Ellipticals (E)</strong>: smooth, featureless, little gas, mostly old stars</li>
-        <li><strong>Spиралs (S)</strong>: disks with spiral arms, lots of gas, ongoing star formation</li>
-        <li><strong>Irregulars (Irr)</strong>: no defined shape, often due to interactions</li>
+      <li>
+      <p><strong>Spiral galaxies</strong> — flat rotating discs with arms spiralling outward. The arms are where the action is: active star formation, young hot blue stars, all the drama. There's usually a central bulge and a surrounding halo of older stars. The Milky Way and Andromeda (M31) are both spiral galaxies.</p>
+      </li>
+      <li>
+      <p><strong>Elliptical galaxies</strong> — smooth, featureless, ellipsoidal blobs. Mostly old, low-mass stars with minimal star formation. Boring to look at, but the <em>largest</em> galaxies in the universe are ellipticals. Size isn't everything, but it's something.</p>
+      </li>
+      <li>
+      <p><strong>Irregular galaxies</strong> — everything else. No obvious structure, no spiral arms, no central bulge. Often small, sometimes being torn apart by a nearby galaxy's gravity. About a quarter of all galaxies fall into this category.</p>
+      </li>
       </ul>
-
-      <p>There’s also the <strong>lenticular (S0)</strong> type — disk without spiral arms.</p>
-
-      <h3>Weighing Galaxies: The Rotation Curve Problem</h3>
-
-      <p>We can measure how fast stars and gas orbit the centre using Doppler shifts.</p>
-
-      <p>According to Kepler, speed should drop with radius: \\( v \\propto 1/\\sqrt{r} \\).</p>
-
-      <p>But observations show: \\( v \\) stays constant or even increases.</p>
-
-      <p>That means there’s more mass than we can see — <strong>dark matter</strong>.</p>
-
-      <p>And it dominates. A spiral galaxy is like a tiny visible speck in a giant dark matter halo.</p>
-
-      <h3>Cepheid Variables: The Rulers of the Universe</h3>
-
-      <p>Cepheid variable stars pulsate with a period that depends on their luminosity.</p>
-
-      <p>So measure the period → know the true brightness → compare to apparent brightness → get distance.</p>
-
-      <p>This is how Hubble proved Andromeda was outside the Milky Way.</p>
-
-      <h3>Active Galactic Nuclei (AGN): When Galaxies Get Loud</h3>
-
-      <p>Some galaxies have incredibly bright cores — powered by supermassive black holes.</p>
-
-      <p>As matter falls in, it heats up and emits insane amounts of energy.</p>
-
-      <p>Types:</p>
-      <ul>
-        <li><strong>Quasars</strong>: brightest, visible across the universe</li>
-        <li><strong>Seyfert galaxies</strong>: bright cores, but host galaxy visible</li>
-        <li><strong>Blazars</strong>: jets pointed at us → highly variable</li>
-      </ul>
-
-      <p>We now think all galaxies have supermassive black holes — most are just asleep.</p>
-
+      <h3>How Far Away Are They?</h3>
+      <p>Before we can learn anything meaningful about a galaxy, we need to know how far away it is. This turns out to be deeply non-trivial.</p>
+      <p>For a long time, nobody even knew what galaxies <em>were</em>. M31, the Andromeda &quot;nebula,&quot; is the most distant object visible to the naked eye, and yet for centuries people assumed it must be something inside our own Milky Way. In 1920, there was a literal public debate — the <strong>Great Debate</strong> — between two astronomers, Shapley and Curtis, about whether the spiral nebulae were inside or outside the Milky Way. Shapley said inside. Curtis said they were separate &quot;island universes&quot; entirely.</p>
+      <p>Curtis won. But it took a measurement to settle it.</p>
+      <h4>Cepheid Variables</h4>
+      <p>The breakthrough came from a class of star called <strong>Cepheid variables</strong> — stars that periodically brighten and dim with a very regular period, anywhere from a few days to about 100 days. What makes them useful is a remarkable property: their <strong>period is directly related to their absolute luminosity</strong>. Longer period = intrinsically brighter star.</p>
+      <p>This is extraordinarily handy. If you can measure the period of a Cepheid (which is easy — you just watch it), you can immediately look up its absolute magnitude from the period-luminosity relation. Then you compare that to how bright it actually appears, and from the distance modulus:</p>
+      <p>\$\$m - M = 5\\log_{10}\\left(\\frac{d}{10,\\text{pc}}\\right)\$\$</p>
+      <p>you get the distance. Simple in principle. Painstaking in practice.</p>
+      <p>This is how Hubble measured the distance to M31 in 1923, settling the Great Debate definitively. M31 was way, <em>way</em> too far away to be inside the Milky Way. The universe had just gotten a lot bigger.</p>
+      <h3>Weighing a Galaxy</h3>
+      <p>Once you know the distance to a galaxy, you know its actual physical size from its angular size on the sky. But how do you measure its <em>mass</em>?</p>
+      <p>Same trick as always: orbital mechanics. In the disc of a spiral galaxy, stars orbit the galactic centre on roughly circular paths. From the balance between gravitational and centripetal acceleration:</p>
+      <p>\$\$\\frac{GM}{R^2} = \\frac{V^2}{R}\$\$</p>
+      <p>\$\$\\downarrow\$\$</p>
+      <p>\$\$M = \\frac{V^2 R}{G}\$\$</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M = \\frac{V^2 R}{G} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Galactic mass from rotation
+              </div><div class="formula-tooltip-desc">
+                  By measuring the orbital speed V of stars at galactocentric radius R, we can infer the mass of the galaxy interior to that radius. Note that only the mass inside the orbital radius contributes, by Newton's shell theorem.
+              </div></span>
+          </div>
+      </div>
+      <p>We can't wait around for stars to complete an orbit — the Sun takes about <strong>220 million years</strong> to go round the Milky Way once. Instead, we use Doppler shifts to measure the orbital speeds of stars directly from their spectra. For an inclined spiral galaxy, one side is moving towards us and blueshifted, the other is moving away and redshifted. Plot orbital speed \$V\$ against galactocentric radius \$R\$ and you get a <strong>rotation curve</strong>.</p>
+      <p>And here's where things get interesting.</p>
+      <h4>Dark Matter</h4>
+      <p>If all the mass of a galaxy was concentrated in the visible stars and gas — which is mostly in the central bulge — then you'd expect orbital speeds to <em>decrease</em> with radius beyond the bulk of the stars, just like planets in the outer Solar System orbit slower than inner ones (Kepler's third law).</p>
+      <p>What we actually observe is that rotation curves stay <strong>flat</strong>. The orbital speed barely drops off even at the outermost detectable regions of galaxies. Since \$M \\propto V^2 R\$, a constant \$V\$ means \$M \\propto R\$ — the mass keeps <em>growing</em> all the way out to wherever we can still measure it.</p>
+      <p>But there's nothing <em>visible</em> out there. No stars, no gas, no dust. Which means there must be something else: <strong>dark matter</strong>. A vast, invisible halo of mass surrounding the visible galaxy, detectable only by its gravitational influence.</p>
+      <p>We now think dark matter isn't just ordinary matter that happens to be dark (like rogue planets or cold gas clouds) — it appears to be an entirely different type of particle that barely interacts with anything except gravity. We've never directly detected it. We just know it's there because galaxies would fly apart without it.</p>
+      <p>For the Milky Way, the mass interior to the Sun's orbit (\$R = 8.3\$ kpc, \$V = 230\$ km s\$^{-1}\$) works out to:</p>
+      <p>\$\$M = \\frac{(230 \\times 10^3)^2 \\times 8.3 \\times 10^3 \\times 3.086 \\times 10^{16}}{6.67 \\times 10^{-11}} \\approx 10^{11}, M_\\odot\$\$</p>
+      <p>Which is about 100 billion solar masses. And that's just the bit inside the Sun's orbit. The total mass of the Milky Way out to ~200 kpc is estimated to be about <strong>15 times larger</strong> still.</p>
+      <h3>Supermassive Black Holes</h3>
+      <p>Here's a fun one. Most — possibly all — galaxies are thought to harbour a <strong>supermassive black hole</strong> at their centre. The Milky Way's is called Sagittarius A*, with a mass of about \$4 \\times 10^6, M_\\odot\$. Others are far more extreme — some exceed <strong>a billion solar masses</strong>.</p>
+      <p>Most of the time these black holes just sit there quietly, not doing much. But occasionally they accrete infalling material, and when they do, the energy released is extraordinary. An accreting supermassive black hole converts around <strong>10–40% of the rest mass of infalling material into radiation</strong> — compared to a paltry 0.7% for hydrogen fusion. When the black hole is actively feeding, the nucleus of the galaxy can outshine the <em>entire rest of the galaxy</em> by factors of thousands. These are called <strong>Active Galactic Nuclei (AGN)</strong>, and at the extreme end, <strong>quasars</strong> — the most luminous sustained objects in the universe, with luminosities up to \$\\sim 3 \\times 10^{14}, L_\\odot\$.</p>
+      <p>The mass of the central black hole turns out to be correlated with the mass of the galaxy's central bulge, which suggests black holes and their host galaxies co-evolved somehow. Exactly how is still an open question.</p>
       <h3>The Distribution of Galaxies</h3>
-
-      <p>Galaxies aren’t scattered randomly. They form:</p>
-      <ul>
-        <li><strong>Groups</strong>: small collections (e.g. Local Group)</li>
-        <li><strong>Clusters</strong>: hundreds to thousands of galaxies</li>
-        <li><strong>Superclusters</strong>: clusters grouped together</li>
-        <li><strong>Void</strong>: huge empty regions</li>
-      </ul>
-
-      <p>The universe has a “cosmic web” structure — like a sponge made of galaxies.</p>
-
+      <p>Zoom out even further, and galaxies themselves aren't randomly scattered across space. They cluster. The Milky Way belongs to the <strong>Local Group</strong>, a collection of a few dozen galaxies dominated by us and M31. Local Groups cluster into <strong>galaxy clusters</strong> (thousands of galaxies), which in turn form <strong>superclusters</strong>, connected by vast <strong>filaments</strong> of galaxy overdensities, with enormous near-empty <strong>voids</strong> in between.</p>
+      <p>The whole thing, on the largest scales, looks a bit like a cosmic spider's web. Or a brain, if you're feeling dramatic about it.</p>
+      <p>We think this large-scale structure emerged from tiny quantum fluctuations in the very early universe, amplified over billions of years by gravity — specifically by dark matter clumping first and dragging normal matter into the same structures afterward.</p>
       <h3>TL;DR</h3>
-
       <ul>
-        <li>Hubble types: E, S, Irr, S0</li>
-        <li>Rotation curves → dark matter</li>
-        <li>Cepheids: period-luminosity relation → distance</li>
-        <li>AGN: powered by supermassive black holes</li>
-        <li>Galaxies cluster into groups, clusters, superclusters</li>
-        <li>Cosmic web: galaxies on filaments, voids in between</li>
+      <li><strong>Spiral galaxies</strong>: rotating discs with star-forming arms — e.g. Milky Way, M31</li>
+      <li><strong>Elliptical galaxies</strong>: smooth, old, featureless, largest in the universe</li>
+      <li><strong>Irregular galaxies</strong>: everything else, about a quarter of all galaxies</li>
+      <li><strong>Cepheid variables</strong>: period → absolute luminosity → distance modulus → distance. This is how Hubble proved galaxies are external to the Milky Way</li>
+      <li><strong>Galactic mass</strong>: \$M = V^2R/G\$ from rotation curves</li>
+      <li><strong>Dark matter</strong>: rotation curves stay flat → mass keeps growing with radius → invisible mass halo around every galaxy</li>
+      <li><strong>Supermassive black holes</strong>: lurk at the centre of most galaxies; when actively fed, become AGN or quasars with absurd luminosities</li>
+      <li><strong>Large-scale structure</strong>: galaxies cluster into groups, clusters, filaments and superclusters, with voids in between</li>
       </ul>
-
-      <p>And remember: the universe doesn’t care how many stars you see.  
-      It only cares about the dark matter.</p>
+      <p>And remember: the universe doesn't care how big your galaxy is. It only cares about the mass.</p>
     `
   },
 
   "universe": {
     title: "The Universe",
     content: `
-      <h3>The Universe: From Big Bang to Now</h3>
-
-      <p>Right. Let’s talk about <strong>the Universe</strong>.</p>
-
-      <p>No, not your universe. The actual one.</p>
-
-      <p>It started with a Big Bang. It’s expanding. And it’s full of dark energy.</p>
-
-      <p>And yes — we’re still figuring it out.</p>
-
-      <h3>Big Bang and Recombination</h3>
-
-      <p>Universe began ~13.8 billion years ago.</p>
-
-      <p>Hot, dense, expanding.</p>
-
-      <p>After ~380,000 years: cooled enough for electrons to bind to protons → <strong>recombination</strong>.</p>
-
-      <p>Photons decoupled → we see them today as the <strong>CMB</strong>.</p>
-
-      <h3>Cosmic Microwave Background</h3>
-
-      <p>CMB: black-body spectrum at 2.7 K.</p>
-
-      <p>Tiny anisotropies → seeds of galaxies.</p>
-
-      <h3>Dark Energy and Acceleration</h3>
-
-      <p>Universe not just expanding — accelerating.</p>
-
-      <p>Caused by <strong>dark energy</strong> — 68% of the universe.</p>
-
-      <p>Dark matter? 27%.</p>
-
-      <p>Normal matter? 5%.</p>
-
+      <p>Alright. Deep breath.</p>
+      <p>We've done planets. We've done stars. We've done galaxies. Each time we've zoomed out, the universe has gotten bigger and weirder and more humbling. So now, for the final time, we zoom out one last time. All the way out.</p>
+      <p>What even <em>is</em> the universe? Where did it come from? Is it expanding? How old is it? What's it made of?</p>
+      <p>Buckle up.</p>
+      <h3>Hubble's Law</h3>
+      <p>In 1915, an astronomer called Slipher noticed something odd. Galaxies — or &quot;nebulae&quot; as they were still being called at the time — seemed to mostly be moving <em>away</em> from us. You could tell because their spectral lines were shifted towards longer, redder wavelengths. The Doppler effect, as we've seen before, gives us the recession speed from the fractional shift in wavelength:</p>
+      <p>\$\$\\frac{\\lambda - \\lambda_0}{\\lambda_0} = \\frac{V_R}{c}\$\$</p>
+      <p>Most stars in the Milky Way move towards <em>and</em> away from us in roughly equal measure — they're just orbiting the galaxy. But galaxies? They were overwhelmingly running away. Something was up.</p>
+      <p>Then in 1929, Hubble — armed with Cepheid-derived distances to nearby galaxies — noticed that the recession speed wasn't random. It scaled <em>linearly</em> with distance:</p>
+      <p>\$\$v = H_0 d\$\$</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ v = H_0 d \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Hubble's Law
+              </div><div class="formula-tooltip-desc">
+                  The recession speed of a galaxy is proportional to its distance. The constant of proportionality \\(H_0\\) is Hubble's constant, measured in km s\\(^{-1}\\) Mpc\\(^{-1}\\). The subscript 0 indicates this is the present-day value — Hubble's "constant" actually changes with time.
+              </div></span>
+          </div>
+      </div>
+      <p>This is <strong>Hubble's Law</strong>, arguably the single most important observational result in the history of cosmology. \$H_0\$ is <strong>Hubble's constant</strong>, currently measured at around \$70\$ km s\$^{-1}\$ Mpc\$^{-1}\$, give or take depending on how you measure it (and there's a whole ongoing argument about that, but we'll park it).</p>
+      <p>What does it mean that recession speed is proportional to distance? It means the <strong>universe is expanding</strong>. Not galaxies flying outward through space like shrapnel from an explosion — space <em>itself</em> is stretching, carrying the galaxies with it.</p>
+      <p>And before you ask: no, this does not mean we are at the centre of the universe. Every observer, everywhere, would see the same thing — all other galaxies receding from them. There is no centre. There is no edge. The universe is just... bigger than your intuition is equipped to handle.</p>
+      <h3>Redshift</h3>
+      <p>The expansion of the universe gives us an extraordinarily useful tool. As light travels across the expanding universe, the space it's travelling through stretches, and the wavelength of the light stretches with it. This is <strong>cosmological redshift</strong>, and it's related to how much the universe has expanded since the light was emitted:</p>
+      <p>\$\$1 + z = \\frac{\\lambda_{\\text{obs}}}{\\lambda_0}\$\$</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ 1 + z = \\frac{\\lambda_{\\text{obs}}}{\\lambda_0} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Cosmological redshift
+              </div><div class="formula-tooltip-desc">
+                  \\(z\\) is the redshift. \\(\\lambda_{\\text{obs}}\\) is the wavelength we observe, and \\(\\lambda_0\\) is the wavelength the light was emitted at. A redshift of \\(z = 1\\) means the universe has doubled in size since the light was emitted.
+              </div></span>
+          </div>
+      </div>
+      <p>For nearby galaxies, this is essentially the same as the Doppler shift, and \$v \\approx cz\$. For distant galaxies, the full relativistic treatment is needed — but the key point is that redshift tells you how much the universe has expanded since the light left. Looking at a galaxy with \$z = 2\$ means you're seeing it as it was when the universe was one third of its current size. Telescopes are time machines.</p>
+      <h3>The Age of the Universe</h3>
+      <p>Here's a beautiful implication of Hubble's Law. If everything is currently moving apart, and we wind back the clock, everything must have been closer together in the past. Wind it back far enough and everything was in the same place. There must have been a beginning.</p>
+      <p>A rough estimate of the age of the universe follows almost immediately from Hubble's constant. If a galaxy at distance \$d\$ is receding at speed \$v = H_0 d\$, then the time since it was co-located with us is just:</p>
+      <p>\$\$t_0 \\sim \\frac{d}{v} = \\frac{1}{H_0}\$\$</p>
+      <p>This is the <strong>Hubble time</strong>. Plugging in \$H_0 = 70\$ km s\$^{-1}\$ Mpc\$^{-1}\$:</p>
+      <p>\$\$t_0 \\sim H_0^{-1} \\approx 14 \\text{ Gyr}\$\$</p>
+      <p>The actual age, accounting for the fact that the expansion rate has changed over time, comes out to about <strong>13.8 billion years</strong>. Which, for the record, is about three times the age of the Earth, and long enough for a fair amount to have happened.</p>
+      <p>Hubble's original estimate was wildly off — his value of \$H_0\$ was about seven times too large, giving an age of the universe <em>younger than the Earth</em>. Which was, understandably, a bit of a problem. The issue was that his Cepheid distance scale was miscalibrated. Once that was sorted out over the following decades, the numbers started making sense.</p>
+      <h3>The Big Bang</h3>
+      <p>So the universe had a beginning. What was that beginning like?</p>
+      <p>The <strong>Big Bang</strong> is the name we give to the extraordinarily hot, dense state the universe was in at the very start — and to the theory that describes how it evolved from that state into what we see today.</p>
+      <p>A few things it successfully explains:</p>
+      <p><strong>1. The abundance of light elements</strong></p>
+      <p>In the first few minutes after the Big Bang, the universe was hot enough for nuclear fusion — but not for long. The brief window of <strong>Big Bang nucleosynthesis</strong> produced the universe's initial stock of hydrogen, helium, and a tiny bit of lithium in proportions that match what we observe extremely well. About 75% hydrogen, 25% helium by mass. Everything heavier than lithium was forged later, in stars.</p>
+      <p>(And everything heavier than iron was forged in supernova and kilonova explosions — the gold in any jewellery you might be wearing was made in a neutron star merger. You're welcome for that fact.)</p>
+      <p><strong>2. The large-scale structure of the universe</strong></p>
+      <p>The filaments, voids, clusters, and superclusters we see in the galaxy distribution today grew from tiny quantum fluctuations in the very early universe, amplified over billions of years by gravity. The Big Bang predicts these structures should exist. They do.</p>
+      <p><strong>3. The Cosmic Microwave Background</strong></p>
+      <p>This one deserves its own section.</p>
+      <h3>The Cosmic Microwave Background</h3>
+      <p>In 1965, two physicists at Bell Labs — Penzias and Wilson — were testing a new radio antenna and kept picking up a persistent, annoying background hiss that seemed to come equally from every direction in the sky. They checked everything. They evicted pigeons nesting in the antenna. The hiss remained.</p>
+      <p>What they had accidentally discovered was the <strong>Cosmic Microwave Background</strong> (CMB) — and it won them the Nobel Prize.</p>
+      <p>Here's what it is. For the first 380,000 years of the universe's existence, it was so hot and dense that it was essentially an opaque plasma — photons couldn't travel far before being scattered by free electrons. Then, as the universe expanded and cooled to around 3,000 K, electrons and protons combined to form neutral hydrogen atoms for the first time. Suddenly, photons could travel freely. The universe became <strong>transparent</strong>.</p>
+      <p>Those photons have been travelling ever since. They fill the entire universe uniformly. By the time they reach us, the expansion of the universe has stretched their wavelengths by a factor of about 1,100 — cooling them from 3,000 K down to just <strong>2.725 K</strong>. That puts them in the microwave part of the spectrum, which is why we call it the Cosmic Microwave Background.</p>
+      <p>The CMB is the most perfect blackbody spectrum ever measured. Its temperature is uniform to about 1 part in 10,000 across the entire sky. But those tiny fluctuations matter enormously — they are the seeds from which all galaxies, all stars, all structure in the universe eventually grew. They are the fingerprints of the very early universe, preserved in the sky for 13.8 billion years.</p>
+      <p>It is, without exaggeration, one of the most remarkable things humans have ever measured.</p>
+      <h3>What Is the Universe Made Of?</h3>
+      <p>You might assume the universe is made of the same stuff as everything you've ever encountered — protons, neutrons, electrons, the usual cast of characters. You would be mostly wrong.</p>
+      <p>The current best picture, pieced together from CMB measurements, galaxy surveys, and supernova observations, gives us roughly:</p>
+      <table>
+      <thead>
+      <tr>
+      <th>Component</th>
+      <th>Fraction</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Ordinary matter (stars, gas, you)</td>
+      <td>~5%</td>
+      </tr>
+      <tr>
+      <td>Dark matter</td>
+      <td>~27%</td>
+      </tr>
+      <tr>
+      <td>Dark energy</td>
+      <td>~68%</td>
+      </tr>
+      </tbody>
+      </table>
+      <p><strong>Ordinary matter</strong> — everything we can see, touch, detect, or interact with — is about 5% of the universe. That's it. The periodic table is a footnote.</p>
+      <p><strong>Dark matter</strong> we've already met via galaxy rotation curves. It doesn't emit or absorb light, it doesn't interact electromagnetically, it just gravitates. We have no idea what it is at the particle level, despite it making up more than a quarter of the universe.</p>
+      <p><strong>Dark energy</strong> is weirder still. In 1998, two independent teams studying distant supernovae discovered that the expansion of the universe isn't slowing down due to gravity — it's <em>speeding up</em>. Something is driving the accelerated expansion. That something is called dark energy, and beyond saying that it behaves like a constant energy density of empty space, we have essentially no idea what it is either.</p>
+      <p>So to summarise: 95% of the universe is made of things we don't understand. Physics is going great.</p>
       <h3>TL;DR</h3>
-
       <ul>
-        <li>Big Bang: 13.8 Gyr ago</li>
-        <li>Recombination: 380,000 yr → CMB</li>
-        <li>CMB: 2.7 K, black-body</li>
-        <li>Dark energy: 68%, causes acceleration</li>
-        <li>Dark matter: 27%</li>
-        <li>Normal matter: 5%</li>
+      <li><strong>Hubble's Law</strong>: \$v = H_0 d\$ — recession speed is proportional to distance, meaning the universe is expanding</li>
+      <li><strong>Redshift</strong>: \$1 + z = \\lambda_{\\text{obs}}/\\lambda_0\$ — light is stretched by the expansion of the universe</li>
+      <li><strong>Hubble time</strong>: \$t_0 \\sim H_0^{-1} \\approx 14\$ Gyr — rough age of the universe</li>
+      <li><strong>The Big Bang</strong>: the universe began in an extremely hot, dense state ~13.8 billion years ago</li>
+      <li><strong>Big Bang nucleosynthesis</strong>: produced the universe's hydrogen and helium in the first few minutes</li>
+      <li><strong>The CMB</strong>: relic radiation from 380,000 years after the Big Bang, now cooled to 2.725 K, uniform to 1 part in 10,000</li>
+      <li><strong>Composition</strong>: ~5% ordinary matter, ~27% dark matter, ~68% dark energy — we understand about 5% of the universe</li>
+      <li><strong>No centre</strong>: the universe is homogeneous and isotropic — every observer sees the same expansion</li>
       </ul>
-
-      <p>And remember: the universe doesn’t care about your place in it.  
-      It only cares about the metric expansion.</p>
+      <p>And remember: the universe doesn't care where you think the centre is. There isn't one.</p>
     `
   },
 
   "astro-summary": {
-    title: "THE... EARTH!!!!",
+    title: "The... EARTH!!!!",
     content: `
-
+      <h3>Are We at the Centre?</h3>
+      <p>No.</p>
+      <p>More formally: the two foundational assumptions of modern cosmology are that the universe is <strong>isotropic</strong> (looks the same in every direction) and <strong>homogeneous</strong> (looks the same from every location). There is no preferred direction and no preferred place. Every observer, everywhere in the universe, would see all other galaxies receding from them in exactly the same way. Nobody is special.</p>
+      <p>It can be shown that Hubble's Law — recession speed proportional to distance — is the <em>only</em> expansion law consistent with these two assumptions. So the fact that it's linear is not a coincidence. It's a direct consequence of the universe having no centre.</p>
+      <p>Einstein, who constructed a static model of the universe before Hubble's discovery (introducing a fudge factor called the cosmological constant to keep it static), reportedly called it his &quot;greatest blunder&quot; when the expansion was discovered. Whether he was more annoyed at missing the prediction of expansion, or at being wrong, history doesn't record.</p>
     `
   },
 

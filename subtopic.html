@@ -106,7 +106,6 @@
       });
 
       
-
       if (window.MathJax) {
         MathJax.typeset();
       }
@@ -177,7 +176,6 @@
       }
     });
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const urlParams = new URLSearchParams(window.location.search);
   const subtopicId = urlParams.get("subid");
@@ -216,6 +214,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const imageTooltipTitle = document.querySelector(".image-tooltip-title");
+
+if (imageTooltipTitle) {
+  const wrap = imageTooltipTitle.parentElement;
+  let size = parseFloat(getComputedStyle(imageTooltipTitle).fontSize);
+
+  while (imageTooltipTitle.scrollWidth > wrap.clientWidth && size > 0) {
+    size -= 1;
+    imageTooltipTitle.style.fontSize = size/2 + "px";
+  }
+}
+
+const formulaTooltipTitle = document.querySelector(".formula-tooltip-title");
+
+if (formulaTooltipTitle) {
+  const wrap = formulaTooltipTitle.parentElement;
+  let size = parseFloat(getComputedStyle(formulaTooltipTitle).fontSize);
+
+  while (formulaTooltipTitle.scrollWidth > wrap.clientWidth && size > 12) {
+    size -= 1;
+    formulaTooltipTitle.style.fontSize = size-10 + "px";
+  }
+}
 
 
 document.querySelectorAll(".image").forEach(box => {

@@ -37,9 +37,22 @@ body {
   overflow-x: hidden;
 }
 
+.show-on-mobile {
+    display: none;
+  }
+
 @media (max-width: 100vh) {
   body {
     font-size: 1.9vh;
+    text-align: left;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .show-on-mobile {
+    display: inline
   }
 }
 
@@ -74,6 +87,13 @@ h4 {
   font-size: 4vh;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 3vh;
+}
+
+.formula-emph {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 1px;
+  font-weight: bold;
+  opacity: 70%;
 }
 
 @keyframes flash-lime {
@@ -731,7 +751,7 @@ body.dimmed::before {
   }
 
   .pop-image {
-    max-width: 50vh !important;
+    max-width: 70vw !important;
   }
 }
 
@@ -751,7 +771,13 @@ body.dimmed::before {
 
 @media (max-width: 100vh) {
   .image-box {
-    width: 70vw;
+    width: 70vw !important;
+    transform: translateY(-2vh)
+    /* Stack vertically on smaller screens */
+  }
+
+  .image-box.left-box {
+    transform: translateY(-5vh)
     /* Stack vertically on smaller screens */
   }
 }
@@ -861,22 +887,30 @@ body.dimmed::before {
 
 .image-tooltip-title {
   color: #006aff;
-  font-size: 6vh;/*3.5vw;*/
+  font-size: 5vh;/*3.5vw;*/
   text-decoration: underline;
   line-height: 1;
   text-underline-offset: 0.5vw;
 }
 
+
 .image-tooltip-desc {
   padding-top: 1vw;
   color: white;
   font-size: 2vh;
+  position: relative;
+  max-width: 30vw;
+  width: max-content;
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-align: center;
+  align-items: center;
   line-height: 1.2;
 }
 
 .formula-tooltip-title {
   color: #ff8800;
-  font-size: 2.2vw;
+  font-size: 5vh;
   text-decoration: underline;
   text-underline-offset: 0.5vh;
 }
@@ -884,6 +918,13 @@ body.dimmed::before {
 .formula-tooltip-desc {
   color: white;
   font-size: 1.4vw;
+  position: relative;
+  max-width: 35vw;
+  width: max-content;
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-align: center;
+  align-items: center;
   line-height: 1.2;
 }
 
@@ -892,6 +933,18 @@ body.dimmed::before {
     transform: translateY(100%);
   }
 
+  .formula-tooltip-desc {
+    font-size: 1rem;
+    position: relative;
+    max-width: 90vw;
+    width: max-content;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+    align-items: center;
+    line-height: 1.2;
+
+  }
 
   .image-tooltip {
     top: 120%;
@@ -914,7 +967,7 @@ body.dimmed::before {
     opacity: 1;
     align-items: center;
     justify-content: center;
-    transform: translateY(-30%) translateX(0%);
+    transform: translateY(-10%) translateX(0%);
 
   }
 
@@ -924,7 +977,7 @@ body.dimmed::before {
   }
 
   .image-tooltip-title {
-    font-size: 10vh;
+    font-size: 8vh;
     text-underline-offset: 1vw;
     align-items: center;
     display: flex;
@@ -932,14 +985,23 @@ body.dimmed::before {
   }
 
   .image-tooltip-desc {
-    font-size: 3vw;
+    position: relative;
+    max-width: 71vw;
+    width: max-content;
+    white-space: normal;
+    overflow-wrap: break-word;
+    text-align: center;
+    align-items: center;
     line-height: 1.2;
+    font-size: 1rem;
+  }
+
+  
+  .formula-tooltip-title {
+    align-items: center;
     display: flex;
     justify-content: center;
-    text-align: center;
-  }
-  .formula-tooltip-title {
-    font-size: 5vw;
+    font-size: 7vw;
     text-underline-offset: 0.5vh;
   }
 
@@ -1140,9 +1202,9 @@ body.dimmed::before {
 
   .formula-tooltip {
     left: auto;
-    top: 80%;
+    top: 50%;
     transform: translateY(-50%);
-
+    width: 90vw;
   }
 
 }
@@ -1254,16 +1316,20 @@ body.dimmed::before {
 
 @media (max-width: 100vh) {
   #next-subtopic-button {
+    width: 15vw;
+    font: 3vw;
     position: fixed;
-    left: 79vw;
-    top: 88vh;
+    right: 4vw;
+    top: 90vh;
     z-index: 50;
   }
 
   #back-subtopic-button {
+    width: 15vw;
+    font: 3vw;
     position: fixed;
     left: 4vw;
-    top: 88vh;
+    top: 90vh;
     z-index: 50;
   }
 }
@@ -1356,9 +1422,9 @@ body.dimmed::before {
   }
 
   #bottom-subtopic-name {
-    font-size: 16px;
+    font-size: 3vh;
     padding: 0px;
-    bottom: 32px;
+    bottom: 6vh;
     text-align: center;
     line-height: 1;
   }

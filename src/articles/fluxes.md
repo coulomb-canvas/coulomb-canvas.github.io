@@ -71,9 +71,9 @@ So let's say we have two stars with magnitudes \\(m_1\\) and \\(m_2\\) and with 
             \[ m_2 - m_1 = -2.5\log{\frac{f_2}{f_1}} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
-        Formula X
+            Formula 2: Pogson's Relation
         </div><div class="formula-tooltip-desc">
-        ...
+            Difference in apparent magnitude between two stars as a function of their flux ratio. A difference of 5 magnitudes = flux ratio of 100.
         </div></span>
     </div>
 </div>
@@ -86,9 +86,9 @@ So let's say we have two stars with magnitudes \\(m_1\\) and \\(m_2\\) and with 
             \[ m = -2.5\log{\frac{f_2}{f_\text{Vega}}} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Apparent Magnitude
         </div><div class="formula-tooltip-desc">
-            ...
+            Apparent magnitude of a star relative to Vega (defined as magnitude 0).
         </div></span>
     </div>
 </div>
@@ -109,9 +109,9 @@ In comes the *absolute magnitude* which tells us how bright the star would look 
             \[ m - M = 5\log{\frac{d}{10\text{ parsecs}}} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Distance Modulus
         </div><div class="formula-tooltip-desc">
-            ...
+            Relates apparent magnitude m, absolute magnitude M, and distance d in parsecs. The difference m − M is the distance modulus.
         </div></span>
     </div>
 </div>

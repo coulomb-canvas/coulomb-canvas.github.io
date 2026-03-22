@@ -214,19 +214,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const imageTooltipTitle = document.querySelector(".image-tooltip-title");
+function shrinkAllToFit(selector) {
+  document.querySelectorAll(selector).forEach((el) => {
+    const wrap = el.parentElement;
+    let size = parseFloat(getComputedStyle(el).fontSize);
 
-if (imageTooltipTitle) {
-  const wrap = imageTooltipTitle.parentElement;
-  let size = parseFloat(getComputedStyle(imageTooltipTitle).fontSize);
-
-  while (imageTooltipTitle.scrollWidth > wrap.clientWidth && size > 0) {
-    size -= 1;
-    imageTooltipTitle.style.fontSize = size/2 + "px";
-  }
+    while (el.scrollWidth > wrap.clientWidth && size > 12) {
+      size -= 1;
+      el.style.fontSize = size/1.4 + "px";
+    }
+  });
 }
 
-const formulaTooltipTitle = document.querySelector(".formula-tooltip-title");
+document.querySelectorAll(".image").forEach(box => {
+  box.addEventListener("mouseenter", () => document.body.classList.add("dimmed"));
+  box.addEventListener("mouseleave", () => document.body.classList.remove("dimmed"));
+});
+
+shrinkAllToFit(".image-tooltip-title");
+shrinkAllToFit(".formula-tooltip-title");
+
 
 if (formulaTooltipTitle) {
   const wrap = formulaTooltipTitle.parentElement;
@@ -239,10 +246,7 @@ if (formulaTooltipTitle) {
 }
 
 
-document.querySelectorAll(".image").forEach(box => {
-  box.addEventListener("mouseenter", () => document.body.classList.add("dimmed"));
-  box.addEventListener("mouseleave", () => document.body.classList.remove("dimmed"));
-});
+
 
 // Hydrogen Emission Spectrum Simulation - FIXED
 console.log("DEBUG: Script has started running.");

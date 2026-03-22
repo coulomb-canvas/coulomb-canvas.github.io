@@ -967,17 +967,17 @@ body.dimmed::before {
     opacity: 1;
     align-items: center;
     justify-content: center;
-    transform: translateY(-10%) translateX(0%);
+    transform: translateY(0%) translateX(0%);
 
   }
 
   .image:hover .image-tooltip.left-box {
     opacity: 1;
-    transform: translateY(-30%) translateX(0px);
+    transform: translateY(0vw) translateX(0px);
   }
 
   .image-tooltip-title {
-    font-size: 8vh;
+    font-size: 10vw;
     text-underline-offset: 1vw;
     align-items: center;
     display: flex;

@@ -39,9 +39,13 @@ This is something called Planck's law, and it tells us how much energy each wave
                 <img src="images/Astronomy/Planck's Law.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
             </div>
             <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                Figure X
+                Figure 1: Planck spectrum
             </div><div class="image-tooltip-desc">
-                ...
+                Spectral radiance B_λ(T) vs wavelength for two temperatures. 
+                <ul>
+                    <li>Higher-temperature curves are taller, narrower, and peak at shorter wavelengths.</li>
+                    <li>Wien's tail is the steep short-wavelength drop; Rayleigh-Jeans is the gentler long-wavelength drop. </li>
+                    <li>Curves never cross.</li>
             </div></span>
         </div>
     </div>

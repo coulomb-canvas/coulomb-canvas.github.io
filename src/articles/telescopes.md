@@ -43,9 +43,9 @@ Somewhat impressively, we have managed to go *three* whole subtopics in a sectio
                 <img src="images/Astronomy/Reflecting telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
             </div>
             <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
-                Figure X
+                Figure 2: Reflecting telescope
             </div><div class="image-tooltip-desc">
-                ...
+                A concave mirror focuses parallel light to a focal point behind the mirror; secondary optics redirect light to a usable viewing position.
             </div></span>
         </div>
     </div>
@@ -80,9 +80,9 @@ Simple answer, don't worry about it too much. Actual reflection telescopes have 
                 <img src="images/Astronomy/Combined telescope.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
             </div>
             <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                Figure X
+                Figure 3: Dall-Kirkham telescope
             </div><div class="image-tooltip-desc">
-                ...
+                Some fancy telescopes reflect the light to a certain location (reflection), before being focused into the focal point by a lens (refraction).
             </div></span>
         </div>
     </div>
@@ -114,9 +114,9 @@ Each star will emits light rays in every possible direction. However, since star
                     \[ l = \alpha f \]
                 </div>
                 <span class="formula-tooltip"><div class="formula-tooltip-title">
-                    Formula X
+                    Formula 1: Plate Scale
                 </div><div class="formula-tooltip-desc">
-                    ...
+                    Relates the physical separation \(l\) of two focal points to the angular separation \(α\) of two objects and the focal length \(f\). Valid under the small angle approximation.
                 </div></span>
             </div>
         </div>
@@ -128,9 +128,9 @@ Each star will emits light rays in every possible direction. However, since star
                 <img src="images/Astronomy/Camera.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
             </div>
             <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                Figure X
+                Figure 4: Plate scale diagram
             </div><div class="image-tooltip-desc">
-                ...
+                Two stars separated by angle α produce focal points separated by l = αf on the focal plane.
             </div></span>
         </div>
     </div>
@@ -156,7 +156,7 @@ The derivation is quite long, with like Bessel functions and stuff (I'd know bec
         <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula X: Diffraction limit
         </div><div class="formula-tooltip-desc">
-            ...
+            Minimum resolvable angular separation for a circular lens of diameter \(D\) at wavelength \(\lambda\).
         </div></span>
     </div>
 </div>
@@ -175,9 +175,9 @@ The final piece of the puzzle we need to consider when looking at telescopes is 
                 <img src="images/Astronomy/Magnification.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
             </div>
             <span class="image-tooltip left-box" style="left:100%;"> <div class="image-tooltip-title">
-                Figure X
+                Figure 5: Telescope magnification
             </div><div class="image-tooltip-desc">
-                ...
+                The objective lens focuses two stars to the focal plane; the eyepiece collimates and enlarges the image. Magnification \(M = f_1/f_2\) follows from the small angle approximation at each lens.
             </div></span>
         </div>
     </div>
@@ -218,7 +218,7 @@ So since \\( \\alpha_1 f_1 = \\alpha_2 f_2 \\), we can actually figure out how m
         <span class="formula-tooltip"><div class="formula-tooltip-title">
         Formula X: Magnification
         </div><div class="formula-tooltip-desc">
-        ...
+        Angular magnification equals the ratio of objective focal length f₁ to eyepiece focal length f₂.
         </div></span>
     </div>
 </div>

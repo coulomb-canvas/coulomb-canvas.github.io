@@ -859,11 +859,11 @@ const subtopics = {
 
         <p>So taking our trusty \\(\\vec{a}\\) and \\(\\vec{b}\\) as examples, if we were to take the dot product of these
         two vectors, we'd get:</p>
-        <span class="large-eqn">\\[
-         \\vec{a} \\cdot \\vec{b} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\cdot
-        \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} = 
-         (1\\times 2)+(4\\times -3)+(2\\times 1) = -8
-        \\]</span>
+        \\[ \\begin{align}
+         \\vec{a} \\cdot \\vec{b} &= \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\cdot
+        \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} \\\\[6pt] &= 
+         (1\\times 2)+(4\\times -3)+(2\\times 1) \\\\[6pt] &= -8 \\end{align}
+        \\]
       <div class="container">
         <div class="image">
           <div class="image-floater">
@@ -1359,7 +1359,7 @@ const subtopics = {
         <p>Substitute it into the equation, and we get:</p>
         \\[ x\\frac{dz}{dx} + z = z + z^2 \\implies x\\frac{dz}{dx} = z^2 \\]
         <p>Now we can use the ‘separation of variables’ method, which gives us:</p>
-        \\[ \\frac{1}{z^2} dz = \\frac{1}{x} dx \\implies -\\frac{1}{z} = \\ln|x| + C \\]
+        \\[ \\frac{1}{z^2} dz = \\frac{1}{x} dx \\xrightarrow{\\text{integrate}} -\\frac{1}{z} = \\ln|x| + C \\]
         <p>You might wonder, “when can I use substitution?” My answer... figure it out. In my opinion,
         the hardest part of any mathematics is not the techniques themselves but figuring out when to
         use them. And that just requires practice.</p>
@@ -1381,7 +1381,7 @@ const subtopics = {
         <p>We can treat the differential equation like it’s a normal quadratic equation. Remove the
         \\(y\\)’s, replace the first differentials with an \\(m\\), and replace the second differentials
         with an \\(m^2\\). So for instance:</p>
-        <span class="large-eqn">\\[ a\\frac{d^2y}{dx^2} + b\\frac{dy}{dx} + cy = 0 \\quad \\rightarrow \\quad am^2 + bm + c = 0 \\]</span>
+        <div class="large-eqn">\\[ a\\frac{d^2y}{dx^2} + b\\frac{dy}{dx} + cy = 0 \\quad \\rightarrow \\quad am^2 + bm + c = 0 \\]</div>
         <p>Anyway, now that we’ve replaced the \\(m\\)’s, solve it like a quadratic equation, which
         will normally give you two results, say \\(m_1\\) and \\(m_2\\). This means the solution to the
         second order ODE is then:</p>
@@ -1585,19 +1585,19 @@ const subtopics = {
           <strong>converges</strong>. For example:
       </p>
 
-      <span class="large-eqn">\\[
+      <div class="large-eqn">\\[
         S_1 = \\sum^\\infty_{n=1} \\frac{1}{n^2} = 1 + \\frac14 + \\frac19 + \\frac1{16}+ ... = \\frac{\\pi^2}{6}
-      \\]</span>
+      \\]</div>
 
       <p>
           If they just get bigger and fly off to infinity, it <strong>diverges</strong>, and it's completely useless 
           to us. An example of this is:
       </p>
 
-      <span class="large-eqn">\\[
+      <div class="large-eqn">\\[
         S_2 = \\sum^\\infty_{n=1} \\frac{1}{n} = 1 \\; + \\frac12 \\; + \\frac13 \\; + \\frac14 \\; 
         + \\; ...  \\; \\rightarrow \\infty
-      \\]</span>
+      \\]</div>
 
       <p>
           How do we figure this out? By playing a little game, of course! There are a 
@@ -1701,9 +1701,9 @@ const subtopics = {
         sum of \\( f(N+1) \\) (the orange area), it's MORE than the total area underneath \\( \\frac1{x^2} \\). In other words:
       </p>
 
-      <span class="large-eqn">\\[
+      <div class="large-eqn">\\[
         A_{N+1} = S - S_N \\geq \\int^\\infty_{N+1} f(x)dx \\quad \\text{OR} \\quad A_{N+1} + S_N \\leq S 
-      \\]</span>
+      \\]</div>
 
       <p> That tells us that the total area underneath \\( \\frac1{x^2} \\) is somewhere in between. In other words: </p>
 
@@ -3252,12 +3252,12 @@ const subtopics = {
         \\[
           \\text{or} 
         \\]
-      <span class="large-eqn">  \\[
+      <div class="large-eqn">  \\[
         
         \\int_A^B \\vec{F} \\cdot d\\vec{r} \\Big|_{P} 
         + \\int_B^A \\vec{F} \\cdot d\\vec{r} \\Big|_{P'} 
         = \\oint \\vec{F} \\cdot d\\vec{r} = 0,
-        \\] </span>
+        \\] </div>
 
       <p> Next, since we know that the work done isn't dependent on the journey, we can assign a value to
       each point in the space which corresponds to the work done to get there. This value is called the
@@ -5157,7 +5157,7 @@ const subtopics = {
             creates a graph showing how many molecules (y-axis) have what energy (x-axis) for a given temperature. 
             The distribution looks like this:</p>
 
-          <span class="large-eqn">\\[ f(v) = 4\\pi \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} v^2 \\exp\\left( -\\frac{m v^2}{2 k_B T} \\right) \\]</span>
+          <div class="large-eqn">\\[ f(v) = 4\\pi \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} v^2 \\exp\\left( -\\frac{m v^2}{2 k_B T} \\right) \\]</div>
 
           <p>Whilst I don't think you'll have to remember the formula, you should get familiar with the shape
           it produces, because you <em>will</em> likely have to identify and interpret its features. It's a curve that:</p>
@@ -5281,8 +5281,8 @@ const subtopics = {
       <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p class="large-eqn">\\[C_V=\\frac{1}{n} \\frac{dK_{\\text{tr}}}{dT}=\\frac{3}{2} R = 12.47 \\, 
-                \\text{J mol}^{-1}\\text{K}^{-1}. \\]</p>
+              <div class="large-eqn">\\[C_V=\\frac{1}{n} \\frac{dK_{\\text{tr}}}{dT}=\\frac{3}{2} R = 12.47 \\, 
+                \\text{J mol}^{-1}\\text{K}^{-1}. \\]</div>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
@@ -5530,7 +5530,7 @@ const subtopics = {
       <p>Now since we are obviously operating the piston by having it move inwards or outwards, the volume is going to
       be changing. Therefore, work is done:</p>
 
-      <span class="large-eqn">\\[ W = \\int_{V_1}^{V_2} p  dV = \\int_{V_1}^{V_2} \\frac{nRT}{V} dV = nRT \\ln\\left(\\frac{V_2}{V_1}\\right) \\]</span>
+      <div class="large-eqn">\\[ W = \\int_{V_1}^{V_2} p  dV = \\int_{V_1}^{V_2} \\frac{nRT}{V} dV = nRT \\ln\\left(\\frac{V_2}{V_1}\\right) \\]</div>
 
       <p>Then from the First Law:</p>
 
@@ -8231,8 +8231,8 @@ const subtopics = {
       <p>Now just stick 'em in, and see wagwan:</p>
 
       \\[ 
-        \\begin{align} V_a - V_b &= \\int_{r_b}^{r_a} \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\cancel{\\hat{r} \\cdot \\hat{r}} dr \\\\
-        &= \\frac{q}{4 \\pi \\varepsilon_0} \\int_{r_b}^{r_a} \\frac1{r^2} dr \\\\
+        \\begin{align} V_a - V_b &= \\int_{r_b}^{r_a} \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\cancel{\\hat{r} \\cdot \\hat{r}} dr \\\\[6pt]
+        &= \\frac{q}{4 \\pi \\varepsilon_0} \\int_{r_b}^{r_a} \\frac1{r^2} dr \\\\[6pt]
         &= \\frac{q}{4 \\pi \\varepsilon_0} \\left( \\frac1{r_a} - \\frac1{r_b} \\right) \\end{align}
       \\]
 
@@ -8337,8 +8337,8 @@ const subtopics = {
 
       \\[
         \\begin{align}
-          E &= E_\\text{top} + E_\\text{bottom} \\\\
-            &= -\\frac{\\sigma}{\\varepsilon_0} \\\\
+          E &= E_\\text{top} + E_\\text{bottom} \\\\[6pt]
+            &= -\\frac{\\sigma}{\\varepsilon_0} \\\\[6pt]
             &= -\\frac{Q}{\\varepsilon_0 A}
         \\end{align}
       \\]
@@ -8388,7 +8388,7 @@ const subtopics = {
 
       \\[
         \\begin{align}
-        \\frac1{C_{\\text{series}}} &= \\frac{d}{\\varepsilon_0 A} + \\frac{d}{\\varepsilon_0 A} \\\\
+        \\frac1{C_{\\text{series}}} &= \\frac{d}{\\varepsilon_0 A} + \\frac{d}{\\varepsilon_0 A} \\\\[6pt]
                                     &= \\frac{2d}{\\varepsilon_0 A}
         \\end{align}
       \\]
@@ -8415,7 +8415,7 @@ const subtopics = {
 
       \\[
         \\begin{align}
-        C_{\\text{parallel}} &= \\frac{\\varepsilon_0 A}{d} + \\frac{\\varepsilon_0 A}{d} \\\\
+        C_{\\text{parallel}} &= \\frac{\\varepsilon_0 A}{d} + \\frac{\\varepsilon_0 A}{d} \\\\[6pt]
                             &= \\frac{\\varepsilon_0 [2A]}{d}
         \\end{align}
       \\]
@@ -8443,8 +8443,8 @@ const subtopics = {
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \\[ 
             \\begin{align}
-            U &= \\frac{1}{2} Q V \\\\
-              &= \\frac{1}{2} C V^2 \\\\
+            U &= \\frac{1}{2} Q V \\\\[6pt]
+              &= \\frac{1}{2} C V^2 \\\\[6pt]
               &= \\frac{Q^2}{2C}
             \\end{align}
             \\]
@@ -8994,8 +8994,8 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        dQ \\vec{v}_d &= nqA \\vec{v}_d dr^\\prime \\\\
-                      &=  nqA v_d d\\vec{r}^\\prime \\\\
+        dQ \\vec{v}_d &= nqA \\vec{v}_d dr^\\prime \\\\[6pt]
+                      &=  nqA v_d d\\vec{r}^\\prime \\\\[6pt]
                       &=  I d\\vec{r}^\\prime
       \\end{align}
       \\]
@@ -9004,7 +9004,7 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        d\\vec{B}(r)&= \\frac{\\mu_0}{4\\pi} dQ \\frac{\\vec{v}_d \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\\\
+        d\\vec{B}(r)&= \\frac{\\mu_0}{4\\pi} dQ \\frac{\\vec{v}_d \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\\\[6pt]
                     &= \\frac{\\mu_0}{4\\pi} I \\frac{d\\vec{r}' \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3}
       \\end{align}
       \\]
@@ -9130,9 +9130,9 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\vec{B}  &= \\mu_0(\\vec{H} + \\vec{M}) \\\\
-                  &= \\mu_0(\\vec{H} + \\chi_M \\vec{H}) \\\\
-                  &= \\mu_0(1+\\chi_M)\\vec{H} \\\\
+        \\vec{B}  &= \\mu_0(\\vec{H} + \\vec{M}) \\\\[6pt]
+                  &= \\mu_0(\\vec{H} + \\chi_M \\vec{H}) \\\\[6pt]
+                  &= \\mu_0(1+\\chi_M)\\vec{H} \\\\[6pt]
                   &= \\mu_0\\mu_r\\vec{H}
       \\end{align}
       \\]
@@ -9285,7 +9285,7 @@ const subtopics = {
 
       \\[ 
       \\begin{align}
-        \\Delta \\Phi_B &= B \\Delta A \\\\
+        \\Delta \\Phi_B &= B \\Delta A \\\\[6pt]
                         &= BLv \\Delta t
       \\end{align}
       \\]
@@ -9325,8 +9325,8 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\vec{F}  &= IL(\\hat{y}) \\times B(-\\hat{z}) \\\\
-                  &= ILB(-\\hat{x}) \\\\
+        \\vec{F}  &= IL(\\hat{y}) \\times B(-\\hat{z}) \\\\[6pt]
+                  &= ILB(-\\hat{x}) \\\\[6pt]
                   &= \\frac{B^2L^2v}R (-\\hat{x})
       \\end{align}
       \\]
@@ -9377,7 +9377,7 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\Phi_B &= \\iint \\vec{B} \\cdot d\\vec{S} \\\\
+        \\Phi_B &= \\iint \\vec{B} \\cdot d\\vec{S} \\\\[6pt]
                 &= \\mu_0 n I_s(t) A
       \\end{align}
       \\]
@@ -9388,7 +9388,7 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\mathcal{E}  &= -\\frac{d\\vec{B}}{dt}\\\\
+        \\mathcal{E}  &= -\\frac{d\\vec{B}}{dt}\\\\[6pt]
                       &= -\\mu_0 n A \\frac{dI_s(t)}{dt} \\\\
       \\end{align}
       \\]
@@ -9399,7 +9399,7 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        I_\\text{induced} &= \\frac{\\mathcal{E}}R \\\\
+        I_\\text{induced} &= \\frac{\\mathcal{E}}R \\\\[6pt]
                           &= -\\frac{\\mu_0 n A}R \\frac{dI_s(t)}{dt}
       \\end{align}
       \\]
@@ -9407,7 +9407,7 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\vec{F}  &= ILB(-\\hat{x}) \\\\
+        \\vec{F}  &= ILB(-\\hat{x}) \\\\[6pt]
                   &= -\\frac{\\mu_0 n ALB}R \\frac{dI_s(t)}{dt} (-\\hat{x})
       \\end{align}
       \\]
@@ -9510,8 +9510,8 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\mathcal{E}  &= -N_2\\frac{d\\Phi_B}{dt} \\\\
-                      &= -N_2\\frac{d}{dt} \\left( \\frac{\\mu_0 N_1 A_1 I_1}{l_1} \\right) \\\\
+        \\mathcal{E}  &= -N_2\\frac{d\\Phi_B}{dt} \\\\[6pt]
+                      &= -N_2\\frac{d}{dt} \\left( \\frac{\\mu_0 N_1 A_1 I_1}{l_1} \\right) \\\\[6pt]
                       &=  -N_2 \\frac{\\mu_0 N_1 A_1}{l_1}\\frac{dI_1}{dt}
       \\end{align}
       \\]
@@ -9839,10 +9839,10 @@ const subtopics = {
 
       <p> This is second order, pretend-it's-a-quadratic method, blah blah blah, and we get:</p>
 
-      <span class="large-eqn">\\[
+      <div class="large-eqn">\\[
         Q(t) = Q_0 e^{-\\alpha t}\\cos{\\omega t}, \\quad \\text{where} \\quad 
         \\alpha = \\frac{R}{2L}, \\quad \\omega = \\frac1{\\sqrt{\\frac1{LC} - \\alpha^2}}
-      \\]</span>
+      \\]</div>
 
       <h3>TL;DR</h3>
 
@@ -10095,7 +10095,7 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\langle V \\rangle &= \\frac1T \\int^T_0 V(t) \\; dt \\\\
+        \\langle V \\rangle &= \\frac1T \\int^T_0 V(t) \\; dt \\\\[6pt]
                             &= \\frac1T \\int^T_0 V_0 \\cos{\\omega t} \\; dt = 0
       \\end{align}
       \\]
@@ -10123,8 +10123,8 @@ const subtopics = {
 
       \\[
       \\begin{align}
-        \\langle P \\rangle &= V_\\text{RMS} I_\\text{RMS} \\\\
-                            &= \\frac{V_\\text{RMS}^2}R \\\\
+        \\langle P \\rangle &= V_\\text{RMS} I_\\text{RMS} \\\\[6pt]
+                            &= \\frac{V_\\text{RMS}^2}R \\\\[6pt]
                             &= I_\\text{RMS}^2R
       \\end{align}
       \\]
@@ -10478,10 +10478,10 @@ const subtopics = {
       it's worth a shot, right? </p>
       <p>Since the electron is rotating due to electric attraction, we can put the centrifugal force, \\(mr\\omega^2\\), equal
       to the Coulomb force, \\(\\frac{q_1 q_2}{4\\pi\\epsilon_0 r^2}=\\frac{e^2}{4\\pi\\epsilon_0 r^2}\\), to get:</p>
-      <span class="large-eqn">\\[
+      <div class="large-eqn">\\[
       mr\\omega^2 = \\frac{e^2}{4\\pi\\epsilon_0 m}, \\quad \\therefore \\quad r^3\\omega^2 = \\frac{e^2}{4\\pi\\epsilon_0 m},
       \\quad mr^2\\omega = n\\hbar\\quad \\therefore \\quad \\omega^2 = \\frac{n^2\\hbar^2}{m^2r^4}.
-      \\]</span>
+      \\]</div>
       <p>Then by smooshing the two equations we have together, we can get this:</p>
       <div class="hover-wrapper">
         <div class="formula-container">
@@ -10842,15 +10842,15 @@ const subtopics = {
       \\]
       <p> If we multiply the first equation by -1 and the second equation by \\(i\\), we can end up with
       two very important and completely serious formulae: </p><div class="hide-on-mobile">
-      <span class="large-eqn">\\[
+      <div class="large-eqn">\\[
       k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2}, \\quad
       \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
-      \\]</span></div>
+      \\]</div></div>
       
-      <span class="large-eqn show-on-mobile">\\[
+      <div class="large-eqn show-on-mobile">\\[
       k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2} \\] \\[
       \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
-      \\]</span>
+      \\]</div>
 
       <p>Very legit formulae, I know. </p>
       <p> Jokes aside, the reason why I used 'can PROBABLY be replaced with' as opposed to 'is equal to' is
@@ -11150,7 +11150,7 @@ const subtopics = {
 
       <p> And when \\( V(x) = V_0 \\), the result is pretty similar, except the energy is being subtracted by potential:</p>
 
-      <span class="large-eqn">\\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k'^2\\phi, \\quad \\text{where} \\quad k'^2=\\frac{2m(E-V_0)}{\\hbar^2} \\]</span>
+      <div class="large-eqn">\\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k'^2\\phi, \\quad \\text{where} \\quad k'^2=\\frac{2m(E-V_0)}{\\hbar^2} \\]</div>
 
       <p> This is SHM again, which means we get sine and cosine solutions again:</p>
 
@@ -11523,7 +11523,7 @@ const subtopics = {
       <p>The aim of the game is to use the collision kinematics established back in <a href="http://127.0.0.1:5500/topic.html?topic=mechanics&amp;year=1">Classical Mechanics</a>, as well as some features of <a href="http://127.0.0.1:5500/topic.html?topic=relativity&amp;year=1">Special Relativity</a> to get information about the particles.</p>
       <p>Starting with Relativity, we know that the speed of light (or causality) \\( c \\) doesn't change from frame to frame. In other word, the speed of light is an <em>invariant</em>. I mean that was like the whole point of the topic, no?</p>
       <p>However it turns out the speed of light isn't the only invariant. There are two more things we can look at.</p>
-      <p>The first is the <em>space-time interval</em>. Now I can't lie to you, I don't think we will be using this like EVER but it's being included for completion. If something happens at a location \\( (x_A, y_A, z_A) \\) at time \\( t_A \\) and some other thing were to happen at a location \\( (x_B, y_B, z_B) \\) at time \\( t_B \\), then this strange quantity doesn't change in any frame:</p> <span class="large-eqn">\\[I = (x_A - x_B)^2 + (y_A - y_B)^2 + (z_A - z_B)^2 - c^2 (t_A - t_B)^2 \\]</span>
+      <p>The first is the <em>space-time interval</em>. Now I can't lie to you, I don't think we will be using this like EVER but it's being included for completion. If something happens at a location \\( (x_A, y_A, z_A) \\) at time \\( t_A \\) and some other thing were to happen at a location \\( (x_B, y_B, z_B) \\) at time \\( t_B \\), then this strange quantity doesn't change in any frame:</p> <div class="large-eqn">\\[I = (x_A - x_B)^2 + (y_A - y_B)^2 + (z_A - z_B)^2 - c^2 (t_A - t_B)^2 \\]</div>
       <p>Now <strong>here's</strong> something we can actually use! The rest mass of an object also doesn't change from frame to frame.</p>
       <p>Now I'm sure you are raring to use this newfound information, but before we do, since we are working with relativity, we're gonna have to spell out which frames we are using.</p>
       <p>The first is the <em>Center of Mass (CoM) frame</em>. Recall from the Special Relativity that in the CoM frame, the momentum before and after the collision is zero.</p> \\[ \\sum_\\text{before collision} \\vec{p} = \\sum_\\text{after collision} \\vec{p} \\]
@@ -11565,7 +11565,7 @@ const subtopics = {
       </div>
       <p>That was easy, anyway, moving on...</p>
       <h4>Mandelstam-S in the fixed target frame</h4>
-      <p>Now we assume one of the particles, we'll say the first one, is at rest. Meaning the first particle has no momentum, \\( \\vec{p}_1 = 0 \\). That also means that the first particle's energy is its <em>rest energy</em>, \\( E_1 = m_1c^2 \\). Plugging those in, we get:</p> <span class="large-eqn">\\[ \\begin{align} s_\\text{fixed target} &= ( m_1c^2 + E_2 )^2 - |\\vec{p}_2|^2c^2 \\\\ &= m_1^2c^4 + 2E_2m_1c^2 + E_2^2 - |\\vec{p}_2|^2c^2 \\end{align} \\]</span>
+      <p>Now we assume one of the particles, we'll say the first one, is at rest. Meaning the first particle has no momentum, \\( \\vec{p}_1 = 0 \\). That also means that the first particle's energy is its <em>rest energy</em>, \\( E_1 = m_1c^2 \\). Plugging those in, we get:</p> <div class="large-eqn">\\[ \\begin{align} s_\\text{fixed target} &= ( m_1c^2 + E_2 )^2 - |\\vec{p}_2|^2c^2 \\\\ &= m_1^2c^4 + 2E_2m_1c^2 + E_2^2 - |\\vec{p}_2|^2c^2 \\end{align} \\]</div>
       <p>Erm, can't lie that looks ugly as hell. Luckily we can simplify it a bit. If you look carefully, like really carefully, you'll notice that there is a \\( E_2^2 - |\\vec{p}_2|^2c^2 \\) at the end, which we know is the rest energy of particle 2, \\( m_2^2c^4 \\). So we then get</p> \\[ s_\\text{fixed target} = m_1^2c^4 + 2E_2m_1c^2 + m_2^2c^4 \\]
       <p>Now at this point there is nothing we can really do, so we kinda have to charge this quite unappetising formula. Although, since colliders typically use very very <em>very</em> large energies, if we assume these energies are way way <em>way</em> bigger than the masses (so \\( E_2 \\gg m_1 \\) and \\( E_2 \\gg m_2 \\)), then we can kinda just sweep the rest energy terms under the rug, since the \\( 2E_2m_1c^2 \\) term is gonna hopefully be so big that the \\( m_1^2c^4 + m_2^2c^4 \\) - or lack thereof - won't really make a difference. So by throwing those terms in the bin, we end up with:</p>
       <div class="hover-wrapper">
@@ -11581,8 +11581,8 @@ const subtopics = {
           </div>
       </div>
       <h4>Mandelstam-S in the lab frame</h4>
-      <p>Now this is where things get tedious. Now we don't have any pretty little assumptions to work with, each particle has its own energy and its own momentum. Since we have nothing better to do, let's start by expanding out the formula, might as well right?</p> <span class="large-eqn">\\[ s_\\text{lab} = E_1^2 + 2E_1E_2 + E_2^2 - |\\vec{p}_1|^2c^2 - |\\vec{p}_2|^2c^2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</span>
-      <p> We can use the \\( E^2 - \\vec{p}^2c^2 = (mc^2)^2 \\) relation we've been using to simplify this equation a little bit:</p> <span class="large-eqn">\\[ s_\\text{lab} = (m_1c^2)^2 + (m_2c^2)^2 + 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</span>
+      <p>Now this is where things get tedious. Now we don't have any pretty little assumptions to work with, each particle has its own energy and its own momentum. Since we have nothing better to do, let's start by expanding out the formula, might as well right?</p> <div class="large-eqn">\\[ s_\\text{lab} = E_1^2 + 2E_1E_2 + E_2^2 - |\\vec{p}_1|^2c^2 - |\\vec{p}_2|^2c^2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</div>
+      <p> We can use the \\( E^2 - \\vec{p}^2c^2 = (mc^2)^2 \\) relation we've been using to simplify this equation a little bit:</p> <div class="large-eqn">\\[ s_\\text{lab} = (m_1c^2)^2 + (m_2c^2)^2 + 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</div>
       <p>And once again there isn't really anything else we can do, so time to pull some assumptions out of our arseholes! First let's do the thing from last time where we throw \\( (m_1c^2)^2 \\) and \\( (m_2c^2)^2 \\) in the bin because we are assuming that the collider's energies are super big or whatever:</p> \\[ s_\\text{lab} = 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]
       <p>Next let's assume that this collision is head on. That means that particle one and two are looking directly at each other when they collide. Since the angle is now \\( \\theta = 0 \\), the dot product of the momenta becomes</p> \\[ \\vec{p}_1 \\cdot \\vec{p}_2 = |\\vec{p}_1| |\\vec{p}_2| \\cos{0} = -|\\vec{p}_1| |\\vec{p}_2| \\]
       <p>Stick that in and we get:</p> \\[ s_\\text{lab} = 2E_1E_2 + 2|\\vec{p}_1| |\\vec{p}_2| c^2 \\]

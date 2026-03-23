@@ -4,9 +4,9 @@ topic: astro
 title: Telescopes
 ---
 
-*Fun fact, did you know that the building in Warwick Uni called the Oculus gets its name from the Latin word for 'eye'? Neat, huh?*
+*Fun fact: did you know that the building in Warwick Uni called the Oculus gets its name from the Latin word for 'eye'? Neat, huh?*
 
-Somewhat impressively, we have managed to go *three* whole subtopics in a section about mentioning telescopes even once? I think that deserves a round of applause!!
+Somewhat impressively, we have managed to go *three* whole subtopics in a section about telescopes without mentioning telescopes even once? I think that deserves a round of applause!!
 
 ### Different types of telescope
 
@@ -15,7 +15,7 @@ Somewhat impressively, we have managed to go *three* whole subtopics in a sectio
 <div class="container">
     <div class="text">
         <p> 
-            Refracting telescopes take all the light and focus it onto one point with a lens. Whilst this is not much of a problem for relatively small telescopes, as you try to build telescopes with larger and larger diametres, it becomes more and more difficult to create a lens which can do that well. So for larger diametres, we tend to use the other option:
+            Refracting telescopes take all the light and focus it onto one point with a lens. Whilst this is not much of a problem for relatively small telescopes, as you try to build telescopes with larger and larger diameters, it becomes more and more difficult to create a lens which can do that well. So for larger diameters, we tend to use the other option:
         </p>
     </div>
     <!-- DIVIDING LINE -->
@@ -52,25 +52,25 @@ Somewhat impressively, we have managed to go *three* whole subtopics in a sectio
     <!-- DIVIDING LINE -->
     <div class="text">
         <p> 
-            When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light to a focal point. This means that for a reflecting point, the focal point is actually behind the mirror.
+            When the diameters become too big for refraction, reflecting telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light to a focal point. This means that for a reflecting telescope, the focal point is actually behind the mirror.
         </p>
         <p> <span class="hide-on-mobile">
-            Now if your like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?"
+            Now, if you're like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?"
        </span> </p>
     </div>
     <!-- DIVIDING LINE -->
 </div>
 
-<span class="show-on-mobile"> Now if your like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?" </span>
+<span class="show-on-mobile"> Now, if you're like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?" </span>
 
-Simple answer, don't worry about it too much. Actual reflection telescopes have some additional features which redirect the light into a position we can actually look at. There are many different methods, but they don't matter. Just remember the reflecty stuff and your good.
+Simple answer: don't worry about it too much. Actual reflecting telescopes have some additional features which redirect the light into a position we can actually look at. There are many different methods, but they don't matter. Just remember the reflecty stuff and you're good.
 
 #### Combining the two
 
 <div class="container">
     <div class="text">
         <p> 
-            If you're lucky (and rich), you might get a telescope which does a bit o' both, which has a lens <em>and</em> a mirror. Here is an example of one of such telescope structures, called the <em>Dall-Kirkham</em> telescope. The mirrors position the light to a certain point, and the <em>corrector lens</em> positions it neatly to a focal point.
+            If you're lucky (and rich), you might get a telescope which does a bit o' both, which has a lens <em>and</em> a mirror. Here is an example of one such telescope structure, called the <em>Dall-Kirkham</em> telescope. The mirrors direct the light to a certain point, and the <em>corrector lens</em> positions it neatly to a focal point.
         </p>
     </div>
     <!-- DIVIDING LINE -->
@@ -98,15 +98,15 @@ Bloody cameras? I thought we were talking about telescopes?
 
 Let's say we have two stars, which we'll give the creative names *star 1* and *star 2*. Let's say that these 2 stars in the sky are separated by an angle of \\( \\alpha \\).
 
-Each star will emits light rays in every possible direction. However, since stars are so bloody far away, the ones that actually reach us are near enough parallel.
+Each star will emit light rays in every possible direction. However, since stars are so bloody far away, the ones that actually reach us are near enough parallel.
 
 <div class="container">
     <div class="text">
         <p> 
-            Now we will look at a very basic telescope, which is just a lens with diametre \( D \), focusing light on a sheet. As we already know, the distance from the lens to the focal point is the focal length, \( f \). We'll also say that the distance between one focal point and the next is \( l \).
+            Now we'll look at a very basic telescope, which is just a lens with diameter \( D \), focusing light on a sheet. As we already know, the distance from the lens to the focal point is the focal length, \( f \). We'll also say that the distance between one focal point and the next is \( l \).
         </p>
         <p> 
-            If our angle us small enough, then we can use our small angle approximation (\( \sin{\alpha} = \alpha \)) to get a relation between the two lengths and the angle:
+            If our angle is small enough, then we can use our small angle approximation (\( \sin{\alpha} = \alpha \)) to get a relation between the two lengths and the angle:
         </p>
         <div class="hover-wrapper">
             <div class="formula-container">
@@ -146,7 +146,7 @@ These are what we call *extended object*, objects which are big enough that we c
 
 What if we have two objects which are so close together in the sky, that to us it looks like one big object? Well then there's nothing much we can really do. But what I *can* tell you is the closest together things can get before we can no longer tell 'em apart.
 
-The derivation is quite long, with like Bessel functions and stuff (I'd know because, by pure co-incidence, we literally *just* went through the derivation in our Second Year 'Mathematical Methods for Physics' lecture right before I'm now typing this, fun right?), but the smallest angle between two objects a telescope with a circular lens of diametre \\( D \\) can differentiate between is given by:
+The derivation is quite long, with like Bessel functions and stuff (I'd know because, by pure coincidencer, we literally *just* went through the derivation in our Second Year 'Mathematical Methods for Physics' lecture right before I'm now typing this, fun right?), but the smallest angle between two objects a telescope with a circular lens of diameter \\( D \\) can differentiate between is given by:
 
 <div class="hover-wrapper">
     <div class="formula-container">
@@ -184,13 +184,13 @@ The final piece of the puzzle we need to consider when looking at telescopes is 
     <!-- DIVIDING LINE -->
     <div class="text">
         <p> 
-            Avert your attention to this here image. The first lens, the objective lens, takes the light from the two stars and squishes them down at their focal points (on a line known as the <em>focal plane</em>). Like I said it's pretty useless at this point, since our eyes can't see stuff which is that bloody small. 
+            Avert your attention to this here image. The first lens, the objective lens, takes the light from the two stars and squishes them down at their focal points (on a line known as the <em>focal plane</em>). Like I said, it's pretty useless at this point, since our eyes can't see stuff which is that bloody small. 
         </p>
         <span class="hide-on-mobile"><p>
             So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. 
         </p>
         <p>
-            So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. 
+            So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them in such a direction that they are flipped back to their correct direction. 
         </p></span>
     </div>
     <!-- DIVIDING LINE -->
@@ -199,16 +199,16 @@ The final piece of the puzzle we need to consider when looking at telescopes is 
 <span class="show-on-mobile">
 <p>So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. </p>
 
-<p>So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. </p>
+<p>So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them in such a direction that they are flipped back to their correct direction. </p>
 </span>
 
 Notice now there are two alphas, one when the light rays cross the first time (as they enter the objective lens) and another one as they cross the second time (after they are flipped by the ocular lens). We'll name the first one \\( \\alpha_1 \\) and the second one \\( \\alpha_2 \\).
 
-There are also two focal lengths, the length between the objective lens and the focal plane (which we'll call \\(f_1\\)), and the length between the ocular lens and the focal plain (which we'll call \\(f_2\\)).
+There are also two focal lengths, the length between the objective lens and the focal plane (which we'll call \\(f_1\\)), and the length between the ocular lens and the focal plane (which we'll call \\(f_2\\)).
 
 <p>Why the heck does this matter you wonder? Well remember how we used a small angle to approximate that little \( l \) distance? If you use the exact same logic you did with the first lens, you'll notice that we can actually do the same approximation with the second angle and second focal length:</p>\[ l = \alpha_1 f_1 = \alpha_2 f_2 \]
 
-So since \\( \\alpha_1 f_1 = \\alpha_2 f_2 \\), we can actually figure out how much the image is being magnified. If \\( \\alpha_1 \\) is the actual angular difference of the two objects in the sky. and \\( \\alpha_2 \\) is the angular difference in the eyepiece which we actually see, then we can calculate how many times bigger the image simply by dividing \\( \\alpha_2 \\) by \\( \\alpha_1 \\)
+So since \\( \\alpha_1 f_1 = \\alpha_2 f_2 \\), we can actually figure out how much the image is being magnified. If \\( \\alpha_1 \\) is the actual angular difference of the two objects in the sky, and \\( \\alpha_2 \\) is the angular difference in the eyepiece which we actually see, then we can calculate how many times bigger the image simply by dividing \\( \\alpha_2 \\) by \\( \\alpha_1 \\)
 
 <div class="hover-wrapper">
     <div class="formula-container">

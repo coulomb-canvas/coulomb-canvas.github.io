@@ -37,6 +37,7 @@ body {
   overflow-x: hidden;
 }
 
+
 .show-on-mobile {
     display: none;
   }
@@ -54,8 +55,15 @@ body {
   .show-on-mobile {
     display: inline
   }
+
 }
 
+@media (max-width: 70vh) {
+
+  .large-eqn {
+    font-size: 2.72vw;
+  }
+}
 
 
 
@@ -144,6 +152,19 @@ p {
 a:hover {
   opacity: 70%;
 }
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+
+}
+th, td {
+  background-color: #00000066;
+  padding: 0.5vw;
+  text-align: center;
+}
+
+tr:hover {background-color: var(--card)}
 
 .left-speech {
   background-color: white;

@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 81 subtopics
-// Generated: 2026-03-22T06:33:46.164Z
+// Generated: 2026-03-23T13:27:32.447Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -859,11 +859,11 @@ const subtopics = {
 
         <p>So taking our trusty \\(\\vec{a}\\) and \\(\\vec{b}\\) as examples, if we were to take the dot product of these
         two vectors, we'd get:</p>
-        \\[
+        <span class="large-eqn">\\[
          \\vec{a} \\cdot \\vec{b} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\cdot
         \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} = 
          (1\\times 2)+(4\\times -3)+(2\\times 1) = -8
-        \\]
+        \\]</span>
       <div class="container">
         <div class="image">
           <div class="image-floater">
@@ -1124,7 +1124,7 @@ const subtopics = {
         <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p>\\( x = r\\sin{\\theta}\\cos{\\phi}, \\quad 
+              <p class="large-eqn">\\( x = r\\sin{\\theta}\\cos{\\phi}, \\quad 
                      y = r\\sin{\\theta}\\sin{\\phi},  \\quad 
                      z = r\\cos{\\theta} \\)  </p>
             </div>
@@ -1178,7 +1178,7 @@ const subtopics = {
         <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p>\\( e_i \\cdot e'_j = \\delta_{ij} \\)  </p>
+              <p>\\[ e_i \\cdot e'_j = \\delta_{ij} \\] </p>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 8: Dot Product of Basis Vectors <br>(feat. Kronecker Delta)
@@ -1194,9 +1194,9 @@ const subtopics = {
         <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p>\\( e'_1=\\frac{e_2 \\times e_3}{e_1 \\cdot (e_2 \\times e_3)} \\)  </p>
-              <p>\\( e'_2=\\frac{e_3 \\times e_1}{e_1 \\cdot (e_2 \\times e_3)} \\) </p>
-              <p>\\( e'_3=\\frac{e_1 \\times e_2}{e_1 \\cdot (e_2 \\times e_3)} \\)  </p>
+              <p>\\[ e'_1=\\frac{e_2 \\times e_3}{e_1 \\cdot (e_2 \\times e_3)} \\]  </p>
+              <p>\\[ e'_2=\\frac{e_3 \\times e_1}{e_1 \\cdot (e_2 \\times e_3)} \\] </p>
+              <p>\\[ e'_3=\\frac{e_1 \\times e_2}{e_1 \\cdot (e_2 \\times e_3)} \\]  </p>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 9: Reciprocal Basis Vectors
@@ -1381,7 +1381,7 @@ const subtopics = {
         <p>We can treat the differential equation like it’s a normal quadratic equation. Remove the
         \\(y\\)’s, replace the first differentials with an \\(m\\), and replace the second differentials
         with an \\(m^2\\). So for instance:</p>
-        \\[ a\\frac{d^2y}{dx^2} + b\\frac{dy}{dx} + cy = 0 \\quad \\rightarrow \\quad am^2 + bm + c = 0 \\]
+        <span class="large-eqn">\\[ a\\frac{d^2y}{dx^2} + b\\frac{dy}{dx} + cy = 0 \\quad \\rightarrow \\quad am^2 + bm + c = 0 \\]</span>
         <p>Anyway, now that we’ve replaced the \\(m\\)’s, solve it like a quadratic equation, which
         will normally give you two results, say \\(m_1\\) and \\(m_2\\). This means the solution to the
         second order ODE is then:</p>
@@ -1476,7 +1476,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\(f(x) = A_0 + A_1(x-a) + A_2(x-a)^2 + A_3(x-a)^3 + \\dots\\)</p>
+            <p class="large-eqn">\\[f(x) = A_0 + A_1(x-a) + A_2(x-a)^2 + A_3(x-a)^3 + \\dots\\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1a: Taylor Expansion</div><div class="formula-tooltip-desc">
@@ -1585,19 +1585,19 @@ const subtopics = {
           <strong>converges</strong>. For example:
       </p>
 
-      \\[
+      <span class="large-eqn">\\[
         S_1 = \\sum^\\infty_{n=1} \\frac{1}{n^2} = 1 + \\frac14 + \\frac19 + \\frac1{16}+ ... = \\frac{\\pi^2}{6}
-      \\]
+      \\]</span>
 
       <p>
           If they just get bigger and fly off to infinity, it <strong>diverges</strong>, and it's completely useless 
           to us. An example of this is:
       </p>
 
-      \\[
+      <span class="large-eqn">\\[
         S_2 = \\sum^\\infty_{n=1} \\frac{1}{n} = 1 \\; + \\frac12 \\; + \\frac13 \\; + \\frac14 \\; 
         + \\; ...  \\; \\rightarrow \\infty
-      \\]
+      \\]</span>
 
       <p>
           How do we figure this out? By playing a little game, of course! There are a 
@@ -1701,9 +1701,9 @@ const subtopics = {
         sum of \\( f(N+1) \\) (the orange area), it's MORE than the total area underneath \\( \\frac1{x^2} \\). In other words:
       </p>
 
-      \\[
-        A_{N+1} = S - S_N \\geq \\int^\\infty_{N+1} f(x)dx \\text{OR} A_{N+1} + S_N \\leq S 
-      \\]
+      <span class="large-eqn">\\[
+        A_{N+1} = S - S_N \\geq \\int^\\infty_{N+1} f(x)dx \\quad \\text{OR} \\quad A_{N+1} + S_N \\leq S 
+      \\]</span>
 
       <p> That tells us that the total area underneath \\( \\frac1{x^2} \\) is somewhere in between. In other words: </p>
 
@@ -1876,7 +1876,7 @@ const subtopics = {
                 <div class="hover-wrapper">
                   <div class="formula-container">
                     <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                      <p>\\( \\nabla f = \\frac{\\partial f}{\\partial x} \\hat{i} + \\frac{\\partial f}{\\partial y} \\hat{j} + \\frac{\\partial f}{\\partial z} \\hat{k} \\)</p>
+                      <p>\\[ \\nabla f = \\frac{\\partial f}{\\partial x} \\hat{i} + \\frac{\\partial f}{\\partial y} \\hat{j} + \\frac{\\partial f}{\\partial z} \\hat{k} \\]</p>
                     </div>
                     <span class="formula-tooltip">
                       <div class="formula-tooltip-title">Formula 2: Gradient of a Scalar Field</div>
@@ -2383,7 +2383,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\[ f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left[ a_n\\cos(\\frac{n\\pi x}{L}) + b_n\\sin(\\frac{n\\pi x}{L}) \\right] \\]</p>
+            <p class="large-eqn">\\[ f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left[ a_n\\cos(\\frac{n\\pi x}{L}) + b_n\\sin(\\frac{n\\pi x}{L}) \\right] \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: Fourier Series Expansion</div><div class="formula-tooltip-desc">
@@ -2976,7 +2976,7 @@ const subtopics = {
       Law of Gravity:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+            <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
               \\[ F=\\frac{Gm_1m_2}{r^2}, \\text{ or in vector form, }\\mathbf{\\vec{F}}_{12}=-\\frac{Gm_1m_2}{r^2}\\hat{r} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -3244,17 +3244,20 @@ const subtopics = {
       <p> There is a quite fun way to represent this mathematically. Say you want to move from point A to
       point B, and you have two potential paths you can take, \\(P\\) and \\(P'\\). If the force moving you
       is a Tory force, then the work done can be represented as:</p>
-      <p>\\(
+      \\[
         \\int_A^B \\vec{F} \\cdot d\\vec{r} \\Big|_{P} 
         = \\int_A^B \\vec{F} \\cdot d\\vec{r} \\Big|_{P'},
-        \\)</p>
+        \\]
 
-      <p>  \\(
-        \\text{or} \\quad 
+        \\[
+          \\text{or} 
+        \\]
+      <span class="large-eqn">  \\[
+        
         \\int_A^B \\vec{F} \\cdot d\\vec{r} \\Big|_{P} 
         + \\int_B^A \\vec{F} \\cdot d\\vec{r} \\Big|_{P'} 
         = \\oint \\vec{F} \\cdot d\\vec{r} = 0,
-        \\)</p>
+        \\] </span>
 
       <p> Next, since we know that the work done isn't dependent on the journey, we can assign a value to
       each point in the space which corresponds to the work done to get there. This value is called the
@@ -4833,7 +4836,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( \\frac{dQ}{dt} = -\\kappa A \\frac{dT}{dx} \\)</p>
+            <p>\\[ \\frac{dQ}{dt} = -\\kappa A \\frac{dT}{dx} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
@@ -4864,7 +4867,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( P = \\frac{dQ}{dt} = \\epsilon \\sigma A T^4 \\)</p>
+            <p>\\[ P = \\frac{dQ}{dt} = \\epsilon \\sigma A T^4 \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
@@ -5154,7 +5157,7 @@ const subtopics = {
             creates a graph showing how many molecules (y-axis) have what energy (x-axis) for a given temperature. 
             The distribution looks like this:</p>
 
-          \\[ f(v) = 4\\pi \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} v^2 \\exp\\left( -\\frac{m v^2}{2 k_B T} \\right) \\]
+          <span class="large-eqn">\\[ f(v) = 4\\pi \\left( \\frac{m}{2\\pi k_B T} \\right)^{3/2} v^2 \\exp\\left( -\\frac{m v^2}{2 k_B T} \\right) \\]</span>
 
           <p>Whilst I don't think you'll have to remember the formula, you should get familiar with the shape
           it produces, because you <em>will</em> likely have to identify and interpret its features. It's a curve that:</p>
@@ -5203,7 +5206,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( t_{\\text{mean}} = \\frac{V}{4\\pi \\sqrt{2} r^2 v_{\\text{rms}} N} \\)</p>
+            <p>\\[ t_{\\text{mean}} = \\frac{V}{4\\pi \\sqrt{2} r^2 v_{\\text{rms}} N} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1a: Mean time between collisions</div><div class="formula-tooltip-desc">
@@ -5217,11 +5220,11 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( \\lambda = v_{\\text{rms}} t_{\\text{mean}} = \\frac{V}{4\\pi \\sqrt{2} r^2 N} \\)</p>
+            <p>\\[ \\lambda = v_{\\text{rms}} t_{\\text{mean}} = \\frac{V}{4\\pi \\sqrt{2} r^2 N} \\]</p>
 
             <p>Or, using the ideal gas law:</p>
 
-            <p>\\( \\lambda = \\frac{k_B T}{4\\pi \\sqrt{2} r^2 p} \\)</p>
+            <p>\\[ \\lambda = \\frac{k_B T}{4\\pi \\sqrt{2} r^2 p} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1b: Mean Free Path</div><div class="formula-tooltip-desc">
@@ -5245,7 +5248,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\( C_V = \\frac{1}{n} \\frac{dQ}{dT} \\)</p>
+            <p>\\[ C_V = \\frac{1}{n} \\frac{dQ}{dT} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 2: Heat Capacity at constant volume</div><div class="formula-tooltip-desc">
@@ -5278,8 +5281,8 @@ const subtopics = {
       <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p>\\(C_V=\\frac{1}{n} \\frac{dK_{\\text{tr}}}{dT}=\\frac{3}{2} R = 12.47 \\, 
-                \\text{J mol}^{-1}\\text{K}^{-1} \\).</p>
+              <p class="large-eqn">\\[C_V=\\frac{1}{n} \\frac{dK_{\\text{tr}}}{dT}=\\frac{3}{2} R = 12.47 \\, 
+                \\text{J mol}^{-1}\\text{K}^{-1}. \\]</p>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
@@ -5527,7 +5530,7 @@ const subtopics = {
       <p>Now since we are obviously operating the piston by having it move inwards or outwards, the volume is going to
       be changing. Therefore, work is done:</p>
 
-      \\[ W = \\int_{V_1}^{V_2} p  dV = \\int_{V_1}^{V_2} \\frac{nRT}{V} dV = nRT \\ln\\left(\\frac{V_2}{V_1}\\right) \\]
+      <span class="large-eqn">\\[ W = \\int_{V_1}^{V_2} p  dV = \\int_{V_1}^{V_2} \\frac{nRT}{V} dV = nRT \\ln\\left(\\frac{V_2}{V_1}\\right) \\]</span>
 
       <p>Then from the First Law:</p>
 
@@ -5606,9 +5609,6 @@ const subtopics = {
 
       <div class="container">
         <div class="text">
-          <br><br>
-
-
           <p>Which means the adiabat is <strong>steeper</strong> than the isotherm on a pV diagram. Because \\( \\gamma > 1 \\),
           and that's true here in thermal physics, not just in relativity. Apparently gammas make it a point to be more
           than one, regardless of where they are.</p>
@@ -5865,10 +5865,10 @@ const subtopics = {
 
       <p>The total internal energy is </p>
 
-      \\[0-nC_V(T_C-T_H)+0+-nC_V(T_H-T_C)=0\\]
+      <span class=large-eqn> \\[0-nC_V(T_C-T_H)+0+-nC_V(T_H-T_C)=0\\] </span>
 
-      <p>The total heat flow is</p> \\[nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0
-      = nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\]
+      <p>The total heat flow is</p> <span class=large-eqn>\\[nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0
+      = nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\]</span>
 
       <p>But we know from before that
       \\(\\frac{V_1}{V_2}=\\frac{V_3}{V_4}\\), which means that \\(Q=nR(T_H-T_C)\\ln{\\frac{V_1}{V_2}}\\).</p>
@@ -6296,7 +6296,7 @@ const subtopics = {
 
         <div class="hover-wrapper">
           <div class="formula-container" >
-            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
+            <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto; ">
               \\[ U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
               \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\]
             </div>
@@ -6798,9 +6798,25 @@ const subtopics = {
         <p><i>(I mean, now that I think about it...these are still essentially the ends of the string, because I’ve fused 
         two together, but whatever leave me alone...)</i></p>
 
-        <p>Imagine two bits of string tied together. One is a skinny little string (low mass per unit length, μ₁), and 
-        the other is a fat, heavy rope (high mass per unit length, μ₂). Your wave is wibble-wobbling along the skinny 
-        string, and then it meets the fat one.</p>
+        <div class="container">
+          <div class="text">
+            <p>Imagine two bits of string tied together. One is a skinny little string (low mass per unit length, μ₁), and 
+              the other is a fat, heavy rope (high mass per unit length, μ₂). Your wave is wibble-wobbling along the skinny 
+              string, and then it meets the fat one.</p>
+          </div>
+          <div class="image">
+            <div class="image-floater">
+              <div class="image-box">
+                <img src="images/Waves/String Join.png" class="pop-image" style="width: 300px"/>
+              </div>
+              <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+                font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+                Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
+                The adiabats appear steeper than the isotherms</div></span>
+            </div>
+          </div>
+        </div>
+
 
         <ul>
             <li><strong>Tension (T)</strong> is the same in both, because you're pulling on both ends equally.</li>
@@ -6812,54 +6828,156 @@ const subtopics = {
 
         <p>So now you've got three waves to deal with:</p>
         <ul>
-            <li>The <strong>incident wave</strong>: y_i = A_i cos(k₁x - ωt) <i>(the wave which is coming in from the 
-            skinny string)</i></li>
-            <li>The <strong>reflected wave</strong>: y_r = A_r cos(-k₁x - ωt) <i>(the wave being reflected, right-side 
-            up since this is a free end)</i></li>
-            <li>The <strong>transmitted wave</strong>: y_t = A_t cos(k₂x - ωt) <i>(the waves which soldier on into the 
-            thick mud)</i></li>
+            <li>The <strong>incident wave</strong> <i>(the wave which is coming in from the skinny string)</i>. 
+              We can represent this with the regular wave equation, with an amplitude \\( A_i \\) (i for incidence) 
+              and a wavenumber \\( k_1 \\). </li> \\[ y_i = A_i \\cos(k_1x - ωt) \\] 
+            <li>The <strong>reflected wave</strong>: <i>(the wave being reflected, right-side up since this is a free 
+              end)</i>. Since this is a reflection of the incident wave, the wavelength – and therefore the wavenumber –
+              doesn't change. That means the formula is mostly the same, except we have to replace \\(x\\) with 
+              \\(-x\\), since it's going in the opposite direction.</li> \\[ y_r = A_r \\cos(-k_1x - ωt) \\]
+            <li>The <strong>transmitted wave</strong>: <i>(the waves which soldier on into the thick mud)</i>. This
+              is again similar to the incident in that it moves in the same direction. However, since this string is thicker
+              the wavelength changes (as we established not long ago). That means there'll be a different wavenumber, which
+              we will aptly name \\(k_2\\).</li> \\[ y_t = A_t \\cos(k_2x - ωt) \\]
         </ul>
 
-        <p>At the join, two things have to be true, or the universe would literally fall apart:</p>
+        <p> All the power from the incident wave is split up into one of these two waves. </p>
+
+        <div class="hover-wrapper">
+          <div class="formula-container">
+            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+              \\[ P_i + P_r = P_t \\]
+            </div>
+            <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula 1: Power
+            </div><div class="formula-tooltip-desc">
+              The power from the incident wave is shared between the reflected wave and the transmitted wave
+            </div></span>
+          </div>
+        </div>
+
+        <p> Now we have our three wavefunctions, we need to consider some boundary conditions. At the join, two things 
+          have to be true, or else things would be way more difficult:</p>
         <ol>
             <li>The string <strong>can't snap</strong>. This means the height (y) must be continuous: at the 
-            connecty part, the thin string must have the same height as the thick string. So y_i + y_r = y_t at 
-            the join.</li>
+            connecty part (\\(x_0\\)), the thin string must have the same height as the thick string. So at the join:</li> 
+              \\[ y_i + y_r = y_t \\]
             <li>The <strong>forces balance</strong>. The slope (∂y/∂x) must be continuous. So the gradients add up 
-            nicely too.</li>
+              nicely too.</li>
         </ol>
 
         <p>Do a bit of maths <i>(which I'll save for the worked examples, 'cus it's a faff)</i>, and you get the gossip:</p>
 
-        <p>Remember from last time, we defined impedance Z = √(μT). I also mentioned that this is basically just how 
+        <p>Remember from last time, we defined impedance \\(Z = \\sqrt{μT}\\). I also mentioned that this is basically just how 
         much the string resists the wave. With the impedence, we can calculate two very important quantities:</p>
 
-        <p>The <strong>transmission coefficient</strong> (how much gets through):<br>
-        t = A_t / A_i = (2Z₁) / (Z₁ + Z₂)</p>
+        <p>The <strong>transmission coefficient</strong> (how much gets through):</p>
 
-        <p>The <strong>reflection coefficient</strong> (how much bounces back):<br>
-        r = A_r / A_i = (Z₁ - Z₂) / (Z₁ + Z₂)</p>
+        <div class="hover-wrapper">
+          <div class="formula-container">
+            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+              \\[ t = \\frac{A_t}{A_i} = \\frac{2Z_1}{Z_1 + Z_2} \\]
+            </div>
+            <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+            </div><div class="formula-tooltip-desc">
+              ...
+            </div></span>
+          </div>
+        </div>
+
+
+        <p>The <strong>reflection coefficient</strong> (how much bounces back):</p>
+
+        <div class="hover-wrapper">
+          <div class="formula-container">
+            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+              \\[ r = \\frac{A_r}{A_i} = \\frac{Z_1 - Z_2}{Z_1 + Z_2} \\]
+            </div>
+            <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+            </div><div class="formula-tooltip-desc">
+              ...
+            </div></span>
+          </div>
+        </div>
 
         <p>It’s like the story in the Bible when Moses sent people to scout out Canaan, and some actually went and 
         looked around (t) and others pussied out because they saw some big people there (r).</p>
 
-        <p><strong>What does this actually look like?</strong></p>
-        <ul>
-            <li><strong>Skinny string → Fat string (μ₁ < μ₂, so Z₁ < Z₂)</strong>: r is <strong>negative</strong>. The 
-            reflected wave comes back <strong>INVERTED</strong>. <i>(The scouty people are really disheartened after 
-            seeing that they can’t just stroll in and take their land by asking nicely, and that they will actually have 
-            to fight a war.)</i></li>
-            <li><strong>Fat string → Skinny string (μ₁ > μ₂, so Z₁ > Z₂)</strong>: r is <strong>positive</strong>. The 
-            reflected wave comes back the <strong>right way up</strong>. <i>(These are like the people who actually checked 
-            and saw that, yes there are people there (shock), but there is actually a lot of good stuff, so they go back 
-            home happy.)</i></li>
-            <li><strong>Perfect match (Z₁ = Z₂)</strong>: r = 0. No reflection! All the energy goes through. This is called 
-            impedance matching. <i>(Which surely is a bit of a redundancy, because if this happens, you have two strings, 
-            with the same mass per unit length, ain’t that just one big string?)</i></li>
-        </ul>
+        <p>What does this actually look like though? Since the impedence depends on tension and mass per unit length, 
+          and we know the tension doesn't change in this context, the size of the impedence depends only on the
+          mass per unit length. That means that when the mass per unit length is larger (i.e. the string is thicker),
+          the impedance is larger too (i.e. the string is stiffer), which is kinda intuitive when you think about it.
+        </p>
 
-        <p>And the power? The incident power splits up as well: P_i = P_r + P_t. No energy gets lost. It's just 
-        shared out.</p>
+        <p> Now let's think about what happens to the incident wave with these different thicknesses </p>
+
+
+        <div class="container">
+          <div class="text">
+            <p> 
+              If we go from a <strong>skinny string to a fat string </strong>(\\(μ_1 < μ_2\\), so \\(Z_1 < Z_2\\)), 
+              then by using Formula 1 we can see that \\(r\\) would be <strong>negative</strong>, meaning the 
+              reflected wave comes back <strong>INVERTED</strong>. <i>(The scouty people are really disheartened after 
+              seeing that they can’t just stroll in and take their land by asking nicely, and that they will actually have 
+              to fight a war.)</i>
+            </p>
+          </div>
+          <div class="image">
+            <div class="image-floater">
+              <div class="image-box">
+                <img src="images/Waves/Thin to thick.png" class="pop-image" 
+                style="width: 300px"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                Figure 2: Subtopic Title Image</div><div class="image-tooltip-desc">
+                You saw this something like this when you clicked onto this topic</div></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="image">
+            <div class="image-floater">
+              <div class="image-box left-box">
+                <img src="images/Waves/Thick to thin.png" class="pop-image" style="max-width: 100%; width: 70vw"/>
+              </div>
+              <span class="image-tooltip left-box" style="left:-120%;"> <div style="color: #006aff; 
+                font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+                Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
+                The adiabats appear steeper than the isotherms</div></span>
+            </div>
+          </div>
+          <div class="text">
+            If we go from a <strong>fat string to a skinny string </strong>(\\(μ_1 > μ_2\\), so \\(Z_1 > Z_2\\)), 
+            the same Formula 1 tells us \\(r\\) is <strong>positive</strong>. The reflected wave comes back the 
+            <strong>right way up</strong>. <i>(These are like the people who actually checked and saw that, yes there 
+            are people there (shock), but there is actually a lot of good stuff, so they go back home happy.)</i>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="text">
+            <p> 
+              And if you are really lucky, such that the two strings have the same BMIs (\\(μ_1 = μ_2\\), so \\(Z_1 = Z_2\\)),
+              then \\(r = 0\\). No reflection! All the energy goes through. This is called 
+              impedance matching. <i>(Which surely is a bit of a redundancy, because if this happens, you have two strings, 
+              with the same mass per unit length, ain’t that just one big string?)</i>
+            </p>
+          </div>
+          <div class="image">
+            <div class="image-floater">
+              <div class="image-box">
+                <img src="images/Waves/Same thickness.png" class="pop-image" 
+                style="max-width: 100%; width: 70vw"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                Figure 2: Subtopic Title Image</div><div class="image-tooltip-desc">
+                You saw this something like this when you clicked onto this topic</div></span>
+            </div>
+          </div>
+        </div>
 
         <h3>Standing Waves</h3>
 
@@ -6871,25 +6989,88 @@ const subtopics = {
         <p>The piano string is fixed at both ends. The wave goes back and forth, reflecting off each end. When it's 
         just right, it creates a standing wave – a wave that just vibrates on the spot, not going anywhere.</p>
 
-        <p>It's the sum of two identical waves going opposite ways (with one inverted for the fixed ends):<br>
-        U_total = 2A sin(kx) sin(ωt)</p>
+        <p>It's the sum of two identical waves going opposite ways (with one inverted for the fixed ends):</p>
+
+        \\[ U_{total} = 2A \\sin{(kx)} \\sin{(ωt)} \\]
 
         <p>Notice x and t are separate! This wave doesn't travel. It just oscillates.</p>
-        <ul>
-            <li><strong>Nodes</strong>: Points where the string is <strong>always still</strong> (sin(kx)=0). 
-            These happen at x = nλ/2.</li>
-            <li><strong>Antinodes</strong>: Points where the string has a <strong>proper rave</strong> and moves 
-            the most (|sin(kx)|=1).</li>
-        </ul>
+
+        <div class="container">
+          <div class="image">
+            <div class="image-floater">
+              <div class="image-box left-box">
+                <img src="images/Waves/Nodes and antinodes.png" class="pop-image" style="max-width: 100%; width: 85vw"/>
+              </div>
+              <span class="image-tooltip left-box" style="left:-120%;"> <div style="color: #006aff; 
+                font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+                Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
+                The adiabats appear steeper than the isotherms</div></span>
+            </div>
+          </div>
+          <div class="text">
+
+            <p><strong>Nodes</strong> are points where the string is <strong>always still</strong> (\\(\\sin(kx)=0\\)).
+            <strong>Antinodes</strong> are points where the string moves the most, in between all the nodes
+              (|sin(kx)|=1).</p>
+
+            <p>Don't worry about the antinodes too much for now, let's focus on the nodes. We know that at the node, 
+              \\(\\sin(kx)=0\\). Since sine functions are zero every \\( \\pi \\) radians, that means that
+              \\( kx = n\\pi \\), and therefore \\( k = \\frac{n\\pi}{x} \\). Then by replacing \\(k\\) with
+              \\( \\frac{\\lambda}{2\\pi} \\), we get \\(\\sin(kx)=0\\) whenever \\( x = \\frac{n\\lambda}2\\).</p>
+          </div>
+        </div>
 
         <p>For a string of length L fixed at both ends, you can only have standing waves that fit nicely. The 
-        allowed normal modes are:</p>
-        <ul>
-            <li><strong>Fundamental (n=1)</strong>: λ = 2L, f = v/2L</li>
-            <li><strong>n=2</strong>: λ = L, f = v/L = 2f₁</li>
-            <li><strong>n=3</strong>: λ = 2L/3, f = 3v/2L = 3f₁</li>
-            <li><strong>n=4</strong>: λ = L/2, f = 2v/L = 4f₁</li>
-        </ul>
+          allowed normal modes are:</p>
+
+        <div class="container">
+          <div class="text">
+            <p> 
+
+
+              <table style="width: 50vw;">
+                <tr>
+                  <th>Mode, \\( n \\)</th>
+                  <th>Wavelength, \\( \\lambda \\)</th>
+                  <th>Frequency, \\( f \\)</th>
+                </tr>
+                <tr>
+                  <td> \\( n = 1 \\) </td>
+                  <td> \\( \\lambda = 2L \\) </td>
+                  <td> \\( f_1 = \\frac{v}{2L} \\) <br> (The fundamental frequency) </td>
+                </tr>
+                <tr>
+                  <td> \\( n = 2 \\) </td>
+                  <td> \\( \\lambda = L \\) </td>
+                  <td> \\( f_2 = \\frac{v}{L} \\) </td>
+                </tr>
+                <tr>
+                  <td> \\( n = 3 \\) </td>
+                  <td> \\( \\lambda = \\frac{2L}3 \\) </td>
+                  <td> \\( f_3 = \\frac{3v}{2L} \\) </td>
+                </tr>
+                <tr>
+                  <td> \\( n = 4 \\) </td>
+                  <td> \\( \\lambda = \\frac{L}2 \\) </td>
+                  <td> \\( f_4 = \\frac{2v}{L} \\) </td>
+                </tr>
+
+              </table>
+            </p>
+          </div>
+          <div class="image">
+            <div class="image-floater">
+              <div class="image-box">
+                <img src="images/Waves/Harmonics.png" class="pop-image" 
+                style="max-width: 100%; width: 80vw;"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                Figure 2: Subtopic Title Image</div><div class="image-tooltip-desc">
+                You saw this something like this when you clicked onto this topic</div></span>
+            </div>
+          </div>
+        </div>
+
 
         <p>You get the picture. These are the notes the string can actually play. In the case of the piano (or any 
         stringed instrument, or any instrument for that matter, but piano is superior), these refer to what we call 
@@ -6940,17 +7121,16 @@ const subtopics = {
       <ul>
         <li>Fixed end: reflection inverted</li>
         <li>Free end: reflection not inverted</li>
-        <li>Impedance: \\( Z = \\sqrt{\\mu T} \\)</li>
-        <li>Reflection coefficient: \\( r = (Z_1 - Z_2)/(Z_1 + Z_2) \\)</li>
+        <li>The reflection coefficient is the difference between the two impedances divided by the total impedance:
+          \\[ r = (Z_1 - Z_2)/(Z_1 + Z_2) \\]</li>
         <li>Standing waves: \\( U = 2A \\sin(kx) \\sin(\\omega t) \\)</li>
         <li>Nodes: \\( x = n\\lambda/2 \\)</li>
         <li>Antinodes: \\( x = (2n+1)\\lambda/4 \\)</li>
-        <li>String modes: \\( f_n = nv/(2L) \\)</li>
+        <li>String modes: \\[ f_n = nv/(2L) \\]</li>
         <li>Pipe modes: open-open: \\( f_n = nv/(2L) \\); closed-open: \\( f_n = (2n-1)v/(4L) \\)</li>
       </ul>
 
-      <p>And remember: the universe doesn’t care how many times you pluck a string.  
-      It only cares about the boundary conditions.</p>
+      <p>And remember: parallel fifths are bad</p>
     `
   },
 
@@ -9659,10 +9839,10 @@ const subtopics = {
 
       <p> This is second order, pretend-it's-a-quadratic method, blah blah blah, and we get:</p>
 
-      \\[
+      <span class="large-eqn">\\[
         Q(t) = Q_0 e^{-\\alpha t}\\cos{\\omega t}, \\quad \\text{where} \\quad 
         \\alpha = \\frac{R}{2L}, \\quad \\omega = \\frac1{\\sqrt{\\frac1{LC} - \\alpha^2}}
-      \\]
+      \\]</span>
 
       <h3>TL;DR</h3>
 
@@ -10173,7 +10353,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\lambda' - \\lambda = \\lambda_C(1-\\cos{\\theta}), \\quad \\text{where} \\quad \\lambda_C = \\frac{h}{m_0c} \\]
+            <span class="large-eqn">\\[ \\lambda' - \\lambda = \\lambda_C(1-\\cos{\\theta}), \\quad \\text{where} \\quad \\lambda_C = \\frac{h}{m_0c} \\]</span>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula X
@@ -10298,10 +10478,10 @@ const subtopics = {
       it's worth a shot, right? </p>
       <p>Since the electron is rotating due to electric attraction, we can put the centrifugal force, \\(mr\\omega^2\\), equal
       to the Coulomb force, \\(\\frac{q_1 q_2}{4\\pi\\epsilon_0 r^2}=\\frac{e^2}{4\\pi\\epsilon_0 r^2}\\), to get:</p>
-      \\[
+      <span class="large-eqn">\\[
       mr\\omega^2 = \\frac{e^2}{4\\pi\\epsilon_0 m}, \\quad \\therefore \\quad r^3\\omega^2 = \\frac{e^2}{4\\pi\\epsilon_0 m},
       \\quad mr^2\\omega = n\\hbar\\quad \\therefore \\quad \\omega^2 = \\frac{n^2\\hbar^2}{m^2r^4}.
-      \\]
+      \\]</span>
       <p>Then by smooshing the two equations we have together, we can get this:</p>
       <div class="hover-wrapper">
         <div class="formula-container">
@@ -10661,11 +10841,17 @@ const subtopics = {
       \\frac{\\partial \\Psi}{\\partial t} = -i \\omega Ae^{i(kx-\\omega t)} = -i\\omega\\Psi
       \\]
       <p> If we multiply the first equation by -1 and the second equation by \\(i\\), we can end up with
-      two very important and completely serious formulae: </p>
-      \\[
+      two very important and completely serious formulae: </p><div class="hide-on-mobile">
+      <span class="large-eqn">\\[
       k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2}, \\quad
       \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
-      \\]
+      \\]</span></div>
+      
+      <span class="large-eqn show-on-mobile">\\[
+      k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2} \\] \\[
+      \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
+      \\]</span>
+
       <p>Very legit formulae, I know. </p>
       <p> Jokes aside, the reason why I used 'can PROBABLY be replaced with' as opposed to 'is equal to' is
       because, well, we don't actually know. So far, our only reason for doing this is... well why not? It
@@ -10678,7 +10864,7 @@ const subtopics = {
       <p>Thanks to de Broglie, we know that \\(p = \\hbar k\\). And thanks to Planck, we know that \\(E = \\hbar \\omega\\).
       So we can substitute these values in to get:</p>
       \\[
-      \\hbar \\omega = \\frac{\\hbar^2 k^2}{2m} , \\therefore \\hbar \\omega - \\frac{\\hbar^2 k^2}{2m} = 0
+      \\hbar \\omega = \\frac{\\hbar^2 k^2}{2m} , \\; \\therefore \\; \\hbar \\omega - \\frac{\\hbar^2 k^2}{2m} = 0
       \\]
       <p>We can then multiply this equation by \\(\\Psi\\) because... why not? It helps our cause I guess... and then we
       use the two 'can PROBABLY be replaced with' formulae to get:</p>
@@ -10964,7 +11150,7 @@ const subtopics = {
 
       <p> And when \\( V(x) = V_0 \\), the result is pretty similar, except the energy is being subtracted by potential:</p>
 
-      \\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k'^2\\phi, \\quad \\text{where} \\quad k'^2=\\frac{2m(E-V_0)}{\\hbar^2} \\]
+      <span class="large-eqn">\\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k'^2\\phi, \\quad \\text{where} \\quad k'^2=\\frac{2m(E-V_0)}{\\hbar^2} \\]</span>
 
       <p> This is SHM again, which means we get sine and cosine solutions again:</p>
 
@@ -11337,7 +11523,7 @@ const subtopics = {
       <p>The aim of the game is to use the collision kinematics established back in <a href="http://127.0.0.1:5500/topic.html?topic=mechanics&amp;year=1">Classical Mechanics</a>, as well as some features of <a href="http://127.0.0.1:5500/topic.html?topic=relativity&amp;year=1">Special Relativity</a> to get information about the particles.</p>
       <p>Starting with Relativity, we know that the speed of light (or causality) \\( c \\) doesn't change from frame to frame. In other word, the speed of light is an <em>invariant</em>. I mean that was like the whole point of the topic, no?</p>
       <p>However it turns out the speed of light isn't the only invariant. There are two more things we can look at.</p>
-      <p>The first is the <em>space-time interval</em>. Now I can't lie to you, I don't think we will be using this like EVER but it's being included for completion. If something happens at a location \\( (x_A, y_A, z_A) \\) at time \\( t_A \\) and some other thing were to happen at a location \\( (x_B, y_B, z_B) \\) at time \\( t_B \\), then this strange quantity doesn't change in any frame:</p> \\[I = (x_A - x_B)^2 + (y_A - y_B)^2 + (z_A - z_B)^2 - c^2 (t_A - t_B)^2 \\]
+      <p>The first is the <em>space-time interval</em>. Now I can't lie to you, I don't think we will be using this like EVER but it's being included for completion. If something happens at a location \\( (x_A, y_A, z_A) \\) at time \\( t_A \\) and some other thing were to happen at a location \\( (x_B, y_B, z_B) \\) at time \\( t_B \\), then this strange quantity doesn't change in any frame:</p> <span class="large-eqn">\\[I = (x_A - x_B)^2 + (y_A - y_B)^2 + (z_A - z_B)^2 - c^2 (t_A - t_B)^2 \\]</span>
       <p>Now <strong>here's</strong> something we can actually use! The rest mass of an object also doesn't change from frame to frame.</p>
       <p>Now I'm sure you are raring to use this newfound information, but before we do, since we are working with relativity, we're gonna have to spell out which frames we are using.</p>
       <p>The first is the <em>Center of Mass (CoM) frame</em>. Recall from the Special Relativity that in the CoM frame, the momentum before and after the collision is zero.</p> \\[ \\sum_\\text{before collision} \\vec{p} = \\sum_\\text{after collision} \\vec{p} \\]
@@ -11379,7 +11565,7 @@ const subtopics = {
       </div>
       <p>That was easy, anyway, moving on...</p>
       <h4>Mandelstam-S in the fixed target frame</h4>
-      <p>Now we assume one of the particles, we'll say the first one, is at rest. Meaning the first particle has no momentum, \\( \\vec{p}_1 = 0 \\). That also means that the first particle's energy is its <em>rest energy</em>, \\( E_1 = m_1c^2 \\). Plugging those in, we get:</p> \\[ \\begin{align} s_\\text{fixed target} &= ( m_1c^2 + E_2 )^2 - |\\vec{p}_2|^2c^2 \\\\ &= m_1^2c^4 + 2E_2m_1c^2 + E_2^2 - |\\vec{p}_2|^2c^2 \\end{align} \\]
+      <p>Now we assume one of the particles, we'll say the first one, is at rest. Meaning the first particle has no momentum, \\( \\vec{p}_1 = 0 \\). That also means that the first particle's energy is its <em>rest energy</em>, \\( E_1 = m_1c^2 \\). Plugging those in, we get:</p> <span class="large-eqn">\\[ \\begin{align} s_\\text{fixed target} &= ( m_1c^2 + E_2 )^2 - |\\vec{p}_2|^2c^2 \\\\ &= m_1^2c^4 + 2E_2m_1c^2 + E_2^2 - |\\vec{p}_2|^2c^2 \\end{align} \\]</span>
       <p>Erm, can't lie that looks ugly as hell. Luckily we can simplify it a bit. If you look carefully, like really carefully, you'll notice that there is a \\( E_2^2 - |\\vec{p}_2|^2c^2 \\) at the end, which we know is the rest energy of particle 2, \\( m_2^2c^4 \\). So we then get</p> \\[ s_\\text{fixed target} = m_1^2c^4 + 2E_2m_1c^2 + m_2^2c^4 \\]
       <p>Now at this point there is nothing we can really do, so we kinda have to charge this quite unappetising formula. Although, since colliders typically use very very <em>very</em> large energies, if we assume these energies are way way <em>way</em> bigger than the masses (so \\( E_2 \\gg m_1 \\) and \\( E_2 \\gg m_2 \\)), then we can kinda just sweep the rest energy terms under the rug, since the \\( 2E_2m_1c^2 \\) term is gonna hopefully be so big that the \\( m_1^2c^4 + m_2^2c^4 \\) - or lack thereof - won't really make a difference. So by throwing those terms in the bin, we end up with:</p>
       <div class="hover-wrapper">
@@ -11395,8 +11581,8 @@ const subtopics = {
           </div>
       </div>
       <h4>Mandelstam-S in the lab frame</h4>
-      <p>Now this is where things get tedious. Now we don't have any pretty little assumptions to work with, each particle has its own energy and its own momentum. Since we have nothing better to do, let's start by expanding out the formula, might as well right?</p>\\[ s_\\text{lab} = E_1^2 + 2E_1E_2 + E_2^2 - |\\vec{p}_1|^2c^2 - |\\vec{p}_2|^2c^2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]
-      <p> We can use the \\( E^2 - \\vec{p}^2c^2 = (mc^2)^2 \\) relation we've been using to simplify this equation a little bit:</p> \\[ s_\\text{lab} = (m_1c^2)^2 + (m_2c^2)^2 + 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]
+      <p>Now this is where things get tedious. Now we don't have any pretty little assumptions to work with, each particle has its own energy and its own momentum. Since we have nothing better to do, let's start by expanding out the formula, might as well right?</p> <span class="large-eqn">\\[ s_\\text{lab} = E_1^2 + 2E_1E_2 + E_2^2 - |\\vec{p}_1|^2c^2 - |\\vec{p}_2|^2c^2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</span>
+      <p> We can use the \\( E^2 - \\vec{p}^2c^2 = (mc^2)^2 \\) relation we've been using to simplify this equation a little bit:</p> <span class="large-eqn">\\[ s_\\text{lab} = (m_1c^2)^2 + (m_2c^2)^2 + 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</span>
       <p>And once again there isn't really anything else we can do, so time to pull some assumptions out of our arseholes! First let's do the thing from last time where we throw \\( (m_1c^2)^2 \\) and \\( (m_2c^2)^2 \\) in the bin because we are assuming that the collider's energies are super big or whatever:</p> \\[ s_\\text{lab} = 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]
       <p>Next let's assume that this collision is head on. That means that particle one and two are looking directly at each other when they collide. Since the angle is now \\( \\theta = 0 \\), the dot product of the momenta becomes</p> \\[ \\vec{p}_1 \\cdot \\vec{p}_2 = |\\vec{p}_1| |\\vec{p}_2| \\cos{0} = -|\\vec{p}_1| |\\vec{p}_2| \\]
       <p>Stick that in and we get:</p> \\[ s_\\text{lab} = 2E_1E_2 + 2|\\vec{p}_1| |\\vec{p}_2| c^2 \\]
@@ -11864,14 +12050,14 @@ const subtopics = {
   "telescopes": {
     title: "Telescopes",
     content: `
-      <p><em>Fun fact, did you know that the building in Warwick Uni called the Oculus gets its name from the Latin word for 'eye'? Neat, huh?</em></p>
-      <p>Somewhat impressively, we have managed to go <em>three</em> whole subtopics in a section about mentioning telescopes even once? I think that deserves a round of applause!!</p>
+      <p><em>Fun fact: did you know that the building in Warwick Uni called the Oculus gets its name from the Latin word for 'eye'? Neat, huh?</em></p>
+      <p>Somewhat impressively, we have managed to go <em>three</em> whole subtopics in a section about telescopes without mentioning telescopes even once? I think that deserves a round of applause!!</p>
       <h3>Different types of telescope</h3>
       <h4>Refracting Telescope</h4>
       <div class="container">
           <div class="text">
               <p> 
-                  Refracting telescopes take all the light and focus it onto one point with a lens. Whilst this is not much of a problem for relatively small telescopes, as you try to build telescopes with larger and larger diametres, it becomes more and more difficult to create a lens which can do that well. So for larger diametres, we tend to use the other option:
+                  Refracting telescopes take all the light and focus it onto one point with a lens. Whilst this is not much of a problem for relatively small telescopes, as you try to build telescopes with larger and larger diameters, it becomes more and more difficult to create a lens which can do that well. So for larger diameters, we tend to use the other option:
               </p>
           </div>
           <!-- DIVIDING LINE -->
@@ -11906,21 +12092,21 @@ const subtopics = {
           <!-- DIVIDING LINE -->
           <div class="text">
               <p> 
-                  When the diametres become too big for refraction, reflection telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light to a focal point. This means that for a reflecting point, the focal point is actually behind the mirror.
+                  When the diameters become too big for refraction, reflecting telescopes come to the rescue. Instead of using a lens like a refracting telescope, reflecting telescopes use a <em>mirror</em> to reflect (shock) the light to a focal point. This means that for a reflecting telescope, the focal point is actually behind the mirror.
               </p>
               <p> <span class="hide-on-mobile">
-                  Now if your like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?"
+                  Now, if you're like me you might look at the image and think "wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?"
              </span> </p>
           </div>
           <!-- DIVIDING LINE -->
       </div>
-      <p><span class="show-on-mobile"> Now if your like me you might look at the image and think &quot;wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?&quot; </span></p>
-      <p>Simple answer, don't worry about it too much. Actual reflection telescopes have some additional features which redirect the light into a position we can actually look at. There are many different methods, but they don't matter. Just remember the reflecty stuff and your good.</p>
+      <p><span class="show-on-mobile"> Now, if you're like me you might look at the image and think &quot;wait a sec, if the focal point is <em>behind</em> the bloody mirror, how the hell are we supposed to actually put our eye there to see it?&quot; </span></p>
+      <p>Simple answer: don't worry about it too much. Actual reflecting telescopes have some additional features which redirect the light into a position we can actually look at. There are many different methods, but they don't matter. Just remember the reflecty stuff and you're good.</p>
       <h4>Combining the two</h4>
       <div class="container">
           <div class="text">
               <p> 
-                  If you're lucky (and rich), you might get a telescope which does a bit o' both, which has a lens <em>and</em> a mirror. Here is an example of one of such telescope structures, called the <em>Dall-Kirkham</em> telescope. The mirrors position the light to a certain point, and the <em>corrector lens</em> positions it neatly to a focal point.
+                  If you're lucky (and rich), you might get a telescope which does a bit o' both, which has a lens <em>and</em> a mirror. Here is an example of one such telescope structure, called the <em>Dall-Kirkham</em> telescope. The mirrors direct the light to a certain point, and the <em>corrector lens</em> positions it neatly to a focal point.
               </p>
           </div>
           <!-- DIVIDING LINE -->
@@ -11942,14 +12128,14 @@ const subtopics = {
       <h3>Cameras</h3>
       <p>Bloody cameras? I thought we were talking about telescopes?</p>
       <p>Let's say we have two stars, which we'll give the creative names <em>star 1</em> and <em>star 2</em>. Let's say that these 2 stars in the sky are separated by an angle of \\( \\alpha \\).</p>
-      <p>Each star will emits light rays in every possible direction. However, since stars are so bloody far away, the ones that actually reach us are near enough parallel.</p>
+      <p>Each star will emit light rays in every possible direction. However, since stars are so bloody far away, the ones that actually reach us are near enough parallel.</p>
       <div class="container">
           <div class="text">
               <p> 
-                  Now we will look at a very basic telescope, which is just a lens with diametre \\( D \\), focusing light on a sheet. As we already know, the distance from the lens to the focal point is the focal length, \\( f \\). We'll also say that the distance between one focal point and the next is \\( l \\).
+                  Now we'll look at a very basic telescope, which is just a lens with diameter \\( D \\), focusing light on a sheet. As we already know, the distance from the lens to the focal point is the focal length, \\( f \\). We'll also say that the distance between one focal point and the next is \\( l \\).
               </p>
               <p> 
-                  If our angle us small enough, then we can use our small angle approximation (\\( \\sin{\\alpha} = \\alpha \\)) to get a relation between the two lengths and the angle:
+                  If our angle is small enough, then we can use our small angle approximation (\\( \\sin{\\alpha} = \\alpha \\)) to get a relation between the two lengths and the angle:
               </p>
               <div class="hover-wrapper">
                   <div class="formula-container">
@@ -11983,7 +12169,7 @@ const subtopics = {
       <p>These are what we call <em>extended object</em>, objects which are big enough that we can actually measure what portion of the night sky they take up.</p>
       <h3>Diffraction Limit</h3>
       <p>What if we have two objects which are so close together in the sky, that to us it looks like one big object? Well then there's nothing much we can really do. But what I <em>can</em> tell you is the closest together things can get before we can no longer tell 'em apart.</p>
-      <p>The derivation is quite long, with like Bessel functions and stuff (I'd know because, by pure co-incidence, we literally <em>just</em> went through the derivation in our Second Year 'Mathematical Methods for Physics' lecture right before I'm now typing this, fun right?), but the smallest angle between two objects a telescope with a circular lens of diametre \\( D \\) can differentiate between is given by:</p>
+      <p>The derivation is quite long, with like Bessel functions and stuff (I'd know because, by pure coincidencer, we literally <em>just</em> went through the derivation in our Second Year 'Mathematical Methods for Physics' lecture right before I'm now typing this, fun right?), but the smallest angle between two objects a telescope with a circular lens of diameter \\( D \\) can differentiate between is given by:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -12016,25 +12202,25 @@ const subtopics = {
           <!-- DIVIDING LINE -->
           <div class="text">
               <p> 
-                  Avert your attention to this here image. The first lens, the objective lens, takes the light from the two stars and squishes them down at their focal points (on a line known as the <em>focal plane</em>). Like I said it's pretty useless at this point, since our eyes can't see stuff which is that bloody small. 
+                  Avert your attention to this here image. The first lens, the objective lens, takes the light from the two stars and squishes them down at their focal points (on a line known as the <em>focal plane</em>). Like I said, it's pretty useless at this point, since our eyes can't see stuff which is that bloody small. 
               </p>
               <span class="hide-on-mobile"><p>
                   So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. 
               </p>
               <p>
-                  So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. 
+                  So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them in such a direction that they are flipped back to their correct direction. 
               </p></span>
           </div>
           <!-- DIVIDING LINE -->
       </div>
       <span class="show-on-mobile">
       <p>So the light then continues on until it gets big enough for us to see. Slight problem though, since all the light that was at the top is now at the bottom and vice versa, that actually means that the image we now have is <em>upside down</em>. </p>
-      <p>So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them is such a direction that they are flipped back to their correct direction. </p>
+      <p>So at the point where the image is big enough, we put the eyepiece (or <em>ocular lens</em> if you'd like), which straightens the light beams back out, but points them in such a direction that they are flipped back to their correct direction. </p>
       </span>
       <p>Notice now there are two alphas, one when the light rays cross the first time (as they enter the objective lens) and another one as they cross the second time (after they are flipped by the ocular lens). We'll name the first one \\( \\alpha_1 \\) and the second one \\( \\alpha_2 \\).</p>
-      <p>There are also two focal lengths, the length between the objective lens and the focal plane (which we'll call \\(f_1\\)), and the length between the ocular lens and the focal plain (which we'll call \\(f_2\\)).</p>
+      <p>There are also two focal lengths, the length between the objective lens and the focal plane (which we'll call \\(f_1\\)), and the length between the ocular lens and the focal plane (which we'll call \\(f_2\\)).</p>
       <p>Why the heck does this matter you wonder? Well remember how we used a small angle to approximate that little \\( l \\) distance? If you use the exact same logic you did with the first lens, you'll notice that we can actually do the same approximation with the second angle and second focal length:</p>\\[ l = \\alpha_1 f_1 = \\alpha_2 f_2 \\]
-      <p>So since \\( \\alpha_1 f_1 = \\alpha_2 f_2 \\), we can actually figure out how much the image is being magnified. If \\( \\alpha_1 \\) is the actual angular difference of the two objects in the sky. and \\( \\alpha_2 \\) is the angular difference in the eyepiece which we actually see, then we can calculate how many times bigger the image simply by dividing \\( \\alpha_2 \\) by \\( \\alpha_1 \\)</p>
+      <p>So since \\( \\alpha_1 f_1 = \\alpha_2 f_2 \\), we can actually figure out how much the image is being magnified. If \\( \\alpha_1 \\) is the actual angular difference of the two objects in the sky, and \\( \\alpha_2 \\) is the angular difference in the eyepiece which we actually see, then we can calculate how many times bigger the image simply by dividing \\( \\alpha_2 \\) by \\( \\alpha_1 \\)</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -12177,7 +12363,7 @@ const subtopics = {
               </div>
           </div>
       </div>
-      <p>That means that the heavier star is closer to the middle and the lighter star is further. Next we can look at their velocities: since they are orbiting in a circle, we can use the equation for centripetal force and equate it to the gravitational force:</p> \\[ \\cancel{m_1} \\omega^2 r_1 = \\frac{G \\cancel{m_1} m_2}{R^2} \\quad \\text{and} \\quad \\cancel{m_2} \\omega^2 r_2 = \\frac{G m_1 \\cancel{m_2}}{R^2} \\]
+      <p>That means that the heavier star is closer to the middle and the lighter star is further. Next we can look at their velocities: since they are orbiting in a circle, we can use the equation for centripetal force and equate it to the gravitational force:</p> <span class="large-eqn">\\[ \\cancel{m_1} \\omega^2 r_1 = \\frac{G \\cancel{m_1} m_2}{R^2} \\quad \\text{and} \\quad \\cancel{m_2} \\omega^2 r_2 = \\frac{G m_1 \\cancel{m_2}}{R^2} \\]</span>
       <p>If we shuffle the variables around, we eventually get an equation for the angular frequency (well, angular frequency <em>squared</em>):</p>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -12433,7 +12619,7 @@ const subtopics = {
       <p>If you scroll us a little bit (or press the hamburger menu and then press the button which says &quot;2. The Transit Method&quot;) you'll realise that I spoke about using stars which go in front of planets as a way to determine the size of these exoplanets, based on the assumption that planets are solid objects which block all light. But think about it. The atmosphere of any planet is made mostly of gas. That wouldn't block light completely.</p>
       <p>Once the planet transits in front of the star, it actually just illuminates the atmosphere in a weird way. Since different elements absorb different frequencies of light. So if we were to look at the planet transiting across the star at that frequency (using like a filter or something, idk), the planet would look a little bit bigger because the planet AND it's atmosphere are blocking the star. Then by identifying the wavelength and which chemicals absorb it, we can learn a thing or two about what is in the planet's atmosphere.</p>
       <p>Going back to our previous discussions of transit, we know that the transit depth is the ratio of the planet's area compared to the star's area</p>
-      <p>However at the relevant frequency, we also have to include the height of the atmosphere when considering the area.</p>\\[ \\delta_{R_P + H_\\text{atm}} = \\frac{\\pi (R_P+H_\\text{atm})^2}{\\pi R_S^2} = \\frac{R_P^2 + 2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2} \\] \\[ \\downarrow \\] \\[ \\delta_{R_P + H_\\text{atm}} = \\delta_{R_P} + \\frac{2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2}\\]
+      <p>However at the relevant frequency, we also have to include the height of the atmosphere when considering the area.</p> <span class="large-eqn">\\[ \\delta_{R_P + H_\\text{atm}} = \\frac{\\pi (R_P+H_\\text{atm})^2}{\\pi R_S^2} = \\frac{R_P^2 + 2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2} \\]</span> \\[ \\downarrow \\] <span class="large-eqn">\\[ \\delta_{R_P + H_\\text{atm}} = \\delta_{R_P} + \\frac{2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2}\\]</span>
       <p>As much as we do need to consider the height of the atmosphere, it's <em>pretty</em> bloddy small compared to the radius of the planet, and especially when compared to the radius of the sun. As a result, that \\(\\frac{H_\\text{atm}^2}{R_S^2}\\) term is so close to zero, that it might as well be zero.</p>
       <p>With that in mind, we get a pretty good approximation for how much the atmosphere contributes to the transit depth:</p>
       <div class="hover-wrapper">

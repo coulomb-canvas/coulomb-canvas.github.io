@@ -1348,8 +1348,6 @@ body.dimmed::before {
 
 @media (max-width: 100vh) {
   #next-subtopic-button {
-    width: 15vw;
-    height: 10vw;
     bottom: 3vh;
     font: 3vw;
     position: fixed;
@@ -1358,8 +1356,6 @@ body.dimmed::before {
   }
 
   #back-subtopic-button {
-    width: 15vw;
-    height: 10vw;
     font: 3vw;
     position: fixed;
     left: 4vw;

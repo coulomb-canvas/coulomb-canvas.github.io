@@ -1350,10 +1350,10 @@ body.dimmed::before {
   #next-subtopic-button {
     width: 15vw;
     height: 10vw;
+    bottom: 3vh;
     font: 3vw;
     position: fixed;
     right: 4vw;
-    top: 90vh;
     z-index: 50;
   }
 
@@ -1363,7 +1363,7 @@ body.dimmed::before {
     font: 3vw;
     position: fixed;
     left: 4vw;
-    top: 90vh;
+    bottom: 3vh;
     z-index: 50;
   }
 }
@@ -1458,7 +1458,7 @@ body.dimmed::before {
   #bottom-subtopic-name {
     font-size: 3vh;
     padding: 0px;
-    bottom: 6vh;
+    bottom: 2.5vh;
     text-align: center;
     line-height: 1;
   }

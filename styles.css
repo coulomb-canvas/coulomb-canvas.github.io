@@ -151,7 +151,17 @@ p {
     padding: 2%;
   }
 
+  .subtopic-text .eqn {
+    background-color: var(--card);
+    padding: 2%;
+  }
+
   .subtopic-text .formula-box .large-eqn {
+    background-color: rgba(255, 0, 0, 0);
+    padding: 0%;
+  }
+
+  .subtopic-text .formula-box .eqn {
     background-color: rgba(255, 0, 0, 0);
     padding: 0%;
   }

@@ -5748,9 +5748,9 @@ const subtopics = {
       nor destroyed, or more formally, that the change in a system's internal energy is the difference between the energy
       flowing into the system and the work done by the system itself:</p>
 
-      \\[
+      <div class=eqn>\\[
         \\Delta U = Q - W
-      \\]
+      \\]</div>
 
       <p> Now with that out of the way, let's get to the next best thing. Have you ever wondered why you can’t un-burn 
       wood, un-mix coffee, or un-splash water? It's because of the Second Law of thermodynamics. In short, this law
@@ -5865,10 +5865,10 @@ const subtopics = {
 
       <p>The total internal energy is </p>
 
-      <span class=large-eqn> \\[0-nC_V(T_C-T_H)+0+-nC_V(T_H-T_C)=0\\] </span>
+      <div class=large-eqn eqn> \\[0-nC_V(T_C-T_H)+0+-nC_V(T_H-T_C)=0\\] </div>
 
-      <p>The total heat flow is</p> <span class=large-eqn>\\[nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0
-      = nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\]</span>
+      <p>The total heat flow is</p> <div class=large-eqn eqn>\\[nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0
+      = nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\]</div>
 
       <p>But we know from before that
       \\(\\frac{V_1}{V_2}=\\frac{V_3}{V_4}\\), which means that \\(Q=nR(T_H-T_C)\\ln{\\frac{V_1}{V_2}}\\).</p>
@@ -5884,11 +5884,11 @@ const subtopics = {
 
       <p>Oh yes, the efficiency. We know from earlier that </p>
 
-      \\[ \\varepsilon = 1 - \\frac{|Q_C|}{Q_H} \\]
+      <div class="eqn"> \\[ \\varepsilon = 1 - \\frac{|Q_C|}{Q_H} \\] </div>
 
       <p>If we then plug in our formulae for \\(W\\) and \\(Q_H\\), we get:</p>
 
-      \\[ \\varepsilon = 1 - \\frac{|nRT_C\\ln{\\frac{V_3}{V_4}}|}{nRT_H\\ln{\\frac{V_1}{V_2}}} \\]
+      <div class="eqn">\\[ \\varepsilon = 1 - \\frac{|nRT_C\\ln{\\frac{V_3}{V_4}}|}{nRT_H\\ln{\\frac{V_1}{V_2}}} \\]</div>
       <p>Remember that \\(\\frac{V_1}{V_2}=\\frac{V_3}{V_4}\\), then do a bit of cancellation:</p>
 
       <div class="hover-wrapper">
@@ -6004,7 +6004,7 @@ const subtopics = {
 
       <p>We define a small change in spaztication as:</p>
 
-      \\[ dS = \\frac{dQ_{\\text{rev}}}{T} \\]
+      <div class=eqn>\\[ dS = \\frac{dQ_{\\text{rev}}}{T} \\]</div>
 
       <p>Where:</p>
       <ul>
@@ -6014,11 +6014,11 @@ const subtopics = {
 
       <p>So for a finite process:</p>
 
-      \\[ \\Delta S = \\int \\frac{dQ_{\\text{rev}}}{T} \\]
+      <div class=eqn> \\[ \\Delta S = \\int \\frac{dQ_{\\text{rev}}}{T} \\] </div>
 
       <p>If \\( T \\) is constant (an isothermal process), this simplifies to:</p>
 
-      \\[ \\Delta S = \\frac{Q}{T} \\]
+      <div class=eqn> \\[ \\Delta S = \\frac{Q}{T} \\] </div>
 
       <h3>Reversible vs Irreversible Processes</h3>
 
@@ -6214,11 +6214,11 @@ const subtopics = {
       <p>So, in case you've forgotten (or you are just too lazy to scroll up like 10 bloody percent of the page...), the
       wave function is:</p>
 
-      \\[ U(x, t) = A \\cos(kx - \\omega t) \\]
+      <div class=eqn> \\[ U(x, t) = A \\cos(kx - \\omega t) \\] </div>
 
       <p>Differentiating twice with respect to time gives us the acceleration of the medium</p>
 
-      \\[ \\frac{\\partial^2 U}{\\partial t^2} = -A \\omega^2 \\cos(kx - \\omega t) = -\\omega^2 U(x, t) \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 U}{\\partial t^2} = -A \\omega^2 \\cos(kx - \\omega t) = -\\omega^2 U(x, t) \\] </div>
 
       <p>And if you remember, this equation we have here is actually in the form of a simple harmonic oscillator, that
       form being \\( \\frac{d^2x}{dt^2} = -\\omega^2 x \\). So this means that the medium is oscillating in simple 
@@ -6226,12 +6226,12 @@ const subtopics = {
 
       <p>Differentiating twice with respect to the distance gives us... I don't actually know what quantity this would
       be tbh, I believe it refers to curvature in space or something. But I <em>can</em> differentiate, so here it is:</p>
-      \\[ \\frac{\\partial^2 U}{\\partial x^2} = -A k^2 \\cos(kx - \\omega t) = -k^2 U(x, t) \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 U}{\\partial x^2} = -A k^2 \\cos(kx - \\omega t) = -k^2 U(x, t) \\] </div>
 
       <p>Well looky here! Upon partially differentiating twice with respect to each variable, we now have two equations
       which <em>both</em> still include \\( U(x, t) \\). From there, we can rearrange both equations to get:</p>
 
-      \\[ \\frac{\\partial^2 U}{\\partial t^2} = \\frac{\\omega^2}{k^2} \\frac{\\partial^2 U}{\\partial x^2} \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 U}{\\partial t^2} = \\frac{\\omega^2}{k^2} \\frac{\\partial^2 U}{\\partial x^2} \\] </div>
 
       <p>And since we know that \\( \\frac{\\omega}{k} = v \\), we can simplify this to:</p>
 
@@ -6252,7 +6252,7 @@ const subtopics = {
 
       <p>And also, quite interestingly in my opinion, the wave equation for an electromagnetic wave is this:</p>
 
-      \\[ \\frac{\\partial^2 E}{\\partial t^2} = \\frac{1}{\\mu_0 \\epsilon_0} \\frac{\\partial^2 E}{\\partial x^2} \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 E}{\\partial t^2} = \\frac{1}{\\mu_0 \\epsilon_0} \\frac{\\partial^2 E}{\\partial x^2} \\] </div>
 
       <p>Bearing in mind that the speed squared is the term attached to the partial diferentiation with respect to x, that 
       means that \\(v^2=\\frac{1}{\\mu_0 \\epsilon_0}\\), making the speed \\( v = \\frac{1}{\\mu_0 \\epsilon_0}\\).
@@ -6267,7 +6267,7 @@ const subtopics = {
         <em>little</em> bit more work than that.
       </p>
       <p>To begin, remember our original wave equation:</p>
-      \\[U(x,t)=A\\cos{kx-\\omega t}\\]
+      <div class=eqn> \\[U(x,t)=A\\cos{kx-\\omega t}\\] </div>
       <p>The little \\(kx-\\omega t\\) within the cosine is what's known as the phase of the wave, which is how far along
         the wave we are. This probably makes sense, considering that the cosine function is itself a wave, in which case
         \\(kx-\\omega t\\) is like the angle. Slight problem though, if we set the conditions \\(x=0\\) and \\(t=0\\), that
@@ -6278,14 +6278,14 @@ const subtopics = {
       <p>The solution is actually quite simple actually, just add one more term, \\(\\phi\\), which tells us where
         abouts the wave begins. So now we have a brand new spanking wave function:
       </p>
-      \\[U(x,t)=A\\cos{kx-\\omega t+\\phi}\\]
+      <div class=eqn> \\[U(x,t)=A\\cos{kx-\\omega t+\\phi}\\] </div>
       <p>Reminding ourselves that \\(\\phi\\) is an angle, we can give it a value, either between \\(0\\) and \\(2\\pi\\),
         or between \\(-\\pi\\) and \\(\\pi\\).
       </p>
       <p> We are one step closer to being able to fuse our waves together! But before that, I should introduce a 
         trigonometric equation which should come in handy:
       </p>
-      \\[\\cos{P}+\\cos{Q}=2\\cos{\\frac{P+Q}2}\\cos{\\frac{P-Q}2}\\]
+      <div class=eqn> \\[\\cos{P}+\\cos{Q}=2\\cos{\\frac{P+Q}2}\\cos{\\frac{P-Q}2}\\] </div>
 
       <p>I'm <em>pretty</em> sure this equation will be given to you in examinations, it's peak for you if it isn't lol.
         Anyways, this formula allows us to add two different cosine waves together. By replacing \\(\\cos{P}\\) and
@@ -6296,13 +6296,15 @@ const subtopics = {
 
         <div class="hover-wrapper">
           <div class="formula-container" >
-            <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto; ">
-              \\[ U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
-              \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\]
+            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
+              <div class=large-eqn> \\[ U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
+              \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\] </div>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula 4: Superposition of waves</div><div class="formula-tooltip-desc">
-            The combined wavefunction of two waves.</div></span>
+              Formula 4: Superposition of waves</div>
+            <div class="formula-tooltip-desc">
+              The combined wavefunction of two waves.</div>
+            </span>
           </div>
         </div>
 
@@ -6331,12 +6333,11 @@ const subtopics = {
       <p>We've dealt with different phases, now let's think about different frequencies! Now imagine two waves with 
       <em>very</em> slightly different frequencies:</p>
 
-      \\[ \\omega_1 = \\omega + \\Delta\\omega \\]
-      \\[ \\omega_2 = \\omega - \\Delta\\omega \\]
+      <div class=eqn> \\[ \\omega_1 = \\omega + \\Delta\\omega \\] \\[ \\omega_2 = \\omega - \\Delta\\omega \\] </div>
 
       <p>We can put both of our omegas into two different wave functions, and then add them up:</p>
 
-      \\[ U_{\\text{total}} = 2A \\cos(kx - \\omega t) \\cos(\\Delta k x - \\Delta\\omega t) \\]
+      <div class=eqn> \\[ U_{\\text{total}} = 2A \\cos(kx - \\omega t) \\cos(\\Delta k x - \\Delta\\omega t) \\] </div>
 
       <p>Now if you look very carefully, you'll realise that this kinda looks like two waves, and I know what you're 
       thinking, "you flipping idiot, of course it looks like two waves, you just added two together." Yes, that's not
@@ -6491,7 +6492,7 @@ const subtopics = {
       <p>Now, if you want to derive the wave equation, you’d have to consider a lot of things. But boring you with long
       stupid derivations is not my style. Instead, here’s the result:</p>
 
-      \\[ \\frac{\\partial^2 y}{\\partial t^2} = \\frac{T}{\\mu} \\frac{\\partial^2 y}{\\partial x^2} \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 y}{\\partial t^2} = \\frac{T}{\\mu} \\frac{\\partial^2 y}{\\partial x^2} \\] </div>
 
       <p>Where:</p>
       <ul>
@@ -6530,7 +6531,7 @@ const subtopics = {
       <p>If we have a wave with wave function \\( y(x,t) = A \\cos(kx - \\omega t) \\), the power of the wave can be
       shown to be:</p>
 
-      \\[ P = TA^2 k \\omega \\sin^2(kx - \\omega t) \\]
+      <div class=eqn> \\[ P = TA^2 k \\omega \\sin^2(kx - \\omega t) \\] </div>
 
       <p>Now you may wonder, "Wait, wasn't the wave function U? Why are we using a y all of a sudden?" Well that's simple!
       That's because... erm... because that's what the lecture notes say. If you have a problem, make sure to send David
@@ -6541,7 +6542,7 @@ const subtopics = {
       <strong>average power</strong>. Since \\(\\sin^2\\) waves just jump between 0 and 1, the average of such a
       wave is just 0.5. So we get an average power of:</p>
 
-      \\[ P_{\\text{av}} = \\frac{1}{2} TA^2 k \\omega \\]
+      <div class=eqn> \\[ P_{\\text{av}} = \\frac{1}{2} TA^2 k \\omega \\] </div>
 
       <p>But wait! We can <em>simplify</em> this equation, to make it <em>simpler</em>, meaning the equation can be made
       <em>less complicated</em>! Remember that for any wave, the wave speed (specifically the phase velocity, but these
@@ -6549,7 +6550,7 @@ const subtopics = {
       We also know from not long ago that \\( v = \\sqrt{\\frac{T}{\\mu}} \\). Plug some numbers in and rearrange for
       \\(k\\), we now have:</p>
 
-      \\[k=\\omega\\sqrt{\\frac{\\mu}{T}}\\]
+      <div class=eqn> \\[k=\\omega\\sqrt{\\frac{\\mu}{T}}\\] </div>
 
       <p>We are now one step closer to being able to <em>simplify</em> our equation! All we need to do now is substitute 
       this into our average power equation, which gives us:</p>
@@ -6592,28 +6593,28 @@ const subtopics = {
       <p> Now that we are talking about compressions, we need to introduce stress and strain. Starting with
         stress, this describes the force an object 'feels' per unit area. </p>
 
-        \\[
+        <div class=eqn> \\[
           \\text{stress} = \\frac{F}A
-        \\]
+        \\] </div>
 
       <p>Strain is a measure of how much something is stretched or squashed, \\(\\Delta L\\), from its original
         length, \\( L \\):</p>
 
-      \\[
+      <div class=eqn> \\[
         \\text{strain} = \\frac{\\Delta L}L
-      \\]
+      \\] </div>
 
       <p> And last but not least, we have the Young's modulus, \\(Y\\), which measures the... wait 'ang on a
         minute \\( Y \\)? Since when was Young's modulus \\( Y \\)? Could've sworn it was \\( E \\), no? Well
         anyway, the Young's modulus, \\(Y\\), which measures the ratio between the two:</p>
 
-      \\[
+      <div class=eqn> \\[
         Y = \\frac{\\text{stress}}{\\text{strain}}
-      \\]
+      \\] </div>
 
       <p>Now we get the speed of the squishy-squashy in the rod:</p>
 
-      \\[ v = \\sqrt{\\frac{Y}{\\rho}} \\]
+      <div class=eqn> \\[ v = \\sqrt{\\frac{Y}{\\rho}} \\] </div>
 
       <p>...where \\( \\rho \\) is the density of the material of the rod. For example, the wave speed
       in steel is about \\( v \\approx 5 \\times 10^3 \\, \\text{m/s} \\).</p>
@@ -6631,7 +6632,7 @@ const subtopics = {
         the wave speed more or less exactly how you'd use the Young's Modulus, just replace it to get the speed
         of shear waves: </p>
 
-      \\[ v_{shear} = \\sqrt{\\frac{G}{\\rho}} \\]
+      <div class=eqn> \\[ v_{shear} = \\sqrt{\\frac{G}{\\rho}} \\] </div>
 
       <p>For steel: \\( v_{shear} \\approx 3.1 \\times 10^3 \\, \\text{m/s} \\), meaning in steel, hitting a bar
         from the top produces waves which are slower than longitudinal waves.</p>
@@ -6647,7 +6648,7 @@ const subtopics = {
         shear waves we calculated like half a second ago. So if you can't be arsed to look up like a third of
         the page, the wave speed for s-waves is: </p>
 
-      \\[ v_{\\text{s}} = \\sqrt{\\frac{G}{\\rho}} \\]
+      <div class=eqn> \\[ v_{\\text{s}} = \\sqrt{\\frac{G}{\\rho}} \\] </div>
 
       <p> Interestingly, s-waves are part of the reason we know the Earth has a liquid core. S-waves can't travel 
         through liquids, and when an earthquake takes place, you will not be able to detect s-waves on the other
@@ -6663,7 +6664,7 @@ const subtopics = {
         sure you'll also be pleased to know that the idea you are currently having of just replacing \\(Y\\) with
         \\(B\\) is also wrong. The wave speed has a slightly more interesting equation: </p>
 
-      \\[ v_p = \\sqrt{\\frac{B + \\frac{4}{3}G}{\\rho}} \\]
+      <div class=eqn> \\[ v_p = \\sqrt{\\frac{B + \\frac{4}{3}G}{\\rho}} \\] </div>
 
       <p>Notice that the shear modulus \\( G \\) has made a cute little reappearance here. Why it's here, and why
         we need four thirds of it, who knows and who cares, but it's here nevertheless, and it really really would
@@ -6675,13 +6676,13 @@ const subtopics = {
         It's hopefully no secret that sound waves are longitudinal waves, made up of areas of lower and higher 
         air pressures. The pressure at a given point is calculates like so:</p>
 
-      \\[ p = AkB \\sin(kx - \\omega t) \\]
+      <div class=eqn> \\[ p = AkB \\sin(kx - \\omega t) \\] </div>
 
       <p>Hey, the Bulk modulus is back! And it will make another reappearance when we want ot consider the
         wave speed in a gas. We return back to the cute square-root-of-modulus-over-density format we had 
         before:</p>
 
-      \\[ v = \\sqrt{\\frac{B}{\\rho}} \\]
+      <div class=eqn> \\[ v = \\sqrt{\\frac{B}{\\rho}} \\] </div>
 
       <p>Now this is cool and all, but we can actually simplify this quite a bit. Let's take the medium that the
         sound is travelling in is an ideal gas, and then assume that the speed of sound is so fast, that heat 
@@ -6691,32 +6692,32 @@ const subtopics = {
       <p>That's right, the <em>adiabatic</em> process. We also learnt that in the adiabatic process, this relationship
         between the pressure and the volume is true:</p>
 
-      \\[
+      <div class=eqn> \\[
         pV^\\gamma = \\text{constant}
-      \\]
+      \\] </div>
 
       <p>Where \\( \\gamma \\) was the ratio between the heat capacity at constant volume and the heat capacity at
       constant pressure, \\( C_V / C_P \\). The Bulk modulus is actually defined as so:</p>
 
-      \\[
+      <div class=eqn> \\[
         B = -V \\frac{\\partial p}{\\partial V}
-      \\]
+      \\] </div>
 
       <p> A bit arbitrary I know, but you'll have to take my word for it. Anyway, now we can rearrange the relationship
         we have for the adiabatic process to get \\( p \\), and substitute that into the formula for Bulk modulus: </p>
 
-      \\[
+      <div class=eqn> \\[
         pV^\\gamma = \\text{constant}
-      \\]
-      \\[
+      \\] </div>
+      <div class=eqn> \\[
         p = \\text{constant} \\times V^{-\\gamma}
-      \\]
-      \\[
+      \\] </div>
+      <div class=eqn> \\[
         \\frac{\\partial p}{\\partial V} = \\text{constant} \\times -\\frac{\\gamma}{V} \\times V^{-\\gamma}
-      \\]
-      \\[
+      \\] </div>
+      <div class=eqn> \\[
         B = \\gamma p
-      \\]
+      \\] </div>
 
       <p>\\( v_{\\text{sound}} = \\sqrt{\\frac{\\gamma k_B T}{M}} \\)</p>
 
@@ -6830,15 +6831,15 @@ const subtopics = {
         <ul>
             <li>The <strong>incident wave</strong> <i>(the wave which is coming in from the skinny string)</i>. 
               We can represent this with the regular wave equation, with an amplitude \\( A_i \\) (i for incidence) 
-              and a wavenumber \\( k_1 \\). </li> \\[ y_i = A_i \\cos(k_1x - ωt) \\] 
-            <li>The <strong>reflected wave</strong>: <i>(the wave being reflected, right-side up since this is a free 
+              and a wavenumber \\( k_1 \\). </li></ul> <div class=eqn> \\[ y_i = A_i \\cos(k_1x - ωt) \\] </div>
+            <ul><li>The <strong>reflected wave</strong>: <i>(the wave being reflected, right-side up since this is a free 
               end)</i>. Since this is a reflection of the incident wave, the wavelength – and therefore the wavenumber –
               doesn't change. That means the formula is mostly the same, except we have to replace \\(x\\) with 
-              \\(-x\\), since it's going in the opposite direction.</li> \\[ y_r = A_r \\cos(-k_1x - ωt) \\]
-            <li>The <strong>transmitted wave</strong>: <i>(the waves which soldier on into the thick mud)</i>. This
+              \\(-x\\), since it's going in the opposite direction.</li></ul> <div class=eqn> \\[ y_r = A_r \\cos(-k_1x - ωt) \\] </div>
+            <ul><li>The <strong>transmitted wave</strong>: <i>(the waves which soldier on into the thick mud)</i>. This
               is again similar to the incident in that it moves in the same direction. However, since this string is thicker
               the wavelength changes (as we established not long ago). That means there'll be a different wavenumber, which
-              we will aptly name \\(k_2\\).</li> \\[ y_t = A_t \\cos(k_2x - ωt) \\]
+              we will aptly name \\(k_2\\).</li></ul> <div class=eqn> \\[ y_t = A_t \\cos(k_2x - ωt) \\] </div>
         </ul>
 
         <p> All the power from the incident wave is split up into one of these two waves. </p>
@@ -6859,11 +6860,11 @@ const subtopics = {
         <p> Now we have our three wavefunctions, we need to consider some boundary conditions. At the join, two things 
           have to be true, or else things would be way more difficult:</p>
         <ol>
-            <li>The string <strong>can't snap</strong>. This means the height (y) must be continuous: at the 
-            connecty part (\\(x_0\\)), the thin string must have the same height as the thick string. So at the join:</li> 
-              \\[ y_i + y_r = y_t \\]
-            <li>The <strong>forces balance</strong>. The slope (∂y/∂x) must be continuous. So the gradients add up 
-              nicely too.</li>
+            <li><p>The string <strong>can't snap</strong>. This means the height (y) must be continuous: at the 
+            connecty part (\\(x_0\\)), the thin string must have the same height as the thick string. So at the join:</p></li></ol> 
+              <div class=eqn> \\[ y_i + y_r = y_t \\] </div>
+            <ol><li><p>The <strong>forces balance</strong>. The slope (∂y/∂x) must be continuous. So the gradients add up 
+              nicely too.</p></li>
         </ol>
 
         <p>Do a bit of maths <i>(which I'll save for the worked examples, 'cus it's a faff)</i>, and you get the gossip:</p>
@@ -6991,7 +6992,7 @@ const subtopics = {
 
         <p>It's the sum of two identical waves going opposite ways (with one inverted for the fixed ends):</p>
 
-        \\[ U_{total} = 2A \\sin{(kx)} \\sin{(ωt)} \\]
+        <div class=eqn> \\[ U_{total} = 2A \\sin{(kx)} \\sin{(ωt)} \\] </div>
 
         <p>Notice x and t are separate! This wave doesn't travel. It just oscillates.</p>
 
@@ -7552,19 +7553,19 @@ const subtopics = {
       remembering which one is which. My advice to you is... just bloody learn it. There's nothing more to it, just suck 
       it up, maybe a bit of dimensional analysis if you want, but yeah, just figure it out. The sooner the better.</i></p>
 
-      <h3>Resistors: Teamwork</h3>
+      <h3>Resistors</h3>
 
       <p>You can stick resistors together in two ways: series or parallel. The goal is often to replace a complicated 
       mess with one <b>equivalent resistor</b>, \\(R_{eq}\\).</p>
 
       <ul>
           <li><b>In Series:</b> The current has no choice but to go through one then the other. The total resistance is 
-          just the sum:
-              \\[R_{eq} = R_1 + R_2 + R_3 + ...\\]</li>
-          <li><b>In Parallel:</b> The current can split up and take different paths. The voltage across each is the same. 
-          Here, you add the <i>reciprocals</i>:
-              \\[\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + ...\\]</li>
-      </ul>
+          just the sum:</li></ul>
+              <div class=eqn> \\[R_{eq} = R_1 + R_2 + R_3 + ...\\] </div>
+          <ul><li><b>In Parallel:</b> The current can split up and take different paths. The voltage across each is the same. 
+          Here, you add the <i>reciprocals</i>:</li></ul>
+              <div class=eqn> \\[\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + ...\\] </div>
+      
 
       <p>For two resistors in parallel, this simplifies to \\(R_{eq} = \\frac{R_1 R_2}{R_1 + R_2}\\).</p>
 
@@ -7621,12 +7622,12 @@ const subtopics = {
       <p>As charge builds up on the capacitor, it pushes back against the battery's voltage. The current decreases over 
       time. Using Kirchhoff's rules, you get a differential equation for the charge \\(Q\\):</p>
 
-      <p>\\[R \\frac{dQ}{dt} + \\frac{Q}{C} = \\mathcal{E}\\]</p>
+      <div class=eqn> \\[R \\frac{dQ}{dt} + \\frac{Q}{C} = \\mathcal{E}\\]</div>
 
       <p>Solve this, and you get:</p>
 
-      <p>\\[Q(t) = Q_{final} \\left(1 - e^{-t/RC}\\right) = \\mathcal{E}C \\left(1 - e^{-t/RC}\\right)\\]</p>
-      <p>\\[I(t) = I_0 e^{-t/RC} = \\frac{\\mathcal{E}}{R} e^{-t/RC}\\]</p>
+      <div class=eqn> \\[Q(t) = Q_{final} \\left(1 - e^{-t/RC}\\right) = \\mathcal{E}C \\left(1 - e^{-t/RC}\\right)\\] 
+      \\[I(t) = I_0 e^{-t/RC} = \\frac{\\mathcal{E}}{R} e^{-t/RC}\\]</div>
 
       <p>The product \\(RC\\) is called the <b>time constant</b>, \\(\\tau\\). It's the time it takes for the charge 
       to reach about 63% of its final value, or the current to drop to 37% of its initial value. It's a measure of how 
@@ -7638,12 +7639,12 @@ const subtopics = {
       temporary battery itself.</p>
 
       <p>The differential equation loses the \\(\\mathcal{E}\\) term:</p>
-      <p>\\[R \\frac{dQ}{dt} + \\frac{Q}{C} = 0\\]</p>
+      <div class=eqn> \\[R \\frac{dQ}{dt} + \\frac{Q}{C} = 0\\]</div>
 
       <p>The solution is a simple decay:</p>
 
-      <p>\\[Q(t) = Q_0 e^{-t/RC}\\]</p>
-      <p>\\[I(t) = I_0 e^{-t/RC}\\]</p>
+      <div class=eqn> \\[Q(t) = Q_0 e^{-t/RC}\\]
+      \\[I(t) = I_0 e^{-t/RC}\\]</div>
 
       <p>And that's it! The current flows <i>backwards</i> compared to the charging case as the capacitor empties itself 
       out. Again, the time constant \\(\\tau = RC\\) tells you how long it takes to discharge.</p>
@@ -7715,9 +7716,9 @@ const subtopics = {
         value for \\( \\frac1{4\\pi \\varepsilon_0} \\) on its own, often referred to as a constant \\( k \\)
         to make the equation look more like the gravitational one:</p>
 
-      \\[
+      <div class=eqn> \\[
         k = \\frac1{4\\pi \\varepsilon_0} \\approx 9 \\times 10^{9}
-      \\]
+      \\] </div>
 
       <h3>Electric Field</h3>
 
@@ -7731,9 +7732,9 @@ const subtopics = {
         any given point in space, the electric field \\( \\vec{E} \\) at that point is the amount of force per 
         unit charge that our new friend, the test charge, experiences there. In equation form: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{E}(\\vec{r}) = \\frac{\\vec{F}}{q}
-      \\]
+      \\] </div>
       <p>  In other words, the stronger the 
         electric field at a point, the faster the test charge will end up leaving that point. So you could think 
         of \\( \\vec{E} \\) as a measure of how much the test charge dislike the scenary in a particular place, 
@@ -7868,9 +7869,9 @@ const subtopics = {
 
       <p> Remember, from classical mechanics, the MOMENT is calculated by crossing the position with the force:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{\\tau} = \\vec{r} \\times \\vec{F}
-      \\]
+      \\] </div>
 
       <p> If we then recall from up the page that \\( \\vec{F} = q\\vec{E} \\), and recognise that 
         \\( \\vec{d} = 2\\vec{r} \\), we can get a formula for MOMENT in terms of magnetic dipole moment and
@@ -8121,35 +8122,35 @@ const subtopics = {
       <p>From classical mechanics, we know that when a force acts on something, it does work proportional
         to the distance the force moved:</p>
 
-      \\[ W = \\vec{F} \\cdot \\vec{d} \\]
+      <div class=eqn> \\[ W = \\vec{F} \\cdot \\vec{d} \\] </div>
 
       <p> By turning this into a line integral, we can generalise this formula so that it applies to wiggly paths
         as well as straight lines:</p>
 
-      \\[ W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{l} \\]
+      <div class=eqn> \\[ W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{l} \\] </div>
 
       <p>Or for a closed path (when it starts and ends in the same place):</p>
 
-      \\[ W = \\oint_C \\vec{F} \\cdot d\\vec{l} \\]
+      <div class=eqn> \\[ W = \\oint_C \\vec{F} \\cdot d\\vec{l} \\] </div>
 
       <p>For a conservative force (like the electric force), the work done depends only on start and end points.
         Since the path doesn't matter, we can think of work done in terms of a change in potential energy. 
         So we define <strong>potential energy</strong> \\( U \\) such that:</p>
 
-      \\[ W_{a \\to b} = U_a - U_b \\]
+      <div class=eqn> \\[ W_{a \\to b} = U_a - U_b \\] </div>
 
       <p>Now that we have 2 equations for \\( W_{a \\to b} \\), we can equate them to get a value for electric
         potential: </p>
 
-      \\[
+      <div class=eqn> \\[
         W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{l}
-      \\]
+      \\] 
 
       \\[
         W_{a \\rightarrow b} = \\frac{q_1 q_2}{4\\pi \\varepsilon_0} \\int_a^b \\frac{1}{r^2} dr
-      \\]
-
-      \\[ U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r} \\]
+      \\] </div>
+      
+      \\[ U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r} \\] 
 
       <p>Positive if same sign (repulsive), negative if opposite (attractive).</p>
 
@@ -8179,7 +8180,7 @@ const subtopics = {
       <p> Once again, the principle of linear superposition applies, meaning you can calculate net potential by
         adding up individual potentials:</p>
 
-      \\[ V = \\frac{1}{4\\pi\\epsilon_0} \\sum_{i=1}^N \\frac{q_i}{|\\vec{r}-\\vec{r_i}|} \\]
+      <div class=eqn> \\[ V = \\frac{1}{4\\pi\\epsilon_0} \\sum_{i=1}^N \\frac{q_i}{|\\vec{r}-\\vec{r_i}|} \\] </div>
 
       <p> And once again (again), if there is a charge distribution \\( \\rho \\) instead of individual charges,
         we can integrate it over the volume... oh wait, slight problem. We want to integrate over volume
@@ -8191,9 +8192,9 @@ const subtopics = {
 
       <p>Anyway, where were we? Ah yes, integrating a charge density: </p>
 
-      \\[
+      <div class=eqn> \\[
         V = \\frac{1}{4\\pi\\epsilon_0} \\iiint_{\\rlap{-}V'} \\frac{\\rho(\\vec{r})}{|\\vec{r}-\\vec{r_i}|}d\\rlap{-}V'
-      \\]
+      \\] </div>
 
       <h3>Calculating Potential from Field</h3>
 
@@ -8219,38 +8220,33 @@ const subtopics = {
       <p>Anyway, in order to use our new integration formula, we need an \\( \\vec{E} \\) and a \\( d\\vec{l} \\).
         And getting these two is pretty simple. We know what \\( \\vec{E} \\) should be fromm a while back:</p>
 
-      \\[ \\vec{E}(\\vec{r}) = \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\]
+      <div class=eqn> \\[ \\vec{E}(\\vec{r}) = \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\] </div>
 
       <p> Next, since we are only increasing the distance from the charge and not changing the angle, that means that
         \\( d\\vec{l} \\) only works in the \\( \\hat{r} \\). In other words: </p>
 
-      \\[
+      <div class=eqn> \\[
         d\\vec{l} = \\hat{r} dr
-      \\]
+      \\] </div>
 
       <p>Now just stick 'em in, and see wagwan:</p>
 
-      \\[ 
+      <div class=eqn> \\[ 
         \\begin{align} V_a - V_b &= \\int_{r_b}^{r_a} \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\cancel{\\hat{r} \\cdot \\hat{r}} dr \\\\[6pt]
         &= \\frac{q}{4 \\pi \\varepsilon_0} \\int_{r_b}^{r_a} \\frac1{r^2} dr \\\\[6pt]
         &= \\frac{q}{4 \\pi \\varepsilon_0} \\left( \\frac1{r_a} - \\frac1{r_b} \\right) \\end{align}
-      \\]
+      \\] </div>
 
       <p>Since potential is the energy required to move one coulomb of charge from a certain point to infinity, that 
         means that at infinity, the potential is zero, or  \\( \\lim_{r \\to \\infty}V(\\vec{r}) = 0 \\). Therefore
         by putting the point \\( b \\) at infinity, the potential at \\( b \\), becomes 0, and therefore 
         \\( V_a - V_b \\) just becomes the potential at \\( a \\), \\( V_a \\):</p>
 
-      \\[ V_a = \\frac{q}{4 \\pi \\varepsilon_0} \\left( \\frac1{r_a} \\right) \\]
+      <div class=eqn> \\[ V_a = \\frac{q}{4 \\pi \\varepsilon_0} \\left( \\frac1{r_a} \\right) \\] </div>
 
       <p>which is what we had before! So what did we learn? Never ever ever doubt me!!</p>
 
-
-      <p>\\( \\vec{E} = -\\nabla V \\)</p>
-
-      <p>That minus sign? Crucial. Field points from high to low potential.</p>
-
-      <h3>Equipotential Surfaces: Where Voltage Stays the Same</h3>
+      <h3>Equipotential Surfaces</h3>
 
       <p>An <strong>equipotential surface</strong> is where \\( V \\) is constant.</p>
 
@@ -8258,7 +8254,7 @@ const subtopics = {
 
       <p>Like contour lines on a map — but for voltage.</p>
 
-      <h3>Earthing/Grounding: When You’re at Zero (By Definition)</h3>
+      <h3>Earthing/Grounding</h3>
 
       <p>“Ground” is just a reference point — we define \\( V = 0 \\) there.</p>
 
@@ -8325,9 +8321,9 @@ const subtopics = {
         Recall from last time that voltage is just a rebranding of electric potential, which is just the electric
         field strength multiplied by a distance. We can write that out like this: </p>
 
-      \\[
+      <div class=eqn> \\[
         V = \\vec{E} \\cdot \\vec{r} = Ed
-      \\]
+      \\] </div>
 
       <p>Then we can use Gauss' Law to calculate the electric field from the plate. I think we did this example already,
         just let me erm <em>*Checks "Gauss' Law" subtopic*</em> Hmm, ok, it appears as of the time of me typing this code,
@@ -8335,13 +8331,13 @@ const subtopics = {
         \\( -\\frac{\\sigma}{2\\varepsilon_0} \\), where \\( \\sigma \\) is the charge density, \\( \\frac{Q}A \\). 
         Since we have 2, it's doubled:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\begin{align}
           E &= E_\\text{top} + E_\\text{bottom} \\\\[6pt]
             &= -\\frac{\\sigma}{\\varepsilon_0} \\\\[6pt]
             &= -\\frac{Q}{\\varepsilon_0 A}
         \\end{align}
-      \\]
+      \\] </div>
 
       <p> That gives us a new and improved equation for capacitance: </p>
 
@@ -8386,12 +8382,12 @@ const subtopics = {
 
       <p> If we write out the capacitances in terms of distance and area, we get this:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\begin{align}
         \\frac1{C_{\\text{series}}} &= \\frac{d}{\\varepsilon_0 A} + \\frac{d}{\\varepsilon_0 A} \\\\[6pt]
                                     &= \\frac{2d}{\\varepsilon_0 A}
         \\end{align}
-      \\]
+      \\] </div>
 
       <p> Notice how when we flip this back right side up, we get the capacitance formula from before, except
         the distance is now doubled (\\( d \\) is now \\( 2d \\)). This means ...</p>
@@ -8413,12 +8409,12 @@ const subtopics = {
 
       <p> Use the distance and area thing: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\begin{align}
         C_{\\text{parallel}} &= \\frac{\\varepsilon_0 A}{d} + \\frac{\\varepsilon_0 A}{d} \\\\[6pt]
                             &= \\frac{\\varepsilon_0 [2A]}{d}
         \\end{align}
-      \\]
+      \\] </div>
 
       <p>Now the area has doubled. This makes sense, because if you put them next to each other in parallel, it's 
         a bit like you now have a single bigger plate. </p>
@@ -8470,9 +8466,9 @@ const subtopics = {
         using the fancy \\( \\rlap{-}V \\) symbol for volume, because potential is renting ount volume's body
         for a bit:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\text{energy density} = \\frac{U}{\\rlap{-}V} = u
-      \\]
+      \\] </div>
 
       <p> Now by setting the energy to \\( U = \\frac12 CV^2 \\), setting the volume of the electric field to 
         \\( \\rlap{-}V = Ad \\), and then rewriting capacitance as \\( C = \\frac{\\varepsilon_0 A}{d} \\), we
@@ -8577,9 +8573,9 @@ const subtopics = {
       <p>First on the menu is the Lorentz force. Back in the <em>Electric Charges and Fields</em> topic, we learnt
         that the force a particle experience is the electric field strength times the charge of the particle:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{F} = q\\vec{E}
-      \\]
+      \\] </div>
 
       <p>Slight problem: that assumes we are dealing with a charge which isn't already moving. But as we now know, if
         a charged particle moves, there's also a magnetic field, which will affect the net force. The Lorentz force is
@@ -8671,23 +8667,23 @@ const subtopics = {
         to the magnetic field, \\( \\vec{v}_\\parallel \\), and a component perpendicular to the magnetic field,
         \\( \\vec{v}_\\perp \\): </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{v} = \\vec{v}_\\parallel + \\vec{v}_\\perp
-      \\]
+      \\] </div>
 
       <p>Now let's calculate the Lorentz force, except you now have to use each slice of your diseased friend
         separately:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{F} = (q\\vec{v}_\\parallel \\times \\vec{B}) + (q\\vec{v}_\\perp \\times \\vec{B})
-      \\]
+      \\] </div>
 
       <p> Since \\( \\vec{v}_\\parallel \\) and \\( \\vec{B} \\) are parallel by definition, taking their cross
         product would just leave you with zero, getting rid of the first term. So that leaves: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{F} = q\\vec{v}_\\perp \\times \\vec{B} \\text{, or in magnitude, } F = |q|v_{\\perp}B
-      \\]
+      \\] </div>
 
       <p>Once again, the velocity here is characteristically perpendicular to the magnetic, and therefore the force
         is parallel to the velocity. What happens when we have a force perpendicular to a velocity?</p>
@@ -8700,9 +8696,9 @@ const subtopics = {
         motion equations. Since we know from circular motion that the centrifugal force is given by 
         \\( \\frac{mv_\\perp^2}{r} \\), just equate that to the force we have here and do a wee bit o' rearranging:</p>
 
-      \\[
+      <div class=eqn> \\[
         |q|v_{\\perp}B = \\frac{mv_\\perp^2}{R_L}
-      \\]
+      \\] </div>
 
       \\[
         \\downarrow
@@ -8728,17 +8724,17 @@ const subtopics = {
       <p> Now that I think about it, this section is called "<em>Work done</em> by a magnetic field, but we are yet
         to talk about it. Recall that work done is force times distance, which we can write as a line integral: </p>
 
-      \\[
+      <div class=eqn> \\[
         W = \\int \\vec{F} \\cdot d\\vec{l}
-      \\]
+      \\] </div>
 
       <p> \\( \\vec{F} \\) here is the force due to the magnetic field, \\( \\vec{F} = q(\\vec{v} \\times \\vec{B}) \\),
         and since \\( d\\vec{l} \\) is a distance, and distance = speed \\( \\times \\) time, we can split it up into
         \\( d\\vec{l} = \\vec{v}dt \\). By subbing those in, we get: </p>
 
-      \\[
+      <div class=eqn> \\[
         W = \\int q(\\vec{v} \\times \\vec{B}) \\cdot \\vec{v}dt
-      \\]
+      \\] </div>
 
       <p> But here's where the beat drops: we know that the cross product of two vectors gives us another vector which
         is perpendicular to both of them, meaning \\( \\vec{v} \\times \\vec{B} \\) is perpendicular to \\( \\vec{v} \\).
@@ -8774,9 +8770,9 @@ const subtopics = {
         there. Current is just charge per unit time. By multiplying it by the distance the electrons are travelling
         (i.e. the length), you get charge times the distance per unit time:</p>
 
-      \\[
+      <div class=eqn> \\[
         I\\vec{L} = q\\vec{v}
-      \\]
+      \\] </div>
 
       <p>And then by simply crossing it with \\( \\vec{B} \\), we end up with a new equation for force:</p>
 
@@ -8810,38 +8806,38 @@ const subtopics = {
 
       <p> Using the equation for magnetic force, but placing some d's here and there:</p>
 
-      \\[
+      <div class=eqn> \\[
         d\\vec{F} = dq \\vec{v}_d \\times \\vec{B}
-      \\]
+      \\] </div>
 
       <p>...where \\( dq \\) is the itty bitty charge in the itty bitty length \\( dl \\). We can rewrite this
         as the charge times the number of particles, giving:</p>
 
-      \\[
+      <div class=eqn> \\[
         dq = qnAdl
-      \\]
+      \\] </div>
 
       <p>...remembering that \\( n \\) is number of particles <em>per unit volume</em>, and the volume is the
         cross-sectional area \\( A \\) times the length, \\( dl \\), meaning the number of particles is
         \\( nAdl \\). Now we can put this in the equation: </p>
 
-      \\[
+      <div class=eqn> \\[
         d\\vec{F} = qnAdl \\vec{v}_d \\times \\vec{B}
-      \\]
+      \\] </div>
 
       <p>And remember from earlier that \\( \\vec{v}_d \\) and  \\( \\vec{L} \\), point in the same direction,
         meaning \\( \\vec{v}_ddl \\) is the same as \\( v_d d\\vec{l} \\). So let's do a quick little
         switcheroo:</p>
 
-      \\[
+      <div class=eqn> \\[
         d\\vec{F} = qnAv_d d\\vec{l} \\times \\vec{B}
-      \\]
+      \\] </div>
 
       <p>Since \\( qnAv_d = I \\), we now have:</p>
 
-      \\[
+      <div class=eqn> \\[
         d\\vec{F} = I d\\vec{l} \\times \\vec{B}
-      \\]
+      \\] </div>
 
       \\[
         \\downarrow
@@ -8953,9 +8949,9 @@ const subtopics = {
         Then \\( \\vec{r} - \\vec{r}' \\) just becomes \\( -\\vec{r}' \\). And since \\( |-\\vec{r}'| = r \\), we
         get a cuter version of the Biot-Savart Law:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{B}(r,t) = \\frac{\\mu_0}{4\\pi}q \\frac{\\vec{v}' \\times \\hat{r} }{r^2}
-      \\]
+      \\] </div>
 
       <p>Although it's proooobably better to learn the first version for calculation, this one is a lot more
         aesthetically pleasing. Plus, we can more easily see what the ...</p>
@@ -8984,30 +8980,30 @@ const subtopics = {
         through it, we can calculate its magnetic field strength at \\( \\vec{r} \\). If you remember from last time,
         \\( dQ \\) can be written like this: </p>
 
-      \\[
+      <div class=eqn> \\[
         dQ = nqA dr^\\prime
-      \\]
+      \\] </div>
 
       <p>where \\( n \\) is the number of charges <em>per unit volume</em>, \\( q \\) is the charge, \\( A \\) is the
         cross-sectional area, and \\( dr^\\prime \\) is \\( dl \\) from before. Then we just multiply by the drift
         velocity, \\( \\vec{v}_d \\), and do the little vector switcheroo thing we did last time, and then we get:</p>
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         dQ \\vec{v}_d &= nqA \\vec{v}_d dr^\\prime \\\\[6pt]
                       &=  nqA v_d d\\vec{r}^\\prime \\\\[6pt]
                       &=  I d\\vec{r}^\\prime
       \\end{align}
-      \\]
+      \\] </div>
 
       <p>Cool, now all we have to do is rewrite the Biot-Savart law using a bunch of d's, whack it in and see wagwan:</p>
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         d\\vec{B}(r)&= \\frac{\\mu_0}{4\\pi} dQ \\frac{\\vec{v}_d \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\\\[6pt]
                     &= \\frac{\\mu_0}{4\\pi} I \\frac{d\\vec{r}' \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3}
       \\end{align}
-      \\]
+      \\] </div>
 
       <p>Whack in an intergrand, and now we have:</p>
 
@@ -9083,18 +9079,18 @@ const subtopics = {
 
       <p> This magnetic dipole moment is quantised in chunks of \\( \\mu_B = 9.27 \\times 10^{-24} \\)</p>
 
-      \\[
+      <div class=eqn> \\[
         \\mu = n \\mu_B
-      \\]
+      \\] </div>
 
       <p> Now think of each atom in a material as a tiny little magnet, with a magnetic dipole moment \\( \\vec{\\mu}_i \\).
         If we add all these tiny atom magnet strengths together (i.e. \\( \\sum_i \\vec{\\mu}_i \\)), and then divide
         by the volume \\( \\rlap{-}V \\), we can get the magnet strength of one cubic metre of the material. We call
         this magnet strength per unit volume the magnetisation, \\( vec{M} \\). </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{M} = \\frac1{\\rlap{-}V} \\sum_i \\vec{\\mu}_i
-      \\]
+      \\] </div>
 
       <p> Alongside the material's internal magnetism caused by the atoms, we can also choose to add another magnetic
         field to the mix. Thanks to none other than God himself, we were created with free will, meaning we could
@@ -9104,9 +9100,9 @@ const subtopics = {
       <p> And as you could probably imagine, the total magnetic field, \\( \\vec{B} \\), is just a combination
         of both of these fields. </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{B} = \\mu_0(\\vec{H} + \\vec{M})
-      \\]
+      \\] </div>
 
       <p> However, free will comes with consequences, and what you failed to realise is that when you applied your
         H-field, you actually caused the atoms to freak out a bit, meaning that their tiny magnet strengths all
@@ -9118,9 +9114,9 @@ const subtopics = {
         proportional to the H-field you added,  \\( \\vec{H} \\). That means  \\( \\vec{M} \\) is equal to
         \\( \\vec{H} \\) times some constant of proportionality: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{M} = \\chi_M \\vec{H}
-      \\]
+      \\] </div>
 
       <p> Our new pal \\( \\chi_M \\) is what we call the magnetic susceptibility, and it measures how strongly
         a material is magnetised when you place it in a H-field, i.e. how strong of a magnet the material becomes
@@ -9128,14 +9124,14 @@ const subtopics = {
 
       <p> This gives us a new and improved formula for the total magnetic field:</p>
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         \\vec{B}  &= \\mu_0(\\vec{H} + \\vec{M}) \\\\[6pt]
                   &= \\mu_0(\\vec{H} + \\chi_M \\vec{H}) \\\\[6pt]
                   &= \\mu_0(1+\\chi_M)\\vec{H} \\\\[6pt]
                   &= \\mu_0\\mu_r\\vec{H}
       \\end{align}
-      \\]
+      \\] </div>
 
       <p> What we are really worried about here is that magnetic susceptability (\\( \\chi_M \\)) quantity, because 
         this is the main parameter controlling how magnetic a material is. So for now we'll stick to this equation: </p>
@@ -9235,9 +9231,9 @@ const subtopics = {
       <p>Remembering that the flux measures how many field lines pass through a surface (or a hole in the case of this 
         loop).</p>
 
-      \\[
+      <div class=eqn> \\[
         \\Phi_B = \\iint_S \\vec{B} \\cdot d\\vec{S}
-      \\]
+      \\] </div>
 
       <p> It's negative due to Lenz's law, so that the current used to make the magnetic field points in the opposite
         direction to the EMF being induced. This should hopefully also be familiar to you from A-level. But if not,
@@ -9283,53 +9279,57 @@ const subtopics = {
       <p> Now that the loop is getting bigger, more magnetic field lines can go through it, meaning the magnetic
         flux is getting bigger:</p>
 
-      \\[ 
+      <div class=eqn> \\[ 
       \\begin{align}
         \\Delta \\Phi_B &= B \\Delta A \\\\[6pt]
                         &= BLv \\Delta t
       \\end{align}
-      \\]
+      \\] </div>
 
       <p>That means the rate of change of flux is given by:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\frac{\\Delta \\Phi_B}{\\Delta t} = BLv
-      \\]
+      \\] </div>
 
       <p> By making the changes in flux and time infinitesimally small (in other words replace the 
         \\( \\Delta \\)'s with d's), we can then use Faraday's law:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\mathcal{E} = -\\frac{d\\Phi_B}{dt} = -BLv
-      \\]
+      \\] </div>
 
       <p> But we can go a step further! Do you remember from way in the beginning when we learnt about
         Ohm's law? </p>
 
-      \\[
+      <div class=eqn> \\[
         \\mathcal{E} = IR \\quad \\therefore \\quad I = \\frac{\\mathcal{E}}R
-      \\]
+      \\] </div>
 
       <p> Let's put our new found EMF to calculate the current (stay with me now):</p>
 
-      \\[
+      <div class=eqn> \\[
         I = \\frac{BLv}R
-      \\]
+      \\] </div>
 
       <p> And then we can use our formula from a couple sections ago, where we can use a current to get
         the Lorentz force (stay with me now, I promise I'm going somewhere with this):</p>
 
-      \\[
+      <div class=eqn> \\[
         d\\vec{F} = Id\\vec{l} \\times \\vec{B}
-      \\]
+      \\] </div>
 
       \\[
+        \\big\\Downarrow
+      \\]
+
+      <div class=eqn> \\[
       \\begin{align}
         \\vec{F}  &= IL(\\hat{y}) \\times B(-\\hat{z}) \\\\[6pt]
                   &= ILB(-\\hat{x}) \\\\[6pt]
                   &= \\frac{B^2L^2v}R (-\\hat{x})
       \\end{align}
-      \\]
+      \\] </div>
 
       <p> Look at that! The change in flux induces an EMF (Faraday's law), which produces a current (Ohm's law),
         which produces a force (Ampere's law) in the \\( -\\hat{x} \\) direction, acting in the opposite 
@@ -9368,49 +9368,48 @@ const subtopics = {
       <p> Well then let's see if you are correct. Take the solenoid we had before. From using Ampere's 
         law, we were able to calculate the magnetic field strength inside the solenoid:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{B} = \\mu_0 n I_s(t) \\hat{z}
-      \\]
+      \\] </div>
 
       <p> Now we can use Faraday's and Ohm's law to determine the EMF and the current this magnetic
         field induced: </p>
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         \\Phi_B &= \\iint \\vec{B} \\cdot d\\vec{S} \\\\[6pt]
                 &= \\mu_0 n I_s(t) A
       \\end{align}
-      \\]
+      \\] </div>
 
       \\[
         \\big\\Downarrow
       \\]
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         \\mathcal{E}  &= -\\frac{d\\vec{B}}{dt}\\\\[6pt]
                       &= -\\mu_0 n A \\frac{dI_s(t)}{dt} \\\\
       \\end{align}
-      \\]
+      \\] </div>
 
       \\[
         \\big\\Downarrow
       \\]
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         I_\\text{induced} &= \\frac{\\mathcal{E}}R \\\\[6pt]
                           &= -\\frac{\\mu_0 n A}R \\frac{dI_s(t)}{dt}
       \\end{align}
-      \\]
-
+      \\] 
 
       \\[
       \\begin{align}
         \\vec{F}  &= ILB(-\\hat{x}) \\\\[6pt]
                   &= -\\frac{\\mu_0 n ALB}R \\frac{dI_s(t)}{dt} (-\\hat{x})
       \\end{align}
-      \\]
+      \\] </div>
 
       <p> Huh, that's strange. It seems that there IS a counter-force, despite no moving wire and no magnetic 
         field. Since there are no magnetic components, by using the Lorentz force formula we can see that this
@@ -9502,27 +9501,27 @@ const subtopics = {
 
       <p> We know how to calculate the magnetic field strength in a solenoid: </p>
 
-      \\[
+      <div class=eqn> \\[
         B_1 = \\frac{\\mu_0 N_1 I_1}{l_1}
-      \\]
+      \\] </div>
 
       <p> From this we can calculate the induced EMF: </p>
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         \\mathcal{E}  &= -N_2\\frac{d\\Phi_B}{dt} \\\\[6pt]
                       &= -N_2\\frac{d}{dt} \\left( \\frac{\\mu_0 N_1 A_1 I_1}{l_1} \\right) \\\\[6pt]
                       &=  -N_2 \\frac{\\mu_0 N_1 A_1}{l_1}\\frac{dI_1}{dt}
       \\end{align}
-      \\]
+      \\] </div>
 
       <p>Well, well, well, don't that look familiar? Now we have an induced EMF in terms of \\(\\frac{dI_1}{dt}\\),
         just like our mutual inductance thingy from a bit earlier. With that, we can compare coefficients to find
         a formula for \\( M \\):</p>
 
-      \\[
+      <div class=eqn> \\[
         M = - \\frac{\\mu_0 N_1 N_2 A_1}{l_1}
-      \\]
+      \\] </div>
 
       <h3>Transformers</h3>
 
@@ -9539,9 +9538,9 @@ const subtopics = {
         so let's to the same through the secondary coil, \\( I_s = I_s(t) \\). Then using Faraday's law, we get
         the EMF induced in each: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\mathcal{E}_p = -N_p \\frac{d\\Phi_B}{dt} \\quad \\text{and} \\quad \\mathcal{E}_s = -N_s \\frac{d\\Phi_B}{dt}
-      \\]
+      \\] </div>
 
       <p> Thanks to our ferromagnetic core forcing the field lines to enter both coils, we end up with the same flux.
         That means we can calculate the rate of change of flux in both: </p>
@@ -9596,15 +9595,15 @@ const subtopics = {
         more components, whereas \\( L \\) is the inductance a component has on itself. How this is possible you
         ask? Well let's bring back the solenoid, who's magnetic field strength we already know: </p>
 
-        \\[
+        <div class=eqn> \\[
           B = \\frac{\\mu_0 N I}l 
-        \\]
+        \\] </div>
 
       <p> And let's use Faraday's law again: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\mathcal{E} = -\\frac{d(N\\Phi_B)}{dt}
-      \\]
+      \\] </div>
 
       <p> You might notice I've placed the \\( N \\) with the \\( \\Phi_B \\). It doesn't really make a difference
         mathematically, considering the number of turns doesn't depend on time, but it does allow us to consider the
@@ -9612,15 +9611,15 @@ const subtopics = {
         way, but most resources do this, so I guess we'll stick with it. Either way, we can calculate flux linkage
         like so: </p>
 
-      \\[
+      <div class=eqn> \\[
         N\\Phi_B = NBA =  \\frac{\\mu_0 N^2 IA}l 
-      \\]
+      \\] </div>
 
       <p> Once again we can whack this in our EMF formula and see wagwan: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\mathcal{E} = -\\frac{\\mu_0 N^2 A}l \\frac{dI}{dt}
-      \\]
+      \\] </div>
 
       <p>That gives us an equation for self-inductance:</p>
 
@@ -9652,25 +9651,25 @@ const subtopics = {
       <p> Beginning with the capacitor, because it's the easiest, \\( Q = VC \\), so by doing a cute little
         rearranging:</p>
 
-        \\[
+        <div class=eqn> \\[
           V_C = \\frac{Q}C
-        \\]
+        \\] </div>
 
       <p> Resistors are also pretty easy, we just use Ohm's law, \\( V = IR \\). And since we are already in the 
         business of using the letter \\( Q \\), let's replace our current \\( I \\) with \\( \\frac{dQ}{dt} \\),
         since current is the flow (or rate of change) of charge:</p>
 
-      \\[
+      <div class=eqn> \\[
         V_R = R\\frac{dQ}{dt}
-      \\]
+      \\] </div>
 
       <p> And finally inductance. You might think we don't know this, but turns out we do, since we have the
         EMF. So if the battery has an EMF \\( \\mathcal{E} \\), and the inductor has an EMF 
         \\( -L \\frac{dI}{dt} \\), and the total EMF... </p>
 
-        \\[
+        <div class=eqn> \\[
           V_L = L\\frac{d^2Q}{dt^2}
-        \\]
+        \\] </div>
 
       <p> Remember these \\( Q \\)-formulae, they will become way more important in a bit.</p>
 
@@ -9772,21 +9771,21 @@ const subtopics = {
         and the resistor has voltage \\( V_R = IR \\). Adding those two up and equating it to the EMF from the
         battery \\( \\mathcal{E} \\) gives us: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\mathcal{E} = IR + L\\frac{dI}{dt}
-      \\]
+      \\] </div>
 
       <p> Now rearrange it so that it becomes a first order differential equation: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\frac{dI(t)}{dt} = \\frac{\\mathcal{E}}L - \\frac{R}LI(t)
-      \\]
+      \\] </div>
 
       <p> And then just solve it: </p>
 
-      \\[
+      <div class=eqn> \\[
         I(t) = \\frac{\\mathcal{E}}R \\left( 1-e^{-\\frac{R}Lt} \\right)
-      \\]
+      \\] </div>
 
       <p> So what does that mean? At \\( t=0 \\), the current \\( I(t) \\) is also zero. And as \\( t \\) tends
         towards infinity, \\( I(t) \\) tends towards \\( \\frac{\\mathcal{E}}R \\). Based on the \\( e \\) to
@@ -9809,17 +9808,17 @@ const subtopics = {
         which is equal to the total voltage of all the components. And we'll be using the \\( Q \\)-formulae from before
         this time: </p>
 
-      \\[
+      <div class=eqn> \\[
         0 = L\\frac{d^2Q}{dt^2} + \\frac1QC \\quad \\therefore \\quad \\frac{d^2Q}{dt^2} = -\\frac1{LC}Q
-      \\]
+      \\] </div>
 
       <p> Hey, now we have a second order differential equation. More importantly, we have simple harmonic motion! We 
         can solve it using the pretend-it's-a-quadratic method, and with the tap of the hat, we get the expected
         conditions for SHM, with an interesting value for frequency: </p>
 
-      \\[
+      <div class=eqn> \\[
         Q(t) = Q_0 \\cos{\\omega t}, \\quad \\text{where} \\quad \\omega = \\frac1{\\sqrt{LC}}
-      \\]
+      \\] </div>
 
       <p> And remember that when ... there is no damping </p>
 
@@ -9833,9 +9832,9 @@ const subtopics = {
         and the switch is off until time \\( t=0 \\) (\\( I(t=0) = 0 \\)). Now let's loopy-loopy, remembering that
         there still ain't no battery, so \\( \\mathcal{E} \\) is still zero:</p>
 
-      \\[
+      <div class=eqn> \\[
         0 = L\\frac{d^2Q}{dt^2} + R\\frac{dQ}{dt} + \\frac1QC 
-      \\]
+      \\] </div>
 
       <p> This is second order, pretend-it's-a-quadratic method, blah blah blah, and we get:</p>
 
@@ -9916,9 +9915,9 @@ const subtopics = {
         that like regular waves, AC voltages can also have phase differences, \\( \\phi \\). So the wibble-wobble
         voltage equation is actually more accurately defined like this: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\tilde{V} = V_0 e^{j(\\omega t + \\phi)}
-      \\]
+      \\] </div>
 
       <p> Just like regular complex numbers, we can actually plot this on an Argand diagram. Now technically when 
         you use an Argand diagram to plot voltages, they are no longer called Argand diagrams, and instead called 
@@ -10012,15 +10011,15 @@ const subtopics = {
         change of charge, \\( I = \\frac{dQ}{dt} \\). So that means we CAN get an impedance after all. Gosh, what
         would you do without me? </p>
 
-      \\[
+      <div class=eqn> \\[
         \\frac{dQ}{dt} = \\tilde{I} = C \\frac{d\\tilde{V}}{dt}
-      \\]
+      \\] </div>
 
       <p> Plug in.. </p>
 
-      \\[
+      <div class=eqn> \\[
         \\tilde{I} = C \\frac{d\\tilde{V}}{dt} = j\\omega C \\tilde{V}
-      \\]
+      \\] </div>
 
       <p> And rearrange to get \\( \\frac{\\tilde{V}}{\\tilde{I}} \\):</p>
 
@@ -10040,16 +10039,16 @@ const subtopics = {
       <p> Inductors are a bit easier, since there is already an equation linking potential difference and 
         inductance: </p>
 
-      \\[
+      <div class=eqn> \\[
         V = L\\frac{dI}{dt}
-      \\]
+      \\] </div>
 
       <p> Add some wiggles on top of the relevant letters, and then recall that 
         \\( \\tilde{I} = I_0e^{-j\\omega t} \\):</p>
 
-      \\[
+      <div class=eqn> \\[
         \\tilde{V} = L\\frac{d\\tilde{I}}{dt} = jL\\omega\\tilde{I}
-      \\]
+      \\] </div>
 
       \\[
         \\downarrow
@@ -10075,30 +10074,30 @@ const subtopics = {
       <p>Remember back in DC, we could get the power by multiplying voltage and current. And we can do exactly that 
         for AC too! </p>
 
-      \\[
+      <div class=eqn> \\[
         P(t) = V(t)I(t)
-      \\]
+      \\] </div>
 
       <p> I can't help but notice the lack of squiggle above the letters. </p>
       <p> Now if we really really wanted to, we could quite easily get the average power. All you'd have to do
         it get the power at each point in time, add 'em up, and then divide it by the total time. You can do this
         of course by way of integration. </p>
 
-      \\[
+      <div class=eqn> \\[
         \\langle P \\rangle = \\frac1T \\int^T_0 P(t) \\; dt
-      \\]
+      \\] </div>
 
       <p> Now why the bloody hell am I telling you this? Well in principle, you'd think that since power is just
         voltage times current, you could just take the average voltage and multiply it with the average current.
         And in principle, we should be able to calculate both average voltage and current using the same
         intergrate-then-divide-by-total-time technique. But when we do that we end up with a slight problem: </p>
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         \\langle V \\rangle &= \\frac1T \\int^T_0 V(t) \\; dt \\\\[6pt]
                             &= \\frac1T \\int^T_0 V_0 \\cos{\\omega t} \\; dt = 0
       \\end{align}
-      \\]
+      \\] </div>
 
       <p> See the issue? If we use the definitions of wobbly voltage we had earlier, then we will end up with an
         average voltage (and an average current) of \\(0\\), which is pretty useless information. So instead, we can
@@ -10121,13 +10120,13 @@ const subtopics = {
       <p>And you can go through the full proof yourself if you want, but long story short, if we now multiply the root
         mean square voltages and currents, we DO get the average power:</p>
 
-      \\[
+      <div class=eqn> \\[
       \\begin{align}
         \\langle P \\rangle &= V_\\text{RMS} I_\\text{RMS} \\\\[6pt]
                             &= \\frac{V_\\text{RMS}^2}R \\\\[6pt]
                             &= I_\\text{RMS}^2R
       \\end{align}
-      \\]
+      \\] </div>
 
       <p>\\( \\langle P \\rangle = I_{\\text{rms}} V_{\\text{rms}} \\cos\\phi \\)</p>
 

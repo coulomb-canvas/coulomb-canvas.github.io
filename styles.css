@@ -1348,12 +1348,24 @@ body.dimmed::before {
   font-size: 1.5vh;
 }
 
+.nav-top {
+  background-color: #00c8ff;
+  padding: 0.5vh 1vh;
+  margin: 0.4vh 0;
+  width: 100%;
+  font-size: 3vh;
+}
+
 .nav-h3:hover {
   background-color: #004c99;
 }
 
 .nav-h4:hover {
   background-color: #112437;
+}
+
+.nav-top:hover {
+  background-color: #2f85ff;
 }
 
 #next-subtopic-button {

@@ -1266,7 +1266,7 @@ body.dimmed::before {
   top: 45px;
   right: 20px;
   background-color: rgba(30, 30, 30, 0.8);
-  padding: 10px;
+  padding: 2vh;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -1302,8 +1302,14 @@ body.dimmed::before {
   opacity: 0;
   max-height: 0;
   transition: all 0.3s ease;
-  padding: 0 10px;
+  padding: 0 2vh;
   /* prevents content flicker */
+}
+
+@media (max-width:100vh) {
+  #floating-nav {
+    max-width: 20vh;
+  }
 }
 
 /* Visible state */
@@ -1328,18 +1334,18 @@ body.dimmed::before {
 
 .nav-h3 {
     background-color: #0066cc;
-    padding: 6px 12px;
-    margin: 5px 0;
+    padding: 1vh 2vh;
+    margin: 0.4vh 0;
     width: 100%;
-    font-size: 2vw;
+    font-size: 2vh;
 }
 
 .nav-h4 {
   background-color: #1d3e5f;
-  padding: 4px 12px;
-  margin: 5px 20px;
+  padding: 0.7vh 2vh;
+  margin: 5px 2vh;
   width: 90%;
-  font-size: 1.5vw;
+  font-size: 1.5vh;
 }
 
 .nav-h3:hover {

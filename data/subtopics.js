@@ -190,9 +190,9 @@ const subtopics = {
         for you to know. In either case, if there is a derivation which I think you could probably do without, I will
         put an orange link like this. Clicking this will give you the derivation. Take this for example. You've might
         be familiar with the Schrodinger Equation:</p>
-        \\[
+        <div class=eqn> \\[
         i\\hbar\\frac{\\partial \\Psi}{\\partial t}=  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\Psi}{\\partial t^2}
-        \\]
+        \\] </div>
       <p>Now, actually using this equation isn't too bad (I know it may look bad at first, but trust me, they are
       just differential equations, you'll be fine), but it is a bit random. So naturally, I won't bother with the
       <span class="popup-trigger" data-popup-id="schrodinger-intro">stupid derivation</span>... Then again, aren't you
@@ -288,7 +288,7 @@ const subtopics = {
       way to get their weights for no reason...</p>
       <p>With our 3 proposed variables, we can describe the time period as a function of length, gravitational field
       strength and mass;</p>
-      \\[T = f(l, g, m)\\]
+      <div class=eqn> \\[T = f(l, g, m)\\]  </div>
       <p>This just means that \\(T\\) is a function of \\(l\\), \\(g\\) and \\(m\\). Bare in mind, for any mathematical
       equation, the units on the left hand side must be the same as the units of the right hand side. Since \\(T\\) will 
       obviously have units of seconds, \\(f(l, g, m)\\) must also have units of seconds.</p>
@@ -302,14 +302,14 @@ const subtopics = {
       <p>The only quantity which has an \\(s\\) in it is \\(g\\). However, the units for \\(g\\) have that pesky
       \\(m\\) in it, which we need to get rid of. Luckily, we have \\(l\\) which has units of \\(m\\), so if we divide
       \\(l\\) by \\(g\\), the \\(m\\)s will cancel out, leaving us with:</p>
-      \\[\\frac{l}{g} = \\frac{m}{ms^{-2}} = s^2\\]
+      <div class=eqn> \\[\\frac{l}{g} = \\frac{m}{ms^{-2}} = s^2\\] </div>
       <p>Ooh, \\(s^2\\), that looks good! So if we want to get the \\(s\\) we are looking for, we just take the square
       root:</p>
-      \\[
+      <div class=eqn> \\[
         \\sqrt{\\frac{l}{g}} = s
-      \\]
+      \\]  </div>
       <p>Brilliant! This now gives us the formula for the time period:</p>
-      \\[T = \\text{constant}\\sqrt{\\frac{l}{g}}\\]
+      <div class=eqn> \\[T = \\text{constant}\\sqrt{\\frac{l}{g}}\\]  </div>
       <p>Using dimensional analysis, we were able to figure out the formula for the time period. However, there are two
       problems. For one, we don't know what that constant is. I mean, if you are already familiar with the equation, then
       you <em>do</em> know that the constant here is \\(2\\pi\\). However, in any other case, you wouldn't be so
@@ -387,7 +387,7 @@ const subtopics = {
     content: `
       <p>Hi there. Here's an equation. You are required by law to solve it now.</p>
 
-      \\[ x^2 + 1 = 0 \\]
+      <div class=eqn> \\[ x^2 + 1 = 0 \\]  </div>
 
       <p>Well then, don't just stand (sit?) there, solve it you pillock.</p>
       <p>Excuse me? On about "I cAn'T sOlVe ThIs", it's just basic algebra, and you're telling me you can't solve it? 
@@ -467,14 +467,14 @@ const subtopics = {
           <p>The distance from the origin to the point on the Argand diagram is known as the modulus, \\(r\\). We can 
           calculate this just by using good old Pythagoras. Since in this case, \\(x^2+y^2 = r^2\\), we can rearrange 
           for \\(r\\) to get:</p>
-          \\[
+          <div class=eqn> \\[
             r = \\sqrt{x^2 + y^2}
-          \\]
+          \\] </div>
           <p>Then, just like in polar co-ordinates, we also need to know the angle that the distance makes with the
           positive \\(x\\)-axis. This angle is the argument, \\(\\theta\\), and we can find this by using trigonometry:
-          \\[
+          <div class=eqn> \\[
             \\theta = \\tan^{-1}({\\frac{y}{x}})
-          \\]
+          \\]  </div>
         </div>
         <div class="image">
           <div class="image-floater">
@@ -497,9 +497,9 @@ const subtopics = {
       </p>
       <p> Using trigonometry (SOH-CAH-TOA), we can prove that:</p>
 
-        \\[
+        <div class=eqn> \\[
           x = r\\cos{\\theta}, \\quad y = r\\sin{\\theta}
-        \\]
+        \\]  </div>
 
       <p> Substituting that back into our complex number formula gives us:</p>
 
@@ -518,7 +518,7 @@ const subtopics = {
         more useful when we consider this identity:
       </p>
 
-        \\[ \\cos\\theta + i\\sin\\theta = e^{i\\theta} \\]
+        <div class=eqn> \\[ \\cos\\theta + i\\sin\\theta = e^{i\\theta} \\]  </div>
 
       <p>So we can now rewrite our modulus argument form as:</p>
 
@@ -637,9 +637,9 @@ const subtopics = {
         simply by taking the modulus squared of the (complex) wavefunction:
       </p>
 
-      \\[
+      <div class=eqn> \\[
         \\text{Probability Density} = | \\Psi(x,t) |^2
-      \\]
+      \\]  </div>
 
       <p> Andd since the wavefunction \\( \\Psi(x,t) \\) can be complex, that means to get the probability density,
         you take the wavefunction and multiply it by it's complex conjugate, rather than just squaring it as one might
@@ -704,9 +704,9 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-100%;"> <div class="image-tooltip-title">
               Figure 1: Vectors</div><div class="image-tooltip-desc">
-              A vector has both magnitude and direction. This vector goes 2 units <br>
-              to the right (in the x-direction) and 3 units up (in the y-direction). <br>
-              Hence, \\(\\vec{v}\\)  = 2x + 3y.</div></span>
+              A vector has both magnitude and direction. This vector goes 2 units
+              to the right (in the x-direction) and 3 units up (in the y-direction).
+              Hence, \\(\\vec{v}  = 2x + 3y\\).</div></span>
           </div>
         </div>
       </div>
@@ -765,7 +765,7 @@ const subtopics = {
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 1: Vector notation</div><div class="formula-tooltip-desc">
-            A vector is equal to the magnitude/length of the vector, multiplied <br>
+            A vector is equal to the magnitude/length of the vector, multiplied
             by the direction the vector points in, i.e. the unit vector.</div></span>
           </div>
         </div>
@@ -800,16 +800,16 @@ const subtopics = {
         <p>Addition and subtraction are exactly what you’d imagine: add or subtract each \\( \\hat{i} \\), 
         \\( \\hat{j} \\) and \\( \\hat{k} \\) to get a resultant vector. For example, say you want to take
         these two vectors:</p>
-        \\[
+        <div class=eqn> \\[
          \\vec{a} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\quad \\text{and} \\quad
          \\vec{b} = \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix}
-        \\]
+        \\] </div>
         <p>We add the top two to get the top value of our new vector. Then add the middle two for the middle value
         of our vector, and then the bottom two for the bottom value of our vector. Like so:</p>
-        \\[
+        <div class=eqn> \\[
           \\vec{a}+\\vec{b}= \\begin{pmatrix} 1+2 \\\\ 4-3 \\\\ 2+1 \\end{pmatrix} 
           = \\begin{pmatrix} 3 \\\\ 1 \\\\ 1 \\end{pmatrix}
-        \\]
+        \\] </div>
         <p>And by the way, if it wasn't obvious, this big brackets with the three numbers inside is just a new and improved
         way of writing vectors. In that case we can see that \\(\\vec{a}\\) can also be written in the ijk form from earlier,
         as \\(\\hat{i}+4\\hat{j}+2\\hat{k}\\), and \\(\\vec{b}\\) as \\( 2 \\hat{i}-3\\hat{j}+\\hat{k}\\). And whilst both 
@@ -841,8 +841,8 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-80%;"> <div class="image-tooltip-title">
               Figure 2: Vector Addition</div><div class="image-tooltip-desc">
-              Starting from the origin, the vector \\(\\vec{a}\\) is drawn. Then, starting from <br>
-              where \\(\\vec{a}\\) finished, vector \\(\\vec{b}\\) is also drawn. The resultant <br>
+              Starting from the origin, the vector \\(\\vec{a}\\) is drawn. Then, starting from 
+              where \\(\\vec{a}\\) finished, vector \\(\\vec{b}\\) is also drawn. The resultant 
               vector \\(\\vec{a}+\\vec{b}\\) points from the origin to where \\(\\vec{b}\\) ends.</div></span>
           </div>
         </div>
@@ -859,11 +859,12 @@ const subtopics = {
 
         <p>So taking our trusty \\(\\vec{a}\\) and \\(\\vec{b}\\) as examples, if we were to take the dot product of these
         two vectors, we'd get:</p>
-        \\[ \\begin{align}
+        <div class=eqn> \\[ \\begin{align}
          \\vec{a} \\cdot \\vec{b} &= \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\cdot
         \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} \\\\[6pt] &= 
          (1\\times 2)+(4\\times -3)+(2\\times 1) \\\\[6pt] &= -8 \\end{align}
-        \\]
+        \\]  </div>
+
       <div class="container">
         <div class="image">
           <div class="image-floater">
@@ -873,7 +874,7 @@ const subtopics = {
             </div>
             <span class="image-tooltip left-box" style="left: 30%;"> <div class="image-tooltip-title">
               Figure 3: Dot Product</div><div class="image-tooltip-desc">
-              The dot product, \\(\\vec{a} \\cdot \\vec{b}\\), measures how 'far along' the longer vector <br>
+              The dot product, \\(\\vec{a} \\cdot \\vec{b}\\), measures how 'far along' the longer vector 
               (\\(\\vec{a}\\) in this case) the shorter vector (\\(\\vec{b}\\)) travelled. </div></span>
           </div>
         </div>
@@ -900,10 +901,10 @@ const subtopics = {
         two vectors. In other words, it give you a vector which is perpendicular to them both.</p>
         <p>Let's take our two volunteers, \\(\\vec{a}\\) and \\(\\vec{b}\\). If we calculate the cross product of
         these two vectors (I'll show you how in a minute, just be patient, ok?), you end up with:</p>
-        \\[
+        <div class=eqn> \\[
           \\vec{a} \\times \\vec{b} = \\begin{pmatrix} 1 \\\\ 4 \\\\ 2 \\end{pmatrix} \\times
         \\begin{pmatrix} 2 \\\\ -3 \\\\ 1 \\end{pmatrix} = \\begin{pmatrix} 10 \\\\ 3 \\\\ -11 \\end{pmatrix}
-        \\]
+        \\]  </div>
         <p>We've already agreed that two vectors are perpendicular when the dot product is \\(0\\). Go ahead. Calculate
         the dot product between \\(\\vec{a}\\), \\(\\vec{b}\\) and the new vector, \\(\\vec{a} \\times \\vec{b}\\),
         you'll find that it's \\(0\\) for both of them. And this works for any two vectors.</p>
@@ -915,10 +916,10 @@ const subtopics = {
         I'll show you now, without just talking about showing you, because that's the best thing to do in this
         scenario.</p>
         <p>Take two general vectors:</p>
-        \\[
+        <div class=eqn> \\[
           \\vec{u}=\\begin{pmatrix} u_1 \\\\ u_2 \\\\ u_3 \\end{pmatrix} \\quad \\text{and} \\quad
           \\vec{v}=\\begin{pmatrix} v_1 \\\\ v_2 \\\\ v_3 \\end{pmatrix}
-        \\]
+        \\]  </div>
         <p>If you <em>do</em> know about matrices, then the easy way is just to calculate the determinant of this 
         matrix:</p>
 
@@ -930,7 +931,7 @@ const subtopics = {
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2a: The Cross Product (determinant)</div><div class="formula-tooltip-desc">
-            The cross product of two vectors is the determinant <br>
+            The cross product of two vectors is the determinant 
             of this matrix.</div></span>
           </div>
         </div>
@@ -950,8 +951,8 @@ const subtopics = {
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2b: The Cross Product (formula)</div><div class="formula-tooltip-desc">
-            The cross product of 2 vectors can be found with this formula, <br>
-            which is actually just the formula for the determinant of the <br>
+            The cross product of 2 vectors can be found with this formula, 
+            which is actually just the formula for the determinant of the 
             aforementioned matrix.</div></span>
           </div>
         </div>
@@ -966,7 +967,7 @@ const subtopics = {
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3: Scalar Triple Product</div><div class="formula-tooltip-desc">
-            The scalar triple product of three vectors is the cross product of the <br>
+            The scalar triple product of three vectors is the cross product of the 
             final two vectors dotted with the first vector. This produces a scalar.</div></span>
           </div>
         </div>
@@ -983,7 +984,7 @@ const subtopics = {
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3b: Commutability of the Scalar Product</div><div class="formula-tooltip-desc">
-            The cross product of two vectors can be calculated directly from <br>
+            The cross product of two vectors can be calculated directly from 
             their components.</div></span>
           </div>
         </div>
@@ -1008,7 +1009,7 @@ const subtopics = {
               Formula 4a: Vector Triple Product
             </div>
             <div class="formula-tooltip-desc">
-              The vector triple product is what you get when you take the cross<br>
+              The vector triple product is what you get when you take the cross
               product of 3 vectors.
             </div></span>
           </div>
@@ -1039,11 +1040,11 @@ const subtopics = {
         \\(z\\) (just kidding, it’s \\(\\hat{i}\\), \\(\\hat{j}\\), and \\(\\hat{k}\\) now, remember?). 
         If you really must, you can write the basis vectors out (in column form):</p>
 
-        \\[
+        <div class=eqn> \\[
           \\hat{i} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 0 \\end{pmatrix} \\quad
           \\hat{j} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 0 \\end{pmatrix}\\quad
           \\hat{k} = \\begin{pmatrix} 0 \\\\ 0 \\\\ 1 \\end{pmatrix}
-        \\]
+        \\]  </div>
 
         <h4>Polar Coordinates</h4>
         <p>Polar co-ordinates are more convenient for systems which have circular symmetry. Instead of just stating how 
@@ -1063,7 +1064,7 @@ const subtopics = {
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 5a: Cartesian to Polar Transformations
             </div><div class="formula-tooltip-desc">
-              You can switch from cartesian co-ordinates (x, y) to <br>
+              You can switch from cartesian co-ordinates (x, y) to 
               polar co-ordinates (r, θ) using these transformations.
             </div></span>
           </div>
@@ -1079,7 +1080,7 @@ const subtopics = {
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 5b: Polar to Cartesian Transformations
             </div><div class="formula-tooltip-desc">
-              You can likewise change from polar co-ordinates (r, θ) to <br>
+              You can likewise change from polar co-ordinates (r, θ) to 
               cartesian co-ordinates (x, y) using these transformations.
             </div></span>
           </div>
@@ -1101,7 +1102,7 @@ const subtopics = {
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 6: Cartesian to Cylindrical
             </div><div class="formula-tooltip-desc">
-              Cylindrical co-ordinates are just polar co-ordinates with <br>
+              Cylindrical co-ordinates are just polar co-ordinates with 
               a z-dimension lazily plopped on top.
             </div></span>
           </div>
@@ -1131,8 +1132,8 @@ const subtopics = {
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 7: Cartesian to Spherical
             </div><div class="formula-tooltip-desc">
-              You can switch from cartesian co-ordinates (x, y, z) to <br>
-              spherical co-ordinates (r, θ, φ) using these <br> transformations.
+              You can switch from cartesian co-ordinates (x, y, z) to 
+              spherical co-ordinates (r, θ, φ) using these  transformations.
             </div></span>
           </div>
         </div>
@@ -1142,18 +1143,18 @@ const subtopics = {
         <h3>Reciprocal Vectors</h3>
         <p>We've already seen that whenever you take the cross product of two perpendicular unit vectors, you get 
         \\(0\\), whereas if you take the dot product of the same unit vector, the result if \\(1\\). For example:</p>
-        \\[
+        <div class=eqn> \\[
             \\hat{i} \\cdot \\hat{j} = 0, \\quad 
             \\hat{j} \\cdot \\hat{k} = 0, \\quad 
             \\hat{i} \\cdot \\hat{i} = 1, \\quad 
-        \\]
+        \\]  </div>
         <p>There is a much classier way of describing this rule instead of just writing the whole thing in words or
         showing every individual dot product for each cartesian basis vector. And it uses one of my favourite objects...
         the Kronecker Delta!</p>
 
-        \\[
+        <div class=eqn> \\[
           e_i \\cdot e_j = \\delta_{ij}
-        \\]
+        \\] </div>
         <p>The Kronecker delta is something you may come across a fair bit: it basically equals \\(1\\) when \\(i=j\\),
           and \\(0\\) whe \\(i \\neq j\\). We can see how this works for our vectors: if we take \\(\\hat{i}\\), 
           \\(\\hat{j}\\) and \\(\\hat{k}\\) to be \\(e_1\\), \\(e_2\\) and \\(e_3\\), then we can use the formula to say
@@ -1178,12 +1179,12 @@ const subtopics = {
         <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p>\\[ e_i \\cdot e'_j = \\delta_{ij} \\] </p>
+              \\[ e_i \\cdot e'_j = \\delta_{ij} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 8: Dot Product of Basis Vectors <br>(feat. Kronecker Delta)
             </div><div class="formula-tooltip-desc">
-              The dot product of basis vectors is given by the Kronecker <br>
+              The dot product of basis vectors is given by the Kronecker 
               delta, which is 1 when indices are equal and 0 otherwise.
             </div></span>
           </div>
@@ -1201,7 +1202,7 @@ const subtopics = {
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 9: Reciprocal Basis Vectors
             </div><div class="formula-tooltip-desc">
-              Reciprocal basis vectors for potentially non-orthogonal <br>
+              Reciprocal basis vectors for potentially non-orthogonal 
               systems, related via the cross and dot product.
             </div></span>
           </div>
@@ -1270,7 +1271,7 @@ const subtopics = {
         better get used to ‘em now!</p>
         <p>The <strong>order</strong> of a differential equation is the order of the highest derivative. So
         for example, if we have:</p>
-        \\[ \\frac{d^2y}{dx^2} + 5\\frac{dy}{dx} + 6y = 0 \\]
+        <div class=eqn> \\[ \\frac{d^2y}{dx^2} + 5\\frac{dy}{dx} + 6y = 0 \\]  </div>
         <p>Then this is a <strong>second order</strong> differential equation, because we have a \\(d^2\\) term.</p>
         <p>These equations have two types of solutions:</p>
         <p>A <strong>general solution</strong> is (funnily enough) the most general form of the solution we can
@@ -1288,9 +1289,9 @@ const subtopics = {
           For example:
         </p>
 
-        \\[ \\frac{dy}{dx} + y = x \\]
+        <div class=eqn> \\[ \\frac{dy}{dx} + y = x \\]
         \\[ \\frac{dy}{dx} = \\sin{x} \\]
-        \\[ \\frac{dy}{dx} = \\frac{y}{x} + (\\frac{y}{x})^2 \\]
+        \\[ \\frac{dy}{dx} = \\frac{y}{x} + (\\frac{y}{x})^2 \\]  </div>
 
         <p>There are all first-order ODEs. So how do we solve them?</p>
 
@@ -1298,11 +1299,11 @@ const subtopics = {
           both sides to get the answer back. For example, if we have:
         </p>
 
-        \\[ \\frac{dy}{dx} = x^2 \\]
+        <div class=eqn> \\[ \\frac{dy}{dx} = x^2 \\] </div>
 
         <p>We can integrate both sides with respect to \\(x\\):</p>
 
-        \\[ \\int \\frac{dy}{dx} \\, dx = \\int x^2 \\, dx \\implies y = \\frac{1}{3}x^3 + C \\]
+        <div class=eqn> \\[ \\int \\frac{dy}{dx} \\, dx = \\int x^2 \\, dx \\implies y = \\frac{1}{3}x^3 + C \\]  </div>
 
         <p>Where \\(C\\) is the constant of integration, which you obviously <em>didn't forget to include</em>.
           In this case, we don't have to do much work at all!
@@ -1330,9 +1331,9 @@ const subtopics = {
         like it’s an actual fraction, as in \\(dy\\) divided by \\(dx\\). In which case, you just collect
         like terms onto each side of the equation via division and multiplication. For example, with
         \\( \\frac{dy}{dx} = \\frac{x^2}{y} \\), you can rearrange it.</p>
-        \\[ y \\, dy = x^2 \\, dx \\]
+        <div class=eqn> \\[ y \\, dy = x^2 \\, dx \\] </div>
         <p>Now we have an equation which we can integrate both sides of like before:</p>
-        \\[ \\int y \\, dy = \\int x^2 \\, dx \\implies \\frac{1}{2}y^2 = \\frac{1}{3}x^3 + C \\]
+        <div class=eqn> \\[ \\int y \\, dy = \\int x^2 \\, dx \\implies \\frac{1}{2}y^2 = \\frac{1}{3}x^3 + C \\] </div>
         <p><em>“Hang on, treat it like a fraction? What do you mean, treat it like a fraction? Isn’t that
         exactly what it is?”</em> I hear you ask. Well, according to my flatmates who study mathematics,
         differentials are not exactly fractions, and therefore using this moving terms around method is,
@@ -1342,40 +1343,40 @@ const subtopics = {
 
         <h4>Substitution</h4>
         <p>What about an equation like this:</p>
-        \\[ \\frac{dy}{dx} = \\frac{y}{x} + (\\frac{y}{x})^2 \\]
+        <div class=eqn> \\[ \\frac{dy}{dx} = \\frac{y}{x} + (\\frac{y}{x})^2 \\] </div>
         <p>I can’t help but notice that there is a recurring theme on the right-hand side of the
         equation: \\(y/x\\) seems to feature a lot. In that case, we can replace \\(y/x\\) with another
         variable. Let’s take... \\(z\\)! So let \\( z = \\frac{y}{x} \\). Subbing that into the equation we get:</p>
-        \\[ \\frac{dy}{dx} = z + z^2 \\]
+        <div class=eqn> \\[ \\frac{dy}{dx} = z + z^2 \\]  </div>
         <p>This is looking a bit more manageable, except for one problem: we now have three variables,
         an \\(x\\), a \\(y\\) and a \\(z\\). If we wanna solve this equation, we can only have two variables.</p>
         <p>Oh, I know! Since we made \\(z\\) by replacing \\(y/x\\), we rearrange that to get \\(y=xz\\). Now
         we can replace the \\(y\\) in the differential, giving us:</p>
-        \\[ \\frac{d(xz)}{dx} = z + z^2 \\]
+        <div class=eqn> \\[ \\frac{d(xz)}{dx} = z + z^2 \\]  </div>
         <p>A bit better, now to deal with the differential. Since this is a product of two x-dependent
         things, \\(z(x)\\) and \\(x\\), we can use the <strong>product rule</strong> to differentiate it. That
         leaves us with:</p>
-        \\[ \\frac{d(xz)}{dx} = x\\frac{dz}{dx} + z \\]
+        <div class=eqn> \\[ \\frac{d(xz)}{dx} = x\\frac{dz}{dx} + z \\]  </div>
         <p>Substitute it into the equation, and we get:</p>
-        \\[ x\\frac{dz}{dx} + z = z + z^2 \\implies x\\frac{dz}{dx} = z^2 \\]
+        <div class=eqn> \\[ x\\frac{dz}{dx} + z = z + z^2 \\implies x\\frac{dz}{dx} = z^2 \\]  </div>
         <p>Now we can use the ‘separation of variables’ method, which gives us:</p>
-        \\[ \\frac{1}{z^2} dz = \\frac{1}{x} dx \\xrightarrow{\\text{integrate}} -\\frac{1}{z} = \\ln|x| + C \\]
+        <div class=eqn> \\[ \\frac{1}{z^2} dz = \\frac{1}{x} dx \\xrightarrow{\\text{integrate}} -\\frac{1}{z} = \\ln|x| + C \\]  </div>
         <p>You might wonder, “when can I use substitution?” My answer... figure it out. In my opinion,
         the hardest part of any mathematics is not the techniques themselves but figuring out when to
         use them. And that just requires practice.</p>
 
         <h4>Integrating Factor</h4>
         <p>Now what if we have an equation which is in this form:</p>
-        \\[ \\frac{dy}{dx} + P(x)y = Q(x) \\]
+        <div class=eqn> \\[ \\frac{dy}{dx} + P(x)y = Q(x) \\] </div>
         <p>Woah woah woah, that’s a bloody arbitrary form for an equation to be in, isn’t it?</p>
         <p>Yes, I agree, but it’s actually quite common (in exams anyway...). Now how do we solve this?
         We use something called the <strong>integrating factor</strong>, \\(R(x)\\), which is:</p>
-        \\[ R(x) = e^{\\int P(x)dx} \\]
+        <div class=eqn> \\[ R(x) = e^{\\int P(x)dx} \\] </div>
         <p>We multiply each term of the equation by the integrating factor. The left-hand side is just
         the differential of \\(R(x)y\\)! That means you can rewrite the equation as so:</p>
-        \\[ \\frac{d}{dx}(R(x)y) = R(x)Q(x) \\]
+        <div class=eqn> \\[ \\frac{d}{dx}(R(x)y) = R(x)Q(x) \\] </div>
         <p>And then integrate both sides to get the answer as so:</p>
-        \\[ R(x)y = \\int R(x)Q(x)dx \\]
+        <div class=eqn> \\[ R(x)y = \\int R(x)Q(x)dx \\] </div>
 
         <h3>Second Order Homogeneous ODE</h3>
         <p>We can treat the differential equation like it’s a normal quadratic equation. Remove the
@@ -1385,7 +1386,7 @@ const subtopics = {
         <p>Anyway, now that we’ve replaced the \\(m\\)’s, solve it like a quadratic equation, which
         will normally give you two results, say \\(m_1\\) and \\(m_2\\). This means the solution to the
         second order ODE is then:</p>
-        \\[ y(x) = Ae^{m_1x} + Be^{m_2x} \\]
+        <div class=eqn> \\[ y(x) = Ae^{m_1x} + Be^{m_2x} \\] </div>
         <p>One additional consideration, what about the one in a billion chance where we have
         <strong>repeated roots</strong>? Repeated roots are what happens when you solve a quadratic
         equation and end up with two of the same answer, \\(m_1 = m_2 = m\\).</p>
@@ -1393,35 +1394,35 @@ const subtopics = {
         <em>must</em> end up with n solutions. But if two of your solutions are the same, then it only counts
         as one solution, which breaks the special rule. To stop this, when you get repeated roots, you end up 
         multiplying one of the constants by \\(x\\), giving you:</p>
-        \\[ y(x) = Ae^{mx} + Bxe^{mx} = (A+Bx)e^{mx} \\]
+        <div class=eqn> \\[ y(x) = Ae^{mx} + Bxe^{mx} = (A+Bx)e^{mx} \\] </div>
         <p> And you can try and decipher the exact reason behind all this if you want, but I'd advise
           you to just remember it for now. </p>
         <p>Here's an example:</p>
 
-        \\[
+        <div class=eqn> \\[
           \\frac{d^2 y}{dx^2} + 2 \\frac{dy}{dx} + y = 0
-        \\]
+        \\] </div>
 
         <p> Using the 'pretend it's a polynomial' method as before:</p>
 
-        \\[
+        <div class=eqn> \\[
           m^2 + 2m + 1 = 0
-        \\]
+        \\] </div>
 
         \\[
           \\downarrow
         \\]
 
-        \\[
+        <div class=eqn> \\[
           m_1 = m_2 = -1 \\pm \\frac{\\sqrt{4-4}}{2} = -1
-        \\]
+        \\] </div>
 
         <p> Since we have a repeated root here, instead of rendering the solution as \\( y = Ae^{-x} + Be^{-x} \\),
         we instead write: </p>
 
-        \\[
+        <div class=eqn> \\[
           y = Ae^{-x} + Bxe^{-x}
-        \\]
+        \\] </div>
 
       <h3>TL;DR</h3>
 
@@ -1562,13 +1563,13 @@ const subtopics = {
               style="max-width: 100%; width: 70vw"/>
             </div>
             <span class="image-tooltip" style="left:-100%;"> <div class="image-tooltip-title">
-              Figure 1: Maclauren approximation<br> of a sine wave</div><div class="image-tooltip-desc">
-              The Maclauren expansion is being used to produce an approximation for a sine <br>
-              wave (red). Only including the first term in the approximation gives a poor <br>
-              approximation, particularly for larger values of x (purple). As you include <br>
-              more terms, the approximation gets better and better, and the range of values <br>
-              of x which the approximation is good for increases (magenta and pink). If we <br>
-              to include an infinite number of terms, it would match the original sine wave <br>
+              Figure 1: Maclauren approximation of a sine wave</div><div class="image-tooltip-desc">
+              The Maclauren expansion is being used to produce an approximation for a sine 
+              wave (red). Only including the first term in the approximation gives a poor 
+              approximation, particularly for larger values of x (purple). As you include 
+              more terms, the approximation gets better and better, and the range of values 
+              of x which the approximation is good for increases (magenta and pink). If we 
+              to include an infinite number of terms, it would match the original sine wave 
               perfectly.</div></span>
           </div>
         </div>
@@ -1692,9 +1693,9 @@ const subtopics = {
         area), it's clear that is is less than the total area underneath \\( \\frac1{x^2} \\). In other words:
       </p>
 
-      \\[
+      <div class=eqn> \\[
         A_N = S - S_N \\leq \\int^\\infty_N f(x)dx
-      \\]
+      \\] </div>
 
       <p>
         However it we look at the
@@ -1710,9 +1711,9 @@ const subtopics = {
       <p> Since getting an exact value here is probably a bit tedious and frankly unnecessary, we can end up with a pretty
       decent estimate just by calculating the average of the two sums: </p>
 
-      \\[
+      <div class=eqn> \\[
         S \\approx S_N + \\frac12(A_N + A_{N+1}) 
-      \\]
+      \\] </div>
 
 
       <h3>TL;DR</h3>
@@ -1790,7 +1791,7 @@ const subtopics = {
                 </div>
                 <span class="formula-tooltip">
                   <div class="formula-tooltip-title">Formula 1: Second Derivative Test (Discriminant)</div>
-                  <div class="formula-tooltip-desc">Used to classify stationary points (maxima, minima, or saddle points) <br>
+                  <div class="formula-tooltip-desc">Used to classify stationary points (maxima, minima, or saddle points) 
                   for functions of two variables.</div>
                 </span>
               </div>
@@ -1880,7 +1881,7 @@ const subtopics = {
                     </div>
                     <span class="formula-tooltip">
                       <div class="formula-tooltip-title">Formula 2: Gradient of a Scalar Field</div>
-                      <div class="formula-tooltip-desc">Creates a vector from all partial derivatives, pointing in the <br>
+                      <div class="formula-tooltip-desc">Creates a vector from all partial derivatives, pointing in the 
                         direction of steepest increase of the function.
                       </div>
                     </span>
@@ -1982,8 +1983,8 @@ const subtopics = {
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 1: Double Integral Structure
           </div><div class="formula-tooltip-desc">
-            Integrates a function of two variables over a region by performing <br>
-            two successive integrations, first with respect to one variable, then <br>
+            Integrates a function of two variables over a region by performing 
+            two successive integrations, first with respect to one variable, then 
             the other.
           </div></span>
         </div>
@@ -2042,7 +2043,7 @@ const subtopics = {
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                 Formula 2: Volume Element (Cartesian)</div><div class="formula-tooltip-desc">
-                The differential volume element for Cartesian coordinates. Represents <br>
+                The differential volume element for Cartesian coordinates. Represents 
                 a tiny cube in 3D space.
               </div></span>
             </div>
@@ -2059,8 +2060,8 @@ const subtopics = {
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                 Formula 3: Volume Element (Cylindrical)</div><div class="formula-tooltip-desc">
-                The differential volume element in cylindrical coordinates, used for <br>
-                problems with circular symmetry. The wedge-shaped volume accounts <br>
+                The differential volume element in cylindrical coordinates, used for 
+                problems with circular symmetry. The wedge-shaped volume accounts 
                 for radius, angle, and height.
               </div></span>
             </div>
@@ -2078,7 +2079,7 @@ const subtopics = {
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                 Formula 4: Volume Element (Spherical)</div><div class="formula-tooltip-desc">
-                The differential volume element in spherical coordinates, describing a <br>
+                The differential volume element in spherical coordinates, describing a 
                 tiny chunk of a sphere. Accounts for curvature and angles.
               </div></span>
             </div>
@@ -2108,8 +2109,8 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 5: Volume of a Sphere</div><div class="formula-tooltip-desc">
-            Calculates the volume of a sphere with radius <em>a</em> using spherical <br>
-            coordinates and the appropriate volume element. Integrate over <br> 
+            Calculates the volume of a sphere with radius <em>a</em> using spherical 
+            coordinates and the appropriate volume element. Integrate over  
             all spherical angles and from the center out to the surface.
           </div></span>
         </div>
@@ -2151,8 +2152,8 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: Work as a Line Integral</div><div class="formula-tooltip-desc">
-          Calculates total work done by a force \\( \\vec{F} \\) along a path C, summing only <br>
-          the force component in the direction of the path at each step via the <br> dot product.
+          Calculates total work done by a force \\( \\vec{F} \\) along a path C, summing only 
+          the force component in the direction of the path at each step via the  dot product.
           </div></span>
         </div>
       </div>
@@ -2197,8 +2198,8 @@ const subtopics = {
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2: Path Independence in <br> Conservative Fields</div>
           <div class="formula-tooltip-desc">
-            For conservative force fields, the line integral from point a to b <br>
-            depends only on the potential \\( U \\) at those endpoints, not on the actual <br> path taken.
+            For conservative force fields, the line integral from point a to b 
+            depends only on the potential \\( U \\) at those endpoints, not on the actual  path taken.
           </div></span>
         </div>
       </div>
@@ -2222,9 +2223,7 @@ const subtopics = {
       <p>
           The formula for flux is:
       </p>
-      <p>
-          \\[\\text{Flux} = \\iint_S \\vec{F} \\cdot d\\vec{S}\\]
-      </p>
+          <div class=eqn> \\[\\text{Flux} = \\iint_S \\vec{F} \\cdot d\\vec{S}\\] </div>
       <p>
           Let's break it down:
       </p>
@@ -2275,13 +2274,13 @@ const subtopics = {
 
       <p> Say we have this line integral</p>
 
-      \\[
+      <div class=eqn> \\[
         I = \\int_C \\vec{P} \\cdot d\\vec{l}
       \\]
 
       \\[
         \\vec{P} = 5y^2 \\hat{i} + 2xy \\hat{j}
-      \\]
+      \\] </div>
 
       <p> and \\(C_1\\) is the line connecting the origin and the point \\( (1,1) \\). </p>
 
@@ -2289,32 +2288,32 @@ const subtopics = {
       terms of x and y (or i and j). We'll start by trying to get a formula which describes the path, \\( \\vec{l} \\),
       and in this case, it's quite simple, it's just: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{l} = x \\hat{i} + y \\hat{j}
-      \\]
+      \\] </div>
 
       <p> and since on \\( C_1 \\), x = y:
 
-      \\[
+      <div class=eqn> \\[
         \\vec{l} = x \\hat{i} + x \\hat{j}
-      \\]
+      \\] </div>
 
       <p> I hope you can see why that's true, because IDK how else to explain it. Your
       job is just to find a definition of the path (or paths) in terms of i's and j's. </p>
 
       <p> Now for \\( d\\vec{l} \\), just differentiate and rearrange: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\frac{d \\vec{l}}{dx} = 1 \\hat{i} + 1 \\hat{j}
       \\]
 
       \\[
         d \\vec{l} = (1 \\hat{i} + 1 \\hat{j})dx = dx \\hat{i} + dx \\hat{j}
-      \\]
+      \\] </div>
 
       <p> Now that we have a value for \\( d\\vec{l} \\), we can solve the integral as usual: </p>
 
-      \\[
+      <div class=eqn> \\[
         I = \\int_C \\vec{P} \\cdot d\\vec{l}
       \\]
 
@@ -2332,7 +2331,7 @@ const subtopics = {
 
       \\[
         I = \\frac73
-      \\]
+      \\] </div>
 
       <h3>TL;DR</h3>
 
@@ -2387,8 +2386,8 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: Fourier Series Expansion</div><div class="formula-tooltip-desc">
-            Expresses any periodic function as an infinite sum of sine <br>
-            and cosine waves with coefficients \\( a_n \\) and \\( b_n \\), representing <br>
+            Expresses any periodic function as an infinite sum of sine 
+            and cosine waves with coefficients \\( a_n \\) and \\( b_n \\), representing 
             the contribution of each frequency.
           </div></span>
         </div>
@@ -2442,9 +2441,9 @@ const subtopics = {
           so the first term cancels out. By orthogonality, we know that the \\(\\sin(n\\pi)\\cos(n\\pi)\\) term becomes 
           0, and the \\(\\cos(n\\pi)\\cos(m\\pi)\\) just becomes \\(\\pi\\), leaving us with
       </p>
-      <p>
-          \\[\\int f(x) \\cos(\\frac{n\\pi x}{L}) = a_n L\\]
-      </p>
+
+          <div class=eqn> \\[\\int f(x) \\cos(\\frac{n\\pi x}{L}) = a_n L\\] </div>
+
       <p>
           We can rearrange this to get the value for an:
       </p>
@@ -2456,7 +2455,7 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 2: Cosine Coefficient \\( a_n \\)</div><div class="formula-tooltip-desc">
-            Finds the strength of the cosine component at frequency \\( n \\); <br>
+            Finds the strength of the cosine component at frequency \\( n \\); 
             uses orthogonality of cosines over the interval.
           </div></span>
         </div>
@@ -2473,7 +2472,7 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 3: Sine Coefficient \\( b_n \\)</div><div class="formula-tooltip-desc">
-            Finds the strength of the sine component at frequency \\( n \\); <br>
+            Finds the strength of the sine component at frequency \\( n \\); 
             uses orthogonality of sines over the interval.
           </div></span>
         </div>
@@ -2491,7 +2490,7 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 4: Mean (Average) Value \\( a_0 \\)</div><div class="formula-tooltip-desc">
-            Represents the average (constant) term in the Fourier series, <br>
+            Represents the average (constant) term in the Fourier series, 
             found by integrating the function over the interval.
           </div></span>
         </div>
@@ -2614,13 +2613,13 @@ const subtopics = {
       rectangular array of numbers, but what does that look like? Here are a couple examples of matrices:</p>
 
       <u>2x2 matrix</u>
-      \\[\\begin{pmatrix}2&3 \\\\ 4&2 \\end{pmatrix}\\]
+      <div class=eqn> \\[\\begin{pmatrix}2&3 \\\\ 4&2 \\end{pmatrix}\\] </div>
 
       <u>3x3 matrix</u>
-      \\[\\begin{pmatrix}1&0&2 \\\\ 0&1&3 \\\\ 4&0&1 \\end{pmatrix}\\]
+      <div class=eqn> \\[\\begin{pmatrix}1&0&2 \\\\ 0&1&3 \\\\ 4&0&1 \\end{pmatrix}\\] </div>
 
       <u>4x2 matrix</u>
-      \\[\\begin{pmatrix}1&2&3&4 \\\\ 5&6&7&8 \\end{pmatrix}\\]
+      <div class=eqn> \\[\\begin{pmatrix}1&2&3&4 \\\\ 5&6&7&8 \\end{pmatrix}\\] </div>
 
       <p>We're mainly going to be dealing with <strong>square matrices</strong>, which as
       you can probably infer, are matrices with as many rows as columns, in this case \\(A\\) and
@@ -2632,7 +2631,7 @@ const subtopics = {
       you'd think. Add each individual value from one matrix with the corresponding value
       in the next matrix:</p>
 
-        \\[
+        <div class=eqn> \\[
         \\begin{pmatrix}
         {\\color{red}1} & {\\color{red}2} \\\\
         {\\color{red}3} & {\\color{red}4}
@@ -2647,7 +2646,7 @@ const subtopics = {
         {\\color{red}1}+{\\color{cyan}5} & {\\color{red}2}+{\\color{cyan}6} \\\\
         {\\color{red}3}+{\\color{cyan}7} & {\\color{red}4}+{\\color{cyan}8}
         \\end{pmatrix}
-        \\]
+        \\] </div>
 
 
       <p><strong>Matrix multiplication</strong> is a whole different beast. It's a bit
@@ -2658,7 +2657,7 @@ const subtopics = {
       <p>That was a lot of words, I promise you it's not as clumsy as it sounds in practice, albeit still
       a bit of a pain. Here's an example:</p>
       <p>Say you have these two 2x2 matrices which you want to multiply together:</p>
-      \\[A = \\begin{pmatrix}1&2 \\\\ 3&4 \\end{pmatrix}, \\quad B = \\begin{pmatrix}5&6 \\\\ 7&8 \\end{pmatrix}\\]
+      <div class=eqn> \\[A = \\begin{pmatrix}1&2 \\\\ 3&4 \\end{pmatrix}, \\quad B = \\begin{pmatrix}5&6 \\\\ 7&8 \\end{pmatrix}\\] </div>
       <p>To find the element in the first row and first column of the resulting matrix, you take the
       two numbers in the first row of \\(A\\) (1 and 2) and the two numbers in the first column of
       \\(B\\) (5 and 7). Multiply the first numbers together (1*5 = 5), then the second numbers
@@ -2677,20 +2676,20 @@ const subtopics = {
       together (4*8 = 32), and add them up (18 + 32 = 50). So the element in the second row and
       second column of the new matrix is 50.</p>
       <p>Putting it all together, the resulting matrix \\(C = AB\\) is:</p>
-      \\[C = \\begin{pmatrix}19&22 \\\\ 43&50 \\end{pmatrix}\\]
+      <div class=eqn> \\[C = \\begin{pmatrix}19&22 \\\\ 43&50 \\end{pmatrix}\\] </div>
 
       <p>The most important thing you need to burn into your brain is this:</p>
-      <p>\\[AB \\neq BA\\]</p>
+      <div class=eqn> \\[AB \\neq BA\\] </div>
       <p>Matrix multiplication is <strong>NOT</strong> commutative. The order matters, hugely. It's
       a completely new rule and it's dead easy to forget when you're in the middle of
       a problem. I mean, try and example yourself.</p>
 
       <h3>Solving Systems of Equations</h3>
       <p>Let's say you've got a classic system of equations:</p>
-      <p>\\[x + 2y = 7 \\text{ and } 2x + 3y = 12\\]</p>
+      <div class=eqn> \\[x + 2y = 7 \\text{ and } 2x + 3y = 12\\] </div>
       <p>We can rewrite this in the much tidier matrix form \\(A\\mathbf{x} = \\mathbf{b}\\).</p>
-      <p>\\(\\begin{pmatrix}1&2 \\\\ 2&3 \\end{pmatrix} \\begin{pmatrix}x \\\\ y \\end{pmatrix} =
-      \\begin{pmatrix}7 \\\\ 12 \\end{pmatrix}\\)</p>
+      <div class="eqn">\\[\\begin{pmatrix}1&2 \\\\ 2&3 \\end{pmatrix} \\begin{pmatrix}x \\\\ y \\end{pmatrix} =
+      \\begin{pmatrix}7 \\\\ 12 \\end{pmatrix}\\] </div>
       <p>Here, \\(A\\) is the matrix of coefficients, \\(\\mathbf{x}\\) is the column vector of
       variables, and \\(\\mathbf{b}\\) is the column vector of constants.</p>
       <p>This is more than just looking neat; it lets us use proper tools to find the
@@ -2727,7 +2726,7 @@ const subtopics = {
       transformation is irreversible—you can't un-squash a line back into a square
       because you've lost all that information.</p>
 
-      <h3>Eigenvectors & Eigenvalues: The Matrix's True Colours</h3>
+      <h3>Eigenvectors & Eigenvalues</h3>
       <p>This is probably the most important concept in the whole topic.</p>
       <p>When a matrix \\(A\\) acts on a vector \\(\\mathbf{x}\\), it usually stretches and
       rotates it. But for every matrix, there are a few special vectors that <strong>don't
@@ -2735,7 +2734,7 @@ const subtopics = {
       are the <strong>eigenvectors</strong>. The factor by which an eigenvector is stretched
       is its corresponding <strong>eigenvalue</strong> (\\(\\lambda\\), the Greek letter lambda).</p>
       <p>This gives us the most famous equation in linear algebra:</p>
-      <p>\\[A\\mathbf{x} = \\lambda\\mathbf{x}\\]</p>
+      <div class=eqn> \\[A\\mathbf{x} = \\lambda\\mathbf{x}\\] </div>
       <p>In physics, eigenvectors represent the "natural" states or principal axes of
       a system. In quantum mechanics, the <em>eigenvalues</em> of a matrix are the
       <strong>only possible values you can measure in an experiment</strong>, and the
@@ -2756,15 +2755,15 @@ const subtopics = {
         side of the diagonal are symmetric. For example:</p>
 
         <u>Symmetric 2x2 Matrix</u>
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 1&2 \\\\ 2&4 \\end{pmatrix}
-        \\]
+        \\] </div>
 
         <u>Symmetric 3x3 Matrix</u>
 
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 1&2&3 \\\\ 2&4&5 \\\\ 3&5&6 \\end{pmatrix}
-        \\]
+        \\] </div>
 
       <h4>Antisymmetric Matrices</h4>
 
@@ -2776,15 +2775,15 @@ const subtopics = {
         except with a different sign, it is antisymmetric. For example:</p>
 
         <u>Antisymmetric 2x2 Matrix</u>
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 1&-2 \\\\ 2&4 \\end{pmatrix}
-        \\]
+        \\] </div>
 
         <u>Antisymmetric 3x3 Matrix</u>
 
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 1&-2&-3 \\\\ 2&4&-5 \\\\ 3&5&6 \\end{pmatrix}
-        \\]
+        \\] </div>
 
       <h4>Hermitian Matrix</h4>
         <p>We've had the transpose, the negative transpose, now whachu know 'bout the complex conjugate
@@ -2801,15 +2800,15 @@ const subtopics = {
         <p>And here are some examples:</p>
 
         <u>Hermitian 2x2 Matrix</u>
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 3&2+i \\\\ 2-i&1 \\end{pmatrix}
-        \\]
+        \\] </div>
 
         <u>Hermitian 3x3 Matrix</u>
 
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 1&i&3 \\\\ -i&4&1-3i \\\\ 3&1+3i&6 \\end{pmatrix}
-        \\]
+        \\] </div>
 
       <h4>Antihermitian Matrix</h4>
         <p> As you can potentially guess, an antihermitian matrix is one which is the same as the negative complex
@@ -2825,15 +2824,15 @@ const subtopics = {
         <p>And here are some examples:</p>
 
         <u>Antihermitian 2x2 Matrix</u>
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 3&2+i \\\\ -2+i&1 \\end{pmatrix}
-        \\]
+        \\] </div>
 
         <u>Antihermitian 3x3 Matrix</u>
 
-        \\[
+        <div class=eqn> \\[
           \\begin{pmatrix} 1&i&-3 \\\\ i&4&1-3i \\\\ 3&-1-3i&6 \\end{pmatrix}
-        \\]
+        \\] </div>
 
       <h3> Diagonalisation </h3>
 
@@ -2855,10 +2854,10 @@ const subtopics = {
             <p>\\( A = S\\Lambda S^{-1} \\)</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Diagonalisation
           </div><div class="formula-tooltip-desc">
-            If \\(A\\) has \\(n\\) linearly independent eigenvectors, then \\( A = S \\Lambda S^{-1}\\),<br> 
-            where \\(S\\) is the matrix whose columns are the eigenvectors, and \\(\\Lambda\\) <br> is a 
+            If \\(A\\) has \\(n\\) linearly independent eigenvectors, then \\( A = S \\Lambda S^{-1}\\), 
+            where \\(S\\) is the matrix whose columns are the eigenvectors, and \\(\\Lambda\\)  is a 
             diagonal matrix with the eigenvalues on the diagonal.
           </div></span>
         </div>
@@ -2870,11 +2869,11 @@ const subtopics = {
           \\(\\vec{x}_1\\), \\(\\vec{x}_2\\), and \\(\\vec{x}_3\\), then 
           \\(S = [\\vec{x}_1 | \\vec{x}_2 | \\vec{x}_3]\\). </li>
         <li> \\(\\Lambda\\) (capital lambda, fancy innit?) is a diagonal matrix with your eigenvalues on 
-          the diagonal. So if your eigenvalues are \\( \\lambda_1, \\lambda_2, \\lambda_3 \\) then:
-          \\[
+          the diagonal. So if your eigenvalues are \\( \\lambda_1, \\lambda_2, \\lambda_3 \\) then:</li></ol>
+          <div class=eqn> \\[
             \\Lambda = \\begin{pmatrix} \\lambda_1&0&0 \\\\ 0&\\lambda_2&0 \\\\ 0&0&\\lambda_3 \\end{pmatrix}
-          \\] </li>
-        <li> \\( S^{-1} \\) is the inverse of \\(S\\). You remember how to find inverses, right?
+          \\] </div> 
+        <ol><li> \\( S^{-1} \\) is the inverse of \\(S\\). You remember how to find inverses, right?
       </ol>
 
 
@@ -2980,9 +2979,10 @@ const subtopics = {
               \\[ F=\\frac{Gm_1m_2}{r^2}, \\text{ or in vector form, }\\mathbf{\\vec{F}}_{12}=-\\frac{Gm_1m_2}{r^2}\\hat{r} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 1: Newton's Law of Gravity
             </div><div class="formula-tooltip-desc">
-              ...
+              The gravitational force between 2 objects is proportional to the product of their masses, and inversely
+              proportional to the square of their distances. 
             </div></span>
           </div>
         </div>
@@ -3010,7 +3010,7 @@ const subtopics = {
               \\[ \\mathbf{\\vec{r}}_{CoM}=\\frac{\\int\\mathbf{\\vec{r}}dm}{\\int dm} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 2: Centre of mass
             </div><div class="formula-tooltip-desc">
               ...
             </div></span>
@@ -3027,7 +3027,7 @@ const subtopics = {
               \\[ x_{CoM}=\\frac{\\int xdm}{\\int dm} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 2.1: CoM in the x-direction
             </div><div class="formula-tooltip-desc">
               ...
             </div></span>
@@ -3081,9 +3081,10 @@ const subtopics = {
               \\[ v^2 = u^2 + 2as \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula SUVAT equations
             </div><div class="formula-tooltip-desc">
-              ...
+              When acceleration is constant, these equations can be used to determine the initial velocity (u), final
+              velocity (v), displacement (s), acceleration (a) or time (t) of an object.
             </div></span>
           </div>
         </div>
@@ -3101,7 +3102,7 @@ const subtopics = {
 
       <p>If acceleration changes with time — say \\( a = a(t) \\) — then you can’t use SUVAT. You have to integrate:</p>
 
-      \\[ v - u = \\int_0^t a(t') dt' \\]
+      <div class=eqn> \\[ v - u = \\int_0^t a(t') dt' \\] </div>
 
       <p>Then integrate again to get position.</p>
 
@@ -3120,11 +3121,11 @@ const subtopics = {
 
       <p>We can then rearrange that to get:</p>
 
-      \\[ v dv = a(x) dx \\]
+      <div class=eqn> \\[ v dv = a(x) dx \\] </div>
 
       <p>Integrate both sides:</p>
 
-      \\[ \\frac{1}{2}(v^2 - u^2) = \\int_0^x a(x) dx \\]
+      <div class=eqn> \\[ \\frac{1}{2}(v^2 - u^2) = \\int_0^x a(x) dx \\] </div>
 
       <p>Now you can calculate the right-hand side — if you know \\( a(x) \\). Then, if you’re lucky, you can 
       integrate again to get \\( x(t) \\).</p>
@@ -3135,11 +3136,11 @@ const subtopics = {
 
       <p>So:</p>
 
-      \\[ \\frac{dv}{dt} = a(v) \\]
+      <div class=eqn> \\[ \\frac{dv}{dt} = a(v) \\] </div>
 
       <p>Separate variables:</p>
 
-      \\[ \\int_u^v \\frac{dv}{a(v)} = \\int_0^t dt' = t \\]
+      <div class=eqn> \\[ \\int_u^v \\frac{dv}{a(v)} = \\int_0^t dt' = t \\] </div>
 
       <p>So you can solve for \\( v(t) \\), then integrate to get \\( x(t) \\). As usual — whether this works 
       depends on the form of \\( a(v) \\). But the method is solid.</p>
@@ -3169,7 +3170,7 @@ const subtopics = {
       <p>You are likely familiar with the concept of <em>kinetic energy</em>. In baby terms, this is
       the energy something has when it moves. You're also probably familiar with the formula for kinetic
       energy:</p>
-      \\[T=\\frac{1}{2}mv^2=\\frac{p^2}{2m}\\]
+      <div class=eqn> \\[T=\\frac{1}{2}mv^2=\\frac{p^2}{2m}\\] </div>
 
       <p>Now for some reason, the lecture notes have started using \\(T\\) for kinetic energy instead of
       \\(E_K\\) which I personally prefer. A bit random, but whatever I don't care.</p>
@@ -3177,7 +3178,7 @@ const subtopics = {
       as mass \\(\\times\\) velocity, \\(p=mv\\). With a bit of techy rearranging, we get that equation.</p>
       <p>Next, what is work? In physics, work is done when a force moves an object through a distance. We
       can define it mathematically as:</p>
-      \\[ W = \\Delta T = T_2 - T_1 \\]
+      <div class=eqn> \\[ W = \\Delta T = T_2 - T_1 \\] </div>
 
       <p>...which, if you were paying attention, you'll notice is the same as the change in kinetic energy.
       If you do positive work on an object, you increase its kinetic energy, or speed it up. If you do 
@@ -3191,9 +3192,9 @@ const subtopics = {
               \\[ W = Fd \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 1: Work done
             </div><div class="formula-tooltip-desc">
-              ...
+              Work done is force times distance. This isn't new to you, right?
             </div></span>
           </div>
         </div>
@@ -3208,9 +3209,9 @@ const subtopics = {
               \\[ W = \\int F dx \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 2: Work Done V2
             </div><div class="formula-tooltip-desc">
-              ...
+              Work done is the force integrated over it's path.
             </div></span>
           </div>
         </div>
@@ -3244,10 +3245,10 @@ const subtopics = {
       <p> There is a quite fun way to represent this mathematically. Say you want to move from point A to
       point B, and you have two potential paths you can take, \\(P\\) and \\(P'\\). If the force moving you
       is a Tory force, then the work done can be represented as:</p>
-      \\[
+      <div class=eqn> \\[
         \\int_A^B \\vec{F} \\cdot d\\vec{r} \\Big|_{P} 
         = \\int_A^B \\vec{F} \\cdot d\\vec{r} \\Big|_{P'},
-        \\]
+        \\] </div>
 
         \\[
           \\text{or} 
@@ -3262,7 +3263,7 @@ const subtopics = {
       <p> Next, since we know that the work done isn't dependent on the journey, we can assign a value to
       each point in the space which corresponds to the work done to get there. This value is called the
       <strong>potential energy</strong>, \\( U \\). Potential is defined like this:</p>
-      <p>\\( W = -\\Delta U \\)</p>
+      <div class=eqn> \\[ W = -\\Delta U \\] </div>
       <p> In other words, the change in the potential energy is the negative of the work done by the force.
       Why a negative? It's kinda just a convention, but it does make a fair bit of sense: if we take gravity
       as a prototype Tory force, then when gravity does positive work (like when you drop something), the potential
@@ -3271,21 +3272,21 @@ const subtopics = {
 
       <h3>Conservation of Energy</h3>
       <p> What do we have here? It appears we have two formulae for work done. That means we can combine them! </p>
-      <p>\\( W = \\Delta T \\text{and} W = -\\Delta U \\)</p>
+      <div class=eqn> \\[ W = \\Delta T \\quad \\text{and} \\quad W = -\\Delta U \\] </div>
       <p>So:</p>
-      \\[ \\Delta T = -\\Delta U \\]
+      <div class=eqn> \\[ \\Delta T = -\\Delta U \\] </div>
       \\[ \\downarrow \\]
-      \\[ \\Delta T + \\Delta U = 0 \\]
+      <div class=eqn> \\[ \\Delta T + \\Delta U = 0 \\] </div>
       \\[ \\downarrow \\]
-      \\[ \\Delta (T + U) = 0 \\]
+      <div class=eqn> \\[ \\Delta (T + U) = 0 \\] </div>
       <p>Which means:</p>
-      <p>\\( T + U = E = \\text{constant} \\)</p>
+      <div class=eqn> \\[ T + U = E = \\text{constant} \\] </div>
       <p>This new value \\( E \\) is the total mechanical energy, and it is conserved when only Tory forces 
       are doing work. This is what we call the <strong>principle of conservation of energy</strong>.</p>
       <p>Now, <strong>if</strong> a potential can be defined (i.e. if the force is a Tory), and the "if" was
       emphasised in the notes for some reason, so I'm emphasising it here too, then we can find the force by
       simply differentiating it with respect to position:</p>
-      <p>\\( \\vec{F} = -\\nabla U \\), or in one dimension, \\( F = -\\frac{dU}{dx} \\)</p>
+      <div class=large-eqn> \\[ \\vec{F} = -\\nabla U, \\quad \\text{or in one dimension,} \\quad F = -\\frac{dU}{dx} \\] </div>
       <p>If you think about it, this is just the original \\( W = \\int F dx \\) formula, rearranged. Remembering
       that work done is the negative change in potential energy, \\(W=-U\\), we can plug that into the formula,
       giving us \\( -U = \\int F dx \\). Differentiating both sides gives us the formula above.</p>
@@ -3798,11 +3799,11 @@ const subtopics = {
       (\\(m_1=7\\text{kg}, u_1=5\\text{m/s}; m_2=3\\text{kg}, u_2=-5\\text{m/s}\\)).</p>
       <dl>
           <dt><strong>Step 1: Find the Center of Mass Velocity (\\(v_{cm}\\))</strong></dt>
-          <dd>This is the constant velocity of the system as a whole.
-          \\[ v_{cm} = \\frac{m_1u_1 + m_2u_2}{m_1 + m_2} = \\frac{(7)(5) + (3)(-5)}{10} = 2 \\text{ m/s} \\]
-          </dd>
+          <dd>This is the constant velocity of the system as a whole.</dd></dl>
+          <div class=large-eqn> \\[ v_{cm} = \\frac{m_1u_1 + m_2u_2}{m_1 + m_2} = \\frac{(7)(5) + (3)(-5)}{10} = 2 \\text{ m/s} \\] </div>
+          
 
-          <dt><strong>Step 2: Switch to the CoM Frame</strong></dt>
+          <dl><dt><strong>Step 2: Switch to the CoM Frame</strong></dt>
           <dd>Find the initial velocities relative to the CoM by subtracting \\(v_{cm}\\).
           <p>\\( u'_1 = u_1 - v_{cm} = 5 - 2 = +3 \\text{ m/s} \\)<br>
              \\( u'_2 = u_2 - v_{cm} = -5 - 2 = -7 \\text{ m/s} \\)</p>
@@ -3903,7 +3904,7 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-130%;"> <div class="image-tooltip-title">
             Figure 1: Frames S and S'</div><div class="image-tooltip-desc">
-            The land frame S is stationary, and the ferry frame S' is moving <br> at speed u in the x-direction.</div></span>
+            The land frame S is stationary, and the ferry frame S' is moving  at speed u in the x-direction.</div></span>
           </div>
         </div>
       </div>
@@ -3924,7 +3925,7 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: Galilean Transformations</div><div class="formula-tooltip-desc">
-          Formulae to switch from one frame to another</div></span>
+          Formulae to switch from a moving frame to a stationary frame</div></span>
         </div>
       </div>
 
@@ -3970,10 +3971,10 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-400px"> <div class="image-tooltip-title">
             Figure 2: Michelson-Morley Experiment</div><div class="image-tooltip-desc">
-            The light is split up by the half-silvered mirror in the middle. Then, due to the <br> 
-            movement of the aether (or movement the earth through the aether depending <br> on which
-            frame you choose to use) they are reflected back to the half-silvered <br> mirror at
-            different times, causing an interference pattern. This should have <br> caused a
+            The light is split up by the half-silvered mirror in the middle. Then, due to the  
+            movement of the aether (or movement the earth through the aether depending  on which
+            frame you choose to use) they are reflected back to the half-silvered  mirror at
+            different times, causing an interference pattern. This should have  caused a
             detectable shift in the pattern.</div></span>
           </div>
         </div>
@@ -4074,8 +4075,8 @@ const subtopics = {
               </div>
               <span class="image-tooltip left-box" style="left:12vw"> <div class="image-tooltip-title">
               Figure 3a: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
-              In the S' frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
-              equidistant from her. The light reaches both of them at the  <br> same time, 
+              In the S' frame, Breanna sends a pulse of light to both Ava and Caitlyn,  who are
+              equidistant from her. The light reaches both of them at the   same time, 
               so the events are simultaneous.</div></span>
             </div>
           </div>
@@ -4108,8 +4109,8 @@ const subtopics = {
               </div>
               <span class="image-tooltip" style="left:-33vw"> <div class="image-tooltip-title">
               Figure 3b: Simultaneity in the S' Frame</div><div class="image-tooltip-desc">
-              In the S frame, Breanna sends a pulse of light to both Ava and Caitlyn, <br> who are
-              equidistant from her, but in this frame, the light reaches them <br>at different  
+              In the S frame, Breanna sends a pulse of light to both Ava and Caitlyn,  who are
+              equidistant from her, but in this frame, the light reaches them at different  
               times. The events are no longer simultaneous.</div></span>
             </div>
           </div>
@@ -4331,12 +4332,12 @@ const subtopics = {
 
         <p>Anyway, plug the times into the LT:</p>
 
-        \\[ t_1 = \\gamma(t_1' + ux_1'/c^2) \\]
-        \\[ t_2 = \\gamma(t_2' + ux_2'/c^2) \\]
+        <div class=eqn> \\[ t_1 = \\gamma(t_1' + ux_1'/c^2) \\]
+        \\[ t_2 = \\gamma(t_2' + ux_2'/c^2) \\] </div>
 
         <p>And now subtract accordingly, to get our new formula:</p>
 
-        \\[ \\Delta t = t_2 - t_1 = \\gamma(t_2' - t_1') + \\gamma u(x_2' - x_1')/c^2 \\]
+        <div class=eqn> \\[ \\Delta t = t_2 - t_1 = \\gamma(t_2' - t_1') + \\gamma u(x_2' - x_1')/c^2 \\] </div>
 
         <p>Now you may be wondering, what are we supposed to do with all that \\( x' \\) stupidity at the end? 
         Well luckily for you, it turns out that, since the clock is at rest in \\( S' \\), its position doesn’t 
@@ -4632,7 +4633,7 @@ const subtopics = {
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 1: Linear expansion
           </div><div class="formula-tooltip-desc">
-            ...
+            The length of an object increases linearly as temperature increases.
           </div></span>
         </div>
       </div>
@@ -4679,8 +4680,9 @@ const subtopics = {
             \\[ L = L_0 + \\Delta L \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 2: Linear thermal expansion</div><div class="formula-tooltip-desc">
-          This one is quite obvious:</div></span>
+          Formula 3: Linear thermal expansion</div><div class="formula-tooltip-desc">
+          This one is quite obvious tbf: The length of an object is it's initial length plus 
+          the amount it's grown or shrunk. </div></span>
         </div>
       </div>
 
@@ -4698,8 +4700,8 @@ const subtopics = {
             \\[ \\alpha = \\frac{1}{L_0} \\frac{\\Delta L}{\\Delta T} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 2: Linear thermal expansion</div><div class="formula-tooltip-desc">
-          This one is quite obvious:</div></span>
+          Formula 4: Linear expansion coefficient</div><div class="formula-tooltip-desc">
+          The linear expansion coefficient \\(\\alpha\\) tells us how much an object grows with temperature.</div></span>
         </div>
       </div>
 
@@ -4725,8 +4727,9 @@ const subtopics = {
             <p>\\[ \\Delta V = \\beta V_0 \\Delta T \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 3: Volume expansion</div><div class="formula-tooltip-desc">
-          This one is quite obvious:</div></span>
+          Formula 5: Volume expansion coefficient</div><div class="formula-tooltip-desc">
+          The volume expansion coefficient \\(\\beta\\) is a lot like the linear one, except it's how much the <em>volume</em>
+          increases with temperature.</div></span>
         </div>
       </div>
 
@@ -4764,7 +4767,7 @@ const subtopics = {
       <p>We define:</p>
       <ul>
         <li><strong>Molar heat capacity</strong>: \\( C \\), the amount of energy required to increase the temperature
-          of one mole of a substance by \\(1ºC\\)
+          of one mole of a substance by \\(1°C\\)
       </ul>
 
       <div class="hover-wrapper">
@@ -4773,15 +4776,16 @@ const subtopics = {
             \\[ Q = nC\\Delta T \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 6: Molar heat capacity
           </div><div class="formula-tooltip-desc">
-            ...
+            The amount of energy required to increase the temperature
+            of one mole of a substance by \\(1°C\\)
           </div></span>
         </div>
       </div>
 
       <ul>
-        <li><strong>Specific heat capacity</strong>: \\( C \\), the amount of energy required to increase the temperature
+        <li><strong>Specific heat capacity</strong>: \\( c \\), the amount of energy required to increase the temperature
           of one kilogram of a substance by \\(1ºC\\)
       </ul>
 
@@ -4791,9 +4795,10 @@ const subtopics = {
             \\[ Q = mc\\Delta T  \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 7: Specific heat capacity
           </div><div class="formula-tooltip-desc">
-            ...
+            The amount of energy required to increase the temperature
+            of one <em>kilogram</em> of a substance by \\(1°C\\)
           </div></span>
         </div>
       </div>
@@ -4825,7 +4830,7 @@ const subtopics = {
 
       <h4>Conduction</h4>
 
-      <p>heat transfer through solids (and liquids) is usually caused by atoms vibrating and bumping into nearby atoms,
+      <p>Heat transfer through solids (and liquids) is usually caused by atoms vibrating and bumping into nearby atoms,
       convincing them to vibrate also. In doing so, the atoms which were vibrating initially transfer their energy
       to the atoms they convinced. In doing so, no mass is transported: even though things are jiggling about now, they
       stay more or less in the same place overall. This is different to convection, which you may already know about,
@@ -4839,8 +4844,9 @@ const subtopics = {
             <p>\\[ \\frac{dQ}{dt} = -\\kappa A \\frac{dT}{dx} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
-          Formula to calculate length for a bar stationary in the moving frame</div></span>
+          Formula 8: Heat transfer rate</div><div class="formula-tooltip-desc">
+          The amount of heat transferred depends on the area, the amount temperature changes with distance, and
+          the thermal conductivity \\( \\kappa \\).</div></span>
         </div>
       </div>
 
@@ -4870,8 +4876,9 @@ const subtopics = {
             <p>\\[ P = \\frac{dQ}{dt} = \\epsilon \\sigma A T^4 \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
-          Formula to calculate length for a bar stationary in the moving frame</div></span>
+          Formula 9: Power (radiation)</div><div class="formula-tooltip-desc">
+          The rate of energy transfer due to radiation depends on the area, emmisivity, and temperature (as well
+          as the Stefan-Boltzmann constant.</div></span>
         </div>
       </div>
 
@@ -4915,9 +4922,10 @@ const subtopics = {
               \\[ pV = nRT \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 1a: Ideal Gas Equation
             </div><div class="formula-tooltip-desc">
-              ...
+              In an 'ideal gas', the pressure times the volume equals the number of moles times the temperature,
+              times by \\( R=8.31 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\)
             </div></span>
           </div>
         </div>
@@ -4938,9 +4946,10 @@ const subtopics = {
               \\[ pV = Nk_B T \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 1b: Ideal Gas Equation V2
             </div><div class="formula-tooltip-desc">
-              ...
+              You can also write the ideal gas equation in this form, where N is the number of molecules and
+              we use a different constant instead, \\(k_B=1.38 \\times 10^{-23} \\, \\text{J K}^{-1}\\)
             </div></span>
           </div>
         </div>
@@ -5005,9 +5014,10 @@ const subtopics = {
               \\[ \\left(p + \\frac{a n^2}{V^2}\\right)(V - nb) = nRT \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 2: Van der Waals' equation of state
             </div><div class="formula-tooltip-desc">
-              ...
+              This is the new and improved ideal gas equation, when the internal forces between particles and finite
+              volumes are taken into consideration.
             </div></span>
           </div>
         </div>
@@ -5038,7 +5048,8 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
               Figure 1:Van de Waals' graph</div><div class="image-tooltip-desc">
-              The adiabats appear steeper than the isotherms</div></span>
+              As the temperature increases, the lines on the PV graph get closer and closer to that of an ideal
+              gas. Moreover, at lower temperatures, there is a dip in the low volume region</div></span>
           </div>
         </div>
       </div>
@@ -5109,11 +5120,11 @@ const subtopics = {
 
       <p>We therefore know that the number of collisions within an infinitely small time interval is</p>
 
-      \\[n_{col}=\\frac12\\frac{N}{V}Av_xdt\\]
+      <div class=eqn> \\[n_{col}=\\frac12\\frac{N}{V}Av_xdt\\] </div>
 
       <p>So total momentum change is</p>
 
-      \\[ dQ = n_{col} \\times 2mv_x = \\frac{N}{V} A m v_x^2 dt \\]
+      <div class=eqn> \\[ dQ = n_{col} \\times 2mv_x = \\frac{N}{V} A m v_x^2 dt \\] </div>
 
       <p>Woah woah woah woah woah, Q? Where did Q come from?</p>
 
@@ -5125,11 +5136,11 @@ const subtopics = {
       also know that pressure is the force of the particles per unit are, or \\( p = F/A \\). Sub both of those in,
       and you get:</p>
 
-      \\[ p = \\frac{N}{V} m v_x^2 \\]
+      <div class=eqn> \\[ p = \\frac{N}{V} m v_x^2 \\] </div>
 
       <p>But in 3D, \\( v^2 = v_x^2 + v_y^2 + v_z^2 = 3v_x^2 \\). So:</p>
 
-      \\[ p = \\frac{1}{3} \\frac{N}{V} m \\langle v^2 \\rangle \\]
+      <div class=eqn> \\[ p = \\frac{1}{3} \\frac{N}{V} m \\langle v^2 \\rangle \\] </div>
 
       <p>Multiply both sides by \\( V \\), and boom:</p>
 
@@ -5139,9 +5150,9 @@ const subtopics = {
               \\[ pV = \\frac{1}{3} N m \\langle v^2 \\rangle = N k_B T \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 3: Ideal Gas Law <br>from the Kinetic Model of Gases
             </div><div class="formula-tooltip-desc">
-              ...
+              By working with some assumptions about the environment, the ideal gas law can be derived.
             </div></span>
           </div>
         </div>
@@ -5167,10 +5178,9 @@ const subtopics = {
             <div class="image-box">
               <img src="images/Thermal Physics/maxwell-boltzmann-dist.png" class="pop-image" style="width: 300px"/>
             </div>
-            <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
-              font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-              Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
-              The adiabats appear steeper than the isotherms</div></span>
+            <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">  
+              Figure 2: The Maxwell-Boltzmann Distribution.</div><div class="image-tooltip-desc">  
+              As temperature increases, the distribution becomes flatter and moves to the right.</div></span>
           </div>
         </div>
       </div>
@@ -5209,8 +5219,8 @@ const subtopics = {
             <p>\\[ t_{\\text{mean}} = \\frac{V}{4\\pi \\sqrt{2} r^2 v_{\\text{rms}} N} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 1a: Mean time between collisions</div><div class="formula-tooltip-desc">
-          The average amount of time a gas molecule <br>can move before it hits another particle</div></span>
+          Formula 4a: Mean time between collisions</div><div class="formula-tooltip-desc">
+          The average amount of time a gas molecule can move before it hits another particle</div></span>
         </div>
       </div>
 
@@ -5227,8 +5237,8 @@ const subtopics = {
             <p>\\[ \\lambda = \\frac{k_B T}{4\\pi \\sqrt{2} r^2 p} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 1b: Mean Free Path</div><div class="formula-tooltip-desc">
-          The average distance a gas molecule can move <br> before it hits another particle</div></span>
+          Formula 4b: Mean Free Path</div><div class="formula-tooltip-desc">
+          The average distance a gas molecule can move  before it hits another particle</div></span>
         </div>
       </div>
 
@@ -5251,8 +5261,8 @@ const subtopics = {
             <p>\\[ C_V = \\frac{1}{n} \\frac{dQ}{dT} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-          Formula 2: Heat Capacity at constant volume</div><div class="formula-tooltip-desc">
-          amount of energy required to heat something up <br> by 1ºC without allowing the volume to change.</div></span>
+          Formula 5: Heat Capacity at constant volume</div><div class="formula-tooltip-desc">
+          amount of energy required to heat something up  by 1ºC without allowing the volume to change.</div></span>
         </div>
       </div>
 
@@ -5268,11 +5278,11 @@ const subtopics = {
       is essentially the kinetic energy of the particles. That means in this case, we could technically just replace 
       \\(Q\\) with \\(K_{\\text{tr}}\\). We already learnt before that:</p>
 
-      \\[K_{\\text{tr}}=\\frac32k_BT\\]
+      <div class=eqn> \\[K_{\\text{tr}}=\\frac32k_BT\\] </div>
 
       <p>For n moles, we can use our ideal gas equations, replacing \\(k_BT\\) with nRT. This means:</p>
 
-      \\[K_{\\text{tr}}=\\frac{3n}2RT\\]
+      <div class=eqn> \\[K_{\\text{tr}}=\\frac{3n}2RT\\] </div>
 
       <p> And like I said earlier, we are assuming that all the heat energy which goes in becomes translational kinetic
       energy, or in other words, \\(Q=K_{\\text{tr}}\\). That means we can replace the \\(Q\\) in our equation for 
@@ -5285,8 +5295,9 @@ const subtopics = {
                 \\text{J mol}^{-1}\\text{K}^{-1}. \\]</div>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
-            Formula to calculate length for a bar stationary in the moving frame</div></span>
+            Formula 6: The value of \\(\\;C_V\\)</div><div class="formula-tooltip-desc">
+            By making some assumptions about the nature of heat energy, an 'exact' value of \\(C_V\\) can be
+            derived.</div></span>
           </div>
         </div>
 
@@ -5296,20 +5307,20 @@ const subtopics = {
       <p>Introducing our first three contestants, Helium, Argon and Neon. Let's see what their heat capacity is at
       constant volume.</p>
 
-      \\[ \\text{For Helium,} \\quad C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+      <div class=eqn> \\[ \\text{For Helium,} \\quad C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
       \\[ \\text{For Neon,} \\quad C_V = 12.7 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
-      \\[ \\text{For Argon,} \\quad C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+      \\[ \\text{For Argon,} \\quad C_V = 12.5 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\] </div>
 
       <p>Hey, not bad! It looks like our calculation is accurate, or at least close enough. And it looks like we have four
       more contestants! Krypton, Nitrogen, Hydrogen and Oxygen. Let's see wagwan now:</p>
 
-      \\[ \\text{For Krypon,} \\quad C_V = 12.3 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+      <div class=eqn> \\[ \\text{For Krypon,} \\quad C_V = 12.3 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\] </div>
 
       <p>So far so good!</p>
 
-      \\[ \\text{For Nitrogen,} \\quad C_V = 20.8 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+      <div class=eqn> \\[ \\text{For Nitrogen,} \\quad C_V = 20.8 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
       \\[ \\text{For Hydrogen,} \\quad C_V = 20.4 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
-      \\[ \\text{For Oxygen,} \\quad C_V = 21.1 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\]
+      \\[ \\text{For Oxygen,} \\quad C_V = 21.1 \\, \\text{J mol}^{-1}\\text{K}^{-1} \\] </div>
 
       <p>...Huh? What happened? It was going so well. Why did it stop working?</p>
       <p>Well, let's look carefully. Helium, Neon, Argon and Krypton all seem to work just fine. But when I go to Nitrogen,
@@ -5441,7 +5452,7 @@ const subtopics = {
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 1: First Law of Thermodynamics</div><div class="formula-tooltip-desc">
-            The change of internal energy is the (heat) energy in, <br> take away the (work done) energy out.</div></span>
+            The change of internal energy is the (heat) energy in,  take away the (work done) energy out.</div></span>
           </div>
         </div>
 
@@ -5485,19 +5496,21 @@ const subtopics = {
 
             <p>But \\( F = pA \\), and \\( Adx = dV \\), so:</p>
 
-            \\[ dW = p  dV \\]
+            <div class=eqn> \\[ dW = p  dV \\] </div>
 
             <p>We can now integrate over a path:</p>
 
+            <div class=eqn>
             <div class="hover-wrapper" >
               <div class="formula-container">
                 <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
                   \\[ W = \\int_{V_1}^{V_2} p  dV \\]</p>
                 </div>
                 <span class="formula-tooltip"><div class="formula-tooltip-title">
-                Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
-                Formula to calculate length for a bar stationary in the moving frame</div></span>
+                Formula 2: Work done (by a piston)</div><div class="formula-tooltip-desc">
+                The work done it the pressure integrated across all volumes.</div></span>
               </div>
+            </div>
             </div>
 
         </div>
@@ -5508,7 +5521,9 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
               Figure 1: Cylinder and piston</div><div class="image-tooltip-desc">
-              The adiabats appear steeper than the isotherms</div></span>
+              To probe our thermodynamics, we use cylinder and a piston. The piston can be moves to
+              compress or expand the air (i.e. change the volume), causing pressure and temperature
+              to also change</div></span>
           </div>
         </div>
       </div>
@@ -5523,7 +5538,7 @@ const subtopics = {
       in the system don't change their vibration speed. This means their internal energy isn't changing, or in 
       mathematicianese: </p>
 
-      \\[ \\Delta U = 0 \\]
+      <div class=eqn> \\[ \\Delta U = 0 \\] </div>
 
       <p>Because \\( U = \\frac{3}{2}nRT \\), and \\( T \\) is constant.</p>
 
@@ -5534,7 +5549,7 @@ const subtopics = {
 
       <p>Then from the First Law:</p>
 
-      \\[ Q = W \\]
+      <div class=eqn> \\[ Q = W \\] </div>
 
       <p>To translate this into words, when we operate a piston without changing the temperature, the heat we put into the
       system is the same as the work done by the system. So the gas absorbs heat equal to the work it does. No change in 
@@ -5551,8 +5566,8 @@ const subtopics = {
 
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula 1: First Law of Thermodynamics</div><div class="formula-tooltip-desc">
-            The change of internal energy is the (heat) energy in, <br> take away the (work done) energy out.</div></span>
+            Formula 3: Isothermal relationship</div><div class="formula-tooltip-desc">
+            In an isotherm (i.e. for temperature to remain constant), the pressure times the volume must be constant.</div></span>
           </div>
         </div>
 
@@ -5561,7 +5576,7 @@ const subtopics = {
       <p>Do you remember what the adiabatic process is? It's when there is no heat transfer, so \\( Q = 0 \\). Going back
       to Equation 1, we now have:</p>
 
-      \\[ \\Delta U = -W \\]
+      <div class=eqn> \\[ \\Delta U = -W \\] </div>
 
       <p>All the work done comes from internal energy, meaning the internal energy will decrease as the work is done. Since
       internal energy corresponds to temperature, less internal energy means the gass cools down. Moreover, since W is 
@@ -5569,24 +5584,24 @@ const subtopics = {
 
       <p>Now, using \\( dU = nC_V dT \\) and \\( dW = p dV \\), we get:</p>
 
-      \\[ nC_V dT = -p dV \\]
+      <div class=eqn> \\[ nC_V dT = -p dV \\] </div>
 
       <p>By substituting \\( p = nRT/V \\) and then rearranging, we now have:</p>
 
-      \\[ \\frac{dT}{T} = -\\frac{R}{C_V} \\frac{dV}{V} \\]
+      <div class=eqn> \\[ \\frac{dT}{T} = -\\frac{R}{C_V} \\frac{dV}{V} \\] </div>
 
       <p>Let's now introduce a couple of new characters, \\(\\gamma\\) and \\( R \\), where: </p>
 
-      \\[ \\gamma = \\frac{C_P}{C_V} \\]
-      \\[ R = C_P - C_V \\]
+      <div class=eqn> \\[ \\gamma = \\frac{C_P}{C_V} \\]
+      \\[ R = C_P - C_V \\] </div>
 
       <p>With our two new buddies, we get this new equation: </p>
 
-      \\[ R/C_V = \\gamma - 1 \\]
+      <div class=eqn> \\[ R/C_V = \\gamma - 1 \\] </div>
 
       <p>Then integrate:</p>
 
-      \\[ \\ln T + (\\gamma - 1) \\ln V = \\text{constant} \\]
+      <div class=eqn> \\[ \\ln T + (\\gamma - 1) \\ln V = \\text{constant} \\] </div>
 
       <p>So:</p>
 
@@ -5602,8 +5617,8 @@ const subtopics = {
                 \\[ p V^\\gamma = \\text{constant} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula 3a: Length contraction</div><div class="formula-tooltip-desc">
-              Formula to calculate length for a bar stationary in the moving frame</div></span>
+              Formula 4: Adiabatic relationship</div><div class="formula-tooltip-desc">
+              In an adiabat (i.e. no energy exchange), this relation must be true.</div></span>
             </div>
           </div>
 
@@ -5619,7 +5634,7 @@ const subtopics = {
               <img src="images/Thermal Physics/Adiabat vs Isotherm.png" class="pop-image" style="width: 300px"/>
             </div>
             <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
-              Figure 1: Adiabats VS Isotherms on a p-V graph</div><div class="image-tooltip-desc">
+              Figure 2: Adiabats VS Isotherms<br>on a p-V graph</div><div class="image-tooltip-desc">
               The adiabats appear steeper than the isotherms</div></span>
           </div>
         </div>
@@ -5629,38 +5644,42 @@ const subtopics = {
 
       <p>Since \\( \\Delta U = -W \\) and \\( \\Delta U = nC_V \\Delta T \\), then:</p>
 
-      \\[ W = -nC_V (T_2 - T_1) \\]
+      <div class=eqn> \\[ W = -nC_V (T_2 - T_1) \\] </div>
 
       <p>Even though volume changes, we use \\( C_V \\), not \\( C_P \\). Because it’s the change in internal energy 
       that matters — and for an ideal gas, \\( U \\) only depends on \\( T \\).</p>
 
       <p>So yes — it works. Even when \\( V \\) isn’t constant.</p>
 
-      <h3>Heat Capacity: C_V vs C_P</h3>
+      <h3>Heat Capacity: \\(C_V\\) and \\(C_P\\)</h3>
 
       <p>We already know:</p>
 
-      \\[ C_V = \\frac{1}{n} \\frac{dQ}{dT} \\quad \\text{(at constant volume)} \\]
+      <div class=eqn> \\[ C_V = \\frac{1}{n} \\frac{dQ}{dT} \\quad \\text{(at constant volume)} \\] </div>
 
       <p> Well \\(C_V\\) has now decided to introduce you to her best friend: \\( C_P \\)! As you might have been 
       able to guess, this is the heat capacity at constant pressure. When pressure is constant, the work done is
       related to how much the volume of the gas changed: </p>
 
-      \\[ W = p \\Delta V \\]
+      <div class=eqn> \\[ W = p \\Delta V \\] </div>
 
       <p>So from the First Law:</p>
 
-      \\[ dQ = dU + p dV \\]
+      <div class=eqn> \\[ dQ = dU + p dV \\] </div>
 
       <p>Then:</p>
 
-      \\[ n C_P dT = n C_V dT + p dV \\]
+      <div class=eqn> \\[ n C_P dT = n C_V dT + p dV \\] </div>
 
       <p>Now considering the ideal gas law, we know that \\( p dV = nR dT \\). Therefore, by replacing that last term
       with \\(nRdT\\) and then cancelling out all the \\(ndT\\)s which are common to all the terms, we end up with a 
       value for \\(C_P\\):</p>
 
-      \\[ n C_P dT = n C_V dT + nR dT \\]
+      <div class=eqn> \\[ n C_P dT = n C_V dT + nR dT \\] </div>
+
+      \\[
+        \\downarrow
+      \\]
 
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -5668,9 +5687,9 @@ const subtopics = {
               \\[ C_P = C_V + R  \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 5: Heat capacity at constant pressure
             </div><div class="formula-tooltip-desc">
-              ...
+              The heat capacity at constant pressure is the heat capacity at constance volume plus R
             </div></span>
           </div>
         </div>
@@ -5682,8 +5701,8 @@ const subtopics = {
       \\( C_V = \\frac{5}{2}R \\), with \\( \\frac12R \\) for each degree or motion. This means we can now also 
       get their \\( C_P \\) values, just by adding \\( R \\):</p>
 
-      \\[ \\text{Monotomic: } \\quad C_P = \\frac{5}{2}R, \\quad \\gamma = 5/3 \\]
-      \\[ \\text{Diatomic: } \\quad C_P = \\frac{7}{2}R, \\quad \\gamma = 7/5 \\]
+      <div class=eqn> \\[ \\text{Monotomic: } \\quad C_P = \\frac{5}{2}R, \\quad \\gamma = 5/3 \\]
+      \\[ \\text{Diatomic: } \\quad C_P = \\frac{7}{2}R, \\quad \\gamma = 7/5 \\] </div>
 
       <p>For diatomic: \\( C_V = \\frac{5}{2}R \\), \\( C_P = \\frac{7}{2}R \\), \\( \\gamma = 7/5 \\)</p>
 
@@ -5811,9 +5830,10 @@ const subtopics = {
               \\[ \\varepsilon = \\frac{W}{Q_H} = 1 - \\frac{|Q_C|}{Q_H} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 1: Efficiency
             </div><div class="formula-tooltip-desc">
-              ...
+              The efficiency tells us how much useful work was done (\\(W\\)) compared to the total energy input
+              (\\(Q_H\\))
             </div></span>
           </div>
         </div>
@@ -5851,10 +5871,12 @@ const subtopics = {
             <div class="image-box">
               <img src="images/Thermal Physics/Carnot.png" class="pop-image" style="width: 300px"/>
             </div>
-            <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
-              font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-              Figure 1: The Carnot Cycle</div><div style="color:white; font-size:20px; line-height: 1.2;">
-              ...</div></span>
+            <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">  
+              Figure 1: The Carnot Cycle</div><div class="image-tooltip-desc">  
+              This is a proposed heat engine which would have 100% efficiency. It starts by increasing its
+              volume at constant temperature (isothermal expansion), and then cools down without any heat
+              transfer (adiabatic cooling). It then decreases its volume at a constant lower temperature
+              (isothermal compression) before heating back up without any heat transfer (adiabatic heating).</div></span>
           </div>
         </div>
       </div>
@@ -5867,8 +5889,9 @@ const subtopics = {
 
       <div class=large-eqn eqn> \\[0-nC_V(T_C-T_H)+0+-nC_V(T_H-T_C)=0\\] </div>
 
-      <p>The total heat flow is</p> <div class=large-eqn eqn>\\[nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0
-      = nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\]</div>
+      <p>The total heat flow is</p> <div class=large-eqn eqn>\\[
+      \\begin{align} Q &= nRT_H\\ln{\\frac{V_1}{V_2}}+0+nRT_H\\ln{\\frac{V_3}{V_4}}+0 \\\\[6pt]
+      &= nRT_H\\ln{\\frac{V_1}{V_2}}+nRT_C\\ln{\\frac{V_3}{V_4}}\\end{align}\\] </div>
 
       <p>But we know from before that
       \\(\\frac{V_1}{V_2}=\\frac{V_3}{V_4}\\), which means that \\(Q=nR(T_H-T_C)\\ln{\\frac{V_1}{V_2}}\\).</p>
@@ -5897,9 +5920,9 @@ const subtopics = {
               \\[ \\varepsilon_\\text{carnot} = 1 - \\frac{T_C}{T_H} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 2: Carnot efficiency
             </div><div class="formula-tooltip-desc">
-              ...
+              The efficiency of the carnot cycle depends on the initial and final temperatures
             </div></span>
           </div>
         </div>
@@ -6121,10 +6144,9 @@ const subtopics = {
             <div class="image-box">
               <img src="images/Waves/U(x,t).png" class="pop-image" style="width: 30vw"/>
             </div>
-            <span class="image-tooltip" style="left:-80%;"> <div style="color: #006aff; 
-              font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-              Figure 1: The wave function, \\(U(x, t)\\)</div><div style="color:white; font-size:20px; line-height: 1.2;">
-              This is the wave function</div></span>
+            <span class="image-tooltip" style="left:-80%;"> <div class="image-tooltip-title">  
+              Figure 1: The wave function, \\(U(x, t)\\)</div><div class="image-tooltip-desc">  
+              This is an example of a general wave function.</div></span>
           </div>
         </div>
       </div>
@@ -6359,12 +6381,11 @@ const subtopics = {
             <div class="image-box">
               <img src="images/Waves/Superposition2.png" class="pop-image" style="width: 30vw"/>
             </div>
-            <span class="image-tooltip" style="left:-95%;"> <div style="color: #006aff; 
-              font-size:45px; text-decoration: underline; text-underline-offset: 7px line-height: 1">
-              Figure IDK: Superposition of 2 waves with <br>slightly different frequencies</div>
-              <div style="color:white; font-size:20px; line-height: 1.2;">
-              When you combine two waves with slightly different frequencies (the two blue waves),<br>
-              they superpose into a new wave (the orange wave). The orange wave kinda looks like <br>
+            <span class="image-tooltip" style="left:-95%;"> <div class="image-tooltip-title">
+              Figure 3: Superposition of 2 waves with <br>slightly different frequencies</div>
+              <div class="image-tooltip-desc">  
+              When you combine two waves with slightly different frequencies (the two blue waves),
+              they superpose into a new wave (the orange wave). The orange wave kinda looks like 
               another wave with a much lower frequency. (the red wave)</div></span>
           </div>
         </div>
@@ -6404,9 +6425,10 @@ const subtopics = {
               \\[ v_g = \\frac{d\\omega}{dk} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 5: Group velocity
             </div><div class="formula-tooltip-desc">
-              ...
+              The speed at which a packet (or group) of waves moves is determined by differenciating the frequency of the
+              packet.
             </div></span>
           </div>
         </div>
@@ -6444,9 +6466,10 @@ const subtopics = {
               \\[ \\omega = \\omega(k) \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 6: Dispersion
             </div><div class="formula-tooltip-desc">
-              ...
+              If the frequency depends on the wavenumber (and therefore wavelength), the waves will disperse when
+              they enter a medium (like glass or water).
             </div></span>
           </div>
         </div>
@@ -6510,9 +6533,9 @@ const subtopics = {
             \\[ v = \\sqrt{\\frac{T}{\\mu}} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Wave speed in a string
           </div><div class="formula-tooltip-desc">
-            ...
+            The wave speed in a string is the root of the tension over the mass per unit volume.
           </div></span>
         </div>
       </div>
@@ -6561,9 +6584,10 @@ const subtopics = {
             \\[ P_{\\text{av}} = \\frac{1}{2} \\omega^2 A^2 Z \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Average Power of Mechanical Waves
           </div><div class="formula-tooltip-desc">
-            ...
+            The average power of a mechanical waves is half the frequency squares, times the area squared, times the
+            impedance.
           </div></span>
         </div>
       </div>
@@ -6708,14 +6732,14 @@ const subtopics = {
 
       <div class=eqn> \\[
         pV^\\gamma = \\text{constant}
-      \\] </div>
-      <div class=eqn> \\[
+      \\] 
+      \\[
         p = \\text{constant} \\times V^{-\\gamma}
-      \\] </div>
-      <div class=eqn> \\[
+      \\] 
+      \\[
         \\frac{\\partial p}{\\partial V} = \\text{constant} \\times -\\frac{\\gamma}{V} \\times V^{-\\gamma}
-      \\] </div>
-      <div class=eqn> \\[
+      \\]
+      \\[
         B = \\gamma p
       \\] </div>
 
@@ -6810,10 +6834,10 @@ const subtopics = {
               <div class="image-box">
                 <img src="images/Waves/String Join.png" class="pop-image" style="width: 300px"/>
               </div>
-              <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
-                font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-                Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
-                The adiabats appear steeper than the isotherms</div></span>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                Figure 1: Two strings</div><div class="image-tooltip-desc">
+                Two strings of different thicknesses (different masses per unit length) are attached at a point
+                \\( x_0 \\) </div></span>
             </div>
           </div>
         </div>
@@ -6847,7 +6871,7 @@ const subtopics = {
         <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              \\[ P_i + P_r = P_t \\]
+              \\[ P_i = P_r + P_t \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 1: Power
@@ -6880,9 +6904,10 @@ const subtopics = {
               \\[ t = \\frac{A_t}{A_i} = \\frac{2Z_1}{Z_1 + Z_2} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula X
+              Formula 2: Transmission coefficient
             </div><div class="formula-tooltip-desc">
-              ...
+              The proportion of the wave's energy which is transferred past the boundary is given by double the
+              first impedance over the sum of the 2 impedances.
             </div></span>
           </div>
         </div>
@@ -6898,7 +6923,8 @@ const subtopics = {
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula X
             </div><div class="formula-tooltip-desc">
-              ...
+              The proportion of the wave's energy which is reflected when it hits the boundary is the difference
+              in the 2 impedances over the sum of the 2 impedances.
             </div></span>
           </div>
         </div>
@@ -6932,8 +6958,8 @@ const subtopics = {
                 style="width: 300px"/>
               </div>
               <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                Figure 2: Subtopic Title Image</div><div class="image-tooltip-desc">
-                You saw this something like this when you clicked onto this topic</div></span>
+                Figure 2: Thin to thick string</div><div class="image-tooltip-desc">
+                When a wave travels from a thinner string to a thicker one, the reflected wave is inverted.</div></span>
             </div>
           </div>
         </div>
@@ -6944,10 +6970,10 @@ const subtopics = {
               <div class="image-box left-box">
                 <img src="images/Waves/Thick to thin.png" class="pop-image" style="max-width: 100%; width: 70vw"/>
               </div>
-              <span class="image-tooltip left-box" style="left:-120%;"> <div style="color: #006aff; 
-                font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-                Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
-                The adiabats appear steeper than the isotherms</div></span>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                Figure 3: Thick to thin string</div><div class="image-tooltip-desc">
+                When a wave travels from a thicker string to a thinner one, the reflected wave is the right way
+                up.</div></span>
             </div>
           </div>
           <div class="text">
@@ -6974,8 +7000,9 @@ const subtopics = {
                 style="max-width: 100%; width: 70vw"/>
               </div>
               <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                Figure 2: Subtopic Title Image</div><div class="image-tooltip-desc">
-                You saw this something like this when you clicked onto this topic</div></span>
+                Figure 4: Strings of the same thickness</div><div class="image-tooltip-desc">
+                If a wave travels from one string to another string of the same thickness, then none of the energy
+                is reflected back (it's all transmitted).</div></span>
             </div>
           </div>
         </div>
@@ -7002,10 +7029,10 @@ const subtopics = {
               <div class="image-box left-box">
                 <img src="images/Waves/Nodes and antinodes.png" class="pop-image" style="max-width: 100%; width: 85vw"/>
               </div>
-              <span class="image-tooltip left-box" style="left:-120%;"> <div style="color: #006aff; 
-                font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
-                Figure 1: Adiabats VS Isotherms on a p-V graph</div><div style="color:white; font-size:20px; line-height: 1.2;">
-                The adiabats appear steeper than the isotherms</div></span>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                Figure 5: Nodes and Antinodes</div><div class="image-tooltip-desc">
+                In a standing wave (or stationary wave), the nodes are points where there is no movement, and the
+                antinodes are points of maximum movement.</div></span>
             </div>
           </div>
           <div class="text">
@@ -7066,8 +7093,9 @@ const subtopics = {
                 style="max-width: 100%; width: 80vw;"/>
               </div>
               <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
-                Figure 2: Subtopic Title Image</div><div class="image-tooltip-desc">
-                You saw this something like this when you clicked onto this topic</div></span>
+                Figure 6: Harmonics</div><div class="image-tooltip-desc">
+                Stationary waves can only take certain values of wavelengths, such that there are nodes at the
+                boundaries. Each potential wavelength (or frequency) the wave can take is called a harmonic.</div></span>
             </div>
           </div>
         </div>
@@ -7701,9 +7729,10 @@ const subtopics = {
             \\[ \\vec{F} = \\frac{q_1 q_2}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Coulomb's law
           </div><div class="formula-tooltip-desc">
-            ...
+            The force a charged particle feels from another charged particle is proportional to the
+            magnitude of their charges and inversely proportional to the square of their separation.
           </div></span>
         </div>
       </div>
@@ -7749,7 +7778,7 @@ const subtopics = {
             \\[ \\vec{E}(\\vec{r}) = \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Electric field strength
           </div><div class="formula-tooltip-desc">
             ...
           </div></span>
@@ -7773,13 +7802,14 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\vec{F} = \\sum^N_{i=1} \\vec{F}_i = \\frac{q}{4 \\pi \\varepsilon} \\sum^N_{i=1} 
+            \\[ \\vec{F} = \\sum^N_{i=1} \\vec{F}_i = \\frac{q}{4 \\pi \\varepsilon_0} \\sum^N_{i=1} 
               \\frac{q_i (\\vec{r}_0 - \\vec{r}_i)}{|\\vec{r}_0 - \\vec{r}_i|^3} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Net force.
           </div><div class="formula-tooltip-desc">
-            ...
+            The net electrical force a charged particle experiences is the sum of all forces being imposed onto
+            it (don't bother memorising this formula necessarily, just know you can add up forces.)
           </div></span>
         </div>
       </div>
@@ -7801,9 +7831,10 @@ const subtopics = {
             \\[ d\\vec{E} = \\frac{1}{4\\pi\\epsilon_0} \\frac{dq}{r^2} \\hat{r} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Electric Field Strength (continuous)
           </div><div class="formula-tooltip-desc">
-            ...
+            When the electric field is a continuous distribution of individual field strengths, one must use integration
+            to get the total.
           </div></span>
         </div>
       </div>
@@ -7860,9 +7891,9 @@ const subtopics = {
             \\[ \\vec{p} = q \\vec{d} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 5: Magnetic Dipole Moment
           </div><div class="formula-tooltip-desc">
-            ...
+            The magnetic dipole moment is the charge times the distance from the centre of mass.
           </div></span>
         </div>
       </div>
@@ -7883,9 +7914,9 @@ const subtopics = {
             \\[ \\vec{\\tau} = \\vec{p} \\times \\vec{E} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 6: Moment (torque)
           </div><div class="formula-tooltip-desc">
-            ...
+            Moment (or torque) can be calculated by crossing magnetic dipole moment with the electric field strength.
           </div></span>
         </div>
       </div>
@@ -7981,9 +8012,10 @@ const subtopics = {
             \\[ \\Phi_E = \\vec{E} \\cdot \\vec{S} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1a: Flux
           </div><div class="formula-tooltip-desc">
-            ...
+            The number of field lines passing through an area (flux) is the electric field strength dotted with the
+            direction normal to the surface.
           </div></span>
         </div>
       </div>
@@ -7998,9 +8030,9 @@ const subtopics = {
             \\[ \\Phi_E = \\iint_S \\vec{E} \\cdot d\\vec{S} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1b: Flux V2
           </div><div class="formula-tooltip-desc">
-            ...
+            To get flux over a surface, use integration.
           </div></span>
         </div>
       </div>
@@ -8013,9 +8045,9 @@ const subtopics = {
             \\[ \\Phi_E = \\oint_S \\vec{E} \\cdot d\\vec{S} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1c: Flux V3
           </div><div class="formula-tooltip-desc">
-            ...
+            To get flux over a closed surface, use a closed integral.
           </div></span>
         </div>
       </div>
@@ -8033,15 +8065,15 @@ const subtopics = {
             \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac{ Q_{\\text{encl}} }{ \\varepsilon_0 } \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2a: Gauss' Law
           </div><div class="formula-tooltip-desc">
-            ...
+            The flux through a surface is proportional to the charge inclosed by that surface.
           </div></span>
         </div>
       </div>
 
       <p>And going back to what we had last time with charge densities, if instead of a bunch of individual
-        charges, surface \\( S \\) encloses a volume \\( V \\) with a charge distribution \\(rho\\), then
+        charges, surface \\( S \\) encloses a volume \\( V \\) with a charge distribution \\(\\rho\\), then
         we can rewrite Gauss' Law like this: </p>
 
       <div class="hover-wrapper">
@@ -8050,9 +8082,10 @@ const subtopics = {
             \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac1{ \\varepsilon_0 } \\iiint_V \\rho \\; dV \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2b: Gauss' Law V2
           </div><div class="formula-tooltip-desc">
-            ...
+            When dealing with a charge distribution \\(\\rho \\) instead of localised charges, we can get the
+            enclosed charge by integrating the distribution over the volume.
           </div></span>
         </div>
       </div>
@@ -8308,9 +8341,10 @@ const subtopics = {
             \\[ C = \\frac{Q}{V} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Capacitance
           </div><div class="formula-tooltip-desc">
-            ...
+            Capacitance measures how much energy a capacitor stores for a given potential difference, given by
+            charge over voltage
           </div></span>
         </div>
       </div>
@@ -8347,9 +8381,10 @@ const subtopics = {
             \\[ C = \\frac{\\varepsilon_0 A}{d} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Capacitance (Area and distance)
           </div><div class="formula-tooltip-desc">
-            ...
+            If you don't have the charge and/or voltage directly, capacitance can still be calculated using the
+            area of the plates and the distance between them
           </div></span>
         </div>
       </div>
@@ -8370,12 +8405,12 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\frac1{C_{\\text{series}}} = \\frac1{C_1} + \\frac1{C_2} \\]
+            \\[ \\frac1{C_{\\text{series}}} = \\frac1{C_1} + \\frac1{C_2} + \\dots \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Capacitors in series
           </div><div class="formula-tooltip-desc">
-            ...
+            The reciprocal of the capacitance of capacitors in series is the sum of each reciprocal capacitance.
           </div></span>
         </div>
       </div>
@@ -8397,12 +8432,12 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ C_\\text{parallel} = C_1 + C_2 \\]
+            \\[ C_\\text{parallel} = C_1 + C_2 + \\dots \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Capacitors in Parallel
           </div><div class="formula-tooltip-desc">
-            ...
+            The total capacitance of capacitors in series is the sum of each of their capacitances.
           </div></span>
         </div>
       </div>
@@ -8446,9 +8481,10 @@ const subtopics = {
             \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 5: Energy stored in a capacitor
           </div><div class="formula-tooltip-desc">
-            ...
+            The energy in a capacitor is half of the voltage times the charge. The other two formula can be derived
+            using the original capacitance formula and substituting.
           </div></span>
         </div>
       </div>
@@ -8480,9 +8516,10 @@ const subtopics = {
             \\[ u = \\frac{1}{2} \\varepsilon_0 E^2 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 6: Energy Density
           </div><div class="formula-tooltip-desc">
-            ...
+            The energy density is the energy per unit volume, which is half of the electrical energy squared times
+            the permittivity of free space.
           </div></span>
         </div>
       </div>
@@ -8527,9 +8564,10 @@ const subtopics = {
             \\[ \\varepsilon_r = \\frac{C_\\text{dielectric}}{C_\\text{vacuum}}\\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 7: Relative Permittivity
           </div><div class="formula-tooltip-desc">
-            ...
+            The amount a dielectric is able to increase capacitance is given by the relative permittivity, which is a
+            ratio between the capacicance with the dielectric and the capacitance without it (in a vacuum).
           </div></span>
         </div>
       </div>
@@ -8587,9 +8625,10 @@ const subtopics = {
             \\[ \\vec{F} = q(\\vec{E} + \\vec{v} \\times \\vec{B}) \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: The Lorentz Force
           </div><div class="formula-tooltip-desc">
-            ...
+            The force caused by a moving charge is proportional to its charge, and depends on the electric field strength,
+            magnetic field strength, and how quickly the particle moves.
           </div></span>
         </div>
       </div>
@@ -8613,9 +8652,10 @@ const subtopics = {
             \\[ \\Phi_B = \\iint_S \\vec{B} \\cdot d\\vec{S} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Magnetic flux
           </div><div class="formula-tooltip-desc">
-            ...
+            The amount of magnetic field lines passing through a surface is the magnetic field strength
+            integrated across the whole surface.
           </div></span>
         </div>
       </div>
@@ -8637,9 +8677,10 @@ const subtopics = {
             \\[ \\oint \\vec{B} \\cdot d\\vec{S} = 0 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: The Solenoidal Condition
           </div><div class="formula-tooltip-desc">
-            ...
+            There are no magnetic monopoles, which means that all magnetic field lines are loops. Therefore in a closed
+            surface (indicated by the closed integral), there is no flux.
           </div></span>
         </div>
       </div>
@@ -8710,9 +8751,10 @@ const subtopics = {
             \\[ R_L = \\frac{mv_\\perp}{|q|B} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Larmor Radius
           </div><div class="formula-tooltip-desc">
-            ...
+            The radius of the path a charges particle takes in a magnetic field is proportional to its mass and perpendicular
+            velocity, and inversely proportional to its charge and the magnetic field strength.
           </div></span>
         </div>
       </div>
@@ -8746,9 +8788,9 @@ const subtopics = {
             \\[ W = \\int q(\\vec{v} \\times \\vec{B}) \\cdot \\vec{v}dt = 0 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 5: Work done in a static magnetic field
           </div><div class="formula-tooltip-desc">
-            ...
+            If the magnetic field doesn't change, then the work it does on a particle is zero.
           </div></span>
         </div>
       </div>
@@ -8782,9 +8824,10 @@ const subtopics = {
             \\[ \\vec{F} = I \\vec{L} \\times \\vec{B} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 6: Force on a current-carrying wire
           </div><div class="formula-tooltip-desc">
-            ...
+            When there is current through a wire, the force is proportional to the current, magnetic field strength, and
+            the length of the wire.
           </div></span>
         </div>
       </div>
@@ -8849,7 +8892,7 @@ const subtopics = {
             \\[  \\vec{F} = \\int I d\\vec{l} \\times \\vec{B} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 7: Force on a current carrying wire V2
           </div><div class="formula-tooltip-desc">
             ...
           </div></span>
@@ -8931,9 +8974,10 @@ const subtopics = {
             \\[ \\vec{B}(r,t) = \\frac{\\mu_0}{4\\pi}q \\frac{\\vec{v}' \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Biot-Savart Law
           </div><div class="formula-tooltip-desc">
-            ...
+            The magnetic field generated by a moving charge at a point \\( \\vec{r} \\) is proportional to its charge 
+            and velocity, and also depends on the distance between the charge and that point being measured.
           </div></span>
         </div>
       </div>
@@ -9014,9 +9058,10 @@ const subtopics = {
             \\[ \\vec{B}(r) = \\frac{\\mu_0}{4\\pi}\\int I \\frac{d\\vec{r}^\\prime \\times (\\vec{r} - \\vec{r}') }{|\\vec{r} - \\vec{r}'|^3} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Biot-Savart Law (Current Carrying Wire)
           </div><div class="formula-tooltip-desc">
-            ...
+            In a current carrying wire, the Biot-Savart law uses an integral, replacing \\(qv\\) with 
+            \\(\\int{I}d\\vec{r}^\\prime\\)
           </div></span>
         </div>
       </div>
@@ -9032,9 +9077,9 @@ const subtopics = {
             \\[ \\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{encl}} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Ampère's Law
           </div><div class="formula-tooltip-desc">
-            ...
+            Basically Gauss' Law for magnetic fields.
           </div></span>
         </div>
       </div>
@@ -9142,9 +9187,11 @@ const subtopics = {
             \\[ \\vec{B} = \\mu_0(1+\\chi_M)\\vec{H} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Magnetic Field Strength (Susceptability)
           </div><div class="formula-tooltip-desc">
-            ...
+            All objects have a sort of internal source of magnetic field when you apply a magnetic field to it, which 
+            generates a magnetic field proportional to the H-field applied and 1 plus the material's magnetic 
+            susceptability.
           </div></span>
         </div>
       </div>  
@@ -9221,9 +9268,9 @@ const subtopics = {
             \\[ \\mathcal{E} = -\\frac{d\\Phi_B}{dt} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1a: Faraday's Law
           </div><div class="formula-tooltip-desc">
-            ...
+            The EMF induced in a coil is proportional to the rate of change of flux
           </div></span>
         </div>
       </div>
@@ -9250,9 +9297,9 @@ const subtopics = {
             \\[ \\mathcal{E} = -N\\frac{d\\Phi_B}{dt} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1b: Faraday's Law kai
           </div><div class="formula-tooltip-desc">
-            ...
+            The EMF induced is also proportional to the number of turns in the coil.
           </div></span>
         </div>
       </div>
@@ -9350,7 +9397,7 @@ const subtopics = {
             \\[ \\mathcal{E} = \\oint (\\vec{v} \\times \\vec{B}) \\cdot d\\vec{l} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: EMF in a moving crossbar
           </div><div class="formula-tooltip-desc">
             ...
           </div></span>
@@ -9424,9 +9471,9 @@ const subtopics = {
             \\[ \\mathcal{E} = \\oint_\\text{loop} \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi_B}{dt} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: EMF in a closed loop
           </div><div class="formula-tooltip-desc">
-            ...
+            When there is a varying current, the EMF induced in a closed loop is non-zero.
           </div></span>
         </div>
       </div>
@@ -9484,9 +9531,9 @@ const subtopics = {
             \\[ \\mathcal{E}_2 = -M \\frac{dI_1}{dt} \\quad \\text{and} \\quad \\mathcal{E}_1 = -M \\frac{dI_2}{dt}\\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Mutual Inductance
           </div><div class="formula-tooltip-desc">
-            ...
+            How much EMF a change in current will actually induce in the other coil
           </div></span>
         </div>
       </div>
@@ -9551,9 +9598,10 @@ const subtopics = {
             \\[ \\frac{d\\Phi_B}{dt} = \\frac{\\mathcal{E}_p}{N_p} = \\frac{\\mathcal{E}_s}{N_s} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Rate of Change of Flux in a Transformer
           </div><div class="formula-tooltip-desc">
-            ...
+            If there is a transformer with an EMF through one of its coils, the ratio of the EMF and the number
+            of coils is the same in both the primary and secondary coil.
           </div></span>
         </div>
       </div>
@@ -9580,9 +9628,10 @@ const subtopics = {
             \\[ \\mathcal{E} = -L \\frac{dI}{dt} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Self-Inductance
           </div><div class="formula-tooltip-desc">
-            ...
+            Self-inductance is the property of a circuit (or coil) by which a changing current in it induces an 
+            electromotive force (emf) in the same circuit, opposing that change
           </div></span>
         </div>
       </div>
@@ -9629,9 +9678,10 @@ const subtopics = {
             \\[ L = \\frac{\\mu_0 N^2 A}l \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Self-Inductance equation
           </div><div class="formula-tooltip-desc">
-            ...
+            Self inductance depends on the number of loops in the coil, the area of the loop, and the length of
+            the coil.
           </div></span>
         </div>
       </div>
@@ -9688,9 +9738,10 @@ const subtopics = {
             \\[ U = \\frac{1}{2} L I^2 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 5: Energy stored in an inductor
           </div><div class="formula-tooltip-desc">
-            ...
+            The energy stored in an inductor is half of its self inductance, multiplied by the current through
+            it squared.
           </div></span>
         </div>
       </div>
@@ -9705,9 +9756,10 @@ const subtopics = {
             \\[ u = \\frac{1}{2\\mu_0} B^2 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 6: Energy density in an inductor
           </div><div class="formula-tooltip-desc">
-            ...
+            The energy density of an inductor is the strength the magnetic field generated squared, divided
+            by \\(2 \\mu_0 \\). This formula is comparable to the energy density in a capacitor
           </div></span>
         </div>
       </div>
@@ -9723,9 +9775,9 @@ const subtopics = {
             \\[  L_{\\text{series}} = L_1 + L_2 + \\cdots \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 7: Inductors in series
           </div><div class="formula-tooltip-desc">
-            ...
+            The total inductance of inductors in series is the sum of then individual inductances
           </div></span>
         </div>
       </div>
@@ -9738,9 +9790,10 @@ const subtopics = {
             \\[ \\frac{1}{L_{\\text{parallel}}} = \\frac{1}{L_1} + \\frac{1}{L_2} + \\cdots \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 8: Inductors in parallel
           </div><div class="formula-tooltip-desc">
-            ...
+            The reciprocal of the total inductance of inductors in series is the sum of the reciprocal inductances
+            of each inductor.
           </div></span>
         </div>
       </div>
@@ -9873,9 +9926,9 @@ const subtopics = {
             \\[ V = V_0 \\cos{\\omega t} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Voltage in AC
           </div><div class="formula-tooltip-desc">
-            ...
+            The voltage in AC oscillates between 0 and \\(V_0\\), with a frequency \\(\\omega\\)
           </div></span>
         </div>
       </div>
@@ -9889,9 +9942,9 @@ const subtopics = {
             \\[ V = \\text{Re}[\\tilde{V}], \\quad \\text{where} \\quad \\tilde{V} = V_0 e^{j\\omega t} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Physical Voltage
           </div><div class="formula-tooltip-desc">
-            ...
+            Since we mainly want the physical part of this wave, we only take the real part of \\(\\tilde{V}\\)
           </div></span>
         </div>
       </div>
@@ -9943,9 +9996,10 @@ const subtopics = {
             \\[ \\tilde{V} = \\tilde{I}\\tilde{\\mathcal{Z}} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Ohm's Law in AC
           </div><div class="formula-tooltip-desc">
-            ...
+            Ohm's law is the same (voltage = current x resistance), except using the oscillating versions of
+            voltage and current, and the complex resistance which is called impedance.
           </div></span>
         </div>
       </div>
@@ -9960,9 +10014,10 @@ const subtopics = {
             \\[  \\tilde{\\mathcal{Z}}_{\\text{series}} = \\tilde{\\mathcal{Z}}_1 + \\tilde{\\mathcal{Z}}_2 + \\cdots \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Impedences in series
           </div><div class="formula-tooltip-desc">
-            ...
+            Like with normal resistance and resistors, the total impedance of impedances in series is the sum of the 
+            individual impedance.
           </div></span>
         </div>
       </div>
@@ -9975,9 +10030,10 @@ const subtopics = {
             \\[ \\frac{1}{\\tilde{\\mathcal{Z}}_{\\text{parallel}}} = \\frac{1}{\\tilde{\\mathcal{Z}}_1} + \\frac{1}{\\tilde{\\mathcal{Z}}_2} + \\cdots \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 5: Impedances in parallel
           </div><div class="formula-tooltip-desc">
-            ...
+            Also like with regular resistors, the reciprocal of the total impedance of impedances in parallel is the
+            sum of the reciprocal of the individual impedances.
           </div></span>
         </div>
       </div>
@@ -9993,9 +10049,9 @@ const subtopics = {
             \\[ \\tilde{\\mathcal{Z}}_R = R \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 6: Impedance in a resistor
           </div><div class="formula-tooltip-desc">
-            ...
+            The impedance in a resistor is just the same as its resistance
           </div></span>
         </div>
       </div>
@@ -10029,9 +10085,10 @@ const subtopics = {
             \\[ \\tilde{\\mathcal{Z}}_C = \\frac1{j\\omega C} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 7: Impedance in a capacitor
           </div><div class="formula-tooltip-desc">
-            ...
+            The impedance of capacitor is one over j times the frequency of the complex current times the
+            capacitance of the capacitor.
           </div></span>
         </div>
       </div>
@@ -10060,9 +10117,10 @@ const subtopics = {
             \\[ \\tilde{\\mathcal{Z}}_L = j\\omega L \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 8: Impedance in an inductor
           </div><div class="formula-tooltip-desc">
-            ...
+            The capacitor in an inductor is j times the frequency of the current times the self-inductance
+            of the inductor.
           </div></span>
         </div>
       </div>
@@ -10110,9 +10168,9 @@ const subtopics = {
             \\[ V_\\text{RMS} = \\frac{V_0}{\\sqrt2} \\quad \\text{and} \\quad I_\\text{RMS} = \\frac{I_0}{\\sqrt2} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 9: Root Mean Square Voltage/Current
           </div><div class="formula-tooltip-desc">
-            ...
+            The root mean square voltage/current is the voltage/current divided by root 2.
           </div></span>
         </div>
       </div>
@@ -10311,9 +10369,9 @@ const subtopics = {
 
       <p> In short, it's as a result of this weird fact about momentum. Remember how we defined momentum before: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{p} = m\\vec{v}
-      \\]
+      \\] </div>
 
       <p> This tells us that momentum is proportional to mass. Therefore since photons dont have mass, you would think that
         means they don't have a momentum either. Well turns out, they do! </p>
@@ -10324,9 +10382,9 @@ const subtopics = {
             \\[ \\vec{p} = \\frac{h}{\\lambda} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Momentum of a photon
           </div><div class="formula-tooltip-desc">
-            ...
+            The momentum of a photon is inversely proportioal to its wavelength.
           </div></span>
         </div>
       </div>
@@ -10341,9 +10399,9 @@ const subtopics = {
         move with momentum \\( \\vec{p}_e \\), and the photon moves off with momentum \\( \\vec{p}^\\prime \\). Since
         momentum must be conserved: </p>
 
-      \\[
+      <div class=eqn> \\[
         \\vec{p} = \\vec{p}_e + \\vec{p}^\\prime
-      \\]
+      \\] </div>
 
       <p> More importantly, since the momentum of the X-ray has changed, and the momentum is linked to the wavelength, that
         means that the wavelength is also changing a little bit. By using a little bit of Einstein and some adorable
@@ -10355,9 +10413,11 @@ const subtopics = {
             <span class="large-eqn">\\[ \\lambda' - \\lambda = \\lambda_C(1-\\cos{\\theta}), \\quad \\text{where} \\quad \\lambda_C = \\frac{h}{m_0c} \\]</span>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Compton Scattering
           </div><div class="formula-tooltip-desc">
-            ...
+            When a photon hits a charged particle, it is scattered inelastically, causing it to loose momentum and therefore
+            change wavelength. The change in wavelength depends on the angle of impact \\(\\theta\\) and the charged
+            particles Compton wavelength.
           </div></span>
         </div>
       </div>
@@ -10395,13 +10455,13 @@ const subtopics = {
       <p> Bohr suggested that, since the gas originally took in energy as photons with energy \\(h\\nu\\), then each line
       on the spectrum represents a transition from one orbit with energy \\(E_i\\) and another orbit with energy \\(E_f\\).
       Or in mathematicianese:</p>
-      \\[
+      <div class=eqn> \\[
       h\\nu = \\frac{hc}{\\lambda} = E_f - E_i
-      \\]
+      \\] </div>
       <p>If we do <span class="popup-trigger" data-popup-id="bohr energy">a bit more maths</span>, we eventually get:</p>
-      \\[
+      <div class=eqn> \\[
       E_i=-\\frac{R}{m^2}, \\quad E_f=-\\frac{R}{n^2},\\quad m < n
-      \\]
+      \\] </div>
       <p>The negatives are important. </p>
 
       <h3>Hydrogen Emission Spectrum Simulator</h3>
@@ -10465,9 +10525,9 @@ const subtopics = {
             \\[ L=mr^2\\omega = n\\hbar \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Quantisation of Angular Momentum
           </div><div class="formula-tooltip-desc">
-            ...
+            Angular momentum is quantised in units of the Planck constant.
           </div></span>
         </div>
       </div>
@@ -10488,9 +10548,9 @@ const subtopics = {
             \\[ r=n^2\\frac{\\hbar^24\\pi\\epsilon_0}{me^2} \\equiv n^2a_0 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Radius of Electron Orbit
           </div><div class="formula-tooltip-desc">
-            ...
+            The orbit of an electron is proportional to the Bohr radius.
           </div></span>
         </div>
       </div>
@@ -10505,9 +10565,9 @@ const subtopics = {
             \\[ a_0=\\frac{\\hbar^24\\pi\\epsilon_0}{me^2} = 0.53 \\text{Å} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: The Bohr Radius
           </div><div class="formula-tooltip-desc">
-            ...
+            The Bohr Radius is is the radius at which the closest electron to the nucleus orbit.
           </div></span>
         </div>
       </div>
@@ -10518,13 +10578,13 @@ const subtopics = {
 
       <p>Now, we can calculate the total energy, which is just kinetic energy plus potential energy:</p>
 
-      \\[ E = KE + PE = \\frac{1}{2}mr^2\\omega^2 - \\frac{e^2}{4\\pi\\epsilon_0 r} \\]
+      <div class=eqn> \\[ E = KE + PE = \\frac{1}{2}mr^2\\omega^2 - \\frac{e^2}{4\\pi\\epsilon_0 r} \\] </div>
 
       <p>But wait! We can use that result from before to replace \\( r^2\\omega^2 \\) with something nicer. 
       Plug it in, and you get:</p>
 
-      \\[ E = \\frac{1}{2} \\cdot \\frac{e^2}{4\\pi\\epsilon_0 r} - \\frac{e^2}{4\\pi\\epsilon_0 r} 
-      = -\\frac{1}{2} \\cdot \\frac{e^2}{4\\pi\\epsilon_0 r} \\]
+      <div class=eqn> \\[ E = \\frac{1}{2} \\cdot \\frac{e^2}{4\\pi\\epsilon_0 r} - \\frac{e^2}{4\\pi\\epsilon_0 r} 
+      = -\\frac{1}{2} \\cdot \\frac{e^2}{4\\pi\\epsilon_0 r} \\] </div>
 
       <p>Nice. So the total energy is negative — which makes sense. The electron is bound to the nucleus. It’s not 
       going anywhere unless you give it a shove.</p>
@@ -10532,7 +10592,7 @@ const subtopics = {
       <p>Now, here’s where things get spicy. Remember from earlier that \\( r = n^2 a_0 \\) with \\(a_0\\) being
       the Bohr radius? The formula implies radius depends on \\( n \\), the quantum number. So plug that in:</p>
 
-      \\[ E_n = -\\frac{1}{2} \\cdot \\frac{e^2}{4\\pi\\epsilon_0} \\cdot \\frac{1}{n^2 a_0} = -\\frac{R}{n^2} \\]
+      <div class=eqn> \\[ E_n = -\\frac{1}{2} \\cdot \\frac{e^2}{4\\pi\\epsilon_0} \\cdot \\frac{1}{n^2 a_0} = -\\frac{R}{n^2} \\] </div>
 
       <p>Where \\( R \\) is a constant. And not just any old constant, but apparently a quite important one, called the 
       <strong>Rydberg constant</strong>, and it turns out to be about 13.6 eV. If you did AQA physics at A-level (like me!!!),
@@ -10561,7 +10621,7 @@ const subtopics = {
       <p>Oh, you're serious? Well then, explain to me smart arse. If I am a particle, why don't I diffract when I walk through
       a doorway?</p>
       <p>He said that every particle has a <strong>wavelength</strong>, given by:</p>
-      <p>\\( \\lambda = \\frac{h}{p} \\quad \\text{or equivalently} \\quad p = \\frac{h}{\\lambda} = \\hbar k \\)</p>
+      <div class=eqn> \\[ \\lambda = \\frac{h}{p} \\quad \\text{or equivalently} \\quad p = \\frac{h}{\\lambda} = \\hbar k \\]</div>
       <p>This is now known as the <strong>de Broglie wavelength</strong>. And it’s not just a guess — it was 
       actually confirmed by experiment. Thomson (1925) showed that electrons diffract when they hit a crystal — 
       a wave-like behavior. So yes, electrons <em>are</em> waves. I bet you regret calling him a 'flipping idiot' and
@@ -10570,7 +10630,7 @@ const subtopics = {
       <p>Now, here’s the genius part. Remember how a few minutes ago, we looked at Bohr's claim that angular momentum is 
       quantized: </p>
 
-      \\[ l = rp = n\\hbar \\]
+      <div class=eqn> \\[ l = rp = n\\hbar \\] </div>
 
       <p>You're probably wondering why? Why does \\( p \\) have to be exactly \\( n\\hbar / r \\)?</p>
 
@@ -10579,11 +10639,11 @@ const subtopics = {
       phase — it’ll interfere with itself and cancel out. Only if the circumference (\\( 2\\pi r \\)) is an integer number of 
       wavelengths (\\(n\\lambda\\)) will the wave survive. That means:</p>
 
-      \\[ 2\\pi r = n\\lambda \\]
+      <div class=eqn> \\[ 2\\pi r = n\\lambda \\] </div>
 
       <p>But \\( \\lambda = h/p \\), so:</p>
 
-      \\[ 2\\pi r = n \\cdot \\frac{h}{p} \\quad \\Rightarrow \\quad p = \\frac{nh}{2\\pi r} = \\frac{n\\hbar}{r} \\]
+      <div class=eqn> \\[ 2\\pi r = n \\cdot \\frac{h}{p} \\quad \\Rightarrow \\quad p = \\frac{nh}{2\\pi r} = \\frac{n\\hbar}{r} \\] </div>
 
       <p>And of course if we multiply both sides by \\( r \\), we get \\( rp = n\\hbar \\), which is <strong>exactly</strong> 
       Bohr’s quantization condition!</p>
@@ -10605,7 +10665,7 @@ const subtopics = {
 
       <p>The thermal de Broglie wavelength is roughly:</p>
 
-      <p>\\( \\lambda_{\\text{th}} \\approx \\frac{h}{\\sqrt{3mk_B T}} \\)</p>
+      <div class=eqn> \\[ \\lambda_{\\text{th}} \\approx \\frac{h}{\\sqrt{3mk_B T}} \\]</div>
 
       <p>So when \\( k_B T < \\frac{\\hbar^2}{3ml^2} \\), the gas starts behaving like a quantum system.</p>
 
@@ -10706,9 +10766,10 @@ const subtopics = {
             \\[ \\int^{\\infty}_{-\\infty}|\\Psi (x,t)|^2 dx = 1 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Normalisation condition
           </div><div class="formula-tooltip-desc">
-            ...
+            If you take the wave function's probability over all space, the total must be 100% (i.e. 1), since the
+            particle is located somewhere.
           </div></span>
         </div>
       </div>
@@ -10739,9 +10800,10 @@ const subtopics = {
             \\[ \\psi = \\int a(k)e^{i(kx-\\omega t)}dk \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Wave Packet
           </div><div class="formula-tooltip-desc">
-            ...
+            For a wave packet, the wave function is the sum of all the different waves of different wavenumbers used
+            to make it.
           </div></span>
         </div>
       </div>
@@ -10767,9 +10829,9 @@ const subtopics = {
             \\[ \\Delta x \\Delta p \\geq \\frac{\\hbar}2 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Heisenberg's Uncertainty Principle
           </div><div class="formula-tooltip-desc">
-            ...
+            The more precisely you know a particles position, the less precisely you know its momentum, and vice versa.
           </div></span>
         </div>
       </div>
@@ -10814,9 +10876,9 @@ const subtopics = {
       flipping idiot, I just can't believe <em>you</em> said that...). </p>
       <p> Debye's logic was as follows: If all particles can exhibit wave-like properties, then we should be able to
       derive a wave equation for all particles. By now we know of the regular wave equation, which is:</p>
-      \\[
+      <div class=eqn> \\[
       \\frac{\\partial^2 U}{\\partial x^2}=\\frac1{v^2}\\frac{\\partial^2 U}{\\partial t^2}
-      \\]
+      \\] </div>
       <p>(And if you don't, then you need to come <a href="http://127.0.0.1:5500/topic.html?topic=waves">here!</a>)
       We need something like this for everything else. And that's exactly what Schrödinger did, forming his well-known
       Schrödinger equation! </p>
@@ -10826,30 +10888,31 @@ const subtopics = {
       <p> To start, recall that every object has a de Broglie wavelength, given by \\(\\lambda = \\frac{h}{p}\\).
       More importantly, each object only has one wavelength, which means we can represent them as right-moving
       waves, given by:</p>
-      \\[
+      <div class=eqn> \\[
       \\Psi(x,t)=Ae^{i(kx-\\omega t)}
-      \\]
+      \\] </div>
       <p>We could also consider left-moving waves (which is the same formula, but with \\(-k\\) instead), but
       it is probably easier to just think of \\(k\\) as a vector \\(\\mathbf{k}\\), with positive
       \\(\\mathbf{k}\\) moving to the right and negative \\(\\mathbf{k}\\) moving to the left. </p>
       <p> Now we can differentiate this function with respect to x and t:</p>
-      \\[
+      <div class=eqn> \\[
       \\frac{\\partial^2 \\Psi}{\\partial x^2} = (ik)^2 Ae^{i(kx-\\omega t)} = -k^2\\Psi
       \\]
       \\[
       \\frac{\\partial \\Psi}{\\partial t} = -i \\omega Ae^{i(kx-\\omega t)} = -i\\omega\\Psi
-      \\]
+      \\] </div>
       <p> If we multiply the first equation by -1 and the second equation by \\(i\\), we can end up with
-      two very important and completely serious formulae: </p><div class="hide-on-mobile">
-      <div class="large-eqn">\\[
+      two very important and completely serious formulae: </p>
+
+      <div class="hide-on-mobile large-eqn">\\[
       k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2}, \\quad
       \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
-      \\]</div></div>
+      \\]</div>
       
-      <div class="large-eqn show-on-mobile">\\[
+      <div class="large-eqn show-on-mobile eqn"> \\[
       k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2} \\] \\[
       \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
-      \\]</div>
+      \\] </div>
 
       <p>Very legit formulae, I know. </p>
       <p> Jokes aside, the reason why I used 'can PROBABLY be replaced with' as opposed to 'is equal to' is
@@ -10857,14 +10920,14 @@ const subtopics = {
       seems to work, so let's just give it a go! </p>
       <p> Oh, and why do we need values for \\(k^2\\Psi\\) and \\(\\omega\\Psi\\)? Well, going back to classical
       mechanics, we know that the total energy of a particle is given by: </p>
-      \\[
+      <div class=eqn> \\[
       E = \\frac{p^2}{2m}
-      \\]
+      \\] </div>
       <p>Thanks to de Broglie, we know that \\(p = \\hbar k\\). And thanks to Planck, we know that \\(E = \\hbar \\omega\\).
       So we can substitute these values in to get:</p>
-      \\[
+      <div class=eqn> \\[
       \\hbar \\omega = \\frac{\\hbar^2 k^2}{2m} , \\; \\therefore \\; \\hbar \\omega - \\frac{\\hbar^2 k^2}{2m} = 0
-      \\]
+      \\] </div>
       <p>We can then multiply this equation by \\(\\Psi\\) because... why not? It helps our cause I guess... and then we
       use the two 'can PROBABLY be replaced with' formulae to get:</p>
       \\[
@@ -10882,9 +10945,9 @@ const subtopics = {
 
       <p> So far, we have learnt about the origins of Quantum mechanics, and even gotten ourselves some new equations, the
       most notable being the iconic Schrödinger equation:</p>
-      \\[
+      <div class=eqn> \\[
       i\\hbar\\frac{\\partial \\Psi}{\\partial t}=  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\Psi}{\\partial t^2}
-      \\]
+      \\] </div>
       <p>But... how exactly do we use this?
       </p>
       <h3>Potential & The TISE-on Fury equation</h3>
@@ -10896,9 +10959,10 @@ const subtopics = {
             \\[ i\\hbar\\frac{\\partial \\Psi}{\\partial t}=  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\Psi}{\\partial t^2} + V\\Psi \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 1: Schrödinger Equation ft. Potential
           </div><div class="formula-tooltip-desc">
-            ...
+            The original Schrodinger Equation assumed potential was zero. This is the version of the Schrodinger
+            equation when potential isn't zero.
           </div></span>
         </div>
       </div>
@@ -10933,17 +10997,17 @@ const subtopics = {
 
       <p> If our wavefunction is supposed to be in a stationary state, that means that we can split our wavefunction into
         a time component and a position component:</p>
-      \\[
+      <div class=eqn> \\[
         \\psi(x,t) = \\phi(x)\\rho(t)
-      \\]
+      \\]  </div>
 
       <p> Since we know a wave function is generally given as \\( \\phi(x,t) = Ae^{-i(kx-\\omega t)} = Ae^{-ikx}e^{-i\\omega t} \\),
         by comparing we can see that \\( \\rho(t) = e^{-i\\omega t} \\). Q.E.D, if a wavefunction can be written in this form:</p>
 
 
-      \\[
+      <div class=eqn> \\[
         \\psi(x,t) = e^{-i\\omega t}\\phi(x) = e^{\\frac{-iEt}{\\hbar}} \\phi(x)
-      \\]
+      \\] </div>
 
       <p> ...then it is a stationary state. If we substitute this new wavefunction definition into the Schrodinger equation
         the \\( e^{-i\\omega t} \\) terms cancel out nicely, and we end up with the Time-Independent Schrodinger Equation, 
@@ -10956,9 +11020,10 @@ const subtopics = {
             \\[  E\\phi =  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\phi}{\\partial t^2} + V(x)\\phi \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 2: Time-Independent Schrodinger Equation
           </div><div class="formula-tooltip-desc">
-            ...
+            By using separation of variables of the Schrodinger Equation, we get the version of the Schrodinger
+            equation which doesn't vary with time.
           </div></span>
         </div>
       </div>
@@ -10984,18 +11049,18 @@ const subtopics = {
       <p> An infinite potential well describes a system which has no potential between two points (we'll call those points \\( x=0 \\)
         and \\( x=L \\)), and infinite potential anywhere else.</p>
 
-      \\[
+      <div class=eqn> \\[
         V(x) = ∞ \\quad x<0,x>L
       \\]
       \\[
         V(x) = 0 \\quad 0≤x≤L
-      \\]
+      \\] </div>
 
       <p>Step 1</p>
       <p>We've been given two potential values, \\( 0 \\) and \\( \\infty \\). So let's substitute both of those values into the
         equation and see what we get. Starting with \\( V(x) = \\infty \\):</p>
 
-        \\[  E\\phi =  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\phi}{\\partial x^2} + \\infty\\phi \\]
+        <div class=eqn> \\[  E\\phi =  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\phi}{\\partial x^2} + \\infty\\phi \\] </div>
 
       <p>Well already I can see a problem: if \\( \\infty\\phi \\) is part of the equation, then the result will also be infinity.
         Meaning that \\(E\\phi\\) would be infinite, which would mean that we'd either have infinite energy (which is impossible)
@@ -11004,7 +11069,7 @@ const subtopics = {
 
       <p> Now consider \\( V(x) = 0 \\):</p>
 
-      \\[  E\\phi =  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\phi}{\\partial x^2} \\cancel{+ 0\\phi} \\]
+      <div class=eqn> \\[  E\\phi =  -\\frac{\\hbar^2}{2m}\\frac{\\partial^2 \\phi}{\\partial x^2} \\cancel{+ 0\\phi} \\]  </div>
 
       <p>Cool! And that's step 1 done! Moving on:</p>
 
@@ -11014,35 +11079,35 @@ const subtopics = {
         potential, the wavefunction becomes zero. That means the wavefunction is zero at \\( x=0 \\) and at \\( x=L \\), giving
         us our boundary conditions:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi(0) = 0, \\quad \\text{and} \\quad \\phi(L) = 0
-      \\]
+      \\]  </div>
 
       <p> Now to put them intro the Schrodinger equation, but before we do that, we can give the Schrodinger equation a little
         makeover. In this case, with a bit of rearranging, the Schrodinger equation becomes a regular second order differential 
         equation:</p>
 
-      \\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-\\frac{2mE}{\\hbar^2}\\phi \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-\\frac{2mE}{\\hbar^2}\\phi \\]  </div>
 
       <p> Then replace that big conglomerate of constants at the beginning with a nicer looking \\( k^2 \\) to get this:</p>
 
-      \\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k^2\\phi, \\quad \\text{where} \\quad k^2=\\frac{2mE}{\\hbar^2} \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k^2\\phi, \\quad \\text{where} \\quad k^2=\\frac{2mE}{\\hbar^2} \\]  </div>
 
       <p> Hey, this looks a lot like simple harmonic motion. Because it is! If you solve it, you'll eventually get the
         solution:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi = A\\sin{kx} + B\\cos{kx}
-      \\]
+      \\]  </div>
 
       <p> And this is where we put in our boundary conditions. Firstly, when \\( x = 0 \\), this expression becomes \\( 0 \\).
         Stick it in and what do we get? The \\( A\\sin{kx} \\) term just becomes \\( 0 \\), since \\( \\sin{0k} = 0 \\). Then
         the second term becomes \\( B \\), since \\( \\cos{0k} = 1 \\), leaving us with \\( B = 0 \\). That means we have one
         of our constants, \\( B = 0 \\). That means our expression becomes a little bit simpler:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi = A\\sin{kx} \\cancel{ + B\\cos{kx}}
-      \\]
+      \\]  </div>
 
       <p> Huh, that's great news, now that we only have the sine term to worry about, we have a bit less work to do. Now we'll 
         use our other boundary condition. When \\( x = L \\), the expression becomes \\( A\\sin{kL} = 0 \\). In order to
@@ -11051,15 +11116,15 @@ const subtopics = {
         \\( n \\) is some integer. That gives us a value of \\( k \\) to be \\( k = \\frac{n\\pi}L \\). Put that back into
         our wavefunction expression and we now have our equation for a wavefunction in an infinite potential well:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi_n(x) = A\\sin{\\frac{n\\pi x}{L}}
-      \\]
+      \\]  </div>
 
       <p> BUT WE AREN'T DONE!! How do we get that \\( A \\) constant, you ask? Remember, this thing we are measuring does
         this thing called existing, which means it is doing something somewhere at all times. In other words, we normalise
         it using the equation from before:</p>
 
-      \\[ \\int^{\\infty}_{-\\infty}|\\phi (x)|^2 dx = 1 \\]
+      <div class=eqn> \\[ \\int^{\\infty}_{-\\infty}|\\phi (x)|^2 dx = 1 \\]  </div>
 
       <p> And if you do that and rearrange, you eventually get \\( A = \\sqrt{\\frac2L}\\). Which means we FINALLY have our
         wavefunction for an infinite potential well:</p>
@@ -11070,9 +11135,10 @@ const subtopics = {
             \\[ \\phi_n(x) = \\sqrt{\\frac2L}\\sin{\\frac{n\\pi x}{L}} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 3: Wave Function in an infinite potential well
           </div><div class="formula-tooltip-desc">
-            ...
+            After solving the Schrodinger equation, this is the wavefunction for
+            a particle in an infinite potential well
           </div></span>
         </div>
       </div>
@@ -11105,9 +11171,9 @@ const subtopics = {
             \\[ \\phi_1(L) = \\phi_2(L) \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 4: Continuity I
           </div><div class="formula-tooltip-desc">
-            ...
+            The wave function at the boundary must be the same from each side (or else there would be a split)
           </div></span>
         </div>
       </div>
@@ -11122,9 +11188,9 @@ const subtopics = {
             \\[ \\frac{d\\phi_1(L)}{dx} = \\frac{d\\phi_2(L)}{dx} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 5: Continuity II
           </div><div class="formula-tooltip-desc">
-            ...
+            The derivative of the wave function must also be the same at the boundaries to ensure continuity.
           </div></span>
         </div>
       </div>
@@ -11136,16 +11202,16 @@ const subtopics = {
       <p> A potential step describes a system in which the potential is zero up until a certain point. At that point, the
         potential increases to some amount (we'll call it \\(V_0\\)) and stays there for the rest of the system.</p>
 
-      \\[
+      <div class=eqn> \\[
         V(x) = 0 \\quad x<0
       \\]
       \\[
         V(x) = V_0 \\quad x>0
-      \\]
+      \\]  </div>
 
       <p> When \\( V(x) = 0 \\), we had the same result from before:</p>
 
-      \\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k^2\\phi, \\quad \\text{where} \\quad k^2=\\frac{2mE}{\\hbar^2} \\]
+      <div class=eqn> \\[ \\frac{\\partial^2 \\phi}{\\partial x^2}=-k^2\\phi, \\quad \\text{where} \\quad k^2=\\frac{2mE}{\\hbar^2} \\]  </div>
 
       <p> And when \\( V(x) = V_0 \\), the result is pretty similar, except the energy is being subtracted by potential:</p>
 
@@ -11153,23 +11219,23 @@ const subtopics = {
 
       <p> This is SHM again, which means we get sine and cosine solutions again:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi_1(x) = A\\sin{kx} + B\\cos{kx}
       \\]
 
       \\[
         \\phi_2(x) = A\\sin{k'x} + B\\cos{k'x}
-      \\]
+      \\] </div>
 
       <p>which for this example we will write in exponential form:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi_1(x) = Ie^{ikx} + Re^{-ikx}
       \\]
 
       \\[
         \\phi_2(x) = Te^{ik'x} + Se^{-ik'x}
-      \\]
+      \\] </div>
 
       <p> Now the letters may seem random, but there is actually some logic to them. \\( I \\) is for incident or
         initial. This is the amplitude of the initial wave being produced. \\( R \\) is for reflected. When that
@@ -11181,50 +11247,50 @@ const subtopics = {
         the right for some reason, but there IS no reason any waves should be coming from the right, so that means
         \\( S=0 \\). Also for simplicity, we'll say that the incident wave has an amplitude of one, so \\( I=1 \\).</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi_1(x) = e^{ikx} + Re^{-ikx}
       \\]
 
       \\[
         \\phi_2(x) = Te^{ik'x}
-      \\]
+      \\] </div>
 
       <p> Now it's only \\(R\\) and \\(T\\) we need to work out, which we can do by using the continuity boundary
         conditions we had from before. Starting with the first one</p>
 
-      \\[
+      <div class=eqn> \\[
         \\phi_1(x=0) = \\phi_2(x=0)
-      \\]
+      \\]  </div>
       \\[
         \\downarrow
       \\]
-      \\[
+      <div class=eqn> \\[
         e^{ik0} + Re^{-ik0} = Te^{ik'0}
-      \\]
-      \\[
+      \\] </div>
+      \\[ 
         \\downarrow
       \\]
-      \\[
+      <div class=eqn> \\[
         1 + R = T
-      \\]
+      \\]  </div>
 
       <p> And then the second one:</p>
 
-      \\[
+      <div class=eqn> \\[
         \\frac{d\\phi_1(x=0)}{dx} = \\frac{d\\phi_2(x=0)}{dx}
-      \\]
+      \\] </div>
       \\[
         \\downarrow
       \\]
-      \\[
+      <div class=eqn> \\[
         ike^{ik0} - ikRe^{-ik0} = ik'Te^{ik'0}
-      \\]
+      \\]  </div>
       \\[
         \\downarrow
       \\]
-      \\[
+      <div class=eqn> \\[
         ik(1-R) = ik'T
-      \\]
+      \\]  </div>
 
       <p> And I'm lazy so I can't be bothered to do it myself but if you do some substituting and then play the
         shell game with the variables, you get formulae for \\(R\\) and \\(T\\).
@@ -11232,12 +11298,12 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ R = \\frac{k-k'}{k-k'}, \\quad \\text{and} \\quad T = \\frac{2k'}{k+k'} \\]
+            \\[ R = \\frac{k-k'}{k+k'}, \\quad \\text{and} \\quad T = \\frac{2k'}{k+k'} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula X
+            Formula 6: Transmittion/Reflection Coefficients
           </div><div class="formula-tooltip-desc">
-            ...
+            The amount of energy which is reflected (R) or transmitted (T) at the boundary is given by these formulae.
           </div></span>
         </div>
       </div>

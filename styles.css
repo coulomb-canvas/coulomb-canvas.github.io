@@ -177,8 +177,9 @@ a:hover {
 table, th, td {
   border: 1px solid white;
   border-collapse: collapse;
-
+  width: 85vw !important;
 }
+
 th, td {
   background-color: #00000066;
   padding: 0.5vw;
@@ -186,6 +187,12 @@ th, td {
 }
 
 tr:hover {background-color: var(--card)}
+
+@media (max-width: 100vh){
+  table, th, td {
+    width: 85vw !important;
+  }
+}
 
 .left-speech {
   background-color: white;
@@ -794,6 +801,7 @@ body.dimmed::before {
 
   .pop-image {
     max-width: 70vw !important;
+    width: 100vw !important;
   }
 }
 

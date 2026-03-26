@@ -24,7 +24,7 @@ And then by taking the square root, we get a value for \\( ds \\):
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ ds = dx \sqrt{1 + \left( \frac{dy}{dx} \right)^2} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -60,7 +60,7 @@ J = \frac{\partial(x, y, z)}{\partial(r, \theta, \varphi)} = \begin{vmatrix} \fr
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ A = 2 \pi \bar{y} S \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -73,7 +73,7 @@ J = \frac{\partial(x, y, z)}{\partial(r, \theta, \varphi)} = \begin{vmatrix} \fr
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ V = 2 \pi A \bar{y} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">

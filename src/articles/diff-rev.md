@@ -35,7 +35,7 @@ This is great for functions which only depend one one variable, such as our \\( 
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ df = \left(\frac{\partial f}{\partial x}\right)dx +  \left(\frac{\partial f}{\partial y}\right)dy \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -109,7 +109,7 @@ Finally, we divide both sides by \\( dS \\) and we end up with:
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ \frac{dh}{dS} = \frac{\partial h}{\partial x} \cdot \frac{ dx }{ dS } + \frac{\partial h}{\partial y} \cdot \frac{ dy }{ dS } \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -172,7 +172,7 @@ And just for generality, we can think of these as operators:
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ \begin{align*} \frac{\partial}{\partial r} &= \cos \theta \frac{\partial}{\partial x} + \sin \theta \frac{\partial}{\partial y} \\[6pt] \frac{\partial}{\partial \theta} &= - r \sin \theta \frac{\partial}{\partial x} + r \cos \theta \frac{\partial}{\partial y} \end{align*} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -187,7 +187,7 @@ We can do the same for x and y
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \begin{align*}
             \frac{\partial}{\partial x} &= \cos \theta \frac{\partial}{\partial r} - \frac{1}{r} \sin \theta \frac{\partial}{\partial \theta} \\[10pt]
             \frac{\partial}{\partial y} &= \sin \theta \frac{\partial}{\partial r} + \frac{1}{r} \cos \theta \frac{\partial}{\partial \theta}
@@ -208,7 +208,7 @@ The *grad function* calculates the direction of steepest ascent or descent at a 
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ \vec{\nabla}\phi = \hat{i}\left(\frac{\partial \phi}{\partial x}\right) + \hat{j}\left(\frac{\partial \phi}{\partial y}\right) + \hat{k}\left(\frac{\partial \phi}{\partial z}\right)\]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -225,7 +225,7 @@ A *directional derivative* tells us exactly this. If you remember, the dot produ
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ \text{Directional derivative} \equiv \vec{\nabla}\phi \cdot \vec{u} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -243,7 +243,7 @@ ICL, I don't know why this gets its own name, it's literally just the grad, exce
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ \nabla^2 f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -264,7 +264,7 @@ We can also use this in polar co-ordinates
 
 <div class="hover-wrapper">
     <div class="formula-container">
-        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+        <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
             \[ \begin{align}
                 \nabla^2 &= \left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} \right) \\[6pt] &= \frac{\partial^2}{\partial r^2} + \frac{1}{r} \frac{\partial}{\partial r} + \frac{1}{r^2} \frac{\partial^2}{\partial \theta^2}
             \end{align} \]
@@ -324,7 +324,7 @@ Where \\( \\lambda \\) is some constant, called the *Lagrange multiplier*. And a
 
 Anyway, by using the chain rule, we get this:
 
-<div class=eqn> \[ d(f + \lambda g) = \left( \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} \right) dx + \left( \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} \right) dy = 0 \] </div>
+<div class=large-eqn> \[ d(f + \lambda g) = \left( \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} \right) dx + \left( \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} \right) dy = 0 \] </div>
 
 Since \\(x\\) and \\(y\\) have got nothing to do with each other (in other words, they are *independant variables*), that means: 
 

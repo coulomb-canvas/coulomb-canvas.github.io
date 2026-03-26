@@ -4,7 +4,7 @@ title: Stars
 topic: astro
 ---
 
-Right. So we've had a look at what's in our solar system, we've had a look at some of the exoplanets outside of it. But we haven't actually talked about the big glowy things that all of these planets are orbiting. Which, now that I think about it, is a bit like spending an entire cooking show talking about plates without mentioning the food.
+So we've had a look at what's in our solar system, we've had a look at some of the exoplanets outside of it. But we haven't actually talked about the big glowy things that all of these planets are orbiting. Which, now that I think about it, is a bit like spending an entire cooking show talking about plates without mentioning the food.
 
 So. Stars.
 

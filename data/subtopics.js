@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 84 subtopics
-// Generated: 2026-03-26T15:16:59.809Z
+// Generated: 2026-03-26T15:42:20.817Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -930,8 +930,8 @@ const subtopics = {
                  u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{pmatrix}} \\)</p>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula 2a: The Cross Product <br><div style="font-size: 3vh; line-height: 1.7; opacity: 70%;">(determinant)</div></div><div class="formula-tooltip-desc">
-            The cross product of two vectors is the determinant 
+              Formula 2a: The Cross Product <br><div style="font-size: 3vh; line-height: 1.7; opacity: 70%;">(determinant)</div></div><div class="formula-tooltip-desc">
+              The cross product of two vectors is the determinant 
             of this matrix.</div></span>
           </div>
         </div>
@@ -12792,7 +12792,7 @@ const subtopics = {
   "stars": {
     title: "Stars",
     content: `
-      <p>Right. So we've had a look at what's in our solar system, we've had a look at some of the exoplanets outside of it. But we haven't actually talked about the big glowy things that all of these planets are orbiting. Which, now that I think about it, is a bit like spending an entire cooking show talking about plates without mentioning the food.</p>
+      <p>So we've had a look at what's in our solar system, we've had a look at some of the exoplanets outside of it. But we haven't actually talked about the big glowy things that all of these planets are orbiting. Which, now that I think about it, is a bit like spending an entire cooking show talking about plates without mentioning the food.</p>
       <p>So. Stars.</p>
       <h3>The Hertzsprung-Russell Diagram</h3>
       <p>About 100 years ago, two astronomers — Hertzsprung and Russell — noticed something interesting. Stars aren't just randomly scattered across a plot of luminosity vs temperature. They cluster in very specific regions. And whenever something in nature clusters in a specific region, that means there's an underlying principle at work that needs understanding.</p>

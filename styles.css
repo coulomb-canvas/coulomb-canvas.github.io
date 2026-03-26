@@ -17,6 +17,7 @@
 html {
   overscroll-behavior: none;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -1417,11 +1418,12 @@ body.dimmed::before {
 }
 
 #next-year-button {
-  position: fixed;
-  left: 89vw;
-  top: 90vh;
-  z-index: 50;
-}
+    bottom: 3vh;
+    font: 3vw;
+    position: fixed;
+    right: 4vw;
+    z-index: 50;
+  }
 
 #previous-year-button {
   position: fixed;
@@ -1433,7 +1435,7 @@ body.dimmed::before {
 @media (max-width: 100vh) {
 
   #next-year-button {
-    bottom: 3vh;
+    bottom: 10vh;
     font: 3vw;
     position: fixed;
     right: 4vw;

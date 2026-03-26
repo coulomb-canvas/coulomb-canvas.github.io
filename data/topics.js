@@ -592,8 +592,20 @@ const topics = [
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {
-        subid: "astro-intro",
-        title: "Aren't planets and stars cool?",
+        subid: "maths2-intro",
+        title: "Ugh, again?",
+      },
+      {
+        subid: "diff-rev",
+        title: "Differential Equations (Revisited)",
+      },
+      {
+        subid: "volumes",
+        title: "Surfaces and Volumes of Revolution",
+      },
+      {
+        subid: "vec-calculus",
+        title: "Vector calculus",
       },
     ]
   },

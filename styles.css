@@ -26,7 +26,7 @@ body {
   color: var(--text);
   font-size: 2.15vh;
   /* <- change the base size */
-  line-height: 1.5;
+  line-height: 1.6;
   /* <- increase for more vertical space */
   text-align: justify;
   position: relative;
@@ -64,12 +64,12 @@ body {
 
 header {
   padding: 0rem 0rem;
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   padding-top: 0%;
 }
 
 h3 {
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   text-decoration: underline;
   text-underline-offset: 7px;
   border-top: 0.5vh solid var(--accent);
@@ -77,11 +77,12 @@ h3 {
   margin-top: 3.5rem;
   margin-bottom: 0.5rem;
   font-size: 7vh;
+  line-height: 1.3;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
 }
 
 h4 {
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   text-decoration: underline;
   text-underline-offset: 2px;
   font-weight: lighter;
@@ -238,7 +239,7 @@ u {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   font-size: 1.5vw;
 }
 
@@ -426,7 +427,7 @@ li {
   padding: 0px;
   border-radius: 4px;
   font-size: calc(100vh / 39);
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   opacity: 0.7;
   transition: opacity 0.3s, background-color 0.3s;
   z-index: 3;
@@ -597,7 +598,7 @@ li {
   padding: 0.5rem;
   position: relative;
   background-color: rgb(229, 26, 26);
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   Font-size: 3vw;
   display: flex;
   justify-content: center;
@@ -614,7 +615,7 @@ li {
   position: relative;
   background-color: rgb(251, 188, 29);
   color: white;
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   font-size: 3vw;
   display: flex;
   justify-content: center;
@@ -916,7 +917,7 @@ body.dimmed::before {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.85);
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   padding: 6px 10px;
   border-radius: 6px;
   white-space: nowrap;
@@ -941,6 +942,7 @@ body.dimmed::before {
   text-decoration: underline;
   line-height: 1;
   text-underline-offset: 0.5vw;
+  text-align: center;
 }
 
 
@@ -963,6 +965,8 @@ body.dimmed::before {
   font-size: 5vh;
   text-decoration: underline;
   text-underline-offset: 0.5vh;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .formula-tooltip-desc {
@@ -1150,7 +1154,7 @@ body.dimmed::before {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.85);
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   padding: 6px 10px;
   border-radius: 6px;
   white-space: nowrap;
@@ -1324,7 +1328,7 @@ body.dimmed::before {
   display: block;
   color: white;
   border: none;
-  font-family: 'Njal';
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   border-radius: 0px;
   
   cursor: pointer;
@@ -1366,6 +1370,18 @@ body.dimmed::before {
 
 .nav-top:hover {
   background-color: #2f85ff;
+}
+
+.nav-formula {
+  background-color: #ff8400;
+  padding: 0.5vh 1vh;
+  margin: 0.4vh 0;
+  width: 100%;
+  font-size: 1.5vh;
+}
+
+.nav-formula:hover {
+  background-color: #ea6900;
 }
 
 #next-subtopic-button {
@@ -1422,6 +1438,13 @@ body.dimmed::before {
     z-index: 50;
   }
 
+  #next-year-button {
+    bottom: 3vh;
+    font: 3vw;
+    position: fixed;
+    right: 4vw;
+    z-index: 50;
+  }
   #previous-year-button {
     position: fixed;
     left: 4vw;
@@ -1449,7 +1472,7 @@ body.dimmed::before {
   left: 50%;
   transform: translateX(-50%);
   color: white;
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   font-size: 24px;
   padding: 8px 16px;
   border-radius: 12px;
@@ -1499,7 +1522,7 @@ body.dimmed::before {
 #navigation-buttons button {
   background-color: #0066cc;
   color: white;
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
@@ -1524,7 +1547,7 @@ body.dimmed::before {
 #year-navigation-buttons button {
   background-color: #0066cc;
   color: white;
-  font-family: "Njal", sans-serif;
+  font-family: "Njal", "Arial Rounded MT Bold", sans-serif;
   padding: 10px 20px;
   border: none;
   border-radius: 10px;

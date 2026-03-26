@@ -253,7 +253,7 @@ function scrollToSection(id) {
 }
   
 function generateFloatingNav() {   
-  const headings = document.querySelectorAll('h3, h4');
+  const headings = document.querySelectorAll('h3, h4, h1');
   const nav = document.getElementById('floating-nav');
   if (!nav || headings.length === 0) return;
 
@@ -271,6 +271,9 @@ function generateFloatingNav() {
         btn.classList.add('nav-h3');   // style for H3
       } else if (heading.tagName === 'H4') {
         btn.classList.add('nav-h4');   // style for H4
+      } else if (heading.tagName === 'H1') {
+        btn.classList.add('nav-top');   // style for title
+        btn.textContent = 'BACK TO THE TOP'
       }
     
     btn.onclick = () => scrollToSection(heading.id);

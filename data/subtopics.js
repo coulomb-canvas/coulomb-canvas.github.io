@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 81 subtopics
-// Generated: 2026-03-23T13:27:32.447Z
+// AUTO-GENERATED FILE - Contains 84 subtopics
+// Generated: 2026-03-26T15:16:59.809Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 81 existing hand-written entries
-//   - 19 Markdown-generated entries
+//   - 84 existing hand-written entries
+//   - 22 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -484,8 +484,8 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-80%;"> <div class="image-tooltip-title">
               Figure 1: Argand Diagram</div><div class="image-tooltip-desc">
-              Argand diagrams represent complex numbers on a graph, with the x-axis <br>
-              representing the real part and the y-axis representing the imaginary <br>
+              Argand diagrams represent complex numbers on a graph, with the x-axis 
+              representing the real part and the y-axis representing the imaginary 
               part.</div></span>
           </div>
         </div>
@@ -540,7 +540,7 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 4: De Moivre's Theorem</div><div class="formula-tooltip-desc">
-          To take a complex number (written in Modulus-Argument form), raise the <br>
+          To take a complex number (written in Modulus-Argument form), raise the 
           modulus to the power of n (\\( r^n \\) )</div></span>
         </div>
       </div>
@@ -580,7 +580,7 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 5: Complex conjugate</div><div class="formula-tooltip-desc">
-          To get the complex conjugate of a complex number (z = x + iy), take the imaginary <br>
+          To get the complex conjugate of a complex number (z = x + iy), take the imaginary 
           pert of the number and negate it (z* = x - iy) </div></span>
         </div>
       </div>
@@ -600,7 +600,7 @@ const subtopics = {
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 6: Modulus squared of a complex number</div><div class="formula-tooltip-desc">
-          The modulus squared of a complex number is obtained by multiplying the <br>
+          The modulus squared of a complex number is obtained by multiplying the 
           complex number z with its complex conjugate z*</div></span>
         </div>
       </div>
@@ -926,11 +926,11 @@ const subtopics = {
         <div class="hover-wrapper">
           <div class="formula-container">
             <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p>\\( \\vec{u} \\times \\vec{v} = det\\begin{pmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\
-                 u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{pmatrix} \\)</p>
+              <p>\\( \\vec{u} \\times \\vec{v} = \\det{\\begin{pmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\
+                 u_1 & u_2 & u_3 \\\\ v_1 & v_2 & v_3 \\end{pmatrix}} \\)</p>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula 2a: The Cross Product (determinant)</div><div class="formula-tooltip-desc">
+            Formula 2a: The Cross Product <br><div style="font-size: 3vh; line-height: 1.7; opacity: 70%;">(determinant)</div></div><div class="formula-tooltip-desc">
             The cross product of two vectors is the determinant 
             of this matrix.</div></span>
           </div>
@@ -950,7 +950,7 @@ const subtopics = {
                     u_1 v_2 - u_2 v_1 \\end{pmatrix} \\)</p>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula 2b: The Cross Product (formula)</div><div class="formula-tooltip-desc">
+            Formula 2b: The Cross Product <br><div style="font-size: 3vh; line-height: 1.7">(formula)</div></div><div class="formula-tooltip-desc">
             The cross product of 2 vectors can be found with this formula, 
             which is actually just the formula for the determinant of the 
             aforementioned matrix.</div></span>
@@ -983,7 +983,7 @@ const subtopics = {
               <p>\\( \\vec{u} \\cdot (\\vec{w} \\times \\vec{v}) = (\\vec{u} \\times \\vec{v}) \\cdot \\vec{w} \\)</p>
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-            Formula 3b: Commutability of the Scalar Product</div><div class="formula-tooltip-desc">
+            Formula 3b: Commutability <br>of the Scalar Product</div><div class="formula-tooltip-desc">
             The cross product of two vectors can be calculated directly from 
             their components.</div></span>
           </div>
@@ -1182,7 +1182,7 @@ const subtopics = {
               \\[ e_i \\cdot e'_j = \\delta_{ij} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
-              Formula 8: Dot Product of Basis Vectors <br>(feat. Kronecker Delta)
+              Formula 8: Dot Product of Basis Vectors <br><div style="font-size: 3vh; line-height: 1.7">(feat. Kronecker Delta)</div>
             </div><div class="formula-tooltip-desc">
               The dot product of basis vectors is given by the Kronecker 
               delta, which is 1 when indices are equal and 0 otherwise.
@@ -3056,7 +3056,7 @@ const subtopics = {
 
       <p>Substitute \\( F_K = \\mu_K N = \\mu_K mg\\cos\\theta \\), and you get:</p>
 
-      <p>\\( a = g(\\sin\\theta - \\mu_K \\cos\\theta) \\)</p>
+      <div class=eqn> \\[ a = g(\\sin\\theta - \\mu_K \\cos\\theta) \\] </div>
 
       <p>So the acceleration depends on the angle and the coefficient of friction.</p>
 
@@ -3222,7 +3222,7 @@ const subtopics = {
       to do the proper maths, and thus assume God created the universe in only one dimension. But in reality,
       God created three dimensions for us to enjoy, so let's enjoy them. And actually, the formula isn't much
       different, we just use vectors instead of scalars:</p>
-      <p>\\(W = \\int \\vec{F} \\cdot d\\vec{r} \\)</p>
+      <div class=eqn> \\[ W = \\int \\vec{F} \\cdot d\\vec{r} \\] </div>
 
       <p>Hey, looky here, it's a dot product! If I remember correctly, the dot product of two vectors is the
       product of their magnitudes and the cosine of the angle between them. Or in other words, the dot product
@@ -3254,7 +3254,7 @@ const subtopics = {
           \\text{or} 
         \\]
       <div class="large-eqn">  \\[
-        
+
         \\int_A^B \\vec{F} \\cdot d\\vec{r} \\Big|_{P} 
         + \\int_B^A \\vec{F} \\cdot d\\vec{r} \\Big|_{P'} 
         = \\oint \\vec{F} \\cdot d\\vec{r} = 0,
@@ -3310,18 +3310,18 @@ const subtopics = {
       not really care. However, at much larger distances, \\(g\\) actually decreases with distance, and thus we need a new 
       formula.</p>
       <p>So, we start with the formula for gravitational force:</p>
-      <p>\\( F = \\frac{GMm}{r^2} \\)</p>
+      <div class=eqn>\\[ F = \\frac{GMm}{r^2} \\] </div>
       <p>And we plug that into our work formula:</p>
-      <p>\\( W = \\int F dr = \\int \\frac{GMm}{r^2} dr \\)</p>
+      <div class=eqn>\\[ W = \\int F dr = \\int \\frac{GMm}{r^2} dr \\] </div>
       <p>Integrating that gives us:</p>
-      <p>\\( W = -\\frac{GMm}{r} \\)</p>
+      <div class=eqn> \\[ W = -\\frac{GMm}{r} \\] </div>
       <p>And since we know that \\( W = -\\Delta U \\), we can say that:</p>
-      <p>\\( \\Delta U = \\frac{GMm}{r} \\)</p>
+      <div class=eqn> \\[ \\Delta U = \\frac{GMm}{r} \\] </div>
       <p>And thus we can define gravitational potential energy as:</p>
-      <p>\\( U(r) = -\\frac{GMm}{r} \\)</p>
+      <div class=eqn> \\[ U(r) = -\\frac{GMm}{r} \\] </div>
       <p>Anyway, where were we? Oh yeah, energy conservation.</p>
       <p>Since we know that total energy is conserved, we can say that:</p>
-      <p>\\( E_i = E_f \\text{ or } T_i + U_i = T_f + U_f \\)</p>
+      <div class=eqn> \\[ E_i = E_f \\text{ or } T_i + U_i = T_f + U_f \\] </div>
 
       <h3>Escape velocity.</h3>
 
@@ -3341,7 +3341,7 @@ const subtopics = {
 
       <p>Power is work done per unit time. Simple.</p>
 
-      <p>\\( P = \\frac{dW}{dt} = \\vec{F} \\cdot \\vec{v} \\)</p>
+      <div class=eqn> \\[ P = \\frac{dW}{dt} = \\vec{F} \\cdot \\vec{v} \\] </div>
 
       <p>So the faster you do work, the more power you need.</p>
 
@@ -3384,7 +3384,7 @@ const subtopics = {
       proportional to the displacement from equilibrium. In the case of the spring, the restoring force is
       provided by the spring itself, and in the case of the pendulum, it is provided by gravity. This relationship
       between restoring force and displacement is represented mathematically as:</p>
-      <p>\\( F = -kx \\)</p>
+      <div class=eqn> \\[ F = -kx \\] </div>
       <p>Where \\( k \\) is the spring constant (how stiff the spring is), and \\( x \\) is the displacement from 
       equilibrium. And the negative sign tells us that the force <em>opposes</em> the displacement.</p>
 
@@ -3395,15 +3395,15 @@ const subtopics = {
       <h3>Deriving the Equation of SHM</h3>
       <p>Now, apply Newton’s second law: \\( F = ma = m\\frac{d^2x}{dt^2} \\). So:</p>
 
-      <p>\\( m\\frac{d^2x}{dt^2} = -kx \\)</p>
+      <div class=eqn> \\[ m\\frac{d^2x}{dt^2} = -kx \\] </div>
 
       <p>Rearrange:</p>
 
-      <p>\\( \\frac{d^2x}{dt^2} + \\frac{k}{m}x = 0 \\)</p>
+      <div class=eqn> \\[ \\frac{d^2x}{dt^2} + \\frac{k}{m}x = 0 \\] </div>
 
       <p>Now, let \\( \\omega^2 = \\frac{k}{m} \\), and we get the <strong>equation of SHM</strong>:</p>
 
-      <p>\\( \\frac{d^2x}{dt^2} + \\omega^2 x = 0 \\)</p>
+      <div class=eqn> \\[ \\frac{d^2x}{dt^2} + \\omega^2 x = 0 \\] </div>
 
       <p>This derivation may seem stupid and pointless to a bumbling fool like yourself, however an intellectual
       like me can see that... <b>**skims through notes** Ermmm...</b> Oh yeah! It's a second order differential
@@ -3412,7 +3412,7 @@ const subtopics = {
       <p>Oh, and by the way, Isaac Newton invented this new notation so that you don't have to write "d squared 
       x by dt squared" every time you want to write the second derivative of x with respect to t. So now you can
       just write \\( \\ddot{x} \\) instead of \\( \\frac{d^2x}{dt^2} \\).</p>
-      <p>\\(\\ddot{x} + \\omega^{2} x = 0\\)</p>
+      <div class=eqn> \\[\\ddot{x} + \\omega^{2} x = 0\\] </div>
       <p> I personally think this is a bit moist, but whatever, you do what you want.</p>
 
       <p>I said we can solve for \\(x\\) like we normally would (if you don't believe me, go up like 
@@ -3431,18 +3431,18 @@ const subtopics = {
 
       <p>Anyway, the most general solution is this:</p>
 
-      <p>\\( x = A\\cos(\\omega t) + B\\sin(\\omega t) \\)</p>
+      <div class=eqn> \\[ x = A\\cos(\\omega t) + B\\sin(\\omega t) \\] </div>
 
       <p>Or, if you’re feeling neeky:</p>
 
-      <p>\\( x = C\\cos(\\omega t + \\phi) \\)</p>
+      <div class=eqn> \\[ x = C\\cos(\\omega t + \\phi) \\] </div>
 
       <p>Where \\( C \\) is the amplitude, and \\( \\phi \\) is the phase angle — which just tells you where the
        oscillation started.</p>
 
       <p>And the period is how long one full cycle takes:</p>
 
-      <p>\\( T = \\frac{2\\pi}{\\omega} = 2\\pi \\sqrt{\\frac{m}{k}} \\)</p>
+      <div class=eqn> \\[ T = \\frac{2\\pi}{\\omega} = 2\\pi \\sqrt{\\frac{m}{k}} \\] </div>
 
       <p>Based on that second rendition of the equation, we can see that the larger the mass, the longer the
       oscillation period.</p>
@@ -3451,14 +3451,14 @@ const subtopics = {
 
       <p>The kinetic energy of the moving block is:</p>
 
-      <p>\\( T = \\frac{1}{2}mv^2 \\)</p>
+      <div class=eqn> \\[ T = \\frac{1}{2}mv^2 \\] </div>
 
       <p>As we know from last time. We also know from last time that we can get the potential energy by integrating
       the force with respect to \\(x\\) and changing the sign. The force is \\(F = -kx\\), the condition for
       Simple Harmonic Motion, which <strong>you better bloody remember</strong>, 'cus it's important. Then integrating
       with respect to \\(x\\) and multiplying by \\(-1\\) give us:</p>
 
-      <p>\\( U = \\frac{1}{2}kx^2 \\)</p>
+      <div class=eqn> \\[ U = \\frac{1}{2}kx^2 \\] </div>
 
       <p>We <em>also</em> know from last time that we can smoosh these together to get the total energy \\( E = T + U \\). 
       And we <em>also</em> know from last time that this total energy is conserved, meaning it’s 
@@ -3475,7 +3475,7 @@ const subtopics = {
 
       <p>You might see people writing the solution as:</p>
 
-      <p>\\( x = \\text{Re}(ae^{i\\omega t}) \\)</p>
+      <div class=eqn> \\[ x = \\text{Re}(ae^{i\\omega t}) \\] </div>
 
       <p>Where \\( a = Ce^{i\\phi} \\)</p>
 
@@ -3501,22 +3501,22 @@ const subtopics = {
       the damping constant, id est a measure of how wet our damping is exactly. And remember, the minus sign is important,
       because damping always <em>opposes</em> motion. Next, we apply Newton’s second law:</p>
 
-      <p>\\( m\\ddot{x} = -kx - b\\dot{x} \\)</p>
+      <div class=eqn> \\[ m\\ddot{x} = -kx - b\\dot{x} \\] </div>
 
       <p>Rearranged:</p>
 
-      <p>\\( \\ddot{x} + \\gamma\\dot{x} + \\omega^2 x = 0 \\)</p>
+      <div class=eqn> \\[ \\ddot{x} + \\gamma\\dot{x} + \\omega^2 x = 0 \\] </div>
 
       <p>Where \\( \\gamma = b/m \\) is the damping ratio, and \\( \\omega^2 = k/m \\).</p>
 
       <p>Now we can no longer "gUeSs" cosine as a solution, because cosines continue forever, whereas this system is
       loosing energy. So let's do it the proper way! Replace the derivative things for powers of \\(m\\):</p>
 
-      <p>\\( m^2 + \\gamma m + \\omega^2 = 0 \\)</p>
+      <div class=eqn> \\[ m^2 + \\gamma m + \\omega^2 = 0 \\] </div>
 
       <p>Solve it in the typical quadratic solvy fashion (using the quadratic equation):</p>
 
-      <p>\\( m = -\\frac{\\gamma}{2} \\pm \\sqrt{\\left(\\frac{\\gamma}{2}\\right)^2 - \\omega^2} \\)</p>
+      <div class=eqn> \\[ m = -\\frac{\\gamma}{2} \\pm \\sqrt{\\left(\\frac{\\gamma}{2}\\right)^2 - \\omega^2} \\] </div>
 
       <p>Now, depending on the discriminant (the bit under the square root) we get three cases: light, heavy, 
       and critical damping.</p>
@@ -3543,20 +3543,20 @@ const subtopics = {
 
       <p>A forced oscillation is...exactly what it sounds like, when you force a system to oscillate by constantly
       pushing it, like pushing a kid on a swing. We describe this pushing you are doing as the driving force:</p>
-      <p>\\( F_{\\text{driving}}  = F_0 \\cos(\\omega t) \\).</p>
+      <div class=eqn> \\[ F_{\\text{driving}}  = F_0 \\cos(\\omega t) \\] </div>
       <p>Where \\( F_0 \\) is how hard you are pushing, and \\( \\omega \\) is how often you are pushing (not to 
       be confused with \\(\\omega_0 = \\sqrt\\frac{k}{m}\\), which is the swingy thing's natural frequency, or
       how fast the swingy thing <em>wants</em> to oscillate). This means that our equation of motion we had before 
       is no longer equal to zero, instead:</p>
 
-      <p>\\( \\ddot{x} + \\gamma\\dot{x} + \\omega_0^2 x = \\frac{F_0}{m} \\cos(\\omega t) \\)</p>
+      <div class=eqn> \\[ \\ddot{x} + \\gamma\\dot{x} + \\omega_0^2 x = \\frac{F_0}{m} \\cos(\\omega t) \\] </div>
 
       <p>Again, we use complex exponentials as usual, but this time let's use \\( z = ae^{i\\omega t} \\).</p>
 
       <p>Sub it in, algebra algebra algebra, and finally we get the formula for the amplitude of the 
       oscillations:</p>
 
-      <p>\\( |a| = \\frac{F_0/m}{\\sqrt{(\\omega_0^2 - \\omega^2)^2 + (\\gamma\\omega)^2}} \\)</p>
+      <div class=eqn> \\[ |a| = \\frac{F_0/m}{\\sqrt{(\\omega_0^2 - \\omega^2)^2 + (\\gamma\\omega)^2}} \\] </div>
 
       <p> Now I personally find this \\(|a|\\) thing to be <em>slightly</em> misleading, because it looks like
       acceleration. Why on earth they would do this, especially when \\(A\\) is right there, I don't know.
@@ -3564,7 +3564,7 @@ const subtopics = {
 
       <p>And the phase shift:</p>
 
-      <p>\\( 	an\\phi = -\\frac{\\gamma\\omega}{\\omega_0^2 - \\omega^2} \\)</p>
+      <div class=eqn> \\[ 	an\\phi = -\\frac{\\gamma\\omega}{\\omega_0^2 - \\omega^2} \\] </div>
 
       <p>Remember back not to long ago, I made sure to distinguish between \\(\\omega\\), how fast you are
       pushing the swingy thing, and \\(\\omega_0\\), how fast the swingy thing wants to be pushed? Well, what
@@ -3580,20 +3580,20 @@ const subtopics = {
       \\( \\theta \\), the restoring force is \\( -mg\\sin\\theta \\), which comes from the usual trigonometric
       find-the-perpendicular-component business. So the equation of motion is:</p>
 
-      <p>\\( \\frac{d^2\\theta}{dt^2} = -\\frac{g}{l}\\sin\\theta \\)</p>
+      <div class=eqn> \\[ \\frac{d^2\\theta}{dt^2} = -\\frac{g}{l}\\sin\\theta \\] </div>
 
       <p>Up until now, pendulums have been the prominent example of simple harmonic motion. However, this equation
       seems to suggest otherwise: that pesky \\( \\sin\\theta \\) is getting in the way, and therefore pendulums
       <em>technically</em> don't exhibit simple harmonic motion. But, if \\( \\theta \\) is small enough, we can 
       use the trusty small angle approximation: \\( \\sin\\theta \\approx \\theta \\). Then we get:</p>
 
-      <p>\\( \\frac{d^2\\theta}{dt^2} \\approx -\\frac{g}{l}\\theta \\)</p>
+      <div class=eqn> \\[ \\frac{d^2\\theta}{dt^2} \\approx -\\frac{g}{l}\\theta \\] </div>
 
       <p>**In South Carolinan accent** Now I don't know about y'all, but that looks like simple harmonic motion to 
       me!</p>
       <p> In this case \\( \\omega^2 = g/l \\). So the period is:</p>
 
-      <p>\\( T = 2\\pi\\sqrt{\\frac{l}{g}} \\)</p>
+      <div class=eqn> \\[ T = 2\\pi\\sqrt{\\frac{l}{g}} \\] </div>
 
       <p>And this is one of the most famous equations in physics. Easy to test: tie a weight to a string, 
       measure the period, plot \\( T^2 \\) vs \\( l \\) — should be a straight line with gradient \\( 4\\pi^2/g \\).</p>
@@ -3654,11 +3654,11 @@ const subtopics = {
       <p>Unlike regular velocity, angular velocity measures the change in <em>angle</em> with respect to time.
       It is usually denoted by the Greek letter omega, \\( \\omega \\), and is measured in radians per second 
       (rad/s). Angular velocity can be calculated using:</p>
-      <p>\\( \\omega = \\frac{\\Delta \\theta}{\\Delta t} = 2\\pi f = \\frac{2\\pi}{T} \\)</p>
+      <div class=eqn> \\[ \\omega = \\frac{\\Delta \\theta}{\\Delta t} = 2\\pi f = \\frac{2\\pi}{T} \\] </div>
       <p>Where \\( \\Delta \\theta \\) is the change in angle in radians, \\( \\Delta t \\) is the change in time,
       \\( f \\) is the frequency in hertz (Hz), and \\( T \\) is the period in seconds (s).</p>
       <p>We can also relate angular velocity to regular velocity using:</p>
-      <p>\\( v = r\\omega \\)</p>
+      <div class=eqn> \\[ v = r\\omega \\] </div>
       <p>Where \\( v \\) is the regular velocity, and \\( r \\) is the radius of the circular path.</p>
 
       <p>Next up, we have acceleration. Just like how velocity is change in position with respect to time,
@@ -3666,10 +3666,10 @@ const subtopics = {
       for circular motion, we also need to define <strong>angular acceleration</strong> for circular motion.
       Angular acceleration is denoted by the Greek letter alpha, \\( \\alpha \\), and is measured in radians 
       per second squared (rad/s²). It can be calculated using:</p>
-      <p>\\( \\alpha = \\frac{\\Delta \\omega}{\\Delta t} \\)</p>
+      <div class=eqn> \\[ \\alpha = \\frac{\\Delta \\omega}{\\Delta t} \\] </div>
       <p>Where \\( \\Delta \\omega \\) is the change in angular velocity, and \\( \\Delta t \\) is the change in time.</p>
       <p>We can also relate angular acceleration to regular acceleration using:</p>
-      <p>\\( a = r\\alpha \\)</p>
+      <div class=eqn> \\[ a = r\\alpha \\] </div>
       <p>Where \\( a \\) is the regular acceleration, and \\( r \\) is the radius of the circular path.</p>
 
       <p>Angular acceleration always points to the centre of the circle. And, since there is an acceleration towards
@@ -3679,7 +3679,7 @@ const subtopics = {
       name for the net force which acts towards the centre of the circle. So it could be tension, gravity,
       friction, or any other force, as long as the net force points towards the centre of the circle.</p>
       <p>Centripetal force can be calculated using:</p>
-      <p>\\( F_c = \\frac{mv^2}{r} = mr\\omega^2 \\)</p>
+      <div class=eqn> \\[ F_c = \\frac{mv^2}{r} = mr\\omega^2 \\] </div>
       <p>Where \\( F_c \\) is the centripetal force, \\( m \\) is the mass of the object, \\( v \\) is the regular velocity,
       \\( r \\) is the radius of the circular path, and \\( \\omega \\) is the angular velocity.</p>
 
@@ -3690,7 +3690,7 @@ const subtopics = {
       <p>Anyway, MOMENT (which is what I'll be calling it just to get back at them for not telling me, although
       you're probably better off learning it as torque) is calculated by multiplying the force applied to an object 
       with the perpendicular distance from the pivot point to the line of action of the force.</p>
-      <p>\\( \\vec{\\tau} = \\vec{r} \\times \\vec{F} \\)</p>
+      <div class=eqn> \\[ \\vec{\\tau} = \\vec{r} \\times \\vec{F} \\] </div>
       <p>Where \\( \\vec{\\tau} \\) is the torque, \\( \\vec{r} \\) is the position vector from the pivot point to the point
       where the force is applied, and \\( \\vec{F} \\) is the force vector.</p>
       <p>The magnitude of the MOMENT is therefore \\( \\tau = rF\\sin\\theta \\), where \\( \\theta \\) is the angle 
@@ -3707,7 +3707,7 @@ const subtopics = {
       went from force to its rotational equivalent MOMENT by finding the cross product with the position vector,
       we can find angular momentum by finding the cross product of the position vector and the linear momentum
       vector.</p>
-      <p>\\( \\vec{L} = \\vec{r} \\times \\vec{p} \\)</p>
+      <div class=eqn> \\[ \\vec{L} = \\vec{r} \\times \\vec{p} \\] </div>
       <p>Where \\( \\vec{L} \\) is the angular momentum, \\( \\vec{r} \\) is the position vector from the pivot 
       point to the point where the mass is located, and \\( \\vec{p} \\) is the linear momentum vector.</p>
       <p>The magnitude of the angular momentum is therefore \\( L = rp\\sin\\theta \\), where \\( \\theta \\) is the angle 
@@ -3715,8 +3715,8 @@ const subtopics = {
       angular momentum is maximised when the object is moving perpendicularly to the position vector.</p>
       <p>And just like how force is the rate of change of momentum, MOMENT is the rate of change of angular momentum.
       This is called the rotational analogue of Newton's second law.</p>
-      <p>\\( \\vec{F} = \\frac{d\\vec{p}}{dt} \\quad \\xrightarrow{\\text{Analogy}} \\quad \\vec{\\tau} = 
-      \\frac{d\\vec{L}}{dt} \\)</p>
+      <div class=eqn> \\[ \\vec{F} = \\frac{d\\vec{p}}{dt} \\quad \\xrightarrow{\\text{Analogy}} \\quad \\vec{\\tau} = 
+      \\frac{d\\vec{L}}{dt} \\] </div>
 
       <p>Isn't it so much fun seeing how everything in linear mechanics has a rotational equivalent? In fact,
       even mass has a rotational equivalent, the <strong>moment of inertia</strong>, \\(I\\).</p>
@@ -3801,25 +3801,25 @@ const subtopics = {
           <dt><strong>Step 1: Find the Center of Mass Velocity (\\(v_{cm}\\))</strong></dt>
           <dd>This is the constant velocity of the system as a whole.</dd></dl>
           <div class=large-eqn> \\[ v_{cm} = \\frac{m_1u_1 + m_2u_2}{m_1 + m_2} = \\frac{(7)(5) + (3)(-5)}{10} = 2 \\text{ m/s} \\] </div>
-          
+
 
           <dl><dt><strong>Step 2: Switch to the CoM Frame</strong></dt>
           <dd>Find the initial velocities relative to the CoM by subtracting \\(v_{cm}\\).
-          <p>\\( u'_1 = u_1 - v_{cm} = 5 - 2 = +3 \\text{ m/s} \\)<br>
-             \\( u'_2 = u_2 - v_{cm} = -5 - 2 = -7 \\text{ m/s} \\)</p>
+          <div class=eqn> \\[ u'_1 = u_1 - v_{cm} = 5 - 2 = +3 \\text{ m/s} \\)<br>
+             \\( u'_2 = u_2 - v_{cm} = -5 - 2 = -7 \\text{ m/s} \\] </div>
           </dd>
 
           <dt><strong>Step 3: Solve for Final Velocities in the CoM Frame</strong></dt>
           <dd>Apply the simple rules for the collision type.
           <p><em>For an elastic collision</em>, the velocities just reverse:<br>
              \\( v'_1 = -3 \\text{ m/s} \\)<br>
-             \\( v'_2 = +7 \\text{ m/s} \\)</p>
+             \\( v'_2 = +7 \\text{ m/s} \\] </div>
           </dd>
 
           <dt><strong>Step 4: Switch Back to the Lab Frame</strong></dt>
           <dd>Add \\(v_{cm}\\) back to get the final answer.
-          <p>\\( v_1 = v'_1 + v_{cm} = -3 + 2 = -1 \\text{ m/s} \\)<br>
-             \\( v_2 = v'_2 + v_{cm} = 7 + 2 = +9 \\text{ m/s} \\)</p>
+          <div class=eqn> \\[ v_1 = v'_1 + v_{cm} = -3 + 2 = -1 \\text{ m/s} \\)<br>
+             \\( v_2 = v'_2 + v_{cm} = 7 + 2 = +9 \\text{ m/s} \\] </div>
           </dd>
       </dl>
       <p>This powerful method turns a potentially complex algebra problem into simple, manageable
@@ -4432,13 +4432,13 @@ const subtopics = {
       <p>Because we know that the speed of particle 1 in the \\( S' \\) frame, \\( v' \\), is just \\( u \\), we can 
       plug that into our velocity addition formula to get a better value for initial velocity:</p>
 
-      <p>\\( v = \\frac{u + u}{1 + u^2/c^2} = \\frac{2u}{1 + u^2/c^2} \\)</p>
+      <div class=eqn> \\[ v = \\frac{u + u}{1 + u^2/c^2} = \\frac{2u}{1 + u^2/c^2} \\] </div>
 
       <p>Except we now have a bit of a problem. Since \\( M \\) is obviously just \\( 2m \\), and momentum must be 
       conserved (thanks to the first postulate of special relativity), we should have \\( p_i = p_f \\). But if we 
       plug that in, we get:</p>
 
-      <p>\\( p_i = m \\cdot \\frac{2u}{1 + u^2/c^2}, \\quad p_f = 2m \\cdot u \\)</p>
+      <div class=eqn> \\[ p_i = m \\cdot \\frac{2u}{1 + u^2/c^2}, \\quad p_f = 2m \\cdot u \\] </div>
 
       <p>Which means \\( \\frac{2mu}{1 + u^2/c^2} = 2mu \\)... which only works if \\( u = 0 \\). So... it just doesn’t 
       equal that, does it?</p>
@@ -4509,7 +4509,7 @@ const subtopics = {
       <p>Never mind, I think I was just seeing things. Anyway, if we now add up the kinetic and rest energy, 
       we end up with... by Jove! It is!!!</p>
 
-      <p>\\( E = E_0 + E_K = m_0 c^2 + (\\gamma - 1) m_0 c^2 = \\gamma m_0 c^2 = mc^2 \\)</p>
+      <div class=eqn> \\[ E = E_0 + E_K = m_0 c^2 + (\\gamma - 1) m_0 c^2 = \\gamma m_0 c^2 = mc^2 \\] </div>
 
       <p>Or…</p>
 
@@ -6061,7 +6061,7 @@ const subtopics = {
 
       <p>We calculate it by imagining a reversible path (isothermal expansion) and using:</p>
 
-      <p>\\( \\Delta S = nR \\ln(V_2/V_1) \\)</p>
+      <div class=eqn> \\[ \\Delta S = nR \\ln(V_2/V_1) \\] </div>
 
       <p>For \\( V_2 = 2V_1 \\), \\( \\Delta S = nR \\ln 2 \\)</p>
 
@@ -6382,7 +6382,7 @@ const subtopics = {
               <img src="images/Waves/Superposition2.png" class="pop-image" style="width: 30vw"/>
             </div>
             <span class="image-tooltip" style="left:-95%;"> <div class="image-tooltip-title">
-              Figure 3: Superposition of 2 waves with <br>slightly different frequencies</div>
+              Figure 3: Superposition of 2 waves <br> with slightly different frequencies</div>
               <div class="image-tooltip-desc">  
               When you combine two waves with slightly different frequencies (the two blue waves),
               they superpose into a new wave (the orange wave). The orange wave kinda looks like 
@@ -6743,7 +6743,7 @@ const subtopics = {
         B = \\gamma p
       \\] </div>
 
-      <p>\\( v_{\\text{sound}} = \\sqrt{\\frac{\\gamma k_B T}{M}} \\)</p>
+      <div class=eqn> \\[ v_{\\text{sound}} = \\sqrt{\\frac{\\gamma k_B T}{M}} \\] </div>
 
       <p>For air: \\( v \\approx 344 \\, \\text{m/s} \\).</p>
 
@@ -6753,7 +6753,7 @@ const subtopics = {
 
       <p>For sound:</p>
 
-      <p>\\( f' = f \\left( \\frac{c + u_o}{c - u_s} \\right) \\)</p>
+      <div class=eqn> \\[ f' = f \\left( \\frac{c + u_o}{c - u_s} \\right) \\] </div>
 
       <p>Where:</p>
       <ul>
@@ -6768,7 +6768,7 @@ const subtopics = {
 
       <p>So for EM waves:</p>
 
-      <p>\\( f' = f \\sqrt{\\frac{c - v}{c + v}} \\)</p>
+      <div class=eqn> \\[ f' = f \\sqrt{\\frac{c - v}{c + v}} \\] </div>
 
       <p>And yes — the square root is there. Because relativity.</p>
 
@@ -7311,7 +7311,7 @@ const subtopics = {
 
       <p>We measure this slowing-down effect with the <b>refractive index</b>, \\(n\\):</p>
 
-      <p>\\(n = \\frac{c}{v}\\)</p>
+      <div class=eqn> \\[n = \\frac{c}{v}\\] </div>
 
       <ul>
           <li>\\(c\\) is the speed in a vacuum (obviously).</li>
@@ -7387,8 +7387,8 @@ const subtopics = {
       <p>At one specific angle – the <b>polarising angle</b>, \\(\\theta_p\\) – the reflected light is completely 
       linearly polarised. This happens when the reflected ray and the transmitted ray are perpendicular to each other.</p>
 
-      <p>A bit of geometry and Snell's Law gives us the formula:
-      <br>\\(\\tan(\\theta_p) = \\frac{n_2}{n_1}\\)</p>
+      <p>A bit of geometry and Snell's Law gives us the formula:</p>
+      <div class=eqn>\\[\\tan(\\theta_p) = \\frac{n_2}{n_1}\\] </div>
 
       <p>For air to glass, \\(\\theta_p = \\tan^{-1}(1.5/1) = 56.3°\\).</p>
 
@@ -7417,8 +7417,8 @@ const subtopics = {
       surface head-on (\\(\\theta_i = 0°\\)). The fractions of the <b>intensity</b> that are transmitted (\\(T\\)) 
       and reflected (\\(R\\)) are:</p>
 
-      <p>\\(T = \\frac{4 n_1 n_2}{(n_1 + n_2)^2}\\)</p>
-      <p>\\(R = \\left( \\frac{n_1 - n_2}{n_1 + n_2} \\right)^2\\)</p>
+      <div class=eqn> \\[T = \\frac{4 n_1 n_2}{(n_1 + n_2)^2}\\] </div>
+      <div class=eqn> \\[R = \\left( \\frac{n_1 - n_2}{n_1 + n_2} \\right)^2\\] </div>
 
       <p><i>And if you add these up (no seriously, do it, don't take my word for it, you lazy pig) you'll find that 
       \\(T + R = 1\\). No energy is lost.</i></p>
@@ -7593,7 +7593,7 @@ const subtopics = {
           <ul><li><b>In Parallel:</b> The current can split up and take different paths. The voltage across each is the same. 
           Here, you add the <i>reciprocals</i>:</li></ul>
               <div class=eqn> \\[\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + ...\\] </div>
-      
+
 
       <p>For two resistors in parallel, this simplifies to \\(R_{eq} = \\frac{R_1 R_2}{R_1 + R_2}\\).</p>
 
@@ -8182,7 +8182,7 @@ const subtopics = {
       \\[
         W_{a \\rightarrow b} = \\frac{q_1 q_2}{4\\pi \\varepsilon_0} \\int_a^b \\frac{1}{r^2} dr
       \\] </div>
-      
+
       \\[ U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r} \\] 
 
       <p>Positive if same sign (repulsive), negative if opposite (attractive).</p>
@@ -8920,7 +8920,7 @@ const subtopics = {
 
       <p>Loop with area \\( A \\), current \\( I \\), in field \\( \\vec{B} \\):</p>
 
-      <p>\\( \\vec{\\tau} = \\vec{\\mu} \\times \\vec{B} \\)</p>
+      <div class=eqn> \\[ \\vec{\\tau} = \\vec{\\mu} \\times \\vec{B} \\] </div>
 
       <p>Where \\( \\vec{\\mu} = I \\vec{A} \\) is the magnetic moment.</p>
 
@@ -10908,7 +10908,7 @@ const subtopics = {
       k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2}, \\quad
       \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
       \\]</div>
-      
+
       <div class="large-eqn show-on-mobile eqn"> \\[
       k^2\\Psi \\text{ can PROBABLY be replaced with } -\\frac{\\partial^2 \\Psi}{\\partial x^2} \\] \\[
       \\omega\\Psi \\text{ can PROBABLY be replaced with } i\\frac{\\partial \\Psi}{\\partial t}
@@ -11588,7 +11588,7 @@ const subtopics = {
       <p>The aim of the game is to use the collision kinematics established back in <a href="http://127.0.0.1:5500/topic.html?topic=mechanics&amp;year=1">Classical Mechanics</a>, as well as some features of <a href="http://127.0.0.1:5500/topic.html?topic=relativity&amp;year=1">Special Relativity</a> to get information about the particles.</p>
       <p>Starting with Relativity, we know that the speed of light (or causality) \\( c \\) doesn't change from frame to frame. In other word, the speed of light is an <em>invariant</em>. I mean that was like the whole point of the topic, no?</p>
       <p>However it turns out the speed of light isn't the only invariant. There are two more things we can look at.</p>
-      <p>The first is the <em>space-time interval</em>. Now I can't lie to you, I don't think we will be using this like EVER but it's being included for completion. If something happens at a location \\( (x_A, y_A, z_A) \\) at time \\( t_A \\) and some other thing were to happen at a location \\( (x_B, y_B, z_B) \\) at time \\( t_B \\), then this strange quantity doesn't change in any frame:</p> <div class="large-eqn">\\[I = (x_A - x_B)^2 + (y_A - y_B)^2 + (z_A - z_B)^2 - c^2 (t_A - t_B)^2 \\]</div>
+      <p>The first is the <em>space-time interval</em>. Now I can't lie to you, I don't think we will be using this like EVER but it's being included for completion. If something happens at a location \\( (x_A, y_A, z_A) \\) at time \\( t_A \\) and some other thing were to happen at a location \\( (x_B, y_B, z_B) \\) at time \\( t_B \\), then this strange quantity doesn't change in any frame:</p> \\[I = (x_A - x_B)^2 + (y_A - y_B)^2 + (z_A - z_B)^2 - c^2 (t_A - t_B)^2 \\]
       <p>Now <strong>here's</strong> something we can actually use! The rest mass of an object also doesn't change from frame to frame.</p>
       <p>Now I'm sure you are raring to use this newfound information, but before we do, since we are working with relativity, we're gonna have to spell out which frames we are using.</p>
       <p>The first is the <em>Center of Mass (CoM) frame</em>. Recall from the Special Relativity that in the CoM frame, the momentum before and after the collision is zero.</p> \\[ \\sum_\\text{before collision} \\vec{p} = \\sum_\\text{after collision} \\vec{p} \\]
@@ -11630,7 +11630,7 @@ const subtopics = {
       </div>
       <p>That was easy, anyway, moving on...</p>
       <h4>Mandelstam-S in the fixed target frame</h4>
-      <p>Now we assume one of the particles, we'll say the first one, is at rest. Meaning the first particle has no momentum, \\( \\vec{p}_1 = 0 \\). That also means that the first particle's energy is its <em>rest energy</em>, \\( E_1 = m_1c^2 \\). Plugging those in, we get:</p> <div class="large-eqn">\\[ \\begin{align} s_\\text{fixed target} &= ( m_1c^2 + E_2 )^2 - |\\vec{p}_2|^2c^2 \\\\ &= m_1^2c^4 + 2E_2m_1c^2 + E_2^2 - |\\vec{p}_2|^2c^2 \\end{align} \\]</div>
+      <p>Now we assume one of the particles, we'll say the first one, is at rest. Meaning the first particle has no momentum, \\( \\vec{p}_1 = 0 \\). That also means that the first particle's energy is its <em>rest energy</em>, \\( E_1 = m_1c^2 \\). Plugging those in, we get:</p> \\[ \\begin{align} s_\\text{fixed target} &= ( m_1c^2 + E_2 )^2 - |\\vec{p}_2|^2c^2 \\\\ &= m_1^2c^4 + 2E_2m_1c^2 + E_2^2 - |\\vec{p}_2|^2c^2 \\end{align} \\]
       <p>Erm, can't lie that looks ugly as hell. Luckily we can simplify it a bit. If you look carefully, like really carefully, you'll notice that there is a \\( E_2^2 - |\\vec{p}_2|^2c^2 \\) at the end, which we know is the rest energy of particle 2, \\( m_2^2c^4 \\). So we then get</p> \\[ s_\\text{fixed target} = m_1^2c^4 + 2E_2m_1c^2 + m_2^2c^4 \\]
       <p>Now at this point there is nothing we can really do, so we kinda have to charge this quite unappetising formula. Although, since colliders typically use very very <em>very</em> large energies, if we assume these energies are way way <em>way</em> bigger than the masses (so \\( E_2 \\gg m_1 \\) and \\( E_2 \\gg m_2 \\)), then we can kinda just sweep the rest energy terms under the rug, since the \\( 2E_2m_1c^2 \\) term is gonna hopefully be so big that the \\( m_1^2c^4 + m_2^2c^4 \\) - or lack thereof - won't really make a difference. So by throwing those terms in the bin, we end up with:</p>
       <div class="hover-wrapper">
@@ -11646,8 +11646,8 @@ const subtopics = {
           </div>
       </div>
       <h4>Mandelstam-S in the lab frame</h4>
-      <p>Now this is where things get tedious. Now we don't have any pretty little assumptions to work with, each particle has its own energy and its own momentum. Since we have nothing better to do, let's start by expanding out the formula, might as well right?</p> <div class="large-eqn">\\[ s_\\text{lab} = E_1^2 + 2E_1E_2 + E_2^2 - |\\vec{p}_1|^2c^2 - |\\vec{p}_2|^2c^2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</div>
-      <p> We can use the \\( E^2 - \\vec{p}^2c^2 = (mc^2)^2 \\) relation we've been using to simplify this equation a little bit:</p> <div class="large-eqn">\\[ s_\\text{lab} = (m_1c^2)^2 + (m_2c^2)^2 + 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]</div>
+      <p>Now this is where things get tedious. Now we don't have any pretty little assumptions to work with, each particle has its own energy and its own momentum. Since we have nothing better to do, let's start by expanding out the formula, might as well right?</p>\\[ s_\\text{lab} = E_1^2 + 2E_1E_2 + E_2^2 - |\\vec{p}_1|^2c^2 - |\\vec{p}_2|^2c^2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]
+      <p> We can use the \\( E^2 - \\vec{p}^2c^2 = (mc^2)^2 \\) relation we've been using to simplify this equation a little bit:</p> \\[ s_\\text{lab} = (m_1c^2)^2 + (m_2c^2)^2 + 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]
       <p>And once again there isn't really anything else we can do, so time to pull some assumptions out of our arseholes! First let's do the thing from last time where we throw \\( (m_1c^2)^2 \\) and \\( (m_2c^2)^2 \\) in the bin because we are assuming that the collider's energies are super big or whatever:</p> \\[ s_\\text{lab} = 2E_1E_2 -2\\vec{p}_1 \\cdot \\vec{p}_2 c^2 \\]
       <p>Next let's assume that this collision is head on. That means that particle one and two are looking directly at each other when they collide. Since the angle is now \\( \\theta = 0 \\), the dot product of the momenta becomes</p> \\[ \\vec{p}_1 \\cdot \\vec{p}_2 = |\\vec{p}_1| |\\vec{p}_2| \\cos{0} = -|\\vec{p}_1| |\\vec{p}_2| \\]
       <p>Stick that in and we get:</p> \\[ s_\\text{lab} = 2E_1E_2 + 2|\\vec{p}_1| |\\vec{p}_2| c^2 \\]
@@ -11892,12 +11892,12 @@ const subtopics = {
             </div>
             <span class="image-tooltip" style="left:-120%;"> <div class="image-tooltip-title">
             Figure 1: The celestial sphere</div><div class="image-tooltip-desc">
-            Key aspects of the celestial sphere, viewed from the outside, with the observer <br> at
-            its centre. Relative to the observer, the celestial sphere spins daily about <br> its North-South axis
-            in a clockwise sense when viewed from above the North <br> Celestial Pole (NCP). The Sun travels
-            along a great circle inclined by 23.6◦ <br>to the equator called the “ecliptic”, taking one year to
-            complete a revolution. <br> It travels in a counter-clockwise sense looking from above the NCP. At
-            the point <br> shown (month of May) it is moving towards the most Northerly <br>part of the ecliptic
+            Key aspects of the celestial sphere, viewed from the outside, with the observer  at
+            its centre. Relative to the observer, the celestial sphere spins daily about  its North-South axis
+            in a clockwise sense when viewed from above the North  Celestial Pole (NCP). The Sun travels
+            along a great circle inclined by 23.6◦ to the equator called the “ecliptic”, taking one year to
+            complete a revolution.  It travels in a counter-clockwise sense looking from above the NCP. At
+            the point  shown (month of May) it is moving towards the most Northerly part of the ecliptic
             at the summer solstice.</div></span>
           </div>
         </div>
@@ -11966,7 +11966,7 @@ const subtopics = {
 
       <p>And the distance to the star is:</p>
 
-      <p>\\( d = \\frac{1}{p} \\)</p>
+      <div class=eqn> \\[ d = \\frac{1}{p} \\] </div>
 
       <p>Where \\( d \\) is in <strong>parsecs</strong>, and \\( p \\) is in <strong>arcseconds</strong>.</p>
 
@@ -12428,7 +12428,7 @@ const subtopics = {
               </div>
           </div>
       </div>
-      <p>That means that the heavier star is closer to the middle and the lighter star is further. Next we can look at their velocities: since they are orbiting in a circle, we can use the equation for centripetal force and equate it to the gravitational force:</p> <span class="large-eqn">\\[ \\cancel{m_1} \\omega^2 r_1 = \\frac{G \\cancel{m_1} m_2}{R^2} \\quad \\text{and} \\quad \\cancel{m_2} \\omega^2 r_2 = \\frac{G m_1 \\cancel{m_2}}{R^2} \\]</span>
+      <p>That means that the heavier star is closer to the middle and the lighter star is further. Next we can look at their velocities: since they are orbiting in a circle, we can use the equation for centripetal force and equate it to the gravitational force:</p> \\[ \\cancel{m_1} \\omega^2 r_1 = \\frac{G \\cancel{m_1} m_2}{R^2} \\quad \\text{and} \\quad \\cancel{m_2} \\omega^2 r_2 = \\frac{G m_1 \\cancel{m_2}}{R^2} \\]
       <p>If we shuffle the variables around, we eventually get an equation for the angular frequency (well, angular frequency <em>squared</em>):</p>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -12684,7 +12684,7 @@ const subtopics = {
       <p>If you scroll us a little bit (or press the hamburger menu and then press the button which says &quot;2. The Transit Method&quot;) you'll realise that I spoke about using stars which go in front of planets as a way to determine the size of these exoplanets, based on the assumption that planets are solid objects which block all light. But think about it. The atmosphere of any planet is made mostly of gas. That wouldn't block light completely.</p>
       <p>Once the planet transits in front of the star, it actually just illuminates the atmosphere in a weird way. Since different elements absorb different frequencies of light. So if we were to look at the planet transiting across the star at that frequency (using like a filter or something, idk), the planet would look a little bit bigger because the planet AND it's atmosphere are blocking the star. Then by identifying the wavelength and which chemicals absorb it, we can learn a thing or two about what is in the planet's atmosphere.</p>
       <p>Going back to our previous discussions of transit, we know that the transit depth is the ratio of the planet's area compared to the star's area</p>
-      <p>However at the relevant frequency, we also have to include the height of the atmosphere when considering the area.</p> <span class="large-eqn">\\[ \\delta_{R_P + H_\\text{atm}} = \\frac{\\pi (R_P+H_\\text{atm})^2}{\\pi R_S^2} = \\frac{R_P^2 + 2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2} \\]</span> \\[ \\downarrow \\] <span class="large-eqn">\\[ \\delta_{R_P + H_\\text{atm}} = \\delta_{R_P} + \\frac{2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2}\\]</span>
+      <p>However at the relevant frequency, we also have to include the height of the atmosphere when considering the area.</p>\\[ \\delta_{R_P + H_\\text{atm}} = \\frac{\\pi (R_P+H_\\text{atm})^2}{\\pi R_S^2} = \\frac{R_P^2 + 2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2} \\] \\[ \\downarrow \\] \\[ \\delta_{R_P + H_\\text{atm}} = \\delta_{R_P} + \\frac{2H_\\text{atm} R_P +H_\\text{atm}^2}{R_S^2}\\]
       <p>As much as we do need to consider the height of the atmosphere, it's <em>pretty</em> bloddy small compared to the radius of the planet, and especially when compared to the radius of the sun. As a result, that \\(\\frac{H_\\text{atm}^2}{R_S^2}\\) term is so close to zero, that it might as well be zero.</p>
       <p>With that in mind, we get a pretty good approximation for how much the atmosphere contributes to the transit depth:</p>
       <div class="hover-wrapper">
@@ -13502,6 +13502,333 @@ const subtopics = {
       <li><em><strong>The energy lost is inversely proportional to the radius</strong></em>. That means in principle, an infinite radius would mean no bremsstrahlung. And you might think &quot;oh well there's no way we can do that,&quot; well turns out you can... because it's literally just a linac all over again.</li>
       <li><em><strong>The energy lost is inversely proportional to the mass</strong></em>. That means larger particles loose less energy than lighter particles. If you do the maths, that means that electrons loose about 16 <em>TRILLION</em> times the amount of energy protons do. So while proton machines aren't really affected by bremsstrahlung, good luck trying to get an energy above a few GeV with electrons.</li>
       </ol>
+    `
+  },
+
+  "diff-rev": {
+    title: "Partial Differentiation (Revisited)",
+    content: `
+      <p>Don't worry though, we'll start off this year's topics with something fairly familiar: <em>partial differentiation</em>. Much of what we are about to cover is stuff you should hopefully recall from last year, so I won't go into too much detail. But anyway, sit back and enjoy the show!</p>
+      <h3>Basics</h3>
+      <p>When you have a function which depends on multiple variables (something like \\( f(x,y) \\)), we can choose which variable to differentiate with respect to. We do this by treating the other variables as if they were constants:</p>
+      <div class=eqn> \\[ \\frac{\\partial f}{\\partial x},  \\frac{\\partial f}{\\partial y}\\] </div>
+      <p>Remember we use this cute little curly d (\\( \\partial \\)) instead of the usual d's we use for regular differentiation. You can also chain multiple partial differential operators together: and, at least for now, you can flip 'em around just fine.</p>
+      <div class=eqn> \\[ \\frac{\\partial}{\\partial x} \\left( \\frac{\\partial f}{\\partial x} \\right)= \\frac{\\partial^2 f}{\\partial x^2}\\] \\[ \\frac{\\partial}{\\partial y} \\left( \\frac{\\partial f}{\\partial y} \\right)= \\frac{\\partial^2 f}{\\partial y^2}\\] </div>
+      <p>Also, at least for now, you can flip 'em around just fine.</p>
+      <div class=eqn> \\[ \\frac{\\partial}{\\partial x} \\left( \\frac{\\partial f}{\\partial y} \\right) = \\frac{\\partial}{\\partial y} \\left( \\frac{\\partial f}{\\partial x} \\right)\\] </div>
+      <h3>Total differentials</h3>
+      <p>We know that the little d's in front of the variables in differential equations represent an infinitesimally small change in said variable. So let's say we have this equation:</p>
+      <div class=eqn> \\[ f(x) = x^2 \\] </div>
+      <p>If we want to know how much an infinitely small change in \\( x \\) changes our function \\( f(x) \\), we need to calculate \\(df(x) \\). We can do this by using the super efficient, but apparently not super mathematically rigorous since mathematicians keep complaining about it, differentiate and treating it like a fraction method:</p>
+      <div class=eqn> \\[ \\frac{df(x)}{dx} = 2x \\] </div>\\[ \\downarrow \\]
+      <div class=eqn> \\[ df(x) = 2x \\; dx\\] </div>
+      <p>This is great for functions which only depend one one variable, such as our \\( f(x) \\), but when we have multiple variable functions, it's a bit more complicated. The infinitely small change in \\( f(x,y) \\) would depend on both \\( dx \\) and \\( dy \\).</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ df = \\left(\\frac{\\partial f}{\\partial x}\\right)dx +  \\left(\\frac{\\partial f}{\\partial y}\\right)dy \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The Total differential 
+              </div><div class="formula-tooltip-desc">
+                  The total differential of a function measures the small change in the function caused by small changes in all of its variables at once.
+              </div></span>
+          </div>
+      </div>
+      <h3>Exact &amp; Inexact Differentials</h3>
+      <p>Take a total differential like this:</p>
+      <div class=eqn> \\[ df = x \\; dy + y \\; dx  \\] </div>
+      <p>By comparing this to formula 1, we can see that the \\( x \\) is supposed to be the \\( \\frac{\\partial f}{\\partial x} \\), and the \\( y \\) is supposed to be the \\( \\frac{\\partial f}{\\partial y} \\).</p>
+      <p>If we then integrate both of these to get back \\( f \\), we'll get \\( xy + c \\), no matter which side we choose to integrate. Therefore we know that, for this equation, \\( f(x,y) = xy + c \\). Since we were able to find a solution, this total differential is called an <em>exact differential</em>.</p>
+      <p>But we aren't always so lucky:</p>
+      <div class=eqn> \\[ df = x \\; dy - y \\; dx  \\] </div>
+      <p>Now integrating \\( x \\; dy \\) gives us \\( xy + c \\), but integratingn\\( -y \\; dx \\) gives us \\( -xy + c \\). In other words, there is no function \\( f(x,y) \\) which we can magic up which would fit the total differential. That means this differential is <em>inexact</em>.</p>
+      <h4>How to test for inexact differentials</h4>
+      <p>So I've given the definition of an inexact differential, implying that it's a total differential where no \\( f(x,y) \\) would actually work. The example used was quite simple, to make it clear that there would be no working function. But you won't always be able to just see it. Therefore we need a method.</p>
+      <p>Let's call back our partial differential equation:</p>
+      <div class=eqn> \\[ df = \\left(\\frac{\\partial f}{\\partial x}\\right)dx +  \\left(\\frac{\\partial f}{\\partial y}\\right)dy \\] </div>
+      <p>Our total differential includes two partial derivatives. Let's give 'em some new names:</p>
+      <div class=eqn> \\[ A = \\frac{\\partial f}{\\partial x}, \\quad  B = \\frac{\\partial f}{\\partial y} \\] </div> \\[ \\downarrow \\]
+      <div class=eqn> \\[ df = A \\; dx +  B \\; dy \\] </div>
+      <p>That will make looking at our equation a bit less unbearable. Then to check if the equation is exact, you just partially differentiate each one with a different variable. More clearly, since \\( A \\) is \\(f(x,y) \\) partially differentiated with respect to \\(x\\), partially differentiate \\( A \\) itself with respect to \\( y\\). Then since \\( B \\) is \\(f(x,y) \\) partially differentiated with respect to \\(y\\), partially differentiate \\( B \\) itself with respect to \\( x \\).</p>
+      <p>Why are we differentiating our differentials? Well, look at what we now have:</p>
+      <div class=eqn> \\[ \\frac{\\partial A}{\\partial y} = \\frac{\\partial}{\\partial y} \\left( \\frac{\\partial f}{\\partial x} \\right) , \\quad  \\frac{\\partial B}{\\partial x} = \\frac{\\partial}{\\partial x} \\left( \\frac{\\partial f}{\\partial y} \\right) \\] </div> 
+      <p>We established earlier that the order in which you partially differentiate doesn't change the result. So differentiating it with respect to \\(x\\) first and then with respect to \\(y\\) second (\\( \\frac{\\partial A}{\\partial y}\\)) is no different to differentiating it with respect to \\(y\\) first and then with respect to \\(x\\) second (\\( \\frac{\\partial B}{\\partial x}\\)).</p>
+      <p>That means we should be able to equate the two, like so:</p>
+      <div class=eqn> \\[ \\frac{\\partial A}{\\partial y} = \\frac{\\partial B}{\\partial x} \\] </div> 
+      <p>And this is the definition of an exact differential. If this relation holds, then we know that it is an exact differential. If not, it's an inexact differential.</p>
+      <h3>The Chain Rule</h3>
+      <p>Take this wiggly path here, called \\( S \\). We want to get to point \\( P \\) by taking a bunch of very little steps, \\( dS \\).</p>
+      <p>How does our height \\( h(x,y) \\) change with each little step \\( dS \\)?</p>
+      <p>Look at that, we have one function depending on two variables, that means if we want to know how much each step takes, we must use our total differential:</p>
+      <div class=eqn> \\[ dh = \\left(\\frac{\\partial h}{\\partial x}\\right)dx +  \\left(\\frac{\\partial h}{\\partial y}\\right)dy \\] </div> 
+      <p>Our general movement depends on both how our \\(x\\)-position changes along \\(S\\) <span class="formula-emph">[\\( \\mathbf{\\frac{ dx }{ dS }} \\)]</span> and how our \\(y\\)-position changes along \\(S\\) <span class="formula-emph">[\\( \\mathbf{\\frac{ dy }{ dS }} \\)]</span>. So to incorporate those two variables into our total differential, we just make use of the fact that they look like fractions, and so we will treat them like fractions.</p>
+      <p>Instead of just \\( dx \\), we'll write \\( \\frac{ dx }{ dS } \\; dS \\), and instead of just \\( dy \\), we'll write \\( \\frac{ dy }{ dS } \\; dS \\). That now gives us:</p>
+      <div class=eqn> \\[ dh = \\left(\\frac{\\partial h}{\\partial x}\\right)\\frac{ dx }{ dS } \\; dS +  \\left(\\frac{\\partial h}{\\partial y}\\right)\\frac{ dy }{ dS } \\; dS  \\] </div> 
+      <p>Finally, we divide both sides by \\( dS \\) and we end up with:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dh}{dS} = \\frac{\\partial h}{\\partial x} \\cdot \\frac{ dx }{ dS } + \\frac{\\partial h}{\\partial y} \\cdot \\frac{ dy }{ dS } \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: The Chain Rule
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Polar co-ordinates</h3>
+      <h4>Cartesian Coordinates</h4>
+      <p>Cartesian co-ordinates are the ones you have been using all this while, with \\(x\\), \\(y\\) and \\(z\\). Polar co-ordinates are more convenient for systems which have circular symmetry. Instead of just stating how  far along the <em>x</em> or <em>y</em> axis a point is, we can describe a point by its distance from the origin  and the angle that it makes with the positive <em>x</em>-axis. That means instead of the \\((x,y)\\) we all know and love, we now use \\((r, \\theta)\\)</p></p>
+      <p>If you remember from last time, we used trigonometry to learn how we can switch between these</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+              <p>\\( x = r\\cos{\\theta}, \\quad y = r\\sin{\\theta} \\)</p>
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula 3a: Cartesian to Polar Transformations
+          </div><div class="formula-tooltip-desc">
+              You can switch from cartesian co-ordinates (x, y) to polar co-ordinates (r, θ) using these transformations.
+          </div></span>
+          </div>
+      </div>
+      <p>And now converting cartesian to polar:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+              \\[ r = \\sqrt{x^2 + y^2}, \\quad \\theta = \\tan^{-1}{\\frac{y}{x}} \\]
+          </div>
+          <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula 3b: Polar to Cartesian Transformations
+          </div><div class="formula-tooltip-desc">
+              You can likewise change from polar co-ordinates (r, θ) to cartesian co-ordinates (x, y) using these transformations.
+          </div></span>
+          </div>
+      </div>
+      <p>This means we can change a cartesian function \\( f(x, y) \\) into a polar function \\( g(r, \\theta) \\). Since our newfound \\( g(r, \\theta) \\) is a two-variable function which is related to \\( f(x, y) \\), we can use the chain rule we just obtained to calculate how \\( g(r, \\theta) \\) changes with angle <span class="formula-emph">\\( \\left[\\mathbf{\\frac{ dg }{ d\\theta }} \\right]\\)</span> and how \\( g(r, \\theta) \\) changes with distance <span class="formula-emph">\\( \\left[\\mathbf{\\frac{ dg }{ dr }} \\right]\\)</span></p>
+      <div class=eqn> \\[ \\frac{dg}{dr} = \\frac{\\partial f}{\\partial x} \\cdot \\frac{ dx }{ dr } + \\frac{\\partial f}{\\partial y} \\cdot \\frac{ dy }{ dr } \\] \\[ \\frac{dg}{d\\theta} = \\frac{\\partial f}{\\partial x} \\cdot \\frac{ dx }{ d\\theta } + \\frac{\\partial f}{\\partial y} \\cdot \\frac{ dy }{ d\\theta } \\] </div> 
+      <p>By using the transformations in the orange boundaries (formulae 3a and 3b), we can actually calculate some of these values.</p>
+      <div class=eqn> \\[ \\frac{\\partial x}{\\partial r} = \\cos \\theta \\; ; \\quad \\frac{\\partial x}{\\partial \\theta} = - r \\sin \\theta \\] \\[ \\frac{\\partial y}{\\partial r} = \\sin \\theta \\; ; \\quad \\frac{\\partial y}{\\partial \\theta} = r \\cos \\theta \\] </div> 
+      <p>Then we put those back in.</p>
+      <div class=eqn> \\[ \\frac{\\partial g}{\\partial r} = \\cos \\theta \\frac{\\partial f}{\\partial x} + \\sin \\theta \\frac{\\partial f}{\\partial y} \\] \\[ \\frac{\\partial g}{\\partial \\theta} = - r \\sin \\theta \\frac{\\partial f}{\\partial x} + r \\cos \\theta \\frac{\\partial f}{\\partial y} \\] </div> 
+      <p>And just for generality, we can think of these as operators:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align*} \\frac{\\partial}{\\partial r} &= \\cos \\theta \\frac{\\partial}{\\partial x} + \\sin \\theta \\frac{\\partial}{\\partial y} \\\\[6pt] \\frac{\\partial}{\\partial \\theta} &= - r \\sin \\theta \\frac{\\partial}{\\partial x} + r \\cos \\theta \\frac{\\partial}{\\partial y} \\end{align*} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4: 
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>We can do the same for x and y</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\begin{align*}
+                  \\frac{\\partial}{\\partial x} &= \\cos \\theta \\frac{\\partial}{\\partial r} - \\frac{1}{r} \\sin \\theta \\frac{\\partial}{\\partial \\theta} \\\\[10pt]
+                  \\frac{\\partial}{\\partial y} &= \\sin \\theta \\frac{\\partial}{\\partial r} + \\frac{1}{r} \\cos \\theta \\frac{\\partial}{\\partial \\theta}
+                  \\end{align*}
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 5: 
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Directional derivatives</h3>
+      <p>The <em>grad function</em> calculates the direction of steepest ascent or descent at a certain point:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla}\\phi = \\hat{i}\\left(\\frac{\\partial \\phi}{\\partial x}\\right) + \\hat{j}\\left(\\frac{\\partial \\phi}{\\partial y}\\right) + \\hat{k}\\left(\\frac{\\partial \\phi}{\\partial z}\\right)\\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 6: The Grad Operator
+              </div><div class="formula-tooltip-desc">
+                  The grad operator gives the maximum gradient vector at any point.
+              </div></span>
+          </div>
+      </div>
+      <p>However, we won't always want the maximum. Say we are going in the direction \\( \\vec{u} \\).</p>
+      <p>A <em>directional derivative</em> tells us exactly this. If you remember, the dot product tells us how neatly one vector lines up with another vector. So by taking our gradient <span class="formula-emph">\\( \\left[\\mathbf{\\vec{\\nabla}\\phi} \\right]\\) </span> and dotting that with our vector <span class="formula-emph">\\( \\left[\\mathbf{ \\vec{u} } \\right]\\)</span>, we get exactly that.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\text{Directional derivative} \\equiv \\vec{\\nabla}\\phi \\cdot \\vec{u} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 7: The Directional derivative
+              </div><div class="formula-tooltip-desc">
+                  The grad operator gives the maximum gradient vector at any point.
+              </div></span>
+          </div>
+      </div>
+      <h3>Grad squared (the Laplacian)</h3>
+      <p>ICL, I don't know why this gets its own name, it's literally just the grad, except using second derivatives. Classic case of scientists colonising redundancies just to put their name on something.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\nabla^2 f = \\frac{\\partial^2 f}{\\partial x^2} + \\frac{\\partial^2 f}{\\partial y^2} + \\frac{\\partial^2 f}{\\partial z^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 8a: The Laplacian
+              </div><div class="formula-tooltip-desc">
+                  The grad operator gives the maximum gradient vector at any point.
+              </div></span>
+          </div>
+      </div>
+      <p>We can use this on something like the Schrodinger equation or the wave equation, because they had second derivatives if you remember:</p>
+      <div class=eqn> \\[ -\\frac{\\hbar^2}{2m} \\nabla^2 \\phi + V \\phi = E \\phi  \\] </div>
+      <div class=eqn> \\[ \\nabla^2 \\vec{E} = \\frac1{c^2} \\frac{\\partial^2 \\vec{E}}{dt^2}  \\] </div>
+      <p>We can also use this in polar co-ordinates</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align}
+                      \\nabla^2 &= \\left( \\frac{\\partial^2}{\\partial x^2} + \\frac{\\partial^2}{\\partial y^2} \\right) \\\\[6pt] &= \\frac{\\partial^2}{\\partial r^2} + \\frac{1}{r} \\frac{\\partial}{\\partial r} + \\frac{1}{r^2} \\frac{\\partial^2}{\\partial \\theta^2}
+                  \\end{align} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 8b: The Laplacian <br><div style="font-size: 3vh; line-height: 1.7">(Polar Coordinates)</div>
+              </div><div class="formula-tooltip-desc">
+                  The grad operator gives the maximum gradient vector at any point.
+              </div></span>
+          </div>
+      </div>
+      <p>And spherical:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align}
+                      \\nabla^2 = \\frac{\\partial^2}{\\partial r^2} + \\frac{2}{r} \\frac{\\partial}{\\partial r} + \\frac{1}{r^2} \\frac{\\partial^2}{\\partial \\theta^2} + \\frac{\\cos \\theta}{r^2 \\sin \\theta} \\frac{\\partial}{\\partial \\theta} + \\frac{1}{r^2 \\sin^2 \\theta} \\frac{\\partial^2}{\\partial \\varphi^2}
+                  \\end{align} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 8c: The Laplacian <br><div style="font-size: 3vh; line-height: 1.7">(Spherical Coordinates)</div>
+              </div><div class="formula-tooltip-desc">
+                  The grad operator gives the maximum gradient vector at any point.
+              </div></span>
+          </div>
+      </div>
+      <h3>Lagrange Multipliers</h3>
+      <p>We know that if we want to find the minimum or maximum points of a function, we just have to differentiate it and put it equal to zero. For a function with two variables, we do it with respect to each of its variables. So if we have \\( f(x, y) \\), we can find the maxima and minima:</p>
+      <div class=eqn> \\[ \\frac{\\partial f}{\\partial x} = 0; \\quad \\frac{\\partial f}{\\partial y} = 0 \\] </div>
+      <p>Put those into the total derivative, and we get:</p>
+      <div class=eqn> \\[ df = \\left(\\frac{\\partial f}{\\partial x}\\right)dx +  \\left(\\frac{\\partial f}{\\partial y}\\right)dy = 0 \\] </div>
+      <p>So we know that maxima and minima take place when the total derivative is zero.</p>
+      <p>But say, for whatever reason, we don't want to know the maximum and minimum of the whole function.</p>
+      <p>What the bloody hell is that supposed to mean you wonder. Take a function like this, \\( f(x, y) = x^2 + y^2 \\). If we were to calculate the point at which the total derivative is 0, then we would get the coordinates for that big dip in the middle (i.e. \\( (0, 0) \\)), since that's the minimum (and in this case there is no 'maximum').</p>
+      <p>But let's take that graph and draw a line at the bottom. We'll call this line our <em>constraint</em>, \\( g(x, y)\\). Now I want to know what the minimum value of the function <em>on the line</em> is. It's no longer \\( (0, 0) \\), because the line doesn't go through there. And whilst we can kinda get a sense for where it is visually, we are very serious mathematicians, and we want to know the exact coordinates.</p>
+      <p>First, we will define what exactly our constraint \\( g(x, y)\\) is. In this case, our constraint is a straight line, of the form \\( y = 1 - x \\). That means \\( g(x, y) = x + y = 1 \\). Notice that our constraint function is actually a constant here. That's pretty important, because it means its total derivative is 0:</p>
+      <div class=eqn> \\[ dg = \\left( \\frac{\\partial g}{\\partial x} \\right) dx + \\left( \\frac{\\partial g}{\\partial y} \\right) dy = 0  \\] </div>
+      <p>Now I'm not gonna prove this, and you don't have to, but to get the minimum of \\( f(x, y)\\) on the constraint \\( g(x, y)\\), this relation must be true:</p>
+      <div class=eqn> \\[ d(f + \\lambda g) = 0  \\] </div>
+      <p>Where \\( \\lambda \\) is some constant, called the <em>Lagrange multiplier</em>. And although I'm not going to prove it, i <em>will</em> try and explain it.</p>
+      <p>Anyway, by using the chain rule, we get this:</p>
+      <div class=eqn> \\[ d(f + \\lambda g) = \\left( \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} \\right) dx + \\left( \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} \\right) dy = 0 \\] </div>
+      <p>Since \\(x\\) and \\(y\\) have got nothing to do with each other (in other words, they are <em>independant variables</em>), that means:</p>
+      <div class=eqn> \\[  \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} = \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} = 0 \\] </div>
+      <p>That means we end up with 3 simultaneous equations, which we can use to uncover the identity of our Lagrange multiplier \\( \\lambda \\).</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align}
+                      \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} &= 0 \\\\[6pt]
+                      \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} &= 0 \\\\[6pt]
+                      g(x, y) &= \\text{constant}
+                  \\end{align} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 9: Calculating the Lagrange multiplier
+              </div><div class="formula-tooltip-desc">
+                  The grad operator gives the maximum gradient vector at any point.
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "volumes": {
+    title: "Surfaces and Volumes of Revolution",
+    content: `
+      <p>Remember before we had our path \\(s\\) and we wanted to figure out how much \\(s\\) changes with respect to \\(x\\) and \\(y\\) (or more precisely, how \\(ds\\) changes with respect to \\(dx\\) and \\(dy\\)).</p>
+      <p>Look at this image. We can create a right angled triangle, and then using the OG pythagoras formula, we get:</p>
+      <div class=eqn> \\[ ds^2 = dx^2 + dy^2 \\] </div>
+      <p>And you might be a bit confused here, since \\(dx\\) and \\(dy\\) are supposedly infinitely small, and yet \\(dx\\) is clearly bigger than \\(dy\\). Answer: don't worry about it. Technically you are correct, but since they are <em>infinitely</em> small, they are assumed to be small enough that the difference in length isn't actually useful and can therefore be ignored.</p>
+      <p>Again, using our scandalous physics-mathematics, we can rewrite \\(dy\\) like this:</p>
+      <div class=eqn> \\[ dy = \\frac{dy}{dx} \\cdot dx \\] </div>
+      <p>That means our Pythagoras equation now looks like this:</p>
+      <div class=eqn> \\[ ds^2 = dx^2 + \\left( \\frac{dy}{dx} \\cdot dx \\right)^2 \\] </div>
+      <p>And then by taking the square root, we get a value for \\( ds \\):</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ ds = dx \\sqrt{1 + \\left( \\frac{dy}{dx} \\right)^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: ds
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p><em>And if you want you can switch the \\(y\\)s and the \\(x\\)s around, like this:</em></p>
+      <div class=eqn> \\[ ds = dy \\sqrt{1 + \\left( \\frac{dx}{dy} \\right)^2} \\] </div> 
+      <h3>Jacobeans</h3>
+      <div class=eqn> \\[ J = \\frac{ \\partial (x, y, z) }{ \\partial (u, v, w) } \\] </div>
+      <div class=eqn> \\[ dV = dx \\; dy \\; dz = |J| du \\; dv \\; dw \\] </div>
+      <div class=eqn>\\[
+      J = \\frac{\\partial(x, y)}{\\partial(\\rho, \\phi)} = \\begin{vmatrix} \\frac{\\partial x}{\\partial \\rho} & \\frac{\\partial x}{\\partial \\phi} \\\\ \\frac{\\partial y}{\\partial \\rho} & \\frac{\\partial y}{\\partial \\phi} \\end{vmatrix}
+      \\] </div>
+      <div class=eqn>\\[
+      J = \\frac{\\partial(x, y, z)}{\\partial(r, \\theta, \\varphi)} = \\begin{vmatrix} \\frac{\\partial x}{\\partial r} & \\frac{\\partial x}{\\partial \\theta} & \\frac{\\partial x}{\\partial \\varphi} \\\\ \\frac{\\partial y}{\\partial r} & \\frac{\\partial y}{\\partial \\theta} & \\frac{\\partial y}{\\partial \\varphi} \\\\ \\frac{\\partial z}{\\partial r} & \\frac{\\partial z}{\\partial \\theta} & \\frac{\\partial z}{\\partial \\varphi} \\end{vmatrix}
+      \\] </div>
+      <h3>Volumes of revolution</h3>
+      <div class=eqn>\\[ A = \\int_{s_1}^{s_2} 2 \\pi y \\, ds \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ A = 2 \\pi \\bar{y} S \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Pappus' (2nd) theorem
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ V = 2 \\pi A \\bar{y} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Pappus' (1st) theorem
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "vec-calculus": {
+    title: "Vector Calculus",
+    content: `
+      <h3>Divergence (&quot;div&quot;)</h3>
+      <div class=eqn> \\[ \\text{div } \\vec{v} = \\nabla \\cdot \\vec{v} \\] </div>
+      <p>The divergence tells us how much of something enters or exits a surface.</p>
+      <p>If div is zero, then it means that there is no net flux, or in other words, every arrow which enters the surface also exits the surface.</p>
+      <div class=eqn> \\[ \\underline{\\nabla} \\cdot \\underline{v} = \\left( \\frac{\\partial v_x}{\\partial x} \\right) + \\left( \\frac{\\partial v_y}{\\partial y} \\right) + \\left( \\frac{\\partial v_z}{\\partial z} \\right) \\] </div>
+      <h3>Curl</h3>
+      <div class=eqn> \\[ \\underline{\\nabla} \\times \\underline{v} = \\begin{vmatrix} \\underline{\\hat{i}} & \\underline{\\hat{j}} & \\underline{\\hat{k}} \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ v_x & v_y & v_z \\end{vmatrix} \\] </div>
     `
   }
 };

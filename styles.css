@@ -1431,12 +1431,6 @@ body.dimmed::before {
 }
 
 @media (max-width: 100vh) {
-  #next-year-button {
-    position: fixed;
-    left: 79vw;
-    top: 92vh;
-    z-index: 50;
-  }
 
   #next-year-button {
     bottom: 3vh;

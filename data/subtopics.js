@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 84 subtopics
-// Generated: 2026-03-26T15:42:20.817Z
+// AUTO-GENERATED FILE - Contains 85 subtopics
+// Generated: 2026-03-27T21:14:48.765Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 84 existing hand-written entries
-//   - 22 Markdown-generated entries
+//   - 85 existing hand-written entries
+//   - 23 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -13525,7 +13525,7 @@ const subtopics = {
       <p>This is great for functions which only depend one one variable, such as our \\( f(x) \\), but when we have multiple variable functions, it's a bit more complicated. The infinitely small change in \\( f(x,y) \\) would depend on both \\( dx \\) and \\( dy \\).</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ df = \\left(\\frac{\\partial f}{\\partial x}\\right)dx +  \\left(\\frac{\\partial f}{\\partial y}\\right)dy \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13568,7 +13568,7 @@ const subtopics = {
       <p>Finally, we divide both sides by \\( dS \\) and we end up with:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\frac{dh}{dS} = \\frac{\\partial h}{\\partial x} \\cdot \\frac{ dx }{ dS } + \\frac{\\partial h}{\\partial y} \\cdot \\frac{ dy }{ dS } \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13616,7 +13616,7 @@ const subtopics = {
       <p>And just for generality, we can think of these as operators:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\begin{align*} \\frac{\\partial}{\\partial r} &= \\cos \\theta \\frac{\\partial}{\\partial x} + \\sin \\theta \\frac{\\partial}{\\partial y} \\\\[6pt] \\frac{\\partial}{\\partial \\theta} &= - r \\sin \\theta \\frac{\\partial}{\\partial x} + r \\cos \\theta \\frac{\\partial}{\\partial y} \\end{align*} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13629,7 +13629,7 @@ const subtopics = {
       <p>We can do the same for x and y</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\begin{align*}
                   \\frac{\\partial}{\\partial x} &= \\cos \\theta \\frac{\\partial}{\\partial r} - \\frac{1}{r} \\sin \\theta \\frac{\\partial}{\\partial \\theta} \\\\[10pt]
                   \\frac{\\partial}{\\partial y} &= \\sin \\theta \\frac{\\partial}{\\partial r} + \\frac{1}{r} \\cos \\theta \\frac{\\partial}{\\partial \\theta}
@@ -13646,7 +13646,7 @@ const subtopics = {
       <p>The <em>grad function</em> calculates the direction of steepest ascent or descent at a certain point:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\vec{\\nabla}\\phi = \\hat{i}\\left(\\frac{\\partial \\phi}{\\partial x}\\right) + \\hat{j}\\left(\\frac{\\partial \\phi}{\\partial y}\\right) + \\hat{k}\\left(\\frac{\\partial \\phi}{\\partial z}\\right)\\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13660,7 +13660,7 @@ const subtopics = {
       <p>A <em>directional derivative</em> tells us exactly this. If you remember, the dot product tells us how neatly one vector lines up with another vector. So by taking our gradient <span class="formula-emph">\\( \\left[\\mathbf{\\vec{\\nabla}\\phi} \\right]\\) </span> and dotting that with our vector <span class="formula-emph">\\( \\left[\\mathbf{ \\vec{u} } \\right]\\)</span>, we get exactly that.</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\text{Directional derivative} \\equiv \\vec{\\nabla}\\phi \\cdot \\vec{u} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13674,7 +13674,7 @@ const subtopics = {
       <p>ICL, I don't know why this gets its own name, it's literally just the grad, except using second derivatives. Classic case of scientists colonising redundancies just to put their name on something.</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\nabla^2 f = \\frac{\\partial^2 f}{\\partial x^2} + \\frac{\\partial^2 f}{\\partial y^2} + \\frac{\\partial^2 f}{\\partial z^2} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13690,7 +13690,7 @@ const subtopics = {
       <p>We can also use this in polar co-ordinates</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\begin{align}
                       \\nabla^2 &= \\left( \\frac{\\partial^2}{\\partial x^2} + \\frac{\\partial^2}{\\partial y^2} \\right) \\\\[6pt] &= \\frac{\\partial^2}{\\partial r^2} + \\frac{1}{r} \\frac{\\partial}{\\partial r} + \\frac{1}{r^2} \\frac{\\partial^2}{\\partial \\theta^2}
                   \\end{align} \\]
@@ -13732,7 +13732,7 @@ const subtopics = {
       <div class=eqn> \\[ d(f + \\lambda g) = 0  \\] </div>
       <p>Where \\( \\lambda \\) is some constant, called the <em>Lagrange multiplier</em>. And although I'm not going to prove it, i <em>will</em> try and explain it.</p>
       <p>Anyway, by using the chain rule, we get this:</p>
-      <div class=eqn> \\[ d(f + \\lambda g) = \\left( \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} \\right) dx + \\left( \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} \\right) dy = 0 \\] </div>
+      <div class=large-eqn> \\[ d(f + \\lambda g) = \\left( \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} \\right) dx + \\left( \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} \\right) dy = 0 \\] </div>
       <p>Since \\(x\\) and \\(y\\) have got nothing to do with each other (in other words, they are <em>independant variables</em>), that means:</p>
       <div class=eqn> \\[  \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} = \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} = 0 \\] </div>
       <p>That means we end up with 3 simultaneous equations, which we can use to uncover the identity of our Lagrange multiplier \\( \\lambda \\).</p>
@@ -13769,7 +13769,7 @@ const subtopics = {
       <p>And then by taking the square root, we get a value for \\( ds \\):</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ ds = dx \\sqrt{1 + \\left( \\frac{dy}{dx} \\right)^2} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13794,7 +13794,7 @@ const subtopics = {
       <div class=eqn>\\[ A = \\int_{s_1}^{s_2} 2 \\pi y \\, ds \\] </div>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ A = 2 \\pi \\bar{y} S \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13806,7 +13806,7 @@ const subtopics = {
       </div>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ V = 2 \\pi A \\bar{y} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
@@ -13822,13 +13822,175 @@ const subtopics = {
   "vec-calculus": {
     title: "Vector Calculus",
     content: `
-      <h3>Divergence (&quot;div&quot;)</h3>
-      <div class=eqn> \\[ \\text{div } \\vec{v} = \\nabla \\cdot \\vec{v} \\] </div>
+      <p>The big three operators, the grad, div and curl.</p>
+      <h3>Gradient <em>('grad')</em></h3>
+      <p>The gradient isn't something new, so I won't spend too long on it. In short, it takes a scalar field and turns into a vector field.</p>
+      <p>Let's say we have a scalar field, like temperature</p>
+      <h3>Divergence <em>('div')</em></h3>
+      <p>However, simply having the arrows isn't always the most useful; sometimes we'd wanna know how these arrows behave. And the divergence is one tool we can use to achieve this.</p>
+      <p>The divergence is calculated simply by taking the gradient function and dotting it with the vector, rather than just applying it:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\text{div } \\vec{v} = \\nabla \\cdot \\vec{v} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Curl Grad
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\vec{\\nabla} \\cdot \\vec{v} = \\left( \\frac{\\partial v_x}{\\partial x} \\right) + \\left( \\frac{\\partial v_y}{\\partial y} \\right) + \\left( \\frac{\\partial v_z}{\\partial z} \\right) \\] </div>
       <p>The divergence tells us how much of something enters or exits a surface.</p>
       <p>If div is zero, then it means that there is no net flux, or in other words, every arrow which enters the surface also exits the surface.</p>
-      <div class=eqn> \\[ \\underline{\\nabla} \\cdot \\underline{v} = \\left( \\frac{\\partial v_x}{\\partial x} \\right) + \\left( \\frac{\\partial v_y}{\\partial y} \\right) + \\left( \\frac{\\partial v_z}{\\partial z} \\right) \\] </div>
       <h3>Curl</h3>
-      <div class=eqn> \\[ \\underline{\\nabla} \\times \\underline{v} = \\begin{vmatrix} \\underline{\\hat{i}} & \\underline{\\hat{j}} & \\underline{\\hat{k}} \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ v_x & v_y & v_z \\end{vmatrix} \\] </div>
+      <p>This next operater's name pretty much</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\text{curl } \\vec{v} = \\vec{\\nabla} \\times \\vec{v} = \\begin{vmatrix} \\vec{\\hat{i}} & \\vec{\\hat{j}} & \\vec{\\hat{k}} \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ v_x & v_y & v_z \\end{vmatrix} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Curl Grad
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>But here's one thing you have to bear in mind. The curl measures how much a vector field <em>causes</em> objects to rotate, not how much the field rotates itself.</p>
+      <h3>Combinations</h3>
+      <h4>Grad Squared (the Laplacian)</h4>
+      <p>We went over this one already, so I won't waste too much time on it now. In short, you just apply the gradient function, and then apply it again. In other words, you take the second derivatives instead of the first derivatives</p>
+      <div class=eqn> \\[ \\Box \\phi = 0 \\] </div>
+      <h4>Curl Grad</h4>
+      <p>Now time for, what I like to call, the curly gradient. The curly gradient</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\times ( \\vec{\\nabla} \\phi ) = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Curl Grad
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Div Curl</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\cdot ( \\vec{\\nabla} \\times A ) = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Curl Grad
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Grad Div</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} ( \\vec{\\nabla} \\cdot a ) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Curl Grad
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Curl Curl</h4>
+      <p>Finally, the curly swirly curly curly</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\times ( \\vec{\\nabla} \\times \\vec{a} ) = \\vec{\\nabla} ( \\vec{\\nabla} \\cdot \\vec{a} ) - \\nabla^2 \\vec{a} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Curl Grad
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "green": {
+    title: "Green's Theorem",
+    content: `
+      <p>Picture the scene.</p>
+      <p>You then get to the festival, and it's absolute chaos.</p>
+      <p>Now let's say you wanna know about how many people are in this setting</p>
+      <p>Of course you could count them, but that would be really flipping difficult.</p>
+      <p>Here's another case of mathematics going against our physical intuition. Usually if we want to know what takes place inside an area, you'd have to... look into the area.</p>
+      <h3>Green's theorem</h3>
+      <p>I'll show it you, and then we'll work through how to get it together.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\oint_C ( P \\; dx + Q \\; dy ) = \\iint_R \\left( \\frac{ \\partial Q }{ \\partial x } - \\frac{ \\partial P }{ \\partial y } \\right) \\; dA \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Green's theorem
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>We will consider a vector field. Meet our new friend, \\( \\vec{F} \\):</p>
+      <div class=eqn> \\[ \\vec{F} = P(x, y) \\hat{i} + Q(x, y) \\hat{j} \\] </div>
+      <p>Remember, our region is called \\( R \\), and it is bounded by the fence \\( C \\). We are walking alongside the fence \\( C \\), and for each teeny tiny step we take along it <span class="formula-emph">\\( \\left[\\mathbf{ d\\vec{r} } \\right]\\)</span>, we determine the force <em>only on the barrier</em>.</p>
+      <p>Then you ask yourself the question: how much is this force actually helping me move along \\( C \\)? Is it pushing me along, pushing me back, or neither?</p>
+      <p>If the force points in the same direction as my movement, then it's helping me along. Thank you so much Mr Vector field! As a reward, here's 5 points! So at this particular co-ordinate, we've given a <em>positive</em> value. The more the force aligns with my motion, the more the force is actually helping me along, and therefore the more points we give it.</p>
+      <p>By comparison, if the force points in the opposite direction as my movement, then it's holding me back, which is really annoying. What's that about, mate? As a punishment, I'll deduct 3 points. At <em>this</em> co-ordinate, we've given the path a <em>negative</em> value. And once again, the more the force aligns with my motion in the opposite direction, the more it's hindering me, and therefore the more points we deduct.</p>
+      <p>And if the force points perpendicular to my motion, then it's neither helping me, nor hindering me. It's just a bit annoying. So no points for you.</p>
+      <p>I wonder, which operator tells us how aligned two vectors are? Something which is a maximum when they are parallel and zero when perpendicular?</p>
+      <p>That's right! The <em>dot product</em>! So to determine how many points each part of our surface gets, we dot the force with our tiny step <span class="formula-emph">\\( \\left[\\mathbf{ \\vec{F} \\cdot d\\vec{r} } \\right]\\)</span></p>
+      <div class=eqn> \\[ \\begin{align} \\int_A^B \\vec{F} \\cdot d\\vec{r} &= \\int_A^B ( P\\hat{i} + Q\\hat{j} ) \\cdot (dx \\hat{i} + dy \\hat{j} ) \\\\[6pt] &= \\int_A^B ( P \\; dx + Q \\; dy ) \\end{align} \\] </div>
+      <p>We keep doing this all the way around \\( C \\), adding up the total points along the <em>closed path</em>, hence the closed integral</p>
+      <div class=eqn> \\[ \\oint_C \\vec{F} \\cdot d\\vec{r} = \\oint_C ( P \\; dx + Q \\; dy ) \\] </div>
+      <p>So that explains the first half of the equation, now what about the second half? Remember we are trying to find out how much the stuff inside \\( R \\) rotates. Do you remember from last time, which operator tells us how much a single element makes an object rotate?</p>
+      <p>That's right, the curl! So we want the curl of the forces <span class="formula-emph">\\( \\left[\\mathbf{ \\nabla \\times \\vec{F} } \\right]\\)</span>, and then we want to add up all the individual curls to get the total, hence the double integral.</p>
+      <p>Now given our definition for \\( \\vec{F} \\) <span class="formula-emph">\\( \\left[\\mathbf{ \\vec{F} = P\\hat{i} + Q\\hat{j} + 0\\hat{k} } \\right]\\)</span>, we can calculate the curl very easily:</p>
+      <div class=eqn> \\[ \\begin{align} \\text{curl } \\vec{F} &= \\vec{\\nabla} \\times \\vec{F} \\\\[6pt] 
+          &= \\begin{vmatrix} \\vec{\\hat{i}} & \\vec{\\hat{j}} & \\vec{\\hat{k}} \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ P & Q & 0 \\end{vmatrix} \\\\[6pt]
+          &= \\left(0 - \\frac{\\partial Q}{\\partial z}\\right) \\hat{i} - \\left(0 - \\frac{\\partial P}{\\partial z}\\right) \\hat{j} + \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right) \\hat{k} \\end{align}\\] </div>
+      <p>Since \\( P(x, y) \\) and \\( Q(x, y) \\) don't depend on \\(z\\) at all, the partial derivatives with respect to \\(z\\) just become zero, meaning the first two terms are zeros, leaving us with:</p>
+      <div class=eqn> \\[ \\vec{\\nabla} \\times \\vec{F} = \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right) \\hat{k} \\] </div>
+      <p>Of course we don't just want one individual curl; we want the curl of every single teeny tiny element, for every teeny tiny step in \\(x\\) <span class="formula-emph">\\( \\left[\\mathbf{ dx } \\right]\\)</span> and every teeny tiny step in \\(y\\) <span class="formula-emph">\\( \\left[\\mathbf{ dy } \\right]\\)</span>. To do that we integrate again:</p>
+      <div class=eqn> \\[ \\iint \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right) dA \\] </div>
+      <p><em>We replaced \\( dx \\; dy \\) with \\( dA \\), but it's the same thing.</em></p>
+      <p>And just like that we have the other side of the equation!!</p>
+      <h3>Using Green's theorem</h3>
+      <p>Now when the bloody hell will we ever need to be able to ...</p>
+      <p>Focus on the right hand side of the equation. We know that we are integrating the curl with respect to the area. But what happens if we set that curl term to just be one?</p>
+      <div class=eqn> \\[ \\iint \\left(\\frac{\\partial Q}{\\partial x} - \\frac{\\partial P}{\\partial y}\\right) dA = \\iint 1 dA = \\text{The Area Enclosed} \\] </div>
+      <p>Hey, that's cool! If we somehow manage to make that middle term zero, then we are able to calculate the area enclosed by \\( C \\), simply from ...</p>
+      <p>There are quite a few different different ways we can make this happen:</p>
+      <h4>Option 1: <em>P=0, Q=x</em></h4>
+      <p>Using the full equation:</p>
+      <div class=eqn> \\[ \\oint_C ( P \\; dx + Q \\; dy ) = \\iint_R \\left( \\frac{ \\partial Q }{ \\partial x } - \\frac{ \\partial P }{ \\partial y } \\right) \\; dA \\] </div> \\[ \\downarrow \\]
+      <div class=eqn> \\[ \\oint_C ( \\style{opacity: 0.3}{\\cancel{0 \\; dx +}} x \\; dy ) = \\iint_R 1  \\; dA \\] </div>
+      <h4>Option 2: <em>P=-y, Q=0</em></h4>
+      <h4>Option 3: <em>P=-y, Q=x</em></h4>
+      <h3>Stoke's theorem</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_R ( \\vec{\\nabla} \\times \\vec{F}) \\cdot dA \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Stoke's theorem
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
     `
   }
 };

@@ -607,6 +607,10 @@ const topics = [
         subid: "vec-calculus",
         title: "Vector calculus",
       },
+      {
+        subid: "green",
+        title: "Green's Theorem",
+      },
     ]
   },
   {

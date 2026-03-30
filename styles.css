@@ -96,10 +96,12 @@ h4 {
   font-size-adjust: 0.45;
 }
 
+
 .formula-emph {
   background-color: rgba(0, 0, 0, 0.55);
   border-radius: 1px;
   font-weight: bold;
+  font-size: 80%;
   opacity: 70%;
 }
 

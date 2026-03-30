@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 85 subtopics
-// Generated: 2026-03-27T21:14:48.765Z
+// AUTO-GENERATED FILE - Contains 87 subtopics
+// Generated: 2026-03-30T08:31:00.094Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 85 existing hand-written entries
-//   - 23 Markdown-generated entries
+//   - 87 existing hand-written entries
+//   - 25 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -13977,8 +13977,12 @@ const subtopics = {
       <div class=eqn> \\[ \\oint_C ( P \\; dx + Q \\; dy ) = \\iint_R \\left( \\frac{ \\partial Q }{ \\partial x } - \\frac{ \\partial P }{ \\partial y } \\right) \\; dA \\] </div> \\[ \\downarrow \\]
       <div class=eqn> \\[ \\oint_C ( \\style{opacity: 0.3}{\\cancel{0 \\; dx +}} x \\; dy ) = \\iint_R 1  \\; dA \\] </div>
       <h4>Option 2: <em>P=-y, Q=0</em></h4>
+      <p>Using the full equation:</p>
+      <div class=eqn> \\[ \\oint_C ( P \\; dx + Q \\; dy ) = \\iint_R \\left( \\frac{ \\partial Q }{ \\partial x } - \\frac{ \\partial P }{ \\partial y } \\right) \\; dA \\] </div> \\[ \\downarrow \\]
+      <div class=eqn> \\[ \\oint_C ( -y \\; dx \\style{opacity: 0.3}{\\cancel{ + 0 \\; dy}} ) = \\iint_R 1  \\; dA \\] </div>
       <h4>Option 3: <em>P=-y, Q=x</em></h4>
       <h3>Stoke's theorem</h3>
+      <p>Now I'll be kind of honest with you: I have no clue why they introduced Green's theorem first, considering it's literally just a less general version of Stoke's theorem</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -13991,6 +13995,184 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+    `
+  },
+
+  "pde-app": {
+    title: "Applications of PDEs",
+    content: `
+      <h3>The diffusion equation</h3>
+      <div class=eqn> \\[ c = \\frac{ \\Delta N }{ \\Delta x} \\] </div>
+      <div class=eqn> \\[ N(t) = \\int_0^L c(t, x) \\; dx \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ j(x) = -D \\frac{ \\partial c}{ \\partial x} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Fick's (first) law
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>...where \\(D\\) is the <em>diffusion coefficient</em>.</p>
+      <div class=eqn> \\[ \\frac{ \\partial c}{ \\partial t} = \\frac{ \\partial }{ \\partial x} \\left[ D(x) \\frac{ \\partial c}{ \\partial x} \\right] \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{ \\partial c}{ \\partial t} = D \\frac{ \\partial^2 c}{ \\partial x^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: The Diffusion Equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\frac{ \\partial c}{ \\partial t} = D \\frac{ \\partial^2 c}{ \\partial x^2} + S(t, x) \\] </div>
+      <h3>The Wave Equation</h3>
+      <p>Here's a familiar face. The wave equation.</p>
+      <p>We have a wave, with it's displacement, \\( \\xi (x, t) \\).</p>
+      <p>And by the way, just for clarification, yes, this is the same thing as \\(U(x, t) \\) which we had when we were learning about waves the first time. I... have no clue why they've chosen to replace \\(U(x, t) \\) with \\( \\xi (x, t) \\). But Xi is a cool looking letter, even if it's a bit of a pain in the bum to write. But I'm not writing it, I'm typing, and typing &quot;\\\\xi&quot; isn't as difficult.</p>
+      <p>Firstly, let's assume that this wave is relatively flat. So as you go along the \\(x\\)-axis, the displacement \\( \\xi (x, t) \\) barely changes i.e. the rate of change of displacement is very very small.</p>
+      <div class=eqn> \\[ \\left| \\frac{ d \\xi}{ dx} \\right| \\ll 1 \\] </div>
+      <p>A slightly strange assumption you might think. It basically means that the angles we will be working with will also be small. That means we can use our small angle approximations!</p>
+      <div class=eqn> \\[ \\begin{align*}
+      F_x &= T_x(x+\\Delta x) + T_x(x) \\\\[6pt] &= T \\cos(\\theta_2) - T \\cos(\\theta_1) \\, . \\\\[10pt]
+      F_y &= T_y(x+\\Delta x) + T_y(x) \\\\[6pt] &= T \\sin(\\theta_2) - T \\sin(\\theta_1) \\, .
+      \\end{align*} \\] </div>
+      <p>Thanks to our small angle approximation, we can nice-ify this:</p>
+      <div class=eqn> \\[ F_x \\approx 0 \\ , \\ F_y \\approx T \\left[ \\frac{\\partial \\xi}{\\partial x}(t, x+\\Delta x) - \\frac{\\partial \\xi}{\\partial x}(t, x) \\right] \\ . \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{ \\partial^2 \\xi}{ \\partial t^2} = c^2 \\frac{ \\partial^2 \\xi}{ \\partial x^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: The Wave Equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "separation": {
+    title: "Separation of Variables",
+    content: `
+      <h3>The 1D Wave Equation</h3>
+      <div class=eqn> \\[ \\frac{ \\partial^2 \\xi}{ \\partial t^2} = c^2 \\frac{ \\partial^2 \\xi}{ \\partial x^2} \\] </div>
+      <p>We propose we can split it:</p>
+      <div class=eqn> \\[ \\xi(x, t) = X(x) T(t) \\] </div>
+      <p>Put that in:</p>
+      <div class=eqn> \\[ \\frac{ \\partial^2 T(t) }{ \\partial t^2}X(x) = c^2 \\frac{ \\partial^2 X(x)}{ \\partial x^2} T(t)\\] </div>
+      <p>Divide both sides by \\(c^2X(x)T(t)\\):</p>
+      <div class=eqn> \\[ \\frac1{c^2T(t)} \\frac{ \\partial^2 T(t) }{ \\partial t^2} = \\frac1{X(x)}\\frac{ \\partial^2 X(x)}{ \\partial x^2}\\] </div>
+      <p>The left hand side only depends on time, and the right hand side only depends on position. The only way this can be true is if both sides are equal to some value, which we will call \\( \\alpha_S\\)</p>
+      <div class=eqn> \\[ \\frac1{c^2T(t)} \\frac{ \\partial^2 T(t) }{ \\partial t^2} = \\frac1{X(x)}\\frac{ \\partial^2 X(x)}{ \\partial x^2} = \\alpha_S \\] </div>
+      <p>Then by rearranging:</p>
+      <div class=eqn> \\[ \\begin{align*}
+      \\frac{d^2 T(t)}{dt^2} &= \\alpha_{\\mathrm{S}} \\, c^2 \\, T(t) \\ , \\\\[6pt]
+      \\frac{d^2 X(x)}{dx^2} &= \\alpha_{\\mathrm{S}} \\, X(x) \\ .
+      \\end{align*} \\] </div>
+      <p>Now we're going to do something slightly odd. Our solution for \\( \\xi(x, t) \\) will depend on our solutions for \\(X(x)\\) and \\(T(t)\\), which will depend on the value of \\( \\alpha_S \\). That means, if we want a general solution for \\( \\xi(x, t) \\), we have to sum up all the possible values of \\( \\xi(x, t) \\) for each possible value of \\( \\alpha_S \\).</p>
+      <p>To do this, we take our \\( \\xi(x, t) \\), and integrate it:</p>
+      <div class=eqn> \\[ \\begin{align*}
+      \\xi(t, x) &= \\int_{-\\infty}^{+\\infty} \\xi(t, x; \\alpha_S) \\, d\\alpha_S \\\\[6pt]
+      &= \\int_{-\\infty}^{+\\infty} T(t; \\alpha_S) X(x; \\alpha_S) \\, d\\alpha_S \\ .
+      \\end{align*} \\] </div>
+      <p>And here we have our issue. I thought \\( \\alpha_S \\) was a constant? How the bloody hell are we supposed to integrate something with respect to a constant?</p>
+      <p>Well, you are half right. Technically \\( \\alpha_S \\) is a constant, but it's only a constant in the context of the system we are measuring. It's not a universal constant like \\( c \\) or \\( g \\) for instance. For any given system, there are infinitely many potential values of \\( \\alpha_S \\) which could serve as a solution to the equation.</p>
+      <p>That's why we have the semicolon before \\( \\alpha_S \\): It basically distinguished between the actual variables (which are time and position in this case) and the <em>parametres</em> which label different modes (i.e. \\( \\alpha_S \\) in this case). By integrating over all the potential modes, you get the solution for \\( \\xi \\).</p>
+      <p>Think back to <a href="https://coulomb-canvas.github.io/subtopic.html?subid=quantum-mechanics&amp;topic=quantum1&amp;year=1">wave packets</a> in the first year Quantum Mechanics I topic. We were able to take a wave over infinite space and turn it into a particle by copy-pasting a bunch of them with slightly different wavenumbers. That means...</p>
+      <h4>Case 1: \\(α_S\\) = 0</h4>
+      <p>This is the easiest case, when \\(α_S\\) is 0, then our two differential equations from before become 0 too:</p>
+      <div class=eqn> \\[ \\begin{align*}
+      \\frac{d^2 T(t)}{dt^2} &\\style{opacity:30%}{= α_S \\, c^2 \\, T(t)} = 0 \\ , \\\\[6pt]
+      \\frac{d^2 X(x)}{dx^2} &\\style{opacity:30%}{= α_S \\, X(x)} = 0 \\ .
+      \\end{align*} \\] </div>
+      <p>To get our solutions, we just have to integrate zero twice, which gives us solutions in the form \\(Ax + B\\).</p>
+      <div class=eqn> \\[ \\begin{align*}
+      X(x;0) = A_0 t + B_0 \\ , \\\\[6pt]
+      T(t;0) = C_0 t + D_0 \\ .
+      \\end{align*} \\] </div>
+      <p>So now we know what \\(X(x)\\) and \\(T(t)\\) are, we can get \\( \\xi(x, t) \\) just by times-ing them together:</p>
+      <div class=eqn> \\[ \\xi(x, t; 0) = (A_0 t + B_0)(C_0 t + D_0) \\] </div>
+      <p>​That was easy, next case:</p>
+      <h4>Case 2: \\(α_S\\) &gt; 0</h4>
+      <div class=eqn> \\[ \\begin{align*}
+      \\frac{d^2 X(x)}{dx^2} &= κ^2 \\, X(x) \\ , \\\\[6pt]
+      \\frac{d^2 T(t)}{dt^2} &= κ^2 \\, c^2 \\, T(t) \\ .
+      \\end{align*} \\] </div>
+      <p>They have these solutions:</p>
+      <div class=eqn> \\[ \\begin{align*}
+      X(x) = A_κ e^{κx} + B_κ e^{−κt} \\ , \\\\[6pt]
+      T(t) = C_κ e^{cκt} + D_κ e^{−cκt} \\ .
+      \\end{align*} \\] </div>
+      <p>That means:</p>
+      <div class=large-eqn> \\[
+      \\xi(t, x; \\alpha_S > 0) = \\int_{0}^{\\infty} \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\left( A_{\\kappa} e^{\\kappa x} + B_{\\kappa} e^{-\\kappa x} \\right) \\, d\\kappa \\ .
+      \\] </div>
+      <h4>Case 3: \\(α_S\\) &lt; 0</h4>
+      <div class=eqn> \\[ \\begin{align*}
+      \\frac{d^2 X(x)}{dx^2} &= -k^2 \\, X(x) \\ , \\\\[6pt]
+      \\frac{d^2 T(t)}{dt^2} &= -k^2 \\, c^2 \\, T(t) \\ .
+      \\end{align*} \\] </div>
+      <p>This has solutions:</p>
+      <div class=eqn> \\[ \\begin{align*}
+      X(x) = A_k \\cos{(κx)} + B_k \\sin{(κt)} \\ , \\\\[6pt]
+      T(t) = C_k \\cos{(cκt)} + D_k \\sin{(cκt)} \\ .
+      \\end{align*} \\] </div>
+      <p>Which means we get:</p>
+      <div class=large-eqn> \\[ \\xi(t, x; \\alpha_S < 0) = \\int_{0}^{\\infty} \\left[ C_k \\cos(ckt) + D_k \\sin(ckt) \\right] \\left[ A_k \\cos(kx) + B_k \\sin(kx) \\right] \\, dk \\ . \\] </div>
+      <hr>
+      <p>To get the full solution, we just add the three together. This sounds easy in theory until you actually realise how cooked our three solutions actually are:</p>
+      <div class=eqn style="font-size:1.2vw; padding-left:0; padding-right:0"> \\[ \\begin{align*}
+      \\xi(t, x) &= \\xi(t, x; \\alpha=0) + \\xi(t, x; \\alpha>0) + \\xi(t, x; \\alpha < 0) \\ , \\\\[6pt]
+      &= (A_0 t + B_0)(C_0 t + D_0) + \\int_{0}^{\\infty} \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\left( A_{\\kappa} e^{\\kappa x} + B_{\\kappa} e^{-\\kappa x} \\right) \\, d\\kappa + \\int_{0}^{\\infty} \\left[ C_k \\cos(ckt) + D_k \\sin(ckt) \\right] \\left[ A_k \\cos(kx) + B_k \\sin(kx) \\right] \\, dk \\ . \\\\[6pt]
+      \\end{align*} \\] </div>
+      <p class=show-on-mobile> Aside from the humourous visual of watching your goofy ahh squinting at your phone screen like a bloody kitten, this is not something I'd like on my page</p>
+      <h3>Boundary conditions</h3>
+      <p>Never fear, in most cases we don't actually have to fully expand that ugly ahh equation.</p>
+      <div class=eqn> \\[ \\xi(0, t) = \\xi(L, t) = 0 \\] </div>
+      <h4>Case 1</h4>
+      <p>That means</p>
+      <div class=eqn> \\[ \\xi(x, t; 0) = (A_0 t + B_0)(C_0 t + D_0) = 0 \\] </div>
+      <h4>Case 2</h4>
+      <p>That means:</p>
+      <div class=large-eqn> \\[
+      \\xi(t, x; \\alpha_S > 0) = \\int_{0}^{\\infty} \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\left( A_{\\kappa} e^{\\kappa x} + B_{\\kappa} e^{-\\kappa x} \\right) \\, d\\kappa = 0\\ .
+      \\] </div>
+      <h4>Case 3</h4>
+      <p>That means:</p>
+      <div class=large-eqn> \\[
+      \\xi(t, x; \\alpha_S < 0) = \\sum_{n=1}^{\\infty} \\left( C_n \\cos(\\omega_n t) + D_n \\sin(\\omega_n t) \\right) \\sin(k_n x)
+      \\] </div>
+      <h3>The Delta Function</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\delta(x) = \\lim_{\\Delta x \\to 0} \\begin{cases} 0 & |x| > \\frac{\\Delta x}{2} \\ , \\\\ \\frac{1}{\\Delta x} & |x| \\le \\frac{\\Delta x}{2} \\ . \\end{cases} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The Delta Function
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\delta(x - x_0) = \\begin{cases} 
+      0 & x \\neq x_0 \\ , \\\\ 
+      \\infty & x = x_0 \\ . 
+      \\end{cases} \\] </div>
+      <div class=eqn> \\[ \\int_{-\\infty}^{+\\infty} \\delta(x - x_0) \\, dx = 1 \\ . \\] </div>
+      <div class=eqn> \\[ \\int_{a}^{b} \\delta(x - x_0) \\, dx = \\begin{cases} 
+      1 & a \\leq x_0 \\leq b \\ , \\\\ 
+      0 & x_0 < a \\text{ or } x_0 > b \\ . 
+      \\end{cases} \\] </div>
+      <div class=eqn> \\[ \\int_{-\\infty}^{+\\infty} \\delta(x - x_0) f(x) \\, dx = f(x_0) \\ . \\] </div>
     `
   }
 };

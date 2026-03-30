@@ -100,9 +100,17 @@ Using the full equation:
 
 #### Option 2: *P=-y, Q=0*
 
+Using the full equation:
+
+<div class=eqn> \[ \oint_C ( P \; dx + Q \; dy ) = \iint_R \left( \frac{ \partial Q }{ \partial x } - \frac{ \partial P }{ \partial y } \right) \; dA \] </div> \[ \downarrow \]
+
+<div class=eqn> \[ \oint_C ( -y \; dx \style{opacity: 0.3}{\cancel{ + 0 \; dy}} ) = \iint_R 1  \; dA \] </div>
+
 #### Option 3: *P=-y, Q=x*
 
 ### Stoke's theorem
+
+Now I'll be kind of honest with you: I have no clue why they introduced Green's theorem first, considering it's literally just a less general version of Stoke's theorem
 
 <div class="hover-wrapper">
     <div class="formula-container">

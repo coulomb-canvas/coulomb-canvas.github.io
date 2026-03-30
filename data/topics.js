@@ -478,44 +478,30 @@ const topics = [
       {
         subid: "astro-intro",
         title: "Aren't planets and stars cool?",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "celestial-sphere",
         title: "The celestial sphere",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "parallax",
         title: "Angles & Parallax",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "fluxes",
         title: "Fluxes and magnitude",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "telescopes",
         title: "Telescopes",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "colours",
         title: "Black-Bodies and Colours",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "masses",
         title: "Astronomical Masses",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "solar-system",
@@ -526,32 +512,22 @@ const topics = [
       {
         subid: "exoplanets",
         title: "Exoplanets",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "stars",
         title: "Stars",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "star-physics",
         title: "Stellar Astrophysics",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "galaxies",
         title: "Galaxies",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "universe",
         title: "The Universe",
-        text: "I mean, sure, but do we really need to study them?",
-        image: "images/time-dilation.png"
       },
       {
         subid: "astro-summary",
@@ -600,6 +576,14 @@ const topics = [
         title: "Differential Equations (Revisited)",
       },
       {
+        subid: "pde-app",
+        title: "Applications of PDEs",
+      },
+      {
+        subid: "separation",
+        title: "Separation of Variables",
+      },
+      {
         subid: "volumes",
         title: "Surfaces and Volumes of Revolution",
       },
@@ -611,6 +595,11 @@ const topics = [
         subid: "green",
         title: "Green's Theorem",
       },
+      {
+        subid: "stoke",
+        title: "Stoke's Theorem",
+      },
+      
     ]
   },
   {

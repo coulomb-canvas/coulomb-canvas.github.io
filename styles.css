@@ -87,7 +87,6 @@ h4 {
   font-family: "Njal", "Nunito", "Arial Rounded MT Bold", sans-serif;
   text-decoration: underline;
   text-underline-offset: 2px;
-  font-weight: bold;
   color: white;
   border-top: 0.2vh dotted rgba(255, 255, 255, 0.417);
   font-size: 4vh;
@@ -206,7 +205,6 @@ tr:hover {background-color: var(--card)}
   padding: 1vw;
   color: var(--card);
   font-size: 1.7vw;
-  font-weight: bold;
   font-family: Njal;
   opacity: 0.8;
   line-height: 100%;
@@ -224,7 +222,6 @@ tr:hover {background-color: var(--card)}
   padding: 1vw;
   color: var(--card);
   font-size: 1.7vw;
-  font-weight: bold;
   font-family: Njal;
   opacity: 0.8;
   line-height: 100%;
@@ -317,7 +314,7 @@ li {
   border-radius: 10px;
   color: var(--accent);
   text-decoration: none;
-  font-weight: bold;
+  
   transition: background 0.2s;
 }
 
@@ -438,7 +435,7 @@ li {
   z-index: 3;
   font-size-adjust: 0.45;
   pointer-events: none;
-  font-weight: bold;
+  
   white-space: pre-line
 }
 

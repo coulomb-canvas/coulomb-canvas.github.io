@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 87 subtopics
-// Generated: 2026-03-30T08:31:00.094Z
+// Generated: 2026-03-30T09:11:46.967Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -14172,7 +14172,7 @@ const subtopics = {
       1 & a \\leq x_0 \\leq b \\ , \\\\ 
       0 & x_0 < a \\text{ or } x_0 > b \\ . 
       \\end{cases} \\] </div>
-      <div class=eqn> \\[ \\int_{-\\infty}^{+\\infty} \\delta(x - x_0) f(x) \\, dx = f(x_0) \\ . \\] </div>
+      <div class=eqn> \\[ \\int_{-\\infty}^{+\\infty} \\delta(x - x_0) f(x) \\, dx = f(x_0) f*s\\ . \\] </div>
     `
   }
 };

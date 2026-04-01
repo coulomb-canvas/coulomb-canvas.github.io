@@ -268,11 +268,17 @@ function generateFloatingNav() {
     btn.textContent = heading.textContent;
 
       if (heading.tagName === 'H3') {
-        btn.classList.add('nav-h3');   // style for H3
+        if (heading.textContent === 'TL;DR') {
+          btn.classList.add('nav-tldr');   // style for title
+        } else {
+          btn.classList.add('nav-h3')};   // style for H3
       } else if (heading.tagName === 'H4') {
         btn.classList.add('nav-h4');   // style for H4
       } else if (heading.tagName === 'H1') {
         btn.classList.add('nav-top');   // style for title
+        btn.textContent = 'BACK TO THE TOP'
+      } else if (heading.textContent === 'TL;DR') {
+        btn.classList.add('nav-tldr');   // style for title
         btn.textContent = 'BACK TO THE TOP'
       }
     

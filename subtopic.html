@@ -9,18 +9,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-  </script>
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+
+
+    }
+  };
+</script>
+<script id="MathJax-script"
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.1.1/tex-mml-chtml.min.js">
+</script>
+
 </head>
 <body>
   <header>
     <h1 id="subtopic-title">Loading...</h1>
     <div class="back-links">
       <a href="index.html">← Back to Topics</a>
-      |   
-      <a id="back-to-topic" href="#">  ← Back to Subtopics</a>
+      |
+      <a id="back-to-topic" href="#">← Back to Subtopics</a>
     </div>
-
-
   </header>
 
   <main class="subtopic-page" id="subtopic-content">
@@ -29,14 +41,13 @@
 
   <script src="data/subtopics.js"></script>
   <script src="data/topics.js"></script>
+
   <div id="floating-nav-container">
     <button id="nav-toggle">☰</button>
     <div id="floating-nav"></div>
   </div>
 
   <main id="subtopic-list" class="subtopic-list"></main>
-
-
 
   <div id="navigation-buttons" style="display: flex; justify-content: space-between; margin-top: 40px;">
     <button id="back-subtopic-button">Back</button>
@@ -46,9 +57,7 @@
   <div id="bottom-shadow"></div>
   <div id="bottom-subtopic-name">Hello</div>
 
-
-
-  <script>
+  <script> {
     const param = new URLSearchParams(window.location.search).get("subid");
     const sub = subtopics[param];
 
@@ -110,10 +119,6 @@
         headings.forEach(h3 => observer.observe(h3));
       });
 
-      
-      if (window.MathJax) {
-        MathJax.typeset();
-      }
 
      // p.setAttribute("contenteditable", "true");  // 👈 editable
       // p.className = "editable-text";
@@ -124,6 +129,10 @@
 
       main.appendChild(p);
       //main.appendChild(img);
+      if (window.MathJax) {
+        MathJax.typesetPromise();
+      }
+      
     } else {
       document.getElementById("subtopic-title").textContent = "Subtopic not found.";
     }
@@ -360,19 +369,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-      
+}
 
   </script>
   <script src="script.js"></script>
-
-  
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
-  
-  
 </body>
 </html>

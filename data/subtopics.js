@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 87 subtopics
-// Generated: 2026-03-30T09:11:46.967Z
+// AUTO-GENERATED FILE - Contains 89 subtopics
+// Generated: 2026-04-01T04:41:21.102Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 87 existing hand-written entries
-//   - 25 Markdown-generated entries
+//   - 89 existing hand-written entries
+//   - 27 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -2243,12 +2243,12 @@ const subtopics = {
           measures what's truly passing through.
       </p>
 
-      <h3>Parameterization</h3>
+      <h3>Parameterisation</h3>
       <p>
           This is the main boss battle, no question.
       </p>
       <p>
-          "<strong>Parameterization</strong>" is just a fancy word for describing your complex path or surface 
+          "<strong>Parameterisation</strong>" is just a fancy word for describing your complex path or surface 
           using one or two simple variables (usually <em>t</em>, or <em>u</em> and <em>v</em>).
       </p>
       <ul>
@@ -2256,7 +2256,7 @@ const subtopics = {
               <strong>For Line Integrals:</strong> You need to describe your entire path, \\((x(t), y(t), z(t))\\), 
               using a single variable <em>t</em>. For a straight line or a circle, it's easy. For some weird, 
               wiggly path, trying to find the right equations can be a proper nightmare. If you mess up the 
-              parameterization, every single step that follows will be wrong.
+              parameterisation, every single step that follows will be wrong.
           </li>
           <li>
               <strong>For Surface Integrals:</strong> This is even harder. You now need <em>two</em> variables, 
@@ -3047,7 +3047,7 @@ const subtopics = {
       </ul>
 
       <p>Now, acceleration is <strong>not</strong> a force — it’s the <em>result</em> of unbalanced 
-      forces. So we don’t draw it as a single arrow; we show it as a double arrow to emphasize it’s the outcome.</p>
+      forces. So we don’t draw it as a single arrow; we show it as a double arrow to emphasise it’s the outcome.</p>
 
       <p>To find the acceleration, we resolve forces parallel and perpendicular to the slope:</p>
 
@@ -8042,7 +8042,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\Phi_E = \\oint_S \\vec{E} \\cdot d\\vec{S} \\]
+            \\[ \\Phi_E = \\oiint_S \\vec{E} \\cdot d\\vec{S} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 1c: Flux V3
@@ -8062,7 +8062,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac{ Q_{\\text{encl}} }{ \\varepsilon_0 } \\]
+            \\[ \\oiint_S \\vec{E} \\cdot d\\vec{S} = \\frac{ Q_{\\text{encl}} }{ \\varepsilon_0 } \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2a: Gauss' Law
@@ -8079,7 +8079,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac1{ \\varepsilon_0 } \\iiint_V \\rho \\; dV \\]
+            \\[ \\oiint_S \\vec{E} \\cdot d\\vec{S} = \\frac1{ \\varepsilon_0 } \\iiint_V \\rho \\; dV \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2b: Gauss' Law V2
@@ -8114,7 +8114,7 @@ const subtopics = {
       <ol>
         <li>Choose a Gaussian surface that matches the symmetry.</li>
         <li>Make sure \\( \\vec{E} \\) is constant and perpendicular to the surface.</li>
-        <li>Calculate \\( \\oint \\vec{E} \\cdot d\\vec{A} \\), which is basically just
+        <li>Calculate \\( \\oiint \\vec{E} \\cdot d\\vec{A} \\), which is basically just
           \\( E \\times \\text{surface area} \\)</li>
         <li>Find \\( Q_{\\text{encl}} \\)</li>
         <li>Solve for \\( E \\)</li>
@@ -8133,7 +8133,7 @@ const subtopics = {
       <h3>TL;DR</h3>
 
       <ul>
-        <li>Gauss’s Law: \\( \\oint \\vec{E} \\cdot d\\vec{A} = Q_{\\text{encl}} / \\epsilon_0 \\)</li>
+        <li>Gauss’s Law: \\( \\oiint \\vec{E} \\cdot d\\vec{A} = Q_{\\text{encl}} / \\epsilon_0 \\)</li>
         <li>Use for symmetric charge distributions</li>
         <li>Choose Gaussian surface wisely</li>
         <li>Flux depends only on enclosed charge</li>
@@ -8674,7 +8674,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\oint \\vec{B} \\cdot d\\vec{S} = 0 \\]
+            \\[ \\oiint \\vec{B} \\cdot d\\vec{S} = 0 \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3: The Solenoidal Condition
@@ -10597,7 +10597,7 @@ const subtopics = {
       <p>Where \\( R \\) is a constant. And not just any old constant, but apparently a quite important one, called the 
       <strong>Rydberg constant</strong>, and it turns out to be about 13.6 eV. If you did AQA physics at A-level (like me!!!),
       you might recognise this number from when we did the electron excitation line things. As you should, 'cus this is 
-      <em>exactly</em> (ok, fine, not <em>eXaCtLy</em>, but you get the point...) the ionization energy of hydrogen. So 
+      <em>exactly</em> (ok, fine, not <em>eXaCtLy</em>, but you get the point...) the ionisation energy of hydrogen. So 
       yes, this formula actually works.</p>
 
       <p>And that’s not just lucky. This a pretty <strong>sexy</strong> result. Because now we have a simple formula that explains 
@@ -10628,7 +10628,7 @@ const subtopics = {
       'smart arse' now, don't you? Can't believe <em>you'd</em> say all that...</p>
 
       <p>Now, here’s the genius part. Remember how a few minutes ago, we looked at Bohr's claim that angular momentum is 
-      quantized: </p>
+      quantised: </p>
 
       <div class=eqn> \\[ l = rp = n\\hbar \\] </div>
 
@@ -10646,10 +10646,10 @@ const subtopics = {
       <div class=eqn> \\[ 2\\pi r = n \\cdot \\frac{h}{p} \\quad \\Rightarrow \\quad p = \\frac{nh}{2\\pi r} = \\frac{n\\hbar}{r} \\] </div>
 
       <p>And of course if we multiply both sides by \\( r \\), we get \\( rp = n\\hbar \\), which is <strong>exactly</strong> 
-      Bohr’s quantization condition!</p>
+      Bohr’s quantisation condition!</p>
 
       <p>So de Broglie didn’t just suggest particles are waves — he gave us a <strong>reason</strong> why angular
-      momentum is quantized. It’s not arbitrary. It’s because <strong>waves don’t like to make a mess</strong>.</p>
+      momentum is quantised. It’s not arbitrary. It’s because <strong>waves don’t like to make a mess</strong>.</p>
 
       <h3>When Do Quantum Effects Matter?</h3>
 
@@ -14172,7 +14172,339 @@ const subtopics = {
       1 & a \\leq x_0 \\leq b \\ , \\\\ 
       0 & x_0 < a \\text{ or } x_0 > b \\ . 
       \\end{cases} \\] </div>
-      <div class=eqn> \\[ \\int_{-\\infty}^{+\\infty} \\delta(x - x_0) f(x) \\, dx = f(x_0) f*s\\ . \\] </div>
+      <div class=eqn> \\[ \\int_{-\\infty}^{+\\infty} \\delta(x - x_0) f(x) \\, dx = f(x_0) \\ . \\] </div>
+    `
+  },
+
+  "ft": {
+    title: "The Fourier Transform",
+    content: `
+      <h3>Fourier Series</h3>
+      <p>The fourier series is an old friend of ours, which allows us to take an ugly function and rewrite it in terms of a large sum of sines and cosines.</p>
+      <p>Let's say you are making jollof rice.</p>
+      <p>Trying to map out exactly which atoms and which molecules go where would take a long long <em>long</em> time, and overall wouldn't be very practical.</p>
+      <p>However, if instead I tell you how much of each ingredient you need to add to make my jollof rice</p>
+      <div class=eqn> \\[ f(x) = \\sum^\\infty_{n=0} A_n F_n(x)  \\] </div>
+      <p>The \\( A_n \\) is the amount, and the \\( F_n(x) \\) is the ingredient, or function in this case.</p>
+      <p>Hopefully you remember what we used last time: sine waves and cosine waves.</p>
+      <p>The orthonormality condition</p>
+      <div class=eqn> \\[ \\int_{x_0}^{x_1} F_m^*(x) F_n(x) \\, dx = \\delta_{nm}  \\] </div>
+      <p>This might seem like a scary equation but it respresents something quite simple.</p>
+      <div class=eqn> \\[ A_n = \\int_{x_0}^{x_1} F_m^*(x) f(x) \\, dx  \\] </div>
+      <p>Think of the Kronecker delta as a kind of security guard. Go back to my jollof rice example, and let's say I have a list of ingredients which one needs to make it, but I'm not gonna share it with you, because I'm stingy. However, the Kronecker Delta is a good friend of mine, so she can have the recipe.</p>
+      <p>You go to the Kronecker Delta and ask her if there are tomatoes in the recipe. She then pulls out a form with this written on it:</p>
+      <div class=eqn> \\[ F_m^*(x) = \\text{_______}  \\] </div>
+      <p>You then take the form and write in the ingredient you want.</p>
+      <div class=eqn> \\[ F_m^*(x) = \\text{tomatoes}  \\] </div>
+      <p>KD then looks at that particular part of the recipe. If there are any tomatoes, she comes back with a green flag (i.e. a 1). But if there are none, she returns with a red flag (i.e. a 0).</p>
+      <p>Of course you could cheat, and have KD check if there</p>
+      <p>...</p>
+      <p>Also remember we can represent sines and cosines using exponentials:</p>
+      <div class=eqn> \\[ f(x) = \\sum^{+\\infty}_{n=-\\infty} C_n e^{ik_nx}  \\] </div>
+      <p>But there is one slight problem. The fourier series is designed to approximate a <em>repeating function</em>. So every \\( 2L \\) interval, the function will repeat.</p>
+      <p>But this isn't always what we want. What if we want only one rendition (i.e. an <em>infinite interval</em>)? Something like a single clap.</p>
+      <h3>Fourier Transform</h3>
+      <div class=eqn> \\[ C(k) = \\frac{1}{L} \\int_{-L/2}^{L/2} f(x) \\, e^{-ikx} \\, dx \\ .  \\] </div>
+      <p>Also</p>
+      <div class=eqn> \\[ \\Delta k = \\frac{2\\pi}L  \\] </div>
+      <p>As the length becomes infinite, the wavenumber \\( k \\) becomes smaller and smaller, until it becomes practically 0. At that point, our fourier series no longer becomes a simple series, but now a continuous function.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align*}
+                  \\tilde{f}(k) &= \\mathcal{F}(f(x)) \\\\[6pt] &= \\int_{-\\infty}^{+\\infty} f(x) \\, e^{-ikx} \\, dx \\end{align*}\\] <hr>\\[
+                  \\begin{align*}f(x) &= \\mathcal{F}^{-1}(\\tilde{f}(k)) \\\\[6pt] &= \\frac{1}{2\\pi} \\int_{-\\infty}^{+\\infty} \\tilde{f}(k) \\, e^{ikx} \\, dk \\ .
+                  \\end{align*} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Fourier Transform
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Hey, cool letter! That's the /mathcal{F}!</p>
+      <p>So what does this fourier transform do for us, you ask?</p>
+      <p>Think of yourself like a superhero, with the special ability called &quot;F-Vision&quot;. This is the ability to see spirits which aren't visible to the physical eye. The physical realm represents the function in real space (\\( f(x) \\)), and the spiritual realm represents the frequency space (\\( \\tilde{f}(k) \\)).</p>
+      <p>Here are some examples:</p>
+      <h4>Example 1: f(x) = 1</h4>
+      <p>There is a big wall</p>
+      <p><em><strong>F-Vision: Activate!!</strong></em></p>
+      <div class=eqn> \\[ \\begin{align*}
+          \\tilde{f}(k) &= \\int_{-\\infty}^{+\\infty} f(x)e^{-ikx} \\\\[6pt] &= \\int_{-\\infty}^{+\\infty} e^{-ikx} \\, dx \\\\[6pt] &= 2\\pi \\, \\frac{1}{2\\pi} \\int_{-\\infty}^{+\\infty} e^{-i(k-0)x} \\, dx \\\\[6pt] &= 2\\pi \\, \\delta(k) \\ . 
+       \\end{align*} \\] </div>
+      <h3>Properties of the Fourier transform</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\mathcal{F}(af(x) + bg(x)) = a \\mathcal{F}(f(x)) + b \\mathcal{F}(g(x)) \\ .  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\mathcal{F}(f(x+a)) = e^{ika} \\mathcal{F}(f(x)) .  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Parseval's theorem</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\int_{-\\infty}^{+\\infty} |u(x)|^2 \\, dx = \\frac{1}{2\\pi} \\int_{-\\infty}^{+\\infty} |\\tilde{u}(k)|^2 \\, dk \\ .  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\int_{-\\infty}^{+\\infty} f^*(x) g(x) \\, dx = \\frac{1}{2\\pi} \\int_{-\\infty}^{+\\infty} \\tilde{f}^*(k) \\tilde{g}(k) \\, dk \\ , \\] </div>
+      <h3>Convolution</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ f * g(x) = \\int_{-\\infty}^{+\\infty} f(y) g(x - y) \\, dy \\ .  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\mathcal{F}(f * g(x)) = \\mathcal{F}(f(x)) \\mathcal{F}(g(x)) = \\tilde{f}(k) \\tilde{g}(k) .  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "optics": {
+    title: "Optics",
+    content: `
+      <p><em>The fight I fought to finally get that double closed integral symbol to render... and it turns out the solution was just to switch from MathJax 3 to MathJax 4?!</em></p>
+      <h3>Plane waves</h3>
+      <p>A plane wave</p>
+      <div class=eqn> \\[ f(x, t) = Ae^{±i(kx±\\omega t)} \\] </div>
+      <p>Then by using the dispersion relation we had last time, we learnt that \\( \\omega^2 = c^2k^2 \\), meaning \\( \\omega = ck \\). Plugging that into out formula gives us</p>
+      <div class=eqn> \\[ f(x, t) = Ae^{±ik(x±ct)} \\] </div>
+      <p>We can generalise this to 3D:</p>
+      <div class=eqn> \\[ f(\\vec{r}, t) = Ae^{i(\\vec{k}\\cdot\\vec{r}±\\omega t)} \\] </div>
+      <p>In case you are somewhat new here and you are wondering how the hell \\( k \\), which basically measures how squished together the wave is (so it's wavelength essentially), can have a direction, it doesn't technically. If you look closely, you'll notice that the plus-or-minus that was before the \\( i \\), which signifies the direction of the wave, is now gone. That's because the direction of the wave is absorbed into \\( \\vec{k} \\).</p>
+      <p>We can also take the fourier transform</p>
+      <div class=eqn> \\[ \\begin{align}
+      \\tilde{f}(\\omega, k) &= \\mathcal{F}(f(x, t)) \\\\
+      &= \\iint^{+\\infty}_{-\\infty} f(x, t)e^{-i(kx-\\omega t)} 
+      \\end{align} \\] </div>
+      <p>So with our function:</p>
+      <div class=eqn> \\[ \\begin{align}
+      \\tilde{f}(\\omega, k) &= \\iint^{+\\infty}_{-\\infty} Ae^{-i(k_0x - \\omega_0 t)} e^{-i(kx-\\omega t)} \\\\
+      &= \\iint^{+\\infty}_{-\\infty} Ae^{-i\\left[(k-k_0)x - (\\omega-\\omega_0) t\\right]} \\\\
+      &= A \\int^{+\\infty}_{-\\infty} e^{-i(k-k_0)x} \\ dx \\; \\int^{+\\infty}_{-\\infty} e^{-i(\\omega-\\omega_0) t} \\ dt \\\\
+      \\end{align} \\] </div>
+      <p>Now remember the definition of the delta function. That means</p>
+      <div class=eqn> \\[ = 4\\pi^2 A \\ \\delta(k-k_0) \\ \\delta(\\omega-\\omega_0) \\] </div>
+      <p>Well now we have put ourselves into an interesting spot. We know that a light wave can be written mathematically as a plane wave, \\(  f(x, t) = Ae^{±i(kx±\\omega t)} \\). But what happens to \\( f(x, t) \\) during diffraction?</p>
+      <h3>Huygen's principle</h3>
+      <p>Each point in a coherent wave front can be regarded as a secondary source of waves, i.e. a point source. The new wave front is the superposition of all secondary point sources.</p>
+      <p>Unlike plane waves which propagate in a single direction \\( \\hat{k} \\), <em>point sources</em> are like little circle-shaped waves which propagate radially outwards. Like dropping a pebble in water.</p>
+      <p>Thanks to our good friend <em>energy conservation</em>, the total energy within that circle (or sphere depending on what we are working with) doesn't change. That means if you integrate the intensity across the whole sphere doesn't change:</p>
+      <div class=eqn> \\[ \\begin{align}
+      \\oiint I(r) dS &= 4\\pi r^2I(r)\\\\[6pt]
+      &= \\text{constant}
+      \\end{align} \\] </div>
+      <p>We can consider point sources in 3 dimensions. First the wave equation:</p>
+      <div class=eqn> \\[ \\frac{\\partial^2 u(t,r)}{\\partial t^2} = c^2 \\frac{1}{r^2} \\frac{\\partial}{\\partial r} \\left[ r^2 \\frac{\\partial u(t,r)}{\\partial r} \\right] \\ . \\] </div>
+      <p>Going back, we know \\( U(r, t) \\) must be inversely proportional to the distance</p>
+      <div class=eqn> \\[ u(r, t) = \\frac{v(r, t)}{r} \\ . \\] </div>
+      <p>Plug that in</p>
+      <div class=large-eqn> \\[ \\begin{align*}
+      \\frac{1}{r} \\frac{\\partial^2 v(t,r)}{\\partial t^2} &= c^2 \\frac{1}{r^2} \\frac{\\partial}{\\partial r} \\left[ r^2 \\frac{\\partial}{\\partial r} \\left( \\frac{v(t,r)}{r} \\right) \\right] \\ , \\\\[6pt]
+      &= c^2 \\frac{1}{r^2} \\frac{\\partial}{\\partial r} \\left[ r \\frac{\\partial v(t,r)}{\\partial r} - v(t,r) \\right] \\ , \\\\[6pt]
+      &= c^2 \\left[ \\frac{1}{r} \\frac{\\partial^2 v(t,r)}{\\partial r^2} + \\frac{1}{r^2} \\frac{\\partial v(t,r)}{\\partial r} - \\frac{1}{r^2} \\frac{\\partial v(t,r)}{\\partial r} \\right] \\ , \\\\[6pt]
+      &= c^2 \\frac{1}{r} \\frac{\\partial^2 v(t,r)}{\\partial r^2} \\ .
+      \\end{align*} \\] </div>
+      <p>That gives</p>
+      <div class=eqn> \\[ u(r, t) = \\frac{A}{r} e^{i(kr - \\omega t)} = \\frac{A}{r} e^{ik(r - ct)} \\ . \\] </div>
+      <h3>Diffraction</h3>
+      <h4>Single Pinhole</h4>
+      <p>If we have a single pinhole, then we know that only a single wave can go through it. That means the total wave is just:</p>
+      <div class=eqn> \\[ u(r, t) = \\frac{A}{r} e^{i(kr - \\omega t)} \\ . \\] </div>
+      <p>Then to get the intensity we just look for the modulus squared:</p>
+      <div class=eqn> \\[ I(r) = |u(r, t)|^2 = \\frac{A^2}{r^2} e^{i(kr - \\omega t)} e^{-i(kr - \\omega t)} \\ . \\] </div>
+      <h4>Double Pinhole</h4>
+      <p>If we have two pinholes, then two waves can go through it. That means the total wave is the sum of two general waves:</p>
+      <div class=eqn> \\[ u(r, t) = \\frac{A_1}{r_1} e^{i(kr_1 - \\omega t)} + \\frac{A_2}{r_2} e^{i(kr_2 - \\omega t)} \\ . \\] </div>
+      <p>Te get the intensity we do the same modulus squared thingy, except we now have a slightly uglier equation to work with.</p>
+      <h3>Far-field Aperture</h3>
+      <p>Since we are so close, we have to consider...</p>
+      <p>If we move far enough away, such that the distance between the aperture screen and the fringe screen is waaaaay bigger than the distance between the apertures, we can make some nice approximations, which make the maths a lot easier.</p>
+      <p>An <em>aperture function</em> is a function which describes the shape of the hole, \\( a(\\vec{r}') \\). It's zero where there is no hole and non-zero where there is a hole.</p>
+      <div class=eqn> \\[
+      u(t, \\vec{r}) \\approx \\frac{1}{D} e^{i(k|\\vec{r}| - \\omega t)} \\iint_{-\\infty}^{+\\infty} a(\\vec{r}') e^{-i\\vec{k} \\cdot \\vec{r}'} \\, dx' \\, dy' \\ .
+      \\] </div>
+      <p>Hey, does that right side look familiar to you?</p>
+      <p>Well it should, it's the fourier transform</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ u(\\vec{r}, t) \\approx \\frac{1}{D} e^{i(k|\\vec{r}| - \\omega t)} \\tilde{a}(\\vec{k}')  \\ . \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>So the way we find these interference patterns is:</p>
+      <ul>
+      <li>Define \\( a(\\vec{r}') \\)</li>
+      <li>Use the fourier transform to turn it into \\( \\tilde{a}(\\vec{k}) \\)</li>
+      <li>Divide it by \\( D \\) and then times it by a plane wave <span class=formula-emph>\\( \\mathbf{\\left[e^{i(k|\\vec{r}| - \\omega t)}\\right]}\\)</span>, which gives you \\( u \\).</li>
+      <li>Take the modulus squared to get the intensity</li>
+      </ul>
+      <h3>Different shapes</h3>
+      <h4>Square Aperture</h4>
+      <p>Firstly, we need to determine our aperture function.</p>
+      <div class=eqn> \\[ \\begin{align*}
+      a(\\vec{r}') = \\begin{cases} 
+      1 & |x'| \\le \\frac{b}2 \\text{ or } |y'| \\le \\frac{b}2 \\\\ 
+      0 & \\text{otherwise} \\ . 
+      \\end{cases} \\end{align*} \\] </div>
+      <p>Now with that out of the way, we need to calculate the fourier transform. And word of warning... there's no cute little trick to this. These fourier transforms are long as hell, and you kinda just have to slowly work through them.</p>
+      <p>Now usually I would just stick the full thing in between a \\\\begin{align} and an \\\\end{align}. But since these derivations are long and painful, I'll work through the pain with you!</p>
+      <p>Starting with this square aperture.</p>
+      <p><strong>STEP 1: FIND THE FOURIER TRANSFORM</strong></p>
+      <p>So this is what we want:</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\iint^{+\\infty}_{-\\infty} a(\\vec{r}') e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' \\] </div>
+      <p>To start, let's split up that double integral. The bounds are in principle from negative infinity to positive infinity, but the actual hole is only from \\( \\frac{b}2 \\) to \\( -\\frac{b}2 \\), so we can replace them accordingly. Also, since the aperture function is just one here, we can replace it, meaning it effectively vanishes:</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' \\] </div>
+      <p>We know that the wavenumber vector is given by \\( \\vec{k} = k \\hat{k} \\), where \\( \\hat{k} \\) is just the direction at which the wave propogates.</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-ik \\frac{\\vec{r}\\cdot\\vec{r}'}{D}} dx' dy' \\] </div>
+      <p>Then remember that \\( \\vec{r} = \\vec{x} + \\vec{y} \\), and \\( \\vec{r}' = \\vec{x}' + \\vec{y}' \\). That means we can split into \\( e^{-i\\frac{kx}{D}x'} e^{-i\\frac{ky}{D}y'} \\).</p>
+      <p>Why is this useful info? Since \\( x \\) and \\( y \\) are completely independent variables, you can integrate them completely separately:</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{kx}{D}x'} dx' \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{ky}{D}y'} dy' \\] </div>
+      <p>And now these are much nicer integrals to work with! Just be careful though, we are integrating with respect to \\( x' \\) and \\( y' \\), not just regular \\( x \\) and \\( y \\). That means regular \\( x \\) and \\( y \\) are basically being treated as constants in this integration.</p>
+      <div class=eqn> \\[ \\begin{align*}
+      \\tilde{a}(\\vec{k}) &= \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{kx}{D}x'} dx' \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{ky}{D}y'} dy' \\\\[6pt]
+      &= \\Bigg[\\frac{D}{-ikx} e^{-i\\frac{k}{D}x'} \\Bigg]_{-\\frac{b}2}^{+\\frac{b}2} \\; \\Bigg[\\frac{D}{-iky} e^{-i\\frac{k}{D}y'} \\Bigg]_{-\\frac{b}2}^{+\\frac{b}2} \\\\[6pt]
+      &= \\frac{D}{ikx} \\left[ e^{i\\frac{kb}{2D}x} - e^{-i\\frac{kb}{2D}x} \\right] \\; \\frac{D}{iky} \\left[ e^{i\\frac{kb}{2D}y} - e^{-i\\frac{kb}{2D}y} \\right] \\; .
+      \\end{align*} \\] </div>
+      <p>Now we've reached this quite ugly function, but we can still nice-ify it a bit. Remember that</p>
+      <div> \\[ \\sin{(ax)} = \\frac{e^{iax}+e^{-iax}}{2i}, \\quad \\sin{(ay)} = \\frac{e^{iay}+e^{-iay}}{2i}. \\] </div>
+      <p>Hey, that looks a bit like the term in the brackets, except the \\( a \\) has been replaced with \\( \\frac{kb}{2D} \\). Also, the term in the brackets isn't over two. So that means we just multiply the \\( \\sin{ax} \\) by \\( 2i \\) to get the term in the brackets. So we can now just stick that in:</p>
+      <div class=eqn> \\[ 
+      \\tilde{a}(\\vec{k}) = \\frac{2D}{kx} \\sin \\left( \\frac{kb}{2D}x \\right) \\; \\frac{2D}{ky} \\sin \\left( \\frac{kb}{2D}y \\right) \\; .\\] </div>
+      <p>And then</p>
+      <div class=eqn> \\[ 
+      u(\\vec{r}, t) \\approx \\frac{b^2}{D} e^{i(k|\\vec{r}| - \\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kb}{2D} y \\right) \\ .\\] </div>
+      <p>And to get the intensity, all you've gotta do is square it:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ I(\\vec{r}) \\approx \\frac{b^4}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} y \\right) \\ . \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Rectangular Aperture</h4>
+      <p>Once again, we need to determine the aperture function. It's similar to that of the square, except the \\( x \\) and the \\( y \\) are now different.</p>
+      <div class=eqn> \\[ \\begin{align*}
+      a(\\vec{r}') = \\begin{cases} 
+      1 & |x'| \\le \\frac{b}2 \\text{ or } |y'| \\le \\frac{h}2 \\\\ 
+      0 & \\text{otherwise} \\ . 
+      \\end{cases} \\end{align*} \\] </div>
+      <p>And we could go through that long ass derivation again, but if you pay attention, you notice that it's the same thing, except instead of two \\( b \\)'s (and a \\(b^2\\)), it just becomes a \\( b \\) and an \\( h \\), such that we now have:</p>
+      <div class=eqn> \\[ 
+      u(\\vec{r}, t) \\approx \\frac{bh}{D} e^{i(k|\\vec{r}| - \\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) \\ .\\] </div>
+      <p>And therefore:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ I(\\vec{r}) \\approx \\frac{b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) \\ . \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Young’s double slit apertures</h4>
+      <p>Bet you didn't see this coming! Or at least I didn't. If you have two of these rectangular apertures, you end up with Young's Double slit experiment! Ain't that cool?</p>
+      <p>Using convolution, we can think of this as a single rectangle function being convolved onto two delta functions at the positions of the two slits.</p>
+      <div class=eqn> \\[ a(\\vec{r}') = a_0(\\vec{r}') * G(\\vec{r}') \\] </div>
+      <div class=eqn> \\[ G(\\vec{r}') = \\left[ \\delta \\left( \\vec{r}' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] \\ , \\] </div>
+      <p>We know that, to get the fourier transform of aa convolution, we simply take the product of each function fourier transformed.</p>
+      <div class=eqn> \\[ \\begin{align} \\mathcal{F}(a(\\vec{r}')) &= \\mathcal{F}(a_0(\\vec{r}') * G(\\vec{r}')) \\\\[6pt]
+      &= \\tilde{a}_0(\\vec{k}) \\tilde{G}(\\vec{k}) \\end{align} \\] </div>
+      <p>We already know what \\( \\tilde{a}_0(\\vec{k}) \\) is from before:</p>
+      <div class=eqn> \\[ 
+      \\tilde{a}_0(\\vec{k}) \\approx bh \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) \\ .\\] </div>
+      <p>We need to calculate the fourier transform of \\( G(\\vec{r}') \\)</p>
+      <div class=large-eqn> \\[ \\tilde{G}(\\vec{k}) = \\iint^{+\\infty}_{-\\infty} \\left[ \\delta \\left( \\vec{r}' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy'\\] </div>
+      <p>We separate the x's and y's</p>
+      <div class=large-eqn> \\[ \\tilde{G}(\\vec{k}) = \\int^{+\\infty}_{-\\infty} \\left[ \\delta \\left( x' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( x' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] e^{-ik_x x'} dx' \\int^{+\\infty}_{-\\infty} \\delta(y') e^{-ik_y y'} dy'\\] </div>
+      <p>We know that if we have a delta function \\( \\delta(x-y) \\), and multiply it by a function \\( f(x) \\), before integrating the product over all space, it evaluates the function at \\( y \\). In our equation, we have three instances of this.</p>
+      <p>We are then left with:</p>
+      <div class=eqn> \\[ \\tilde{G}(\\vec{k}) = e^{i\\frac{k_x \\Delta s}{2}} + e^{-i\\frac{k_x \\Delta s}{2}} \\] </div>
+      <p>Then</p>
+      <div class=eqn> \\[ \\tilde{G}(\\vec{k}) = 2\\cos{\\frac{k_x \\Delta s}{2}} \\] </div>
+      <p>That took a while, but now we're at the easy bit. Like I said a while ago, if you want to get the fourier transformation of a convolution, all you have to do is calculate each function's individual fourier transform and then multiply them together.</p>
+      <div class=large-eqn> \\[ \\begin{align} \\tilde{a}(\\vec{k}') &= \\tilde{a}_0(\\vec{k}) \\tilde{G}(\\vec{k}) \\\\[6pt]
+      &= 2 bh \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) \\cos{\\left( \\frac{k_x \\Delta s}{2} \\right) } \\end{align} \\] </div>
+      <p>Now calculating \\( u \\) is easy:</p>
+      <div class=large-eqn> \\[ u(\\vec{r}, t) = \\frac{2bh}{D} e^{i(kr-\\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) \\cos{\\left( \\frac{k_x \\Delta s}{2} \\right) }  \\] </div>
+      <p>And finally we just mod-square everything to get the intensity:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ I(\\vec{r}) \\approx \\frac{4b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) \\cos^2{\\left( \\frac{k\\Delta s}{2D} x \\right)}\\ . \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Diffraction grating</h4>
+      <div class=eqn> \\[ G(\\vec{r}') = \\sum^N_{n=1} \\left[ \\delta \\left( \\vec{r}' + n\\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - n\\frac{\\Delta s}{2} \\hat{x} \\right) \\right] \\ . \\] </div>
+      <h3>Circular Aperture</h3>
+      <div class=eqn> \\[ \\begin{align*}
+      a(\\vec{r}') = \\begin{cases} 
+      1 & |\\vec{r}'| \\le R \\ , \\\\ 
+      0 & |\\vec{r}'| > R \\ . 
+      \\end{cases} \\end{align*} \\] </div>
+      <h3>TL;DR</h3>
+      <p>Now do you have to memorise these derivations?</p>
+      <p>...noooooo, I don't think? But either way, you should practice them a lot</p>
     `
   }
 };
@@ -14200,11 +14532,17 @@ function generateFloatingNav() {
     btn.textContent = heading.textContent;
 
       if (heading.tagName === 'H3') {
-        btn.classList.add('nav-h3');   // style for H3
+        if (heading.textContent === 'TL;DR') {
+          btn.classList.add('nav-tldr');   // style for title
+        } else {
+          btn.classList.add('nav-h3')};   // style for H3
       } else if (heading.tagName === 'H4') {
         btn.classList.add('nav-h4');   // style for H4
       } else if (heading.tagName === 'H1') {
         btn.classList.add('nav-top');   // style for title
+        btn.textContent = 'BACK TO THE TOP'
+      } else if (heading.textContent === 'TL;DR') {
+        btn.classList.add('nav-tldr');   // style for title
         btn.textContent = 'BACK TO THE TOP'
       }
     

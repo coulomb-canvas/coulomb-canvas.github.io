@@ -599,7 +599,14 @@ const topics = [
         subid: "stoke",
         title: "Stoke's Theorem",
       },
-      
+      {
+        subid: "ft",
+        title: "The Fourier Transform",
+      },
+      {
+        subid: "optics",
+        title: "Optics",
+      },
     ]
   },
   {

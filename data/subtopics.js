@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 89 subtopics
-// Generated: 2026-04-01T04:41:21.102Z
+// AUTO-GENERATED FILE - Contains 95 subtopics
+// Generated: 2026-04-11T06:32:42.058Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 89 existing hand-written entries
-//   - 27 Markdown-generated entries
+//   - 95 existing hand-written entries
+//   - 32 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -1124,10 +1124,10 @@ const subtopics = {
 
         <div class="hover-wrapper">
           <div class="formula-container">
-            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <p class="large-eqn">\\( x = r\\sin{\\theta}\\cos{\\phi}, \\quad 
+            <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+              \\[ x = r\\sin{\\theta}\\cos{\\phi}, \\quad 
                      y = r\\sin{\\theta}\\sin{\\phi},  \\quad 
-                     z = r\\cos{\\theta} \\)  </p>
+                     z = r\\cos{\\theta} \\] 
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 7: Cartesian to Spherical
@@ -1476,8 +1476,8 @@ const subtopics = {
 
       <div class="hover-wrapper">
         <div class="formula-container">
-          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p class="large-eqn">\\[f(x) = A_0 + A_1(x-a) + A_2(x-a)^2 + A_3(x-a)^3 + \\dots\\]</p>
+          <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \\[f(x) = A_0 + A_1(x-a) + A_2(x-a)^2 + A_3(x-a)^3 + \\dots\\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1a: Taylor Expansion</div><div class="formula-tooltip-desc">
@@ -2313,24 +2313,12 @@ const subtopics = {
 
       <p> Now that we have a value for \\( d\\vec{l} \\), we can solve the integral as usual: </p>
 
-      <div class=eqn> \\[
-        I = \\int_C \\vec{P} \\cdot d\\vec{l}
-      \\]
-
-      \\[
-        I = \\int_C \\left( 5y^2 \\hat{i} + 2xy \\hat{j} \\right) \\cdot \\left( dx \\hat{i} + dx \\hat{j} \\right)
-      \\]
-
-      \\[
-        I = \\int_C \\begin{pmatrix} 5x^2 \\\\ 2x^2 \\end{pmatrix} \\cdot \\begin{pmatrix} dx \\\\ dx \\end{pmatrix}
-      \\]
-
-      \\[
-        I = \\int_0^1 7x^2 dx 
-      \\]
-
-      \\[
-        I = \\frac73
+      <div class=eqn> \\[ \\begin{align}
+        I &= \\int_C \\vec{P} \\cdot d\\vec{l} \\\\[6pt]
+          &= \\int_C \\left( 5y^2 \\hat{i} + 2xy \\hat{j} \\right) \\cdot \\left( dx \\hat{i} + dx \\hat{j} \\right) \\\\[6pt]
+          &= \\int_C \\begin{pmatrix} 5x^2 \\\\ 2x^2 \\end{pmatrix} \\cdot \\begin{pmatrix} dx \\\\ dx \\end{pmatrix} \\\\[6pt]
+          &= \\int_0^1 7x^2 dx \\\\[6pt]
+          &= \\frac73 \\end{align}
       \\] </div>
 
       <h3>TL;DR</h3>
@@ -3564,7 +3552,7 @@ const subtopics = {
 
       <p>And the phase shift:</p>
 
-      <div class=eqn> \\[ 	an\\phi = -\\frac{\\gamma\\omega}{\\omega_0^2 - \\omega^2} \\] </div>
+      <div class=eqn> \\[ 	a_n\\phi = -\\frac{\\gamma\\omega}{\\omega_0^2 - \\omega^2} \\] </div>
 
       <p>Remember back not to long ago, I made sure to distinguish between \\(\\omega\\), how fast you are
       pushing the swingy thing, and \\(\\omega_0\\), how fast the swingy thing wants to be pushed? Well, what
@@ -5290,9 +5278,9 @@ const subtopics = {
 
       <div class="hover-wrapper">
           <div class="formula-container">
-            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-              <div class="large-eqn">\\[C_V=\\frac{1}{n} \\frac{dK_{\\text{tr}}}{dT}=\\frac{3}{2} R = 12.47 \\, 
-                \\text{J mol}^{-1}\\text{K}^{-1}. \\]</div>
+            <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+              \\[C_V=\\frac{1}{n} \\frac{dK_{\\text{tr}}}{dT}=\\frac{3}{2} R = 12.47 \\, 
+                \\text{J mol}^{-1}\\text{K}^{-1}. \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 6: The value of \\(\\;C_V\\)</div><div class="formula-tooltip-desc">
@@ -6318,9 +6306,9 @@ const subtopics = {
 
         <div class="hover-wrapper">
           <div class="formula-container" >
-            <div class="formula-box" style="text-align: center; color: var(--text); margin: auto; ">
-              <div class=large-eqn> \\[ U_{\\text{total}} = U_1 + U_2 = 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
-              \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\] </div>
+            <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto; ">
+              \\[ \\begin{align} U_{\\text{total}} &= U_1 + U_2 \\\\[6pt] &= 2A \\cos\\left(kx - \\omega t + \\frac{\\phi_1 + \\phi_2}{2}\\right) 
+              \\cos\\left(\\frac{\\phi_1 - \\phi_2}{2}\\right) \\end{align} \\]
             </div>
             <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula 4: Superposition of waves</div>
@@ -7527,7 +7515,7 @@ const subtopics = {
 
       <p><i>Don't worry about this too much now though, we'll look at it more later.</i></p>
 
-      <h3>The Rules of the Game: Ohm & Kirchhoff</h3>
+      <h3>The Rules of the Game: Ohm <strong>&</strong> Kirchhoff</h3>
 
       <p>To analyse these circuits, you need some rules. They're not fundamental laws of the universe, but they're 
       bloody useful.</p>
@@ -10409,8 +10397,8 @@ const subtopics = {
 
       <div class="hover-wrapper">
         <div class="formula-container">
-          <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <span class="large-eqn">\\[ \\lambda' - \\lambda = \\lambda_C(1-\\cos{\\theta}), \\quad \\text{where} \\quad \\lambda_C = \\frac{h}{m_0c} \\]</span>
+          <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \\[ \\lambda' - \\lambda = \\lambda_C(1-\\cos{\\theta}), \\quad \\text{where} \\quad \\lambda_C = \\frac{h}{m_0c} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2: Compton Scattering
@@ -13736,12 +13724,16 @@ const subtopics = {
       <p>Since \\(x\\) and \\(y\\) have got nothing to do with each other (in other words, they are <em>independant variables</em>), that means:</p>
       <div class=eqn> \\[  \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} = \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} = 0 \\] </div>
       <p>That means we end up with 3 simultaneous equations, which we can use to uncover the identity of our Lagrange multiplier \\( \\lambda \\).</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} &= 0 \\\\[6pt]
+          \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} &= 0 \\\\[6pt]
+          g(x, y) &= \\text{constant}
+      \\end{align} \\] </div>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\begin{align}
-                      \\frac{\\partial f}{\\partial x} + \\lambda \\frac{\\partial g}{\\partial x} &= 0 \\\\[6pt]
-                      \\frac{\\partial f}{\\partial y} + \\lambda \\frac{\\partial g}{\\partial y} &= 0 \\\\[6pt]
+                      \\nabla f + \\lambda \\nabla g &= 0 \\\\[6pt]
                       g(x, y) &= \\text{constant}
                   \\end{align} \\]
               </div>
@@ -14126,7 +14118,7 @@ const subtopics = {
       T(t) = C_k \\cos{(cκt)} + D_k \\sin{(cκt)} \\ .
       \\end{align*} \\] </div>
       <p>Which means we get:</p>
-      <div class=large-eqn> \\[ \\xi(t, x; \\alpha_S < 0) = \\int_{0}^{\\infty} \\left[ C_k \\cos(ckt) + D_k \\sin(ckt) \\right] \\left[ A_k \\cos(kx) + B_k \\sin(kx) \\right] \\, dk \\ . \\] </div>
+      <div class=llarge-eqn> \\[ \\xi(t, x; \\alpha_S < 0) = \\int_{0}^{\\infty} \\left[ C_k \\cos(ckt) + D_k \\sin(ckt) \\right] \\left[ A_k \\cos(kx) + B_k \\sin(kx) \\right] \\, dk \\ . \\] </div>
       <hr>
       <p>To get the full solution, we just add the three together. This sounds easy in theory until you actually realise how cooked our three solutions actually are:</p>
       <div class=eqn style="font-size:1.2vw; padding-left:0; padding-right:0"> \\[ \\begin{align*}
@@ -14142,7 +14134,7 @@ const subtopics = {
       <div class=eqn> \\[ \\xi(x, t; 0) = (A_0 t + B_0)(C_0 t + D_0) = 0 \\] </div>
       <h4>Case 2</h4>
       <p>That means:</p>
-      <div class=large-eqn> \\[
+      <div class=llarge-eqn> \\[
       \\xi(t, x; \\alpha_S > 0) = \\int_{0}^{\\infty} \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\left( A_{\\kappa} e^{\\kappa x} + B_{\\kappa} e^{-\\kappa x} \\right) \\, d\\kappa = 0\\ .
       \\] </div>
       <h4>Case 3</h4>
@@ -14335,41 +14327,41 @@ const subtopics = {
       &= \\text{constant}
       \\end{align} \\] </div>
       <p>We can consider point sources in 3 dimensions. First the wave equation:</p>
-      <div class=eqn> \\[ \\frac{\\partial^2 u(t,r)}{\\partial t^2} = c^2 \\frac{1}{r^2} \\frac{\\partial}{\\partial r} \\left[ r^2 \\frac{\\partial u(t,r)}{\\partial r} \\right] \\ . \\] </div>
+      <div class=eqn> \\[ \\frac{\\partial^2 u(t,r)}{\\partial t^2} = c^2 \\frac{1}{r^2} \\frac{\\partial}{\\partial r} \\left[ r^2 \\frac{\\partial u(t,r)}{\\partial r} \\right] . \\] </div>
       <p>Going back, we know \\( U(r, t) \\) must be inversely proportional to the distance</p>
-      <div class=eqn> \\[ u(r, t) = \\frac{v(r, t)}{r} \\ . \\] </div>
+      <div class=eqn> \\[ u(r, t) = \\frac{v(r, t)}{r} . \\] </div>
       <p>Plug that in</p>
       <div class=large-eqn> \\[ \\begin{align*}
       \\frac{1}{r} \\frac{\\partial^2 v(t,r)}{\\partial t^2} &= c^2 \\frac{1}{r^2} \\frac{\\partial}{\\partial r} \\left[ r^2 \\frac{\\partial}{\\partial r} \\left( \\frac{v(t,r)}{r} \\right) \\right] \\ , \\\\[6pt]
       &= c^2 \\frac{1}{r^2} \\frac{\\partial}{\\partial r} \\left[ r \\frac{\\partial v(t,r)}{\\partial r} - v(t,r) \\right] \\ , \\\\[6pt]
       &= c^2 \\left[ \\frac{1}{r} \\frac{\\partial^2 v(t,r)}{\\partial r^2} + \\frac{1}{r^2} \\frac{\\partial v(t,r)}{\\partial r} - \\frac{1}{r^2} \\frac{\\partial v(t,r)}{\\partial r} \\right] \\ , \\\\[6pt]
-      &= c^2 \\frac{1}{r} \\frac{\\partial^2 v(t,r)}{\\partial r^2} \\ .
+      &= c^2 \\frac{1}{r} \\frac{\\partial^2 v(t,r)}{\\partial r^2} .
       \\end{align*} \\] </div>
       <p>That gives</p>
-      <div class=eqn> \\[ u(r, t) = \\frac{A}{r} e^{i(kr - \\omega t)} = \\frac{A}{r} e^{ik(r - ct)} \\ . \\] </div>
+      <div class=eqn> \\[ u(r, t) = \\frac{A}{r} e^{i(kr - \\omega t)} = \\frac{A}{r} e^{ik(r - ct)} . \\] </div>
       <h3>Diffraction</h3>
       <h4>Single Pinhole</h4>
       <p>If we have a single pinhole, then we know that only a single wave can go through it. That means the total wave is just:</p>
-      <div class=eqn> \\[ u(r, t) = \\frac{A}{r} e^{i(kr - \\omega t)} \\ . \\] </div>
+      <div class=eqn> \\[ u(r, t) = \\frac{A}{r} e^{i(kr - \\omega t)} . \\] </div>
       <p>Then to get the intensity we just look for the modulus squared:</p>
-      <div class=eqn> \\[ I(r) = |u(r, t)|^2 = \\frac{A^2}{r^2} e^{i(kr - \\omega t)} e^{-i(kr - \\omega t)} \\ . \\] </div>
+      <div class=eqn> \\[ I(r) = |u(r, t)|^2 = \\frac{A^2}{r^2} e^{i(kr - \\omega t)} e^{-i(kr - \\omega t)} . \\] </div>
       <h4>Double Pinhole</h4>
       <p>If we have two pinholes, then two waves can go through it. That means the total wave is the sum of two general waves:</p>
-      <div class=eqn> \\[ u(r, t) = \\frac{A_1}{r_1} e^{i(kr_1 - \\omega t)} + \\frac{A_2}{r_2} e^{i(kr_2 - \\omega t)} \\ . \\] </div>
+      <div class=eqn> \\[ u(r, t) = \\frac{A_1}{r_1} e^{i(kr_1 - \\omega t)} + \\frac{A_2}{r_2} e^{i(kr_2 - \\omega t)} . \\] </div>
       <p>Te get the intensity we do the same modulus squared thingy, except we now have a slightly uglier equation to work with.</p>
       <h3>Far-field Aperture</h3>
       <p>Since we are so close, we have to consider...</p>
       <p>If we move far enough away, such that the distance between the aperture screen and the fringe screen is waaaaay bigger than the distance between the apertures, we can make some nice approximations, which make the maths a lot easier.</p>
       <p>An <em>aperture function</em> is a function which describes the shape of the hole, \\( a(\\vec{r}') \\). It's zero where there is no hole and non-zero where there is a hole.</p>
       <div class=eqn> \\[
-      u(t, \\vec{r}) \\approx \\frac{1}{D} e^{i(k|\\vec{r}| - \\omega t)} \\iint_{-\\infty}^{+\\infty} a(\\vec{r}') e^{-i\\vec{k} \\cdot \\vec{r}'} \\, dx' \\, dy' \\ .
+      u(t, \\vec{r}) \\approx \\frac{1}{D} e^{i(k|\\vec{r}| - \\omega t)} \\iint_{-\\infty}^{+\\infty} a(\\vec{r}') e^{-i\\vec{k} \\cdot \\vec{r}'} \\, dx' \\, dy' .
       \\] </div>
       <p>Hey, does that right side look familiar to you?</p>
       <p>Well it should, it's the fourier transform</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ u(\\vec{r}, t) \\approx \\frac{1}{D} e^{i(k|\\vec{r}| - \\omega t)} \\tilde{a}(\\vec{k}')  \\ . \\]
+                  \\[ u(\\vec{r}, t) \\approx \\frac{1}{D} e^{i(k|\\vec{r}| - \\omega t)} \\tilde{a}(\\vec{k}')  . \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula X
@@ -14391,40 +14383,40 @@ const subtopics = {
       <div class=eqn> \\[ \\begin{align*}
       a(\\vec{r}') = \\begin{cases} 
       1 & |x'| \\le \\frac{b}2 \\text{ or } |y'| \\le \\frac{b}2 \\\\ 
-      0 & \\text{otherwise} \\ . 
+      0 & \\text{otherwise} . 
       \\end{cases} \\end{align*} \\] </div>
       <p>Now with that out of the way, we need to calculate the fourier transform. And word of warning... there's no cute little trick to this. These fourier transforms are long as hell, and you kinda just have to slowly work through them.</p>
       <p>Now usually I would just stick the full thing in between a \\\\begin{align} and an \\\\end{align}. But since these derivations are long and painful, I'll work through the pain with you!</p>
       <p>Starting with this square aperture.</p>
       <p><strong>STEP 1: FIND THE FOURIER TRANSFORM</strong></p>
       <p>So this is what we want:</p>
-      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\iint^{+\\infty}_{-\\infty} a(\\vec{r}') e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' \\] </div>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\iint^{+\\infty}_{-\\infty} a(\\vec{r}') e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' . \\] </div>
       <p>To start, let's split up that double integral. The bounds are in principle from negative infinity to positive infinity, but the actual hole is only from \\( \\frac{b}2 \\) to \\( -\\frac{b}2 \\), so we can replace them accordingly. Also, since the aperture function is just one here, we can replace it, meaning it effectively vanishes:</p>
-      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' \\] </div>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' . \\] </div>
       <p>We know that the wavenumber vector is given by \\( \\vec{k} = k \\hat{k} \\), where \\( \\hat{k} \\) is just the direction at which the wave propogates.</p>
-      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-ik \\frac{\\vec{r}\\cdot\\vec{r}'}{D}} dx' dy' \\] </div>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-ik \\frac{\\vec{r}\\cdot\\vec{r}'}{D}} dx' dy' . \\] </div>
       <p>Then remember that \\( \\vec{r} = \\vec{x} + \\vec{y} \\), and \\( \\vec{r}' = \\vec{x}' + \\vec{y}' \\). That means we can split into \\( e^{-i\\frac{kx}{D}x'} e^{-i\\frac{ky}{D}y'} \\).</p>
       <p>Why is this useful info? Since \\( x \\) and \\( y \\) are completely independent variables, you can integrate them completely separately:</p>
-      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{kx}{D}x'} dx' \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{ky}{D}y'} dy' \\] </div>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{kx}{D}x'} dx' \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{ky}{D}y'} dy' . \\] </div>
       <p>And now these are much nicer integrals to work with! Just be careful though, we are integrating with respect to \\( x' \\) and \\( y' \\), not just regular \\( x \\) and \\( y \\). That means regular \\( x \\) and \\( y \\) are basically being treated as constants in this integration.</p>
-      <div class=eqn> \\[ \\begin{align*}
+      <div class=large-eqn> \\[ \\begin{align*}
       \\tilde{a}(\\vec{k}) &= \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{kx}{D}x'} dx' \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{ky}{D}y'} dy' \\\\[6pt]
       &= \\Bigg[\\frac{D}{-ikx} e^{-i\\frac{k}{D}x'} \\Bigg]_{-\\frac{b}2}^{+\\frac{b}2} \\; \\Bigg[\\frac{D}{-iky} e^{-i\\frac{k}{D}y'} \\Bigg]_{-\\frac{b}2}^{+\\frac{b}2} \\\\[6pt]
-      &= \\frac{D}{ikx} \\left[ e^{i\\frac{kb}{2D}x} - e^{-i\\frac{kb}{2D}x} \\right] \\; \\frac{D}{iky} \\left[ e^{i\\frac{kb}{2D}y} - e^{-i\\frac{kb}{2D}y} \\right] \\; .
+      &= \\frac{D}{ikx} \\left[ e^{i\\frac{kb}{2D}x} - e^{-i\\frac{kb}{2D}x} \\right] \\; \\frac{D}{iky} \\left[ e^{i\\frac{kb}{2D}y} - e^{-i\\frac{kb}{2D}y} \\right] .
       \\end{align*} \\] </div>
       <p>Now we've reached this quite ugly function, but we can still nice-ify it a bit. Remember that</p>
       <div> \\[ \\sin{(ax)} = \\frac{e^{iax}+e^{-iax}}{2i}, \\quad \\sin{(ay)} = \\frac{e^{iay}+e^{-iay}}{2i}. \\] </div>
       <p>Hey, that looks a bit like the term in the brackets, except the \\( a \\) has been replaced with \\( \\frac{kb}{2D} \\). Also, the term in the brackets isn't over two. So that means we just multiply the \\( \\sin{ax} \\) by \\( 2i \\) to get the term in the brackets. So we can now just stick that in:</p>
       <div class=eqn> \\[ 
-      \\tilde{a}(\\vec{k}) = \\frac{2D}{kx} \\sin \\left( \\frac{kb}{2D}x \\right) \\; \\frac{2D}{ky} \\sin \\left( \\frac{kb}{2D}y \\right) \\; .\\] </div>
+      \\tilde{a}(\\vec{k}) = \\frac{2D}{kx} \\sin \\left( \\frac{kb}{2D}x \\right) \\; \\frac{2D}{ky} \\sin \\left( \\frac{kb}{2D}y \\right) .\\] </div>
       <p>And then</p>
       <div class=eqn> \\[ 
-      u(\\vec{r}, t) \\approx \\frac{b^2}{D} e^{i(k|\\vec{r}| - \\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kb}{2D} y \\right) \\ .\\] </div>
+      u(\\vec{r}, t) \\approx \\frac{b^2}{D} e^{i(k|\\vec{r}| - \\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kb}{2D} y \\right) .\\] </div>
       <p>And to get the intensity, all you've gotta do is square it:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ I(\\vec{r}) \\approx \\frac{b^4}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} y \\right) \\ . \\]
+                  \\[ I(\\vec{r}) \\approx \\frac{b^4}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} y \\right) . \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula X:
@@ -14438,16 +14430,16 @@ const subtopics = {
       <div class=eqn> \\[ \\begin{align*}
       a(\\vec{r}') = \\begin{cases} 
       1 & |x'| \\le \\frac{b}2 \\text{ or } |y'| \\le \\frac{h}2 \\\\ 
-      0 & \\text{otherwise} \\ . 
+      0 & \\text{otherwise} . 
       \\end{cases} \\end{align*} \\] </div>
       <p>And we could go through that long ass derivation again, but if you pay attention, you notice that it's the same thing, except instead of two \\( b \\)'s (and a \\(b^2\\)), it just becomes a \\( b \\) and an \\( h \\), such that we now have:</p>
       <div class=eqn> \\[ 
-      u(\\vec{r}, t) \\approx \\frac{bh}{D} e^{i(k|\\vec{r}| - \\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) \\ .\\] </div>
+      u(\\vec{r}, t) \\approx \\frac{bh}{D} e^{i(k|\\vec{r}| - \\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) .\\] </div>
       <p>And therefore:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ I(\\vec{r}) \\approx \\frac{b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) \\ . \\]
+                  \\[ I(\\vec{r}) \\approx \\frac{b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) . \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula X:
@@ -14460,17 +14452,18 @@ const subtopics = {
       <p>Bet you didn't see this coming! Or at least I didn't. If you have two of these rectangular apertures, you end up with Young's Double slit experiment! Ain't that cool?</p>
       <p>Using convolution, we can think of this as a single rectangle function being convolved onto two delta functions at the positions of the two slits.</p>
       <div class=eqn> \\[ a(\\vec{r}') = a_0(\\vec{r}') * G(\\vec{r}') \\] </div>
+      <p>For the 2 delta functions:</p>
       <div class=eqn> \\[ G(\\vec{r}') = \\left[ \\delta \\left( \\vec{r}' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] \\ , \\] </div>
       <p>We know that, to get the fourier transform of aa convolution, we simply take the product of each function fourier transformed.</p>
       <div class=eqn> \\[ \\begin{align} \\mathcal{F}(a(\\vec{r}')) &= \\mathcal{F}(a_0(\\vec{r}') * G(\\vec{r}')) \\\\[6pt]
       &= \\tilde{a}_0(\\vec{k}) \\tilde{G}(\\vec{k}) \\end{align} \\] </div>
       <p>We already know what \\( \\tilde{a}_0(\\vec{k}) \\) is from before:</p>
       <div class=eqn> \\[ 
-      \\tilde{a}_0(\\vec{k}) \\approx bh \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) \\ .\\] </div>
+      \\tilde{a}_0(\\vec{k}) \\approx bh \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) .\\] </div>
       <p>We need to calculate the fourier transform of \\( G(\\vec{r}') \\)</p>
-      <div class=large-eqn> \\[ \\tilde{G}(\\vec{k}) = \\iint^{+\\infty}_{-\\infty} \\left[ \\delta \\left( \\vec{r}' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy'\\] </div>
+      <div class=large-eqn> \\[ \\tilde{G}(\\vec{k}) = \\iint^{+\\infty}_{-\\infty} \\left[ \\delta \\left( \\vec{r}' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' .\\] </div>
       <p>We separate the x's and y's</p>
-      <div class=large-eqn> \\[ \\tilde{G}(\\vec{k}) = \\int^{+\\infty}_{-\\infty} \\left[ \\delta \\left( x' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( x' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] e^{-ik_x x'} dx' \\int^{+\\infty}_{-\\infty} \\delta(y') e^{-ik_y y'} dy'\\] </div>
+      <div class=llarge-eqn> \\[ \\tilde{G}(\\vec{k}) = \\int^{+\\infty}_{-\\infty} \\left[ \\delta \\left( x' + \\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( x' - \\frac{\\Delta s}{2} \\hat{x} \\right) \\right] e^{-ik_x x'} dx' \\int^{+\\infty}_{-\\infty} \\delta(y') e^{-ik_y y'} dy' .\\] </div>
       <p>We know that if we have a delta function \\( \\delta(x-y) \\), and multiply it by a function \\( f(x) \\), before integrating the product over all space, it evaluates the function at \\( y \\). In our equation, we have three instances of this.</p>
       <p>We are then left with:</p>
       <div class=eqn> \\[ \\tilde{G}(\\vec{k}) = e^{i\\frac{k_x \\Delta s}{2}} + e^{-i\\frac{k_x \\Delta s}{2}} \\] </div>
@@ -14485,7 +14478,7 @@ const subtopics = {
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ I(\\vec{r}) \\approx \\frac{4b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) \\cos^2{\\left( \\frac{k\\Delta s}{2D} x \\right)}\\ . \\]
+                  \\[ I(\\vec{r}) \\approx \\frac{4b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) \\cos^2{\\left( \\frac{k\\Delta s}{2D} x \\right)}. \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula X:
@@ -14495,16 +14488,415 @@ const subtopics = {
           </div>
       </div>
       <h4>Diffraction grating</h4>
-      <div class=eqn> \\[ G(\\vec{r}') = \\sum^N_{n=1} \\left[ \\delta \\left( \\vec{r}' + n\\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - n\\frac{\\Delta s}{2} \\hat{x} \\right) \\right] \\ . \\] </div>
+      <p>Now instead of just two slits, we now have many slits.</p>
+      <div class=eqn> \\[ G(\\vec{r}') = \\sum^N_{n=1} \\left[ \\delta \\left( \\vec{r}' + n\\frac{\\Delta s}{2} \\hat{x} \\right) + \\delta \\left( \\vec{r}' - n\\frac{\\Delta s}{2} \\hat{x} \\right) \\right] . \\] </div>
+      <p>If we were to do the fourier transformation, we'd get</p>
+      <div class=eqn> \\[ \\tilde{G}(\\vec{k}) = 2 \\sum^N_{n=1} \\cos{\\frac{nk \\Delta s}{2D}} \\] </div>
+      <p>And then by the same logic as before</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ I(\\vec{r}) \\approx \\frac{4b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) \\sum^N_{n=1} \\left( \\cos{\\frac{nk \\Delta s}{2D}} \\right)^2 . \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
       <h3>Circular Aperture</h3>
       <div class=eqn> \\[ \\begin{align*}
       a(\\vec{r}') = \\begin{cases} 
       1 & |\\vec{r}'| \\le R \\ , \\\\ 
-      0 & |\\vec{r}'| > R \\ . 
+      0 & |\\vec{r}'| > R . 
       \\end{cases} \\end{align*} \\] </div>
+      <p>Now we need to calculate the fourier transform in polar coordinates:</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int_{0}^{2\\pi} \\int_{0}^{\\infty} a(\\vec{r}') e^{-i\\vec{k} \\cdot \\vec{r}'} r' \\, dr' \\, d\\phi' . \\] </div>
+      <p>Then</p>
+      <div class=eqn> \\[ \\begin{align} \\tilde{a}(\\vec{k}) &= \\int_{0}^{2\\pi} \\int_{0}^{\\infty} a(\\vec{r}') e^{-i \\frac{krr'}{D} \\cos(\\phi' - \\phi)} r' \\, dr' \\, d\\phi' \\\\[6pt]
+      &= \\int_{0}^{2\\pi} \\int_{0}^{R} e^{-i \\frac{krr'}{D} \\cos(\\phi' - \\phi)} r' \\, dr' \\, d\\phi' .
+      \\end{align} \\] </div>
+      <p>To make thinks easier, we will conjure up a brand new variable, \\( \\theta' = \\phi' - \\phi \\). Then we can differentiate \\( \\theta' \\) with respect to \\( \\phi' \\), to get \\( \\frac{d\\theta'}{d\\phi'} = 1 \\). That means, by rearranging, \\( d\\theta' = d\\phi' \\). Then we end up with:</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int_{0}^{2\\pi} \\int_{0}^{R} e^{-i \\frac{krr'}{D} \\cos(\\theta')} r' \\, dr' \\, d\\theta' .\\] </div>
+      <p>At this point we've kinda hit a roadblock</p>
+      <p>We introduce something called the <em>Bessel function</em>, \\(J_m(s)\\).</p>
+      <div class=eqn> \\[ \\frac{d}{ds}( sJ_1(s) ) = sJ_0(s) .\\] </div>
+      <div class=eqn> \\[ J_0(s) = \\frac1{2\\pi} \\int^{2\\pi}_0 e^{-is\\cos\\theta'} d\\theta' .\\] </div>
+      <p>Look back at our roadblock transform equation, do you notice anything in common?</p>
+      <div class=eqn> \\[ \\begin{align*}
+      \\tilde{a}(\\vec{k}) &= 2\\pi \\int_{0}^{R} r' J_0 \\left( \\frac{krr'}{D} \\right) \\, dr' \\ , \\\\
+      &= 2\\pi \\left( \\frac{D}{kr} \\right)^2 \\int_{0}^{krR/D} s J_0(s) \\, ds .
+      \\end{align*} \\] </div>
+      <p>By using our relation:</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = 2\\pi \\left( \\frac{D}{kr} \\right)^2 \\int_{0}^{krR/D} \\frac{d}{ds}( sJ_1(s) ) \\, ds .\\] </div>
+      <p>The integral cancels with the derivative to leave:</p>
+      <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = 2\\pi \\left( \\frac{D}{kr} \\right)^2 \\left[ sJ_1(s) \\right]^{\\frac{krR}{D}}_0 \\, ds .\\] </div>
+      <p>And remembering that s = krR/D:</p>
+      <div class=eqn> \\[ \\begin{align} \\tilde{a}(\\vec{k}) &= 2\\pi \\left( \\frac{D}{kr} \\right) RJ_1 \\left( \\frac{krR}{D} \\right) \\, ds \\\\[6pt]
+      \\style{opacity: 30%}{\\text{rearranging}}&= 2\\pi R^2 \\frac{J_1 \\left( \\frac{krR}{D} \\right)}{\\left( \\frac{krR}{D} \\right)}. \\end{align} \\] </div>
+      <p>Don't be confused though, you can't just cancel out the two \\( (\\frac{krR}{D}) \\) terms. The one on the denominator is just a regular term, but the one by the J means J evaluated at \\( (\\frac{krR}{D}) \\) (like how you'd write \\( f(x) \\), or like we saw, \\( J_m(s) \\), the \\( s \\) isn't it's own term). The notation looks slightly misleading, and I wasn't paying full attention during my lecture, so I was hella confused.</p>
+      <p>What we can do though is calculate u:</p>
+      <div class=eqn> \\[ u( \\vec{r}, t) = \\frac{2\\pi R^2}{D} e^{-i(kr-\\omega t)} \\frac{J_1\\left(\\frac{kR}{D}r\\right)}{\\left(\\frac{kR}{D}r\\right)}.\\] </div>
+      <p>And then mod-squared:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ I(\\vec{r}) = \\frac{4\\pi^2 R^4}{D^2} \\left[ \\frac{J_1\\left(\\frac{kR}{D}r\\right)}{\\left(\\frac{kR}{D}r\\right)} \\right]^2 . \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
       <h3>TL;DR</h3>
       <p>Now do you have to memorise these derivations?</p>
       <p>...noooooo, I don't think? But either way, you should practice them a lot</p>
+    `
+  },
+
+  "qaia2-intro": {
+    title: "Introduction to QAIA 2",
+    content: `
+      <p>It seems that one Quantum Module wasn't enough.</p>
+      <p>If you did A-Level Chemistry, some of these topics should be a lot more familiar to you</p>
+      <p>But first, a quick recap just so we are on the same page:</p>
+      <h3>Pauli Exclusion Principle</h3>
+      <p>Now this set of formulae may confuse you, so let me do some explaining:</p>
+      <p>You may be wondering what difference moving the variables makes. After all, think of a function like \\( f(x, t) = 2x + t \\). All that means is that the function \\( f \\) has an \\( x \\) in it and a \\( t \\) in it. Therefore it wouldn't make a difference if I instead said \\( f(t, x) = 2x + t \\). The order of the x and t in the function shouldn't matter right?</p>
+      <p>Likewise, all equation 1 tells us is that, for a given wave function, it depends of the positions and spins of all the particles in the system (including particles a and b). So the order in which you put them shouldn't matter.</p>
+      <p>Well... that's not quite true. In general, \\( f(x, t) \\) and \\( f(t, x) \\) <em>aren't</em> actually the same thing</p>
+      <p>Put simply, the <em>Pauli exclusion principle</em> states that two fermions cannot take the same state.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Psi(\\vec{r}_1, \\sigma_1; \\; \\cdots \\; ; \\; \\vec{r}_a, \\sigma_a; \\; \\cdots \\; ; \\; \\vec{r}_b, \\sigma_b, \\cdots) = -\\Psi(\\vec{r}_1, \\sigma_1; \\; \\cdots \\; ; \\; \\vec{r}_b, \\sigma_b; \\; \\cdots \\; ; \\; \\vec{r}_a, \\sigma_a, \\cdots). \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Pauli Exclusion Principle
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "free-electron": {
+    title: "The Free Electron Model",
+    content: `
+      <p>Remember back to like, GCSE Chemistry or something, when you learnt about the plum pudding model?</p>
+      <p>In that model, it was proposed that atoms we a big ball of positive charge, with small negative charges embedded within them. A bit like a plum pudding, where the main pudding was the positive charge and the little plums in it representing the negative charge.</p>
+      <p>Now aside from the fact that this comparison is completely wasted on someone like me who has never seen a bloody plum pudding in my life, there is a slightly more relevant problem: this isn't true.</p>
+      <p>From simple GCSE science, the same GCSE science which is teaching us this plum pudding stupidity, we know that atoms are actually made of positive nuclei being orbited by electrons. And that's great and all, except for one slight problem: that ain't bloody true either.</p>
+      <p>Despite the length of time taken for them to teach us this negative orbiting positive model, this is also not true. As we know from A-Level and University, electrons don't orbit the nucleus in cute little circles. They instead exist in these kinda containers called orbitals.</p>
+      <p>So then, since we know for a fact that the past two models are incorrect, what exactly is the point in learning them?</p>
+      <p>Simply put, it makes the calculations and stuff a tiny bit easier. And since in certain cases, systems of atoms look near enough like a positive sponge with little negative plums in it ...</p>
+      <h3>The model</h3>
+      <p>Take an electron in a box. This box has some length \\( L_x \\), some width \\( L_y \\), and some depth \\( L_z \\). That means the volume of the box is just these three dimensions multiplied together, \\( V = L_x L_y L_z \\).</p>
+      <p>This electron is very lonely and quite sad. But don't worry, we'll give it a friend soon enough. But for now it's easier to work with one of them than multiple, and since ensuring a electron has good mental help is of secondary importance to making sure I don't struggle, we'll start with only one.</p>
+      <p>Time to do a little check-up on our electron. A general particle has a wavefunction \\( Ae^{i(\\vec{k}\\cdot\\vec{r} - \\omega t)} \\), but since we are assuming the electron is in a <em>stationary state</em> (meaning its wavefunction doesn't change over time), we can ignore the t and the omega, giving us a wavefunction:</p>
+      <div class=eqn> \\[ \\Phi(\\vec{r}) = Ae^{i\\vec{k}\\cdot\\vec{r}} =  Ae^{ik_x x}e^{ik_y y}e^{ik_z z} \\] </div>
+      <p>And if we want to know how much energy the electron has, we take the hamiltonian:</p>
+      <div class=eqn> \\[ \\hat{H} = - \\frac{\\hbar^2}{2m_e}\\nabla^2 \\] </div>
+      <p>This shouldn't be anything new hopefully. However, it has come to my attention that the electron really really <em>really</em> doesn't like its new home, and is trying to leave. Now normally this would be impossible, but my treasure told me that we couldn't actually afford to buy real walls, meaning we've kinda kept it in just by threatening it. Although it seems to now realise it has nothing to loose by leaving.</p>
+      <p>So it moves forward, through the imaginary barrier and... it's back inside the box?</p>
+      <p>So remember when I said that we has no means of security aside from threats? Well actually that's not quite true. We also imposed this boundary condition, that the wave function at some \\( x \\) is the same as that wavefunction at \\( x+L_x \\).</p>
+      <div class=eqn> \\[ \\Phi(x,y,z) = \\Phi(x+L_x,y,z) \\] </div>
+      <p>What does that mean? In short, trying to leave the box will just put you into another box, that looks and feels exactly like the previous box.</p>
+      <p>And don't even try going through the y or z direction, because the boundaries work there too.</p>
+      <p>Cruel as this may seem, this isn't mere shadenfreude; there is some actual mathematical value to this. If we remember the formula we had for a wave function, it contained a \\( e^{ik_x x} \\) term. If I'm saying we can replace \\( x \\) with \\( x + L_x \\) without any problem, then we can do the same with the exponential</p>
+      <div class=eqn> \\[ \\begin{align} e^{ik_x x} &= e^{ik_x (x + L_x) } \\\\[6pt] &= e^{ik_x x}e^{ik_x L_x} \\end{align} \\] </div>
+      <p>If as per this equation, \\( e^{ik_x x} \\) and \\( e^{ik_x x}e^{ik_x L_x} \\) have the same value, that must mean that \\( e^{ik_x L_x} = 1 \\). And like I said, this is true for all 3 directions, so:</p>
+      <div class=eqn> \\[ e^{ik_x x} = e^{ik_y y} = e^{ik_z z} = 1 \\] </div>
+      <p>We know that exponentials become one when the exponent is a multiple of \\( 2\\pi i \\). That means, with some simple rearranging:</p>
+      <div class=eqn> \\[ k_x = 2\\pi \\frac{n_x}{L_x}, \\quad k_y = 2\\pi \\frac{n_y}{L_y}, \\quad k_z = 2\\pi \\frac{n_z}{L_z}. \\] </div>
+      <p>The \\(n\\)'s are all integers, meaning you can only get discrete values of \\( k \\), and therefore discrete wavefunctions. However, if we enter k-space...</p>
+      <p>The larger the box (i.e. the larger the values of \\(L\\) are), the smaller the difference is between each value of k. So if you make the box infinitely big <span class="formula-emph">\\( \\mathbf{\\left[ L_x, \\; L_y,\\; L_z \\to \\infty \\right]}  \\)</span>, the difference between the k values becomes infinitely small, or in other words the distribution of energies becomes <em>continuous</em>.</p>
+      <h3>The Fermi Energy</h3>
+      <p>Take our big positive pudding sponge with all its electrons, so that the system is at its lowest energy (i.e. the system is in its <em>ground state</em>).</p>
+      <p>Higher values of k mean higher energies. Therefore, a system which is at its <em>lowest</em> energy will also have the lowest values of k. That means in k-space, all the electrons will be within a certain radius, namely the <em>Fermi radius</em> \\( k_F \\). The spherical surface with that radius is called the <em>Fermi surface</em>.</p>
+      <p>Lucky for you, we <em>can</em> calculate the Fermi radius.</p>
+      <p>The number of states in a system is the volume of the k-space sphere divided by the volume per state. And since there are a maximum of two particles in each state (up spin and down spin).</p>
+      <div class=eqn> \\[ N = 2 \\left( \\frac{4\\pi k_F^3}{3} \\right) \\div \\left( \\frac{(2\\pi)^3}{V} \\right) = \\frac{V k_F^3}{3\\pi^2} \\] </div>
+      <p>Then by simple rearranging, we get:</p>
+      <div class=eqn> \\[ k_F = \\sqrt[3]{3\\pi^2 \\frac{N}{V}} \\] </div>
+      <p>If we define the density:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ k_F = \\sqrt[3]{3\\pi^2 \\rho } \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Fermi Wave Number
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>And remember energy</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_F = \\frac{\\hbar^2}{2m_e} (3\\pi^2 \\rho)^{\\frac23} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Fermi Energy
+              </div><div class="formula-tooltip-desc">
+                  The energy of the highest occupied state, once as much energy as possible has been sucked out of the system
+              </div></span>
+          </div>
+      </div>
+      <h3>Density of State</h3>
+      <p>Here's another thing to think about. Lets say we have two energies \\( E \\) and \\( E + \\Delta E \\). How many individual states are between those two energies?</p>
+      <p>You know ...</p>
+      <div class=eqn> \\[ N(E) = \\frac{V}{3\\pi^2} \\left( \\frac{2m_eE}{\\hbar^2} \\right)^\\frac32  \\] </div>
+      <p>That means to get the density of state...</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align} n(E) &= \\frac{dN}{dE} \\\\[6pt] &= \\frac{V}{3\\pi^2} \\left( \\frac{2m_e}{\\hbar^2} \\right)^\\frac32 E^\\frac12 \\end{align} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Fermi Energy
+              </div><div class="formula-tooltip-desc">
+                  The energy of the highest occupied state, once as much energy as possible has been sucked out of the system
+              </div></span>
+          </div>
+      </div>
+      <p>We can determine the total energy</p>
+      <div class=eqn> \\[ E_\\text{tot} = \\int^{E_F}_0 E \\, n(E) \\; dE \\] </div>
+      <h3>Other effects</h3>
+      <p>Up until now we've worked with the questionable assumption that there is no thermal energy. And whilst that makes things a bit easier for now, this is obviously a practically stupid assumption, considering this is never ever the bloody case.</p>
+      <p>The solution is conceptually quite simple though: You just have to introduce a brand new &quot;real-world&quot; function, \\( f(E, \\mu, T) \\), everytime you want to use the density of state. So instead of \\( n(E) \\) we use \\( f(E, \\mu, T) n(E) \\).</p>
+      <div class=eqn> \\[ E_\\text{tot} = \\int^{E_F}_0 E \\, f(E, \\mu, T) \\, n(E) \\; dE \\] </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li>I don't know what a plum pudding is.</li>
+      <li>The free electron model takes an electron with wave function \\( \\Phi(\\vec{r}) = Ae^{i\\vec{k}\\cdot\\vec{r}} \\)</li>
+      <li>If the particle tries to leave the box, it re-enters it from the other side.</li>
+      <li>This means that \\( e^{ik_x x} = e^{ik_y y} = e^{ik_z z} = 1 \\)</li>
+      <li>Therefore</li>
+      <li>The Fermi energy of a material is the highest occupied energy when as much of the energy has been removed from the system as possible (\\(T = 0K\\)).</li>
+      <li>The density of state describes how much the number of states changes at different energies.</li>
+      </ul>
+      <p>And remember: ensuring an electron has good mental help is of secondary importance to making sure I don't struggle</p>
+    `
+  },
+
+  "liquid-drop": {
+    title: "The Liquid Drop Model",
+    content: `
+      <p>The <em>Liquid Drop Model</em> is based on the, in my opinion, comically childish assumption that nuclei kinda sorta look like little water drops, and therefore</p>
+      <h3>Properties of nuclear matter</h3>
+      <h4>1. Nuclei have hundreds of nucleons</h4>
+      <p>Your average nucleus has to the order of about 100 nucleons (nucleons meaning protons and neutrons, just anything which goes in the nucleus). Of course, you have atoms with many more nuclei (like plutonium) and atoms with manu less (like hydrogen), but as a kind of ball park average, 100 will do.</p>
+      <h4>2. The 'unified mass unit'</h4>
+      <p>The unified mass unit, \\( u = 1.66 \\times 10^{-27} \\), is the average mass of a single nucleon. So the mass of a proton and the mass of a neutron are both \\( 1.66 \\times 10^{-27} \\)</p>
+      <div class=eqn> \\[ m_p = m_n = u. \\] </div>
+      <p>Now technically protons are a teensy weensy bit bigger than neutrons, but they are close enough that it's easier to just approximate them like this. This means that we can determine the mass of the nucleus just by multiplying \\( u \\) by the total number of nucleons:</p>
+      <div class=eqn> \\[ m_\\text{nucleus} = Au \\] </div>
+      <p>where \\( A \\) is the total number of nucleons, which is equal to the number of protons \\( Z \\) plus the number of neutrons \\( N \\). Heaven knows why neutrons were given a sensible letter \\( N \\) while protons were given a stupid letter \\( Z \\), but whatever, we ain't got time for that.</p>
+      <h4>3. Nuclei are spherical</h4>
+      <p>If you take a nucleus, especially a really big one, it's near enough a sphere that we might as well just pretend it is one.</p>
+      <p>This sphere has a radius \\( R = R_0 \\sqrt[3]{A} \\), where \\( R_0 \\) is \\( 1.2 \\times 10^{-15} \\). It also has density</p>
+      <h3>The Liquid Drop Model</h3>
+      <p>The first observation is that, when we have decently large nuclei (of the order of 100 like I was on about before), the binding energy per nucleon is near enough constant:</p>
+      <div class=eqn> \\[ \\frac{E_B}A \\approx a_V \\] </div>
+      <p>So just by simple rearranging, we get as an acceptable first approximation</p>
+      <div class=eqn> \\[ E_B \\approx a_V A \\] </div>
+      <p>What this basically says is that in general, the larger the nucleus, the more binding energy the nucleons have. This is our starting point, and we call \\( a_V A \\) the <em>volume term</em>.</p>
+      <p>And whilst this is a good enough starting approximation, you'll be pleased to know it's not actually the most accurate one. There are a bunch of other things we must also take into consideration.</p>
+      <p>For our next consideration, we know nucleons are bound together by the strong nuclear force the other nucleons provide. However, if a nucleon is at the surface, it has less nucleons around it to bind it together, meaning it isn't bound as tightly. That means particles on the surface have less binding energy, meaning we must subtract energy.</p>
+      <p>We're saying that the nucleons at a larger radius have lower binding energy, meaning this next term should be proportional to the surface element.</p>
+      <p>The volume of a sphere is proportional to \\( R^3 \\) <span class="formula-emph">\\( \\mathbf{\\left[ V = \\frac43 \\pi R^3 \\right]}  \\)</span>, and since from earlier we established that the radius of our imaginary water drop nuclei are proportional to the <em>cube root</em> of \\(A\\), by cubing it we get that the volume of our drops are proportional to \\(A\\).</p>
+      <p>The surface area of a sphere is proportional to \\( R^2 \\) <span class="formula-emph">\\( \\mathbf{\\left[ S = \\frac23 \\pi R^2 \\right]}  \\)</span>. Therefore by using the same logic as before, the surface area is proportional to the cube root of \\(A\\) squares, or \\(A^\\frac23\\). That gives us the second term in our approximation:</p>
+      <div class=eqn style="color: var(--accent)"> \\[ E_B \\approx \\style{opacity: 30%}{a_V A} - a_S A^\\frac23 \\] </div>
+      <p>However the strong nuclear force isn't the only force there. I mean the whole point of even introducing it in the first place was to explain how the protons can stay together despite the electromagnetic force.</p>
+      <p>The Coulomb force is simply:</p>
+      <div class=eqn> \\[ F = k \\frac{q_1 q_2}r \\] </div>
+      <p>We know protons have charge \\( q = 1.6 \\times 10^-{27} \\), but it turns out the charge doesn't really matter. Watch this!</p>
+      <p>Every single proton has a charge \\( q \\), and each proton feels a force from \\( Z - 1 \\) other protons. That means \\( q_1 = q \\) and \\( Q_2 = (Z-1)q \\). And since there are \\( Z \\) protons altogether, the total force will be \\( Z \\) times this amount. That gives us:</p>
+      <div class=eqn> \\[ F = k \\frac{q^2 Z(Z+1)}r \\] </div>
+      <p>Since \\( k \\) and \\( q \\) are both constants, we can absorb them into a new constant, \\( a_C \\). And we know radius is proportional to \\(A^\\frac13\\), meaning <em>one over</em> \\( r \\) is proportional to one over \\(A^\\frac13\\), or \\(A^{-\\frac13}\\).</p>
+      <p>That gives us our <em>Coulomb term</em>, or as I like to call it, the <em>air conditioning term</em> (since the constant is \\(a_C\\), childish I know, I'm sorry...)</p>
+      <div class=eqn style="color: var(--accent)"> \\[ E_B \\approx \\style{opacity: 30%}{a_V A - a_S A^\\frac23} - a_C \\frac{Z(Z+1)}{A^\\frac13} \\] </div>
+      <p>It seems like our approximation is coming together quite well, although we've now hit a quite annoying point, because we can no longer use any of the simple physics we know to probe the approximation anymore. We have to rely simply on what we see from data now.</p>
+      <p>Then again, it's still pretty simple. Our first experimental observation is that nuclei with an equal amount of protons and neutrons <span class="formula-emph">\\( \\mathbf{\\left[ Z = N, \\ \\text{or} \\ Z-N = 0 \\right]}  \\)</span> seems to be more stable (and hence have <em>higher</em> binding energy) than nuclei which are proton or neutron heavy.</p>
+      <p>Now you might be tempted to think that that means our next term is proportional to \\( Z-N \\), and I personally think it should. But it turns out it's actually proportional to \\( (Z-N)^2 \\).</p>
+      <p>Why the bloody hell they do this? Personally I think this is a bit daft, but the reason they do this is to make sure that we can't get a negative value. So having one more proton or one more neutron won't make a difference.</p>
+      <p>Whilst that makes sense on paper... did scientists just forget about the absolute value operator? Why not just say \\( |Z-N| \\), what exactly is the purpose of squaring it? Because now the value is different?</p>
+      <p>Anyway, it also just so happens that nuclei with larger volumes are less bothered by this affect, so we divide our scandelous \\( (Z-N)^2 \\) term by \\( A \\) to reflect this. That leaves us with our <em>asymmetry</em> term:</p>
+      <div class=eqn style="color: var(--accent)"> \\[ E_B \\approx \\style{opacity: 30%}{a_V A - a_S A^\\frac23 - a_C \\frac{Z(Z+1)}{A^\\frac13}} - a_A \\frac{(Z-N)^2}A  \\] </div>
+      <p>And this final consideration is a bit of a weird one: again, for some strange reason, the binding energy changes depending on whether there are even or odd amounts on protons and neutrons.</p>
+      <p>If there is an odd amount of protons and an even amount of neutrons – or vice versa – then nothing happens. However, if there are an even number of both protons and neutrons, then the binding energy increases. By contrast, if there is an <em>odd</em> number of both protons and neutrons, the binding energy decreases.</p>
+      <p>This gives us the pairing term:</p>
+      <div class=llarge-eqn style="color: var(--accent)"> \\[ E_B \\approx \\style{opacity: 30%}{a_V A - a_S A^\\frac23 - a_C \\frac{Z(Z+1)}{A^\\frac13} - a_A \\frac{(Z-N)^2}A} \\begin{cases} &+ a_P A^\\frac12 &\\text{both even} \\\\[6pt] &+ 0 &\\text{one even, other odd} \\\\ &- a_P A^\\frac12 &\\text{both odd} \\end{cases}  \\] </div>
+      <p>And there we have it!</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box llarge-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_B \\approx a_V A - a_S A^\\frac23 - a_C \\frac{Z(Z+1)}{A^\\frac13} - a_A \\frac{(Z-N)^2}A \\begin{cases} &+ \\, a_P A^\\frac12 &\\text{both even} \\\\[2pt] &+ \\, 0 &\\text{one even, other odd} \\\\ &- \\, a_P A^\\frac12 &\\text{both odd} \\end{cases}. \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Liquid Drop Model 
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li>Nuclei are drippy as hell.</li>
+      <li>The binding energy can be approximated with a volume, surface, Coulomb, asymmetry and pairing term.</li>
+      <li>The volume term reflects how bigger nuclei have higher binding energy.</li>
+      <li>The surface term reflects how nucleons at the surface are bound less tightly.</li>
+      <li>The coulomb term probes the electrostatic repulsion.</li>
+      <li>The asymmetry term reflects how nuclei with an even amount of protons and neutrons are more stable.</li>
+      <li>The pairing term reflects how binding energy increases when the proton and neutron numbers are both even, decreases when they are both odd, and stays the same if one is even and the other is odd.</li>
+      </ul>
+      <p>And remember: Air conditioning</p>
+    `
+  },
+
+  "atoms&mol": {
+    title: "Atoms & Molecules",
+    content: `
+      <p>We've looked at individual nuclei...</p>
+      <p>How do they combine?</p>
+      <p>They use electrons!</p>
+      <h3>The Hydrogen Atom</h3>
+      <p>As usual, let's start simple, with the simplest atom of them all: hydrogen. A single electron orbiting a single proton. This first electron will live in the 1s orbital. If we were to add another one, it would also go into the 1s orbital.</p>
+      <p>As we keep on adding more electrons, it will keep on filling more and more orbitals, from 2s to 2p to 3s and so on and so forth</p>
+      <p>We have our Schrodinger equation:</p>
+      <div class=eqn> \\[ i\\hbar \\frac{\\partial \\phi(r, t)}{\\partial t} = -\\frac{\\hbar^2}{2m} \\nabla^2 \\psi(r, t) + V(r) \\psi(r, t) \\] </div>
+    `
+  },
+
+  "atoms-mol": {
+    title: "Atoms & Molecules",
+    content: `
+      <p>We've looked at individual nuclei...</p>
+      <p>How do they combine?</p>
+      <p>They use electrons!</p>
+      <h3>The Hydrogen Atom</h3>
+      <p>As usual, let's start simple, with the simplest atom of them all: hydrogen. A single electron orbiting a single proton. This first electron will live in the 1s orbital. If we were to add another one, it would also go into the 1s orbital.</p>
+      <p>As we keep on adding more electrons, it will keep on filling more and more orbitals, from 2s to 2p to 3s and so on and so forth</p>
+      <p>We have our Schrodinger equation:</p>
+      <div class=eqn> \\[ i\\hbar \\frac{\\partial \\Psi(r, t)}{\\partial t} = -\\frac{\\hbar^2}{2m} \\nabla^2 \\Psi(r, t) + V(r) \\Psi(r, t) \\] </div>
+      <p>where</p>
+      <div class=eqn> \\[ \\Psi(\\vec{r}, t) = \\Phi_{n, l, m}(r, \\theta, \\phi) u_\\sigma e^{-\\frac{iEt}{\\hbar}} \\] </div>
+      <p>and</p>
+      <div class=eqn> \\[ \\Phi_{n, l, m}(r, \\theta, \\phi) = R_{nl}(r) Y_m(\\theta, \\phi) \\] </div>
+      <p>And for a hydrogen atom, the potential is:</p>
+      <div class=eqn> \\[ V(r) = -\\frac{e^2}{4\\pi\\varepsilon_0r} \\] </div>
+      <p>This is all fine and dandy when there is only one elecctron. However, the moment we add more, we run into a problem. Up until now these calculations were fairly simple since we only had to consider how much the one electron</p>
+      <p>But once we add a second one, we</p>
+      <h3>Molecules</h3>
+      <p>Now we have our atoms, we need to stick 'em together to make molecules.</p>
+      <p>Since the nuclei are much bigger than the electrons (about 2000 times bigger), the nuclei move pretty bloody slowly compared to the electrons. Think of the nuclei like sluggish planets and</p>
+      <p>This means that, from the perspective of the giant planet nuclei, the electrons are just a really big orbital-shaped cloud of electric charge. That means we can kind of hit the pause button, treating the atom as a stationary positive ball in the middle with some negative jewellery around it.</p>
+      <p>This is called the <em>Born-Oppenheimer approximation</em>,</p>
+      <p>We now only need to calculate the wavefunction of this weird jewelley shape, and then if it has a lower energy than the two atoms being apart, that means they will naturally tend to that position, forming a chemical bond.</p>
+      <h4>Covalent bonding</h4>
+      <p>First let's think about our Hamiltonian. At first you might think that we know what the Hamiltonian for a particle is, \\( \\hat{H} = -\\frac{\\hbar^2}{2m}\\nabla^2 \\). Well guess what? You're wrong. Clap for yourself. No I mean it, clap for yourself.</p>
+      <p>Mock aggression aside, you're kinda on the right track, but now that we have two particles, we have to take a lot more things in to consideration. A bit like how were were trying to consider all the possible factors with the liquid drop model.</p>
+      <p>Firstly, we start with the regular kinetic energy term. It's like the one you mentioned, except since there are two particles you need two different parts:</p>
+      <div class=eqn style="color: var(--accent)"> \\[ \\hat{H} = -\\frac{\\hbar^2}{2m}(\\nabla_1^2 + \\nabla_2^2) \\] </div>
+      <p>Next you also have to consider the two protons repelling each other. This is just from the coulomb potential:</p>
+      <div class=eqn style="color: var(--accent)"> \\[ \\hat{H} = \\style{opacity: 50%}{ -\\frac{\\hbar^2}{2m}(\\nabla_1^2 + \\nabla_2^2)} + \\frac{e^2}{4\\pi\\varepsilon_0 |\\vec{R}_A - \\vec{R}_B| } \\] </div>
+      <p>But the two protons aren't the only charged particles. The electrons also have charges and coulomb potentials which need to be taken into consideration. And this is where things get a bit crazy. Because you don't only need to consider the coulomb forces between the two electrons... you need to consider the electron's coulomb forces between <em>everything else</em>.</p>
+      <p>You know what that means?! We have to consider the forces between:</p>
+      <ul>
+      <li>The first electron and the first proton</li>
+      <li>The first electron and the second proton</li>
+      <li>The second electron and the first proton</li>
+      <li>The second electron and the second proton</li>
+      <li>The first electron and the second electron</li>
+      </ul>
+      <p>For every electron-proton pair, we must subtract from the total hamiltonian, because there is an attraction. However for proton-proton and electron-electron, we must add to the total hamiltonian.</p>
+      <p>Each one of these considerations will be proportional to \\( \\frac{e^2}{4\\pi\\varepsilon_0} \\), and the only difference with each of the terms is the \\( \\frac1r \\) term. So we can write it like this:</p>
+      <div class=eqn style="color: var(--accent); font-size: 1.3vw;"> \\[ \\hat{H} = \\style{opacity: 50%}{ -\\frac{\\hbar^2}{2m}(\\nabla_1^2 + \\nabla_2^2) + \\frac{e^2}{4\\pi\\varepsilon_0 |\\vec{R}_A - \\vec{R}_B| }} + \\frac{e^2}{4\\pi\\varepsilon_0} \\left( - \\frac1{|\\vec{r}_1 - \\vec{R} _A|} - \\frac1{|\\vec{r}_2 - \\vec{R}_B|} - \\frac1{|\\vec{r}_1 - \\vec{R}_B|} - \\frac1{|\\vec{r}_2 - \\vec{R}_A|} + \\frac1{|\\vec{r}_1 - \\vec{r}_2|} \\right)  \\] </div>
+      <p>That's a pretty scary looking Hamiltonian. And this big, bad Hamiltonian has a bigger and badder solution:</p>
+      <div class=llarge-eqn> \\[ \\Phi_{\\uparrow\\downarrow} = C(|\\vec{R}_A - \\vec{R}_B|) \\; [\\phi^A_{1,0,0}(\\vec{r}_1)\\phi^B_{1,0,0}(\\vec{r}_2) + \\phi^A_{1,0,0}(\\vec{r}_2)\\phi^B_{1,0,0}(\\vec{r}_1)] \\times (\\uparrow\\downarrow). \\] </div>
+      <p>And whilst it <em>does</em> seem quite scary at first, it's nothing that complicated in practice</p>
+      <div class="container">
+          <div class="text">
+              <p> 
+                  What's slightly more important is what happens when you plot this energy out on a graph. At a particular radius, \\( r_0 \\), the energy is at it's lowest, meaning the atom is most stable. If you try to push the two atoms together, the electrostatic repulsion causes them to freak out (like charges don't like each other, remember?). Pull them apart too much, and the two charges practically forget about each other.
+              </p>
+          </div>
+          <!-- DIVIDING LINE -->
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                      <img src="images/QAIA2/R_0 graph.png" class="pop-image" style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                      Figure 1
+                  </div><div class="image-tooltip-desc">
+                      ...
+                  </div></span>
+              </div>
+          </div>
+      </div>
+      <h4>Ionic Bonding</h4>
+      <hr>
+      <p>\\( GaAs \\)</p>
+    `
+  },
+
+  "crystal": {
+    title: "Crystalline Solids",
+    content: `
+      <p>The next step of our journey is trying to connect what we have learnt with macroscopic structures.</p>
+      <p>A <em>crystalline solid</em> (or just <em>crystal</em> if you like) is a solid made up of an atoms on a periodic array. What the heck does that mean? Say you have something like table salt (sodium chloride, \\( NaCl \\)). It's made up of a large array of sodium ions next to chlorine ions. This pattern repeats practically infinitely, such that the pattern looks the same, no matter where you view it from.</p>
+      <p>Whenever we have such a structure, we can call it a crystal. These crystals can be separated into two components: the lattice and the basis.</p>
+      <p>The <em>basis</em> is the repeating unit. So in this case, a single \\( NaCl \\) pair makes the basis.</p>
+      <p>The lattice describes the points at which you put all these bases on. Take an image of the sodium chlorine crystal, and put a dot on every chlorine ion. That giant mesh of dots is the lattice.</p>
+      <h3>(Bravais) Lattices</h3>
+      <div class=eqn> \\[ \\vec{R}_{n_1, \\ n_2, \\ n_3} = n_1 \\vec{a} + n_2 \\vec {b} + n_3 \\vec{c} \\] </div>
+      <p>But more importantly, there's a special kind of lattice which we'll have to consider: the <em>Bravais lattice</em> (pronounced bruh-VAY).</p>
+      <p>...</p>
+      <p>The lattice being periodic is very important. If the lqattice is periodic, then all of its properties, such as electron density and its potential, are also periodic. Let's say that each cell in the lattice is a distance \\( a \\) apart. Because we are saying the function is periodic, that means \\( f(x) = f(x + na) \\). Now I wonder, what mathematical tool can we use to approximate a function which is periodic?</p>
+      <p>That's right, a <em>fourier series</em>!</p>
+      <p>Hopefully you remember how to make one o' these.</p>
+      <div class=eqn> \\[ f(x) = \\sum_x f_n e^{iG_nx} \\] </div>
+      <p>For simplicity, we'll replace \\( \\frac{2\\pi n}{a} \\) with \\(G_n\\). Notice that if you put that into the exponential as so:</p>
+      <div class=eqn> \\[ e^{iG_na} = 1 \\] </div>
+      <p>Remember this identity, it will come in handy later</p>
+      <p>And you may wonder, who the hell this new fella \\( f_n \\) is, being as last time we used fourier series we had \\( a_n \\) and \\( b_n \\). In short, when you use a complex fourier series, \\( a_n \\) and \\( b_n \\) do a little fusion dance to form a new complex variable, where:</p>
+      <div class=eqn> \\[ f_n = \\frac12 (a_n - ib_n) \\] </div>
+      <p>It's just a little big more compact, that's all.</p>
+      <p>Remember our exponential identity from earlier, where \\( e^{iG_na} = 1 \\)? Well I'd hope so because it was literally from like half a second ago, I'd like to think your memory ain't that rubbish.</p>
+      <p>Anyway, why is this useful to us? Remember how we defined a space on the lattice using \\( \\vec{R}_{n_1, \\ n_2, \\ n_3} = n_1 \\vec{a} + n_2 \\vec {b} + n_3 \\vec{c} \\)? Well we can do a similar thing in reciprocal space, where instead of using a regular \\( G_n \\), which would only work in one direction, we can turn \\( G \\) into a nice 3-dimension vector:</p>
+      <div class=eqn> \\[ \\vec{G}_{m_1, \\ m_2, \\ m_3} = m_1 \\vec{A} + m_2 \\vec {B} + m_3 \\vec{C} \\] </div>
+      <p>But why the flippety flip is this useful?</p>
+      <p>This means then the points on the lattice will fit this inequality:</p>
+      <div class=eqn> \\[ e^{i [\\vec{G}_{m_1, \\ m_2, \\ m_3} \\cdot \\vec{R}_{n_1, \\ n_2, \\ n_3}]} = 1 \\] </div>
+      <h3>Crystalline Potential</h3>
+      <p>Since potential is periodic:</p>
+      <div class=eqn> \\[ V(\\vec{r}) = V(\\vec{r} + \\vec{R}_{n_1, \\ n_2, \\ n_3}) \\] </div>
+      <p>Don't get the r's mixed up:</p>
+      <p>Anyway, we can fourier approximate the potential. And a word of warning: up until now we've been creating these series by adding together single sum. However since our potential will depend on 3 variables, we have to make 3 sums:</p>
+      <div class=eqn> \\[ V(\\vec{r}) = \\sum_{m_1} \\sum_{m_2} \\sum_{m_3} V_{m_1, \\ m_2, \\ m_3} e^{i \\vec{G}_{m_1, \\ m_2, \\ m_3} \\cdot \\vec{r}} \\] </div>
+      <p>Then we use the Schrodinger equation to determine the wavefunction.</p>
+      <p>If the potential is 0, then the wavefunction turns out to be a simple parabola. But as potential begins to increase</p>
+      <h3>Bloch Wave Functions</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Phi_{n, k} = e^{i\\vec{k}\\cdot\\vec{r}} u_{n, k} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
     `
   }
 };

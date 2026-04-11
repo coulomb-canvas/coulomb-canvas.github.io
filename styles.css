@@ -7,6 +7,10 @@
   --card: #1c1f26;
 }
 
+mjx-container {
+  line-height: 0;
+}
+
 @font-face {
   font-family: "Njal";
   src: url("fonts/Njal Bold.ttf") format("truetype");
@@ -195,6 +199,18 @@ p {
   }
 
   .subtopic-text .large-eqn:not(.formula-box) {
+    background-color: var(--card);
+  }
+}
+
+@media (max-width: 100vh) {
+
+  .subtopic-text .llarge-eqn {
+    font-size: 1.9vw;
+    padding: 2%;
+  }
+
+  .subtopic-text .llarge-eqn:not(.formula-box) {
     background-color: var(--card);
   }
 }

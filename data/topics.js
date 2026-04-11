@@ -688,8 +688,24 @@ const topics = [
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {
-        subid: "astro-intro",
-        title: "Aren't planets and stars cool?",
+        subid: "qaia2-intro",
+        title: "Introduction",
+      },
+      {
+        subid: "free-electron",
+        title: "The Free Electron Model",
+      },
+      {
+        subid: "liquid-drop",
+        title: "The Liquid Drop Model",
+      },
+      {
+        subid: "atoms-mol",
+        title: "Atoms & Molecules",
+      },
+      {
+        subid: "crystal",
+        title: "Crystalline Solids",
       },
     ]
   },

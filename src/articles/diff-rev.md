@@ -332,12 +332,17 @@ Since \\(x\\) and \\(y\\) have got nothing to do with each other (in other words
 
 That means we end up with 3 simultaneous equations, which we can use to uncover the identity of our Lagrange multiplier \\( \\lambda \\).
 
+<div class=eqn> \[ \begin{align}
+    \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} &= 0 \\[6pt]
+    \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} &= 0 \\[6pt]
+    g(x, y) &= \text{constant}
+\end{align} \] </div>
+
 <div class="hover-wrapper">
     <div class="formula-container">
         <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
             \[ \begin{align}
-                \frac{\partial f}{\partial x} + \lambda \frac{\partial g}{\partial x} &= 0 \\[6pt]
-                \frac{\partial f}{\partial y} + \lambda \frac{\partial g}{\partial y} &= 0 \\[6pt]
+                \nabla f + \lambda \nabla g &= 0 \\[6pt]
                 g(x, y) &= \text{constant}
             \end{align} \]
         </div>

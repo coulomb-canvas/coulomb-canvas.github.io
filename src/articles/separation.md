@@ -107,7 +107,7 @@ T(t) = C_k \cos{(cκt)} + D_k \sin{(cκt)} \ .
 
 Which means we get:
 
-<div class=large-eqn> \[ \xi(t, x; \alpha_S < 0) = \int_{0}^{\infty} \left[ C_k \cos(ckt) + D_k \sin(ckt) \right] \left[ A_k \cos(kx) + B_k \sin(kx) \right] \, dk \ . \] </div>
+<div class=llarge-eqn> \[ \xi(t, x; \alpha_S < 0) = \int_{0}^{\infty} \left[ C_k \cos(ckt) + D_k \sin(ckt) \right] \left[ A_k \cos(kx) + B_k \sin(kx) \right] \, dk \ . \] </div>
 
 ***
 
@@ -136,7 +136,7 @@ That means
 
 That means:
 
-<div class=large-eqn> \[
+<div class=llarge-eqn> \[
 \xi(t, x; \alpha_S > 0) = \int_{0}^{\infty} \left( C_{\kappa} e^{c \kappa t} + D_{\kappa} e^{-c \kappa t} \right) \left( A_{\kappa} e^{\kappa x} + B_{\kappa} e^{-\kappa x} \right) \, d\kappa = 0\ .
 \] </div>
 

@@ -707,6 +707,14 @@ const topics = [
         subid: "crystal",
         title: "Crystalline Solids",
       },
+      {
+        subid: "semiconductors",
+        title: "Semiconductors",
+      },
+      {
+        subid: "dirac",
+        title: "Dirac Notation",
+      },
     ]
   },
   {

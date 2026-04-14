@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 95 subtopics
-// Generated: 2026-04-11T06:32:42.058Z
+// AUTO-GENERATED FILE - Contains 98 subtopics
+// Generated: 2026-04-14T16:00:43.504Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 95 existing hand-written entries
-//   - 32 Markdown-generated entries
+//   - 98 existing hand-written entries
+//   - 34 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -14883,7 +14883,54 @@ const subtopics = {
       <p>Anyway, we can fourier approximate the potential. And a word of warning: up until now we've been creating these series by adding together single sum. However since our potential will depend on 3 variables, we have to make 3 sums:</p>
       <div class=eqn> \\[ V(\\vec{r}) = \\sum_{m_1} \\sum_{m_2} \\sum_{m_3} V_{m_1, \\ m_2, \\ m_3} e^{i \\vec{G}_{m_1, \\ m_2, \\ m_3} \\cdot \\vec{r}} \\] </div>
       <p>Then we use the Schrodinger equation to determine the wavefunction.</p>
-      <p>If the potential is 0, then the wavefunction turns out to be a simple parabola. But as potential begins to increase</p>
+      <h4>Perspective 1: Tight Binding Model</h4>
+      <p>We have two friendly atoms who are here to help us with our demonstration.</p>
+      <p>From chemistry we know that electrons exist in unique energy states, such as 1s, 2s, 2p and so on. Now in general, just because two electrons are in the same energy state doesn't mean they have the same energy. Bigger atoms will have a lower 1s energy than smaller atoms.</p>
+      <p>But let's say these two atoms are twins. Like two helium atoms. Now both of them have the same 1s energy.</p>
+      <p>Pauli's Exclusion principle tells us that we can't have two electrons in the exact same state. Meaning that if two electrons have the same energy, they can't have the same location, and if they <em>do</em> by some miracle have the same location, then they <em>definitely</em> cannot have the same spin. So for the two atoms in a single atom, even though they are in the same location (same 1s orbital), one is spin up and the other is spin down.</p>
+      <p>Now for the time being there is no problem, because the two atoms, despite having electrons with the same energies and spins, are in different locations.</p>
+      <p>However, that's boring. I wonder what would happen if I were to push these two atoms together!</p>
+      <p>As the atoms get closer together, their wavefunctions begin to merge into each other, meaning eventually you'll get to the point where the electrons' wavefunctions begin to merge. The closer the two atoms become, the more they combine.</p>
+      <p>If the two atoms have electrons whose wavefunctions are merged, then there begins to be a chance that their probability densities could place them in the same state.</p>
+      <p>There is a slight problem though. I mean, I don't know if you were paying attention to anything I've been saying over the past like 4 topics, or even what I was talking about literally like half a second ago, there is something called the Pauli Exclusion Principle, meaning... this can't bloody happen.</p>
+      <p>So instead of actually overlapping, the electrons decide to create two brand new states for them to sit in. One of them has slightly higher energy (the bonding state), and the other has very slightly lower energy (the antibonding state). That means the 1s orbital has now been split into two states</p>
+      <p>But why stop at two? Why not add another atom to the mix and see what happens there?</p>
+      <p>Back when we had 2 atoms, our 1s orbital split into 2 states. So take a long hard think: If we have <em>3</em> atoms, how many states will our 1s orbital split into?</p>
+      <p>That's right, <em>three</em>!</p>
+      <p>So far so good. However, as of right now there is no hard limit on what two energies the two electrons take. All that matters is that one increases in energy by about the same amount as the other decreases; moreover, the closer the two atoms become the higher the energies, but you can only put them so close together before other forces take priority.</p>
+      <p>So then, instead of having only two atoms, what if we added a lot. Like a CRAP tonne, something to the order of a few SEXTILLION atoms?!</p>
+      <p>We've seen that for \\( N \\) particles, the orbitals split into \\( N \\) distinct states. So with \\( N \\sim 10^{22} \\) particles all pushed close together, the orbital would be split into about \\( 10^{22} \\) different states. Once more, the energies between them would all be so small, that it would seem less like the orbital being split into \\( 10^{22} \\) different states and more like the orbital becoming a <em>continuous band</em>.</p>
+      <p>And this will happen for each orbital. The 1s orbital becomes the 1s band, the 2s orbital becomes the 2s band. So instead of discrete orbitals with discrete energies, you now have bands.</p>
+      <p>Having said that, assuming the bands aren't too thick or close together, there could still a gap between the two orbital bands. This is called the <em>band gap</em>.</p>
+      <p>If the band gap is too big, then electrons can't easily go from one band to the other. This creates an insulator</p>
+      <p>If there is no band gap, due to the bands being too thick and therefore overlapping, the electrons can move freely between orbitals. This forms a conductor.</p>
+      <p><em>Remember this, it will come in handy soon</em></p>
+      <h4>Perspective 2: Nearly Free Electron Model</h4>
+      <p>This time, start with completely free electrons. And you might be wondering &quot;well if the electrons are completely free, then why the bloody hell is it called the <em>nearly</em> free model?&quot; Goddamn will you relax? It'll make sense in a bit, just chill out for now.</p>
+      <p>Now say there is absolutely no potential. That means the energy is just the energy is proportional to \\( k^2 \\) <span class="formula-emph">\\( \\mathbf{\\left[ E(k) = \\frac{\\hbar^2}{2m} k^2 \\right]}  \\)</span>. So if we were to plot energy \\( E \\) against wavenumber \\( k \\), we'd get our regular parabola shape we would usually get with \\( y = x^2 \\) type graphs.</p>
+      <p>Now, we introduce a weak potential, \\( V( \\vec{r} ) \\). For the most part, the energy doesn't change.</p>
+      <p>However, at the boundaries of the Brillouin zones, something interesting happens. These <em>gaps</em> (hey, where have we heard about gaps before...) begin to appear. For the most part, these energy-against-wavenumber curve is near enough parabolic, so it nearly acts like a free electron. But there are these continuities.</p>
+      <p>So what the hell is going on? First, some context. Remember we are dealing with a lattice with a perfectly periodic patterns. That means we can think of this big block of crystal as a bunch of flat layers (or <em>planes</em> to be more precise in this context) all stacked on top of each other. More importantly, each plane can reflect light, as though it were a regular mirror or something.</p>
+      <p>So take our electron. We know we can represent the incident wave as \\( e^{ikx} \\), and since \\( k = ±n \\frac{\\pi}a \\), we can write this as \\( e^{\\frac{i\\pi x}{a}} \\). That means the wave which is reflected off the planes just becomes \\( e^{-\\frac{i\\pi x}{a}} \\)</p>
+      <p>Final thing, bare in mind that just because an electron hits a plane, doesn't automatically mean its reflected. A bit like light optics, some of the wave is transmitted through. Then that transmitted electron-wave hits the next plane and has a chance of being reflected back or transmitted, and then <em>that</em> transmitted electron-wave has a similar circumstance, and so on and so forth. This keeps happen, such that by the time you get to the end of the crystal, practically all the electron wave is reflected back.</p>
+      <p>That thing of the electron being reflected back on different layers is key. Like I said, the electron is kinda split up into different parts here, but I'd kinda sorta like my electron to return whole, y'know what I mean?</p>
+      <p>Now this is possible... on one condition. When each transmitted electron-wave returns, it must be in phase with the first reflected electron-wave, so that they constructively interfere and add back up into its original wavefunction. If the transmitted waves come back with even a slight phase difference, the wave will be cancelled out.</p>
+      <p>For this to happen, the wavelength of the electron must be <em>exactly</em> the same as the distance between each plane.</p>
+      <p>If we are lucky and we do get this perfect frequency, then that means we end up with a wave going into the crystal and another wave of the same frequency coming out of it. That produces a <em>standing wave</em>!</p>
+      <p>Now if we add up the forward going wave and the backward going wave, we can end up with two possible solutions. The first is this one:</p>
+      <div class=eqn> \\[ \\begin{align} \\psi_+ &= e^{\\frac{i\\pi x}{a}} + e^{-\\frac{i\\pi x}{a}} \\\\[6pt] &= 2\\cos{\\frac{\\pi x}{a}} \\end{align} \\] </div>
+      <p>&quot;Hold on a second, you said there are <em>two</em> solutions? Why, isn't this the only way to add up the two wavefunctions?&quot;</p>
+      <p>Yes, but you are forgetting something. These wavefunctions take \\( k \\) to be \\( k = + \\frac{\\pi}a \\). But remember that \\( k \\) can actually be positive <em>or</em> negative. So if we now take the value of \\( k \\) for the reflected wave to be \\( k = - \\frac{\\pi}a \\) instead (meaning it comes \\( \\pi \\) radians out of phase), we will end up with something different:</p>
+      <div class=eqn> \\[ \\begin{align} \\psi_- &= e^{\\frac{i\\pi x}{a}} - e^{-\\frac{i\\pi x}{a}} \\\\[6pt] &= 2i\\sin{\\frac{\\pi x}{a}} \\end{align} \\] </div>
+      <p>Now any one of these two standing waves could be present, it just depends on the system. However, each on has different effects. We know that if we want to get the probability of a particle of a particular wavefunction being in a certain area, we just take the modulus-squared. So let's do that and see what we get, starting with \\( \\psi_+ \\):</p>
+      <div class=eqn> \\[ |\\psi_+|^2 = 4\\cos^2{\\frac{\\pi x}{a}} \\] </div>
+      <p>A cos function (and a \\( \\cos^2 \\) function) peaks every \\( \\pi \\), starting from 0. In this case it will peak at values of \\( \\frac{\\pi x}{a} \\) which are equal to \\( 0 \\), \\( \\pi \\), \\( 2\\pi \\) etc, which is when \\( x = 0, \\ a, \\ 2a, \\ \\text{etc} \\). This means it's peaking <em>on the atoms</em>.</p>
+      <p>On the atoms, there is negative potential energy (due to the attraction from the nucleus). This means the overall energy is slightly lower</p>
+      <p>Compare that with</p>
+      <div class=eqn> \\[ |\\psi_-|^2 = 4\\sin^2{\\frac{\\pi x}{a}} \\] </div>
+      <p>A sin function (and a \\( \\sin^2 \\) function) peaks every \\( \\pi \\), starting from \\( \\frac{a}2 \\). In this case it will peak at values of \\( \\frac{\\pi x}{a} \\) which are equal to \\( \\frac{\\pi}2 \\), \\( \\frac{3\\pi}2 \\), \\(\\frac{5\\pi}2\\) etc, which is when \\( x = \\frac{a}2, \\ \\frac{3a}2, \\ \\frac{5a}2, \\ \\text{etc} \\). This means it's peaking <em>in between the atoms</em>.</p>
+      <p>On the atoms, there is negative potential energy (due to the attraction from the nucleus). This means the overall energy is slightly lower than between the atoms.</p>
+      <p>Once again, we arrive at two states, one with slightly lower energy and one with slightly higher energy</p>
       <h3>Bloch Wave Functions</h3>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -14897,6 +14944,158 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Think of it like this. The electron is a single wave, which we know is just \\( e^{i\\vec{k}\\cdot\\vec{r}} \\). Then the potential of the crystal causes that single electron wave to wobble.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Phi_{n, k}(\\vec{r} + \\vec{R}_{n_1, \\ n_2, \\ n_3}) = e^{i\\vec{k}\\cdot \\vec{R}_{n_1, \\ n_2, \\ n_3}} \\Phi_{n, k}(\\vec{r}) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Bloch's Theorem
+              </div><div class="formula-tooltip-desc">
+                  Moving an electron a distance \\( \\vec{R} \\) doesn't change the magnitude of the wavefunction, it only shifts its phase.
+              </div></span>
+          </div>
+      </div>
+      <p>By the way, this means that, in a perfect crystal (one with no impurities, ensuring the pattern is 100% periodic) electrons can travel a long distance. The periodic potential will only shift the wavefunction a bit, but its magnitude is the same.</p>
+    `
+  },
+
+  "superconductors": {
+    title: "Superconductors",
+    content: `
+      <p>Last time we saw how orbitals can switch from discrete orbitals to bands of energy, using the Pauli Exclusion Principle and by squishing a gazillion atoms it a small space.</p>
+      <p>Now let's take an element, say – oh I dunno – something like Silicon, with an electron configuration \\( 1s^2 2s^2 2p^6 3s^2 3s^2 \\). That means the 3s orbital is the final orbital, ie the <em>valence orbital</em>. Except it's not an orbital anymore, it's a band, so we'll call it the <em>valence band</em>.</p>
+      <p>The valence electrons live in the valence band, but look up and see an empty, higher energy band, the \\( 3d \\) band. We'll call this next energy band the <em>conduction band</em>. We call it that because the electrons want to conduct and end up in this higher energy band.</p>
+      <p>The valence band is completely full, considering all the electrons are still bound to their nuclei, and none of the electrons have left yet. But they would kinda like to see what life is like on the higher energy conduction band, and like I said, this conduction band is completely empty making it even more tempting.</p>
+      <p>If the valence band is partially full and there is no gap between the two bands, electrons can easily move from lower states to higher ones, since there is literally nothing stopping them. Since there is no gap between the two bands, they are – for all intents and purposes – the same band. This means they can move around just fine. In other words, this is a <em>metal</em></p>
+      <p>If the valence is full and there is too large a band gap between the two bands, electrons are unable to move from the lower states to the higher ones. This makes an insulator.</p>
+      <p>But riddle me this: say we had a full valence band, but the band gap is quite small? Like a bandwidth of about 1eV?</p>
+      <p>At first not much, since there is still an energy gap stopping lower band electrons from going into the higher band. But what if I decided to be kind? After all, 1eV isn't much energy, I'm sure I can lend it a little.</p>
+      <p>Now, with that little jolt of energy, the valence electron is able to jump up into the next band!</p>
+      <p>This creates what we call a <em>semiconductor</em>, something which only conducts when sufficient energy (like heat) is given to it. If there is no energy (i.e. a temperature of \\( 0K \\)) or not enough energy, then superconductors are useless. But once you give 'em a large enough boost, we're good to go!</p>
+      <h3>Doping</h3>
+      <h4>N-type Doping</h4>
+      <h4>P-type Doping</h4>
+      <h3>TL;DR</h3>
+      <p>Now one thing you may well have been thinking over the course of this subtopic. Technically the reason that insulators don't conduct is because there is a large band gap, meaning the electrons don't have enough</p>
+      <ul>
+      <li>The band with an atom's outermost electrons is called the <em>valence band</em>.</li>
+      <li>The next band up, which the electrons wish to enter, is the <em>conduction band</em>.</li>
+      <li>If the valence band is partially full, and there is no band gap, the electrons can move across levels freely. This is true for <em>metals</em></li>
+      <li>If the valence band is full and there is a large band gap, the electrons can't move across at all. This is an <em>insulator</em></li>
+      </ul>
+    `
+  },
+
+  "semiconductors": {
+    title: "Semiconductors",
+    content: `
+      <p>Last time we saw how orbitals can switch from discrete orbitals to bands of energy, using the Pauli Exclusion Principle and by squishing a gazillion atoms it a small space.</p>
+      <p>Now let's take an element, say – oh I dunno – something like Silicon, with an electron configuration \\( 1s^2 2s^2 2p^6 3s^2 3s^2 \\). That means the 3s orbital is the final orbital, ie the <em>valence orbital</em>. Except it's not an orbital anymore, it's a band, so we'll call it the <em>valence band</em>.</p>
+      <p>The valence electrons live in the valence band, but look up and see an empty, higher energy band, the \\( 3d \\) band. We'll call this next energy band the <em>conduction band</em>. We call it that because the electrons want to conduct and end up in this higher energy band.</p>
+      <p>The valence band is completely full, considering all the electrons are still bound to their nuclei, and none of the electrons have left yet. But they would kinda like to see what life is like on the higher energy conduction band, and like I said, this conduction band is completely empty making it even more tempting.</p>
+      <p>If the valence band is partially full and there is no gap between the two bands, electrons can easily move from lower states to higher ones, since there is literally nothing stopping them. Since there is no gap between the two bands, they are – for all intents and purposes – the same band. This means they can move around just fine. In other words, this is a <em>metal</em></p>
+      <p>If the valence is full and there is too large a band gap between the two bands, electrons are unable to move from the lower states to the higher ones. This makes an insulator.</p>
+      <p>But riddle me this: say we had a full valence band, but the band gap is quite small? Like a bandwidth of about 1eV?</p>
+      <p>At first not much, since there is still an energy gap stopping lower band electrons from going into the higher band. But what if I decided to be kind? After all, 1eV isn't much energy, I'm sure I can lend it a little.</p>
+      <p>Now, with that little jolt of energy, the valence electron is able to jump up into the next band!</p>
+      <p>This creates what we call a <em>semiconductor</em>, something which only conducts when sufficient energy (like heat) is given to it. If there is no energy (i.e. a temperature of \\( 0K \\)) or not enough energy, then superconductors are useless. But once you give 'em a large enough boost, we're good to go!</p>
+      <h3>Doping</h3>
+      <p>There are two ways we can do this</p>
+      <h4>N-type Doping</h4>
+      <p>The first method is <em>n-type doping</em> (n for <em>negative</em>). This involves replacing one of the particles with a particle which has more valence electrons.</p>
+      <p>Say we have silicon. It's in group four, meaning it has four electrons in its outer shell. ... So we use a laser or something to force a silicon atom out of the lattice and replace it with an element which has <em>five</em> electrons in its outer shell. Something like <em>Phosphorus</em> will do.</p>
+      <p>Now normally an atom like phosphorus would need to make 5 covalent bonds, but since it's not actually creating a lattice of its own, but rather filling in for silicon, it can only make 4 covalent bonds. That means only four of the 5 outershell electrons bond, meaning that there's one electron who can't really do anything. It can't be in the valence band, 'cus it's full.</p>
+      <p>As a result, it pretty much just hangs around the phosphorus ion. Then again, this is a pretty weak bond with a <em>veeery</em> low binding energy (like about 40meV), way smaller than the 1.1eV band gap of silicon. And since, ultimately, entering the conduction band is just allowing the electron to be delocalised, that means we have a bunch of electrons which can be placed into the conduction band very easily, allowing electricity to conduct</p>
+      <h4>P-type Doping</h4>
+      <p>The second method is <em>p-type doping</em> (if 'n' was for negative, take a wild guess as to what 'p' would be for). Now instead, we replace one of the particles with an atom with less valence electrons.</p>
+      <p>So we take our atom-replacy laser and use it to displace one of the silicon atoms, but instead of replacing it with an atom with 5 valence electrons, we'll replace it with an atom that only has <em>3</em>, such as <em>Boron</em>.</p>
+      <p>Now, instead of a single extra electron floating around, there is an electron missing. This empty space is called a <em>hole</em> ... But it's much easier for us to <em>pretend</em> like the empty space is actually its own positive charge, because it more or less behaves like one. Much how like evil isn't a thing, but rather the privation of good.</p>
+      <p>And just like how the electrons from n-type doping sit just below the conduction band, these holes sit just above the valence band. The electrons from the valence band see the hole ... But now that electron's space is empty (i.e. the hole has moved to where the electron was).</p>
+      <p>This causes the flow of current</p>
+      <h3>The p-n Junction</h3>
+      <h3>TL;DR</h3>
+      <p>Now one thing you may well have been thinking over the course of this subtopic. Technically the reason that insulators don't conduct is because there is a large band gap, meaning the electrons don't have enough</p>
+      <ul>
+      <li>The band with an atom's outermost electrons is called the <em>valence band</em>.</li>
+      <li>The next band up, which the electrons wish to enter, is the <em>conduction band</em>.</li>
+      <li>If the valence band is partially full, and there is no band gap, the electrons can move across levels freely. This is true for <em>metals</em></li>
+      <li>If the valence band is full and there is a large band gap, the electrons can't move across at all. This is an <em>insulator</em></li>
+      </ul>
+    `
+  },
+
+  "dirac": {
+    title: "Dirac Notation",
+    content: `
+      <h3>The 'Ket' (State Vector)</h3>
+      <p>A ket vector points to the right, and just means a state of some kind.</p>
+      <p>An example of a ket vector is</p>
+      <div class=eqn> \\[ |\\psi \\rangle = \\begin{pmatrix} a \\\\ b \\end{pmatrix} \\] </div>
+      <p>There is no real restriction on what kinda symbol you can use. So for example:</p>
+      <ul>
+      <li>\\( | \\psi \\rangle \\) can represent a general state.</li>
+      <li>\\( | n \\rangle \\) could be an energy eigenstate with quantum number n.</li>
+      <li>\\( | \\uparrow \\rangle \\) could be a spin-up state.</li>
+      <li>\\( | \\vec{k} \\rangle \\) could be a momentum eigenstate with wavevector k.</li>
+      </ul>
+      <p>As long as its a state of some kind, you can represent it this way. And just like before we can apply operaters to states. We can write the Schrodinger equation like this</p>
+      <div class=eqn> \\[ \\hat{H} | \\psi \\rangle = E_n | \\psi \\rangle \\] </div>
+      <p>Exactly what \\( a \\) and \\( b \\) represent will depend on context, but in short they depend on the <em>probability amplitude</em> of the particle being in some state, such that \\( |a|^2 \\) is the probability of being in state \\( a \\) and \\( |b|^2 \\) is the probability of being in state \\( b \\). This... might take a bit of getting used to, so follow with me.</p>
+      <p>Like I said, \\( a \\) and \\( b \\) are the probabilities of being in that one state. To help demonstrate this, we'll call upon our good friend, the electron. So take the general state of an electron \\( | \\psi \\rangle \\). This electron could have an up spin or a down spin state:</p>
+      <div class=eqn> \\[ | \\text{electron} \\rangle = a | \\text{up-spin} \\rangle + b | \\text{down-spin} \\rangle \\] </div>
+      <p>This statement just means the electron has a \\( |a|^2 \\) chance of being in the up state, and a \\( |b|^2 \\) chance of being in a down state</p>
+      <div class=eqn> \\[ | \\psi \\rangle = \\frac{\\sqrt{3}}2 | \\! \\uparrow \\rangle + \\frac12 | \\! \\downarrow \\rangle \\] </div>
+      <p>\\( |a|^2 \\) is \\( \\frac34 \\) and \\( |b|^2 \\) is \\( \\frac14 \\), meaning there is a 3 in 4 chance the electron has an upspin, and a 1 in 4 chance the electron has a down-spin</p>
+      <p>Now for some of you this might be a good enough explanation, but for people like me, it's not good enough. After all, if the ket vector is a mixture of two ... , wouldn't that mean that the \\( | \\! \\uparrow \\rangle \\) and \\( | \\! \\downarrow \\rangle \\) also are a vector with an \\( a \\) and a \\( b \\)? So what does <em>their</em>  \\( a \\) and \\( b \\) represent?</p>
+      <p>Well here's the beauty of the Dirac notation. Even for the spin state ket vectors, \\( a \\) <em>still</em> represents the probability of being spin-up and \\( b \\) <em>still</em> represents the probability of being spin-down. So for the spin-up state, since there is a 100% chance of it being spin up and a 0% chance of it being spin down, \\( a=1 \\) and \\( b=0 \\). And vice versa for the spin down state.</p>
+      <div class=eqn> \\[ | \\! \\uparrow \\rangle = \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} \\ \\text{and} \\  | \\! \\uparrow \\rangle = \\begin{pmatrix} 0 \\\\ 1 \\end{pmatrix} \\] </div>
+      <p>Now is this circular reasoning? Probably. Is it a problem? I hope not, because like half of Quantum Mechanics relies on it.</p>
+      <h3>The 'Bra' (Dual Vector)</h3>
+      <p>The suspiciously names bra vector is the complex transpose of the state vector:</p>
+      <div class=eqn> \\[ \\langle \\psi | = \\begin{pmatrix} a^* & b^* \\end{pmatrix} \\] </div>
+      <p>So to use the example we had before with spins:</p>
+      <div class=eqn> \\[ \\langle \\psi | = \\begin{pmatrix} \\frac{\\sqrt{3}}2 & \\frac12 \\end{pmatrix} \\] </div>
+      <p>To be fair this is a pretty crap example for the 'conjugate' part, since neither of the fractions are complex, but whatever.</p>
+      <p>Dual vectors are fundamentally not much different to state vectors. However, by taking the complex transpose of a ket vector, you are basically putting it into measuring mode.</p>
+      <h3>The inner product</h3>
+      <p>Now say we have two general states, which we'll call \\( | \\psi \\rangle \\) and \\( | \\phi \\rangle \\)</p>
+      <div class=eqn> \\[ \\begin{align} \\langle \\phi | \\psi \\rangle &= \\begin{pmatrix} a_1^* & b_1^* \\end{pmatrix} \\begin{pmatrix} a_2 \\\\ b_2 \\end{pmatrix} \\\\[6pt] &= a_1^*a_2 + b_1^*b_2  \\end{align}\\] </div>
+      <p>This function tells us how much of \\( | \\phi \\rangle \\) is contained in \\( | \\psi \\rangle \\)</p>
+      <p>So if we want to know the wavefunction at a position \\( x \\), we can write it as:</p>
+      <div class=eqn> \\[ \\psi(x) = \\langle x | \\psi \\rangle \\] </div>
+      <p>And we can do this in many different ways:</p>
+      <ul>
+      <li>\\( \\langle y = 10 | \\psi \\rangle \\) would mean the wavefunction when \\( y = 10 \\)</li>
+      <li>\\( \\langle 0, 3, 2 | \\psi \\rangle \\) means the wavefunction at the point \\( (0, 3, 2) \\)</li>
+      <li>\\( \\langle  \\uparrow \\! | \\psi \\rangle \\) means the wavefunction if the particle has an up-spin</li>
+      <li>\\( \\langle E | \\psi \\rangle \\) means the wavefunction at energy \\( E \\)</li>
+      </ul>
+      <p>Now one thing to watch out for: if the inner product describes a wavefunction evaluated at a particular energy, spin, position or whatever, then what happens when \\( | \\psi \\rangle \\) and \\( | \\phi \\rangle \\) are two wave functions? Then does \\( \\langle \\phi | \\psi \\rangle \\) mean the wave function evaluated at \\( \\phi \\)? That don't make no bloody sense...</p>
+      <p>Well, what is describes is the likelihood of \\( \\psi \\) being equal to \\( \\phi \\): It's like a measure of how similar two states are.</p>
+      <p>So \\( \\langle \\phi | \\psi \\rangle \\) is a maximum when the two wavefunctions are both high, and a minimum when any of the wavefunctions are 0.</p>
+      <p>&quot;overlap of ∣ψ⟩ with the state of a particle exactly at x&quot;</p>
+      <p>With that in mind, we can also determine the average value of an operator:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\langle \\hat{A} \\rangle = \\langle \\psi | \\hat{A} | \\psi \\rangle \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Because what this is basically saying is</p>
+      <blockquote>
+      <p>&quot;How similar is the wavefunction \\( \\psi \\) <span class="formula-emph">\\( \\mathbf{ \\left[ \\ \\langle \\psi | \\ \\right]}  \\)</span> to the wavefuction after being transformed by \\( \\hat{A} \\) <span class="formula-emph">\\( \\mathbf{ \\left[ \\hat{A} | \\psi \\rangle \\right]}  \\)</span>?&quot;</p>
+      </blockquote>
+      <p>100% similarity means the operator basically does nothing.</p>
+      <p>Try it with energy</p>
+      <div class=eqn> \\[ \\langle E \\rangle = \\langle \\psi | \\hat{H} | \\psi \\rangle \\] </div>
     `
   }
 };

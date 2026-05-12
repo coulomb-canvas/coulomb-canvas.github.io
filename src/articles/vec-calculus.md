@@ -128,6 +128,14 @@ Finally, the curly swirly curly curly
     </div>
 </div>
 
+### Vector integration
 
+<div class=eqn> \[ d\vec{r} = \begin{pmatrix} dx \\ dy \\ dz \end{pmatrix} \] </div>
+
+With this in mind, there are 3 ways we can integrate this tiny vector thingy over the field.
+
+A conservative field is one in which the path doesn't change the outcome.
+
+To prove that a field is conservative, you need to show that the curl in the vector field is zero
 
 

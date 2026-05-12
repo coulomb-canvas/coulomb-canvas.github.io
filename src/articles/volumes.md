@@ -56,7 +56,41 @@ J = \frac{\partial(x, y, z)}{\partial(r, \theta, \varphi)} = \begin{vmatrix} \fr
 
 ### Volumes of revolution
 
+<div class=eqn>\[ dA = ds y \, d\theta \] </div>
+
+That gives us a single strip We can integrate this over the full circle:
+
 <div class=eqn>\[ A = \int_{s_1}^{s_2} 2 \pi y \, ds \] </div>
+
+Now, this isn't the main thing we are looking forward to here, but we can actually do a fair bit with this already. Let's say we have a line \\( y = \frac{x}3 \\). You can probably see that if we were to rotate this round, you'd end up with a cone shape. So we are calculating the surface area of the pointy part of the cone.
+
+Using our substitution for \\( ds \\):
+
+<div class=eqn>\[ A = \int_{s_1}^{s_2} 2 \pi y \, \sqrt{1 + \left( \frac{dy}{dx} \right)^2} dx \] </div>
+
+We know \\( y \\) is \\( \frac{x}3 \\). Then differenciating it gives us \\( \frac{dy}{dx} = \frac13 \\). So putting that in:
+
+<div class=eqn>\[ \begin{align} A &= \int_{s_1}^{s_2} 2 \pi \frac13 \, \sqrt{1 + \left( \frac13 \right)^2} dx \\[6pt] &= \int_{s_1}^{s_2}  \frac{2 \pi}3 \, \sqrt{ \frac{10}9 } dx \end{align} \] </div>
+
+That means:
+
+<div class=eqn>\[ \begin{align} A &= \frac{2 \pi}3 \, \sqrt{ \frac{10}9 } \int_{x=0}^{x=3} x dx \\[6pt] &= \frac{2 \pi}3 \, \sqrt{ \frac{10}9 } \bigg[ \frac{x^2}2 \bigg]^3_0 \\[6pt] &= \pi\sqrt{ 10 }  \end{align} \] </div>
+
+That was just by the way. Anyway, where were we? Oh yes, volumes of revolution.
+
+So remember from a while ago, how to get the centre of a shape:
+
+<div class=eqn>\[ \bar{y} = \frac{ \int y \ ds }{ \int ds } \] </div>
+
+Times both sides by \\( 2\pi \\):
+
+<div class=eqn>\[ 2\pi \bar{y} = \frac{ \int 2\pi y \ ds }{ \int ds } \] </div>
+
+Now \\( \int ds \\) is just \\( S \\), giving us
+
+<div class=eqn>\[ 2\pi \bar{y} = \frac{ A }{ S} \] </div>
+
+Then just by rearranging, we get:
 
 <div class="hover-wrapper">
     <div class="formula-container">
@@ -71,10 +105,18 @@ J = \frac{\partial(x, y, z)}{\partial(r, \theta, \varphi)} = \begin{vmatrix} \fr
     </div>
 </div>
 
+As as usual, you're thinking...
+
+It turns out, it's actually the same old "area is length times width" that we all know and love, just in a new form.
+
+If \\( S \\) is the length, \\( 2 \pi \bar{y} \\) is the distance the centroid is travelling
+
+Therefore, by using the same logic, if we have a closed surface and we want to know the total volume enclosed, all we have to do is replace the \\( S \\) with \\( A \\), the area enclosed by the path \\( s \\).
+
 <div class="hover-wrapper">
     <div class="formula-container">
         <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \[ V = 2 \pi A \bar{y} \]
+            \[ V = 2 \pi \bar{y} A \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3: Pappus' (1st) theorem

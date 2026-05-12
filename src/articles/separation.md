@@ -109,6 +109,47 @@ Which means we get:
 
 <div class=llarge-eqn> \[ \xi(t, x; \alpha_S < 0) = \int_{0}^{\infty} \left[ C_k \cos(ckt) + D_k \sin(ckt) \right] \left[ A_k \cos(kx) + B_k \sin(kx) \right] \, dk \ . \] </div>
 
+<div class=method>
+    <h5>METHOD: <span style="color:yellow; font-style: italic;">Seperation of Variables</span></h5>
+    <hr style="margin:0px; border-width:0.2vw; color:yellow">
+    <div class=method-step>
+    <h6>Step 1</h6>
+        <div class=method-subtitle>Split the variable into a distance function and a time function</div>
+        <p>Take whatever variable you have, and split it into \( X(x) \) and \( T(t) \). </p>
+        <div class=eqn>\[ \phi(x,t) = X(x)T(t)\]</div>
+    </div><div class=method-step>
+    <h6>Step 2</h6>
+        <div class=method-subtitle>Rearrange the equation to have all the time-dependant variables on one side and any distance-dependant variables on the other side</div>
+        <p>Put all the X's on one side and all the T's on the other side.</p>
+    </div><div class=method-step>
+    <h6>Step 3</h6>
+        <div class=method-subtitle>Set both sides to some constant</div>
+        <p>The only way this can be true is to set both sides of the equation to some constant.</p>
+    </div><div class=method-step>
+    <h6>Step 4</h6>
+        <div class=method-subtitle>Set the constant to be zero and work out the solutions</div>
+        <p>This is the easiest scenario. If we have \( f''(x) = 0 \), then the solution for \( f(x) \) is \( Ax + B \). If there is \( f'(x) = 0 \), then it's just a constant, which can be absorbed into the \( Ax + B \). Then to get the solution, you multiply the X solution and the T solution together. In general, that is: </p>
+        <div class=eqn>\[ X(x)T(t) = (Ax + B)(Ct + D) \]</div>
+    </div><div class=method-step>
+    <h6>Step 5</h6>
+        <div class=method-subtitle>Set the constant to be more than zero ( \( \alpha_S = \kappa^2 \) ) and work out the solutions</div>
+        <p>Set \( \alpha_S \) to a positive value (we pick \( k^2 \)). For first order equations, the solution becomes \( A_κ e^{κx} + B_κ e^{−κx} \). Giving a general: </p>
+        <div class=eqn>\[ X(x)T(t) = (A_κ e^{κx} + B_κ e^{−κx})(C_κ e^{κt} + D_κ e^{−κt}) \]</div>
+    </div><div class=method-step>
+    <h6>Step 6</h6>
+        <div class=method-subtitle>Set the constant to be less than zero ( \( \alpha_S = -k^2 \) ) and work out the solutions</div>
+        <p>Set \( \alpha_S \) to a negative value (we pick \( -k^2 \)). The solutions becomes complex exponentials \( A_κ e^{κx} + B_κ e^{−κx} \), which are just sines and cosines. Giving a general: </p>
+        <div class=eqn>\[ X(x)T(t) = \left[ C_k \cos(ckt) + D_k \sin(ckt) \right] \left[ A_k \cos(kx) + B_k \sin(kx) \right] \]</div>
+    </div><div class=method-step>
+    <h6>Step 7</h6>
+        <div class=method-subtitle>Sum the 3 potential solutions together</div>
+    </div><div class=method-step>
+    <h6>Step 8</h6>
+        <div class=method-subtitle>Use boundary conditions to simplify the expression</div>
+        <p>For example, if we have a diffusion equation, we know that the constant at the front must be negative. Therefore it makes no sense to consider positive solutions. 
+    </div>
+</div>
+
 ***
 
 To get the full solution, we just add the three together. This sounds easy in theory until you actually realise how cooked our three solutions actually are:
@@ -128,16 +169,34 @@ Never fear, in most cases we don't actually have to fully expand that ugly ahh e
 
 #### Case 1
 
-That means
+When \\( x \\) is set to 0, we get:
 
-<div class=eqn> \[ \xi(x, t; 0) = (A_0 t + B_0)(C_0 t + D_0) = 0 \] </div>
+<div class=eqn> \[ \xi(x, t; 0) = (B_0)(C_0 t + D_0) = 0 \] </div>
+
+That means \\( B_0 = 0 \\).
+
+Now with that in mind, when \\( L \\) is set to 0, we get:
+
+<div class=eqn> \[ \xi(x, t; 0) = (A_0 L)(C_0 t + D_0) = 0 \] </div>
+
+That means \\( A_0 = 0 \\) as well. That means there are no linear solutions
 
 #### Case 2
 
-That means:
+When \\( x \\) is set to 0, we get:
+
+<div class=eqn> \[ \left( C_{\kappa} e^{c \kappa t} + D_{\kappa} e^{-c \kappa t} \right) \left( A_{\kappa} + B_{\kappa} \right) \] </div>
+
+That means \\( A_{\kappa} + B_{\kappa} = 0 \\), or \\( A_{\kappa} = -B_{\kappa} \\). Now when \\( x \\) is set to \\( L \\), we get:
+
+<div class=eqn> \[ \left( C_{\kappa} e^{c \kappa t} + D_{\kappa} e^{-c \kappa t} \right) \left( A_{\kappa} e^{ \kappa x} - A_{\kappa} e^{- \kappa x} \right) \] </div>
+
+<div class=eqn> \[ A\sinh{\kappa L} = 0 \] </div>
+
+This is true if either \\( A_\kappa = 0 \\) or \\( \kappa = 0 \\), but since we have already said that \\( \kappa^2 > 0 \\), then that must mean that \\( A_\kappa = 0 \\), once again leaving no solution.
 
 <div class=llarge-eqn> \[
-\xi(t, x; \alpha_S > 0) = \int_{0}^{\infty} \left( C_{\kappa} e^{c \kappa t} + D_{\kappa} e^{-c \kappa t} \right) \left( A_{\kappa} e^{\kappa x} + B_{\kappa} e^{-\kappa x} \right) \, d\kappa = 0\ .
+\xi(t, x; \alpha_S > 0) = \int_{0}^{\infty} 0 \left( C_{\kappa} e^{c \kappa t} + D_{\kappa} e^{-c \kappa t} \right) \, d\kappa = 0.
 \] </div>
 
 #### Case 3

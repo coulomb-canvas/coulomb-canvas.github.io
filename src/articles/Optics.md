@@ -330,6 +330,60 @@ And then by the same logic as before
     </div>
 </div>
 
+What a scary looking formula that is
+
+<div class=method>
+    <h5>METHOD: <span style="color:yellow; font-style: italic;">Intensity Profiles</span></h5>
+    <hr style="margin:0px; border-width:0.2vw; color:yellow">
+    <div class=method-step>
+    <h6>Step 1</h6>
+        <div class=method-subtitle>Define the aperture function</div>
+        <p>The aperture function should be 1 where the hole is, and 0 where the hole isn't </p>
+        <div class=eqn> \[ \begin{align*}
+            a(\vec{r}') = \begin{cases} 
+            1 & \text{on the hole} \\ 
+            0 & \text{otherwise} . 
+            \end{cases} \end{align*} \] </div>
+    </div><div class=method-step>
+    <h6>Step 2</h6>
+        <div class=method-subtitle>Calculate the fourier transform of the aperture function, using the relevant bounds.</div>
+        <p>In principle the fourier transform should be over all space, but since the aperture function will only be non-zero between a certain width and height, we use those bounds instead</p>
+        <div class=eqn> \[ \tilde{a}(\vec{k}) = \int^{+\frac{b}2}_{-\frac{b}2} \int^{+\frac{b}2}_{-\frac{b}2} e^{-i\vec{k}\cdot\vec{r}} dx' dy' . \] </div>
+    </div><div class=method-step>
+    <h6>Step 3</h6>
+        <div class=method-subtitle>Split the integral up into x and y components</div>
+        <p>Due the the way the integral is set up, the x and y components can be split up to make the calculation more visually appealing</p>
+        <div class=eqn> \[ \tilde{a}(\vec{k}) = \int^{+\frac{b}2}_{-\frac{b}2} e^{-i\frac{kx}{D}x'} dx' \int^{+\frac{b}2}_{-\frac{b}2} e^{-i\frac{ky}{D}y'} dy' . \] </div>
+    </div><div class=method-step>
+    <h6>Step 4</h6>
+        <div class=method-subtitle>Evaluate the integrals</div>
+        <p>Be careful to integrate with respect to  x' and y', not x and y: these are to be treated as constants.</p>
+        <div class=eqn>\[ \tilde{a}(\vec{k}) = \frac{D}{ikx} \left[ e^{i\frac{kb}{2D}x} - e^{-i\frac{kb}{2D}x} \right] \; \frac{D}{iky} \left[ e^{i\frac{kb}{2D}y} - e^{-i\frac{kb}{2D}y} \right] \]</div>
+    </div><div class=method-step>
+    <h6>Step 5</h6>
+        <div class=method-subtitle>Replace the exponentials with sines</div>
+        <p>Because \( \sin{(ax)} = \frac{e^{iax}+e^{-iax}}{2i} \), we can rewrite this:</p>
+        <div class=eqn>\[ \tilde{a}(\vec{k}) = \frac{2D}{kx} \sin \left( \frac{kb}{2D}x \right) \; \frac{2D}{ky} \sin \left( \frac{kb}{2D}y \right) \]</div>
+    </div><div class=method-step>
+    <h6>Step 6</h6>
+        <div class=method-subtitle>Change the sines for sincs</div>
+        <p>To complete the fourier transform, the sine can be combined with the x / y in the denominator, since \( \frac{\sin{ax}}x = \operatorname{sinc} x \)</p>
+        <div class=eqn>\[ \tilde{a}(\vec{k}) = \frac{2D}{k} \operatorname{sinc} \left( \frac{kb}{2D}x \right) \; \frac{2D}{ky} \operatorname{sinc} \left( \frac{kb}{2D}y \right) \]</div>
+    </div><div class=method-step>
+    <h6>Step 7</h6>
+        <div class=method-subtitle>Get the wavefunction</div>
+        <p>Multiply by \( \frac{e^{i(k|\vec{r}| - \omega t)}}D \)</p>
+        <div class=eqn>\[ u(\vec{r}, t) \approx \frac{bh}{D} e^{i(k|\vec{r}| - \omega t)} \operatorname{sinc} \left( \frac{kb}{2D} x \right) \operatorname{sinc} \left( \frac{kh}{2D} y \right) \]</div>
+    </div><div class=method-step>
+    <h6>Step 8</h6>
+        <div class=method-subtitle>Take the modulus squared to get the intensity</div>
+        <p>Since this is modulus squared, the \( e^{i(k|\vec{r}| - \omega t)} \) term basically vanishes, and everything else is squared as usual</p>
+        <div class=eqn>\[ I(\vec{r}) \approx \frac{b^2h^2}{D^2} \operatorname{sinc}^2 \left( \frac{kb}{2D} x \right) \operatorname{sinc}^2 \left( \frac{kh}{2D} y \right) \]</div>
+    </div>
+</div>
+
+***
+
 ### Circular Aperture
 
 <div class=eqn> \[ \begin{align*}

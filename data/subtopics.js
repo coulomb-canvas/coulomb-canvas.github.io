@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 98 subtopics
-// Generated: 2026-04-14T16:00:43.504Z
+// AUTO-GENERATED FILE - Contains 106 subtopics
+// Generated: 2026-05-12T15:03:13.283Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 98 existing hand-written entries
-//   - 34 Markdown-generated entries
+//   - 105 existing hand-written entries
+//   - 42 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -13783,7 +13783,24 @@ const subtopics = {
       J = \\frac{\\partial(x, y, z)}{\\partial(r, \\theta, \\varphi)} = \\begin{vmatrix} \\frac{\\partial x}{\\partial r} & \\frac{\\partial x}{\\partial \\theta} & \\frac{\\partial x}{\\partial \\varphi} \\\\ \\frac{\\partial y}{\\partial r} & \\frac{\\partial y}{\\partial \\theta} & \\frac{\\partial y}{\\partial \\varphi} \\\\ \\frac{\\partial z}{\\partial r} & \\frac{\\partial z}{\\partial \\theta} & \\frac{\\partial z}{\\partial \\varphi} \\end{vmatrix}
       \\] </div>
       <h3>Volumes of revolution</h3>
+      <div class=eqn>\\[ dA = ds y \\, d\\theta \\] </div>
+      <p>That gives us a single strip We can integrate this over the full circle:</p>
       <div class=eqn>\\[ A = \\int_{s_1}^{s_2} 2 \\pi y \\, ds \\] </div>
+      <p>Now, this isn't the main thing we are looking forward to here, but we can actually do a fair bit with this already. Let's say we have a line \\( y = \\frac{x}3 \\). You can probably see that if we were to rotate this round, you'd end up with a cone shape. So we are calculating the surface area of the pointy part of the cone.</p>
+      <p>Using our substitution for \\( ds \\):</p>
+      <div class=eqn>\\[ A = \\int_{s_1}^{s_2} 2 \\pi y \\, \\sqrt{1 + \\left( \\frac{dy}{dx} \\right)^2} dx \\] </div>
+      <p>We know \\( y \\) is \\( \\frac{x}3 \\). Then differenciating it gives us \\( \\frac{dy}{dx} = \\frac13 \\). So putting that in:</p>
+      <div class=eqn>\\[ \\begin{align} A &= \\int_{s_1}^{s_2} 2 \\pi \\frac13 \\, \\sqrt{1 + \\left( \\frac13 \\right)^2} dx \\\\[6pt] &= \\int_{s_1}^{s_2}  \\frac{2 \\pi}3 \\, \\sqrt{ \\frac{10}9 } dx \\end{align} \\] </div>
+      <p>That means:</p>
+      <div class=eqn>\\[ \\begin{align} A &= \\frac{2 \\pi}3 \\, \\sqrt{ \\frac{10}9 } \\int_{x=0}^{x=3} x dx \\\\[6pt] &= \\frac{2 \\pi}3 \\, \\sqrt{ \\frac{10}9 } \\bigg[ \\frac{x^2}2 \\bigg]^3_0 \\\\[6pt] &= \\pi\\sqrt{ 10 }  \\end{align} \\] </div>
+      <p>That was just by the way. Anyway, where were we? Oh yes, volumes of revolution.</p>
+      <p>So remember from a while ago, how to get the centre of a shape:</p>
+      <div class=eqn>\\[ \\bar{y} = \\frac{ \\int y \\ ds }{ \\int ds } \\] </div>
+      <p>Times both sides by \\( 2\\pi \\):</p>
+      <div class=eqn>\\[ 2\\pi \\bar{y} = \\frac{ \\int 2\\pi y \\ ds }{ \\int ds } \\] </div>
+      <p>Now \\( \\int ds \\) is just \\( S \\), giving us</p>
+      <div class=eqn>\\[ 2\\pi \\bar{y} = \\frac{ A }{ S} \\] </div>
+      <p>Then just by rearranging, we get:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -13796,10 +13813,14 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>As as usual, you're thinking...</p>
+      <p>It turns out, it's actually the same old &quot;area is length times width&quot; that we all know and love, just in a new form.</p>
+      <p>If \\( S \\) is the length, \\( 2 \\pi \\bar{y} \\) is the distance the centroid is travelling</p>
+      <p>Therefore, by using the same logic, if we have a closed surface and we want to know the total volume enclosed, all we have to do is replace the \\( S \\) with \\( A \\), the area enclosed by the path \\( s \\).</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ V = 2 \\pi A \\bar{y} \\]
+                  \\[ V = 2 \\pi \\bar{y} A \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula 3: Pappus' (1st) theorem
@@ -13909,6 +13930,11 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <h3>Vector integration</h3>
+      <div class=eqn> \\[ d\\vec{r} = \\begin{pmatrix} dx \\\\ dy \\\\ dz \\end{pmatrix} \\] </div>
+      <p>With this in mind, there are 3 ways we can integrate this tiny vector thingy over the field.</p>
+      <p>A conservative field is one in which the path doesn't change the outcome.</p>
+      <p>To prove that a field is conservative, you need to show that the curl in the vector field is zero</p>
     `
   },
 
@@ -14119,6 +14145,46 @@ const subtopics = {
       \\end{align*} \\] </div>
       <p>Which means we get:</p>
       <div class=llarge-eqn> \\[ \\xi(t, x; \\alpha_S < 0) = \\int_{0}^{\\infty} \\left[ C_k \\cos(ckt) + D_k \\sin(ckt) \\right] \\left[ A_k \\cos(kx) + B_k \\sin(kx) \\right] \\, dk \\ . \\] </div>
+      <div class=method>
+          <h5>METHOD: <span style="color:yellow; font-style: italic;">Seperation of Variables</span></h5>
+          <hr style="margin:0px; border-width:0.2vw; color:yellow">
+          <div class=method-step>
+          <h6>Step 1</h6>
+              <div class=method-subtitle>Split the variable into a distance function and a time function</div>
+              <p>Take whatever variable you have, and split it into \\( X(x) \\) and \\( T(t) \\). </p>
+              <div class=eqn>\\[ \\phi(x,t) = X(x)T(t)\\]</div>
+          </div><div class=method-step>
+          <h6>Step 2</h6>
+              <div class=method-subtitle>Rearrange the equation to have all the time-dependant variables on one side and any distance-dependant variables on the other side</div>
+              <p>Put all the X's on one side and all the T's on the other side.</p>
+          </div><div class=method-step>
+          <h6>Step 3</h6>
+              <div class=method-subtitle>Set both sides to some constant</div>
+              <p>The only way this can be true is to set both sides of the equation to some constant.</p>
+          </div><div class=method-step>
+          <h6>Step 4</h6>
+              <div class=method-subtitle>Set the constant to be zero and work out the solutions</div>
+              <p>This is the easiest scenario. If we have \\( f''(x) = 0 \\), then the solution for \\( f(x) \\) is \\( Ax + B \\). If there is \\( f'(x) = 0 \\), then it's just a constant, which can be absorbed into the \\( Ax + B \\). Then to get the solution, you multiply the X solution and the T solution together. In general, that is: </p>
+              <div class=eqn>\\[ X(x)T(t) = (Ax + B)(Ct + D) \\]</div>
+          </div><div class=method-step>
+          <h6>Step 5</h6>
+              <div class=method-subtitle>Set the constant to be more than zero ( \\( \\alpha_S = \\kappa^2 \\) ) and work out the solutions</div>
+              <p>Set \\( \\alpha_S \\) to a positive value (we pick \\( k^2 \\)). For first order equations, the solution becomes \\( A_κ e^{κx} + B_κ e^{−κx} \\). Giving a general: </p>
+              <div class=eqn>\\[ X(x)T(t) = (A_κ e^{κx} + B_κ e^{−κx})(C_κ e^{κt} + D_κ e^{−κt}) \\]</div>
+          </div><div class=method-step>
+          <h6>Step 6</h6>
+              <div class=method-subtitle>Set the constant to be less than zero ( \\( \\alpha_S = -k^2 \\) ) and work out the solutions</div>
+              <p>Set \\( \\alpha_S \\) to a negative value (we pick \\( -k^2 \\)). The solutions becomes complex exponentials \\( A_κ e^{κx} + B_κ e^{−κx} \\), which are just sines and cosines. Giving a general: </p>
+              <div class=eqn>\\[ X(x)T(t) = \\left[ C_k \\cos(ckt) + D_k \\sin(ckt) \\right] \\left[ A_k \\cos(kx) + B_k \\sin(kx) \\right] \\]</div>
+          </div><div class=method-step>
+          <h6>Step 7</h6>
+              <div class=method-subtitle>Sum the 3 potential solutions together</div>
+          </div><div class=method-step>
+          <h6>Step 8</h6>
+              <div class=method-subtitle>Use boundary conditions to simplify the expression</div>
+              <p>For example, if we have a diffusion equation, we know that the constant at the front must be negative. Therefore it makes no sense to consider positive solutions. 
+          </div>
+      </div>
       <hr>
       <p>To get the full solution, we just add the three together. This sounds easy in theory until you actually realise how cooked our three solutions actually are:</p>
       <div class=eqn style="font-size:1.2vw; padding-left:0; padding-right:0"> \\[ \\begin{align*}
@@ -14130,12 +14196,21 @@ const subtopics = {
       <p>Never fear, in most cases we don't actually have to fully expand that ugly ahh equation.</p>
       <div class=eqn> \\[ \\xi(0, t) = \\xi(L, t) = 0 \\] </div>
       <h4>Case 1</h4>
-      <p>That means</p>
-      <div class=eqn> \\[ \\xi(x, t; 0) = (A_0 t + B_0)(C_0 t + D_0) = 0 \\] </div>
+      <p>When \\( x \\) is set to 0, we get:</p>
+      <div class=eqn> \\[ \\xi(x, t; 0) = (B_0)(C_0 t + D_0) = 0 \\] </div>
+      <p>That means \\( B_0 = 0 \\).</p>
+      <p>Now with that in mind, when \\( L \\) is set to 0, we get:</p>
+      <div class=eqn> \\[ \\xi(x, t; 0) = (A_0 L)(C_0 t + D_0) = 0 \\] </div>
+      <p>That means \\( A_0 = 0 \\) as well. That means there are no linear solutions</p>
       <h4>Case 2</h4>
-      <p>That means:</p>
+      <p>When \\( x \\) is set to 0, we get:</p>
+      <div class=eqn> \\[ \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\left( A_{\\kappa} + B_{\\kappa} \\right) \\] </div>
+      <p>That means \\( A_{\\kappa} + B_{\\kappa} = 0 \\), or \\( A_{\\kappa} = -B_{\\kappa} \\). Now when \\( x \\) is set to \\( L \\), we get:</p>
+      <div class=eqn> \\[ \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\left( A_{\\kappa} e^{ \\kappa x} - A_{\\kappa} e^{- \\kappa x} \\right) \\] </div>
+      <div class=eqn> \\[ A\\sinh{\\kappa L} = 0 \\] </div>
+      <p>This is true if either \\( A_\\kappa = 0 \\) or \\( \\kappa = 0 \\), but since we have already said that \\( \\kappa^2 &gt; 0 \\), then that must mean that \\( A_\\kappa = 0 \\), once again leaving no solution.</p>
       <div class=llarge-eqn> \\[
-      \\xi(t, x; \\alpha_S > 0) = \\int_{0}^{\\infty} \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\left( A_{\\kappa} e^{\\kappa x} + B_{\\kappa} e^{-\\kappa x} \\right) \\, d\\kappa = 0\\ .
+      \\xi(t, x; \\alpha_S > 0) = \\int_{0}^{\\infty} 0 \\left( C_{\\kappa} e^{c \\kappa t} + D_{\\kappa} e^{-c \\kappa t} \\right) \\, d\\kappa = 0.
       \\] </div>
       <h4>Case 3</h4>
       <p>That means:</p>
@@ -14242,6 +14317,19 @@ const subtopics = {
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\mathcal{F}(f(x+a)) = e^{ika} \\mathcal{F}(f(x)) .  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\mathcal{F}(\\frac{d^nf}{dx^n}) = (ik)^n \\mathcal{F}(f(x,t)) .  \\]
+                  \\[ \\mathcal{F}(\\frac{d^nf}{dt^n}) = (i\\omega)^n \\mathcal{F}(f(x,t)) .  \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula X
@@ -14505,6 +14593,57 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>What a scary looking formula that is</p>
+      <div class=method>
+          <h5>METHOD: <span style="color:yellow; font-style: italic;">Intensity Profiles</span></h5>
+          <hr style="margin:0px; border-width:0.2vw; color:yellow">
+          <div class=method-step>
+          <h6>Step 1</h6>
+              <div class=method-subtitle>Define the aperture function</div>
+              <p>The aperture function should be 1 where the hole is, and 0 where the hole isn't </p>
+              <div class=eqn> \\[ \\begin{align*}
+                  a(\\vec{r}') = \\begin{cases} 
+                  1 & \\text{on the hole} \\\\ 
+                  0 & \\text{otherwise} . 
+                  \\end{cases} \\end{align*} \\] </div>
+          </div><div class=method-step>
+          <h6>Step 2</h6>
+              <div class=method-subtitle>Calculate the fourier transform of the aperture function, using the relevant bounds.</div>
+              <p>In principle the fourier transform should be over all space, but since the aperture function will only be non-zero between a certain width and height, we use those bounds instead</p>
+              <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\vec{k}\\cdot\\vec{r}} dx' dy' . \\] </div>
+          </div><div class=method-step>
+          <h6>Step 3</h6>
+              <div class=method-subtitle>Split the integral up into x and y components</div>
+              <p>Due the the way the integral is set up, the x and y components can be split up to make the calculation more visually appealing</p>
+              <div class=eqn> \\[ \\tilde{a}(\\vec{k}) = \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{kx}{D}x'} dx' \\int^{+\\frac{b}2}_{-\\frac{b}2} e^{-i\\frac{ky}{D}y'} dy' . \\] </div>
+          </div><div class=method-step>
+          <h6>Step 4</h6>
+              <div class=method-subtitle>Evaluate the integrals</div>
+              <p>Be careful to integrate with respect to  x' and y', not x and y: these are to be treated as constants.</p>
+              <div class=eqn>\\[ \\tilde{a}(\\vec{k}) = \\frac{D}{ikx} \\left[ e^{i\\frac{kb}{2D}x} - e^{-i\\frac{kb}{2D}x} \\right] \\; \\frac{D}{iky} \\left[ e^{i\\frac{kb}{2D}y} - e^{-i\\frac{kb}{2D}y} \\right] \\]</div>
+          </div><div class=method-step>
+          <h6>Step 5</h6>
+              <div class=method-subtitle>Replace the exponentials with sines</div>
+              <p>Because \\( \\sin{(ax)} = \\frac{e^{iax}+e^{-iax}}{2i} \\), we can rewrite this:</p>
+              <div class=eqn>\\[ \\tilde{a}(\\vec{k}) = \\frac{2D}{kx} \\sin \\left( \\frac{kb}{2D}x \\right) \\; \\frac{2D}{ky} \\sin \\left( \\frac{kb}{2D}y \\right) \\]</div>
+          </div><div class=method-step>
+          <h6>Step 6</h6>
+              <div class=method-subtitle>Change the sines for sincs</div>
+              <p>To complete the fourier transform, the sine can be combined with the x / y in the denominator, since \\( \\frac{\\sin{ax}}x = \\operatorname{sinc} x \\)</p>
+              <div class=eqn>\\[ \\tilde{a}(\\vec{k}) = \\frac{2D}{k} \\operatorname{sinc} \\left( \\frac{kb}{2D}x \\right) \\; \\frac{2D}{ky} \\operatorname{sinc} \\left( \\frac{kb}{2D}y \\right) \\]</div>
+          </div><div class=method-step>
+          <h6>Step 7</h6>
+              <div class=method-subtitle>Get the wavefunction</div>
+              <p>Multiply by \\( \\frac{e^{i(k|\\vec{r}| - \\omega t)}}D \\)</p>
+              <div class=eqn>\\[ u(\\vec{r}, t) \\approx \\frac{bh}{D} e^{i(k|\\vec{r}| - \\omega t)} \\operatorname{sinc} \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc} \\left( \\frac{kh}{2D} y \\right) \\]</div>
+          </div><div class=method-step>
+          <h6>Step 8</h6>
+              <div class=method-subtitle>Take the modulus squared to get the intensity</div>
+              <p>Since this is modulus squared, the \\( e^{i(k|\\vec{r}| - \\omega t)} \\) term basically vanishes, and everything else is squared as usual</p>
+              <div class=eqn>\\[ I(\\vec{r}) \\approx \\frac{b^2h^2}{D^2} \\operatorname{sinc}^2 \\left( \\frac{kb}{2D} x \\right) \\operatorname{sinc}^2 \\left( \\frac{kh}{2D} y \\right) \\]</div>
+          </div>
+      </div>
+      <hr>
       <h3>Circular Aperture</h3>
       <div class=eqn> \\[ \\begin{align*}
       a(\\vec{r}') = \\begin{cases} 
@@ -15029,9 +15168,27 @@ const subtopics = {
   "dirac": {
     title: "Dirac Notation",
     content: `
+      <p>First, some context.</p>
+      <p>This definition might be a bit confusing, after all, wavefunction don't 'point' anywhere. But that's because we do physics, and the mathematicians didn't let us in on the little secret. You know how physicists will always do shoddy mathematics and the mathematicians will complain and we'd just ignore them? It has finally come back to bite us.</p>
+      <p>In mathematics, a vector is just any mathematical object which can reliably be written as co-ordinates, and can be anything which meets these, frankly extremely vague, criterion:</p>
+      <ul>
+      <li>If you take a vector and add another vector to it, you get another vector</li>
+      <li>If you take a vector and multiply it by some number \\( a \\), you get another vector</li>
+      <li>If you take a vector and multiply it by 1, you get the same vector back</li>
+      <li>The vector is <em>associative</em></li>
+      <li>The vector is <em>commutative</em></li>
+      <li>It's possible for there to be 0 of that vector</li>
+      <li>It's possible for there to be negative of that vector</li>
+      <li>If you add two vectors together and then multiply the sum by some number \\( a \\), it's the same as if you were to take each vector and multiply them by \\( a \\) and <em>then</em> add them together</li>
+      </ul>
+      <p>That means, any mathematical object which you can replace the word 'vector' with and still have all these statements be true can be considered vectors. The easiest example to visualise is the <em>polynomial</em>.</p>
+      <p>So something like \\( 1 + x + 3x^2 + 2x^4 \\) can be written as \\( (1, 1, 3, 0, 2) \\) (a 5-dimensional vector space in this case)</p>
+      <p>With that in mind, let's take some wavefunction \\( \\psi \\). Suppose it has two possible energies, \\( E_1 \\) and \\( E_2 \\). We can then write the vector:</p>
+      <div class=eqn> \\[ \\vec{\\psi} = \\begin{pmatrix} 50\\% \\\\ 50\\% \\end{pmatrix} \\] </div>
+      <p>We can do this for as many potential states as we want.</p>
+      <div class=eqn> \\[ \\vec{\\psi} = \\begin{pmatrix} 1\\% \\\\ 1\\% \\\\ 1\\% \\\\ \\vdots \\\\ 1\\%\\end{pmatrix} \\] </div>
       <h3>The 'Ket' (State Vector)</h3>
-      <p>A ket vector points to the right, and just means a state of some kind.</p>
-      <p>An example of a ket vector is</p>
+      <p>We can write vectors in terms of 'kets', which are pretty much just a different way of writing a vector.</p>
       <div class=eqn> \\[ |\\psi \\rangle = \\begin{pmatrix} a \\\\ b \\end{pmatrix} \\] </div>
       <p>There is no real restriction on what kinda symbol you can use. So for example:</p>
       <ul>
@@ -15059,11 +15216,35 @@ const subtopics = {
       <div class=eqn> \\[ \\langle \\psi | = \\begin{pmatrix} \\frac{\\sqrt{3}}2 & \\frac12 \\end{pmatrix} \\] </div>
       <p>To be fair this is a pretty crap example for the 'conjugate' part, since neither of the fractions are complex, but whatever.</p>
       <p>Dual vectors are fundamentally not much different to state vectors. However, by taking the complex transpose of a ket vector, you are basically putting it into measuring mode.</p>
-      <h3>The inner product</h3>
+      <h3>The Inner Product</h3>
       <p>Now say we have two general states, which we'll call \\( | \\psi \\rangle \\) and \\( | \\phi \\rangle \\)</p>
       <div class=eqn> \\[ \\begin{align} \\langle \\phi | \\psi \\rangle &= \\begin{pmatrix} a_1^* & b_1^* \\end{pmatrix} \\begin{pmatrix} a_2 \\\\ b_2 \\end{pmatrix} \\\\[6pt] &= a_1^*a_2 + b_1^*b_2  \\end{align}\\] </div>
-      <p>This function tells us how much of \\( | \\phi \\rangle \\) is contained in \\( | \\psi \\rangle \\)</p>
-      <p>So if we want to know the wavefunction at a position \\( x \\), we can write it as:</p>
+      <p>Now if you are attentice like me, you'll realise this is literally just the dot product of the two vectors. The only reason we need the complex conjugate of one is because, if there are complex numbers, then we could end up with negative distances, which is unmeasurable.</p>
+      <p>Since this is just a dot product, we can write this as:</p>
+      <div class=eqn> \\[  \\langle \\phi | \\psi \\rangle = \\sum \\phi^*(x) \\psi(x) \\] </div>
+      <p>And that's cool and all, but it ain't bloody realistic. Why? Because wavefunctions don't typically have a finite number of possible states. So we need to sum this continuously, using an integral:</p>
+      <div class=eqn> \\[  \\langle \\phi | \\psi \\rangle = \\int \\phi^*(x) \\psi(x) \\ dx \\] </div>
+      <p>This function tells us how much of \\( | \\phi \\rangle \\) is contained in \\( | \\psi \\rangle \\), a bit like how the dot product between two vectors \\( \\vec{a} \\) and \\( \\vec{b} \\) it tells you how aligned the two vectors are.</p>
+      <p>We can sorta use this to pull out information from our wavefunction. Take the spin function we had before, \\( | \\psi \\rangle = \\frac{\\sqrt{3}}2 | \\! \\uparrow \\rangle + \\frac12 | \\! \\downarrow \\rangle \\). If we want to know the probability of it being up-spin, we take the inner product of \\( \\psi \\) and \\( \\uparrow \\):</p>
+      <div class=eqn> \\[ \\begin{align}
+       \\langle  \\downarrow \\! | \\psi \\rangle &= \\begin{pmatrix} 1 \\\\ 0 \\end{pmatrix} \\cdot \\begin{pmatrix} \\frac{\\sqrt{3}}2 \\\\ \\frac12 \\end{pmatrix} \\\\[6pt] &= 1 \\cdot \\frac{\\sqrt{3}}2 + 0 \\cdot \\frac12 \\\\[6pt] &= \\frac{\\sqrt{3}}2
+        \\end{align} \\] </div>
+      <p>Hey look at that, the inner product can be used to pick out the probability that the ket (our wavefunctions) is in the same state as the bra (the up-spin).</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\langle \\psi | \\psi \\rangle = 1 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Normalisation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Since the odds of a state being itself is 100%</p>
+      <p>This makes sense for discrete basis, like up-spin and down-spin. But does this work for continuous things?</p>
+      <p>Yes we can. Think of the wavefunction as we know it before. It's a continuous function, with an infinite range of \\(x\\) values to pick from. At each value of \\( x \\), the wavefunction has its own value. That means that, when written in terms of energies, the wavefunction ket takes an infinite number of values, as does  \\( \\langle x | \\). So if we want to know the wavefunction at a position \\( x \\), we can write it as:</p>
       <div class=eqn> \\[ \\psi(x) = \\langle x | \\psi \\rangle \\] </div>
       <p>And we can do this in many different ways:</p>
       <ul>
@@ -15072,10 +15253,6 @@ const subtopics = {
       <li>\\( \\langle  \\uparrow \\! | \\psi \\rangle \\) means the wavefunction if the particle has an up-spin</li>
       <li>\\( \\langle E | \\psi \\rangle \\) means the wavefunction at energy \\( E \\)</li>
       </ul>
-      <p>Now one thing to watch out for: if the inner product describes a wavefunction evaluated at a particular energy, spin, position or whatever, then what happens when \\( | \\psi \\rangle \\) and \\( | \\phi \\rangle \\) are two wave functions? Then does \\( \\langle \\phi | \\psi \\rangle \\) mean the wave function evaluated at \\( \\phi \\)? That don't make no bloody sense...</p>
-      <p>Well, what is describes is the likelihood of \\( \\psi \\) being equal to \\( \\phi \\): It's like a measure of how similar two states are.</p>
-      <p>So \\( \\langle \\phi | \\psi \\rangle \\) is a maximum when the two wavefunctions are both high, and a minimum when any of the wavefunctions are 0.</p>
-      <p>&quot;overlap of ∣ψ⟩ with the state of a particle exactly at x&quot;</p>
       <p>With that in mind, we can also determine the average value of an operator:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -15096,6 +15273,983 @@ const subtopics = {
       <p>100% similarity means the operator basically does nothing.</p>
       <p>Try it with energy</p>
       <div class=eqn> \\[ \\langle E \\rangle = \\langle \\psi | \\hat{H} | \\psi \\rangle \\] </div>
+      <h3>The Outer Product</h3>
+      <p>The outer product is basically just the opposite</p>
+      <div class=eqn> \\[ \\begin{align}  | \\phi \\rangle \\otimes \\langle \\psi | &= \\begin{pmatrix} a_1^* & b_1^* \\end{pmatrix} \\otimes \\begin{pmatrix} a_2 \\\\ b_2 \\end{pmatrix} \\\\[6pt] &= \\begin{pmatrix} a_1^*a_2 & b_1^*a_2 \\\\ a_1^*b_2 & b_1^*b_2 \\end{pmatrix} \\end{align}\\] </div>
+      <p>Bloody hell, what on earth is this brand new symbol we've seen?</p>
+      <div class="container" style="justify-content: center">
+          <div class="text">
+             <table style="width: 30vw">
+            <thead>
+            <tr>
+            <th>\\( \\mathbf{Multiply} \\)</th>
+            <th>\\( a_1^* \\)</th>
+            <th>\\( b_1^* \\)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>\\( a_2 \\)</td>
+            <td>\\(a_1^*a_2\\)</td>
+            <td>\\(b_1^*a_2\\)</td>
+            </tr>
+            <tr>
+            <td>\\( b_2 \\)</td>
+            <td>\\(a_1^*b_2\\)</td>
+            <td>\\(b_1^*b_2\\)</td>
+            </tr>
+            </tbody>
+            </table>
+          </div>
+          <div> Therefore we get \\( \\quad \\begin{pmatrix} a_1^*a_2 & b_1^*a_2 \\\\ a_1^*b_2 & b_1^*b_2 \\end{pmatrix}\\) </div>
+      </div>
+      <p>To be honest, this is a quite clunky way of thinking about it in my opinion. Because why think about it in terms of this new fangled way when we could just use the pseudo dot-product method. Like take this for example:</p>
+      <div class=eqn> \\[ | \\phi \\rangle \\langle \\psi | \\chi \\rangle \\] </div>
+      <p>Now we could take \\( | \\phi \\rangle \\langle \\psi | \\) as its own thing, create the matrix, and then apply the matrix onto the \\( | \\chi \\rangle \\)... <em>or</em>, we could just calculate the inner product \\( \\langle \\psi | \\chi \\rangle \\), which gives us a scalar, and then scale up \\( | \\phi \\rangle \\) by that amount.</p>
+      <div class=eqn> \\[ \\bigg( |ϕ⟩⟨ψ| \\bigg) |χ⟩ = \\underbrace{⟨ψ|χ⟩}_{\\text{scalar}} |ϕ⟩ \\] </div>
+      <h4>The Projection Vector</h4>
+      <p>The projection vector extracts the component of any state along \\( |n⟩ \\) and discards everything else</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{P}_n =  | n \\rangle \\langle n | \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: The Projection Vector
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>The reason this works is, by applying it to some ket vector, like our wavefunction \\( | \\psi ⟩ \\), by applying this operator we end up with:</p>
+      <div class=eqn> \\[ \\hat{P}_n |ψ⟩ = |n⟩⟨n|ψ⟩ \\] </div>
+      <p>We know that \\( ⟨n|ψ⟩ \\) is the same as saying the wavefunction evaluated at \\( n \\). So that means, by applying this projection vector, we get a ket multiplied by the probability amplitude.</p>
+      <p>We can use this to get any quantity we'd like. For example, have a wavefunction:</p>
+      <div class=eqn> \\[ |ψ⟩ = c_1|E_1⟩ + c_2|E_2⟩ + c_3|E_3⟩ \\] </div>
+      <p>and want to know the energy?</p>
+      <div class=eqn> \\[ \\begin{align} \\hat{P}_{E_1} |ψ⟩ &= |E_1⟩⟨E_1|ψ⟩ = |E_1⟩c_1 \\\\[6pt] &= c_1|E_1⟩ \\end{align} \\] </div>
+      <h4>Properties of the Projection Vector</h4>
+      <p>The first property is that it's <em>idempotent</em>, which is a big grown-up word meaning if you apply the operator more than once, you will end up with the same thing back</p>
+      <p>Take the example we just did</p>
+      <div class=eqn> \\[ \\hat{P}_{E_1} |ψ⟩ = c_1|E_1⟩ \\] </div>
+      <p>Now apply the operator again</p>
+      <div class=eqn> \\[ \\begin{align} \\hat{P}_{E_1} c_1|E_1⟩ &= c_1|E_1⟩ \\style{opacity:40%}{\\cancel{⟨E_1|E_1⟩}} \\\\[6pt] &= c_1|E_1⟩ \\end{align}\\] </div>
+      <p>Hey, look at that, we're back where we started!</p>
+      <h4>The Spectral Decomposition</h4>
+      <p>If the projection vector takes a vector and turns it into the probability of getting a particular eigenvalue, this means we can build a vector back by summing up all the thingies:</p>
+      <div class=eqn> \\[ \\begin{align} \\hat{P}_{E_1} |ψ⟩ + \\hat{P}_{E_2} |ψ⟩ + \\hat{P}_{E_3} |ψ⟩ &= c_1|E_1⟩ + c_2|E_2⟩ + c_3|E_3⟩ \\\\[6pt] &= |ψ⟩ \\end{align} \\] </div>
+      <p>We can be more general about this:</p>
+      <div class=eqn> \\[ \\begin{align} \\sum_n \\hat{P}_{n} |ψ⟩ &= \\sum_n |n⟩⟨n|ψ⟩ \\\\[6pt] &= |ψ⟩ \\end{align} \\] </div>
+      <p>Or like this:</p>
+      <div class=eqn> \\[ \\bigg( \\style{opacity: 40%}{ \\sum_n |n⟩⟨n| } \\bigg) |ψ⟩ = |ψ⟩ \\] </div>
+      <p>By summing all the projections, you get the original function back. So if we consider it an operator, that means:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\sum_n | n \\rangle \\langle n | = \\hat{I} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: The completeness relation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>or for a continuous vector like \\( | x \\rangle \\)</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\int^\\infty_{-\\infty} | x \\rangle \\langle x | dx = \\hat{I} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: The completeness relation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Remember this, it may come in handy.</p>
+      <p>An operator will take every value and manipulate it somehow, i.e. multiplying it by some eigenvalue</p>
+      <div class=eqn> \\[ \\hat{A}|ψ⟩ = a_n|ψ⟩ \\] </div>
+      <p>Then by using our identity:</p>
+      <div class=eqn> \\[  \\hat{A} |ψ⟩ = \\sum_n a_n|n⟩⟨n|ψ⟩ \\] </div>
+      <p>Then:</p>
+      <div class=eqn> \\[ \\hat{A} = \\sum_n a_n|n⟩⟨n| = \\sum_n a_n \\hat{P}_{n} \\] </div>
+      <p>So we can write something like the Hamiltonian as</p>
+      <div class=eqn> \\[ \\hat{H} = E_1|E_1⟩⟨E_1| + E_2|E_2⟩⟨E_2| + E_3|E_3⟩⟨E_3| \\] </div>
+      <div class=eqn> \\[ \\begin{align} \\hat{H}|ψ⟩ &= E_1|E_1⟩⟨E_1|ψ⟩ + E_2|E_2⟩⟨E_2|ψ⟩ + E_3|E_3⟩⟨E_3|ψ⟩ \\\\[6pt] &= E_1c_1|E_1⟩ + E_2c_2|E_2⟩ + E_3c_3|E_3⟩ \\end{align} \\] </div>
+    `
+  },
+
+  "stars-intro": {
+    title: "Introduction to Stars",
+    content: `
+      <p>Back from last year</p>
+      <h3>Stars? I've never heard of those before, what are they?!</h3>
+      <p>What?! You're in your second year of university physics and you don't know what a bloody star is? Where have you even been all this while?</p>
+      <p>Well, wait until midnight tonight. Look up in the sky. You see the bright glowy things? No, not the big grey one, that's the moon. The small glittery ones. <em>Those</em> are stars.</p>
+      <p>Well, perhaps you can't be arsed to wait. Well, look outside now. You see that big bright glowy thing? Not anymore, 'cus now your blind!</p>
+      <p>In case you didn't notice, stars are pretty damn bright. Having said that, 'brightness' isn't an actual measurement. So how <em>do</em> we measure it?</p>
+      <p>The first way is <em>luminosity</em>. That tells you how much energy the star is actually puking out each second. Since it's energy per second, it has units \\( Js^{-1} \\), or \\( W \\).</p>
+      <p>The arguably more useful way is <em>flux</em></p>
+      <p>\\[<br>
+      f = \\frac{L}{4\\pi d^2}<br>
+      \\]</p>
+      <p>The distance \\( d \\) is a pretty valuable piece of information. Not only do we know how far away the star is, but we can figure out how <em>intrinsically</em> bright the star is.</p>
+      <h3>The sun</h3>
+      <p>Stars are fundamentally just really really big balls of gas. These balls of gas are so massive that they are held together by their own self-gravity. This strong gravitational pull allows hydrogen atoms to fuse together (<em>nuclear fusion</em>), which radiates large amounts of energy. That is why they are so bright!</p>
+      <p>If we wanna understand all those far away glittery stars, then a good place to start is to understand our own friendly neighbourhood star, the sun.</p>
+      <ul>
+      <li>It has an effective temperature of \\( T_{\\text{eff}} = 5780 K \\)</li>
+      <li>It has a radius of \\( R_\\odot = 7 \\times 10^8 \\text{ m} \\)</li>
+      <li>It has a mass of \\( M_\\odot = 2 \\times 10^30 \\text{ kg} \\)</li>
+      <li>It's 4.6 billion years old (unc...)</li>
+      <li>It rotates every 27 days or so</li>
+      </ul>
+      <p>Now of course, stars are pretty diverse. Some are hotter, some are brighter, some are different colours</p>
+      <h3>Parallax</h3>
+      <p>\\[<br>
+      \\sin{\\alpha} = \\frac{r}d<br>
+      \\]</p>
+      <p>If \\( \\alpha \\) is teeny tiny, then by our bitesized buddy, the <em>small angle approximation</em>, that becomes:</p>
+      <p>\\[<br>
+      \\alpha = \\frac{r}d<br>
+      \\]</p>
+      <p>This angle <em>could</em> be measured in degrees as usual, but remember we are assuming that our angle is pretty small, meaning that degrees might actually be too big. So instead, we use seconds and arcseconds.</p>
+      <h3>Astronomical observations</h3>
+      <p>Most of our observations about space comes from looking at electromagnetic waves. And why the hell wouldn't it be? EM waves are adorable.</p>
+      <p>Different wavelengths will give us different information about the thing we are looking at. Unfortunately, not all wavelengths actually make their way over hear, due to that pesky <em>atmosphere</em> in the sky. Now you might be thinking &quot;magical wavelength-blocky thing in the sky? I don't see a magical wavelength-blocky thing in the sky...&quot; Well that's because the atmosphere is <em>invisible</em>.</p>
+      <p>The atmosphere is mostly made of water and carbon dioxide, both of which are infamously transparent. But that doesn't stop them from eating up certain wavelengths</p>
+      <p>That means most of our telescopes can only pick up visible light or radio waves. So if we really want other frequencies, we're gonna have to outer space and collect 'em ourselves</p>
+      <h3>Magnitudes and Colours</h3>
+      <div class=eqn> \\[ m_1 - m_2 = -2.5 \\log{ \\frac{f_1}{f_2} } \\] </div>
+      <div class=eqn> \\[ m_* = -2.5 \\log{ \\frac{f_*}{f_\\text{vega}} } \\] </div>
+      <p>Next, onto wavelengths. We talked about the flux as being the amount of energy a star radiates. This is the sum over all different wavelengths. So:</p>
+      <div class=eqn> \\[ f = \\int^\\infty_0 f_\\lambda d\\lambda  \\] </div>
+      <p>Slight problem, infinity is a pretty bloody large number. So large that it's impractical to measure the flux at every single wavelength. So instead we pick a smaller range of wavelengths to work with.</p>
+      <p>Now that we have these bands to work with, we can calculate the magnitudes of a single band</p>
+      <div class=eqn> \\[ \\text{ Colour(B-V) } = m_U - m_B  \\] </div>
+      <p>So if B-V is less than 0, that means the magnitude of the blue frequencies is less than the magnitude of the rest of the visible frequencies, and since lower magnitude means brighter, that means a body where B-V is less than 0 appears to be bluer than Vega</p>
+      <p>Why is the colour helpful? Well as it turns out, the colour of a body is very closely linked to the temperature of said body.</p>
+      <h4>Absolute magnitude</h4>
+      <div class=eqn> \\[ M - m = -5 \\log{ \\frac{d}{10 \\text{pc}} } \\] </div>
+      <h3>Background Radiation</h3>
+      <p>Jumpscare formula!</p>
+      <div class=eqn> \\[ B_\\lambda(T) = \\frac{2 \\pi hc^2 }{ \\lambda^5 (e^{\\frac{hc}{k_BT\\lambda}}-1)}\\] </div>
+      <p>Really, bro? Again?! No way you're still scared of Planck's law?</p>
+      <div class=eqn> \\[ \\lambda_\\text{max}T = 2.898 \\times 10^{-3} \\text{ Km} \\] </div>
+      <p>Consider the units of intensity</p>
+      <div class=eqn> \\[ [B_\\lambda] = J s^{-1} \\ m^{-2} \\ nm^{-1} \\ st^{-1} \\] </div>
+      <p>So \\( \\) is the flux, \\( \\text{nm}^{-1} \\) is per unit wavelength, and \\( \\) is per... steradian? What the bloody hell is a steradian I hear you ask?</p>
+      <p>Steradians are like the big brother of the radian. Radians measure angles in 2 dimensions, whereas steradians measure angles in 3 dimensions. We call 3-dimensional angles <em>solid angles</em>, and we typically represent it with the letter \\( \\Omega \\)</p>
+      <div class=eqn> \\[ d\\Omega = \\sin{\\theta} \\ d\\theta \\ d\\phi \\] </div>
+      <p>In a circle, there are 2π radians. How many steradians make up a sphere?</p>
+      <p>All we have to do is integrate the steradian over all space</p>
+      <div class=eqn> \\[ \\begin{align} \\text{Total solid angle of a sphere} &= 
+          \\int_\\text{sphere} d\\Omega 
+          \\\\[6pt] &= \\int^{2\\pi}_0 d\\phi  \\int^{\\pi}_0 \\sin{\\theta} \\ d\\theta 
+          \\\\[6pt] &= 2\\pi [- \\cos{\\theta}]^\\pi_0
+          \\\\[6pt] &= 4\\pi
+          \\end{align} \\] </div>
+      <p>So a full sphere takes up 4π steradians.</p>
+      <p>If you have a beam of light or something, you can describe it in terms of how many <em>steradians</em> that beam takes up</p>
+      <div class=eqn> \\[ \\begin{align} L &= 
+          \\underbrace{\\int_0^\\infty B_\\lambda d\\lambda}_{\\frac{\\sigma T^4}{\\pi}} \\; 
+          \\underbrace{\\int_A \\ dA}_{4\\pi R_*^2} \\; 
+          \\underbrace{\\int^{2\\pi}_0 d\\phi  \\int^{\\pi}_0 \\sin{\\theta} \\cos{\\theta} \\ d\\theta}_{\\int \\cos{\\theta} \\ d\\Omega}
+          \\\\[6pt] &= \\frac{\\sigma T^4}{\\pi} \\; 4\\pi R_*^2 \\; \\underbrace{2\\pi\\left[- \\frac12 \\cos^2{\\theta}\\right]^{\\frac{\\pi}2}_0}_{\\pi}
+          \\\\[6pt] &= 4\\pi R_*^2 \\sigma T^4
+          \\end{align} \\] </div>
+      <h4>Effective temperature</h4>
+      <p>The effective temperature is the temperature the star would have if it were a perfect black body.</p>
+      <div class=eqn> \\[ L_* = 4\\pi R_*^2 \\sigma T_\\text{eff}^4 \\] </div>
+      <p>Objectively speaking, this is kinda useless, because stars ain't perfect black bodies.</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li>Stars are the big glowy things in the sky</li>
+      <li>The sun is the biggest and glowiest star of 'em all</li>
+      <li>The total energy output of a star across all wavelengths is its luminosity, and it's energy output at a particular distance across all wavelengths is its flux</li>
+      <li>Magnitudes measure how bright stars are, where lower magnitudes mean brighter stars</li>
+      </ul>
+    `
+  },
+
+  "star-classify": {
+    title: "Stellar Classification",
+    content: `
+      <p><em>This is the 100th page I've written!</em></p>
+      <p>Sorry, guys, before we can get into this topic,</p>
+      <h3>Stellar Spectra</h3>
+      <p>If you remember from last time, we had the infamous jumpscare formula, Planck's law:</p>
+      <div class=eqn> \\[ B_\\lambda(T) = \\frac{2 \\pi hc^2 }{ \\lambda^5 (e^{\\frac{hc}{k_BT\\lambda}}-1)}\\] </div>
+      <p>That produced a graph like this. A little bump. We'll call this <em>the continuum</em></p>
+      <p>As scary as that fromula looks, the continuum is only an approximation. If you look at actual star spectra, you'll notice they look a little more like this, with a few spikes and dips here and there. The intensity spikes are called emission lines and the intensity dips are called absorption lines</p>
+      <h4>Emission lines</h4>
+      <p>Emission lines are points where the intensity is higher. Now if the intensity is higher, what do you think would have caused it, hotter of colder gas?</p>
+      <p>If you picked hotter, you're correct!</p>
+      <p>Basically, the high temperature causes electrons to enter higher energy states. Then, when they eventually cool down, they fall into lower energy states, where they release photons, causing the corresponding wavelength of light to increase in its intensity.</p>
+      <p>These electrons can be excited to any energy level, and they form different series of lines depending on which level they fall back to. If an electron falls all the way back to the ground state, it releases photons with lower wavelengths. These emissions are called <em>Lyman lines</em>.</p>
+      <p>If it falls from a higher state back to the <em>second</em> energy level, they form higher wavelength photons which produce the <em>Balmer lines</em>. If it falls back to the <em>third</em> energy level, they form even higher wavelenght photons which produce the <em>Paschen lines</em>.</p>
+      <p>Remember back to basic Quantum Phenomena, that the energy of a photon is <em>inversely proportional</em> to its wavelength:</p>
+      <div class=eqn> \\[ E = \\frac{hc}\\lambda \\] </div>
+      <p>That therefore means that the electrons which fall all the way back to the ground state have higher energy than those which fall to any other state.</p>
+      <h4>Absorption lines</h4>
+      <p>So we know that emission lines form when there is hotter gas. Now think about this, since <em>absorption</em> is the opposite of <em>emission</em>, take a wild guess as to which kind of gas forms emission lines, hotter or colder?</p>
+      <p>When you have a gas that's really cold and you put it in front of a source of light, then the colder gas absorbs some of the energy from the source.</p>
+      <p>To be fair, this probably isn't much different to what you'd expect in everyday life. If you have a light, and put some smoke or something in front of it, you'll see the smoke blocking the light. That's pretty much the same thing which is going on here.</p>
+      <h3>Classifying Stars</h3>
+      <p>The lines produced from both emission and absorption match the energy transitions of the material in the star. But bare in mind these lines aren't intrinsic properties of the stars, it's an observation which just so happens to work. If a star has hydrogen in it, it <em>might</em> produce these lines if the Hydrogen is at the right temperature in the right conditions, so just because there aren't hydrogen lines don't necessarily mean there ain't hydrogen in it.</p>
+      <p>Either way, people started noticing this convenient little pattern with different spectra and elements and decided to record the different lines different spectra produced.</p>
+      <p>They then began to classify stars based on their temperature. Unfortunately scientists are pretty stubborn, so they decided to stick with the hydrogen classification naming convention of A-Z, but just reshuffled the letters such that the hotter letters came first and the cooler letters come later, giving us this funky order:</p>
+      <div class=eqn> \\[ O-B-A-F-G-K-M \\] </div>
+      <p>O-stars are hotter, brighter, and are also bluer / whiter. They are also much bigger and much heavier. However, they don't live for very long.</p>
+      <p>M-stars are colder, dimmer, and redder. They are also smaller and lighter. They do live for a long time, so long that the universe isn't old enough for use to have witnessed the death of an M-star</p>
+      <p>Everything in the middle gets progressively dimmer, redder and colder as you go from O to M. And ther also go from 0 to 9, 9 being hotter etc. The sun is a G2 star.</p>
+      <p>Hydrogen can be found in many different ranks, above a certain energy (since they need a sufficient amount of energy to move up a state). Helium is only really found in the O-rank stars, since helium is a noble gas, meaning it's really stable, means it requires a high energy photon in order to go up energy levels. At lower energies, we get molecular lines, since at too high a temperature will cause the molecules to break up.</p>
+      <p>'Metals' can be found in any star. I put metals in quotation marks, because astronomers have a quite scandelous definition of the word, where a metal is literally anything which isn't hydrogen or helium. At higher temperatures, the metals would be ionised</p>
+      <p>The size is also classified, where I to IV are giants, V is main sequence, VI is subdwarfs, and D are white dwarfs</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li>The absorption / emission lines are dependant on temperature.</li>
+      <li>Just because you can't see lines, that don't necessarity mean the corresponding element ain't there.</li>
+      <li>The stars are classified as O-B-A-F-G-K-M, where O is hotter and M is colder</li>
+      </ul>
+    `
+  },
+
+  "star-atmosphere": {
+    title: "Stellar Atmosphere",
+    content: `
+      <p>Recall from last time that there are two ways lines can form from a spectrum</p>
+      <ul>
+      <li>Excitation</li>
+      <li>Ionisation</li>
+      </ul>
+      <p>For a hydrogen atom, it takes 13.6 electron volts to escape.</p>
+      <p>How many electrons are in each state?</p>
+      <h3>The Boltzmann equation</h3>
+      <p>The likelihood of an electron being in state 1 with energy \\(E_1\\), compared to the likelihood of an electron being in state 2 with energy \\(E_2\\) is:</p>
+      <div class=eqn> \\[ \\frac{P_1}{P_2} = e^{-\\frac{E_1-E_2}{k_BT}} \\] </div>
+      <p>This means that with infinite temperature (and therefore infinite energy), each state is equally likely</p>
+      <p>\\( g_A \\) is the number of states with energy \\( E_A \\). So if we want to know the probability for a given <em>energy</em> rather than a given <em>state</em>, we must include these g's in the equation:</p>
+      <div class=eqn> \\[ \\frac{P_1}{P_2} = \\frac{g_1}{g_2}e^{-\\frac{E_1-E_2}{k_BT}} \\] </div>
+      <p>With a large amount of atoms, the probabilities are the same as the number ratios, so</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{N_B}{N_A} = \\frac{g_B}{g_A}e^{-\\frac{E_B-E_A}{k_BT}}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The Boltzmann Formula
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Having said that, a probably more useful measurement would be \\( \\frac{N_A}N \\), which is the number of particles with energy \\( E_A \\) over the total number of particles. The total number of particles is just:</p>
+      <div class=eqn> \\[ N = \\sum^\\infty_{m=1} N_m \\] </div>
+      <p>By using the Boltzmann equation and setting \\( N_B \\) to \\( N_m \\) and \\( N_A \\) to \\( N_1 \\), we get:</p>
+      <div class=eqn> \\[ \\begin{align} \\frac{N_m}{N_1} &= \\frac{g_m}{g_1}e^{-\\frac{E_m-E_1}{k_BT}} \\\\[6pt] 
+          \\therefore N_m &= N_1 \\frac{g_m}{g_1}e^{-\\frac{E_m-E_1}{k_BT}} \\end{align} \\] </div>
+      <p>Then just chuck in the sum and then we get</p>
+      <div class=eqn> \\[ N = \\frac{N_1}{g_1} \\sum^\\infty_{m=1} g_m e^{-\\frac{E_m-E_1}{k_BT}} \\] </div>
+      <p>We can call this big ugly sum the partition function, which is represented with a \\( U(T) \\) instead of the \\( Z \\) we are used to. God knows why, just charge it for now.</p>
+      <p>Then we end up with this relationship:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{N_m}{N} = \\frac{g_m}{U(T)}e^{-\\frac{E_m-E_1}{k_BT}}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: ...
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>The Saha Equation</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{N_{i+1}}{N_i} = \\frac{2}{n_e} \\frac{U_{i+1}}{U_i} \\left( \\frac{2\\pi m_e k_BT}{h^2} \\right)^\\frac32 e^{-\\frac{\\chi_i}{k_BT}}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: The Saha Equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Where \\( n_e \\) is the number of free electrons (the more free electrons there are, the easier it is for them to recombine with a nucleus, meaning that there will be less higher energy nuclei) and \\( \\chi_i \\) is the energy required to ionise it from i to i+1</p>
+      <h3>...</h3>
+      <p>The atmosphere of a star is considered in terms of its temperature at a given radius (\\( T(r) \\)) and its density at a given radius (\\( \\rho(r) \\)).</p>
+      <p>Let's say we have a ray of light, with a specific wavelength \\( \\lambda \\), and a specific wavelength \\( I_\\lambda \\). THe <em>flux</em> of that light ray would just involve integrating that intensity over the solid angle the light covers:</p>
+      <div class=eqn> \\[ F_\\lambda = \\int_\\Omega I_\\lambda \\cos{\\theta} \\ d\\Omega \\] </div>
+      <div class=eqn> \\[ dE_\\lambda =  I_\\lambda \\cos{\\theta} \\ dA \\ dt \\ d\\lambda \\ d\\Omega \\] </div>
+      <p>For a black body, \\( I_\\lambda = B_\\lambda \\), which is an approximation you'll be using a <em>lot</em>. So if in doubt, just replacec I with B</p>
+      <h4>Absorption</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dI_\\lambda}{dz} = -\\kappa_\\lambda \\rho I_\\lambda  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Solve</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{I_\\lambda}{I_{\\lambda,0}} = e^{-\\int_0^z \\kappa_\\lambda \\rho dz}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\frac{I_\\lambda}{I_{\\lambda,0}} = e^{-\\kappa_\\lambda \\rho z} \\] </div>
+      <p>And the characteristic distance is</p>
+      <div class=eqn> \\[ l = -\\frac1{\\kappa_\\lambda \\rho} \\] </div>
+      <p>Why the hell have I kept the ugly integral there instead of solving it?</p>
+      <p>In the case that we do assume density is constant, then:</p>
+      <h4>Scattering</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dI_\\lambda}{dz} = -\\sigma_\\lambda \\rho I_\\lambda  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>If we just wanna know how much light actually gets to us, often times we don't really care whether the energy is actually absorbed or scattered, so then the sigma is absorbed into the kappa</p>
+      <h4>Emission</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dI_\\lambda}{dz} = -\\varepsilon_\\lambda \\rho  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Optical depth</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{I}{I_0} = e^{-\\tau_\\lambda}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>\\( \\tau \\) increases with the amount of material which is absorbing the light. So in a way, you can think of the optical depth as how far into a material (in this case, the star) we can see.</p>
+      <p>The surface of the star will have some constant optical depth. Exactly <em>which</em> constant is very much up to us. SO say we define the edge of the star as the sphere at which \\( \\tau_\\lambda = 1 \\)</p>
+      <h3>Sources of Opacity</h3>
+      <p>Anything which can block the photons</p>
+      <h4>Bound-Bound Transition</h4>
+      <p>Energy levels transition</p>
+      <p>If we consider the spectrum, it will have a single spike at the wavelength of the photon emitted</p>
+      <div class=eqn> \\[ \\kappa_\\lambda^\\text{bound-bound} \\propto g_{m,n} N_n \\psi(\\lambda) \\] </div>
+      <p>Now let's be honest. We're never gonna get a single localised pulse, that would be too easy!</p>
+      <ul>
+      <li>Natural Broadening comes from the uncertainty principle. Since the election is exciter for a finite amount of time, then we can only have an uncertain value of energy</li>
+      </ul>
+      <div class=eqn> \\[ \\Delta E \\Delta t = \\hbar \\] </div>
+      <div class=eqn> \\[ \\Delta E = \\frac{hc}\\lambda - \\frac{hc}{\\lambda + \\Delta\\lambda} = \\frac{\\hbar}t \\] </div>
+      <p>That means</p>
+      <div class=eqn> \\[ \\Delta \\lambda = \\frac{\\lambda^2}{2\\pi c} \\left( \\frac1{\\Delta t_n} + \\frac1{\\Delta t_m} \\right) \\] </div>
+      <ul>
+      <li>Doppler broadening  comes from the motion of the absorbing atom. If the atom follows a Maxwell-Boltzmann distribution, then the most probable velocity is</li>
+      </ul>
+      <div class=eqn> \\[ v = \\sqrt{\\frac{2k_BT}{m}} \\] </div>
+      <p>That gives</p>
+      <div class=eqn> \\[ \\Delta\\lambda = \\frac{2\\lambda}c \\sqrt{\\frac{2k_BT}{m}} \\] </div>
+      <ul>
+      <li>Pressure broadening goes back to the uncertainty principle. The higher the pressure, the more collisions, meaning the less time electrons have at a given state. So like before, a shorter time means a lower uncertainty in time, meaning more uncertainty in energy and therefore in wavelength.</li>
+      </ul>
+      <p>Now how do we get this change in time? It's gonna be something like the mean free time over the average velocity.</p>
+      <div class=eqn> \\[ l_\\text{atom} = \\frac1{\\sigma n} \\] </div>
+      <div class=eqn> \\[ \\Delta\\lambda = \\frac{\\lambda^2 n \\sigma}{c \\pi} \\sqrt{\\frac{2k_BT}{m}} \\] </div>
+      <ul>
+      <li>Stellar Rotation</li>
+      </ul>
+      <h4>Bound-Free Transition</h4>
+      <p>Ionisation.</p>
+      <p>Instead of looking like a single localised peak, this looks like a continuum with a bunch of cut off points. Think of it like this, we need an energy \\( \\chi_i \\) to ionise the electron. Therefore, any energy greater than that (ie lower wavelength) will be able to ionise it. That keeps on happening until you have enough energy to ionise the next energy state</p>
+      <h4>Free-Free Absorption</h4>
+      <p>Photon absorbed by a free electron, in the presence of a nearby ion.</p>
+      <p>Wait, a nearby ion? Why the hell do we need a nearby ion?</p>
+      <p>Well let's try and conserve the energy:</p>
+      <div class=eqn> \\[ \\begin{align}
+      E &= p_\\gamma c + m_ec^2 \\\\[6pt]
+      &= \\sqrt{m_e^2 c^4 + p_e^2 c^2}
+      \\end{align} \\] </div>
+      <p>For momentum to be conserved, \\( p_\\gamma = p_e \\), which is only solvable if \\( m_e = 0 \\) or \\( p_\\gamma = 0 \\), neither of which makes any bloody sense.</p>
+      <p>Therefore, the ion must take some of the momentum. But let's be real for a sec... what are the odds of that?</p>
+      <p>I mean think about it. Electrons are pretty much always moving, so it's not like it can just sit back and wait for an ion or something.</p>
+      <p>The time the electron spends near an ion is inversely proportional to its speed. Then by using \\( v = \\sqrt{\\frac{2k_BT}{m}} \\), we can see that it's proportional to \\( T^{-\\frac12} \\)</p>
+      <p>The amount of systems which are able to absorb the photon will depend on the density. Put it together you get:</p>
+      <div class=eqn> \\[ \\kappa \\propto \\nu^{-3} \\rho T^{-\\frac12} \\] </div>
+      <p>This mostly happens at the peak of B, where \\( \\lambda_\\text{peak}T = \\frac{hc}{\\nu_\\text{peak}}T = \\text{constant} \\). That means \\( \\nu \\propto T \\) and so:</p>
+      <div class=eqn> \\[ \\kappa \\propto \\rho T^{-\\frac72} \\] </div>
+      <h4>Scattering</h4>
+      <ol>
+      <li>Rayleigh scattering - low energy photons elastically collide with atoms <div class=eqn> \\[ \\sigma_\\text{Rayleigh} \\propto \\frac1{\\lambda^4} \\] </div></li>
+      <li>Compton scattering - inelastic scattering of a photon on an electron</li>
+      <li>Thompson scattering - elastic scattering of a photon on an electron, which is Compton scattering at very low energy</li>
+      </ol>
+      <h4>H minus</h4>
+      <p>This is just hydrogen with an extra electron, which is very unstable and easy to ionise</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "radiate": {
+    title: "Radiative Transfer",
+    content: `
+      <h3>Radiative transfer</h3>
+      <p>If you add up the absorption and emission intensities, you get this total:</p>
+      <div class=eqn> \\[ dI_\\lambda = -\\kappa_\\lambda \\rho I_\\lambda dz + \\varepsilon_\\lambda \\rho dz \\] </div>
+      <p>Rearrange</p>
+      <div class=eqn> \\[ \\frac1{\\kappa_\\lambda \\rho} \\frac{dI_\\lambda}{dz} = - I_\\lambda + \\frac{\\varepsilon_\\lambda}{\\kappa_\\lambda} \\] </div>
+      <p>Now set \\( \\frac{\\varepsilon_\\lambda}{\\kappa_\\lambda} \\) to \\( S_\\lambda \\), which we will call the source function. That leaves us with this equation:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ - \\frac1{\\kappa_\\lambda \\rho} \\frac{dI_\\lambda}{dz} = I_\\lambda - S_\\lambda \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Radiative transfer equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>If I is greater than S, that means that I decreases with z. Then by the same logic, if I is less than S, then I increases with z. That basically means I converges to the source function.</p>
+      <p>This is a cool formula and all, but what does this actually mean for a star?</p>
+      <h4>Local Thermal Equalibrium (LTE)</h4>
+      <p>This takes place in a region where temperature is near enough constant (obviously, how the hell would there be an equilibrium if it weren't bloody constant?) and the gas is dense enough that the particles collide with each other, so that the velocities of the particles follow the Maxwell-Boltzmann distribution.</p>
+      <p>The photons need to have a decently small mean free path so that they interact within the given system (relative, of course).</p>
+      <p>And here's the best part, assuming our body is optically thick and doesn't have a temperature of 0K, then it emits black body radiation, which means LTE was just BB radiation all along! This means</p>
+      <div class=eqn> \\[ S = B \\] </div>
+      <p>Next, since we are in equilibrium, the absorption and the emission must be the same (or else stuff is going in or leaving, which means it ain't in bloody equilibrium). This means the flux is constant everywhere:</p>
+      <div class=eqn> \\[ F = \\text{constant} = \\sigma T^4 \\] </div>
+      <p>So by using this LTE framework, the RTE is less of a pain in the arse! Let's give it a go, shall we?</p>
+      <p>The RTE is:</p>
+      <div class=eqn> \\[ \\frac{dI}{d\\tau} = I - S \\] </div>
+      <p>Since S = B:</p>
+      <div class=eqn> \\[ \\frac{dI_\\lambda}{d\\tau_\\lambda} = I_\\lambda - B_\\lambda \\] </div>
+      <p>Multiply everything by \\( e^{-\\tau} \\)</p>
+      <div class=eqn> \\[ \\frac{dI_\\lambda}{d\\tau_\\lambda}e^{-\\tau} = I_\\lambda e^{-\\tau} - B_\\lambda e^{-\\tau} \\] </div>
+      <p>Why is this better? Well, notice that, by the chain rule:</p>
+      <div class=eqn> \\[ \\frac{d}{d\\tau_\\lambda}(Ie^{-\\tau}) = \\frac{dI_\\lambda}{d\\tau_\\lambda}e^{-\\tau} -I_\\lambda e^{-\\tau} \\] </div>
+      <p>And therefore:</p>
+      <div class=eqn> \\[ \\frac{d}{d\\tau}(Ie^{-\\tau}) = - B e^{-\\tau} \\] </div>
+      <p>Then integrate:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\bigg[Ie^{-\\tau}\\bigg]^0_{\\tau'} &= - B \\int^0_{\\tau'} e^{-\\tau} \\\\[6pt]
+          I(0) - \\style{opacity: 30%}{\\cancel{I(\\tau')e^{-\\tau}}^{\\ = \\ 0}} &= B \\bigg[e^{-\\tau} \\bigg]^0_{\\tau'} \\\\[6pt]
+          \\end{align} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ I(0) = B(1 - e^{-\\tau'}) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>So then for a gas which is super duper thick, meaning \\( \\tau \\) is very large:</p>
+      <div class=eqn> \\[ I(0) = B \\] </div>
+      <p>This explains emission lines, where there's a hot gas which isn't dense enough</p>
+      <h3>Radiation Pressure</h3>
+      <p>Since photons have momentum, they also exert pressure (albeit a teeny tiny pressure) whenever their momentum changes. Say for example we have a photon bouncing of a surface. The momentum changes from \\( p_z \\) to \\( p_z^\\prime \\).</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\Delta p_z &= p_z^\\prime - p_z \\\\[6pt]
+          &= \\frac{E\\cos{\\theta}}c - \\frac{-E\\cos{\\theta}}c \\\\[6pt]
+          &= \\frac{2E\\cos{\\theta}}c
+          \\end{align} \\] </div>
+      <p>Remember from ages ago, that \\( dE_\\lambda =  I_\\lambda \\cos{\\theta} \\ dA \\ dt \\ d\\lambda \\ d\\Omega \\), so:</p>
+      <div class=eqn> \\[ dp_z = \\frac2c I \\ dA \\ dt \\cos^2{\\theta} \\ d\\Omega \\] </div>
+      <p>Since force is \\( \\frac{dp}{dt} \\) and pressure is \\( \\frac{dF}{dA} \\)</p>
+      <div class=eqn> \\[ P_\\text{radiation} = \\int \\frac2c I \\cos^2{\\theta} \\ d\\Omega \\] </div>
+      <p>This is for a solid reflecty thing though. For a gas, there is none. So that means you must remove the 2 before integrating. Evaluating it gives us:</p>
+      <div class=eqn> \\[ \\begin{align}
+          P_\\text{radiation} &= \\bigg| \\frac1c \\int_\\text{sphere} I \\cos^2{\\theta} \\ d\\Omega \\bigg| \\\\[6pt]
+          &= | \\frac{I}c \\int_0^{2\\pi} d\\phi \\int_0^{\\pi} \\cos^2{\\theta} \\sin{\\theta} \\ d\\theta | \\\\[6pt]
+          &= \\frac{2\\pi I}c \\bigg[ \\frac13 \\cos^3{\\theta} \\bigg]_0^\\pi
+          \\end{align} \\] </div>
+      <p>That gives us:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P_\\text{radiation} = \\frac{4\\pi}{3c} \\langle I \\rangle \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Remember that for a black body, \\( I = \\frac{\\sigma T^4}{\\pi} \\), so:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P_\\text{radiation, Black Body} = \\frac{4\\sigma}{3c} T^4 = \\frac13 a T^4 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p><em>Damn, that's a long-ass subscript. Something about writing &quot;rad, bb&quot; doesn't feal right though...</em></p>
+      <h3>Temperature structure near the stellar surface</h3>
+      <p>As z increases, F decreases (because no light is going in, it can only have been stopped) and so does pressure</p>
+      <p>The flux is \\( F = \\frac{dE}{dt} \\), meaning Force is \\( \\frac{dF}c \\). The rate of change of pressure is \\( \\frac{dP}{dz} dz = \\frac{dF}c \\).</p>
+      <p>Assuming there is only absorption taking place, we can swap flux and intensity:</p>
+      <div class=eqn> \\[ \\frac{dF}{F} = -\\kappa \\rho \\ dz \\] </div>
+      <div class=eqn> \\[ \\frac{dP}{dz} dz = - \\frac{\\kappa \\rho F}{c} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dP}{d\\tau} = \\frac{F}{c} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Integrate</p>
+      <div class=eqn> \\[ P = \\frac1c F \\tau + A \\\\[6pt] \\therefore \\quad \\frac{4\\pi}{3c} \\langle I \\rangle = \\frac1c F \\tau + A \\] </div>
+      <p>At the top of the atmospher, the optical depth is gonna be zero. Also the average intensity will be the intensity out take away the intensity in all over 2 (or just intensity out over two, since we assume there is no intensity in).</p>
+      <p>The intensity out is F over π, which gives us a constant of integration:</p>
+      <div class=eqn> \\[ A = \\frac{2F}{3c} \\] </div>
+      <div class=eqn> \\[ \\frac{4\\pi}{3c} \\langle I \\rangle = F(\\tau + \\frac23) \\] </div>
+      <p>For a black body, \\( F = \\sigma T_\\text{eff}^4 \\), and \\( I = S = B = \\frac{\\sigma T^4}{\\pi} \\)</p>
+      <div class=eqn> \\[ \\frac{4\\pi B}{3} =  \\sigma T_\\text{eff}^4 (\\tau + \\frac23) \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ T^4 = \\frac34 T_\\text{eff}^4 (\\tau + \\frac23) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>T is at the effective temperature when \\( \\tau = \\frac23 \\), meaning the surface we see is the point where \\( \\tau = \\frac23 \\).</p>
+      <h4>Limb darkening</h4>
+      <p>We see cooler temperature (redder) at the edges</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "star-structure": {
+    title: "Stellar Structure",
+    content: `
+      <p>We assume stars are spherical and symmetric, like a series of shells on top of each other.</p>
+      <p>The 'r' subscript means the quantity inside that radius</p>
+      <h3>Stellar Structure Equations</h3>
+      <h4>Hydrostatic Equilibrium Equation</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{d\\rho}{dr} = - \\frac{GM_r \\rho}{r^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>We can estimate the pressure and density in the core of a star. Not very well though.</p>
+      <p>Assume that \\( \\frac{dP}{dr} = \\text{constant} = -\\frac{P_\\text{core}}{R_*} \\). This is obviously stupid but stay with me for now.</p>
+      <div class=eqn> \\[ \\langle \\rho \\rangle = \\frac{M}V = \\frac{3M_*}{4\\pi R_*^3} \\] </div>
+      <div class=eqn> \\[ P_\\text{core} = \\frac{3G}{4\\pi}\\frac{M_*}{R_*^4} \\] </div>
+      <p>For the sun that gives \\( 2.7 \\times 10^{14} \\text{ Nm}^{-2} \\)</p>
+      <h4>Mass conservation</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dM_r}{dr} = 4\\pi r^2 \\rho(r) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Energy generation conservation</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dL_r}{dr} = 4\\pi r^2 \\rho \\varepsilon \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Energy transport</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ L_r = \\frac{16\\pi r^2 a \\tau}{3 \\kappa \\rho} T^3 \\frac{dT}{dr} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Convection</h4>
+      <p>This is the physical movement of material. Convection and radiation are kinda like rivals, fighting each other for domination</p>
+      <p>Say I gave you a material with density \\( \\rho_1 \\) and temperature \\( T_1 \\). In that material, there's a bubble of that same material with the same density and temperature, rising up very slowly through an environment. Also assume this happens adiabatically (i.e. there is no energy transfer).</p>
+      <p>As you move up in the star, it will have a different density \\( \\rho_a \\) and temperature \\( T_a \\), both of which will be lower (because we are further away from the centre of the star). This means the bubble expands, causing the density and temperature of the bubble to also change (\\( \\rho_2 \\) and \\( T_2 \\)). Whether or not convection takes place depends on <em>how</em> the density and stuff changes.</p>
+      <p>If \\( \\rho_2 &gt; \\rho_a \\), then the bubble just falls back. If not then the bubble keeps rising.</p>
+      <p>Schwarzchild Criterion:</p>
+      <div class=eqn> \\[ \\bigg| \\frac{d\\ln{T}}{d\\ln{P}} \\bigg|_\\text{advective} > \\quad \\bigg| \\frac{d\\ln{T}}{d\\ln{P}} \\bigg|_\\text{radiative} \\] </div>
+      <h3>Equations of state</h3>
+      <p>An <em>equation of state</em> is an equation which tells us how pressure, temperate and density are related. There are three main ones for stars</p>
+      <h4>The Ideal Gas Law</h4>
+      <p>Here's a familiar face. If we assume we have a gas of infinitely small particles which collide elastically, this relation is true:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P = nk_BT \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>You might be wondering &quot;where the heck did the V go?&quot; It's absorbed into n, which is number density here</p>
+      <p>Or</p>
+      <div class=eqn> \\[ P = \\frac{\\rho}{\\mu m_H} k_BT \\] </div>
+      <h4>Radiation</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P = \\frac13 a T^3 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Degenerate Gas</h4>
+      <p>This is something kinda new!</p>
+      <p>In an ideal gas, as the temperature goes to zero, so does the pressure. This would be because the particles have no velocity and therefore no momentum.</p>
+      <p>However, Heisenberg's uncertainty principle tells us that with no momentum, there would be infinite uncertainty in possition. This is obviously unrealistic, so there must be <em>some</em> sort of minimum momentum. At very high pressures, the</p>
+      <p>What does this mean? In the case of white dwarfs and neutron stars.</p>
+      <p>A gas becomes degenerate when the average thermal energy is less than the Fermi Energy</p>
+      <div class=eqn> \\[ P = \\frac32 k_BT < E_F \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P \\propto n_e^\\frac53 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\left( \\frac3\\pi \\right)^\\frac23 \\left( \\frac{h^2}{20m_e} \\right) n_e^\\frac53 \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P \\propto n_e^\\frac43 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\left( \\frac3\\pi \\right)^\\frac13 \\left( \\frac{hc}{8} \\right) n_e^\\frac43 \\] </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "star-energy": {
+    title: "Energy In Stars",
+    content: `
+      <p>Think of the star like a box. This box has thermal energy \\( U \\) and gravitational potential energy \\( \\Omega \\). There is an input of energy via nuclear fusion, and an output of energy, via radiation, which is the luminosity.</p>
+      <p>The thermal energy and the gravitational potential energy are related via the Virial Theorem</p>
+      <h3>Virial theorem</h3>
+      <p>At a particular point, we know:</p>
+      <div class=eqn> \\[\\Omega_\\text{point} = - \\frac{GMm}{r} \\] </div>
+      <p>Consider a sphere with radius r, and we consider a shell with width dr.</p>
+      <div class=eqn> \\[ d\\Omega_\\text{point} = - \\frac{GM_r dm_\\text{shell}}{r} \\] </div>
+      <p>We know that</p>
+      <div class=eqn> \\[ dm_\\text{shell} = 4\\pi r^2 \\rho dr \\] </div>
+      <p>So</p>
+      <div class=eqn> \\[ \\int_V \\Omega_\\text{point} = - \\int_0^R 4\\pi r^2 \\rho \\frac{GM_r}{r} dr \\] </div>
+      <div class=eqn> \\[ \\int \\Omega dV = - \\int_0^R 4\\pi \\rho GM_r r dr \\] </div>
+      <p>Then by using the hydrostatic equation</p>
+      <div class=eqn> \\[ \\int \\Omega dV = 4\\pi \\int_0^R r^3 \\frac{dP}{dr} dr \\] </div>
+      <p>Which gives</p>
+      <div class=eqn> \\[ \\int \\Omega dV = -3 \\int P dV \\] </div>
+      <p>Assume P and \\( \\Omega \\) balance at each point, which means we can ignore the integrals:</p>
+      <div class=eqn> \\[ \\Omega = -3P \\] </div>
+      <p>Then with the equation of states:</p>
+      <div class=eqn> \\[ P = nk_BT, \\; U = \\frac32 k_B T \\; U = \\frac{3P}2 \\] </div>
+      <p>Leaving:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Omega = -2U \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>How can we use this? Take the total energy of the star:</p>
+      <div class=eqn> \\[ E = U + \\Omega \\] </div>
+      <p>With the Virial theorem:</p>
+      <div class=eqn> \\[ E = \\frac{\\Omega}2 \\] </div>
+      <p>E = -U, but U can't be negative, meaning the energy is less than zero, showing the star is gravitationally bound</p>
+      <p>If energy increases, \\( \\Omega \\) gets bigger (star expands), and U gets smaller (temperature drops). If energy decreases, \\( \\Omega \\) gets smaller, and U gets bigger (temperature goes up).</p>
+      <h3>Timescales</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\text{timescale} = \\frac{ \\text{quantity}}{ \\text{rate of change}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Gravitational</h4>
+      <p>The &quot;dynamical&quot; timescale</p>
+      <div class=eqn> \\[ \\begin{align} \\tau 
+          &= \\frac{R_*}{v_\\text{escape}} \\\\[6pt]
+          &= \\sqrt{\\frac{R^3}{2GM}}
+          \\end{align} \\] </div>
+      <h4>Thermal</h4>
+      <p>The &quot;Kelvin-Helmholtz&quot; timescale</p>
+      <div class=eqn> \\[ \\begin{align} \\tau 
+          &= \\frac{U}{L} \\\\[6pt]
+          &= \\frac{GM^2}{2RL}
+          \\end{align} \\] </div>
+      <h4>Nuclear</h4>
+      <div class=eqn> \\[ \\begin{align} \\tau 
+          &= \\frac{E_\\text{nuclear}}{L} \\\\[6pt]
+          &= \\frac{\\eta X m_\\text{core} c^2}{L}
+          \\end{align} \\] </div>
+      <h3>Binding energy</h3>
+      <p>...</p>
+      <p>Reaction rate is determined by the rate of the slowest process</p>
+      <div class=eqn> \\[ R_{1, 2} = n_1 n_2 \\sigma v \\] </div>
+      <p>For quantum tunnelling, \\( \\sigma = e^{-2\\pi^2\\frac{U_0}{E}} \\)</p>
+      <div class=eqn> \\[ \\begin{align} R_{pp} 
+          &\\propto \\rho_1 \\rho_2 e^{-2\\pi^2\\frac{U_0}{E}} e^{-\\frac{E}{k_BT}}
+          &\\propto \\rho^2 X_H^2 T^4 
+          \\end{align} \\] </div>
+      <div class=eqn> \\[ \\varepsilon_{pp} = \\rho X_H^2 T^4  \\] </div>
+      <div class=eqn> \\[ \\varepsilon_{CNO} = \\rho X_H X_{CNO} T^4  \\] </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "star-formation": {
+    title: "Star Formation",
+    content: `
+      <p>Stars form when big clouds of gas collapse under their own gravity. But what conditions does this require</p>
+      <div class=eqn> \\[ 2U + \\Omega = 0 \\] </div>
+      <p>So then, if \\( 2U &gt; |\\Omega| \\), the cloud will expand, but if \\( 2U &lt; |\\Omega| \\), the cloud collapses (into a star)</p>
+      <div class=eqn> \\[ \\Omega_\\text{total} = -\\int^R_0 \\frac{GM_r(r)}{r} \\rho(r) \\ 4\\pi r^2 dr \\] </div>
+      <p>With some maths:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Omega_\\text{total} = -\\frac35 \\frac{GM^2}{r} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>What about the total thermal energy?</p>
+      <p>The mass of the cloud for it to take place:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M_J > \\left( \\frac{5 k_B T}{\\mu m_H G} \\right)^{3/2} \\left( \\frac{3}{4 \\pi \\rho} \\right)^{1/2}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Within a cloud, stars form with this distribution:</p>
+      <div class=eqn> \\[ f(M) \\ dm \\propto M^{-\\gamma} \\] </div>
+      <p>Notice the negative exponential, that means there are more low mass stars than high mass stars. This is due to cloud fragmentation</p>
+      <h4>Protostar</h4>
+      <p>This is the first stage</p>
+      <p>How can the protostar overcome the angular momentum?</p>
+      <p>After the initial collapse, the protostar begins to get hot enough to begin fusion. This isn't PP1, since that requires a bunch of energy, but rather deuterium burning. This is easier as it doesn't require proton to neutron decay.</p>
+      <p>Timescale is about 10^7</p>
+      <p>How long does it stay as a protostar? After that, it takes some time getting used to thermal energy, meaning the core gets hotter. However the outer layer does still radiate heat</p>
+      <h4>Main sequence</h4>
+      <p>The hydrogen burns (PP1) and overtime the helium builds up in the core. That means \\( \\mu \\) moves from \\( \\frac12 \\) to \\( \\frac43 \\). So if µ goes up, the pressure goes down. This causes the temperature of the core to increase</p>
+      <p>The timescale (nuclear) is about 7x10^9 years, although it's larger for a smaller mass star and smaller for a larger mass star.</p>
+      <p>Scaling Law for Low-Mass Stars:</p>
+      <div class=eqn> \\[ \\begin{align*}
+      L &\\propto \\frac{r^2}{\\kappa \\rho} T^3 \\frac{\\mathrm{d}T}{\\mathrm{d}r} \\\\
+      \\kappa &\\propto \\rho T^{-3.5} \\\\
+      L &\\propto \\frac{r^2 T^{6.5}}{\\rho^2} \\frac{\\mathrm{d}T}{\\mathrm{d}r}
+      \\end{align*} \\] </div>
+      <h4>Star clusters</h4>
+      <p>These are useful because the stars all formed at similar times, have similar composition, and are a similar distance</p>
+      <p>Younger cluster (Pleriades, 100Myr)</p>
+      <ul>
+      <li>Lower mass stars may not yet have finished forming</li>
+      <li>Also 30pc further away, so we may not have seen the faintest stars</li>
+      </ul>
+      <p>Older cluster (Hyades, 600Myr)</p>
+      <ul>
+      <li>There's a turnoff point, where stars seem to stop forming</li>
+      <li>Hotter stars have already moved off the main sequence</li>
+      </ul>
+      <p>Blue stragglers break the model</p>
+      <h4>Post Main-Sequence Evolution</h4>
+      <p>For lower mass stars, we first get the subgiant branch, where there is a helium core and a hydrogen shell. The core exhauses hydrogen first, since it has a higher temperature. The burning shell is essentially feeding helium into the star.</p>
+      <p>Since the core is no longer burning (it's inert, no more fusion), that means the luminosity is zero. From ages ago, we know that luminosity is proportional to \\( \\frac{dT}{dr} \\), so if L = 0, then \\( \\frac{dT}{dr} = 0 \\). That means it is isothermal (the temperature is the same everywhere).</p>
+      <p>Eventually the core contracts and becomes degenerate. This triggers the red giant branch</p>
+      <h4>Red Giant Branch</h4>
+      <p>The core continues to contract. But as it does so, GPE is added into the envolope, causing it to expand.</p>
+      <p>The temperature of the core increases, causing the temperature of the shell to increase, causing the luminosity to increase.</p>
+      <p>The luminosity is set by the fusion, and the radius is ecpanding. That means the temperature has to drop</p>
+      <p>THe envelope becomes convective, due to the higher gradient between the hot core and the cooler elvelope. At the end of the red giant branch, the core temperature is high enough to ignite helium fusion.</p>
+      <h4>Helium flash</h4>
+      <p>The core is now degenerate, there is no self-regulation and there is now runaway fusion. This happens in only a few seconds. The energy released is pretty big, but it's mostly absorbed by outer layers. This ends when the degeneracy is lifted</p>
+      <h4>Horizontal Branch</h4>
+      <p>Core Helium burns to carbon and oxygen. The burning hydrogen shell is still there. The time scale for the horizontal branch is about 10% of that of the main sequence</p>
+      <h4>Asymptotic Giant branch</h4>
+      <p>Now the helium in the core has been exhausted, leaving only degenerate carbon and oxygen. This time, helium is burning in a shellm (and hydrogen is burning in a shell oiutside that). These alternate in thermal pulses.</p>
+      <p>This is because when helium burns, the hydrogen shell expands and cools. This means there is less hydrogen fusion. Eventually the helium depletes, meaning the hydrogen shell reignites. Then the hydrogen shell forms more helium, which resparks the helium core.</p>
+      <h4>Post AGB</h4>
+      <p>THere are planetary nebulae from ejected material, and there is now an exposed hot carbon and oxygen core, forming a white dwarf. These collapse past a certain mass, \\( M_{chandra} \\approx 1.4M \\)</p>
+      <h3>High Mass Stars</h3>
+      <p>These are similar to low-mass stars up until AGB, except it's faster and there is no helium flash.</p>
+      <p>However, with so much mass, fusion is able to continue even unto iron. Eventually we end up with an iron core, still degenerate. If the core has mass higher than the chandra mass, the core will collapse and form a supernova.</p>
+      <p>Since this happened due to gravity, we can calculate the dynamical tiimescale. The core collapses so quickly, the outer star doesn't 'know' it's happened. The strong nuclear force causes a bounceback, forming the supernova, releasing energy of about 10^46 joules, only about 1% of which is kinetic. The rest are neutrinos.</p>
+      <p>These supernovae are called <em>core collapse supernovae</em>, with types II, 1b and 1c.</p>
+      <p>THe outer layers fall slower, and are suspended above the collapsing core, and a large amount of \\( \\alpha \\)-elements are formed</p>
+      <h3>Remnants</h3>
+      <p>For stars less than 25 solar masses, a neutron star is formed, supported by degeneracy pressure. The maximum mass is about 3 solar masses (about 10km radius), any larger and a black hole would form instead.</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "binary-stars": {
+    title: "Binary Stars",
+    content: `
+      <p>Stars form when big clouds of gas collapse under their own gravity. And as you might expect, the clouds aren't conveniently sized for only one star. In other words, they fragment and make multiple stars, forming multiple star systems.</p>
+      <p>About 40% of stars are in a binary, they aren't rare at all. This is 100% for O-type stars.</p>
+      <p>(Not necessarily binary, some are in higher orders)</p>
+      <h3>Types of Binary</h3>
+      <h4>Visual Binaries</h4>
+      <p>This means we can easily see both components, and we can see 'em moving if we look for long enough</p>
+      <div class=eqn> \\[ M_1 r_1 = M_2 r_2 \\] </div>
+      <p>Then you could balance gravitational and centripetal force to get</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M_1 + M_2 = \\frac{4\\pi^2}{G} \\frac{(r_1+r_2)^3}{p^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Spectroscopic Binaries</h4>
+      <p>These are binaries which can be seen on spectra, for example if there are two sets of absorption lines, or doppler shifts</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M_1 + M_2 = \\frac{P}{2πG} (V_1+V_2)^3 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Eclipsing Binaries</h4>
+      <p>One star can block out the light of another star. If flux is plotted against time, you end up with a line with dips at the points where one star overlaps.</p>
+      <p>We can measure the radii, and then with spectroscopy, we can determine the mass as well</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
     `
   }
 };

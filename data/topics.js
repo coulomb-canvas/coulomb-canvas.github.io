@@ -724,8 +724,29 @@ const topics = [
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {
-        subid: "astro-intro",
-        title: "Aren't planets and stars cool?",
+        subid: "stars-intro",
+        title: "Introduction",
+      },
+      {
+        subid: "star-classify",
+      },
+      {
+        subid: "star-atmosphere",
+      },
+      {
+        subid: "radiate",
+      },
+      {
+        subid: "star-structure",
+      },
+      {
+        subid: "star-energy",
+      },
+      {
+        subid: "star-formation",
+      },
+      {
+        subid: "binary-stars",
       },
     ]
   },

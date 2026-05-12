@@ -124,6 +124,20 @@ There is a big wall
     </div>
 </div>
 
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \mathcal{F}(\frac{d^nf}{dx^n}) = (ik)^n \mathcal{F}(f(x,t)) .  \]
+            \[ \mathcal{F}(\frac{d^nf}{dt^n}) = (i\omega)^n \mathcal{F}(f(x,t)) .  \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula X
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
 ### Parseval's theorem
 
 <div class="hover-wrapper">

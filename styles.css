@@ -91,7 +91,9 @@ body {
 }
 
 
-
+em {
+  color: #5680cf
+}
 
 
 header {
@@ -171,6 +173,16 @@ h1 {
 p {
   color: var(--subtle);
 }
+
+
+blockquote p {
+  background-color: rgba(255, 0, 0, 0.236);
+  padding: 3vh;
+  color: white;
+  border-left: 10px solid red;
+  animation: bob 3s ease-in-out infinite;
+}
+
 
 .formula-box p {
   color: var(--text)
@@ -1232,6 +1244,7 @@ body.dimmed::before {
   margin: 1%;
   margin-top: -1%;
 }
+
 
 
 .right-bracket {

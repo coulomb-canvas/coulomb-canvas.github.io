@@ -15,7 +15,7 @@ The 'r' subscript means the quantity inside that radius
 <div class="hover-wrapper">
     <div class="formula-container">
         <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \[ \frac{d\rho}{dr} = - \frac{GM_r \rho}{r^2} \]
+            \[ \frac{dP}{dr} = - \frac{GM_r \rho}{r^2} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
         Formula X

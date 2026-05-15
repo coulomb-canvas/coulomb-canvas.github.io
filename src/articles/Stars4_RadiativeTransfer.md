@@ -6,20 +6,24 @@ topics: stars
 
 ### Radiative transfer
 
-If you add up the absorption and emission intensities, you get this total:
+Go back to last topic. Take the emission intensity, and move the dz to the other side. You get this total:
 
 <div class=eqn> \[ dI_\lambda = -\kappa_\lambda \rho I_\lambda dz + \varepsilon_\lambda \rho dz \] </div>
 
-Rearrange
+Next, divide both sides by \\( \kappa_\lambda \rho \ dz \\)
 
 <div class=eqn> \[ \frac1{\kappa_\lambda \rho} \frac{dI_\lambda}{dz} = - I_\lambda + \frac{\varepsilon_\lambda}{\kappa_\lambda} \] </div>
 
 Now set \\( \frac{\varepsilon_\lambda}{\kappa_\lambda} \\) to \\( S_\lambda \\), which we will call the source function. That leaves us with this equation:
 
+<div class=eqn> \[ - \frac1{\kappa_\lambda \rho} \frac{dI_\lambda}{dz} = I_\lambda - S_\lambda \] </div>
+
+But remember that \\( \kappa_\lambda \rho \ dz \\) is the definition for optical depth, which means we can instead write this as:
+
 <div class="hover-wrapper">
     <div class="formula-container">
         <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \[ - \frac1{\kappa_\lambda \rho} \frac{dI_\lambda}{dz} = I_\lambda - S_\lambda \]
+            \[ \frac{dI_\lambda}{d\tau_\lambda} = I_\lambda - S_\lambda \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 1: Radiative transfer equation
@@ -35,9 +39,7 @@ This is a cool formula and all, but what does this actually mean for a star?
 
 #### Local Thermal Equalibrium (LTE)
 
-This takes place in a region where temperature is near enough constant (obviously, how the hell would there be an equilibrium if it weren't bloody constant?) and the gas is dense enough that the particles collide with each other, so that the velocities of the particles follow the Maxwell-Boltzmann distribution.
-
-The photons need to have a decently small mean free path so that they interact within the given system (relative, of course).
+This takes place in a region small enough that temperature is near enough constant (obviously, how the hell would there be an equilibrium if it weren't bloody constant?) and the gas is dense enough that the particles collide with each other, so that the velocities of the particles follow the Maxwell-Boltzmann distribution. The photons need to have a decently small mean free path so that they interact within the given system (relative, of course).
 
 And here's the best part, assuming our body is optically thick and doesn't have a temperature of 0K, then it emits black body radiation, which means LTE was just BB radiation all along! This means 
 

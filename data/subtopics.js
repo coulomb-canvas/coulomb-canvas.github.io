@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 106 subtopics
-// Generated: 2026-05-12T15:03:13.283Z
+// AUTO-GENERATED FILE - Contains 115 subtopics
+// Generated: 2026-05-14T19:10:27.950Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 105 existing hand-written entries
-//   - 42 Markdown-generated entries
+//   - 115 existing hand-written entries
+//   - 51 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -15522,13 +15522,20 @@ const subtopics = {
     content: `
       <p>Recall from last time that there are two ways lines can form from a spectrum</p>
       <ul>
-      <li>Excitation</li>
-      <li>Ionisation</li>
+      <li><strong>Excitation</strong>: Electrons can move between energy levels, but are still bound to the atom. This releases or absorbs discrete energies</li>
+      <li><strong>Ionisation</strong>: Electrons are completely removed from the atom. This can make something more continuum-ish</li>
       </ul>
       <p>For a hydrogen atom, it takes 13.6 electron volts to escape.</p>
-      <p>How many electrons are in each state?</p>
+      <p>As we said before, just because an element is present in the star doesn't necessarily mean the corresponding lines will show up. As to how strongly a particular line will form depends on two things:</p>
+      <ul>
+      <li>What percentage of atoms are in the right excited level</li>
+      <li>What percentage of atoms are in the right ionisation state</li>
+      </ul>
+      <p>Let's start with that first one. How many electrons are in each state?</p>
       <h3>The Boltzmann equation</h3>
-      <p>The likelihood of an electron being in state 1 with energy \\(E_1\\), compared to the likelihood of an electron being in state 2 with energy \\(E_2\\) is:</p>
+      <p>I wanna know what proportion of atoms are in one energy stage, compared to another one. From statistical mechanics, we know that the probability of a particle being in a given microstate (with the 'microstates' in this case being the energy levels) is given by:</p>
+      <div class=eqn> \\[ P_1 = e^{-\\frac{E_1}{k_BT}} \\] </div>
+      <p>The likelihood of an electron being in state 1 with energy \\(E_1\\), compared to the likelihood of an electron being in state 2 with energy \\(E_2\\) is just one divided by the other:</p>
       <div class=eqn> \\[ \\frac{P_1}{P_2} = e^{-\\frac{E_1-E_2}{k_BT}} \\] </div>
       <p>This means that with infinite temperature (and therefore infinite energy), each state is equally likely</p>
       <p>\\( g_A \\) is the number of states with energy \\( E_A \\). So if we want to know the probability for a given <em>energy</em> rather than a given <em>state</em>, we must include these g's in the equation:</p>
@@ -15546,9 +15553,11 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>Having said that, a probably more useful measurement would be \\( \\frac{N_A}N \\), which is the number of particles with energy \\( E_A \\) over the total number of particles. The total number of particles is just:</p>
+      <h3>Fractional Population</h3>
+      <p>Having said that, a probably more useful measurement would be what fraction of all particles have energy \\( E_A \\). Mathematically, this is just \\( \\frac{N_A}N \\), which is the number of particles with energy \\( E_A \\) over the total number of particles. The total number of particles is just the sum of the number of particles in each state:</p>
       <div class=eqn> \\[ N = \\sum^\\infty_{m=1} N_m \\] </div>
-      <p>By using the Boltzmann equation and setting \\( N_B \\) to \\( N_m \\) and \\( N_A \\) to \\( N_1 \\), we get:</p>
+      <p>We can then use the Boltzmann equation and set \\( N_B \\) to \\( N_m \\). But what about \\( N_A \\), what the heck should we set that too?</p>
+      <p>Generally speaking, we tend to compare it to ground, \\( n = 1 \\). So that means we set \\( N_A \\) to \\( N_1 \\), giving us:</p>
       <div class=eqn> \\[ \\begin{align} \\frac{N_m}{N_1} &= \\frac{g_m}{g_1}e^{-\\frac{E_m-E_1}{k_BT}} \\\\[6pt] 
           \\therefore N_m &= N_1 \\frac{g_m}{g_1}e^{-\\frac{E_m-E_1}{k_BT}} \\end{align} \\] </div>
       <p>Then just chuck in the sum and then we get</p>
@@ -15567,7 +15576,13 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <blockquote>
+      <p>The Boltzmann Equation should be used when we have multiple excited vs ground atoms</p>
+      </blockquote>
       <h3>The Saha Equation</h3>
+      <p>The Boltzmann equation deals with excited atoms, and now we have this far uglier equation to deal with ionisation. The <em>Saha</em> equation tells us what proportion of particles are in one ionisation state verses the next one up.</p>
+      <p>By the way, an <em>ionisation</em> state is like... you know how in chemistry how when you write an ion, you write the element followed by the charge in the top corner? Yeah, those are ionisation states. So \\( H \\) (regular old hydrogen) is one ionisation state, and \\( H^+ \\) (hydrogen with an electron removed, so a proton basically) is the next ionisation state. And if such a thing existed, \\( H^{2+} \\) would be the next ionisation state.</p>
+      <p>So let's say the number of particles in a particular ionisation state (like \\( H \\)) is \\(N_i\\), and the number of particles in the <em>next</em> ionisation state (like \\( H^+ \\)) is \\(N_{i+1}\\). Each has their own partition function, \\(U_i(T)\\) and \\(U_{i+1}(T)\\). Then the ratio of states becomesL</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15581,13 +15596,15 @@ const subtopics = {
           </div>
       </div>
       <p>Where \\( n_e \\) is the number of free electrons (the more free electrons there are, the easier it is for them to recombine with a nucleus, meaning that there will be less higher energy nuclei) and \\( \\chi_i \\) is the energy required to ionise it from i to i+1</p>
-      <h3>...</h3>
+      <h3>Basic radiative quantities in an atmosphere</h3>
       <p>The atmosphere of a star is considered in terms of its temperature at a given radius (\\( T(r) \\)) and its density at a given radius (\\( \\rho(r) \\)).</p>
       <p>Let's say we have a ray of light, with a specific wavelength \\( \\lambda \\), and a specific wavelength \\( I_\\lambda \\). THe <em>flux</em> of that light ray would just involve integrating that intensity over the solid angle the light covers:</p>
       <div class=eqn> \\[ F_\\lambda = \\int_\\Omega I_\\lambda \\cos{\\theta} \\ d\\Omega \\] </div>
       <div class=eqn> \\[ dE_\\lambda =  I_\\lambda \\cos{\\theta} \\ dA \\ dt \\ d\\lambda \\ d\\Omega \\] </div>
-      <p>For a black body, \\( I_\\lambda = B_\\lambda \\), which is an approximation you'll be using a <em>lot</em>. So if in doubt, just replacec I with B</p>
+      <p>For a black body, \\( I_\\lambda = B_\\lambda \\), which is an approximation you'll be using a <em>lot</em>. So if in doubt, just replace I with B</p>
       <h4>Absorption</h4>
+      <p>If radiation is moving up a height \\( z \\) and the a material of density \\( \\rho \\), then the amount that the intensity changes as you go up. If that intensity is being absorbed, then you should expect it to go down.</p>
+      <p>You'd also expect the amount it goes doen to increase if the material is denser. Hence</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15600,7 +15617,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>Solve</p>
+      <p>Solving this gives us:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15613,12 +15630,14 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>No you might be thinking &quot;wait a second, why the bloody 'ell have you kept the integral in the exponent? Don't you think it would be nicer for you to just evaluate it?&quot;</p>
+      <p>Ok, so I think what you are suggesting is that we replace the \\( -\\int_0^z \\dots dz \\) with just \\( z \\), to give us some thing like this:</p>
       <div class=eqn> \\[ \\frac{I_\\lambda}{I_{\\lambda,0}} = e^{-\\kappa_\\lambda \\rho z} \\] </div>
-      <p>And the characteristic distance is</p>
+      <p>Right? Well this assumes the density is constant. Which in a star it likely won't be. Having said that, this assumption isn't completely useless. If we do assume this, then the characteristic distance is</p>
       <div class=eqn> \\[ l = -\\frac1{\\kappa_\\lambda \\rho} \\] </div>
-      <p>Why the hell have I kept the ugly integral there instead of solving it?</p>
-      <p>In the case that we do assume density is constant, then:</p>
+      <p>Which can be thought of as the distance radiation is able to travel in the given atmosphere</p>
       <h4>Scattering</h4>
+      <p>In the case that the energy is scattered instead of absorbed, similar logic applies, except now there's a different constant:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15631,12 +15650,14 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>If we just wanna know how much light actually gets to us, often times we don't really care whether the energy is actually absorbed or scattered, so then the sigma is absorbed into the kappa</p>
+      <p>If we just wanna know how much light actually gets to us, often times we don't really care whether the energy is actually absorbed or scattered, so then the sigma is absorbed into the kappa, giving us</p>
+      <div class=eqn> \\[ \\kappa_{\\lambda, \\text{total}} = \\kappa_\\lambda + \\sigma_\\lambda \\] </div>
       <h4>Emission</h4>
+      <p>If there is also some emission taking place from the material, then that also adds to the intensity:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ \\frac{dI_\\lambda}{dz} = -\\varepsilon_\\lambda \\rho  \\]
+                  \\[ \\frac{dI_\\lambda}{dz} = -\\kappa_\\lambda \\rho I_\\lambda + \\varepsilon_\\lambda \\rho  \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula 4:
@@ -15646,6 +15667,9 @@ const subtopics = {
           </div>
       </div>
       <h3>Optical depth</h3>
+      <p>The <em>optical depth</em> measures how much material a particle has to go through at a particular wavelength, which basically means how far into an atmosphere we can see. It is defined</p>
+      <div class=eqn> \\[ d\\tau = \\kappa_\\lambda \\rho \\ dz \\] </div>
+      <p>Then we can measure the attenuation of intensity as</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15658,24 +15682,27 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>\\( \\tau \\) increases with the amount of material which is absorbing the light. So in a way, you can think of the optical depth as how far into a material (in this case, the star) we can see.</p>
       <p>The surface of the star will have some constant optical depth. Exactly <em>which</em> constant is very much up to us. SO say we define the edge of the star as the sphere at which \\( \\tau_\\lambda = 1 \\)</p>
       <h3>Sources of Opacity</h3>
-      <p>Anything which can block the photons</p>
+      <p>Time to deal with the kappa</p>
+      <p><em>Opacity</em> is pretty much anything which gets in the way of photons.</p>
       <h4>Bound-Bound Transition</h4>
-      <p>Energy levels transition</p>
+      <p>This is when an electron jumps from one bound level to another bound level, or in other words, a nerdy-ass way to just talk about energy levels transition.</p>
       <p>If we consider the spectrum, it will have a single spike at the wavelength of the photon emitted</p>
       <div class=eqn> \\[ \\kappa_\\lambda^\\text{bound-bound} \\propto g_{m,n} N_n \\psi(\\lambda) \\] </div>
-      <p>Now let's be honest. We're never gonna get a single localised pulse, that would be too easy!</p>
+      <p>Where \\( \\psi(\\lambda) \\) is the line</p>
+      <p>Now let's be honest. We're never gonna get a single localised pulse, that would be too easy! In reality, we get something called broadening</p>
       <ul>
-      <li>Natural Broadening comes from the uncertainty principle. Since the election is exciter for a finite amount of time, then we can only have an uncertain value of energy</li>
-      </ul>
+      <li>
+      <p>Natural Broadening comes from the uncertainty principle. Since the election is excited for a finite amount of time, then we can only have an uncertain value of energy</p>
       <div class=eqn> \\[ \\Delta E \\Delta t = \\hbar \\] </div>
       <div class=eqn> \\[ \\Delta E = \\frac{hc}\\lambda - \\frac{hc}{\\lambda + \\Delta\\lambda} = \\frac{\\hbar}t \\] </div>
-      <p>That means</p>
+      That means
       <div class=eqn> \\[ \\Delta \\lambda = \\frac{\\lambda^2}{2\\pi c} \\left( \\frac1{\\Delta t_n} + \\frac1{\\Delta t_m} \\right) \\] </div>
-      <ul>
-      <li>Doppler broadening  comes from the motion of the absorbing atom. If the atom follows a Maxwell-Boltzmann distribution, then the most probable velocity is</li>
+      </li>
+      <li>
+      <p>Doppler broadening  comes from the motion of the absorbing atom. If the atom follows a Maxwell-Boltzmann distribution, then the most probable velocity is</p>
+      </li>
       </ul>
       <div class=eqn> \\[ v = \\sqrt{\\frac{2k_BT}{m}} \\] </div>
       <p>That gives</p>
@@ -15714,8 +15741,9 @@ const subtopics = {
       <li>Compton scattering - inelastic scattering of a photon on an electron</li>
       <li>Thompson scattering - elastic scattering of a photon on an electron, which is Compton scattering at very low energy</li>
       </ol>
-      <h4>H minus</h4>
-      <p>This is just hydrogen with an extra electron, which is very unstable and easy to ionise</p>
+      <h4>H minus opacity</h4>
+      <p>This is just hydrogen with an extra electron, which is very unstable and easy to ionise.</p>
+      <p>In solar‑type stars, the main continuum opacity in the optical is due to H⁻</p>
       <h3>TL;DR</h3>
       <ul>
       <li></li>
@@ -15727,15 +15755,17 @@ const subtopics = {
     title: "Radiative Transfer",
     content: `
       <h3>Radiative transfer</h3>
-      <p>If you add up the absorption and emission intensities, you get this total:</p>
+      <p>Go back to last topic. Take the emission intensity, and move the dz to the other side. You get this total:</p>
       <div class=eqn> \\[ dI_\\lambda = -\\kappa_\\lambda \\rho I_\\lambda dz + \\varepsilon_\\lambda \\rho dz \\] </div>
-      <p>Rearrange</p>
+      <p>Next, divide both sides by \\( \\kappa_\\lambda \\rho \\ dz \\)</p>
       <div class=eqn> \\[ \\frac1{\\kappa_\\lambda \\rho} \\frac{dI_\\lambda}{dz} = - I_\\lambda + \\frac{\\varepsilon_\\lambda}{\\kappa_\\lambda} \\] </div>
       <p>Now set \\( \\frac{\\varepsilon_\\lambda}{\\kappa_\\lambda} \\) to \\( S_\\lambda \\), which we will call the source function. That leaves us with this equation:</p>
+      <div class=eqn> \\[ - \\frac1{\\kappa_\\lambda \\rho} \\frac{dI_\\lambda}{dz} = I_\\lambda - S_\\lambda \\] </div>
+      <p>But remember that \\( \\kappa_\\lambda \\rho \\ dz \\) is the definition for optical depth, which means we can instead write this as:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ - \\frac1{\\kappa_\\lambda \\rho} \\frac{dI_\\lambda}{dz} = I_\\lambda - S_\\lambda \\]
+                  \\[ \\frac{dI_\\lambda}{d\\tau_\\lambda} = I_\\lambda - S_\\lambda \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula 1: Radiative transfer equation
@@ -15747,8 +15777,7 @@ const subtopics = {
       <p>If I is greater than S, that means that I decreases with z. Then by the same logic, if I is less than S, then I increases with z. That basically means I converges to the source function.</p>
       <p>This is a cool formula and all, but what does this actually mean for a star?</p>
       <h4>Local Thermal Equalibrium (LTE)</h4>
-      <p>This takes place in a region where temperature is near enough constant (obviously, how the hell would there be an equilibrium if it weren't bloody constant?) and the gas is dense enough that the particles collide with each other, so that the velocities of the particles follow the Maxwell-Boltzmann distribution.</p>
-      <p>The photons need to have a decently small mean free path so that they interact within the given system (relative, of course).</p>
+      <p>This takes place in a region small enough that temperature is near enough constant (obviously, how the hell would there be an equilibrium if it weren't bloody constant?) and the gas is dense enough that the particles collide with each other, so that the velocities of the particles follow the Maxwell-Boltzmann distribution. The photons need to have a decently small mean free path so that they interact within the given system (relative, of course).</p>
       <p>And here's the best part, assuming our body is optically thick and doesn't have a temperature of 0K, then it emits black body radiation, which means LTE was just BB radiation all along! This means</p>
       <div class=eqn> \\[ S = B \\] </div>
       <p>Next, since we are in equilibrium, the absorption and the emission must be the same (or else stuff is going in or leaving, which means it ain't in bloody equilibrium). This means the flux is constant everywhere:</p>
@@ -15886,7 +15915,7 @@ const subtopics = {
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ \\frac{d\\rho}{dr} = - \\frac{GM_r \\rho}{r^2} \\]
+                  \\[ \\frac{dP}{dr} = - \\frac{GM_r \\rho}{r^2} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula X
@@ -16250,6 +16279,672 @@ const subtopics = {
       <ul>
       <li></li>
       </ul>
+    `
+  },
+
+  "solar-intro": {
+    title: "Introduction to the Solar System",
+    content: `
+      <p>I'm sure you're familiar with the ultimate astronomer ragebate tactic: telling us that Pluto <em>isn't</em> a planet.</p>
+      <p>So what exactly makes a planet, a planet? As opposed to a not-a-planet, like Pluto?</p>
+      <p>An is-a-planet planet is any celestial body which has these 3 features:</p>
+      <ol>
+      <li>It's in orbit around a star</li>
+      <li>It has enough mass that it's own gravity can keep it in shape, no matter what other forces act on it</li>
+      <li>It has cleared the neighbourhood around its orbit</li>
+      </ol>
+      <p>So not-a-planets (or <em>dwarf planets</em> if we wanna be official) only follow the first two.</p>
+      <p>I won't lie, that last condition feels a bit like that one moment in Yu-Gi-Oh Vrains, where Soulburner conveniently pulls the ring of fire trap card out on Blue Maiden, knowing good and well that that trap card is completely useless in 99.5% of actual duels.</p>
+      <p>However, this last point was included to differentiate Pluto from other random bodies they find. But this definition still ain't stellar, because like... what do you mean 'clears' it?</p>
+      <h3>Hydrostatic Equilibrium</h3>
+      <p>Another thing which was kinda brushed over was the hydrostatic equilibrium part of the definition</p>
+      <p>Let's say we have a planet with mass \\( M \\). Within that planet, there's an incy wincy cylinder, with mass \\( dm \\). Just by using Newtonian Gravity, we know that</p>
+      <div class=eqn> \\[ F_G = \\frac{GM_r \\ dm}{r^2} \\] </div>
+      <p>We also know the pressure</p>
+      <div class=eqn> \\[ \\begin{align} F_P 
+          &= P(r) \\ dA − P(r + dr) \\ dA \\\\[6pt]
+          &= −dP \\ dA \\\\[6pt]
+          \\end{align} \\] </div>
+      <p>Since the \\( dm = \\rho(r) dr \\ dA \\), by putting that in we get</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dP}{dr} = - \\frac{GM_r \\rho}{r^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "planet-motion": {
+    title: "Planetary Motion",
+    content: `
+      <p>I'm sure you know that people originally thought the earth was at the centre of the universe (<em>geocentrism</em>). This may sound a bit primitive nowadays, but when you consider the way the sky looks, it's not a completely ridiculous assumption.</p>
+      <p>Having said that, it's easier to explain the motions of the planets by placing the sun at the centre instead</p>
+      <h3>Kepler's Laws</h3>
+      <p>People originally though orbits were perfect circles, which made certain geometries very difficult</p>
+      <h4>K1</h4>
+      <blockquote>
+      <p>A planet orbits the Sun in an ellipse, with the sun at one focus of the ellipse.</p>
+      </blockquote>
+      <p>We have an ellipse, with two foci, both of which are equal distances from the centre of the ellipse. The distance from the first focus to the planet is called \\( r \\), and the distance from the second focus to the planet is \\( r^\\prime \\). The ellipse is defined by the points where the sum of these two values are constant:</p>
+      <div class=eqn> \\[ r + r^\\prime = \\text{constant} = 2a \\] </div>
+      <p>Where \\( a \\) is the distance from the centre to the furthest edge of the ellipse</p>
+      <p>The eccentricity, \\( e \\), tells us how squished the ellipse is. The closest approach to the sun, the <em>perihelion</em>, is \\(a - ae\\). The furthest distance, the <em>aphelion</em> is \\(a + ae\\)</p>
+      <p>The different squishinesses of the ellipse produces different orbits.</p>
+      <ul>
+      <li>If \\(e = 0\\), then you get a perfect <em>circular orbit</em></li>
+      <li>If \\(e &lt; 1\\), then you have an <em>elliptical orbit</em></li>
+      <li>If \\(e = 1\\), then you have a <em>parabolic orbit</em></li>
+      <li>If \\(e &gt; 1\\), then you have a <em>hyperbolic orbit</em></li>
+      </ul>
+      <p>All of these are allowed orbits</p>
+      <h4>K2</h4>
+      <blockquote>
+      <p>A line connecting a planet to the Sun sweeps out equal areas in equal time intervals.</p>
+      </blockquote>
+      <p>At the points in the ellipse where the planet is closer to the sun, it has more kinetic energy (moving faster). At the other side of the orbit, it has more potential energy. Energy switches between kinetic and potential.</p>
+      <p>That's all there is to it really, moving on:</p>
+      <h4>Kepler's Third Law</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P^2 = ka^3 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Use earth units, of years and AUs</p>
+      <p>(The value of an AU was calculated to 1% by parallax of transit of venus)</p>
+      <p>By the way, Newton's law of Gravity came from this.</p>
+      <p>He assumed a circular orbit:</p>
+      <div class=eqn> \\[ P = \\frac{2πr}{v} \\] </div>
+      <p>This means</p>
+      <div class=eqn> \\[ \\left( \\frac{2πr}{v} \\right)^2 = \\frac{4π^2r^2}{v^2} = kr^3  \\] </div>
+      <p>By cancelling and rearranging:</p>
+      <div class=eqn> \\[ \\frac{v^2}{r} = \\frac{4π^2}{kr^2} \\] </div>
+      <p>Now remember that the left hand side give us centripetal acceleration. Then by using Newton's second Law:</p>
+      <div class=eqn> \\[ m\\frac{v^2}{r} = \\frac{4π^2 m}{kr^2} \\] </div>
+      <p>Then with N3</p>
+      <div class=eqn> \\[ \\frac{4π^2 m}{kr^2} = \\frac{4π^2 M}{k'r^2} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P^2 = \\frac{4π^2}{GM} a^3 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>In general</p>
+      <div class=eqn> \\[ m_1 a_1 = m_2 a_2 \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P^2 = \\frac{4π^2}{G(M_1 + M_2)} (a_1+a_2)^3 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Kepler's third law makes weighing objects easier</p>
+      <h3>3-Body Problem</h3>
+      <p>When you have only two bodies (like the sun and the earth), then you can have a very simple solution like this. But for some bloody reason, the moment you introduce a third one, then things become super chaotic, and there is no one formula we can use.</p>
+      <p>So why doesn't the moon just get yeeted into the sun?</p>
+      <p>Well, we can kinda cheat, using the restricted 3-body problem, which has 2 massive bodies with their own gravities, and a teeny tiny object, which has negligible mass. If we assume that the moon is so small compared to the other two that it don't really contribute much, then we can kinda calculate it.</p>
+      <p>The <em>effective potential</em> (or <em>Roche potential</em>) is the sum of the gravitational and centrifugal forces. There are 5 <em>lagrange point</em> (\\(L_1\\) to \\(L_5\\)) where this potential is flat, meaning there is no net movement.</p>
+      <p>L1 and 2 are often use for telescopes, L4 and 5 are stable so are populated by asteroids. You get tadpole or horseshoe orbits libating around the L4 and 5 e.g the trojans of Jupiter</p>
+      <h4>The Hill Sphere</h4>
+      <p>There is also the <em>Hill sphere</em>, which is the bubble around earth at which the moon isn't ripped from its orbit (it must be well within it to have a stable orbit though). Weirdly it's not about the actual gravitational pull but gravitational gradient.</p>
+      <h4>Hill Sphere Derivation</h4>
+      <p>Sum gravity and potential</p>
+      <div class=eqn> \\[ \\frac{Gm_2}{R_H^2} - \\frac{Gm_1}{(a-R_H)^2} + \\Omega(a - R_H) = 0 \\] </div>
+      <p>Use K3, to get angular frequency</p>
+      <div class=eqn> \\[ \\Omega^2 = \\frac{Gm_1}{a^3} \\] </div>
+      <p>Change the denominator</p>
+      <div class=eqn> \\[ (a - R_H)^{-2} = a^{-2} \\left( 1 - \\frac{R_H}{a} \\right)^{-2} \\approx a^{-2} \\left( 1 + 2\\frac{R_H}{a} \\right) \\] </div>
+      <p>Then assume \\( m_1 \\gg m_2 \\)</p>
+      <div class=eqn> \\[ \\frac{Gm_2}{R_H^2} - \\frac{Gm_1}{a^2} \\left( 1 + 2\\frac{R_H}{a} \\right) +  \\frac{Gm_1}{a^2} \\left( 1 - \\frac{R_H}{a} \\right) \\approx 0 \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ R_H \\approx \\left( \\frac{m_2}{3m_1} \\right)^\\frac13 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Resonances</h4>
+      <p>Alternatively, one can consider a 3-body problem where 2 of the 3 masses are negligible, where they can instead be considered pertubations. Such as the discovery of Neptune.</p>
+      <p>This can give rise to <em>secular resonances</em>,which are long-term resonances which cause oscillations in eccentricity and the inclination (i) of planets, eg Milankovsch cycles.</p>
+      <p>This also means that, when periods have integer ratios, perturbations grow in <em>mean motion resonances</em>, meaning they are periodically affected by each other's gravities, which can build up unless they are damped by tides. (often driving systems unstable), like the moons of Jupiter.</p>
+      <h3>Tidal Interaction</h3>
+      <p>Tides happen because the gravitational pull of an object is stronger on the side closer to the object than further away (<em>differential gravity</em>).</p>
+      <div class=eqn> \\[ dF = -\\frac{2GMm}{r^3} \\ dr \\] </div>
+      <p>This means tidal forces scale like \\( \\frac1{r^3} \\). The planet is stretched out at the equator (<em>tidal bulges</em>), albeit very small, about 10cm for earth. The bulges are offset by the rotation of the earth and internal friction, which makes a MOMENT which exchanges angular momentum between the spin of the planet and the orbit of the moon.</p>
+      <p>If the planet spins really quickly, and the satellite is very close, then the satelite tends to cause the planet to slow down (<em>spin down</em>), whilst the satelite itself moves further out. If the planet spins slowly, then the planets spin can be sped up, and orbits can be messed up.</p>
+      <p>Tidal torques are proportional to \\( \\frac1{r^6} \\)</p>
+      <h4>Tidal Locking</h4>
+      <p>Overtime, this spinning up or down can eventually cause the planet and the satellite to rotate and orbit at the same rate. This is tidal locking, where the same face points towards the companion.</p>
+      <p>Where dF is greater than the self gravity of an object (meaning the force from the tidal bulges is stronger than the force of gravity keeping the satellite together), it will be <em>tidally disructed</em>. In short, it'll be ripped to shreds. This takes place at the Roche limit (the minimum distance a satellite needs to be away from the planet for it to be stable). This is why saturn has rings btw, all the stuff is too close to the planet, and is therefore within the Roche limit, meaning it gets ripped up.</p>
+      <p>If we have an eccentric orbits, then even with the whole tidal locking shabang, the tidal bulge cannot track the changing orbital speed perfectly. This causes orbital energy to be converted into heat in the tides (<em>tidal heating</em>), and the circularisation of the orbit at constant angular momentum (the eccentricity becomes lower, remember e=0 means a circular orbit). This can stablise mean motion resonances, by damping eccentricity which would otherwise keep growing</p>
+      <p>(Might get compare and contrast questions)</p>
+      <p>For “compare and contrast” questions, you could be asked to compare:</p>
+      <ul>
+      <li>Hill sphere vs Roche limit.</li>
+      <li>Tidal locking vs tidal disruption.</li>
+      <li>Secular vs mean‑motion resonances.</li>
+      </ul>
+    `
+  },
+
+  "the-sun": {
+    title: "The Sun",
+    content: `
+      <p>For the umptillionth time, we are talking about the sun</p>
+      <p>The sun is a G2V star. If you remember, the first letter and number basically tell you how hot (and at the same time how <em>luminous</em>) it is. G here means it's somewhere in the middle, and the 2 means it's on the hotter end of the 'somewhere in the middle' stars. The V means it's a dwarf star.</p>
+      <p>The luminosity of the star is described simply by the black-body radiation formula, except you put that weird eyeball by the L and the T, to signify solar luminance and solar temperature.</p>
+      <div class=eqn> \\[ L_\\odot = 4\\pi R^2 \\sigma T_\\odot^4 \\] </div>
+      <p>Not that it'll make much difference, but do remember that our usage of the Stefan-Boltzmann law assumes black-body radiation.</p>
+      <h3>Solar activity</h3>
+      <h4>Convection</h4>
+      <p>If you look at a video of the surface of the sun (aka the <em>photosphere</em>) and zoom a fair bit in, you'll see this weird bubbly pattern forming at the top. What the bloody hell is that, you wonder?</p>
+      <p>This is due to <em>surface granulation</em>, and is due to internal convection. See, the brighter bits are where hot gas from the lower layers of the star rises up, because it has more energy, y'know? Then it gets to the top, where it's further away from the nuclear fusion which heats it up, which cools the gas down, hence the darker bits.</p>
+      <h4>Sunspots</h4>
+      <p>Speaking of darker bits, if you keep looking on the sun's photosphere, you'll see the occasional black spot. These are areas on the sun which have lower temperatures, of about 3800 K. Now that might not sound low, but compared to the 5800K average, it's pretty low. Clearly, for some bloody reason, the convection isn't allowed to take plave there.</p>
+      <p>Now you might think &quot;well if these areas are cooler, then shouldn't the hotter gas diffuse into the colder area? 2nd Law of thermodynamics and all that?&quot; Firstly, congratulations of remembering the second law of thermodynamics!! Secondly, hell no.</p>
+      <p>Remember from the first half of the Quantum and it's Application models, there is something known as the <em>Zeeman effect</em>, where you put a particle in a very strong magnetic field, and its degenerate energy levels split into slightly different energy levels. The more splitting there is, the stronger the field becomes. At the sunspots, there is, for whatever reason, a very strong magnetic field, which have a kind of <em>magnetic pressure</em> (weird right?) which stops the convection from happening</p>
+      <p>The global magnetic field is nearly a dipole (meaning it can in most places, it has a clear north pole at the top and a clear south pole at the bottom). But thanks to differential rotation (i.e. the equator rotates faster than the poles), some of the field lines get a bit tangled, with magnetic flux loops emerging at spots and active regions</p>
+      <p>The magnetic field is generated by a magnetic dynamo. You may remember dynamos from GCSE, in general they convert kinetic energy to magnetic energy. In this case, the sun has things like differential motion and convection due to the conducting plasma, causing the magnetic field to be stronger, (Bulk shearing flow in a conducting medium) which converts kinetic energy to magnetic energy.</p>
+      <h4>Above the photosphere</h4>
+      <p>You know how like earth has the statosphere and the thermosphere and all that above its surface? Well the sun has a similar thing. It has the chromosphere, the transition region, and finally the <em>solar corona</em>, a very hot, low‑density plasma extending far from the Sun.</p>
+      <p>During an eclipse, you can see it due to the Thomson scattering of sunlight by free electrons. If you'd like, you can also see it by looking at the X-ray spectra, with optically thin lines.</p>
+      <p>But what does this mean? Well for one, the solar corona is <em>structured</em>, due to magnetic field lines cascading out of active regions, and the <em>Lorentz force</em> keeping it in check. In X-rays, we see the extended emission from hot plasma, which suggests heating is related to magnetic fields. The X-rays can erode planetary atmospheres.</p>
+      <h4>Helioseismology</h4>
+      <p>Cool as that is, idk maybe it's just me, but the way those bubbles move kinda freaks me out. Makes my skin crawl, not a fan at all. I wonder, if perhaps the inside of the sun if less freaky. But I guess we'll never know, I mean after all, we can't look inside the sun, right?</p>
+      <p>WRONG!! Turns out, we <em>can</em> look at the inside of the sun (well, not look at, but you know what I mean) using a magic trick, known as <em>helioseismology</em>, which is the process of blasting dubstep into the sun and seeing (well, not seeing, but you know what I mean) how the sound waves, particularly <em>p-waves</em>, reflect.</p>
+      <p>In slightly more professional terms, the sun has a natural oscillation, known as a <em>p-mode</em>. This give us the temperature profile, rotation and composition of the sun, from which we can determine the pressure and density.</p>
+      <p>We know that, slowly but surely, the sun's luminosity and temperature increase on the main sequence. This leads to something called the young sun paradox, but don't worry 'bout that for now.</p>
+      <h3>Solar wind</h3>
+      <p>Now we know that magnetic field lines must always be closed at some point, therefore you can never have a truly 'open' magnetic field. However, some field lines are so wide that they are near enough open, which causes the sun to vomit streams of plasma. This is known as <em>solar wind</em>, and is the reason comets have ion tails. This can also erode planetary atmospheres.</p>
+      <p>At earth, \\( v = 500 \\text{ km s}^-1 \\)</p>
+      <p>This wind shapes the heliosphere, which is a bubble of plasma in the local interstellar medium</p>
+      <h4>Temperature of solar wind</h4>
+      <p>I'm sure everyone is wanting to know this. How <em>warm</em> is solar wind? Well we can take an educated guess, by equating kinetic energy with</p>
+      <div class=eqn> \\[ \\frac12 m_H v^2 = \\frac32 k_BT \\] </div>
+      <p>That give a temperature of about \\( T \\sim 1 \\times 10^7 \\text{ K} \\). Now at first glance you might think &quot;oh damn, that's warm, but what would you expect from the sun itself?&quot; until you stop and realise this temperature is literally comparable to the temperature of the sun itself. What business does plasma have being so hot this far out? Surely it should have cooled off, no?</p>
+      <p>That must mean that there is an <em>additional energy source</em> which actually pushed the solar wind out. It's believe that the wind is assisted by magnetic (<em>Alfvén</em>) waves and <em>magnetic reconnection</em> in the corona. Magnetic reconnections in coronal loops drives solar flares. The largest events also drive corronal mass ejections (CMEs), which determine space weather at earth and erosion of planet atmospheres.</p>
+      <h4>Mass loss rate</h4>
+      <p>With all this vomitting the sun is doing, it must be loosing a lot of weight! Does it need to see a doctor? Should I call 999?</p>
+      <p>Well, before we check to make sure our friend is healthy, let's do some maths to calculate how much vomitting it's doing. C'mon, the sun has been around for billions of years, it witnessed the dinosaurs, the Qing dynasty, Jesus' death and ressurection, even prime Fortnite, it'll live.</p>
+      <p>Besides, if anyone should be able to deal with a <em>corona virus</em>, it would be the sun, right?</p>
+      <p>To get the mass loss rate of the sun, consider a thin shell around the sun with radius r and thickness dr. The volume of a tiny strip is the surface area times the width, giving \\( 4πr^2 \\ dr \\). The density can be thought of as the number of hydrogen atoms per unit volume, times the mass of a hydrogen atom, giving \\( n_H m_H \\)</p>
+      <div class=eqn> \\[ dm = \\rho \\ dV = n_H m_H (4πr^2 \\ dr) \\] </div>
+      <p>Then since dr = vdt</p>
+      <div class=eqn> \\[ \\frac{dm}{dt} = \\rho \\ dV = n_H m_H 4πr^2 v = 3 \\times 10^{-14} \\ M_\\odot \\text{yr}^{-1} \\] </div>
+      <p>This is practically nothing in terms of the mass of the sun, but contributes a lot to the angular momentum loss, because the solar wind is forced to co-rotate with the sun by the magnetic field</p>
+      <h4>Angular Momentum Loss</h4>
+      <p>The plasma being vomitted out is still within the sun's magnetic field, meaning it will also rotate alongside the sun, even at very large radii (known as the <em>Alfvén radius</em>). Why is this a problem? Well calculate the angular momentum</p>
+      <div class=eqn> \\[ J = mvr = m \\frac{2πr}{P_\\text{spin}} r \\] </div>
+      <p>(Oh yeah, angular momentum has rebranded as \\(J\\) for astronomy, to avoid confusion with luminosity). That means:</p>
+      <div class=eqn> \\[ \\frac{J}m \\propto r^2 \\] </div>
+      <p>Since the arm is so far out (has a large radius), then a very small change in mass can result in a very large change in angular momentum. This is called magnetic breaking, which explains why the sun rotates so slowly.</p>
+    `
+  },
+
+  "terrestrial": {
+    title: "The Terrestrial Planets",
+    content: `
+      <p>If we wanna look at a planets atmosphere, a good place to look is how much light is reflected</p>
+      <div class=eqn> \\[ L_\\text{reflected} = \\frac{L_\\odot}{4πa^2} \\ A_G \\ πR_P^2 \\] </div>
+      <p>where \\( A_G \\) is the geometric albedo, which just says what amount of light is reflected off the planet. For the earth, it's about 0.3.</p>
+      <p>We must also consider the thermal component, which we get by equating heating and cooling (assuming no internal source of heat, spoiler, this isn't true in general)</p>
+      <div class=eqn> \\[ L_\\text{in} = \\frac{L_\\odot}{4πa^2} (1-A_B) πR_P^2 \\] </div>
+      <p>where \\( A_B \\) is the bond albedo. The difference is the geometric one is angle dependent, but the bond albedo is just averaged over everything.</p>
+      <div class=eqn> \\[ L_\\text{out} = 4πR_P^2 \\sigma T_P^4 \\] </div>
+      <p>Assuming the planet emits evenly, which isn't necessarily true, since there will be a day side and a night side. Therefore we are assuming either quick rotation or atmospheric thermal lag. Anyway, that gives us:</p>
+      <div class=eqn> \\[ T_P = (1 - A_B)^\\frac14 \\left( \\frac{R_\\odot}{2a} \\right)^\\frac12 T_\\odot \\] </div>
+      <p>Notice that it doesn't depend on size btw</p>
+      <p>The surface temperature on the earth in particular may be higher than calculated, due to the greenhouse effect.</p>
+      <p>Remember Wein's displacement law</p>
+      <div class=eqn> \\[ \\lambda_\\text{peak}T = 2.898 \\times 10^{-3} \\] </div>
+      <h4>Mercury</h4>
+      <p>Looks a bit like the moon. Heavy cratering, suggesting an old surface (about 4.5Gyr). It has high density and a weak magnetic field, and an iron core.</p>
+      <div class=eqn> \\[ T_P = 436 K \\] </div>
+      <p>It has a low albedo, and very bad heat redistribution. It has slow rotation due to solar tides, and low spin obliquity (tilt of spin axis), meaning ice in the poles. It has no moons</p>
+      <p>Its high density suggests oversized iron core. Together with tidal heating, may explain the weak magnetic field -&gt; active dynamo. It may have lost much of its mantle in a giant collision, which may explain its relatively large core</p>
+      <h4>Venus</h4>
+      <p>Very plain white surface, reflective clouds of sulfuric acid, high albedo of about 0.8</p>
+      <div class=eqn> \\[ T_P = 230 K \\] </div>
+      <p>Which is lower than that of earth interestingly. It has a thick atmosphere of carbon dioxide, which creates a large greenhouse effect, resulting in a surface temperature of about 735K.</p>
+      <p>Slow rotation, good heat redistribution by thick atmosphere. Its surface is covered by volcanic craters and a few impact craters, suggesting a younger surface (1 Gyr)</p>
+      <p>No seismology of Venus so far, which is volcanically active, but lacks plate tectonics and a magnetic field (not well understood, but may be a lack of convection, due to inefficient cooling through its stagnant lid)</p>
+      <h4>Earth</h4>
+      <p>Thinner nitrogen atmosphere, moderate greenhouse, albedo of about 0.3</p>
+      <div class=eqn> \\[ T_P = 255 K \\] </div>
+      <div class=eqn> \\[ T_S = 288 K \\] </div>
+      <p>Strong magnetic field, and a very young surface due to water erosion. The only planet with plate tectonics, fractured lithosphere moves, on convecting asthenosphere</p>
+      <h4>Mars</h4>
+      <p>Low mass and density compared to earth, strong orange colour from iron-oxide. Very thin atmosphere</p>
+      <div class=eqn> \\[ T_P = 189 K \\] </div>
+      <div class=eqn> \\[ T_S = -143-35ºC \\] </div>
+      <p>Very weak greenhouse effect, and poor heat redistribution. Surface shows impact craters and and volcanic craters (2Gyrs). Evidence of water in the past, 2 small moons, likely captured astroids.</p>
+      <p>Recent detections of Marsquakes tells us mars also has a thick lithosphere, molten core and no global magnetic field, however there is evidence of dynamo activity in the past</p>
+      <h3>Interior structure</h3>
+      <p>The earth is <em>differentiated</em> into layers</p>
+      <ul>
+      <li>Iron core</li>
+      <li>Silicate mantle</li>
+      <li>Crust of lighter materials</li>
+      </ul>
+      <p>We look at the interiers of planets via seismology. S-waves can't go through liquids, P-waves are reflected. There are shadow zones, which are points where none of the waves hit.</p>
+      <p>The bulk Earth is dominated by Iron, oxygen, silicon, magnesium in <em>refractory compounds</em> (solids at high temperatures), and it is very deficient in common, volatile elements, like carbon hydrogen and nitrogen. This means earth must have formed in a warm environment, where water methane carbon dioxide and ammonia didnt form solids.</p>
+      <p>Earth's interior remains hot due to radioactivity. It has a strong magnetic field generated by a magnetic dynamo. New crust at mid-atlantic ridges, reveals the history of the magnetic field showing polarity reversals every 0.5Myrs, which is strong evidence for a dynamo</p>
+      <p>Volcanic island chains (e.g canary islands, hawaii) where ocean plate moves across <em>mantle plooms</em> (upwelling convection cells).</p>
+      <p>You'd expect other terrestrial planets to also be differentiated and heated by radioactivity, and that smaller bodies will cool more efficiently due to proportionally bigger surface area</p>
+      <p>Lunar seismology shows a thicker lithosphere and a small molten core, evidence that the moon cooled more quickly than earth. There's no global magnetic field, so the dynamo is not active. But the magnetic field is froxen into old samples</p>
+      <h3>Surface</h3>
+      <p>Moon has a heavily cratered surface. It has less cratered Mare which are giant impact basins, that are later filled with lava from volcanic activity that continued until 2-3 Gyr ago. Impacts also trace the thickness of the lunar lithosphere with time. Lava flowed along <em>rilles</em>, which remain visible.</p>
+      <p>The lunar surface is covered with fine powdery soil called <em>regolith</em>, from many small impacts.</p>
+      <p>The ages are measured with <em>radioisotope dating</em> of rock samples. Recall:</p>
+      <div class=eqn> \\[ A(t) = A_0e^{-\\lambda t}, \\ \\lambda = \\frac{\\ln{2}}{\\tau_{-\\frac12}} \\] </div>
+      <p>It decays to some daughter product B</p>
+      <div class=eqn> \\[ A(t) + B(t) = A_0 + B_0 = A_0e^{-\\lambda t} + B_0 \\] </div>
+      <div class=eqn> \\[ B(t) = (e^{-\\lambda t})A(t) + B_0 \\] </div>
+      <p>In special cases, assume \\( B_0 = 0 \\), like lead in zircon crystals. Otherwise, you can calibrate it using a different isotope of the daughter product B', for which abundance is constant with time</p>
+      <div class=eqn> \\[ \\frac{B(t)}{B'(t)} = (e^{-\\lambda t})\\frac{A(t)}{B'(t)} + \\frac{B_0}{B'(t)} \\] </div>
+      <p>We still dunno B_0 or B', but we can assume the ratio is constant for different crystals within a rock sample, since B and B' have similar chemical properties</p>
+      <p>The terrestrial planets show a wide range of cratering and volcanism, with ages calibrated with respect to the moon.</p>
+      <p>Mercury is heavily cratered: Ancient surface</p>
+      <p>Venus radar mapping shows only large impact craters (&gt;3km), as smaller bodies burn up in the thick atmosphere. Impact craters are rare, suggesting a younger surface that was completely resurfaced about 1 Gyr ago (by catastrophic volcanism). There are hundreds of volcanic craters, but no sign of tectonic plates (chains of volcanoes at subduction zones)</p>
+      <p>Earth has very few impact craters, meaning a very young surface of about 100Myrs due to resurfacing by water erosion and plate tectonics</p>
+      <p>Mars is also an ancient surface, with frequent impact craters, but also geological activity in volcanoes and rift valleys, causing resurfacing until 2Gyrs ago. Volcanoes on mars are the largest because plates don't move across mantle plumes (also seen on venus, but the lithosphere is too thin to support large volcanoes, which sag to form pancake domes and coronae). Mars also shows evidence of ancient water erosion, like river beds, shorelines, river deltas, superimposed with more recent impact craters</p>
+    `
+  },
+
+  "terrestrial2": {
+    title: "The Terrestrial Planets (cont.)",
+    content: `
+      <h3>Atmospheres</h3>
+      <h4>Earth</h4>
+      <p>1bar, mainly nitrogen (80%) and oxygen (20%). Temperature drops with amplitude, following an approximate adiabatic temperature profile (no heat exchange as gas rises or sinks) but with temperature inversions in the stratosphere (due to uv heating of the ozone layer) and the thermosphere (from X-ray heating)</p>
+      <h4>Mercury</h4>
+      <p>Mercury and the moon have surface gravity too low to retain a significant atmosphere</p>
+      <h4>Mars</h4>
+      <p>0.006 bar atmosphere, mainly carbon dioxide (95%) and nitrogen (3%). Large range of surface temperatures due to poor heat redistribution and weak greenhouse (seasons, day/night, )</p>
+      <h4>Venus</h4>
+      <p>93 bar, mainly carbon dioxide (96%) and nitrogen (4%).</p>
+      <h4>Greenhouse effect</h4>
+      <p>The atmosphere is transparent to the incoming heating of the sun, but more opaque to the outgoing infrared, due to molecular absorption.</p>
+      <p>With one opaque layer</p>
+      <div class=eqn> \\[ T_S^4 = 2T_P^4 \\] </div>
+      <p>With N layers</p>
+      <div class=eqn> \\[ T_S^4 = (1+N)T_P^4 \\] </div>
+      <p>Make it continuous:</p>
+      <div class=eqn> \\[ T_S^4 = (1+\\frac34 \\tau)T_P^4 \\] </div>
+      <p>SO \\( \\tau = 1.33 \\) is one optic layer. For earth, \\( \\tau_{IR} \\approx 0.8 \\).</p>
+      <p>(In practice we need to consider the wavelength dependance)</p>
+      <p>Why do venus and earth has such different atmospheres? On earth, Co2 dissolves in water, produces acid rain, leading to the erosion of silicate rocks on land, which leads to calcium carbonate (limestone) being deposited as ocean sediments, which is 99.6% of earths carbon. This is a negative feedback loop in carbon-silicate cycle</p>
+      <p>CO2 goes up - T_S goes up - More ocean evapouration and rain - more erosion and deposition - CO2 goes down. CO2 is also returned to the atmosphere by volcanoes when the oscean plates are subducted.</p>
+      <p>There is also positive feedback, where an increase in co2 increases temp and water vapour in the atmosphere, which increases the temperature again. On earth, negative feedback wins. On venus, it looks like positive feedback won.</p>
+      <p>In fact, early venus may have been like the earth, but the extra heating may have lead to a runaway greenhouse effect, turning all water into vapour, meaning negative feedback shuts off, temperature shoots up (T_s about 1000K), causing a magma ocean. CO2 from volcanoes accumulates in the atmosphere.</p>
+      <p>Early earth probably had a thicker co2 atmosphere, helping it to avoid freezing when the sun was fainter (faint young sun paradox)</p>
+      <p>The total quantity of CO2 and nitrogen is quite similar for earth and venus, but venus is very deficient in water. Why?</p>
+      <p>Water is split by ultraviolet photolysis into hydrogen and oxygen, and the hydrogen evapourates into space. This is supported by the observed large excess of deuterium on venus, which is less vulnerable to evapouration than hydrogen</p>
+      <p>Atmospheric escape is when the upper end of the Maxwell-Boltzmann velocity distribution exceeds the escape velocity of the planet (called Jean's escape). Equipartition of energy in thermal equilibrium means lighter elements have higher velocity and more vulnerable to escape.</p>
+      <p>But escape is more efficient from solar x-ray heating of upper atmosphere</p>
+      <p>The escape rate is energy limited</p>
+      <div class=eqn> \\[ L_\\text{in, X} = \\frac{L_X πR_P^2}{4πa^2} \\geq \\frac{GM_p \\dot{m}}{R} \\] </div>
+      <p>(limit because some energy could be lost, eg reradiated)</p>
+      <div class=eqn> \\[ \\dot{m} \\leq \\frac{L_X R_P^3}{4GM_pa^2} \\] </div>
+      <p>For young venus, \\( \\dot{m} \\leq 5.7 \\times 10^6 \\text{ kg s}^{-1} \\). All water can be removed from venus in 10^6 years. Water on earth is protected from UV photolysis by the ozone layer and trapped lower in atmosphere as it condenses into clouds.</p>
+      <p>Escape is driven also by solar winds for planets without a global magnetic field</p>
+      <div class=eqn> \\[ \\dot{m} = n_H m_H (4πr^2 \\ v_\\text{wind}) \\] </div>
+      <p>So kinetic energy flux at 1AU:</p>
+      <div class=eqn> \\[ \\dot{m} = \\frac12 n_H m_H v_\\text{wind} v_\\text{wind}^2 = 7\\times 10^{-4} \\] </div>
+      <h3>Orbits</h3>
+      <p>Generally, low eccentricity and inclination, the exception is mercury with e~0.2, due to secular resonances from perturbations from other planets</p>
+      <p>Advance of perturbation of mercury was the first test of general relativity</p>
+      <p>Earth and mars rotate quickly, Mercury and Venus rotate very slowly, due to tidal interactions with the sun, tides with the moon also slowing earths spin, which is seen in sea shell fossil record</p>
+      <p>The true rotation period is what we call the siderial day, while the solar day is slightly longer by about 4mins, due to orbital motion. It's much longer for slowly rotating planets. Venus has very slow, retrograde (wrong way) rotation, possibly due to retrograde circulation of thick atmosphere, due to solar heating</p>
+      <p>Mercury's rotation is kinda stuck with 3:2 resonance with its eccentric orbit (spins 1.5 times per orbit), small permanent deformation aligned with the sun at perihelion (when tidal torques are strongest, 1/a^6 remember?)</p>
+      <h4>Spin obliquities</h4>
+      <p>Mercury and venus have very small obliquities due to tidal synchronisation. Earth and Mars have about 23º, which causes seasons. THe spin axis processes due to the torque of the sun acting on the equitorial bulge.</p>
+      <p>The obliquity of Mars varies due to small torques from other planets, causing large climate variations. THe obliquity of Earth is stablised by the tidal torques from the moon. Nevertheless, small variations in obliquity (e and i) lead to Milankovsch cycles in Earth's climate.</p>
+      <h4>Moons</h4>
+      <p>Mercury and venus have no moons</p>
+      <p>Earth has a single large moon, believe to be formed by a giant collision</p>
+      <p>Mars has 2 small captured asteroids. Phobos orbits faster than mars rotates (0.3 days compared to 1 day), so tidal synchronisation is spinning up mars, causing the orbit of Phobos to decay. Phobos will eventually break apart when it fills its roche lobe</p>
+      <h4>Roche Limit</h4>
+      <p>A limit to orbital separation, where the self gravity of an object is smaller then the differential gravity from the planet. Remember</p>
+      <div class=eqn> \\[ dF = -\\frac{2GMm}{r^3} \\ dr \\] </div>
+      <div class=eqn> \\[ \\frac{GM_mm}{R^2_m} \\leq \\frac{2GM_pm}{a^3} \\] </div>
+      <div class=eqn> \\[ a^3_r = 2\\frac{M_p}{M_m} R_m^3 \\] </div>
+      <div class=eqn> \\[ \\frac{M_p}{M_m} =  \\frac{\\frac43 π R_p^3 \\rho_p}{\\frac43 π R_m^3 \\rho_m} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ a_R = 2^\\frac13 \\left( \\frac{\\rho_p}{\\rho_m} \\right)^\\frac13 R_p \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>This is for a rigid body that maintains its physical shape, which is unrealistic. For a fluid, the 2^1/3 becomes 2.456</p>
+      <p>Mercury and venus have relatively small hill spheres since they are so close to the sun, so moons can't have wide orbits. Also, since they rotate so slowly, any moons they have will likely rotate faster, causing them to spiral in like phobos. The moons will then be distrupted when they reach the Roche limit</p>
+    `
+  },
+
+  "giant": {
+    title: "Giant Planets",
+    content: `
+      <p>Now we are talking about the part time aura farmers</p>
+      <p>These gas giants are so big and have so much mass and so much aura, that the gravity of all the other bodies in the solar system is practically useless, meaning their eccentricity and inclinations are really small</p>
+      <p>Jupiter and Saturn are the gas giants, made up of mostly hydrogen and helium.</p>
+      <p>Neptune and Uranus have less gas. That likely means they have a higher proportion of common ices of volatile elements, like water, carbon dioxide and ammonia. For this reason they are called the <em>ice giants</em>, but don't let the name fool you: They aren't actually made up of ice, they are mostly hydrogen and helium, just like the gas giants. They get their name since they were likely formed from ice.</p>
+      <h3>Gas giants</h3>
+      <p>You can calculate the radius vs mass for a given composition by assuming it follows hydrostatic equilibrium</p>
+      <div class=eqn> \\[ \\frac{dP}{dr} = - \\frac{GM_r \\rho(r) }{r^2} \\] </div>
+      <p>We want to solve for \\( \\rho(r) \\), meaning we need the equation of state for \\( P(\\rho) \\). This EoS can be <em>pretty</em> tough to try and measure in a lab, but it turns out to be near enough</p>
+      <div class=eqn> \\[ P \\approx k \\rho^2, \\ k=2.7\\times10^5 \\text{ Nm}^4\\text{kg}^{-1} \\] </div>
+      <p>So we'll just stick with that. So then the left hand side becomes:</p>
+      <div class=eqn> \\[ \\frac{dP}{dr} = 2k\\rho \\frac{\\rho(r) }{dr} \\] </div>
+      <p>Now we can use our new and improved hydrostatic equilibrium equation. Once we do that, with some tactical re-arranging we end up with:</p>
+      <div class=eqn> \\[ r^2 \\frac{d\\rho(r) }{dr} = - \\frac{G}{2k} M_r \\] </div>
+      <p>Now that's better, but there's still an annoying \\( M \\) in the way. But never fear! We can get rid of the M simply by differentiating again, and using the <em>mass conservation equation</em></p>
+      <div class=eqn> \\[ dM_r = 4πr^2 \\rho(r) \\ dr \\] </div>
+      <p>In the end, you get this differential equation:</p>
+      <div class=eqn> \\[ \\frac{d^2\\rho(r) }{dr^2} + \\frac2{r} \\frac{d\\rho(r) }{dr} + \\left( \\frac{2πG}{k} \\right) \\rho = 0 \\] </div>
+      <p>You probably don't need to actually solve this, but you should know that the solution of this is</p>
+      <div class=eqn> \\[ \\rho(r) = \\rho_c \\frac{\\sin{kr}}{kr}, \\quad k = \\sqrt{\\frac{2πG}{k}} \\] </div>
+      <p>So then \\( \\rho(R) = 0 \\) when \\( \\sin{\\sqrt{\\frac{2πG}{k}}R} = 0 \\), so when \\( \\sqrt{\\frac{2πG}{k}}R = \\pi \\). This should mean:</p>
+      <div class=eqn> \\[ R = \\sqrt{\\frac{πk}{2G}} \\] </div>
+      <p>This gives a radius of \\( R = 7.97 \\times 10^7 \\text{ m} \\), which is 1.12 times the actual value. Notice that it doesn't depend on mass: if you actually look at plots of mass against radius, it begins to go back down at around this value. If you think about it, if you add more and more gas to a gas planet, you are only giving it more gravity, meaning it will actually get smaller.</p>
+      <h4>Central Density and Pressure</h4>
+      <p>If we want to know the <em>central density</em> of the planet, \\( \\rho_c \\), we just have to integrate the mass conservation equation.</p>
+      <div class=eqn> \\[ \\begin{align} M 
+          &= \\int^R_0 4πr^2 \\rho(r) \\ dr \\\\[6pt]
+          &= \\int^R_0 4πr^2 \\rho_c \\frac{\\sin{kr}}{kr} \\ dr \\\\[6pt]
+          &= \\frac{4π\\rho_c}{k} \\int^R_0 r \\sin{kr} \\ dr 
+      \\end{align} \\] </div>
+      <p>Evaluating the integral gives us:</p>
+      <div class=eqn> \\[ \\rho_c = \\frac{πM}{4R^3} \\approx 4400 \\text{ kg m}^{-3} \\] </div>
+      <p>Pretty bloody dense, denser than rocks even. Hydrogen, a gas (well, more like a liquid at this point, but you get what I mean) is denser than rock at the centre of Jupiter. Isn't that cool?</p>
+      <p>And even better, by using the equation of state we had earlier, we can proceed to calculate the pressure:</p>
+      <div class=eqn> \\[ P_c \\approx k \\rho_c^2 = 5 \\times 10^{12} \\text{ Pa} = 5\\times 10^7 \\text{ bar} \\] </div>
+      <p>By looking at a phase diagram of hydrogen at this pressure, we can see that it forms a liquid at this pressure. But not just any liquid. The pressure is so high that the electrons are now delocalised, meaning they can move freely and conduct electricity. What do we call a material which has electron which move freely and can carry charge?</p>
+      <p>A <em>metal</em>!</p>
+      <p>Believe it or not, hydrogen is actually considered a metal at this density. We call it a <em>metallic liquid</em>.</p>
+      <h4>Structure of the Gas Giants</h4>
+      <p>We'd expect a core made of rock or ice, with this liquid metal hydrogen layer. Then as you get a bit higher up, hydrogen transitions back into a regular, non-metal fluid (molecular fluid), before transitioning into the visible gas layer we all know and love.</p>
+      <p>Saturn should have the same layers, but with a smaller metal hydrogen layer. Both rotate pretty quickly (\\( P &lt; 0.5 \\text{ days} \\)), making them <em>oblate spheroids</em>, which slightly hacks up the spherical structure and the gravitationan potential poles internal structure (e.g. Juno mission)</p>
+      <p>Large‑scale banding and jets extend downwards, implying deep convection and zonal flows in the interior.</p>
+      <h4>Magnetic fields</h4>
+      <p>All the convection, rotation and conducting metal in the planet creates a strong magnetic dynamo and strong magnetic field. A <em>very</em> strong magnetic field. What's that, you don't believe me? Well that's rude! So you're saying I'm a liar?! When have I ever lied to you?</p>
+      <p>The magnetic moment of jupiter is <em>20 THOUSAND</em> times that of earth. 20 whole thousands! That's a lot of bloody thousands! Saturn ain't quite as strong since there is less of the metal hydrogen liquid stuff, but still, its magnetic moment is 600 times that of earth. <em>6</em> bloody hundreds? That's a lot of hundreds, isn't it?</p>
+      <p>These strong magnetic field form to <em>aurorae</em> (northern lights) at the poles, as well as radio emission through cyclotron and synchrotron emission by low/high energy electrons orbiting magnetic field lines.</p>
+      <p>We can estimate how big the magnetosphere of a planet by equating the magnetic energy density (\\( u_B \\)) with the kinetic energy density (\\( u_w \\)) of the solar wind. From the Electricity and Magnetism section, we know that the magnetic energy density is:</p>
+      <div class=eqn> \\[ u_B = \\frac{B^2}{2\\mu_0} \\] </div>
+      <p>For a magnetic dipole</p>
+      <div class=eqn> \\[ B(r) = \\frac{\\mu_0}{2π} \\frac{\\mu}{r^3} \\] </div>
+      <p>So then put that in and you get:</p>
+      <div class=eqn> \\[ u_B = \\frac{\\mu_0\\mu}{8π^2r^6} \\] </div>
+      <p>Next, the kinetic energy density is just kinetic energy divided by volume. Or if you like, kinetic energy but replacing the mass with a density:</p>
+      <div class=eqn> \\[ u_w = \\frac12 \\rho_w v_w^2 \\] </div>
+      <p>So put 'em equal to each other, and rearrange for the radius, and you get this monstrosity:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ R_M = \\left( \\frac{\\mu_0}{\\rho_w} \\right)^\\frac16 \\left( \\frac{\\mu}{2πv_w} \\right)^\\frac13 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>Why is this important? Well it tells us two key things about the magnetosphere;</p>
+      <ol>
+      <li>\\( R_M \\propto \\mu^\\frac13 \\). The stronger the dipole, the larger the magnetosphere</li>
+      <li>\\( R_M \\propto \\rho_w^{-\\frac16} \\). The denser the wind, the smaller the magnetosphere</li>
+      <li>\\( R_M \\propto v_w^{-\\frac13} \\). The faster/stronger the wind, the smaller the magnetosphere</li>
+      </ol>
+      <p>Can also scale between planets</p>
+      <div class=eqn> \\[ u_B \\propto \\left( \\frac{\\mu}{r^3} \\right)^2 \\quad u_w \\propto \\frac{1}{a^2} \\] </div>
+      <div class=eqn> \\[ \\frac{\\mu}{R_m^3} \\propto \\frac{1}{a}\\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ R_M \\propto (\\mu a)^\\frac13 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Ice Giants</h3>
+      <p>Mass is mostly &quot;ices&quot;, which is things like water, methane, ammonia, stuff like that. Nevertheless, the actual volume of the planet is mostly hydrogen, giving it an intermediate density. This is supported by the large overabundance of methane in their atmospheres, which explains their blue colour, 'cus methane eats up red light.</p>
+      <p>The ice giants are both rapid rotaters. But Uranus is a bit of a weird one, since it has an obliquity of about 98º (it's on its side), probably due to a collision during its formation.</p>
+      <p>Uranus and Neptune aren't as powerful as Jupiter and Saturn, but they are still pretty tuff, with magnetic moments 50 and 25 times that of earth respectively. And you might wonder &quot;how can this happen, since Uranus and Neptune ain't got enough pressure to form none of that metallic hydrogen liquid thing?&quot; Well at extreme pressures, ice becomes ionised, so electricity can still flow, and dynamoes can still form. Cool innit?</p>
+      <p>They have complex corkscrew magnetospheres, due to the high obliquities (especially Uranus), but also misaligned (from the spin axis) and offset (from the centre of the planet) magnetic fields (possibly due to the dynamo only acting in a small convective zone)</p>
+      <h3>Internal Heating</h3>
+      <p>Jupiter, Saturn and Neptune all have effective temperatures higher than the expected equilibrium temperature, meaning they are emitting more heat than they are receiving from the sun. For example, for Jupiter \\( T_p = 110K, \\quad T_\\text{eff} = 124K \\). This means there must be a source of internal heat.</p>
+      <p>In each case, there is not enough rocky material for the source to be radioactive decay, so that's off the table.</p>
+      <p>The first possible reasoning is <em>slow cooling</em>. In short, big planets cool down much more slowly. Therefore Jupiter is big enough that some of this heat could actually be left over from formation. That explains some of it, but not all of it.</p>
+      <p>The second possible reason is <em>helium rain</em>. Saturn (and maybe Jupiter who knows) are experiencing ongoing differenciation, releasing gravitational potential energy, from <em>rain-out of helium</em> from the envelope. This is supported by an underabundance of helium in the visible upper atmosphere.</p>
+      <p>Neptune has ongoing differentiation of metals, rocks and ices. Nobody really knows why this doesn't happen in Uranus, but it could be due to the lack of convection trapping heat in the interior</p>
+      <h3>Atmospheres</h3>
+      <p>As I've said like a quadrillion times by now, the gad gians have atmospheres made up mostly of hydrogen and helium, and enriched with methane and ammonia. Water condenses deeper into the atmosphere than we can see</p>
+      <p>Jupiter has <em>bright zones</em> (reflective clouds of ammonium ice) and <em>dark belts</em> (seeing deeper into the atmosphere, lower albedo, with the red/brown colour coming from trace molecules from ultraviolet photochemistry). If we look in the infrared range, the banding pattern is reverses (the darker parts become briter and vice versa), since the high altitude clouds are cold and dark, and the cloud free parts are higher temperature since they are lower.</p>
+      <p>The clouds we are seeing in zones condense as warm material rises and cools in a convection pattern. Clouds evapourate in dark belts and sink, causing the temperature to rise</p>
+      <p>Rising and north south spreading in convection bands carries angular momentum and result in strong local over/under rotation, causing opposite east west winds</p>
+      <p>We see many storms at the shearing boundaries, the most famous storm being the giant red spot, which has been around for like 400 years</p>
+      <p>Saturn has a similar banding pattern, but less obvious (muted), becausr the clouds form deeper in the cooler atmosphere. Occasional storms bring the reflective ammonia clouds to higher amplitudes.</p>
+      <p>Neptune is cooler and the ammonia ice clouds are even deeper, meaning the banding is even more muted. The blue colour is from enhanced methane which strongly absorbs red light. There are also high altitude white clouds from methane condensing at these low temperatures</p>
+      <p>Uranus looks entirely featureless (to voyager 2 anyway). There is <em>some</em> banding, but you can barely see it. But nowadays we can see strong white clouds of methane visible (possibly seasonal variations, although P is about 84 years so we won't know for quite a while.)</p>
+      <h3>Moons</h3>
+      <p>Jupiter has 4 large Galilean moons (and many smaller captured asteroids). The closer moons are denser, and the further out, the lower the density, with Callisto not being much more dence than ice, and volatile content increases. This is due to temperature gradients in the disk surrounding Jupiter when the moons formed. It may also be from tidal heating, which is evapourating volatiles (recall their resonant orbits, and tidal damping of eccentricity)</p>
+      <h4>Jupiter</h4>
+      <ul>
+      <li><strong>IO</strong>: Io is rocky and highly volcanic, which means it has a younger surface, since there are no impact craters</li>
+      <li><strong>EUROPA</strong>: Europa also lacks impact craters (younger), and it has rocky composition with reflective water ice surface. It has a tidally heated subsurface ocean</li>
+      <li><strong>GANYMEDE AND CALLISTO</strong>: Their masses are dominated by ice, with an older, cratered surface. There are some cracks there, which implies it is geologically active (ice geology rather than rock). Probably sub-surface oceans of their own.</li>
+      </ul>
+      <h4>Saturn</h4>
+      <ul>
+      <li><strong>TITAN</strong>: Saturn has one large moon, Titan. Titan has a thick atmosphere, 1.5bar, mainly made of nitrogen. It also has a thick photochemical hydrocarbon haze. Radar imaging shows liquid methane rivers and lakes</li>
+      <li><strong>ENCELADUS</strong>: Saturn has 6 other spherical moons, including enceladus. This has a tidally heated liquid water ocean below the thin ice crust.</li>
+      </ul>
+      <h4>Uranus</h4>
+      <p>Uranus has 5 spherical moons, with similar composition and density trends as the galilean moons. The moons are also rotated about 98º, aligning with the blanets obliquity, which is taken as evidence that they formed from a disk of debris from the impact which tilted it.</p>
+      <h4>Neptune</h4>
+      <p>Neptune has 1 spherical moon, called Triton. It is the only massive moon which spins the wrong way (retrograde motion). This likely means this wasn't formed <em>in situ</em> (from the planet itself), but was a dwarf planet captured from the Kuiper belt, making it the largest captured moon. It likely destablised the primordial Neptune moon system.</p>
+      <h3>Rings</h3>
+      <p>Saturn is the main example, with rings made of ice particle, with sized ranging from 1cm-1m. It has a complex structure, due to mean motion resonances with Saturn's moons. The rings are also extremely thin, due to collisions when any particles orbit out of this plane, implying they have disc crossing orbits</p>
+      <p>The main rings extend from about 1.2 - 2.3 x the radius of the planet. This is reflective of the Roche limit:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ a_R = 2.456 \\left( \\frac{\\rho_p}{\\rho_m} \\right)^\\frac13 R_p \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <p>For Saturn, \\( \\rho_p = 700 \\text{ kg m}^{-1} \\). Assume \\( \\rho_m = 1000 \\text{ kg m}^{-1} \\), that gives us</p>
+      <div class=eqn> \\[ a_R = 2.2 R_p \\] </div>
+      <p>Which matches nicely! So it was probably a tidally distrupted moon that migrated beyond its Roche limit. The lifetime of the rings is about 10^8 years, eroded by ring rain where photoionised material followed the magnetic field lines on Saturn</p>
+      <p>The dusty E-ring is associated with ejecta from Enceladus</p>
+      <p>All giant planets have dusty rings like saturn's</p>
+    `
+  },
+
+  "solar-formation": {
+    title: "Formation of the Solar System",
+    content: `
+      <h3>Nebula Hypothesis</h3>
+      <p>Gravitational collapse of gas in a molecular cloud and conservation of angular momentum formed a protoplanetary disks around the young sun. Explains planets orbiting in the ecliptic plane and aligned with the spin of the sun.</p>
+      <p>We can estimate the minimum mass solar nebula by spreading out the planets and topping up the solar composition</p>
+      <div class=eqn> \\[ \\sigma(r) \\propto r^{-\\frac32} \\] </div>
+      <p>Assuming gravitational potential energy is radiated locally in the disk:</p>
+      <div class=eqn> \\[ T_\\text{disk} \\propto r^{-\\frac34} \\] </div>
+      <p>This results in an increase in solid material beyond the snowline, which is the boundary between the terrestrial and the giant planets.</p>
+      <p>Protoplanetary disks are observed around young stars, with lifetimes of about 10 million years</p>
+      <h3>Planet formation by core-accretion</h3>
+      <ol>
+      <li>Formation of the young sun and the protoplanetary disk by gravitational collapse</li>
+      <li>Condensation of sub-µm dust particles</li>
+      <li>Growth of particles by pair-wise collisions, up to about 10km sized objects (<em>planetesimals</em>)</li>
+      </ol>
+      <p>This third step is initially assisted by electrostatic forces, and icy particles stick together very readily (so they grow more rapidly beyond the snowline). But there are 2 main problems. One, as they get larger, they become fragile and can be eroded by higher velocity collisions. Two, <em>gas drag</em> on particles in the disk causes larger particles to spiral into the sun.</p>
+      <p>Consider the orbit within a gas disk</p>
+      <div class=eqn> \\[ \\underbrace{\\frac{v^2}{r} = \\frac{GM_\\odot m}{r^2}}_{\\text{Keplarian Orbit}} \\qquad + \\overbrace{\\frac{dP}{dr} \\frac1{\\rho}}^{\\text{Addition support against \\\\ gravity, experienced by \\\\ the gas acting as a fluid}} \\] </div>
+      <p>(assuming a negative pressure gradient outwards in the disk)</p>
+      <div class=eqn> \\[ v_\\text{gas} \\approx 0.995 v_\\text{Kep} \\] </div>
+      <p>Solid objects feel a headwind of about 100 ms^-1 at 1AU, leading to significant drag on solids in the disk. However, the vertical component will cause the settling of particles into the disc mid plane, which is good for collision and growth, although there will be a gradual in-spiraling towards the proto-star (removing particles from the disc)</p>
+      <p>Drag force</p>
+      <div class=eqn> \\[ F_D = \\frac12 C_D πR_P^2 \\rho_{\\text{gas}} (v_\\text{Kep} - v_\\text{gas})^2 \\] </div>
+      <p>Characteristic timescale to modify the orbit:</p>
+      <div class=eqn> \\[ \\tau_D \\sim \\frac{m_p v_\\text{Kep}}{F_D} \\] </div>
+      <p>Change mass for density:</p>
+      <div class=eqn> \\[ \\begin{align} \\tau_D 
+          &\\sim \\frac83 \\frac1{C_D} \\frac{\\rho_p}{\\rho_\\text{gas}} \\frac{R_p v_\\text{Kep}}{(v_\\text{gas} - 0.995 v_\\text{Kep})^2} \\\\[6pt]
+          &= \\frac83 \\frac1{C_D} \\frac{\\rho_p}{\\rho_\\text{gas}} \\frac1{0.005^2} \\frac{R_p}{(v_\\text{Kep})^2} \\\\[6pt]
+          \\end{align} \\] </div>
+      <p>For a planet, \\( \\tau_D \\sim 10^8 \\text{ yr} \\)<br>
+      For dust, \\( \\tau_D \\sim \\text{seconds} \\)<br>
+      For a 1m object, \\( \\tau_D \\sim 10^3 \\text{ yr} \\). This is a significant problem.</p>
+      <p>Possible solutions:</p>
+      <ul>
+      <li>Particles always drift against the pressure gradient, and can be trapped at pressure maxima in the gas disc, promoting collisions and rapid growth.</li>
+      <li>Streaming instability where particles shield each other from the headwind, causes clumping and also promoting collisions and growth. Also promotes low velocity collisions and minimal erosion of particles</li>
+      </ul>
+      <ol start="4">
+      <li>Further growth from planetesimals to protoplanets, about a tenth of the mass of the earth, assisted by mutual gravity. This stops at the isolation mass, when the Hill sphere of the protoplanet has hoovered up an annulus of the disk of solid particles.</li>
+      <li>More massive cores beyond the snowline, where ices can form (remember \\( \\sigma(r) \\propto r^{-\\frac32} \\)).</li>
+      </ol>
+      <div class=eqn> \\[ dm \\propto r^{-\\frac32} 2πr \\ dr \\propto r^{-\\frac12} \\ dr \\] </div>
+      <p>The spacing of the planets increases roughly proportional with distance from the sun.</p>
+      <div class=eqn> \\[ M_\\text{core} \\propto r^{\\frac12} \\] </div>
+      <p>For Jupiter</p>
+      <div class=eqn> \\[ M_\\text{core}(5AU) \\approx M_\\text{core}(1AU) \\times 5^\\frac12 \\times 4 \\approx 9M_E \\] </div>
+      <p>Massive cores form rapidly beyond snowline as they are capable of accreting mass</p>
+      <ol start="6">
+      <li>Massive cores accrete gas from disc, gas fills the hill sphere, heated as it falls into the gravitational potential of the planet, must radiate the energy to cool, contract and settle on the planet. This is initially slow because diffuse gas cools inefficiently (cooling \\( \\propto \\rho \\)). Gas accretion rate increases as the mass of the gas increases, meaning the gas is compressed and so cooles more efficiently</li>
+      </ol>
+      <p>This eventually becomes a runaway process, that rapidly accretes all gas in the disc annulus, creating a gas giant.</p>
+      <p>The timescale is similar to the disc lifetime. If the disc is dispersed during the slow gas accretion phase, we get an ice giant instead.</p>
+      <p>Gas accretion is halted by X-ray photo evapouration of the disk by the young sun.</p>
+      <p>Remember, for a planet atmosphere, \\( \\frac32 k_BT \\approx \\frac12 m_p \\bar{v}^2 \\)</p>
+      <p>consider escape velocity of the sun</p>
+      <div class=eqn> \\[ v_\\text{escape} = \\sqrt{\\frac{2GM_\\odot}{r}} \\] </div>
+      <div class=eqn> \\[ r = \\frac{2GM_\\odot m_p}{3k_BT} \\approx 10 \\ AU \\] </div>
+      <p>Beyond this radius, we see photoevaporation of the outer disk, shutting of supply of gas to inner disk</p>
+      <ol start="7">
+      <li>Terrestrial planets assembled by giant collisions between protoplanets after the disc has dispersed. Gravitational perturbations of orbits causes eccentricity to increase, causing crossing orbits and collisions. Previously, the orbits are circularised by gas drags within the disc</li>
+      </ol>
+      <h3>Evidence</h3>
+      <ul>
+      <li>Presence and composition of earth's moon (same as earth's mantle)</li>
+      <li>High density of Mercury (missing mantle material, lost in a collision)</li>
+      <li>Spin obliquity of Uranus</li>
+      </ul>
+      <p>Radioisotope dating of moonrocks and meteorites tells us the solar system is 4.6Gyrs old, and the moon forms 4.5Gyrs old, evidence that the assembly of the terrestrial planets took about \\( 10^8 \\) years (life time of the gas disk is about 10^7 years old).</p>
+      <p>collocity</p>
+    `
+  },
+
+  "other": {
+    title: "Small Bodies",
+    content: `
+      <h3>Asteroids</h3>
+      <p>Asteroids are mostly in the asteroid belt between Mars and Jupiter. It's quite possible that this asteroid belt is actually a failed planet, where a bunch of rocks were about to get together to form a planet (more on that next time) but instead got obliterated by Jupiter's shear aura.</p>
+      <p>We can calculate the masses and densities of these asteroids from spacecraft flybys (just take a spacecraft and just look at it), mutual orbits of binaries, or tiny moons. They are less dense than rocks, meaning they either are made of ice or have high porosity (i.e. they are not so much single objects, but rather rubble piles which have kinda been smooshed together).</p>
+      <p>There are 3 rarities (or <em>classes</em> if you wanna be boring):</p>
+      <ul>
+      <li>
+      <p><strong>C-type</strong>: the C definitely stands for common rarity, since they have a drop rate of about <em>73%</em>. They are dark, because they are made of <em>carbon</em> (isn't it a funny coincidence that the word carbon actually begins with a C? I mean it's almost like the C stands for <em>carbonaceous</em> or something, crazy...). They have low densities of about \\( 1300 \\text{ km m}^{-3} \\).</p>
+      </li>
+      <li>
+      <p><strong>S-type</strong>: The S definitely stands for super rare rarity, since these have a drop rate of about <em>17%</em>. They are much bright and glittery-er, since they are full of <em>silicates</em> (hey, ain't that something, silicates actually begins with an S too, if I didn't know any better I'd say it stood for <em>silicaceous</em> or some rubbish like that...). They have higher densities of about \\( 2600 \\text{ km m}^{-3} \\).</p>
+      </li>
+      <li>
+      <p><strong>M-type</strong>: I'm absolutely positive the M stands for mythical rarity, since they only have an <em>8%</em> drop rate. These are made of iron, which are metals (according to some people, the word '<em>metallic</em>' begins with an M, dunno why they told me that).</p>
+      </li>
+      </ul>
+      <p>Ceres is a c-type dwarf planet and shows evidence of ice at the surface, 25% ice</p>
+      <h3>Meteorites</h3>
+      <p><em>Chondrites</em> are fragments of <em>c-type asteroids</em>, which contain spherical chondrules of primordial material from the formation of the solar system. They are deficient in volatiles (similar composition to bulk earth)</p>
+      <p><em>Achondrites</em> are from <em>s-type asteroids</em> and don't have condrules, since they likely melted. They are rocky and iron deficient. Mantle of a differentiated and disrupted object.</p>
+      <p>These last ones don't have a particularly interesting name, they are just called <em>iron meteorites</em>, and they come from M-type asteroids, the core of a differentiated and disrupted object.</p>
+      <h3>Kuiper-Belt objects</h3>
+      <p>The Kuiper Belt is a thick, donut‑shaped region beyond Neptune, containing many icy bodies and dwarf planets (Pluto, Haumea, Makemake, Quaoar, etc.). This guy is the reason my poor baby Pluto got demoted, 'cus there are way too many other decently sized thingies that it's easier to just shaft the poor bloke.</p>
+      <p>Pluto has a density 1850, which suggests it is made of ice. There is icy debris from planet formation</p>
+      <h3>Comets</h3>
+      <p>Small icy bodies from Oort clouds which are occationally thrown into the solar system on highly elliptical orbits. Distinct ions (ionised gas carried by solar wind) and dust tail (Keplarian orbits and radiation pressure). They have very low densities, meaning they are very porous, like powder snow with dark surfaces of dust and carbon compounds (&quot;dirty snowballs&quot;)</p>
+      <p>The origin of water on earth? D/H implies it was from asteroids rather then comets. We need about 7x ceres (25% water, 1000x water content of earth)</p>
+    `
+  },
+
+  "ex-life": {
+    title: "Extraterrestrial Life",
+    content: `
+      <p>Life is very hard to define, and can be controversial. But the requirements are better understood, especially through the study of extemophiles, mostly bacteria.</p>
+      <p>Some forms of life can survive</p>
+      <ul>
+      <li>between -20 and 121ºC (like hydrothermal vents at mid ocean ridges)</li>
+      <li>Ionising radiation 1000x the amount which would kill a human</li>
+      <li>Chemical extremes, like 0.06-11 pH</li>
+      <li>Pressure above 1100 bar</li>
+      </ul>
+      <h3>Fundamental Requirements</h3>
+      <ol>
+      <li>An energy source, e.g. photosynthesis, chemosynthesis</li>
+      <li>Carbon source, valency allows complex organic chemistry. Uniquely to be the limiting factor, since carbon is a very common element</li>
+      <li>Liquid Water, required as a solvent of all life on earth. This is a limiting factor, since it's quite rare in liquid form</li>
+      </ol>
+      <p>Carbon based life in water may not be the only possibility, but H O and C are the 1st 3rd and 6th most common elements in the universe. Liquid water needs moderate temperatures and pressure greater than 0.006 bar. There is probably also a higher temperature limit set by organic chemistry.</p>
+      <p>But hydrothermal vents are favourable for life because nutrients are abundant in the heated water</p>
+      <p>There is fossil evidence of life on earth about 3.8 Billion years ago. This leads to the faint young sun paradox. How was liquid water present when the sun was 30% fainter?</p>
+      <p>Probably due to a very strong greenhouse effect, from higher atmospheric carbon dioxide abundance</p>
+      <h3>Possible environments for light</h3>
+      <h4>Mars</h4>
+      <p>Mars in in the <em>habitable zone</em> around the sun (where liquid water can exist on the surface of a planet). The atmospheric pressure of Mars is also <em>just</em> high enough. Imaging and sampling mars shows that surface water was abundant in the past (over 2Gyrs ago). Enhanced D/H is evidence of past water that was lost to evapouration.</p>
+      <p>Radar imaging evidence of liquid water in lakes below the ice caps</p>
+      <h4>Venus?!</h4>
+      <p>Venus has no surface water and an extreme D/H ratio, meaning significant water loss, but there is a possible detection of Phosphine (PH3) in the atmosphere, which might be a <em>biomarker</em>. Liquid water drops (in the form of sulfuric acid) do exist on venus, potentially habitable</p>
+      <h4>Icy moons of giant planets</h4>
+      <p>Especially Europa, which is resurfaced with liquid water from a tidally heated subsurface ocean. It has a relatively low water content, meaning it has a thin ocean and maybe hydrothermal vents providing nutrients.</p>
+      <p>Perhaps the deeper oceans on moons with thicker water layers, like Ganymede, will have ice at the bottom because of high pressure, and might lack nutrients.</p>
+      <p>Enceladus has water geisers with organic chemistry and molecular hydrogen pointing to hydrothermal vents.</p>
+      <p>Titan may have some form of life in the methane lakes.</p>
     `
   }
 };

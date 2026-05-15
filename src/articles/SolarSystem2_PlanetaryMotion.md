@@ -56,17 +56,13 @@ That's all there is to it really, moving on:
     </div>
 </div>
 
-Use earth units, of years and AUs
+Make sure to use Earth units, of years and AUs.
 
-(The value of an AU was calculated to 1% by parallax of transit of venus)
-
-By the way, Newton's law of Gravity came from this.
-
-He assumed a circular orbit:
+By the way, Newton's law of Gravity came from this. How did Newton manage that? He first assumed a circular orbit, meaning the period of rotation is just the circumference over the velocity:
 
 <div class=eqn> \[ P = \frac{2πr}{v} \] </div>
 
-This means
+Putting that back in give us:
 
 <div class=eqn> \[ \left( \frac{2πr}{v} \right)^2 = \frac{4π^2r^2}{v^2} = kr^3  \] </div>
 
@@ -132,26 +128,45 @@ There is also the *Hill sphere*, which is the bubble around earth at which the m
 
 #### Hill Sphere Derivation
 
-Sum gravity and potential
+<div class="container">
+    <div class="text">
+        Start with our model. We have one mass, \( M \) with another mass, \( m \) orbiting it a distance \( a \) away from it. Then there is a negligible mass orbitting \( m \). For the sake of our calculation, we are putting this itty bitty test mass right at the edge of the Hill sphere, meaning the distance from \( m \) to the test mass is \( R_H \).
+    </div>
+    <div class="image">
+    <div class="image-floater">
+        <div class="image-box">
+        <img src="images/Solar System/Hill sphere derivation.png" class="pop-image" style="width: 300px"/>
+        </div>
+        <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+        font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+        Figure 1: Hill Sphere</div><div style="color:white; font-size:20px; line-height: 1.2;">
+        ...</div></span>
+    </div>
+    </div>
+</div>
 
-<div class=eqn> \[ \frac{Gm_2}{R_H^2} - \frac{Gm_1}{(a-R_H)^2} + \Omega(a - R_H) = 0 \] </div>
+Cool, now that we have our system, let's get deriving this thing. We are looking for the point where the total acceleration due to gravity and potential on our test point is zero, so let's just add 'em together and set 'em to zero. We know how to get gravitational acceleration, as \\( \frac{GM}{r^2} \\). We also know that centrifugal acceleration is \\( \omega^2 r \\). Putting those in gets us:
 
-Use K3, to get angular frequency
+<div class=eqn> \[ \frac{Gm}{R_H^2} - \frac{GM}{(a-R_H)^2} + \omega^2(a - R_H) = 0 \] </div>
 
-<div class=eqn> \[ \Omega^2 = \frac{Gm_1}{a^3} \] </div>
+We know that \\( \omega = \frac{2π}{P} \\). By rearranging and then using K3, we get \\( \omega^2 = \frac{GM}{a^3} \\). That gives us:
 
-Change the denominator
+<div class=eqn> \[ \frac{Gm}{R_H^2} - \frac{GM}{(a - R_H)^2} + \frac{GM}{a^3}(a - R_H) = 0 \] </div>
+
+Change the denominator using a binomial expansion, \\( (1−x)^{−n} ≈ 1+nx \\). In this case:
 
 <div class=eqn> \[ (a - R_H)^{-2} = a^{-2} \left( 1 - \frac{R_H}{a} \right)^{-2} \approx a^{-2} \left( 1 + 2\frac{R_H}{a} \right) \] </div>
 
-Then assume \\( m_1 \gg m_2 \\)
+So put that in, and we get:
 
-<div class=eqn> \[ \frac{Gm_2}{R_H^2} - \frac{Gm_1}{a^2} \left( 1 + 2\frac{R_H}{a} \right) +  \frac{Gm_1}{a^2} \left( 1 - \frac{R_H}{a} \right) \approx 0 \] </div>
+<div class=eqn> \[ \frac{Gm}{R_H^2} - \frac{GM}{a^2} \left( 1 + 2\frac{R_H}{a} \right) +  \frac{GM}{a^2} \left( 1 - \frac{R_H}{a} \right) \approx 0 \] </div>
+
+All the G's cancel out. And so do some of the terms.
 
 <div class="hover-wrapper">
     <div class="formula-container">
         <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \[ R_H \approx \left( \frac{m_2}{3m_1} \right)^\frac13 \]
+            \[ R_H \approx a \sqrt[3]{\frac{m}{3M}} \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title">
         Formula X
@@ -187,9 +202,9 @@ Overtime, this spinning up or down can eventually cause the planet and the satel
 
 Where dF is greater than the self gravity of an object (meaning the force from the tidal bulges is stronger than the force of gravity keeping the satellite together), it will be *tidally disructed*. In short, it'll be ripped to shreds. This takes place at the Roche limit (the minimum distance a satellite needs to be away from the planet for it to be stable). This is why saturn has rings btw, all the stuff is too close to the planet, and is therefore within the Roche limit, meaning it gets ripped up.
 
-
-
 If we have an eccentric orbits, then even with the whole tidal locking shabang, the tidal bulge cannot track the changing orbital speed perfectly. This causes orbital energy to be converted into heat in the tides (*tidal heating*), and the circularisation of the orbit at constant angular momentum (the eccentricity becomes lower, remember e=0 means a circular orbit). This can stablise mean motion resonances, by damping eccentricity which would otherwise keep growing
+
+For example, Io's volcanism is mostly from tidal heating caused by the mean mode resonance with Europa and Ganymede. It's also the reason there is water underneath Europa.
 
 (Might get compare and contrast questions)
 

@@ -302,11 +302,37 @@ u {
   font-size: 1.5vw;
 }
 
+ol {
+  list-style: decimal outside !important;   
+  padding-left: 5vw;
+  padding-right: 0vw;
+}
+
 li {
   list-style-type: disc;
   padding-left: 1.5rem;
   color: var(--subtle);
 }
+
+
+ol li {
+    display: list-item;
+    list-style: decimal outside !important;
+    font-size: 2vh;
+    margin: 1vh;
+    padding: 1vh;
+    background-color: #4f8dff32;
+    color: rgba(190, 213, 255, 0.988);
+}
+
+ol li::marker {
+    color: var(--accent);       /* Makes the numbers red */
+    font-weight: bold;    /* Makes the numbers bold */
+    font-size: 2rem;    /* Makes the numbers slightly larger */
+    font-family: 'Courier New', Courier, monospace; /* Different font for numbers */
+}
+
+
 
 #logo {
   position: absolute;

@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 115 subtopics
-// Generated: 2026-05-14T19:10:27.950Z
+// Generated: 2026-05-15T18:25:30.192Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -16363,12 +16363,10 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>Use earth units, of years and AUs</p>
-      <p>(The value of an AU was calculated to 1% by parallax of transit of venus)</p>
-      <p>By the way, Newton's law of Gravity came from this.</p>
-      <p>He assumed a circular orbit:</p>
+      <p>Make sure to use Earth units, of years and AUs.</p>
+      <p>By the way, Newton's law of Gravity came from this. How did Newton manage that? He first assumed a circular orbit, meaning the period of rotation is just the circumference over the velocity:</p>
       <div class=eqn> \\[ P = \\frac{2πr}{v} \\] </div>
-      <p>This means</p>
+      <p>Putting that back in give us:</p>
       <div class=eqn> \\[ \\left( \\frac{2πr}{v} \\right)^2 = \\frac{4π^2r^2}{v^2} = kr^3  \\] </div>
       <p>By cancelling and rearranging:</p>
       <div class=eqn> \\[ \\frac{v^2}{r} = \\frac{4π^2}{kr^2} \\] </div>
@@ -16412,18 +16410,35 @@ const subtopics = {
       <h4>The Hill Sphere</h4>
       <p>There is also the <em>Hill sphere</em>, which is the bubble around earth at which the moon isn't ripped from its orbit (it must be well within it to have a stable orbit though). Weirdly it's not about the actual gravitational pull but gravitational gradient.</p>
       <h4>Hill Sphere Derivation</h4>
-      <p>Sum gravity and potential</p>
-      <div class=eqn> \\[ \\frac{Gm_2}{R_H^2} - \\frac{Gm_1}{(a-R_H)^2} + \\Omega(a - R_H) = 0 \\] </div>
-      <p>Use K3, to get angular frequency</p>
-      <div class=eqn> \\[ \\Omega^2 = \\frac{Gm_1}{a^3} \\] </div>
-      <p>Change the denominator</p>
+      <div class="container">
+          <div class="text">
+              Start with our model. We have one mass, \\( M \\) with another mass, \\( m \\) orbiting it a distance \\( a \\) away from it. Then there is a negligible mass orbitting \\( m \\). For the sake of our calculation, we are putting this itty bitty test mass right at the edge of the Hill sphere, meaning the distance from \\( m \\) to the test mass is \\( R_H \\).
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/Solar System/Hill sphere derivation.png" class="pop-image" style="width: 300px"/>
+              </div>
+              <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+              font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+              Figure 1: Hill Sphere</div><div style="color:white; font-size:20px; line-height: 1.2;">
+              ...</div></span>
+          </div>
+          </div>
+      </div>
+      <p>Cool, now that we have our system, let's get deriving this thing. We are looking for the point where the total acceleration due to gravity and potential on our test point is zero, so let's just add 'em together and set 'em to zero. We know how to get gravitational acceleration, as \\( \\frac{GM}{r^2} \\). We also know that centrifugal acceleration is \\( \\omega^2 r \\). Putting those in gets us:</p>
+      <div class=eqn> \\[ \\frac{Gm}{R_H^2} - \\frac{GM}{(a-R_H)^2} + \\omega^2(a - R_H) = 0 \\] </div>
+      <p>We know that \\( \\omega = \\frac{2π}{P} \\). By rearranging and then using K3, we get \\( \\omega^2 = \\frac{GM}{a^3} \\). That gives us:</p>
+      <div class=eqn> \\[ \\frac{Gm}{R_H^2} - \\frac{GM}{(a - R_H)^2} + \\frac{GM}{a^3}(a - R_H) = 0 \\] </div>
+      <p>Change the denominator using a binomial expansion, \\( (1−x)^{−n} ≈ 1+nx \\). In this case:</p>
       <div class=eqn> \\[ (a - R_H)^{-2} = a^{-2} \\left( 1 - \\frac{R_H}{a} \\right)^{-2} \\approx a^{-2} \\left( 1 + 2\\frac{R_H}{a} \\right) \\] </div>
-      <p>Then assume \\( m_1 \\gg m_2 \\)</p>
-      <div class=eqn> \\[ \\frac{Gm_2}{R_H^2} - \\frac{Gm_1}{a^2} \\left( 1 + 2\\frac{R_H}{a} \\right) +  \\frac{Gm_1}{a^2} \\left( 1 - \\frac{R_H}{a} \\right) \\approx 0 \\] </div>
+      <p>So put that in, and we get:</p>
+      <div class=eqn> \\[ \\frac{Gm}{R_H^2} - \\frac{GM}{a^2} \\left( 1 + 2\\frac{R_H}{a} \\right) +  \\frac{GM}{a^2} \\left( 1 - \\frac{R_H}{a} \\right) \\approx 0 \\] </div>
+      <p>All the G's cancel out. And so do some of the terms.</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ R_H \\approx \\left( \\frac{m_2}{3m_1} \\right)^\\frac13 \\]
+                  \\[ R_H \\approx a \\sqrt[3]{\\frac{m}{3M}} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
               Formula X
@@ -16446,6 +16461,7 @@ const subtopics = {
       <p>Overtime, this spinning up or down can eventually cause the planet and the satellite to rotate and orbit at the same rate. This is tidal locking, where the same face points towards the companion.</p>
       <p>Where dF is greater than the self gravity of an object (meaning the force from the tidal bulges is stronger than the force of gravity keeping the satellite together), it will be <em>tidally disructed</em>. In short, it'll be ripped to shreds. This takes place at the Roche limit (the minimum distance a satellite needs to be away from the planet for it to be stable). This is why saturn has rings btw, all the stuff is too close to the planet, and is therefore within the Roche limit, meaning it gets ripped up.</p>
       <p>If we have an eccentric orbits, then even with the whole tidal locking shabang, the tidal bulge cannot track the changing orbital speed perfectly. This causes orbital energy to be converted into heat in the tides (<em>tidal heating</em>), and the circularisation of the orbit at constant angular momentum (the eccentricity becomes lower, remember e=0 means a circular orbit). This can stablise mean motion resonances, by damping eccentricity which would otherwise keep growing</p>
+      <p>For example, Io's volcanism is mostly from tidal heating caused by the mean mode resonance with Europa and Ganymede. It's also the reason there is water underneath Europa.</p>
       <p>(Might get compare and contrast questions)</p>
       <p>For “compare and contrast” questions, you could be asked to compare:</p>
       <ul>
@@ -16475,17 +16491,18 @@ const subtopics = {
       <p>The global magnetic field is nearly a dipole (meaning it can in most places, it has a clear north pole at the top and a clear south pole at the bottom). But thanks to differential rotation (i.e. the equator rotates faster than the poles), some of the field lines get a bit tangled, with magnetic flux loops emerging at spots and active regions</p>
       <p>The magnetic field is generated by a magnetic dynamo. You may remember dynamos from GCSE, in general they convert kinetic energy to magnetic energy. In this case, the sun has things like differential motion and convection due to the conducting plasma, causing the magnetic field to be stronger, (Bulk shearing flow in a conducting medium) which converts kinetic energy to magnetic energy.</p>
       <h4>Above the photosphere</h4>
-      <p>You know how like earth has the statosphere and the thermosphere and all that above its surface? Well the sun has a similar thing. It has the chromosphere, the transition region, and finally the <em>solar corona</em>, a very hot, low‑density plasma extending far from the Sun.</p>
-      <p>During an eclipse, you can see it due to the Thomson scattering of sunlight by free electrons. If you'd like, you can also see it by looking at the X-ray spectra, with optically thin lines.</p>
+      <p>You know how like earth has the statosphere and the thermosphere and all that above its surface? Well the sun has a similar thing. It has the chromosphere, the transition region, and finally the <em>solar corona</em>, a very hot, low‑density plasma extending far from the Sun. You can actually see this during an eclipse due to the Thomson scattering of sunlight by free electrons. If you'd like, you can also see it by looking at the X-ray spectra, with optically thin lines.</p>
+      <p>But there is one problem... why <em>is</em> it so hot? Like, it's hotter than the photosphere. Surely the further out you go, the cooler the thingies should get, right?</p>
+      <p>The main answer is that magnetic loops cause some of the heat from the surface of the sun to come up out of the photosphere, thanks to our good friend the Lorentz force. Since plasma conducts electricity, changing the magnetic field will cause them to move in a particular way.</p>
       <p>But what does this mean? Well for one, the solar corona is <em>structured</em>, due to magnetic field lines cascading out of active regions, and the <em>Lorentz force</em> keeping it in check. In X-rays, we see the extended emission from hot plasma, which suggests heating is related to magnetic fields. The X-rays can erode planetary atmospheres.</p>
       <h4>Helioseismology</h4>
       <p>Cool as that is, idk maybe it's just me, but the way those bubbles move kinda freaks me out. Makes my skin crawl, not a fan at all. I wonder, if perhaps the inside of the sun if less freaky. But I guess we'll never know, I mean after all, we can't look inside the sun, right?</p>
-      <p>WRONG!! Turns out, we <em>can</em> look at the inside of the sun (well, not look at, but you know what I mean) using a magic trick, known as <em>helioseismology</em>, which is the process of blasting dubstep into the sun and seeing (well, not seeing, but you know what I mean) how the sound waves, particularly <em>p-waves</em>, reflect.</p>
-      <p>In slightly more professional terms, the sun has a natural oscillation, known as a <em>p-mode</em>. This give us the temperature profile, rotation and composition of the sun, from which we can determine the pressure and density.</p>
+      <p>WRONG!! Turns out, we <em>can</em> look at the inside of the sun (well, not look at, but you know what I mean) using a magic trick, known as <em>helioseismology</em>, which is the process of the sun blasting dubstep, and us seeing (well, not seeing, but you know what I mean) how the sound waves, particularly <em>p-waves</em>, reflect.</p>
+      <p>In slightly more professional terms, the sun has a natural oscillation, known as a <em>p-mode</em>. If we look at the tiny Doppler shifts and brightess variations this causes, then we can measure the frequencies of the p-modes. From that, we can infer the temperature profile, rotation and composition of the sun, from which we can determine the pressure and density.</p>
       <p>We know that, slowly but surely, the sun's luminosity and temperature increase on the main sequence. This leads to something called the young sun paradox, but don't worry 'bout that for now.</p>
       <h3>Solar wind</h3>
       <p>Now we know that magnetic field lines must always be closed at some point, therefore you can never have a truly 'open' magnetic field. However, some field lines are so wide that they are near enough open, which causes the sun to vomit streams of plasma. This is known as <em>solar wind</em>, and is the reason comets have ion tails. This can also erode planetary atmospheres.</p>
-      <p>At earth, \\( v = 500 \\text{ km s}^-1 \\)</p>
+      <p>At earth's orbit, solar winds have a windspeed of about \\( v = 500 \\text{ km s}^-1 \\)</p>
       <p>This wind shapes the heliosphere, which is a bubble of plasma in the local interstellar medium</p>
       <h4>Temperature of solar wind</h4>
       <p>I'm sure everyone is wanting to know this. How <em>warm</em> is solar wind? Well we can take an educated guess, by equating kinetic energy with</p>
@@ -16498,15 +16515,26 @@ const subtopics = {
       <p>Besides, if anyone should be able to deal with a <em>corona virus</em>, it would be the sun, right?</p>
       <p>To get the mass loss rate of the sun, consider a thin shell around the sun with radius r and thickness dr. The volume of a tiny strip is the surface area times the width, giving \\( 4πr^2 \\ dr \\). The density can be thought of as the number of hydrogen atoms per unit volume, times the mass of a hydrogen atom, giving \\( n_H m_H \\)</p>
       <div class=eqn> \\[ dm = \\rho \\ dV = n_H m_H (4πr^2 \\ dr) \\] </div>
-      <p>Then since dr = vdt</p>
-      <div class=eqn> \\[ \\frac{dm}{dt} = \\rho \\ dV = n_H m_H 4πr^2 v = 3 \\times 10^{-14} \\ M_\\odot \\text{yr}^{-1} \\] </div>
+      <p>Now if you want the <em>rate of change</em> of mass, just divide the whole thing by <em>dt</em>. That leaves you with this:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[  \\frac{dm}{dt} = \\rho \\ dV = n_H m_H 4πr^2 v = 3 \\times 10^{-14} \\ M_\\odot \\text{yr}^{-1} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
       <p>This is practically nothing in terms of the mass of the sun, but contributes a lot to the angular momentum loss, because the solar wind is forced to co-rotate with the sun by the magnetic field</p>
       <h4>Angular Momentum Loss</h4>
       <p>The plasma being vomitted out is still within the sun's magnetic field, meaning it will also rotate alongside the sun, even at very large radii (known as the <em>Alfvén radius</em>). Why is this a problem? Well calculate the angular momentum</p>
       <div class=eqn> \\[ J = mvr = m \\frac{2πr}{P_\\text{spin}} r \\] </div>
       <p>(Oh yeah, angular momentum has rebranded as \\(J\\) for astronomy, to avoid confusion with luminosity). That means:</p>
       <div class=eqn> \\[ \\frac{J}m \\propto r^2 \\] </div>
-      <p>Since the arm is so far out (has a large radius), then a very small change in mass can result in a very large change in angular momentum. This is called magnetic breaking, which explains why the sun rotates so slowly.</p>
+      <p>Since the arm is so far out (has a large radius), then a very small change in mass can result in a very large change in angular momentum. This is called <em>magnetic breaking</em>, which explains why the sun rotates so slowly.</p>
     `
   },
 
@@ -16515,55 +16543,57 @@ const subtopics = {
     content: `
       <p>If we wanna look at a planets atmosphere, a good place to look is how much light is reflected</p>
       <div class=eqn> \\[ L_\\text{reflected} = \\frac{L_\\odot}{4πa^2} \\ A_G \\ πR_P^2 \\] </div>
-      <p>where \\( A_G \\) is the geometric albedo, which just says what amount of light is reflected off the planet. For the earth, it's about 0.3.</p>
-      <p>We must also consider the thermal component, which we get by equating heating and cooling (assuming no internal source of heat, spoiler, this isn't true in general)</p>
+      <p>where \\( A_G \\) is the <em>geometric albedo</em>, which just says what amount of light is reflected off the planet. For the earth, it's about 0.3.</p>
+      <p>We must also consider the thermal component, which we get by equating heating and cooling (assuming no internal source of heat, spoiler, this isn't true in general). This is just the same thing except you do one take away the albedo, to get the amount absorbed rather than reflected</p>
       <div class=eqn> \\[ L_\\text{in} = \\frac{L_\\odot}{4πa^2} (1-A_B) πR_P^2 \\] </div>
-      <p>where \\( A_B \\) is the bond albedo. The difference is the geometric one is angle dependent, but the bond albedo is just averaged over everything.</p>
+      <p>where \\( A_B \\) is the bond albedo. The difference is the geometric one is angle dependent, but the bond albedo is just averaged over everything. To get the radiation out, we can assume uniform black body emission across the whole surface:</p>
       <div class=eqn> \\[ L_\\text{out} = 4πR_P^2 \\sigma T_P^4 \\] </div>
       <p>Assuming the planet emits evenly, which isn't necessarily true, since there will be a day side and a night side. Therefore we are assuming either quick rotation or atmospheric thermal lag. Anyway, that gives us:</p>
       <div class=eqn> \\[ T_P = (1 - A_B)^\\frac14 \\left( \\frac{R_\\odot}{2a} \\right)^\\frac12 T_\\odot \\] </div>
-      <p>Notice that it doesn't depend on size btw</p>
-      <p>The surface temperature on the earth in particular may be higher than calculated, due to the greenhouse effect.</p>
-      <p>Remember Wein's displacement law</p>
-      <div class=eqn> \\[ \\lambda_\\text{peak}T = 2.898 \\times 10^{-3} \\] </div>
+      <p>Notice that the radiative temperature of a planet doesn't depend on size btw.</p>
+      <p>The surface temperature on the earth and especially Venus will likely be way higher than calculated, due to the greenhouse effect.</p>
+      <h3>About the Terrestrial Planets</h3>
+      <p>Now that we have a way to calculate the theoretical surface temperature of the terrestrial planets, we can begin to look into the characteristics of the terrestrial planets</p>
       <h4>Mercury</h4>
-      <p>Looks a bit like the moon. Heavy cratering, suggesting an old surface (about 4.5Gyr). It has high density and a weak magnetic field, and an iron core.</p>
+      <p>Mercury looks quite a lot like our good friend the moon. And like the moon, it has quite heavy cratering, suggesting an old surface (about 4.5Gyr). It's overall density is pretty high, implying it has an iron core and a very thin silicate mantle. It may have lost much of its mantle in a giant collision, which may explain its relatively large core. It does have a magnetic field, albeit a pretty weak one. Alongside tidal heating, this suggests there is some dynamo action in its core.</p>
+      <p>It has a low albedo (it isn't very shiny), and very bad heat redistribution. Solar tides cause it to have a slow rotation, as well as a 3:2 <em>spin-orbit resonance</em> (it rotates 540º every rotation around the sun). There is low spin obliquity (tilt of spin axis), meaning ice in the poles. It has no moons</p>
+      <p>It's equilibrium temperauture is about:</p>
       <div class=eqn> \\[ T_P = 436 K \\] </div>
-      <p>It has a low albedo, and very bad heat redistribution. It has slow rotation due to solar tides, and low spin obliquity (tilt of spin axis), meaning ice in the poles. It has no moons</p>
-      <p>Its high density suggests oversized iron core. Together with tidal heating, may explain the weak magnetic field -&gt; active dynamo. It may have lost much of its mantle in a giant collision, which may explain its relatively large core</p>
       <h4>Venus</h4>
-      <p>Very plain white surface, reflective clouds of sulfuric acid, high albedo of about 0.8</p>
+      <p>Venus looks pretty uninteresting if you were just to look at it. It has a very plain white surface, due to reflective clouds of sulfuric acid and a high albedo of about 0.8 (shiny!!!). Like Mercury, it rotates pretty bloody slowly, but still manages to have solid heat redistribution thanks to that thick atmosphere I mentioned earlier.</p>
+      <p>Its surface is covered by volcanic craters and the odd impact crater, suggesting a younger surface (1 Gyr). Their impact craters are also really big, 'cus smaller ones get eaten up by the thicc atmosphere. We haven't been able to do any seismology of Venus so far, but we do know from radar imaging its volcanically active despite lacking plate tectonics and a magnetic field (Nobody really understands Venus particularly well, but there may be a lack of convection due to inefficient cooling through its stagnant lid).</p>
+      <p>Oh and by the way, you might be wondering how the heck we are able to determine the age of a planet, simply by looking at how cratered the surface is. In short, the assumption is just the longer the planet has been there, the more meteors which would have hit it. If there aren't many craters then that means either not enough time has passed, or that there is still active volcanism replenishing the surface.</p>
       <div class=eqn> \\[ T_P = 230 K \\] </div>
       <p>Which is lower than that of earth interestingly. It has a thick atmosphere of carbon dioxide, which creates a large greenhouse effect, resulting in a surface temperature of about 735K.</p>
-      <p>Slow rotation, good heat redistribution by thick atmosphere. Its surface is covered by volcanic craters and a few impact craters, suggesting a younger surface (1 Gyr)</p>
-      <p>No seismology of Venus so far, which is volcanically active, but lacks plate tectonics and a magnetic field (not well understood, but may be a lack of convection, due to inefficient cooling through its stagnant lid)</p>
       <h4>Earth</h4>
-      <p>Thinner nitrogen atmosphere, moderate greenhouse, albedo of about 0.3</p>
+      <p>Hey, this planet seems cool</p>
+      <p>Earth has a thinner nitrogen atmosphere, and an albedo of about 0.3 (so not particularly shiny). It has a strong magnetic field, and a very young surface (like 100Myrs or something, which is like a newborn by planet standards) due to resurfacing by water erosion. It's also the only planet with plate tectonics, fractured lithosphere moves, on convecting asthenosphere</p>
       <div class=eqn> \\[ T_P = 255 K \\] </div>
       <div class=eqn> \\[ T_S = 288 K \\] </div>
-      <p>Strong magnetic field, and a very young surface due to water erosion. The only planet with plate tectonics, fractured lithosphere moves, on convecting asthenosphere</p>
       <h4>Mars</h4>
-      <p>Low mass and density compared to earth, strong orange colour from iron-oxide. Very thin atmosphere</p>
+      <p>Mars has pretty low mass and density compared to earth. It's atmosphere is very thin and made of carbon dioxide, meaning its greenhouse effect and heat retention are both kinda crap.</p>
+      <p>Its strong orange colour is from iron-oxide. Its surface shows impact craters and and volcanic craters (2Gyrs). Evidence of water in the past, 2 small moons, likely captured astroids. Recent detections of Marsquakes tells us mars also has a thick lithosphere, molten core and no global magnetic field, however there is evidence of dynamo activity in the past.</p>
+      <p>Mars is also an ancient surface, with frequent impact craters, but also geological activity in volcanoes and rift valleys, causing resurfacing until 2Gyrs ago. Volcanoes on mars are the largest because plates don't move across mantle plumes (also seen on venus, but the lithosphere is too thin to support large volcanoes, which sag to form pancake domes and coronae). Mars also shows evidence of ancient water erosion, like river beds, shorelines, river deltas, superimposed with more recent impact craters</p>
       <div class=eqn> \\[ T_P = 189 K \\] </div>
       <div class=eqn> \\[ T_S = -143-35ºC \\] </div>
-      <p>Very weak greenhouse effect, and poor heat redistribution. Surface shows impact craters and and volcanic craters (2Gyrs). Evidence of water in the past, 2 small moons, likely captured astroids.</p>
-      <p>Recent detections of Marsquakes tells us mars also has a thick lithosphere, molten core and no global magnetic field, however there is evidence of dynamo activity in the past</p>
+      <p>The large range in temperatures is because of seasons and stuff</p>
       <h3>Interior structure</h3>
-      <p>The earth is <em>differentiated</em> into layers</p>
+      <p>The earth (and most terrestial planets) is <em>differentiated</em> into layers</p>
       <ul>
       <li>Iron core</li>
       <li>Silicate mantle</li>
       <li>Crust of lighter materials</li>
       </ul>
-      <p>We look at the interiers of planets via seismology. S-waves can't go through liquids, P-waves are reflected. There are shadow zones, which are points where none of the waves hit.</p>
+      <p>We look at the interiers of planets via seismology. S-waves can't go through liquids, P-waves are reflected. There are shadow zones, which are points where none of the waves hit. These shadow zones are how we can figure out the structure of the earth.</p>
       <p>The bulk Earth is dominated by Iron, oxygen, silicon, magnesium in <em>refractory compounds</em> (solids at high temperatures), and it is very deficient in common, volatile elements, like carbon hydrogen and nitrogen. This means earth must have formed in a warm environment, where water methane carbon dioxide and ammonia didnt form solids.</p>
-      <p>Earth's interior remains hot due to radioactivity. It has a strong magnetic field generated by a magnetic dynamo. New crust at mid-atlantic ridges, reveals the history of the magnetic field showing polarity reversals every 0.5Myrs, which is strong evidence for a dynamo</p>
+      <p>Their interiors remains hot due to radioactivity. Earth has a strong magnetic field generated by a magnetic dynamo. New crust at mid-atlantic ridges, reveals the history of the magnetic field showing polarity reversals every 0.5Myrs, which is strong evidence for a dynamo</p>
       <p>Volcanic island chains (e.g canary islands, hawaii) where ocean plate moves across <em>mantle plooms</em> (upwelling convection cells).</p>
       <p>You'd expect other terrestrial planets to also be differentiated and heated by radioactivity, and that smaller bodies will cool more efficiently due to proportionally bigger surface area</p>
       <p>Lunar seismology shows a thicker lithosphere and a small molten core, evidence that the moon cooled more quickly than earth. There's no global magnetic field, so the dynamo is not active. But the magnetic field is froxen into old samples</p>
       <h3>Surface</h3>
       <p>Moon has a heavily cratered surface. It has less cratered Mare which are giant impact basins, that are later filled with lava from volcanic activity that continued until 2-3 Gyr ago. Impacts also trace the thickness of the lunar lithosphere with time. Lava flowed along <em>rilles</em>, which remain visible.</p>
       <p>The lunar surface is covered with fine powdery soil called <em>regolith</em>, from many small impacts.</p>
+      <h4>Radiometric Dating</h4>
       <p>The ages are measured with <em>radioisotope dating</em> of rock samples. Recall:</p>
       <div class=eqn> \\[ A(t) = A_0e^{-\\lambda t}, \\ \\lambda = \\frac{\\ln{2}}{\\tau_{-\\frac12}} \\] </div>
       <p>It decays to some daughter product B</p>
@@ -16572,11 +16602,69 @@ const subtopics = {
       <p>In special cases, assume \\( B_0 = 0 \\), like lead in zircon crystals. Otherwise, you can calibrate it using a different isotope of the daughter product B', for which abundance is constant with time</p>
       <div class=eqn> \\[ \\frac{B(t)}{B'(t)} = (e^{-\\lambda t})\\frac{A(t)}{B'(t)} + \\frac{B_0}{B'(t)} \\] </div>
       <p>We still dunno B_0 or B', but we can assume the ratio is constant for different crystals within a rock sample, since B and B' have similar chemical properties</p>
-      <p>The terrestrial planets show a wide range of cratering and volcanism, with ages calibrated with respect to the moon.</p>
-      <p>Mercury is heavily cratered: Ancient surface</p>
-      <p>Venus radar mapping shows only large impact craters (&gt;3km), as smaller bodies burn up in the thick atmosphere. Impact craters are rare, suggesting a younger surface that was completely resurfaced about 1 Gyr ago (by catastrophic volcanism). There are hundreds of volcanic craters, but no sign of tectonic plates (chains of volcanoes at subduction zones)</p>
-      <p>Earth has very few impact craters, meaning a very young surface of about 100Myrs due to resurfacing by water erosion and plate tectonics</p>
-      <p>Mars is also an ancient surface, with frequent impact craters, but also geological activity in volcanoes and rift valleys, causing resurfacing until 2Gyrs ago. Volcanoes on mars are the largest because plates don't move across mantle plumes (also seen on venus, but the lithosphere is too thin to support large volcanoes, which sag to form pancake domes and coronae). Mars also shows evidence of ancient water erosion, like river beds, shorelines, river deltas, superimposed with more recent impact craters</p>
+      <h3>Comparative Summary</h3>
+      <table>
+      <thead>
+      <tr>
+      <th>Property</th>
+      <th>Mercury</th>
+      <th>Venus</th>
+      <th>Earth</th>
+      <th>Mars</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Atmosphere</td>
+      <td>Almost none</td>
+      <td>Very thick \\(CO_2​, H_2​SO_4 \\)​</td>
+      <td>\\(N_2​, O_2 \\)​, moderate</td>
+      <td>Thin \\( CO_2​ \\), weak</td>
+      </tr>
+      <tr>
+      <td>Albedo (Bond)</td>
+      <td>Low</td>
+      <td>High (\\( \\sim 0.8 \\))</td>
+      <td>Moderate (\\( \\sim 0.3\\))</td>
+      <td>Low</td>
+      </tr>
+      <tr>
+      <td>Equilibrium \\( T_p \\)</td>
+      <td>\\( \\sim 436 \\text{K} \\)</td>
+      <td>\\( \\sim 230 \\text{K} \\)</td>
+      <td>\\( \\sim 255 \\text{K} \\)</td>
+      <td>\\( \\sim 189 \\text{K} \\)</td>
+      </tr>
+      <tr>
+      <td>Surface \\( T_s \\)​</td>
+      <td>Huge day–night contrast</td>
+      <td>\\( \\sim 735 \\text{K} \\)</td>
+      <td>\\( \\sim 288 \\text{K} \\)</td>
+      <td>\\( −143 \\) to \\( +35^\\circ\\text{C} \\)</td>
+      </tr>
+      <tr>
+      <td>Magnetic field</td>
+      <td>Weak global field</td>
+      <td>None detected</td>
+      <td>Strong dipole dynamo</td>
+      <td>No global dynamo now; remanent</td>
+      </tr>
+      <tr>
+      <td>Tectonics</td>
+      <td>None</td>
+      <td>Stagnant lid, volcanism</td>
+      <td>Active plate tectonics</td>
+      <td>No plates; hotspot volcanism</td>
+      </tr>
+      <tr>
+      <td>Surface age</td>
+      <td>Ancient</td>
+      <td>\\( \\sim 1 Gyr \\) resurfaced</td>
+      <td>Very young on average</td>
+      <td>Mixed; volcanism until \\( \\sim 2 Gyr \\)</td>
+      </tr>
+      </tbody>
+      </table>
     `
   },
 
@@ -16584,15 +16672,15 @@ const subtopics = {
     title: "The Terrestrial Planets (cont.)",
     content: `
       <h3>Atmospheres</h3>
-      <h4>Earth</h4>
-      <p>1bar, mainly nitrogen (80%) and oxygen (20%). Temperature drops with amplitude, following an approximate adiabatic temperature profile (no heat exchange as gas rises or sinks) but with temperature inversions in the stratosphere (due to uv heating of the ozone layer) and the thermosphere (from X-ray heating)</p>
       <h4>Mercury</h4>
-      <p>Mercury and the moon have surface gravity too low to retain a significant atmosphere</p>
+      <p>Mercury and the moon have surface gravity too low to retain a significant atmosphere, so we'll just shove 'em off to the side...</p>
+      <h4>Venus</h4>
+      <p>Remember from last time how venus has a really sexy atmosphere? It's bloody 93 bar! It's made mainly of carbon dioxide (96%) and a wee bit o' nitrogen (4%).</p>
+      <h4>Earth</h4>
+      <p>The bar is literally a measure of the pressure of Earth's atmosphere, so of course it's bloody 1bar, mainly nitrogen (80%) and oxygen (20%). Temperature drops with amplitude, following an approximate adiabatic temperature profile (no heat exchange as gas rises or sinks) but with temperature inversions in the stratosphere (due to uv heating of the ozone layer) and the thermosphere (from X-ray heating)</p>
       <h4>Mars</h4>
       <p>0.006 bar atmosphere, mainly carbon dioxide (95%) and nitrogen (3%). Large range of surface temperatures due to poor heat redistribution and weak greenhouse (seasons, day/night, )</p>
-      <h4>Venus</h4>
-      <p>93 bar, mainly carbon dioxide (96%) and nitrogen (4%).</p>
-      <h4>Greenhouse effect</h4>
+      <h3>Greenhouse effect</h3>
       <p>The atmosphere is transparent to the incoming heating of the sun, but more opaque to the outgoing infrared, due to molecular absorption.</p>
       <p>With one opaque layer</p>
       <div class=eqn> \\[ T_S^4 = 2T_P^4 \\] </div>
@@ -16602,43 +16690,46 @@ const subtopics = {
       <div class=eqn> \\[ T_S^4 = (1+\\frac34 \\tau)T_P^4 \\] </div>
       <p>SO \\( \\tau = 1.33 \\) is one optic layer. For earth, \\( \\tau_{IR} \\approx 0.8 \\).</p>
       <p>(In practice we need to consider the wavelength dependance)</p>
-      <p>Why do venus and earth has such different atmospheres? On earth, Co2 dissolves in water, produces acid rain, leading to the erosion of silicate rocks on land, which leads to calcium carbonate (limestone) being deposited as ocean sediments, which is 99.6% of earths carbon. This is a negative feedback loop in carbon-silicate cycle</p>
+      <h3>Why do Venus and Earth has such different atmospheres?</h3>
+      <p>On earth, \\( CO_2 \\) dissolves in water, produces acid rain, leading to the erosion of silicate rocks on land, which leads to calcium carbonate (limestone) being deposited as ocean sediments, which is 99.6% of earths carbon. This is a negative feedback loop in carbon-silicate cycle</p>
       <p>CO2 goes up - T_S goes up - More ocean evapouration and rain - more erosion and deposition - CO2 goes down. CO2 is also returned to the atmosphere by volcanoes when the oscean plates are subducted.</p>
-      <p>There is also positive feedback, where an increase in co2 increases temp and water vapour in the atmosphere, which increases the temperature again. On earth, negative feedback wins. On venus, it looks like positive feedback won.</p>
-      <p>In fact, early venus may have been like the earth, but the extra heating may have lead to a runaway greenhouse effect, turning all water into vapour, meaning negative feedback shuts off, temperature shoots up (T_s about 1000K), causing a magma ocean. CO2 from volcanoes accumulates in the atmosphere.</p>
-      <p>Early earth probably had a thicker co2 atmosphere, helping it to avoid freezing when the sun was fainter (faint young sun paradox)</p>
-      <p>The total quantity of CO2 and nitrogen is quite similar for earth and venus, but venus is very deficient in water. Why?</p>
-      <p>Water is split by ultraviolet photolysis into hydrogen and oxygen, and the hydrogen evapourates into space. This is supported by the observed large excess of deuterium on venus, which is less vulnerable to evapouration than hydrogen</p>
+      <p>There is also positive feedback, where an increase in \\( CO_2 \\) increases temp and water vapour in the atmosphere, which increases the temperature again. On earth, negative feedback wins. On venus, it looks like positive feedback won.</p>
+      <p>In fact, early Venus may have been like the Earth, but the extra heating may have lead to a runaway greenhouse effect, turning all water into vapour, meaning negative feedback shuts off, temperature shoots up (\\(T_s\\) about 1000K), causing a magma ocean. \\( CO_2 \\) from volcanoes accumulates in the atmosphere.</p>
+      <h3>Water loss and atmospheric escape</h3>
+      <p>Early earth probably had a thicker \\( CO_2 \\) atmosphere, helping it to avoid freezing when the sun was fainter (faint young sun paradox). The total quantity of \\( CO_2 \\) and nitrogen is quite similar for Earth and Venus, but venus is very deficient in water. Why?</p>
+      <p>Water is split by ultraviolet photolysis into hydrogen and oxygen, and the hydrogen evapourates into space. This is supported by the observed large excess of Deuterium on Venus, which is less vulnerable to evapouration than regular old hydrogen.</p>
       <p>Atmospheric escape is when the upper end of the Maxwell-Boltzmann velocity distribution exceeds the escape velocity of the planet (called Jean's escape). Equipartition of energy in thermal equilibrium means lighter elements have higher velocity and more vulnerable to escape.</p>
-      <p>But escape is more efficient from solar x-ray heating of upper atmosphere</p>
-      <p>The escape rate is energy limited</p>
+      <p>But escape is more efficient from solar x-ray heating of upper atmosphere. The escape rate is energy limited:</p>
       <div class=eqn> \\[ L_\\text{in, X} = \\frac{L_X πR_P^2}{4πa^2} \\geq \\frac{GM_p \\dot{m}}{R} \\] </div>
       <p>(limit because some energy could be lost, eg reradiated)</p>
       <div class=eqn> \\[ \\dot{m} \\leq \\frac{L_X R_P^3}{4GM_pa^2} \\] </div>
-      <p>For young venus, \\( \\dot{m} \\leq 5.7 \\times 10^6 \\text{ kg s}^{-1} \\). All water can be removed from venus in 10^6 years. Water on earth is protected from UV photolysis by the ozone layer and trapped lower in atmosphere as it condenses into clouds.</p>
+      <p>For young venus, \\( \\dot{m} \\leq 5.7 \\times 10^6 \\text{ kg s}^{-1} \\). All water can be removed from venus in \\( \\lesssim 10^8 \\) years. Water on earth is protected from UV photolysis by the ozone layer and trapped lower in atmosphere as it condenses into clouds.</p>
       <p>Escape is driven also by solar winds for planets without a global magnetic field</p>
       <div class=eqn> \\[ \\dot{m} = n_H m_H (4πr^2 \\ v_\\text{wind}) \\] </div>
       <p>So kinetic energy flux at 1AU:</p>
       <div class=eqn> \\[ \\dot{m} = \\frac12 n_H m_H v_\\text{wind} v_\\text{wind}^2 = 7\\times 10^{-4} \\] </div>
       <h3>Orbits</h3>
-      <p>Generally, low eccentricity and inclination, the exception is mercury with e~0.2, due to secular resonances from perturbations from other planets</p>
-      <p>Advance of perturbation of mercury was the first test of general relativity</p>
-      <p>Earth and mars rotate quickly, Mercury and Venus rotate very slowly, due to tidal interactions with the sun, tides with the moon also slowing earths spin, which is seen in sea shell fossil record</p>
+      <p>Terrestrial planets generally have low eccentricity and inclinations. The only kinda-exception is Mercury with an eccentricity of \\( e \\sim 0.2 \\), due to secular resonances from perturbations from other planets.</p>
+      <p>Earth and Mars rotate quickly, Mercury and Venus rotate very slowly (due to tidal interactions with the sun). Tides with the moon also slowing earths spin, which is seen in sea shell fossil record.</p>
       <p>The true rotation period is what we call the siderial day, while the solar day is slightly longer by about 4mins, due to orbital motion. It's much longer for slowly rotating planets. Venus has very slow, retrograde (wrong way) rotation, possibly due to retrograde circulation of thick atmosphere, due to solar heating</p>
-      <p>Mercury's rotation is kinda stuck with 3:2 resonance with its eccentric orbit (spins 1.5 times per orbit), small permanent deformation aligned with the sun at perihelion (when tidal torques are strongest, 1/a^6 remember?)</p>
+      <p>Mercury's rotation is kinda stuck with 3:2 resonance with its eccentric orbit (spins 1.5 times per orbit), small permanent deformation aligned with the sun at perihelion (when tidal torques are strongest, \\( 1/a^6 \\) remember?)</p>
       <h4>Spin obliquities</h4>
       <p>Mercury and venus have very small obliquities due to tidal synchronisation. Earth and Mars have about 23º, which causes seasons. THe spin axis processes due to the torque of the sun acting on the equitorial bulge.</p>
       <p>The obliquity of Mars varies due to small torques from other planets, causing large climate variations. THe obliquity of Earth is stablised by the tidal torques from the moon. Nevertheless, small variations in obliquity (e and i) lead to Milankovsch cycles in Earth's climate.</p>
       <h4>Moons</h4>
-      <p>Mercury and venus have no moons</p>
+      <p>Mercury and venus have no moons, probably because their Hill sphere's are tiny (since they are so close to the sun) and they rotate so slowly that any potential candidate would just get spun down into the planet. So we'll just ignore them once again.</p>
       <p>Earth has a single large moon, believe to be formed by a giant collision</p>
-      <p>Mars has 2 small captured asteroids. Phobos orbits faster than mars rotates (0.3 days compared to 1 day), so tidal synchronisation is spinning up mars, causing the orbit of Phobos to decay. Phobos will eventually break apart when it fills its roche lobe</p>
+      <p>Mars has 2 small captured asteroids. Phobos orbits faster than mars rotates (0.3 days compared to 1 day), so tidal synchronisation is spinning up mars, causing the orbit of Phobos to decay. Phobos will eventually break apart when it fills its Roche lobe</p>
       <h4>Roche Limit</h4>
-      <p>A limit to orbital separation, where the self gravity of an object is smaller then the differential gravity from the planet. Remember</p>
+      <p>The Roche limit is a limit to orbital separation, where the self gravity of an object is smaller then the differential gravity from the planet, causing the planet to rip it to shreds. Remember</p>
       <div class=eqn> \\[ dF = -\\frac{2GMm}{r^3} \\ dr \\] </div>
+      <p>This differential gravity has to be greater than the self gravity</p>
       <div class=eqn> \\[ \\frac{GM_mm}{R^2_m} \\leq \\frac{2GM_pm}{a^3} \\] </div>
+      <p>Be rearranging we get</p>
       <div class=eqn> \\[ a^3_r = 2\\frac{M_p}{M_m} R_m^3 \\] </div>
-      <div class=eqn> \\[ \\frac{M_p}{M_m} =  \\frac{\\frac43 π R_p^3 \\rho_p}{\\frac43 π R_m^3 \\rho_m} \\] </div>
+      <p>Then, by using these densities instead of masses:</p>
+      <div class=eqn> \\[ \\frac{M_p}{M_m} =  \\frac{\\style{opacity: 30%}{\\cancel{\\frac43 π}} R_p^3 \\rho_p}{\\style{opacity: 30%}{\\cancel{\\frac43 π}} R_m^3 \\rho_m} \\] </div>
+      <p>That gives us:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -16651,8 +16742,8 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>This is for a rigid body that maintains its physical shape, which is unrealistic. For a fluid, the 2^1/3 becomes 2.456</p>
-      <p>Mercury and venus have relatively small hill spheres since they are so close to the sun, so moons can't have wide orbits. Also, since they rotate so slowly, any moons they have will likely rotate faster, causing them to spiral in like phobos. The moons will then be distrupted when they reach the Roche limit</p>
+      <p>This is for a rigid body that maintains its physical shape, which is unrealistic. For a fluid, the \\( 2^\\frac13 \\) becomes \\( 2.456 \\)</p>
+      <p>Any moon which enters this radius will be turned into rings (like Saturn).</p>
     `
   },
 
@@ -16810,26 +16901,26 @@ const subtopics = {
     title: "Formation of the Solar System",
     content: `
       <h3>Nebula Hypothesis</h3>
-      <p>Gravitational collapse of gas in a molecular cloud and conservation of angular momentum formed a protoplanetary disks around the young sun. Explains planets orbiting in the ecliptic plane and aligned with the spin of the sun.</p>
-      <p>We can estimate the minimum mass solar nebula by spreading out the planets and topping up the solar composition</p>
-      <div class=eqn> \\[ \\sigma(r) \\propto r^{-\\frac32} \\] </div>
-      <p>Assuming gravitational potential energy is radiated locally in the disk:</p>
+      <p>The nebula hypothesis states that everything formed from the gravitational collapse of gas in a molecular cloud. Conservation of angular momentum then turned the collapsing cloud into a protoplanetary disks around the young sun. This explains why planets all orbit in the ecliptic plane and aligned with the spin of the sun.</p>
+      <p>We can estimate the minimum mass solar nebula by spreading out the planets' material into rings (like jam), and increasing their mass by the amount they probably lost due to the sun eating it. A common thing to use is:</p>
+      <div class=eqn> \\[ \\Sigma(r) \\propto r^{-\\frac32} \\] </div>
+      <p>...which is just saying that the density of the disc gets lower the further away from the sun you get. Assuming gravitational potential energy is radiated locally in the disc, the temperature scales like this:</p>
       <div class=eqn> \\[ T_\\text{disk} \\propto r^{-\\frac34} \\] </div>
-      <p>This results in an increase in solid material beyond the snowline, which is the boundary between the terrestrial and the giant planets.</p>
+      <p>This results in an increase in solid material beyond a certain point called <em>the snowline</em>, which is the boundary between the terrestrial and the giant planets.</p>
       <p>Protoplanetary disks are observed around young stars, with lifetimes of about 10 million years</p>
       <h3>Planet formation by core-accretion</h3>
       <ol>
       <li>Formation of the young sun and the protoplanetary disk by gravitational collapse</li>
-      <li>Condensation of sub-µm dust particles</li>
+      <li>Sub-micron dust particles condense</li>
       <li>Growth of particles by pair-wise collisions, up to about 10km sized objects (<em>planetesimals</em>)</li>
       </ol>
       <p>This third step is initially assisted by electrostatic forces, and icy particles stick together very readily (so they grow more rapidly beyond the snowline). But there are 2 main problems. One, as they get larger, they become fragile and can be eroded by higher velocity collisions. Two, <em>gas drag</em> on particles in the disk causes larger particles to spiral into the sun.</p>
-      <p>Consider the orbit within a gas disk</p>
+      <h4>Gas Drag</h4>
+      <p>Consider the orbit within a gas disc. It's partially supported by its negative pressure gradient (getting smaller as you go outwards)</p>
       <div class=eqn> \\[ \\underbrace{\\frac{v^2}{r} = \\frac{GM_\\odot m}{r^2}}_{\\text{Keplarian Orbit}} \\qquad + \\overbrace{\\frac{dP}{dr} \\frac1{\\rho}}^{\\text{Addition support against \\\\ gravity, experienced by \\\\ the gas acting as a fluid}} \\] </div>
-      <p>(assuming a negative pressure gradient outwards in the disk)</p>
+      <p>The pressure term reduces the speed that the particles actually need to go by a teeny tiny amount. At 1 Astronomical Unit:</p>
       <div class=eqn> \\[ v_\\text{gas} \\approx 0.995 v_\\text{Kep} \\] </div>
-      <p>Solid objects feel a headwind of about 100 ms^-1 at 1AU, leading to significant drag on solids in the disk. However, the vertical component will cause the settling of particles into the disc mid plane, which is good for collision and growth, although there will be a gradual in-spiraling towards the proto-star (removing particles from the disc)</p>
-      <p>Drag force</p>
+      <p>Solid objects however don't want to go slow. They wanna go at the normal \\( v_\\text{Kep} \\) speed. Because of this, that \\( v_\\text{Kep} - v_\\text{gas} \\) difference is velocity feels like a kind of wind (called <em>headwind</em>) pushing them back at about \\( 100 \\text{ ms}^{-1} \\) at 1AU, leading to significant drag force on solids in the disk:</p>
       <div class=eqn> \\[ F_D = \\frac12 C_D πR_P^2 \\rho_{\\text{gas}} (v_\\text{Kep} - v_\\text{gas})^2 \\] </div>
       <p>Characteristic timescale to modify the orbit:</p>
       <div class=eqn> \\[ \\tau_D \\sim \\frac{m_p v_\\text{Kep}}{F_D} \\] </div>
@@ -16841,15 +16932,17 @@ const subtopics = {
       <p>For a planet, \\( \\tau_D \\sim 10^8 \\text{ yr} \\)<br>
       For dust, \\( \\tau_D \\sim \\text{seconds} \\)<br>
       For a 1m object, \\( \\tau_D \\sim 10^3 \\text{ yr} \\). This is a significant problem.</p>
+      <p>However, the vertical component will cause the settling of particles into the disc mid plane, which is good for collision and growth, although there will be a gradual in-spiraling towards the proto-star (removing particles from the disc)</p>
       <p>Possible solutions:</p>
       <ul>
       <li>Particles always drift against the pressure gradient, and can be trapped at pressure maxima in the gas disc, promoting collisions and rapid growth.</li>
       <li>Streaming instability where particles shield each other from the headwind, causes clumping and also promoting collisions and growth. Also promotes low velocity collisions and minimal erosion of particles</li>
       </ul>
       <ol start="4">
-      <li>Further growth from planetesimals to protoplanets, about a tenth of the mass of the earth, assisted by mutual gravity. This stops at the isolation mass, when the Hill sphere of the protoplanet has hoovered up an annulus of the disk of solid particles.</li>
+      <li>Further growth from planetesimals to protoplanets thanks to developing self-gravity, about a tenth of the mass of the earth, assisted by mutual gravity. This stops at the isolation mass, when the Hill sphere of the protoplanet has hoovered up a ring of the disk of solid particles.</li>
       <li>More massive cores beyond the snowline, where ices can form (remember \\( \\sigma(r) \\propto r^{-\\frac32} \\)).</li>
       </ol>
+      <p>Consider the change in mass. The volume is \\( 2πr \\ dr \\), so</p>
       <div class=eqn> \\[ dm \\propto r^{-\\frac32} 2πr \\ dr \\propto r^{-\\frac12} \\ dr \\] </div>
       <p>The spacing of the planets increases roughly proportional with distance from the sun.</p>
       <div class=eqn> \\[ M_\\text{core} \\propto r^{\\frac12} \\] </div>
@@ -16857,24 +16950,23 @@ const subtopics = {
       <div class=eqn> \\[ M_\\text{core}(5AU) \\approx M_\\text{core}(1AU) \\times 5^\\frac12 \\times 4 \\approx 9M_E \\] </div>
       <p>Massive cores form rapidly beyond snowline as they are capable of accreting mass</p>
       <ol start="6">
-      <li>Massive cores accrete gas from disc, gas fills the hill sphere, heated as it falls into the gravitational potential of the planet, must radiate the energy to cool, contract and settle on the planet. This is initially slow because diffuse gas cools inefficiently (cooling \\( \\propto \\rho \\)). Gas accretion rate increases as the mass of the gas increases, meaning the gas is compressed and so cooles more efficiently</li>
+      <li>Massive cores accrete gas from disc, gas fills the Hill Sphere, heated as it falls into the gravitational potential of the planet, must radiate the energy to cool, contract and settle on the planet. This is initially slow because diffuse gas cools inefficiently (cooling \\( \\propto \\rho \\)). Gas accretion rate increases as the mass of the gas increases, meaning the gas is compressed and so cooles more efficiently</li>
       </ol>
-      <p>This eventually becomes a runaway process, that rapidly accretes all gas in the disc annulus, creating a gas giant.</p>
-      <p>The timescale is similar to the disc lifetime. If the disc is dispersed during the slow gas accretion phase, we get an ice giant instead.</p>
+      <p>This eventually becomes a runaway process, that rapidly accretes all gas in the disc annulus, creating a gas giant. The timescale of this is similar to the disc lifetime. If the disc is dispersed during the slow gas accretion phase, we get an ice giant instead.</p>
       <p>Gas accretion is halted by X-ray photo evapouration of the disk by the young sun.</p>
       <p>Remember, for a planet atmosphere, \\( \\frac32 k_BT \\approx \\frac12 m_p \\bar{v}^2 \\)</p>
       <p>consider escape velocity of the sun</p>
       <div class=eqn> \\[ v_\\text{escape} = \\sqrt{\\frac{2GM_\\odot}{r}} \\] </div>
+      <p>That will give a characteristic radius</p>
       <div class=eqn> \\[ r = \\frac{2GM_\\odot m_p}{3k_BT} \\approx 10 \\ AU \\] </div>
       <p>Beyond this radius, we see photoevaporation of the outer disk, shutting of supply of gas to inner disk</p>
       <ol start="7">
       <li>Terrestrial planets assembled by giant collisions between protoplanets after the disc has dispersed. Gravitational perturbations of orbits causes eccentricity to increase, causing crossing orbits and collisions. Previously, the orbits are circularised by gas drags within the disc</li>
       </ol>
-      <h3>Evidence</h3>
       <ul>
-      <li>Presence and composition of earth's moon (same as earth's mantle)</li>
+      <li>Presence and composition of earth's moon (same as earth's mantle, suggesting the moon infact came from Earth's mantle)</li>
       <li>High density of Mercury (missing mantle material, lost in a collision)</li>
-      <li>Spin obliquity of Uranus</li>
+      <li>Spin obliquity of Uranus (Likely due to a large impact)</li>
       </ul>
       <p>Radioisotope dating of moonrocks and meteorites tells us the solar system is 4.6Gyrs old, and the moon forms 4.5Gyrs old, evidence that the assembly of the terrestrial planets took about \\( 10^8 \\) years (life time of the gas disk is about 10^7 years old).</p>
       <p>collocity</p>
@@ -16919,26 +17011,31 @@ const subtopics = {
       <p>Life is very hard to define, and can be controversial. But the requirements are better understood, especially through the study of extemophiles, mostly bacteria.</p>
       <p>Some forms of life can survive</p>
       <ul>
-      <li>between -20 and 121ºC (like hydrothermal vents at mid ocean ridges)</li>
+      <li>Between \\( -20 \\) and \\( 121ºC \\) (like hydrothermal vents at mid ocean ridges)</li>
       <li>Ionising radiation 1000x the amount which would kill a human</li>
       <li>Chemical extremes, like 0.06-11 pH</li>
       <li>Pressure above 1100 bar</li>
       </ul>
       <h3>Fundamental Requirements</h3>
-      <ol>
+      <ol class="list-decimal list-inside">
       <li>An energy source, e.g. photosynthesis, chemosynthesis</li>
-      <li>Carbon source, valency allows complex organic chemistry. Uniquely to be the limiting factor, since carbon is a very common element</li>
+      <li>Carbon source, valency allows complex organic chemistry. Unlikely to be the limiting factor, since carbon is a very common element</li>
       <li>Liquid Water, required as a solvent of all life on earth. This is a limiting factor, since it's quite rare in liquid form</li>
       </ol>
-      <p>Carbon based life in water may not be the only possibility, but H O and C are the 1st 3rd and 6th most common elements in the universe. Liquid water needs moderate temperatures and pressure greater than 0.006 bar. There is probably also a higher temperature limit set by organic chemistry.</p>
-      <p>But hydrothermal vents are favourable for life because nutrients are abundant in the heated water</p>
-      <p>There is fossil evidence of life on earth about 3.8 Billion years ago. This leads to the faint young sun paradox. How was liquid water present when the sun was 30% fainter?</p>
-      <p>Probably due to a very strong greenhouse effect, from higher atmospheric carbon dioxide abundance</p>
+      <blockquote>
+      <p>In order for life to form, we need an energy source, a carbon source (for complex organic chemistry) and <em>liquid</em> water as a solvent</p>
+      </blockquote>
+      <p>Carbon based life in water may not be the only possibility, but Hydrogen, Oxygen and Carbon are the 1st, 3rd and 6th most common elements in the universe, so there should be <em>some</em> carbon based life out there.</p>
+      <p>Liquid water needs moderate temperatures and pressure greater than 0.006 bar. There is probably also a higher temperature limit set by organic chemistry. But hydrothermal vents are favourable for life because nutrients are abundant in the heated water.</p>
+      <h4>The Young Sun Paradox</h4>
+      <p>There is fossil evidence of life on earth about 3.8 Billion years ago. This leads to the faint young sun paradox. How was liquid water present when the sun was 30% fainter? Probably due to a very strong greenhouse effect, from higher atmospheric carbon dioxide abundance</p>
       <h3>Possible environments for light</h3>
       <h4>Mars</h4>
-      <p>Mars in in the <em>habitable zone</em> around the sun (where liquid water can exist on the surface of a planet). The atmospheric pressure of Mars is also <em>just</em> high enough. Imaging and sampling mars shows that surface water was abundant in the past (over 2Gyrs ago). Enhanced D/H is evidence of past water that was lost to evapouration.</p>
+      <p>Mars in in the <em>habitable zone</em> around the sun (where liquid water can exist on the surface of a planet). The atmospheric pressure of Mars is also <em>just</em> high enough. Imaging and sampling Mars shows that surface water was abundant in the past (over 2Gyrs ago), and radar imaging evidence of liquid water in lakes below the ice caps</p>
+      <p>Enhanced D/H is evidence of past water that was lost to evapouration (due to Hydrogen and Oxygen being separated, but Deuterium being too heavy to evapourate).</p>
       <p>Radar imaging evidence of liquid water in lakes below the ice caps</p>
       <h4>Venus?!</h4>
+      <p>Shocking right? Venus is like an inferno, how the hell can that have life?</p>
       <p>Venus has no surface water and an extreme D/H ratio, meaning significant water loss, but there is a possible detection of Phosphine (PH3) in the atmosphere, which might be a <em>biomarker</em>. Liquid water drops (in the form of sulfuric acid) do exist on venus, potentially habitable</p>
       <h4>Icy moons of giant planets</h4>
       <p>Especially Europa, which is resurfaced with liquid water from a tidally heated subsurface ocean. It has a relatively low water content, meaning it has a thin ocean and maybe hydrothermal vents providing nutrients.</p>

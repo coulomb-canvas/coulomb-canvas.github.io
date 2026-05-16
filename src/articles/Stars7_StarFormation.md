@@ -4,15 +4,23 @@ title: Star Formation
 topics: stars
 ---
 
-Stars form when big clouds of gas collapse under their own gravity. But what conditions does this require
+Stars form when big clouds of gas collapse under their own gravity. But what conditions does this require? Remember the Virial condition.
 
 <div class=eqn> \[ 2U + \Omega = 0 \] </div>
 
-So then, if \\( 2U > |\Omega| \\), the cloud will expand, but if \\( 2U < |\Omega| \\), the cloud collapses (into a star)
+...where U is basically how hot the star is, and \\( \Omega \\) is basically how strong the gravity is. So then, if \\( 2U > |\Omega| \\), the cloud will expand, since the thermal energy pushing outwards is stronger than the gravity pulling in. However, if \\( 2U < |\Omega| \\), the cloud collapses (into a star)
 
-<div class=eqn> \[ \Omega_\text{total} = -\int^R_0 \frac{GM_r(r)}{r} \rho(r) \ 4\pi r^2 dr \] </div>
+Remember from ages ago:
 
-With some maths:
+<div class=eqn> \[ \Omega_\text{total} = -\int^R_0 \frac{GM_r(r)}{r} \rho(r) \ 4\pi r^2 \ dr \] </div>
+
+At this initial stage, the density is actually near enough constant. So with increasing radius, the mass enclosed will increase simply as \\( M_r = \frac{r^3}{R^3} M \\). The density is quite simply \\( \frac{M}{\frac43 π R^3} \\). That gives us:
+
+<div class=eqn> \[ \begin{align} \Omega_\text{total} 
+    &= -\int^R_0 r^4 \frac{4πGM}{R^3} \rho \ dr \\[6pt]
+    &= -\frac{4πGM \rho R^2}{5} \\[6pt]
+    &= -\frac35 \frac{GM^2}{R}
+    \end{align} \] </div>
 
 <div class="hover-wrapper">
     <div class="formula-container">
@@ -27,7 +35,7 @@ With some maths:
     </div>
 </div>
 
-What about the total thermal energy?
+So now we have the total gravitational potential energy, what about the total thermal energy? It's \\( \frac32 k_BT \\) per particle, so \\( \frac32 N k_BT \\) in total, with \\( N = \frac{M}{\mu m_H} \\)
 
 The mass of the cloud for it to take place:
 

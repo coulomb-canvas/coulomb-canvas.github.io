@@ -157,13 +157,38 @@ Remember that for a black body, \\( I = \frac{\sigma T^4}{\pi} \\), so:
 
 ### Temperature structure near the stellar surface
 
-As z increases, F decreases (because no light is going in, it can only have been stopped) and so does pressure
+Now that we have \\( P_\text{radiation} = \frac{4\pi}{3c} \langle I \rangle \\), we can use this to write something about the flux. This is because this is a pressure from photons. So if that changes, then the amount of photons must be changing, meaning the intensity must also be changing
 
-The flux is \\( F = \frac{dE}{dt} \\), meaning Force is \\( \frac{dF}c \\). The rate of change of pressure is \\( \frac{dP}{dz} dz = \frac{dF}c \\).
+<div class="container">
+    <div class="text">
+        Consider a box of like gas or something, with radiation with flux \( F \) entering one end (at \( z \)) and coming out the other end ( at \( x + dz \)). There is also pressure on either side of this box \( P_\text{rad}(z) \) and \( P_\text{rad}(z + dz) \). As \( z \) increases, \( F \) decreases (so now the flux is \( F - dF \), because no light is going in, it can only have been stopped), and so does the pressure. (The change in pressure is related to the change in flux)
+    </div>
+    <div class="image">
+    <div class="image-floater">
+        <div class="image-box">
+        <img src="images/Stars/Grey atmosphere.png" class="pop-image" style="width: 300px"/>
+        </div>
+        <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+        font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+        Figure 1: Grey atmosphere</div><div style="color:white; font-size:20px; line-height: 1.2;">
+        ...</div></span>
+    </div>
+    </div>
+</div>
 
-Assuming there is only absorption taking place, we can swap flux and intensity:
+Everything happening is per unit area
+
+At the surface there is no energy generation, just photons trying to get out. So most of this change in flux will be as a result of absorption
+
+We know that the energy of a photon is given by \\( E = pc \\), meaning force (being the rate of change of momentum, where \\( p = \frac{E}{c} \\)) is \\( \frac{dF}c \\). The flux is the rate of change of energy, given by \\( F = \frac{dE}{dt} \\).
+
+The rate of change of pressure is the same as the force here (using the same logic as with hydrostatic equilibrium), so \\( \frac{dP}{dz} dz = \frac{dF}c \\).
+
+Assuming there is only absorption taking place, we can swap flux and intensity. So then our absorption equation from earlier (\\( \frac{dI}{dz} = -\kappa \rho I \\)) then becomes \\( \frac{dF}{dz} = -\kappa \rho F \\). With some simple rearranging, it becomes:
 
 <div class=eqn> \[ \frac{dF}{F} = -\kappa \rho \ dz \] </div>
+
+Then replace \\( dF \\) with \\( c \frac{dP}{dz} dz \\)
 
 <div class=eqn> \[ \frac{dP}{dz} dz = - \frac{\kappa \rho F}{c} \] </div>
 
@@ -180,17 +205,19 @@ Assuming there is only absorption taking place, we can swap flux and intensity:
     </div>
 </div>
 
-Integrate
+Integrating gives us
 
 <div class=eqn> \[ P = \frac1c F \tau + A \\[6pt] \therefore \quad \frac{4\pi}{3c} \langle I \rangle = \frac1c F \tau + A \] </div>
 
-At the top of the atmospher, the optical depth is gonna be zero. Also the average intensity will be the intensity out take away the intensity in all over 2 (or just intensity out over two, since we assume there is no intensity in).
+Now we need some boundary conditions to be able to get the constant of integration. At the top of the atmosphere, the optical depth is gonna be zero. Also the average intensity will be the intensity out take away the intensity in all over 2 (or just *intensity out over two*, since we assume there is no intensity in at the top of the atmosphere).
 
-The intensity out is F over π, which gives us a constant of integration:
+The intensity out is \\( \frac{F}{\pi} \\), which gives us a constant of integration:
 
 <div class=eqn> \[ A = \frac{2F}{3c} \] </div>
 
-<div class=eqn> \[ \frac{4\pi}{3c} \langle I \rangle = F(\tau + \frac23) \] </div>
+Putting that in gives us:
+
+<div class=eqn> \[ \frac{4\pi}{3} \langle I \rangle = F(\tau + \frac23) \] </div>
 
 For a black body, \\( F = \sigma T_\text{eff}^4 \\), and \\( I = S = B = \frac{\sigma T^4}{\pi} \\)
 

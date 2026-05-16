@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 115 subtopics
-// Generated: 2026-05-15T18:25:30.192Z
+// Generated: 2026-05-16T10:06:38.635Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -15858,10 +15858,30 @@ const subtopics = {
       </div>
       <p><em>Damn, that's a long-ass subscript. Something about writing &quot;rad, bb&quot; doesn't feal right though...</em></p>
       <h3>Temperature structure near the stellar surface</h3>
-      <p>As z increases, F decreases (because no light is going in, it can only have been stopped) and so does pressure</p>
-      <p>The flux is \\( F = \\frac{dE}{dt} \\), meaning Force is \\( \\frac{dF}c \\). The rate of change of pressure is \\( \\frac{dP}{dz} dz = \\frac{dF}c \\).</p>
-      <p>Assuming there is only absorption taking place, we can swap flux and intensity:</p>
+      <p>Now that we have \\( P_\\text{radiation} = \\frac{4\\pi}{3c} \\langle I \\rangle \\), we can use this to write something about the flux. This is because this is a pressure from photons. So if that changes, then the amount of photons must be changing, meaning the intensity must also be changing</p>
+      <div class="container">
+          <div class="text">
+              Consider a box of like gas or something, with radiation with flux \\( F \\) entering one end (at \\( z \\)) and coming out the other end ( at \\( x + dz \\)). There is also pressure on either side of this box \\( P_\\text{rad}(z) \\) and \\( P_\\text{rad}(z + dz) \\). As \\( z \\) increases, \\( F \\) decreases (so now the flux is \\( F - dF \\), because no light is going in, it can only have been stopped), and so does the pressure. (The change in pressure is related to the change in flux)
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/Stars/Grey atmosphere.png" class="pop-image" style="width: 300px"/>
+              </div>
+              <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+              font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+              Figure 1: Grey atmosphere</div><div style="color:white; font-size:20px; line-height: 1.2;">
+              ...</div></span>
+          </div>
+          </div>
+      </div>
+      <p>Everything happening is per unit area</p>
+      <p>At the surface there is no energy generation, just photons trying to get out. So most of this change in flux will be as a result of absorption</p>
+      <p>We know that the energy of a photon is given by \\( E = pc \\), meaning force (being the rate of change of momentum, where \\( p = \\frac{E}{c} \\)) is \\( \\frac{dF}c \\). The flux is the rate of change of energy, given by \\( F = \\frac{dE}{dt} \\).</p>
+      <p>The rate of change of pressure is the same as the force here (using the same logic as with hydrostatic equilibrium), so \\( \\frac{dP}{dz} dz = \\frac{dF}c \\).</p>
+      <p>Assuming there is only absorption taking place, we can swap flux and intensity. So then our absorption equation from earlier (\\( \\frac{dI}{dz} = -\\kappa \\rho I \\)) then becomes \\( \\frac{dF}{dz} = -\\kappa \\rho F \\). With some simple rearranging, it becomes:</p>
       <div class=eqn> \\[ \\frac{dF}{F} = -\\kappa \\rho \\ dz \\] </div>
+      <p>Then replace \\( dF \\) with \\( c \\frac{dP}{dz} dz \\)</p>
       <div class=eqn> \\[ \\frac{dP}{dz} dz = - \\frac{\\kappa \\rho F}{c} \\] </div>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -15875,12 +15895,13 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>Integrate</p>
+      <p>Integrating gives us</p>
       <div class=eqn> \\[ P = \\frac1c F \\tau + A \\\\[6pt] \\therefore \\quad \\frac{4\\pi}{3c} \\langle I \\rangle = \\frac1c F \\tau + A \\] </div>
-      <p>At the top of the atmospher, the optical depth is gonna be zero. Also the average intensity will be the intensity out take away the intensity in all over 2 (or just intensity out over two, since we assume there is no intensity in).</p>
-      <p>The intensity out is F over π, which gives us a constant of integration:</p>
+      <p>Now we need some boundary conditions to be able to get the constant of integration. At the top of the atmosphere, the optical depth is gonna be zero. Also the average intensity will be the intensity out take away the intensity in all over 2 (or just <em>intensity out over two</em>, since we assume there is no intensity in at the top of the atmosphere).</p>
+      <p>The intensity out is \\( \\frac{F}{\\pi} \\), which gives us a constant of integration:</p>
       <div class=eqn> \\[ A = \\frac{2F}{3c} \\] </div>
-      <div class=eqn> \\[ \\frac{4\\pi}{3c} \\langle I \\rangle = F(\\tau + \\frac23) \\] </div>
+      <p>Putting that in gives us:</p>
+      <div class=eqn> \\[ \\frac{4\\pi}{3} \\langle I \\rangle = F(\\tau + \\frac23) \\] </div>
       <p>For a black body, \\( F = \\sigma T_\\text{eff}^4 \\), and \\( I = S = B = \\frac{\\sigma T^4}{\\pi} \\)</p>
       <div class=eqn> \\[ \\frac{4\\pi B}{3} =  \\sigma T_\\text{eff}^4 (\\tau + \\frac23) \\] </div>
       <div class="hover-wrapper">
@@ -15908,10 +15929,18 @@ const subtopics = {
   "star-structure": {
     title: "Stellar Structure",
     content: `
-      <p>We assume stars are spherical and symmetric, like a series of shells on top of each other.</p>
-      <p>The 'r' subscript means the quantity inside that radius</p>
+      <p>Let's take a star. We will be modelling stars as spherical and symmetric, like a series of shells on top of each other (on an onion ting).</p>
+      <p>The 'r' subscript means the quantity inside that radius. So \\( M_r \\) means mass within the radius \\( r \\) and \\( L_r \\) means the luminosity coming from the mass within radius \\( r \\).</p>
       <h3>Stellar Structure Equations</h3>
+      <p>When dealing with a star, you need an equation of state, an opacity law, and one of these 4 coupled ODES:</p>
+      <ol>
+      <li>Hydrostatic Equilibrium</li>
+      <li>Mass Conservation</li>
+      <li>Energy Generation Conservation</li>
+      <li>Energy Transport</li>
+      </ol>
       <h4>Hydrostatic Equilibrium Equation</h4>
+      <p>This is the formula which makes all the big objects in the sky round and smooth, like a marble. The force of gravity tries to pull the mass of a planet / star / moon in, but the pressure that creates causes another force, pushing it out.</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15924,12 +15953,16 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>We can estimate the pressure and density in the core of a star. Not very well though.</p>
-      <p>Assume that \\( \\frac{dP}{dr} = \\text{constant} = -\\frac{P_\\text{core}}{R_*} \\). This is obviously stupid but stay with me for now.</p>
+      <p>Without the pressure, the mass would just collapse on a dynamical free‑fall timescale.</p>
+      <p>We can estimate the pressure and density in the core of a star. Not very well though. Assume that \\( \\frac{dP}{dr} = \\text{constant} = -\\frac{P_\\text{core}}{R_*} \\). This is obviously stupid but stay with me for now.</p>
       <div class=eqn> \\[ \\langle \\rho \\rangle = \\frac{M}V = \\frac{3M_*}{4\\pi R_*^3} \\] </div>
-      <div class=eqn> \\[ P_\\text{core} = \\frac{3G}{4\\pi}\\frac{M_*}{R_*^4} \\] </div>
+      <p>Then</p>
+      <div class=eqn> \\[ P_\\text{core} = \\frac{GM_* \\langle \\rho \\rangle}{R_*} = \\frac{3G}{4\\pi}\\frac{M_*^2}{R_*^4} \\] </div>
       <p>For the sun that gives \\( 2.7 \\times 10^{14} \\text{ Nm}^{-2} \\)</p>
       <h4>Mass conservation</h4>
+      <p>This is basically a fancy way of saying mass = density times volume. If we take a thin sheet of mass, \\( dM_r \\), the volume is the surface area times the infinitely small radius \\( dr \\), giving \\( 4\\pi r^2 \\ dr \\). Then just times that by the density to give you</p>
+      <div class=eqn> \\[ dM_r = 4\\pi r^2 \\rho(r) \\ dr \\] </div>
+      <p>Then just divide be \\( dr \\) to get:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15942,7 +15975,8 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <h4>Energy generation conservation</h4>
+      <h4>Energy Generation Conservation</h4>
+      <p>This is kinda just a rebranding of the previous question. Before we had the mass per unit distance. If we wanna get the luminosity, we take that same equation... and then multiply it by the amount of energy a unit of mass generates. We call that \\( \\varepsilon \\).</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15955,7 +15989,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <h4>Energy transport</h4>
+      <h4>Energy Transport (Radiation)</h4>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -15970,13 +16004,18 @@ const subtopics = {
       </div>
       <h4>Convection</h4>
       <p>This is the physical movement of material. Convection and radiation are kinda like rivals, fighting each other for domination</p>
-      <p>Say I gave you a material with density \\( \\rho_1 \\) and temperature \\( T_1 \\). In that material, there's a bubble of that same material with the same density and temperature, rising up very slowly through an environment. Also assume this happens adiabatically (i.e. there is no energy transfer).</p>
+      <p>Say I gave you a material with density \\( \\rho_1 \\) and temperature \\( T_1 \\). In that material, there's a bubble of that same material with the same density and temperature, rising up very slowly through an environment. Also assume this happens adiabatically (i.e. there is no energy transfer), meaning it's pressure changes.</p>
       <p>As you move up in the star, it will have a different density \\( \\rho_a \\) and temperature \\( T_a \\), both of which will be lower (because we are further away from the centre of the star). This means the bubble expands, causing the density and temperature of the bubble to also change (\\( \\rho_2 \\) and \\( T_2 \\)). Whether or not convection takes place depends on <em>how</em> the density and stuff changes.</p>
       <p>If \\( \\rho_2 &gt; \\rho_a \\), then the bubble just falls back. If not then the bubble keeps rising.</p>
       <p>Schwarzchild Criterion:</p>
-      <div class=eqn> \\[ \\bigg| \\frac{d\\ln{T}}{d\\ln{P}} \\bigg|_\\text{advective} > \\quad \\bigg| \\frac{d\\ln{T}}{d\\ln{P}} \\bigg|_\\text{radiative} \\] </div>
+      <div class=eqn> \\[ \\bigg| \\frac{d\\ln{T}}{d\\ln{P}} \\bigg|_\\text{adiabatic} > \\quad \\bigg| \\frac{d\\ln{T}}{d\\ln{P}} \\bigg|_\\text{radiative} \\] </div>
       <h3>Equations of state</h3>
       <p>An <em>equation of state</em> is an equation which tells us how pressure, temperate and density are related. There are three main ones for stars</p>
+      <ol>
+      <li>The Ideal Gas Law</li>
+      <li>Radiation Pressure</li>
+      <li>Degeneracy Pressure</li>
+      </ol>
       <h4>The Ideal Gas Law</h4>
       <p>Here's a familiar face. If we assume we have a gas of infinitely small particles which collide elastically, this relation is true:</p>
       <div class="hover-wrapper">
@@ -15992,9 +16031,11 @@ const subtopics = {
           </div>
       </div>
       <p>You might be wondering &quot;where the heck did the V go?&quot; It's absorbed into n, which is number density here</p>
-      <p>Or</p>
+      <p>Or, we can write</p>
       <div class=eqn> \\[ P = \\frac{\\rho}{\\mu m_H} k_BT \\] </div>
+      <p>This is the dominant pressure source in normal main‑sequence stars, outside extremely dense cores.</p>
       <h4>Radiation</h4>
+      <p>This was derived before</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -16007,13 +16048,15 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>In very massive, hot stars the radiation pressure can be a significant fraction of the total.</p>
       <h4>Degenerate Gas</h4>
       <p>This is something kinda new!</p>
       <p>In an ideal gas, as the temperature goes to zero, so does the pressure. This would be because the particles have no velocity and therefore no momentum.</p>
-      <p>However, Heisenberg's uncertainty principle tells us that with no momentum, there would be infinite uncertainty in possition. This is obviously unrealistic, so there must be <em>some</em> sort of minimum momentum. At very high pressures, the</p>
-      <p>What does this mean? In the case of white dwarfs and neutron stars.</p>
-      <p>A gas becomes degenerate when the average thermal energy is less than the Fermi Energy</p>
-      <div class=eqn> \\[ P = \\frac32 k_BT < E_F \\] </div>
+      <p>However, Heisenberg's uncertainty principle tells us that with no momentum, there would be infinite uncertainty in possition. This is obviously unrealistic, so there must be <em>some</em> sort of minimum momentum.</p>
+      <p>No two electrons can occupy the same state. So if there is a high enough density, eventually all the low energy states are filled up, meaning some electrons are forced into higher energy states even when there is no thermal energy, \\( T = 0 \\). This means there is a minimum spread in momentum.</p>
+      <p>So unlike an ideal gas, as \\( T→0 \\) the pressure does <em>not</em> go to zero if the gas is degenerate. A gas becomes degenerate when the average thermal energy is less than the Fermi Energy</p>
+      <div class=eqn> \\[ k_BT \\ll E_F \\] </div>
+      <p>For a completely degenerate, non‑relativistic electron gas, the pressure scales as</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -16026,7 +16069,8 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <div class=eqn> \\[ \\left( \\frac3\\pi \\right)^\\frac23 \\left( \\frac{h^2}{20m_e} \\right) n_e^\\frac53 \\] </div>
+      <p>Or more precisely, \\( \\left( \\frac3\\pi \\right)^\\frac23 \\left( \\frac{h^2}{20m_e} \\right) n_e^\\frac53 \\). This is the pressure which supports white dwarves, the lighter ones anyway.</p>
+      <p>At extremely high densities, then the momentums become bigger and bigger until you reach relativistic momenta, and the scaling changes to</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -16039,7 +16083,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <div class=eqn> \\[ \\left( \\frac3\\pi \\right)^\\frac13 \\left( \\frac{hc}{8} \\right) n_e^\\frac43 \\] </div>
+      <p>Or more precisely, \\( \\left( \\frac3\\pi \\right)^\\frac13 \\left( \\frac{hc}{8} \\right) n_e^\\frac43 \\). This is relevant to very massive white dwarfs approaching the Chandrasekhar limit.</p>
       <h3>TL;DR</h3>
       <ul>
       <li></li>
@@ -16053,23 +16097,25 @@ const subtopics = {
       <p>Think of the star like a box. This box has thermal energy \\( U \\) and gravitational potential energy \\( \\Omega \\). There is an input of energy via nuclear fusion, and an output of energy, via radiation, which is the luminosity.</p>
       <p>The thermal energy and the gravitational potential energy are related via the Virial Theorem</p>
       <h3>Virial theorem</h3>
-      <p>At a particular point, we know:</p>
+      <p>For a point mass, we can use the regular equation we all know and love for gravitational potential energy:</p>
       <div class=eqn> \\[\\Omega_\\text{point} = - \\frac{GMm}{r} \\] </div>
-      <p>Consider a sphere with radius r, and we consider a shell with width dr.</p>
+      <p>Remember from last time, that we are treating stars as a bunch of \\( dr \\) thick shells. Each shell is a sphere with radius r, with a mass \\( dm_\\text{shell} \\). So to get an infinitely small change in gravitational potentiall energy, just put a d in front of the \\( \\Omega \\) and the \\( m \\), like so:</p>
       <div class=eqn> \\[ d\\Omega_\\text{point} = - \\frac{GM_r dm_\\text{shell}}{r} \\] </div>
-      <p>We know that</p>
+      <p>We know from the mass conservation equation we had last time (and from simple reasoning tbf) that the infinitely small change in mass is given by the surface area of the sphere, multiplied by the infinitely small width \\( dr \\)</p>
       <div class=eqn> \\[ dm_\\text{shell} = 4\\pi r^2 \\rho dr \\] </div>
-      <p>So</p>
-      <div class=eqn> \\[ \\int_V \\Omega_\\text{point} = - \\int_0^R 4\\pi r^2 \\rho \\frac{GM_r}{r} dr \\] </div>
-      <div class=eqn> \\[ \\int \\Omega dV = - \\int_0^R 4\\pi \\rho GM_r r dr \\] </div>
-      <p>Then by using the hydrostatic equation</p>
-      <div class=eqn> \\[ \\int \\Omega dV = 4\\pi \\int_0^R r^3 \\frac{dP}{dr} dr \\] </div>
-      <p>Which gives</p>
-      <div class=eqn> \\[ \\int \\Omega dV = -3 \\int P dV \\] </div>
+      <p>Putting that in, and then integrating both sides going radially outwards from 0 to R, gets us:</p>
+      <div class=eqn> \\[ \\begin{align} \\int_V d\\Omega_\\text{point} 
+          &= - \\int_0^R 4\\pi r^2 \\rho \\frac{GM_r}{r} \\ dr \\\\[6pt]
+          &= - \\int_0^R 4\\pi GM_r  \\rho r \\ dr 
+          \\end{align} \\] </div>
+      <p>Then by using the hydrostatic equation, we can get an alternative value for \\( GM_r \\rho \\)</p>
+      <div class=eqn> \\[ \\int d\\Omega = 4\\pi \\int_0^R r^3 \\frac{dP}{dr} dr \\] </div>
+      <p>And at this point, you just have to integrate by parts, which is long and annoying. But when you do, it gives</p>
+      <div class=eqn> \\[ \\Omega  = -3 \\int P dV \\] </div>
       <p>Assume P and \\( \\Omega \\) balance at each point, which means we can ignore the integrals:</p>
-      <div class=eqn> \\[ \\Omega = -3P \\] </div>
+      <div class=eqn> \\[ \\Omega = -3PV \\] </div>
       <p>Then with the equation of states:</p>
-      <div class=eqn> \\[ P = nk_BT, \\; U = \\frac32 k_B T \\; U = \\frac{3P}2 \\] </div>
+      <div class=eqn> \\[ P = nk_BT, \\quad U = \\frac32 k_B T, \\quad U = \\frac32 PV \\] </div>
       <p>Leaving:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -16120,16 +16166,92 @@ const subtopics = {
           &= \\frac{\\eta X m_\\text{core} c^2}{L}
           \\end{align} \\] </div>
       <h3>Binding energy</h3>
-      <p>...</p>
-      <p>Reaction rate is determined by the rate of the slowest process</p>
+      <p>This is mostly revision, but I'll go over it very quickly just for completeness.</p>
+      <p>We know from Einstein's famous equation that a particle has a total energy of \\( E = mc^2 \\). However, if you were to actually add up the masses of all the protons and neutrons and then multiply by \\( c^2 \\), you'll find that the number you get there is slightly different</p>
+      <div class=eqn> \\[ E = mc^2 \\geq (Zm_\\text{proton} + Nm_\\text{neutron})c^2  \\] </div>
+      <p>That difference in energy is the <em>binding energy</em>, which is the energy required to keep the particles all together. We can then write an expression for the binding energy:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_\\text{binding} = (Zm_\\text{proton} + Nm_\\text{neutron} - m_\\text{nucleus})c^2 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+              Formula X
+              </div><div class="formula-tooltip-desc">
+              ...
+              </div></span>
+          </div>
+      </div>
+      <div class="container">
+          <div class="text">
+              If you calculate the ratio between binding energy and total nucleons, the gradient is how much energy we get out of the reaction. If we go from \\( 4 \\ ^1_1H \\to \\ ^4_2He \\), then the energy released from that interaction is \\( 0.007 m_H \\) per nucleon, which is where the \\( \\eta \\) we had before came from
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/Stars/Binding graph.png" class="pop-image" style="width: 300px"/>
+              </div>
+              <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+              font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+              Figure 1: Binding Energy</div><div style="color:white; font-size:20px; line-height: 1.2;">
+              ...</div></span>
+          </div>
+          </div>
+      </div>
+      <p>Now what actually happens in the PP 1 chain?</p>
+      <div class="container">
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                  <img src="images/Stars/PP 1.png" class="pop-image" style="width: 300px"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+                  font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+                  Figure 2: PP1</div><div style="color:white; font-size:20px; line-height: 1.2;">
+                  ...</div></span>
+              </div>
+          </div>
+          <div class="text">
+              Remember that these reactions are governed by conservation laws (of momentum, energy, charge and nucleon/lepton numbers). The most common chain is the <em>PP-1 chain</em>.
+              <p>First, 2 protons fuse into deuterium, a positron and an electron neutrino. One of those protons becomes a neutron via beta decay. Then another proton fuses to form Helium (with only one neutron) and energy. Then 2 of those collide, creating Helium, and some of the protons break off.</p>
+          </div>
+      </div>
+      <p>There is also PP-2 and PP3.</p>
+      <p>The reaction rate of any one of these chains is determined by the rate of the slowest process. For PP-1, it's the beta decay of the proton into the neutron. This happens once every 10 BILLION years per proton, which goes to show just how many protons you actually need.</p>
+      <p>For 2 protons, to collide, you need them to be moving fast enough to overcome the coulomb potential. How fast does this need to be? We can calculate this by comparing the thermal energy and the Coulomb potential:</p>
+      <div class=eqn> \\[ \\frac32 k_BT = \\frac{Z_1 Z_2 e^3}{4π\\varepsilon_0 r} \\] </div>
+      <p>Solving for \\( T \\) gives us \\( T \\sim 10^{10} \\text{K} \\), which is way too high for the core temperature of a star. So how does the sun do it?</p>
+      <p>Answer, quantum mechanics, specifically quantum tunneling. From the Heisenberg uncertainty principle, if \\( \\Delta x \\) is large enough, it can cross the gap.</p>
+      <p>The reaction rate therefore depends on the density of particles (the more there are, the better), the size of the particles' collision areas (the particles have a small range around them, at which we say the particles 'collided', donated \\( \\sigma \\)) and finally how quickly those particles are moving.</p>
       <div class=eqn> \\[ R_{1, 2} = n_1 n_2 \\sigma v \\] </div>
-      <p>For quantum tunnelling, \\( \\sigma = e^{-2\\pi^2\\frac{U_0}{E}} \\)</p>
+      <div class="container">
+          <div class="text">
+              The probability of quantum tunnelling is proportional \\( e^{-2\\pi^2\\frac{U_0}{E}} \\). The U is the thermal energy, which is higher with higher temperature. Then there is also the Maxwell-Boltzmann velocity probability, which is proportional to \\( e^{-\\frac{E}{k_BT}} \\). The point at which these two probabilities cross over is the Gamow peak, and it is these particles, which have enough energy for quantum tunnelling, but not too much so that they are still within the Maxwell-Boltzmann distribution, which are involved in the reaction. Therefore the more these 2 overlap, the more particles there are which can collide, and the greater the rate of reaction there is.
+          </div>
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                  <img src="images/Stars/Sigma Gamow.png" class="pop-image" style="width: 300px"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-120%;"> <div style="color: #006aff; 
+                  font-size:45px; text-decoration: underline; text-underline-offset: 7px;">
+                  Figure 1: Binding Energy</div><div style="color:white; font-size:20px; line-height: 1.2;">
+                  ...</div></span>
+              </div>
+          </div>
+      </div>
+      <p>In the case of the star, you can use regular densities rather than number densities</p>
       <div class=eqn> \\[ \\begin{align} R_{pp} 
-          &\\propto \\rho_1 \\rho_2 e^{-2\\pi^2\\frac{U_0}{E}} e^{-\\frac{E}{k_BT}}
+          &\\propto \\rho_1 \\rho_2 e^{-2\\pi^2\\frac{U_0}{E}} e^{-\\frac{E}{k_BT}} \\\\[6pt]
           &\\propto \\rho^2 X_H^2 T^4 
           \\end{align} \\] </div>
+      <p>(Don't worry about having to prove this)</p>
+      <p>The generation rate per unit mass is the rate of reation per unit mass</p>
       <div class=eqn> \\[ \\varepsilon_{pp} = \\rho X_H^2 T^4  \\] </div>
       <div class=eqn> \\[ \\varepsilon_{CNO} = \\rho X_H X_{CNO} T^4  \\] </div>
+      <p>As hydrogen fuses to helium, the core or the star gets denser and denser, causing it to shrink and get warmer. At a high enough temperature, helium is able to fuse. This is done via the triple alpha reaction:</p>
+      <div class=eqn> \\[ 3 \\ ^4_2 He \\to \\ ^{12}_6 C + \\gamma  \\] </div>
+      <p>You won't need to remember these epsilons, just know that with higher temperature you are able to fuse heavier elements (because there are higher coulomb barriers needed to overcome them).</p>
       <h3>TL;DR</h3>
       <ul>
       <li></li>
@@ -16140,11 +16262,17 @@ const subtopics = {
   "star-formation": {
     title: "Star Formation",
     content: `
-      <p>Stars form when big clouds of gas collapse under their own gravity. But what conditions does this require</p>
+      <p>Stars form when big clouds of gas collapse under their own gravity. But what conditions does this require? Remember the Virial condition.</p>
       <div class=eqn> \\[ 2U + \\Omega = 0 \\] </div>
-      <p>So then, if \\( 2U &gt; |\\Omega| \\), the cloud will expand, but if \\( 2U &lt; |\\Omega| \\), the cloud collapses (into a star)</p>
-      <div class=eqn> \\[ \\Omega_\\text{total} = -\\int^R_0 \\frac{GM_r(r)}{r} \\rho(r) \\ 4\\pi r^2 dr \\] </div>
-      <p>With some maths:</p>
+      <p>...where U is basically how hot the star is, and \\( \\Omega \\) is basically how strong the gravity is. So then, if \\( 2U &gt; |\\Omega| \\), the cloud will expand, since the thermal energy pushing outwards is stronger than the gravity pulling in. However, if \\( 2U &lt; |\\Omega| \\), the cloud collapses (into a star)</p>
+      <p>Remember from ages ago:</p>
+      <div class=eqn> \\[ \\Omega_\\text{total} = -\\int^R_0 \\frac{GM_r(r)}{r} \\rho(r) \\ 4\\pi r^2 \\ dr \\] </div>
+      <p>At this initial stage, the density is actually near enough constant. So with increasing radius, the mass enclosed will increase simply as \\( M_r = \\frac{r^3}{R^3} M \\). The density is quite simply \\( \\frac{M}{\\frac43 π R^3} \\). That gives us:</p>
+      <div class=eqn> \\[ \\begin{align} \\Omega_\\text{total} 
+          &= -\\int^R_0 r^4 \\frac{4πGM}{R^3} \\rho \\ dr \\\\[6pt]
+          &= -\\frac{4πGM \\rho R^2}{5} \\\\[6pt]
+          &= -\\frac35 \\frac{GM^2}{R}
+          \\end{align} \\] </div>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -16157,7 +16285,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>What about the total thermal energy?</p>
+      <p>So now we have the total gravitational potential energy, what about the total thermal energy? It's \\( \\frac32 k_BT \\) per particle, so \\( \\frac32 N k_BT \\) in total, with \\( N = \\frac{M}{\\mu m_H} \\)</p>
       <p>The mass of the cloud for it to take place:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -17017,7 +17145,7 @@ const subtopics = {
       <li>Pressure above 1100 bar</li>
       </ul>
       <h3>Fundamental Requirements</h3>
-      <ol class="list-decimal list-inside">
+      <ol>
       <li>An energy source, e.g. photosynthesis, chemosynthesis</li>
       <li>Carbon source, valency allows complex organic chemistry. Unlikely to be the limiting factor, since carbon is a very common element</li>
       <li>Liquid Water, required as a solvent of all life on earth. This is a limiting factor, since it's quite rare in liquid form</li>

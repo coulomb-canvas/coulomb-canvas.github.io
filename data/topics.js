@@ -664,8 +664,16 @@ const topics = [
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {
-        subid: "astro-intro",
-        title: "Aren't planets and stars cool?",
+        subid: "eto-intro",
+        title: "Intro",
+      },
+      {
+        subid: "maxwell-eq",
+        title: "Maxwell Equations",
+      },
+      {
+        subid: "maxwell-em",
+        title: "Maxwell Equations",
       },
     ]
   },

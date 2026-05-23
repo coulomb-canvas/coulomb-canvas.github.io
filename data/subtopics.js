@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 115 subtopics
-// Generated: 2026-05-16T10:06:38.635Z
+// AUTO-GENERATED FILE - Contains 118 subtopics
+// Generated: 2026-05-23T15:56:50.334Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 115 existing hand-written entries
-//   - 51 Markdown-generated entries
+//   - 118 existing hand-written entries
+//   - 54 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -17170,6 +17170,314 @@ const subtopics = {
       <p>Perhaps the deeper oceans on moons with thicker water layers, like Ganymede, will have ice at the bottom because of high pressure, and might lack nutrients.</p>
       <p>Enceladus has water geisers with organic chemistry and molecular hydrogen pointing to hydrothermal vents.</p>
       <p>Titan may have some form of life in the methane lakes.</p>
+    `
+  },
+
+  "eto-intro": {
+    title: "Introduction to ETO",
+    content: `
+      <h3>Revision</h3>
+      <p>Before we start learning about <em>electromagnetism</em>, me must start by going over the basics of <em>Electricity and Magnetism</em> separately.</p>
+      <h4>The Lorentz Force</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{F} = q( \\vec{E} + \\vec{v} \\times \\vec{B} ) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The Lorentz Force
+              </div><div class="formula-tooltip-desc">
+                  The Lorentz force states that if a stationary charge accelerates, an electric field must be present; if its path starts to curve as it starts to move, there is a magnetic field as well.
+              </div></span>
+          </div>
+      </div>
+      <h4>Coulomb's Law</h4>
+      <p>The strength of an electric field at a particular distance from a charge is proportional to the charge and inversely proportional to the square of the distance.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{E}(\\vec{r}) = \\frac{q}{4π \\varepsilon_0 r^2} \\hat{r} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Coulomb Force
+              </div><div class="formula-tooltip-desc">
+                  The Lorentz force states that if a stationary charge accelerates, an electric field must be present; if its path starts to curve as it starts to move, there is a magnetic field as well.
+              </div></span>
+          </div>
+      </div>
+      <h3>The Laws</h3>
+      <p>But before we do get into this, let me introduce you to my newest friend, \\( J \\). This is one of \\( I \\)'s close friends, and \\( I \\) recently introduced him to me. His name is <em>current density</em>, and this is the <em>current per unit area</em>.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ I = \\int_S \\vec{J} \\cdot d\\vec{S} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Current density
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Why does this matter? Up until now, we've assumes wires are practically infinitely thin, or at least thin enough that only one electron can pass through a given point at any time. However, were in the big leagues now, which means we actually have to account for the fact that wires can be a bit chunky, meaning multiple electrons can pass through a given point.</p>
+      <p>The reason this is a problem is because, say we have a current of 100 amps. That would mean that 100 electrons are passing through the point per second. However, is that because the electrons themselves have a lot of energy and are therefore moving very quickly, or is the wire just really really really big, meaning 100 electrons can fit through the gap at once?</p>
+      <p>See what I mean? So anyway, we now have current density to help us along on our journey.</p>
+      <h4>Gauss' Law</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Phi = \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac{Q_\\text{encl}}{\\varepsilon_0} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4: Gauss' Law
+              </div><div class="formula-tooltip-desc">
+                  The electric field coming out of the surface S (i.e. the electric flux) is proportional to the amount of charge enclosed in that surface S.
+              </div></span>
+          </div>
+      </div>
+      <h4>Ampere's Law</h4>
+      <p>This is Gauss' Law's magnetic cousin. Ampere's Law tells us that the total magnetic flux coming out of a line of wire is proportional to the current in that wire.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\oint_C \\vec{B} \\cdot d\\vec{l} = \\mu_0 I \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 5: Ampere's Law
+              </div><div class="formula-tooltip-desc">
+                  The magnetic field coming out of a wire C is proportional to the current flowing through that wire, \\( I \\), with \\( \\mu_0 \\) as the constant of proportionality.
+              </div></span>
+          </div>
+      </div>
+      <h4>The Solenoidal condition</h4>
+      <p><em>When I learnt about this in lectures, it was introduced to us as 'the law with no name', and some bloody nerd sat in from of me goes &quot;erM, aKcHoOaLlY, by calling it 'the law with no name', you have in given it a name, making the statement false&quot; brother get your lame-ass reddit-atheist bollocks out of here and just listen to the lecture fgs.</em></p>
+      <p>This tells us that, for a given surface, any field lines which enter the surface must also exit it, or that there are no magnetic monopoles</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\oint_S \\vec{B} \\cdot d\\vec{S} = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 6: The Solenoidal condition
+              </div><div class="formula-tooltip-desc">
+                  The magnetic field coming out of a closed surface S is zero. This is because there are no magnetic monopoles.
+              </div></span>
+          </div>
+      </div>
+      <h4>Faraday–Lenz law of induction</h4>
+      <p>When there is a changing magnetic flux through a wire, this causes a magnetic field to be generated</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\oint_C \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi}{dt} = -\\frac{d}{dt} \\int_S \\vec{B} \\cdot d\\vec{S}  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 6: The Law of Induction
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
+      <p>Think of \\( \\oint_C \\dots \\cdot d\\vec{l} \\) as meaning &quot;the field coming out of the wire&quot;, and \\( \\int_S \\dots \\cdot d\\vec{S} \\) as meaning &quot;the field coming out of a surface&quot;. That makes reading these rules a lot easier.</p>
+      <p>With that, Faraday's law can be read as &quot;<em>the electric field coming out of the wire is equal to the negative rate of change of flux</em>.&quot; The solenoidal condition can be read as &quot;<em>the magnetic field coming out of an enclosed surface</em>&quot;. A protip for trying to study electromagnetism: try and think of what the goofy-ahh mathematics are trying to say to you, rather than focusing on the mathematical-ness of them. 'Cus often times, much of the stupidity we have to deal with is just them trying to use maths to explain things which are better explained just with English.</p>
+      <p>Anyway, what have we learnt today?</p>
+    `
+  },
+
+  "maxwell-eq": {
+    title: "Maxwell's Equations",
+    content: `
+      <p>Start off with the charge of a particle</p>
+      <div class=eqn> \\[ Q = \\int_V \\rho \\  dV \\] </div> 
+      <p>We can calculate the rate of change of charge, simply by differentiating with respect to time. However, there is a slightly different way we could do this. When you think about it, the rate of change of charge in a given volume is equal to the current coming out of the closed surface.</p>
+      <div class=eqn> \\[ \\frac{dQ}{dt} = - I \\] </div> 
+      <p>Our current is \\( I \\), but remember, we use <em>current density</em> now. And remember from last time, what is the mathematical equivalent of &quot;the ___ coming out of a closed surface&quot;?</p>
+      <div class=eqn> \\[ \\frac{dQ}{dt} = \\frac{d}{dt} \\int_V \\rho \\ dV = - \\int_S \\vec{J} \\cdot d\\vec{S} \\] </div> 
+      <p>Next, the divergence theorem tells us that:</p>
+      <div class=eqn> \\[ \\int_S \\vec{W} \\cdot d\\vec{S} = \\int_V \\vec{\\nabla} \\cdot \\vec{W} \\ dV  \\] </div> 
+      <p>Putting that in gives us</p>
+      <div class=eqn> \\[ \\int_V \\frac{d\\rho}{dt} \\ dV = - \\int_V \\vec{\\nabla} \\cdot \\vec{J} \\ dV \\] </div> 
+      <p>Rearranging gives us</p>
+      <div class=eqn> \\[ \\int_V \\left( \\frac{d\\rho}{dt} + \\vec{\\nabla} \\cdot \\vec{J} \\right) \\ dV = 0 \\] </div> 
+      <p>This leaves us with the continuity equation for electric charge:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{d\\rho}{dt} + \\vec{\\nabla} \\cdot \\vec{J} = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title" style="font-size: 3.5vh">
+                  Formula 1: Continuity Equation for Electric Charge
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>What does this equation actually mean? Well it's usually written in this form, but I think it's easier to see what it's actually trying to tell us if you write it like this:</p>
+      <div class=eqn> \\[ \\frac{d\\rho}{dt} = - \\vec{\\nabla} \\cdot \\vec{J} \\] </div> 
+      <p>\\( \\vec{\\nabla} \\cdot \\vec{J} \\) is the <em>divergence of the current density</em>, which we know describes how much of the current density is flowing in or out of the point. \\( \\frac{d\\rho}{dt} \\) is quite simply the rate at which the charge density, \\( \\rho \\), changes over time.</p>
+      <p>Therefore, what this equation is saying is that if, for whatever reason, the current density flowing out of a point is not zero, then the overall charge density must be decreasing. If \\( \\vec{\\nabla} \\cdot \\vec{J} \\) is positive, that means that charge is flowing out, so the overall density of the object must be decreasing.</p>
+      <h3>Maxwell's 1st equation</h3>
+      <p>This process of using the Divergence theorem to get brand new equations is exactly what my boy Maxwell did to get his famous formulae. First we'll start with Gauss' law.</p>
+      <div class=eqn> \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac1{\\varepsilon_0} \\int_V \\rho \\ dV \\] </div> 
+      <p>Use the divergence theorem</p>
+      <div class=eqn> \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} =  \\int_V \\vec{\\nabla} \\cdot \\vec{E} \\ dV =  \\int_V \\frac{\\rho}{\\varepsilon_0} \\ dV \\] </div> 
+      <p>They are both integrals with respect to volume, so:</p>
+      <div class=eqn> \\[\\int_V \\left( \\vec{\\nabla} \\cdot \\vec{E} - \\frac{\\rho}{\\varepsilon_0} \\right) \\ dV \\] </div> 
+      <p>And therefore, by using the same logic, we end up with the first Maxwell equation, or as I'll be calling it <strong>M1</strong>.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Maxwell Equation 1
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Maxwell's 2nd equation</h3>
+      <p>This is a lot of fun, isn't it? Let's try it again, this time with the <em>solenoidal condition</em>.</p>
+      <div class=eqn> \\[ \\oint_S \\vec{B} \\cdot d\\vec{S} = 0 \\] </div> 
+      <p>This is even bloody easy, because it already equals zero meaning we don't have to do any grift rearranging. Using the divergence theorem gives us:</p>
+      <div class=eqn> \\[ \\oint_S \\vec{B} \\cdot d\\vec{S} = \\int_V \\vec{\\nabla} \\cdot \\vec{B} \\ dV = 0 \\] </div> 
+      <p>And that must therefore mean that all the stuff inside the integral must be equal to zero, leaving us with Maxwell's 2nd equation (or <strong>M2</strong>)</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\cdot \\vec{B} = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Maxwell Equation 2
+              </div><div class="formula-tooltip-desc">
+                  The amount of magnetic flux flowing into a surface is the same as the magnetic flux flowing out of a surface.
+              </div></span>
+          </div>
+      </div>
+      <h3>Maxwell's 3rd equation</h3>
+      <p>Next up, we're using <em>Faraday's law</em>:</p>
+      <div class=eqn> \\[ \\oint_C \\vec{E} \\cdot d\\vec{l} = -\\frac{d}{dt} \\int_S \\vec{B} \\cdot d\\vec{S} \\] </div> 
+      <p>Now a bumbling baffoon like yourself might be thinking &quot;lEt'S jUsT uSe ThE dIveRgEnCe ThEoREm lIkE wE'vE bEEn DoInG aLL tHiS wHIlE!&quot; However, to the intellectual few of us (like you at the back, yes you m8! No not <em>you</em>, the guy behind you...), <em>we</em> noticed that the divergence theorem only applies when there is a \\( d\\vec{S} \\). However, here there's a \\( d\\vec{l} \\), which means we can't use the divergence theorem.</p>
+      <p>Luckily, I singlehandedly discovered the solution to this problem. Something I decided to call (for no particular reason) <em>Stoke's theorem</em>. I'm sure you've never heard of this before, I know, so what is it?</p>
+      <div class=eqn> \\[ \\oint_C \\vec{E} \\cdot d\\vec{l} = \\int_S \\vec{\\nabla} \\times \\vec{E} \\cdot d\\vec{S} \\] </div> 
+      <p>So then that gives us:</p>
+      <div class=eqn> \\[ \\int_S \\vec{\\nabla} \\times \\vec{E} \\cdot d\\vec{S} = \\int_S -\\frac{\\partial\\vec{B}}{\\partial t} \\cdot d\\vec{S} \\] </div> 
+      <p>Then by using the same grift mathematics, we get</p>
+      <div class=eqn> \\[ \\int_S \\left( \\vec{\\nabla} \\times \\vec{E} + \\frac{\\partial\\vec{B}}{\\partial t} \\right) \\cdot d\\vec{S} \\] </div> 
+      <p>Leaving us with Maxwell's 3rd equation, <strong>M3</strong></p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial\\vec{B}}{\\partial t} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4: Maxwell Equation 3
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Maxwell's 4th Equation</h3>
+      <p>Last but not least. We started with Gauss' Law, so we end with his magnetic cousin.</p>
+      <div class=eqn> \\[ \\oint_C \\vec{B} \\cdot d\\vec{l} = \\mu_0 \\int_S \\vec{J} \\cdot d\\vec{S} \\] </div> 
+      <p>By using my new and improved <em>Stoke's Theorem</em>, we end up with</p>
+      <div class=eqn> \\[ \\oint_C \\vec{B} \\cdot d\\vec{l} = \\int_S \\vec{\\nabla} \\times \\vec{B} \\cdot d\\vec{S} =  \\int_S \\mu_0 \\vec{J} \\cdot d\\vec{S} \\] </div> 
+      <p>Then be removing the integrals, we end up with the final of Maxwell's equations:</p>
+      <div class=eqn> \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\vec{J} \\] </div> 
+      <p>Now I know what you are thinking: &quot;<em>What the hell? You just said that we've derived the fourth and final Maxwell equation, no? So why haven't you put one of the orange formula boxes around it? Ain't this important?</em>&quot;</p>
+      <p>Well, as it turns out, this is one of those cases where your bumbling baffonery kicks in again. Let's take the divergence of this \\( \\vec{\\nabla} \\times \\vec{B} \\). We know that if we take the div curl of any vector, we end up with zero:</p>
+      <div class=eqn> \\[ \\vec{\\nabla} \\cdot ( \\vec{\\nabla} \\times \\vec{B} ) = \\mu_0 \\vec{\\nabla} \\cdot \\vec{J} = 0  \\] </div> 
+      <p>But if \\( \\mu_0 \\vec{\\nabla} \\cdot \\vec{J} = 0 \\), then since \\( \\mu_0 \\) is a constant, then that must mean that \\( \\vec{\\nabla} \\cdot \\vec{J} = 0 \\). But then going all the way back to our continuity equation for electric charge from right at the beginning:</p>
+      <div class=eqn> \\[ \\frac{d\\rho}{dt} = - \\vec{\\nabla} \\cdot \\vec{J} = 0 \\] </div> 
+      <p>So the rate of change of charge density must also be zero, meaning no charge can accumulate in any region. This is obviously tapped, which is why we will not be accepting this explanation. So how can we do this?</p>
+      <p>Well let's look at that \\( \\rho \\). If we rearrange <strong>M1</strong>, we end up with this identity for the charge density:</p>
+      <div class=eqn> \\[ \\rho = \\varepsilon_0  \\vec{\\nabla} \\cdot \\vec{E} \\] </div> 
+      <p>Now put that into the continuity equation:</p>
+      <div class=eqn> \\[ \\begin{align} \\frac{d\\rho}{dt} + \\vec{\\nabla} \\cdot \\vec{J} 
+          &= \\varepsilon_0 \\frac{d\\vec{\\nabla} \\cdot \\vec{E}}{dt} + \\vec{\\nabla} \\cdot \\vec{J} \\\\[6pt]
+          &= \\varepsilon_0 \\vec{\\nabla} \\cdot \\frac{d\\vec{E}}{dt} + \\vec{\\nabla} \\cdot \\vec{J} = 0 
+          \\end{align} \\] </div> 
+      <p>Then by taking the &quot;<em>\\( \\vec{\\nabla} \\cdot \\)</em>&quot; out, we get this relation:</p>
+      <div class=eqn> \\[ \\vec{\\nabla} \\cdot \\left( \\varepsilon_0 \\frac{d\\vec{E}}{dt} + \\vec{J} \\right) = 0  \\] </div> 
+      <p>So now we can replace \\( \\vec{J} \\) with \\( \\vec{J} + \\varepsilon_0 \\frac{d\\vec{E}}{dt} \\), giving us our final Maxwell Equation, <strong>M4</strong>:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\left( \\vec{J} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 5: Maxwell Equation 4
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
+    `
+  },
+
+  "maxwell-em": {
+    title: "Electromagnetic Waves",
+    content: `
+      <p>If we take our 4 Maxwell equations, and let's make it so that there is no charge or current (\\( \\rho = 0, \\vec{J} = 0\\)). This gives us these:</p>
+      <div class=eqn> \\[ \\begin{align} 
+          \\vec{\\nabla} \\cdot \\vec{E} &= 0 \\\\[6pt]
+          \\vec{\\nabla} \\cdot \\vec{B} &= 0 \\\\[6pt]
+          \\vec{\\nabla} \\times \\vec{E} &= -\\frac{\\partial \\vec{B}}{\\partial t} \\\\[6pt]
+          \\vec{\\nabla} \\times \\vec{B} &= \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t}
+          \\end{align} \\] </div> 
+      <p>Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <strong>M3</strong></p>
+      <div class=eqn> \\[ \\begin{align} \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{E}) 
+          &= \\vec{\\nabla} \\times \\left( -\\frac{\\partial \\vec{B}}{\\partial t} \\right) \\\\[6pt]
+          &= -\\frac{\\partial}{\\partial t} \\vec{\\nabla} \\times \\vec{B} 
+          \\end{align} \\] </div> 
+      <p>Now we have that \\( \\vec{\\nabla} \\times \\vec{B} \\) from <strong>M4</strong>. In that case, we can just wack that value in:</p>
+      <div class=eqn> \\[ \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{E}) = - \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\] </div> 
+      <p>Then we can use the identity</p>
+      <div class=eqn> \\[ \\vec{\\nabla}(\\vec{\\nabla} \\cdot \\vec{E}) - \\vec{\\nabla}^2 \\vec{E} = - \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\] </div> 
+      <p>Since there is no charge, the divergence is zero \\( \\vec{\\nabla} \\cdot \\vec{E} = 0 \\), leaving us with:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla}^2 \\vec{E} = \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1a: 
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Doing the same thing, except starting by taking the curl of <strong>M4</strong> instead of <strong>M3</strong> gives us:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla}^2 \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{B}}{\\partial t^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1b: 
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Compare any one of these equations to the wave equation:</p>
+      <div class=eqn> \\[ \\vec{\\nabla}^2 U = \\frac1{v^2} \\frac{\\partial^2 U}{\\partial t^2} \\] </div> 
+      <p>That gives us the speed of electric and magnetic waves:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ v = \\frac1{\\sqrt{\\mu_0 \\varepsilon_0}} \\approx 300,000,000 \\text{ ms}^{-1} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Speed of EM waves
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
     `
   }
 };

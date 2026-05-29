@@ -16,7 +16,7 @@ Our current is \\( I \\), but remember, we use *current density* now. And rememb
 
 <div class=eqn> \[ \frac{dQ}{dt} = \frac{d}{dt} \int_V \rho \ dV = - \int_S \vec{J} \cdot d\vec{S} \] </div> 
 
-Next, the divergence theorem tells us that:
+Next, the divergence theorem tells us that, for a field \\( \vec{W} \\) within an enclosed surface \\( S \\), the ... is the same as calculating the divergence over the full volume:
 
 <div class=eqn> \[ \int_S \vec{W} \cdot d\vec{S} = \int_V \vec{\nabla} \cdot \vec{W} \ dV  \] </div> 
 
@@ -26,14 +26,14 @@ Putting that in gives us
 
 Rearranging gives us
 
-<div class=eqn> \[ \int_V \left( \frac{d\rho}{dt} + \vec{\nabla} \cdot \vec{J} \right) \ dV = 0 \] </div> 
+<div class=eqn> \[ \int_V \left( \frac{\partial\rho}{\partial t} + \vec{\nabla} \cdot \vec{J} \right) \ dV = 0 \] </div> 
 
 This leaves us with the continuity equation for electric charge:
 
 <div class="hover-wrapper">
     <div class="formula-container">
         <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
-            \[ \frac{d\rho}{dt} + \vec{\nabla} \cdot \vec{J} = 0 \]
+            \[ \frac{\partial\rho}{\partial t} + \vec{\nabla} \cdot \vec{J} = 0 \]
         </div>
         <span class="formula-tooltip"><div class="formula-tooltip-title" style="font-size: 3.5vh">
             Formula 1: Continuity Equation for Electric Charge
@@ -42,6 +42,8 @@ This leaves us with the continuity equation for electric charge:
         </div></span>
     </div>
 </div>
+
+Oh and by the way, you may or may not have noticed that the derivative (d/dt) has magically switched from a full derivative to a partial derivative. Technically you can't actually assume this is the case, but in this particular case, it's not a problem. You'll have to just take my word for it, k?
 
 What does this equation actually mean? Well it's usually written in this form, but I think it's easier to see what it's actually trying to tell us if you write it like this:
 
@@ -57,7 +59,7 @@ This process of using the Divergence theorem to get brand new equations is exact
 
 <div class=eqn> \[ \oint_S \vec{E} \cdot d\vec{S} = \frac1{\varepsilon_0} \int_V \rho \ dV \] </div> 
 
-Use the divergence theorem
+Use the divergence theorem as we did before, and we end up with:
 
 <div class=eqn> \[ \oint_S \vec{E} \cdot d\vec{S} =  \int_V \vec{\nabla} \cdot \vec{E} \ dV =  \int_V \frac{\rho}{\varepsilon_0} \ dV \] </div> 
 
@@ -195,6 +197,8 @@ So now we can replace \\( \vec{J} \\) with \\( \vec{J} + \varepsilon_0 \frac{d\v
         </div></span>
     </div>
 </div>
+
+Turns out, this displacement is so small that they often times just couldn't see it
 
 ### TL;DR
 

@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 118 subtopics
-// Generated: 2026-05-23T15:56:50.334Z
+// AUTO-GENERATED FILE - Contains 123 subtopics
+// Generated: 2026-05-29T21:08:35.685Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 118 existing hand-written entries
-//   - 54 Markdown-generated entries
+//   - 122 existing hand-written entries
+//   - 59 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -17294,17 +17294,17 @@ const subtopics = {
       <div class=eqn> \\[ \\frac{dQ}{dt} = - I \\] </div> 
       <p>Our current is \\( I \\), but remember, we use <em>current density</em> now. And remember from last time, what is the mathematical equivalent of &quot;the ___ coming out of a closed surface&quot;?</p>
       <div class=eqn> \\[ \\frac{dQ}{dt} = \\frac{d}{dt} \\int_V \\rho \\ dV = - \\int_S \\vec{J} \\cdot d\\vec{S} \\] </div> 
-      <p>Next, the divergence theorem tells us that:</p>
+      <p>Next, the divergence theorem tells us that, for a field \\( \\vec{W} \\) within an enclosed surface \\( S \\), the ... is the same as calculating the divergence over the full volume:</p>
       <div class=eqn> \\[ \\int_S \\vec{W} \\cdot d\\vec{S} = \\int_V \\vec{\\nabla} \\cdot \\vec{W} \\ dV  \\] </div> 
       <p>Putting that in gives us</p>
       <div class=eqn> \\[ \\int_V \\frac{d\\rho}{dt} \\ dV = - \\int_V \\vec{\\nabla} \\cdot \\vec{J} \\ dV \\] </div> 
       <p>Rearranging gives us</p>
-      <div class=eqn> \\[ \\int_V \\left( \\frac{d\\rho}{dt} + \\vec{\\nabla} \\cdot \\vec{J} \\right) \\ dV = 0 \\] </div> 
+      <div class=eqn> \\[ \\int_V \\left( \\frac{\\partial\\rho}{\\partial t} + \\vec{\\nabla} \\cdot \\vec{J} \\right) \\ dV = 0 \\] </div> 
       <p>This leaves us with the continuity equation for electric charge:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ \\frac{d\\rho}{dt} + \\vec{\\nabla} \\cdot \\vec{J} = 0 \\]
+                  \\[ \\frac{\\partial\\rho}{\\partial t} + \\vec{\\nabla} \\cdot \\vec{J} = 0 \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title" style="font-size: 3.5vh">
                   Formula 1: Continuity Equation for Electric Charge
@@ -17313,6 +17313,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Oh and by the way, you may or may not have noticed that the derivative (d/dt) has magically switched from a full derivative to a partial derivative. Technically you can't actually assume this is the case, but in this particular case, it's not a problem. You'll have to just take my word for it, k?</p>
       <p>What does this equation actually mean? Well it's usually written in this form, but I think it's easier to see what it's actually trying to tell us if you write it like this:</p>
       <div class=eqn> \\[ \\frac{d\\rho}{dt} = - \\vec{\\nabla} \\cdot \\vec{J} \\] </div> 
       <p>\\( \\vec{\\nabla} \\cdot \\vec{J} \\) is the <em>divergence of the current density</em>, which we know describes how much of the current density is flowing in or out of the point. \\( \\frac{d\\rho}{dt} \\) is quite simply the rate at which the charge density, \\( \\rho \\), changes over time.</p>
@@ -17320,7 +17321,7 @@ const subtopics = {
       <h3>Maxwell's 1st equation</h3>
       <p>This process of using the Divergence theorem to get brand new equations is exactly what my boy Maxwell did to get his famous formulae. First we'll start with Gauss' law.</p>
       <div class=eqn> \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac1{\\varepsilon_0} \\int_V \\rho \\ dV \\] </div> 
-      <p>Use the divergence theorem</p>
+      <p>Use the divergence theorem as we did before, and we end up with:</p>
       <div class=eqn> \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} =  \\int_V \\vec{\\nabla} \\cdot \\vec{E} \\ dV =  \\int_V \\frac{\\rho}{\\varepsilon_0} \\ dV \\] </div> 
       <p>They are both integrals with respect to volume, so:</p>
       <div class=eqn> \\[\\int_V \\left( \\vec{\\nabla} \\cdot \\vec{E} - \\frac{\\rho}{\\varepsilon_0} \\right) \\ dV \\] </div> 
@@ -17413,6 +17414,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Turns out, this displacement is so small that they often times just couldn't see it</p>
       <h3>TL;DR</h3>
     `
   },
@@ -17477,6 +17479,530 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <h3>EM Plane waves</h3>
+      <p>It turns out we can treat electromagnetic waves as being <em>plane waves</em>. So let's say we have our generic plane wave:</p>
+      <div class=eqn> \\[ U = U_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\] </div> 
+      <p>This describes a wave with amplitude \\( U_0 \\) propagating in the direction \\( \\hat{k} \\). Now this is a scalar quantity (since \\( U \\) doesn't have the vanity arrow above it ), but we can make this a vector simply by reattaching an arrow on top of the U's. We have electric and magnetic fields in the form:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\vec{E} = \\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
+          \\vec{B} = \\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)}
+          \\end{align} \\] </div> 
+      <p>These are just the regular forms of plane waves, where \\( \\vec{E}_0 \\) and \\( \\vec{B}_0 \\) are the amplitudes of each wave, and \\( (\\vec{k} \\cdot \\vec{r} - \\omega t) \\) is the phase of the wave, which actually, you know what, we'll just call that \\( \\phi \\) cus it's easier, so instead we get these formulae.</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\vec{E} = \\vec{E}_0 e^{i \\phi} \\\\[6pt]
+          \\vec{B} = \\vec{B}_0 e^{i \\phi}
+          \\end{align} \\] </div> 
+      <p>If we take a freezeframe of the wave at a particular instant of time, then that will mean \\( \\vec{k} \\cdot \\vec{r} \\) is now constant. More importantly, \\( \\vec{k} \\cdot \\vec{r} = \\text{constant} \\) is the equation for a flat plane, hence where these waves get the name '<em>plane waves</em>'. The 'planes' are basically the peaks of the longitudinal waves, with each plane being a distance \\( \\lambda \\) from each other (the wavelength).</p>
+      <p>Now obviously these planes take up all space, whereas a real plane wave will only take up a little bit of space. Having said that, there are times where pretending they take up all space it actually very helpful. Let me show you what I mean.</p>
+      <p>First, let's take our newfound wave equations and put them into the Maxwell formulae from earlier.</p>
+      <div class=eqn> \\[ \\begin{align} 
+          \\vec{\\nabla} \\cdot \\vec{E} &= 0 \\\\[6pt]
+          \\vec{\\nabla} \\cdot \\vec{B} &= 0 \\\\[6pt]
+          \\vec{\\nabla} \\times \\vec{E} &= -\\frac{\\partial \\vec{B}}{\\partial t} \\\\[6pt]
+          \\vec{\\nabla} \\times \\vec{B} &= \\frac1{c^2} \\frac{\\partial \\vec{E}}{\\partial t}
+          \\end{align} \\] </div> 
+      <p>Now the reason we like plane waves so much is because they have a really cool feature, where differentiating them with respect to space or time is the same as multiplying the wave by a certain number.</p>
+      <p>Starting with the first two, now that we have actual formulae for \\( \\vec{E} \\) and \\( \\vec{B} \\), we can actually calculate the values of \\( \\vec{\\nabla} \\cdot \\vec{E} \\) and \\( \\vec{\\nabla} \\cdot \\vec{B} \\). <em>(Remember that \\( \\vec{\\nabla} \\cdot \\) is just taking the special derivatives and adding them together,  \\( \\vec{\\nabla} \\cdot \\vec{W} = \\frac{d\\vec{W}_x}{dx} + \\frac{d\\vec{W}_y}{dy} + \\frac{d\\vec{W}_z}{dz} \\) )</em></p>
+      <div class=eqn> \\[ \\begin{align} 
+          \\vec{\\nabla} \\cdot \\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
+          \\vec{\\nabla} \\cdot \\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)}
+          \\end{align} \\] </div> 
+      <p>So taking the spacial derivatives gives us the same wave back, multiplied by \\( i\\vec{k} \\). Putting those into the Maxwell formulae from earlier, and dividing by \\( i \\) on both sides:</p>
+      <div class=eqn> \\[ \\begin{align} 
+          \\vec{k} \\cdot \\vec{E} &= 0 \\\\[6pt]
+          \\vec{k} \\cdot \\vec{B} &= 0
+          \\end{align} \\] </div> 
+      <p>These show that  \\( \\vec{E} \\) and \\( \\vec{k} \\) are perpendicular. Next, by taking time derivatives, we see that that's equivalent to multiplying by \\( -i\\omega \\). Putting those in gives us:</p>
+      <div class=eqn> \\[ \\begin{align} 
+          \\vec{k} \\times \\vec{E} &= \\omega \\vec{B} \\\\[6pt]
+          \\vec{k} \\times \\vec{B} &= - \\frac{\\omega}{c^2} \\vec{E}
+          \\end{align} \\] </div> 
+      <p>These show that \\( \\vec{E} \\) and \\( \\vec{B} \\) are perpendicular to each other.</p>
+      <h3>Energy of an electromagnetic wave</h3>
+      <p>Remember from E&amp;M, that the energy of a wave is stored within the electric and magnetic fields.</p>
+      <p>Charges in an electric field gain energy from the electric field. This happens when a charge moves along the field. If it moves parallel to the field lines, then the field is doing all the work, meaning it</p>
+      <div class=eqn> \\[ W = \\vec{E} \\cdot \\vec{J} \\] </div> 
+      <p>The rate of change of energy</p>
+      <p>When work is transferred into the charges, we lose energy in the field (<em>\\( -W \\)</em>). When energy flows out of the volume, then we are loosing energy (obviously m8) (<em>\\( -\\vec{\\nabla} \\cdot \\vec{S} \\)</em>). So energy conservation is in this form?</p>
+      <div class=eqn> \\[ \\frac{du}{dt} = -W -\\vec{\\nabla} \\cdot \\vec{S} \\] </div> 
+      <p>Or if you'd like, you can sub in</p>
+      <div class=eqn> \\[ \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} = - \\vec{E} \\cdot \\vec{J} \\] </div> 
+      <p>We can use the equations from ages ago</p>
+      <div class=eqn> \\[ \\vec{J} = \\frac1{\\mu_0} ( \\vec{\\nabla} \\times \\vec{B} ) - \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\] </div> 
+      <p>Putting that in gives us:</p>
+      <div class=eqn> \\[ \\begin{align} \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} 
+          &= - \\vec{E} \\cdot \\left( \\frac1{\\mu_0} ( \\vec{\\nabla} \\times \\vec{B} ) - \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right) \\\\[6pt] 
+          &= - \\vec{E} \\cdot \\frac1{\\mu_0} ( \\vec{\\nabla} \\times \\vec{B} ) + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t} 
+          \\end{align} \\] </div>
+      <p>By using an identity () we can turn this into:</p>
+      <div class=eqn> \\[  \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} =  \\frac1{\\mu_0} \\vec{\\nabla} \\cdot  ( \\vec{E} \\times \\vec{B} ) - \\frac1{\\mu_0} \\vec{B} \\cdot  ( \\vec{\\nabla} \\times \\vec{E} ) + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t}. \\] </div> 
+      <p>We're going somewhere with this, I promise. Then by using <strong>M3</strong>, we can change the 3rd term:</p>
+      <div class=eqn> \\[  \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} =  \\frac1{\\mu_0} \\vec{\\nabla} \\cdot  ( \\vec{E} \\times \\vec{B} ) + \\frac1{\\mu_0} \\vec{B} \\cdot  \\frac{\\partial \\vec{B}}{\\partial t} + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t}. \\] </div> 
+      <p>Now notice the last two terms follow the \\( \\vec{W} \\frac{\\partial \\vec{W}}{\\partial t} \\) pattern. Now we use this fact:</p>
+      <div class=eqn> \\[ \\vec{W} \\cdot \\frac{\\partial \\vec{W}}{\\partial t} = \\frac{\\partial}{\\partial t} \\left( \\frac{W^2}2 \\right)  \\] </div> 
+      <p>That leaves us with our final equation:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} =  \\frac1{\\mu_0} \\vec{\\nabla} \\cdot  ( \\vec{E} \\times \\vec{B} ) + \\frac{\\partial}{\\partial t} \\left( \\frac{B^2}{2\\mu_0} + \\frac{\\varepsilon_0 E^2}2 \\right) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>That means:</p>
+      <div class=eqn> \\[ \\begin{align} 
+          u &= \\left( \\frac{B^2}{2\\mu_0} + \\frac{\\varepsilon_0 E^2}2 \\right) \\\\[6pt] 
+          \\vec{S} &= \\frac1{\\mu_0} ( \\vec{E} \\times \\vec{B} ) 
+          \\end{align} \\] </div>
+      <h3>TL;DR</h3>
+      <p>Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \\rho \\) and \\( J \\) are zero</p>
+    `
+  },
+
+  "em-in-matter": {
+    title: "Electromagnetic Waves In Matter",
+    content: `
+      <p>In the previous section, we looked at what happens to the Maxwell equations when electromagnetic waves travel through empty space, where there is no charge (\\( \\rho = 0 \\)) and therefore no current (\\( \\vec{J} = 0 \\)).</p>
+      <p>Now there is a slight problem. Can you tell me what that is?</p>
+      <p><em>Countdown clock tune starts playing</em></p>
+      <p>Time's up! Did you spot the problem? If you selected &quot;a good portion of waves in real life... actually no scratch that, pretty much the majority of waves in real life will be going through some sort of medium, rendering that last section completely bloody useless&quot;... You're wrong! Yes, a common mistake that is.</p>
+      <p>The correct answer was actually C, &quot;a good portion of waves in real life... actually no scratch that, pretty much the majority of waves in real life will be going through some sort of medium, but that doesn't render that last section completely useless, since there are a considerable number of times where waves do travel through a vacuum, and besides, we can simply modify 'em a bit to get 'em working for waves in matter, obviously m8 why would I go through the effort of writing out this whole section if it weren't bloody possible you knobhead?&quot;</p>
+      <p>If we wanna know how waves (and the Maxwell Equations) are affected in matter, we need to ask ourselves four very important questions:</p>
+      <ol>
+      <li>What does matter do to <em>electric fields</em>?</li>
+      <li>What does matter do to <em>magnetic fields</em>?</li>
+      <li>How can we write the Maxwell equations in such a way that they still look cute and pretty, whilst still accounting for matter which would complicate things a bunch?</li>
+      <li>What happens to the waves at a boundary (mathematically I mean)?</li>
+      </ol>
+      <p>To briefly address the third question, the strategy is basically to change \\( \\vec{E} \\) and \\( \\vec{B} \\) for a bunch of new letters, \\( \\vec{P} \\), \\( \\vec{M} \\), \\( \\vec{D} \\) and \\( \\vec{H} \\). We'll introduce 'em as we go along.</p>
+      <p>What we are trying to do is take the individual charges and spread them out like butter, to form smoother fields</p>
+      <h3>Polarisation</h3>
+      <p>Remember the first question:</p>
+      <blockquote>
+      <p>What does matter do to <em>electric fields</em>?</p>
+      </blockquote>
+      <p>Well let's find out. Give yourself a block of... something, whatever it is don't really matter right now (haha, it don't... <em>matter</em>! Get it? Right so the joke is we're talking about matter, as in stuff, but I used it in a different way?)</p>
+      <p>Take that block of matter and put an electric field through it. What happens?</p>
+      <p>We actually know the answer to this question, because we covered it when we talked about dielectrics and stuff. But if for whatever reason you forgot, here's a quick little recap:</p>
+      <p>Molecules, despite being charge neutral, don't necessarily have there charge distributed evenly. So for instance, water has a slightly negative side and a slightly positive side. As a result, when an electric field is applied to a water molecule, the molecule rotates, such that the positive side points in the direction of the field lines.</p>
+      <p>Even for molecules which aren't technically polarised, since the nucleus is positive and the orbiting electrons are negative, the atom still moulds itself in such a way that the orbital faces away from the direction of the field lines.</p>
+      <p>But for simplicity, we will think of a simple atom. The nucleus moves a distance \\( s \\) from the centre of the atom. This means that every atom or molecule becomes it's own little bar magnet with a \\( +q \\) on one side and a \\( -q \\) charge on the other side, which we will call a <em>dipole</em>. The charge of the poles multiplied by the distance from the centre is called the <em>electric dipole moment</em> of the atom or molecule, and points in the direction of the separation.</p>
+      <div class=eqn> \\[ \\vec{P}_i = q\\vec{s} \\] </div> 
+      <p>Now you might have noticed the little \\( i \\) subscripts. This is because each atom in the material will have its own polarisation, and therefore technically has be be considered seperately. However, we can still consider the total dipole moment of the block, as the sum of all the little dipole moments.</p>
+      <p>And here we meet the first of the magic letters, \\( \\vec{P} \\) for <em>polarisation</em>! This is the amount of dipole moment per unit volume, or in less nerdy vocabulary, the amount that the positive charges get pushed when the field is applied.</p>
+      <div class=eqn> \\[ \\vec{P} = \\frac{\\sum \\vec{P}_i}{V} \\] </div> 
+      <blockquote>
+      <p>\\( \\vec{P} \\) is a density of electric dipoles, averaged over a volume big enough to contain many atoms but small compared to the wavelength of light (continuum limit)</p>
+      </blockquote>
+      <h4>Uniform Polarisation</h4>
+      <p>Now let's think about what this means: if we have a lattice of completely neutral particles and move the positive charges to the right by an amount \\( s \\). Overall the block is still neutral, since the positive and negative charges are cancelling. However, at the two vertical edges, there is a positive charge on the right surface and a negative charge on the left surface.</p>
+      <p>On the surface we then have the <em>surface charge density</em>, \\( \\sigma_P \\), which is the charge per unit area on the edge of the material.</p>
+      <div class=eqn> \\[ \\sigma = \\frac{Q}A \\] </div> 
+      <p>The charge can be thought of as the charge of an individual atom, times the number of atoms per unit volume, times the volume. And the <em>volume</em> can be thought of as the area multiplied by the depth of the layer. The depth of the layer is just the distance the nuclei moved from their centre, \\( s \\)</p>
+      <div class=eqn> \\[ \\sigma = \\frac{qn A |\\vec{s}| }A = qn |\\vec{s}| \\] </div> 
+      <p>But remember that the total polarisation is the sum of the polarisations from all the atoms \\( Q|\\vec{s}| \\) times the volume, which gives us the same thing as this sigma:</p>
+      <div class=eqn> \\[ \\sigma = qn |\\vec{s}| = |\\vec{P}| \\] </div> 
+      <p>Or more generally:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\sigma_P = \\vec{P} \\cdot \\hat{n} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Surface charge density
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <h4>Non-uniform</h4>
+      <p>This assumes that the difference in polarisation is completely uniform, however I wanna make your life as difficult as possible, so now we are gonna consider <em>non-uniform</em> polarisation. To do this, take our long line of charges again, and split them into teeny weeny \\( dx \\) sized boxes. That way, the area is so small that the polarisation in any one of these boxes is near enough constant.</p>
+      <p>For the sake of visualisation, you can think of the charge density increasing per \\( dx \\) step, but this derivation works regardless. Each little cuboid has polarisation charge density of \\( ±P_x(x) \\), positive one one face and negative on the other face. Then the next cuboid has polarisation charge density of \\( ±P_x(x+dx) \\), positive one one face and negative on the other face.</p>
+      <p>At the boundaries, each cuboid has a charge of negative + positive. Since the charge at any point is just \\( AP_x \\), the polarisation density times area, meaning the difference in charges at the boundary is \\( AP_x(x)−AP_x(x+ dx) \\). Dividing by volume gives:</p>
+      <div class=eqn> \\[ \\begin{align} ρ_P
+          &= \\frac{AP_x(x)−AP_x(x+ dx)}{A \\ dx} \\\\[6pt]
+          &= \\frac{P_x(x)−P_x(x+ dx)}{dx} \\\\[6pt]
+          &= - \\frac{ \\partial P_x }{ \\partial x}
+          \\end{align} \\] </div> 
+      <p>Adding similar terms for \\( y \\) and \\( z \\) gives us:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ ρ_P = -\\vec{\\nabla} \\cdot \\vec{P} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Volume density of polarisation charges
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>If \\( \\vec{P} \\) changes in time, charges must move, so there is a polarisation current density</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{J}_P = \\frac{ \\partial \\vec{P} }{ \\partial t } \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Polarisation current density
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>In most things, the polarisation and the electric field are proportional, meaning two things</p>
+      <ul>
+      <li>Firstly, they are linear, which means that as you increase the field strength, the polarisation increases by some factor of the same amount</li>
+      <li>Secondly, they are <em>isotropic</em>, meaning that they are parallel</li>
+      </ul>
+      <p>These together mean that for a given material:</p>
+      <div class=eqn> \\[ \\vec{P} = \\text{some number} (\\vec{E}) \\] </div> 
+      <p>And let me save you the effort of trying to figure out what said number is:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{P} = \\varepsilon_0 \\chi \\vec{E} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Remember, everything we have done so far is just from the material's natural reaction to the electric field that was applied, \\( \\vec{E}_\\text{applied} \\). When we apply a field, the polarisation caused this opposing field, \\( \\vec{E}_P \\), which weakens the total field.</p>
+      <div class=eqn> \\[ \\vec{E} = \\vec{E}_\\text{applied} + \\vec{E}_P  \\] </div> 
+      <p>It turns out that \\(  \\vec{E}_P = \\frac{\\vec{P}}{\\varepsilon_0} \\), so:</p>
+      <div class=eqn> \\[ \\vec{E} = \\vec{E}_\\text{applied} - \\frac{\\vec{P}}{\\varepsilon_0} \\\\[6pt] = \\vec{E}_\\text{applied} - \\chi \\vec{E} \\] </div> 
+      <p>Combining everything gets us:</p>
+      <div class=eqn> \\[ \\vec{E} = \\frac1{1+\\chi} \\vec{E}_\\text{applied} = \\frac1{\\varepsilon_r} \\vec{E}_\\text{applied} \\] </div> 
+      <blockquote>
+      <p>The material generates its own field opposing the applied one (screening), so the actual field inside is reduced by factor \\( \\frac1{\\varepsilon_r} \\). Large susceptibility leads to strong screening. A metal can be thought of as “infinitely polarisable”, forcing \\( E≈0 \\) inside</p>
+      </blockquote>
+      <h3>Magnetisation</h3>
+      <p>One down, three to go. Now we'll try and answer the next question:</p>
+      <blockquote>
+      <p>What does matter do to <em>magnetic fields</em>?</p>
+      </blockquote>
+      <p>If a material is magnetised, then you can think of it as having a bunch</p>
+      <h3>TL;DR</h3>
+      <p>Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \\rho \\) and \\( J \\) are zero</p>
+    `
+  },
+
+  "fluid-intro": {
+    title: "Introduction to Fluid Mechanics",
+    content: `
+      <h3>What is a fluid?</h3>
+      <p>There are a bunch of different definitions, but for now we can go with this one:</p>
+      <blockquote>
+      <p>A substance which fills up a vessel with no fixed shape</p>
+      </blockquote>
+      <p>So you know how in a solid, the molecules are in like a fixed lattice and they can't really move 'cus of the intermolecular forces? Well in a fluid, the particles are near enough free to move. So this could be either a liquid or a gas.</p>
+      <p>There are a few ways we can describe a fluid:</p>
+      <ol>
+      <li>Try and look at every single individual particle, and their individual positions and speeds.</li>
+      </ol>
+      <p>Then by using certain equations of motion, we can predict where all the particles are gonna move. In principle this gives us a very precise model of the system. There is one problem though, i.e. there are a <em>lot</em> of bloody particles. And you have to somehow consider <em>all</em> their positions and <em>all</em> there speeds and collisions and interactions all at once? Ain't <em>nobody</em> got time for that m8!</p>
+      <p>So if there is a pretty small amount of particles, this works just fine. But for anything above like \\( N = 10 \\), this becomes a massive pain in the arse</p>
+      <ol start="2">
+      <li>The kinetic approach: We use some distribution function \\( f( \\vec{r}, \\vec{v}, t ) \\) which predicts the way the particles move.</li>
+      </ol>
+      <p>This magic function \\( f( \\vec{r}, \\vec{v}, t ) \\) tells us the number of a certain type of particle (be that electrons, oxygen molecules, or whatever) at a particular time, velocity and position.</p>
+      <p>Now of course, the next logical question to ask is &quot;well what exactly is \\( f( \\vec{r}, \\vec{v}, t ) \\)?</p>
+      <p>Technically, this is the Boltzmann equation</p>
+      <div class=eqn> \\[ \\frac{\\partial f}{\\partial t} + \\frac{\\vec{p}}{m} \\cdot \\nabla_{\\vec{r}} f + \\vec{F} \\cdot \\nabla_{\\vec{p}} f = Q(f,f)  \\] </div> 
+      <p>Again, this works like a charm if we can actually use it, but let's be honest... You cannot be arsed to try and figure out what this equation is saying, can you? I know you didn't even try to actually read it, you're eyes just skimmed past it.</p>
+      <p>This equation is bloody 7-dimensional (3 space dimensions, 3 momentum dimensions, 1 time dimension), that's a lot of bloody dimensions, certainly way more than I can be arsed to deal with.</p>
+      <ol start="3">
+      <li>The continuous matter approach</li>
+      </ol>
+      <p>In this case, we think of the fluid as one big flowy thing with density \\( \\rho \\), pressure \\( P \\), temperature \\( T \\) and a perhaps less familiar quantity, <em>bulk velocity</em> \\( \\vec{u} \\). The bulk velocity tells us the speed of the <em>flow</em>, not to be confused with the speed of individual particles.</p>
+      <p>From a mechanical perspective:</p>
+      <blockquote>
+      <p>A fluid is a substance which cannot resist shear force without motion, and doesn't return to the initial state when the force is removed</p>
+      </blockquote>
+      <h3>When can we use fluid mechanics?</h3>
+      <p>Density is the mass of the fluid over the volume the fluid takes up:</p>
+      <div class=eqn> \\[ \\rho = \\frac{M}V  \\] </div> 
+      <p>Or if you wanna be a nerd</p>
+      <div class=eqn> \\[ \\rho = \\lim_{\\Delta V \\to 0} \\frac{\\Delta M}{\\Delta V}  \\] </div> 
+      <p>And I know what you may or may not be thinking (especially if you are decently familiar with the quantum modules): &quot;well that don't make no bloody sense, volume going to zero? But that would force electrons 'n stuff to be forced into the same state, which is possible, which would create degeneracy pressure, meaning the volume wouldn't actually be zero 'cus that can't happen!&quot;</p>
+      <p>And my answer... quit being a geek. Quantum mechanics didn't really exist at the time fluid mechanics was developed, and therefore it won't actually make a difference whether we consider it or not. Of course in practice, once you go below a certain volume (which we will call \\( \\Delta V^* \\)), the quantum effects kick in and start to mess everything up. Having said that, fluid mechanics works for any volume above \\( (\\Delta V^*)^\\frac13 \\).</p>
+      <p>But just to prove the first point I made, for you average, friendly neighbourhood fluid, \\( (\\Delta V^*)^\\frac13 \\) is about 1 picometre, which is bloody tiny, so quit your whinging and just deal with it, k m8?</p>
+      <p>The mean free path length is the average distance a particle moves without colliding</p>
+      <div class=eqn> \\[ \\text{Kn} = \\frac{\\lambda}L  \\] </div> 
+      <p>If \\( \\text{Kn} \\) is small enough, then fluid mechanics works just fine. To be fair, in many cases there's not much point in actually calculating it, all we need to know is that the mean free path length is way smaller than the container. For example, at atmospheric pressure, the mean free path is about 0.1 micrometres. I'm sure that your room is probably bigger than that. Therefore, fluid mechanics can be applied to your room!*</p>
+      <h3>Stress and strain</h3>
+      <h4>Stress</h4>
+      <p><em>Stress</em> is a measure of what an object ‘feels’ so to speak. Like if someone were to press on your skin, that feeling of a force being applied is the stress. It is defined mathematically as the force per unit area:</p>
+      <div class=eqn> \\[ \\tau = \\frac{F}A  \\] </div> 
+      <p>And I know what you are thinking: ‘force per unit area? Ain’t that the pressure?’ And to a certain extent, you are exactly right! However, to another extent, you are wrong, and I'm a pessimist, so I'm gonna focus on the negative and say you're wrong, k? Cheers, m8!</p>
+      <p>What differentiates pressure and stress is the <em>direction</em> in which it is applied. Pressure acts in <em>all directions</em>. So like if you submerge a ball in water, there is <em>pressure</em> coming from above it, below it, in front of it, behind it, everywhere Stress, however, is <em>one-directional</em>. If you push down on a table, you are applying stress to the table rather than pressure, as it is only in one direction, i.e., down.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ τ_\\text{solid} = G\\frac{\\partial X}{\\partial y} = Ge \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Strain</h4>
+      <p>Next up, strain is a measure of how much something deforms when a force is applied. So going back to our skin example, how much your skin gets squished compared to the table is an indicator that your skin has a higher strain, e</p>
+      <hr>
+      <p>For a solid, when the stress is removed, it returns back to its original shape. Moreover, so long as the object is deformed, it is undergoing continuous stress.</p>
+      <p>For a fluid, however, once it has been deformed, the strain keeps on increasing, and it gets more and more deformed</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ τ_\\text{fluid} = \\mu\\frac{de}{dt} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  The stress in a fluid is proportional to the rate of change of the strain
+              </div></span>
+          </div>
+      </div>
+      <p>Since \\( e = \\frac{\\partial X}{\\partial y} \\), that means</p>
+      <div class=eqn> \\[ τ_\\text{fluid} = \\mu\\frac{d}{dt} \\left( \\frac{\\partial X}{\\partial y} \\right) \\] </div> 
+      <p>Switch the t and the y around, because we can do that apparently:</p>
+      <div class=eqn> \\[ τ_\\text{fluid} = \\mu\\frac{d}{dy} \\left( \\frac{\\partial X}{\\partial t} \\right) \\] </div> 
+      <p>Now we have a dX/dt, which is just the x-component of velocity:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ τ_\\text{fluid} = \\mu\\frac{d}{dy} u_x \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Newton's law of Viscosity</h3>
+      <p>Let's take a fluid flowing between two parallel plates, and the upper plate is moving with speed \\( \\vec{u} \\). We will say that this flow is laminar, meaning the rate of flow changes with height.</p>
+      <p>Once the flow becomes steady...</p>
+      <p>The top plate is obviously forcing the water. The amount of force will be larger if the water is being moved faster, and larger for a larger plate:</p>
+      <div class=eqn> \\[ F \\propto \\frac{u_x A}{y} \\] </div> 
+      <p>Now u_x/y ... put some partial derivatives on that, because why the hell not?</p>
+      <div class=eqn> \\[ \\frac{u_x}{y} \\propto \\frac{\\partial u_x}{\\partial h} \\] </div> 
+      <p>That means</p>
+      <div class=eqn> \\[ F = \\mu A \\frac{\\partial u_x}{\\partial h} \\] </div> 
+      <p>If the viscosity doesn't depend on the bulk velocity of the fluid, then the fluid is <em>Newtonian</em>. If it <em>does</em> depend on the bulk velocity, then it is a <em>non-Newtonian</em> fluid.</p>
+      <p>One more thing to note: if you interact with a fluid quickly enough, it will behave like a solid for a brief moment before the mass dissipates again.</p>
+      <h3>Fluid elements</h3>
+      <p>A <em>fluid element</em> is a tiny chunk of fluid which takes up some shape, like a cube for instance. The shape moves with the flow, and might become deformed over time, but the mass inside the element doesn't change. There are 2 flavours of fluid elements:</p>
+      <ol>
+      <li><strong>Lagrangian</strong>: there is no movement of mass in or out of the fluid</li>
+      <li><strong>Eulerian</strong>: This is a fluid element in a fixed location, mass may flow in or out.</li>
+      </ol>
+      <p>A <em>streamline</em> is the fluid mechanical cousin of electric and magnetic field lines</p>
+      <blockquote>
+      <p>A <em>streamline</em> - is a curve which, at a fixed time, in each location, is tangential to the fluid velocity \\( \\vec{u} \\)</p>
+      </blockquote>
+      <p>Let \\( dr \\) be a teeny tiny distance parallel to the streamline:</p>
+      <div class=eqn> \\[ d\\vec{r} = \\vec{u} \\ d\\lambda \\] </div> 
+      <p>Therefore:</p>
+      <div class=eqn> \\[ d\\lambda = \\frac{dx}{u_x} = \\frac{dy}{u_y} = \\frac{dz}{u_z} \\] </div> 
+      <h3>TL;DR</h3>
+    `
+  },
+
+  "lam-ste-vis": {
+    title: "Laminar, Steady and Viscous flow",
+    content: `
+      <p>Thanks to my phenominal introductory skills</p>
+      <h4>Viscous flow</h4>
+      <p>As the name quite clearly implies... this is just flow where you actually have to take viscocity into consideration</p>
+      <h4>Steady flow</h4>
+      <div class=eqn> \\[ \\vec{u}( \\vec{r}, t ) = \\vec{u}( \\vec{r} )  \\] </div> 
+      <h4>Laminar flow</h4>
+      <p>This means the fluid flows in layers, as opposed to turbulent flow</p>
+      <hr>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{\\partial P}{\\partial x} = \\mu \\frac{\\partial^2 u_x}{\\partial y^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>These must be equal to some constant, which we will call \\( -Q \\)</p>
+      <div class=eqn> \\[ \\mu \\frac{\\partial^2 u_x}{\\partial y^2} = -Q  \\] </div> 
+      <div class=eqn> \\[ u_x(y) = -\\frac{Q}{2\\mu} y^2 + Ay + B  \\] </div> 
+      <p>Using the boundary conditions:</p>
+      <div class=eqn> \\[ \\begin{align} 0 &= -\\frac{Qa^2}{2\\mu} - aA + B \\\\[6pt]
+              0 &= -\\frac{Qa^2}{2\\mu} + aA + B \\end{align} \\] </div> 
+      <p>That gives us \\( A = 0 \\) and \\( B = \\frac{Qa^2}{2\\mu} \\). Therefore our flow is:</p>
+      <div class=eqn> \\[ u_x(y) = -\\frac{Q}{2\\mu} y^2 + \\frac{Qa^2}{2\\mu} = \\frac{Q}{2\\mu} (a^2 - y^2)  \\] </div> 
+      <p>Then use the left hand side:</p>
+      <div class=eqn> \\[ \\frac{\\partial P}{\\partial x} = -Q = -\\frac{P_2 - P_1}L  \\] </div> 
+      <h3>Poiseuille Flow</h3>
+      <p><em>PWA-soo-y?</em></p>
+      <p>When we have a cylindrically symmetric, viscous, steady, laminar flow through a cylindrical pipe, we call it <em>Poiseuille Flow</em>. We'll be using cylindrical co-ordinates and having the fluid flow in the \\( \\hat{z} \\)-direction</p>
+      <p>We have this weird infinite water source on the left, and it flows into this teeny tiny tube on the right, which has a radius \\( a \\). At the end directly next to the infinite water source, the pressure is \\( P_1 \\), and at the other point there is a lower pressure, \\( P_2 \\).</p>
+      <p>Now let's consider a flow which is steady (doesn't change with time), laminar (works like layers) and viscous (sticky). Using the polar co-ordinates, we can define the flow as:</p>
+      <div class=eqn> \\[ \\vec{u} = u_z(r) \\hat{z}  \\] </div> 
+      <p>The fluid element is this... idk what you call this shape. It's like a curvy cuboid type thing? A curvy cuboid with height \\( \\Delta r \\), depth \\( \\Delta z \\) and arcs \\( r \\Delta \\phi \\) and \\( (r + \\Delta r) \\Delta \\phi \\)</p>
+      <p>The viscous force is:</p>
+      <div class=eqn> \\[  F_v = \\mu A \\frac{\\partial u_z}{\\partial r} \\] </div> 
+      <p>The area on the top layer is a bit bigger than the one on the bottom, so you have to take them away from each other. The top has an area \\( (r + \\Delta r) \\Delta \\phi \\Delta z \\), and the bottom one has area \\( r \\Delta \\phi \\Delta z \\). To get the</p>
+      <div class=eqn> \\[ u_x(y) = \\frac{Q}{4\\mu} (a^2 - r^2) = \\frac{P_1 - P_2}{4\\mu L} (a^2 - r^2)  \\] </div> 
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M = \\frac{\\Delta P \\pi \\rho}{4\\mu L} a^4 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Steady Viscous Flow</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\nabla P = \\mu \\nabla^2 \\vec{u} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>The Reynolds number</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\text{Re} = \\frac{ \\rho_0 L_0 u_0}{\\mu} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
+    `
+  },
+
+  "fluid-eqn": {
+    title: "Governing Equations of Fluid Mechanics",
+    content: `
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{\\partial \\rho}{\\partial t} + \\nabla \\cdot (\\rho \\vec{u}) = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Mass Continuity Equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>However, we can potentially make things even easier: if the fluid is incompressible, then the density can't change over time. Then the equation simplifies to:</p>
+      <div class=eqn> \\[ \\nabla \\cdot \\vec{u} = 0 \\] </div> 
+      <div class=eqn> \\[ \\mu \\frac{\\partial^2 u_x}{\\partial y^2} = -Q  \\] </div> 
+      <h3>Navier-Stokes Equation</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\rho \\left( \\frac{d \\vec{u}}{dt} + (\\vec{u} \\cdot \\nabla)\\vec{u} \\right)  =  - \\nabla P + \\mu∇^2\\vec{u} - \\rho \\vec{g} + \\dots  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: The Navier-Stokes Equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>These must be equal to some constant, which we will call \\( -Q \\)</p>
+      <div class=eqn> \\[ \\mu \\frac{\\partial^2 u_x}{\\partial y^2} = -Q  \\] </div> 
+      <div class=eqn> \\[ u_x(y) = -\\frac{Q}{2\\mu} y^2 + Ay + B  \\] </div> 
+      <p>Using the boundary conditions:</p>
+      <div class=eqn> \\[ \\begin{align} 0 &= -\\frac{Qa^2}{2\\mu} - aA + B \\\\[6pt]
+              0 &= -\\frac{Qa^2}{2\\mu} + aA + B \\end{align} \\] </div> 
+      <p>That gives us \\( A = 0 \\) and \\( B = \\frac{Qa^2}{2\\mu} \\). Therefore our flow is:</p>
+      <div class=eqn> \\[ u_x(y) = -\\frac{Q}{2\\mu} y^2 + \\frac{Qa^2}{2\\mu} = \\frac{Q}{2\\mu} (a^2 - y^2)  \\] </div> 
+      <p>Then use the left hand side:</p>
+      <div class=eqn> \\[ \\frac{\\partial P}{\\partial x} = -Q = -\\frac{P_2 - P_1}L  \\] </div> 
+      <h3>The Pressure equation</h3>
+      <p>Changes to pressure will be assumed to be adiabatic</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\rho \\frac{d}{dt} \\left( \\frac{P}{\\rho^\\gamma} \\right) = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: The Navier-Stokes Equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Subsets</h3>
+      <h4>Euler's equations</h4>
+      <p>If the fluid isn't viscous (inviscid), then that would mean that \\( \\mu = \\lambda = 0 \\)</p>
+      <h4>Incompressible</h4>
+      <p>If the fluid is incompressible, then \\( \\nabla \\cdot \\vec{u} = 0 \\)</p>
+      <h3>Boundary conditions</h3>
+      <p>Firstly, take this pipe thingy. Look at the walls of the pipe thingy. Hey, nice walls pipe thingy!</p>
+      <p>We are assuming that the pipe thingy's walls are firm enough such that no fluid is able to flow into it. This is called the <em>rigid wall</em> condition (or the <em>no-flux</em> condition)</p>
+      <div class=eqn> \\[ \\vec{u}_\\perp = 0  \\] </div> 
+      <p>There is also the no-slip condition, which tells us that the parallel flow on the boundary is zero</p>
+      <div class=eqn> \\[ \\vec{u}_\\parallel = 0  \\] </div> 
+      <p>Anyway, with that out the way, let's bring back our good friend, the unsolvable <em>Navier-Stokes equation</em></p>
+      <div class=eqn> \\[ \\rho \\left( \\frac{d \\vec{u}}{dt} + \\underbrace{(\\vec{u} \\cdot \\nabla)\\vec{u}}_{\\text{inertial term}} \\right)  =  - \\nabla P + \\underbrace{\\mu∇^2\\vec{u} + \\lambda\\nabla(\\nabla \\cdot \\vec{u})}_{\\text{inviscid term}} - \\rho \\vec{g} + \\dots   \\] </div> 
+      <p>The inertial term is basically the acceleration of the fluid element (if the flow were steady), and the inviscid terms are just the amount viscousity contibutes to the whole shebang.</p>
+      <p>Now let's say that the derivatives (the \\( \\nabla \\)'s, I mean) have a kinda eigenvalue of \\( \\frac1{L_0} \\), such that:</p>
+      <div class=eqn> \\[ \\nabla \\sim \\frac1{L_0}, \\quad \\nabla^2 \\sim \\frac1{L_0^2} \\] </div> 
+      <p>Then the two terms become:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\rho(\\vec{u} \\cdot \\nabla)\\vec{u} &\\sim \\frac{\\rho_0 u_0^2}{L_0} \\\\[6pt]
+          \\mu∇^2\\vec{u} &\\sim \\frac{\\mu u_0}{L_0^2}
+          \\end{align} \\] </div> 
+      <div class=eqn> \\[ \\frac{\\text{inertial}}{\\text{inviscid}} = \\text{Re} \\] </div> 
+      <h3>TL;DR</h3>
+    `
+  },
+
+  "bernoulli": {
+    title: "The Bernoulli Principle",
+    content: `
+      <p>Consider a regular old tube with a flow through it</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\rho \\frac{u^2}2 + \\rho g z + P = \\text{constant} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The Bernoulli Principle
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\mu \\frac{\\partial^2 u_x}{\\partial y^2} = -Q  \\] </div> 
+      <h3>Deriving the B.P. from the N.S. Equation</h3>
       <h3>TL;DR</h3>
     `
   }

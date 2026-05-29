@@ -675,6 +675,10 @@ const topics = [
         subid: "maxwell-em",
         title: "Maxwell Equations",
       },
+      {
+        subid: "em-in-matter",
+        title: "Maxwell Equations",
+      },
     ]
   },
   {
@@ -696,7 +700,19 @@ const topics = [
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {
-        subid: "astro-intro",
+        subid: "fluid-intro",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "lam-ste-vis",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "fluid-eqn",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "bernoulli",
         title: "Aren't planets and stars cool?",
       },
     ]

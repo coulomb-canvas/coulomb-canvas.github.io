@@ -652,7 +652,23 @@ const topics = [
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {
-        subid: "astro-intro",
+        subid: "stat-intro",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "canonical-en",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "partition",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "cl-thermo",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "grand-canon-en",
         title: "Aren't planets and stars cool?",
       },
     ]
@@ -713,6 +729,10 @@ const topics = [
       },
       {
         subid: "bernoulli",
+        title: "Aren't planets and stars cool?",
+      },
+      {
+        subid: "vortex",
         title: "Aren't planets and stars cool?",
       },
     ]

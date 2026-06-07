@@ -57,6 +57,8 @@
   <div id="bottom-shadow"></div>
   <div id="bottom-subtopic-name">Hello</div>
 
+  <div id="definition-tooltip" class="definition-tooltip"></div>
+
   <script> {
     const param = new URLSearchParams(window.location.search).get("subid");
     const sub = subtopics[param];
@@ -248,6 +250,29 @@ document.querySelectorAll(".image").forEach(box => {
 shrinkAllToFit(".image-tooltip-title");
 shrinkAllToFit(".formula-tooltip-title");
 
+const tooltip = document.getElementById("definition-tooltip");
+
+document.querySelectorAll(".definition").forEach(item => {
+  item.addEventListener("mouseenter", async () => {
+    tooltip.innerHTML = item.dataset.definition;
+
+    const rect = item.getBoundingClientRect();
+    tooltip.style.left = `${window.scrollX + rect.left + rect.width / 2}px`;
+    tooltip.style.top = `${window.scrollY + rect.bottom + 8}px`;
+    tooltip.style.transform = "translateX(-50%) translateY(-5px)";
+
+    tooltip.classList.add("show");
+
+    if (window.MathJax) {
+      await MathJax.typesetPromise([tooltip]);
+    }
+  });
+
+  item.addEventListener("mouseleave", () => {
+    tooltip.classList.remove("show");
+  });
+});
+
 // Hydrogen Emission Spectrum Simulation - FIXED
 console.log("DEBUG: Script has started running.");
 
@@ -364,6 +389,8 @@ document.addEventListener('DOMContentLoaded', function() {
     lengthValue.textContent = Math.round(L);
   });
 
+  
+
 
 
 
@@ -372,6 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
   </script>
+  
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 123 subtopics
-// Generated: 2026-05-29T21:08:35.685Z
+// AUTO-GENERATED FILE - Contains 129 subtopics
+// Generated: 2026-06-07T15:40:40.186Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 122 existing hand-written entries
-//   - 59 Markdown-generated entries
+//   - 129 existing hand-written entries
+//   - 65 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -2148,7 +2148,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\[ W = \\int_C \\vec{F} \\cdot d\\vec{l} \\]</p>
+            <p>\\[ W = \\int_C \\vec{F} \\cdot d\\vec{\\ell} \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
           Formula 1: Work as a Line Integral</div><div class="formula-tooltip-desc">
@@ -2193,7 +2193,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            <p>\\[ \\int_a^b \\vec{F} \\cdot d\\vec{l} = U(a) - U(b) \\]</p>
+            <p>\\[ \\int_a^b \\vec{F} \\cdot d\\vec{\\ell} = U(a) - U(b) \\]</p>
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2: Path Independence in <br> Conservative Fields</div>
@@ -2275,7 +2275,7 @@ const subtopics = {
       <p> Say we have this line integral</p>
 
       <div class=eqn> \\[
-        I = \\int_C \\vec{P} \\cdot d\\vec{l}
+        I = \\int_C \\vec{P} \\cdot d\\vec{\\ell}
       \\]
 
       \\[
@@ -2284,7 +2284,7 @@ const subtopics = {
 
       <p> and \\(C_1\\) is the line connecting the origin and the point \\( (1,1) \\). </p>
 
-      <p> <em>Parameterisation</em> is basically the process of figuring out what the \\( d\\vec{l} \\) is, in 
+      <p> <em>Parameterisation</em> is basically the process of figuring out what the \\( d\\vec{\\ell} \\) is, in 
       terms of x and y (or i and j). We'll start by trying to get a formula which describes the path, \\( \\vec{l} \\),
       and in this case, it's quite simple, it's just: </p>
 
@@ -2301,7 +2301,7 @@ const subtopics = {
       <p> I hope you can see why that's true, because IDK how else to explain it. Your
       job is just to find a definition of the path (or paths) in terms of i's and j's. </p>
 
-      <p> Now for \\( d\\vec{l} \\), just differentiate and rearrange: </p>
+      <p> Now for \\( d\\vec{\\ell} \\), just differentiate and rearrange: </p>
 
       <div class=eqn> \\[
         \\frac{d \\vec{l}}{dx} = 1 \\hat{i} + 1 \\hat{j}
@@ -2311,10 +2311,10 @@ const subtopics = {
         d \\vec{l} = (1 \\hat{i} + 1 \\hat{j})dx = dx \\hat{i} + dx \\hat{j}
       \\] </div>
 
-      <p> Now that we have a value for \\( d\\vec{l} \\), we can solve the integral as usual: </p>
+      <p> Now that we have a value for \\( d\\vec{\\ell} \\), we can solve the integral as usual: </p>
 
       <div class=eqn> \\[ \\begin{align}
-        I &= \\int_C \\vec{P} \\cdot d\\vec{l} \\\\[6pt]
+        I &= \\int_C \\vec{P} \\cdot d\\vec{\\ell} \\\\[6pt]
           &= \\int_C \\left( 5y^2 \\hat{i} + 2xy \\hat{j} \\right) \\cdot \\left( dx \\hat{i} + dx \\hat{j} \\right) \\\\[6pt]
           &= \\int_C \\begin{pmatrix} 5x^2 \\\\ 2x^2 \\end{pmatrix} \\cdot \\begin{pmatrix} dx \\\\ dx \\end{pmatrix} \\\\[6pt]
           &= \\int_0^1 7x^2 dx \\\\[6pt]
@@ -2329,7 +2329,7 @@ const subtopics = {
         <li>Cylindrical: \\( dV = R  dR  d\\phi  dz \\)</li>
         <li>Spherical: \\( dV = r^2 \\sin\\theta  dr  d\\theta  d\\phi \\)</li>
         <li>Gaussian: \\( \\int_{-\\infty}^{\\infty} e^{-x^2}  dx = \\sqrt{\\pi} \\)</li>
-        <li>Line integral: \\( \\int_C \\vec{F} \\cdot d\\vec{l} \\)</li>
+        <li>Line integral: \\( \\int_C \\vec{F} \\cdot d\\vec{\\ell} \\)</li>
         <li>Conservative field: \\( \\vec{F} = -\\nabla U \\), path-independent</li>
         <li>Surface integral: \\( \\iint \\vec{F} \\cdot d\\vec{S} \\) = flux</li>
       </ul>
@@ -3704,7 +3704,7 @@ const subtopics = {
       <p>And just like how force is the rate of change of momentum, MOMENT is the rate of change of angular momentum.
       This is called the rotational analogue of Newton's second law.</p>
       <div class=eqn> \\[ \\vec{F} = \\frac{d\\vec{p}}{dt} \\quad \\xrightarrow{\\text{Analogy}} \\quad \\vec{\\tau} = 
-      \\frac{d\\vec{L}}{dt} \\] </div>
+      \\frac{d\\vec{\\ell}}{dt} \\] </div>
 
       <p>Isn't it so much fun seeing how everything in linear mechanics has a rotational equivalent? In fact,
       even mass has a rotational equivalent, the <strong>moment of inertia</strong>, \\(I\\).</p>
@@ -8148,11 +8148,11 @@ const subtopics = {
       <p> By turning this into a line integral, we can generalise this formula so that it applies to wiggly paths
         as well as straight lines:</p>
 
-      <div class=eqn> \\[ W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{l} \\] </div>
+      <div class=eqn> \\[ W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{\\ell} \\] </div>
 
       <p>Or for a closed path (when it starts and ends in the same place):</p>
 
-      <div class=eqn> \\[ W = \\oint_C \\vec{F} \\cdot d\\vec{l} \\] </div>
+      <div class=eqn> \\[ W = \\oint_C \\vec{F} \\cdot d\\vec{\\ell} \\] </div>
 
       <p>For a conservative force (like the electric force), the work done depends only on start and end points.
         Since the path doesn't matter, we can think of work done in terms of a change in potential energy. 
@@ -8164,7 +8164,7 @@ const subtopics = {
         potential: </p>
 
       <div class=eqn> \\[
-        W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{l}
+        W_{a \\rightarrow b} = \\int_a^b \\vec{F} \\cdot d\\vec{\\ell}
       \\] 
 
       \\[
@@ -8226,7 +8226,7 @@ const subtopics = {
         point charge, \\(E\\), and the distance is an infinitely small distance, \\( d \\vec{l} \\), which we will 
         integrate over the path the charge is moving along, between points \\( a \\) and \\( b \\):</p>
 
-      \\[ V_a - V_b = \\int_b^a \\vec{E} \\cdot d\\vec{l} \\]
+      \\[ V_a - V_b = \\int_b^a \\vec{E} \\cdot d\\vec{\\ell} \\]
 
       <p>Now of course, you would never doubt me, because you know I'm overpowered and I know everything. But say,
         hypothetically, someone <em>were</em> to doubt me. Well in that situation I would use this new way of calculating
@@ -8238,16 +8238,16 @@ const subtopics = {
         wonder why we have 2 charges here when before we only had one. The simple andwer is... shush mate. I know what
         I'm bloody doing, just relax, k?</p>
 
-      <p>Anyway, in order to use our new integration formula, we need an \\( \\vec{E} \\) and a \\( d\\vec{l} \\).
+      <p>Anyway, in order to use our new integration formula, we need an \\( \\vec{E} \\) and a \\( d\\vec{\\ell} \\).
         And getting these two is pretty simple. We know what \\( \\vec{E} \\) should be fromm a while back:</p>
 
       <div class=eqn> \\[ \\vec{E}(\\vec{r}) = \\frac{q}{4 \\pi \\varepsilon_0 r^2} \\hat{r} \\] </div>
 
       <p> Next, since we are only increasing the distance from the charge and not changing the angle, that means that
-        \\( d\\vec{l} \\) only works in the \\( \\hat{r} \\). In other words: </p>
+        \\( d\\vec{\\ell} \\) only works in the \\( \\hat{r} \\). In other words: </p>
 
       <div class=eqn> \\[
-        d\\vec{l} = \\hat{r} dr
+        d\\vec{\\ell} = \\hat{r} dr
       \\] </div>
 
       <p>Now just stick 'em in, and see wagwan:</p>
@@ -8289,7 +8289,7 @@ const subtopics = {
         <li>\\( \\Delta U = -W \\) — work done by field</li>
         <li>\\( U = \\frac{1}{4\\pi\\epsilon_0} \\frac{q_1 q_2}{r} \\)</li>
         <li>\\( V = U/q_0 \\) — potential is energy per charge</li>
-        <li>\\( \\Delta V = \\int \\vec{E} \\cdot d\\vec{l} \\)</li>
+        <li>\\( \\Delta V = \\int \\vec{E} \\cdot d\\vec{\\ell} \\)</li>
         <li>\\( \\vec{E} = -\\nabla V \\)</li>
         <li>Equipotentials: \\( V \\) constant, \\( \\vec{E} \\perp \\) surface</li>
         <li>Grounding: sets \\( V = 0 \\)</li>
@@ -8755,12 +8755,12 @@ const subtopics = {
         to talk about it. Recall that work done is force times distance, which we can write as a line integral: </p>
 
       <div class=eqn> \\[
-        W = \\int \\vec{F} \\cdot d\\vec{l}
+        W = \\int \\vec{F} \\cdot d\\vec{\\ell}
       \\] </div>
 
       <p> \\( \\vec{F} \\) here is the force due to the magnetic field, \\( \\vec{F} = q(\\vec{v} \\times \\vec{B}) \\),
-        and since \\( d\\vec{l} \\) is a distance, and distance = speed \\( \\times \\) time, we can split it up into
-        \\( d\\vec{l} = \\vec{v}dt \\). By subbing those in, we get: </p>
+        and since \\( d\\vec{\\ell} \\) is a distance, and distance = speed \\( \\times \\) time, we can split it up into
+        \\( d\\vec{\\ell} = \\vec{v}dt \\). By subbing those in, we get: </p>
 
       <div class=eqn> \\[
         W = \\int q(\\vec{v} \\times \\vec{B}) \\cdot \\vec{v}dt
@@ -8857,17 +8857,17 @@ const subtopics = {
       \\] </div>
 
       <p>And remember from earlier that \\( \\vec{v}_d \\) and  \\( \\vec{L} \\), point in the same direction,
-        meaning \\( \\vec{v}_ddl \\) is the same as \\( v_d d\\vec{l} \\). So let's do a quick little
+        meaning \\( \\vec{v}_ddl \\) is the same as \\( v_d d\\vec{\\ell} \\). So let's do a quick little
         switcheroo:</p>
 
       <div class=eqn> \\[
-        d\\vec{F} = qnAv_d d\\vec{l} \\times \\vec{B}
+        d\\vec{F} = qnAv_d d\\vec{\\ell} \\times \\vec{B}
       \\] </div>
 
       <p>Since \\( qnAv_d = I \\), we now have:</p>
 
       <div class=eqn> \\[
-        d\\vec{F} = I d\\vec{l} \\times \\vec{B}
+        d\\vec{F} = I d\\vec{\\ell} \\times \\vec{B}
       \\] </div>
 
       \\[
@@ -8877,7 +8877,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[  \\vec{F} = \\int I d\\vec{l} \\times \\vec{B} \\]
+            \\[  \\vec{F} = \\int I d\\vec{\\ell} \\times \\vec{B} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 7: Force on a current carrying wire V2
@@ -9062,7 +9062,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{encl}} \\]
+            \\[ \\oint \\vec{B} \\cdot d\\vec{\\ell} = \\mu_0 I_{\\text{encl}} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3: Ampère's Law
@@ -9077,7 +9077,7 @@ const subtopics = {
       <ol>
         <li>Choose a surface that matches the symmetry.</li>
         <li>Make sure \\( \\vec{B} \\) is constant and perpendicular to the surface.</li>
-        <li>Calculate \\( \\oint \\vec{B} \\cdot d\\vec{l} \\), which is basically just
+        <li>Calculate \\( \\oint \\vec{B} \\cdot d\\vec{\\ell} \\), which is basically just
           \\( B \\times \\text{surface area} \\)</li>
         <li>Find \\( I_{\\text{encl}} \\)</li>
         <li>Solve for \\( B \\)</li>
@@ -9217,11 +9217,11 @@ const subtopics = {
       <h3>TL;DR</h3>
 
       <ul>
-        <li>Biot-Savart: \\( d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I d\\vec{l} \\times \\hat{r}}{r^2} \\)</li>
+        <li>Biot-Savart: \\( d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I d\\vec{\\ell} \\times \\hat{r}}{r^2} \\)</li>
         <li>Wire: \\( B = \\frac{\\mu_0 I}{2\\pi r} \\)</li>
         <li>Loop: \\( B = \\frac{\\mu_0 I}{2a} \\)</li>
         <li>Solenoid: \\( B = \\mu_0 n I \\)</li>
-        <li>Ampère’s Law: \\( \\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0 I_{\\text{encl}} \\)</li>
+        <li>Ampère’s Law: \\( \\oint \\vec{B} \\cdot d\\vec{\\ell} = \\mu_0 I_{\\text{encl}} \\)</li>
       </ul>
 
       <p>And remember: the universe doesn’t care how much current you have.  
@@ -9351,7 +9351,7 @@ const subtopics = {
         the Lorentz force (stay with me now, I promise I'm going somewhere with this):</p>
 
       <div class=eqn> \\[
-        d\\vec{F} = Id\\vec{l} \\times \\vec{B}
+        d\\vec{F} = Id\\vec{\\ell} \\times \\vec{B}
       \\] </div>
 
       \\[
@@ -9382,7 +9382,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\mathcal{E} = \\oint (\\vec{v} \\times \\vec{B}) \\cdot d\\vec{l} \\]
+            \\[ \\mathcal{E} = \\oint (\\vec{v} \\times \\vec{B}) \\cdot d\\vec{\\ell} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 2: EMF in a moving crossbar
@@ -9456,7 +9456,7 @@ const subtopics = {
       <div class="hover-wrapper">
         <div class="formula-container">
           <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-            \\[ \\mathcal{E} = \\oint_\\text{loop} \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi_B}{dt} \\]
+            \\[ \\mathcal{E} = \\oint_\\text{loop} \\vec{E} \\cdot d\\vec{\\ell} = -\\frac{d\\Phi_B}{dt} \\]
           </div>
           <span class="formula-tooltip"><div class="formula-tooltip-title">
             Formula 3: EMF in a closed loop
@@ -9468,7 +9468,7 @@ const subtopics = {
 
 
       <p>And this is where the bass drops! Back in the day, we said that the potential in a closed loop is 
-        \\( 0 \\) (\\( \\oint_\\text{loop} \\vec{E} \\cdot d\\vec{l} = 0 \\)), since the electric field is
+        \\( 0 \\) (\\( \\oint_\\text{loop} \\vec{E} \\cdot d\\vec{\\ell} = 0 \\)), since the electric field is
         conservative. But now that we have a varying current, it no longer equals \\( 0 \\). That's because
         all this while, we have been using magnetostatics (nothing changes, except position maybe). When the
         magnetic field changes, all of our assumptions break down. </p>
@@ -18001,9 +18001,666 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <div class=eqn> \\[ \\mu \\frac{\\partial^2 u_x}{\\partial y^2} = -Q  \\] </div> 
+      <div class=eqn> \\[ \\rho \\frac{u_1^2}2 + \\rho g H + \\cancel{P_\\text{atm}} = \\rho \\frac{u_2^2}2 + \\cancel{P_\\text{atm}}  \\] </div> 
+      <div class=eqn> \\[ \\rho gH = \\frac{\\rho}2 (u_2^2 - u_1^2) \\] </div> 
+      <div class=eqn> \\[ u_2 = \\sqrt{2gH} \\] </div> 
       <h3>Deriving the B.P. from the N.S. Equation</h3>
       <h3>TL;DR</h3>
+    `
+  },
+
+  "vortex": {
+    title: "Circulation and Vorticity",
+    content: `
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{w} = \\nabla \\times \\vec{u} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Vorticity
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>If \\( \\nabla \\times \\vec{u} \\), then the flow is <em>irrotational</em>.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ K = \\oint_\\Gamma \\vec{u} \\cdot d\\vec{\\ell} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Circulation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\oint_\\Gamma \\vec{u} \\cdot d\\vec{\\ell} = \\int_S (\\nabla \\times \\vec{u}) \\cdot d\\vec{S} \\] </div> 
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dK}{dt} = \\frac{d}{dt} \\left[ \\oint_\\Gamma \\vec{u} \\cdot d\\vec{\\ell} \\right] = 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Circulation Theorem
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Start out by simply writing out the integral as being differentiated by \\( t \\), then move the operator inside the integral because it makes no difference:</p>
+      <div class=eqn> \\[ \\begin{align} \\frac{dK}{dt} &= \\frac{d}{dt} \\oint_\\Gamma \\vec{u} \\cdot d\\vec{\\ell} \\\\[6pt]
+          &= \\oint_\\Gamma \\frac{d}{dt} (\\vec{u} \\cdot d\\vec{\\ell}) \\end{align} \\] </div> 
+      <p>Then expand:</p>
+      <div class=eqn> \\[ \\oint_\\Gamma \\frac{d}{dt} (\\vec{u} \\cdot d\\vec{\\ell}) = \\oint_\\Gamma \\frac{d\\vec{u}}{dt} \\cdot d\\vec{\\ell} + \\oint_\\Gamma  \\vec{u} \\cdot \\frac{d(d\\vec{\\ell})}{dt} \\] </div> 
+      <p>So let's work this out, starting with the integral on the right. You might think that differentiating \\(d\\vec{\\ell} \\) is a bit odd, but bare in mind that the direction \\(d\\vec{\\ell} \\) points will be changing over time. If we say that \\(d\\vec{\\ell} = \\vec{r}_2 - \\vec{r}_1 \\), then that means:</p>
+      <div class=eqn> \\[ \\frac{d(d\\vec{\\ell})}{dt} = \\frac{d\\vec{r}_2}{dt} - \\frac{d\\vec{r}_1}{dt} = d\\vec{u} \\] </div> 
+      <p>So then plugging that in gives us:</p>
+      <div class=eqn> \\[ \\oint_\\Gamma  \\vec{u} \\cdot \\frac{d(d\\vec{\\ell})}{dt} = \\oint_\\Gamma  \\vec{u} \\cdot d\\vec{u} 
+          = \\oint_\\Gamma  d\\frac{u^2}2  \\] </div> 
+      <p>This term is therefore zero</p>
+      <p>Now the first term. Go back to the inviscid, incompressible Navier-Stokes equation:</p>
+      <div class=eqn> \\[ \\rho \\frac{d \\vec{u}}{dt}  =  - \\nabla P - \\rho \\vec{g} + \\dots  \\] </div> 
+      <p>Hey, look at that, there's a \\( \\frac{d \\vec{u}}{dt} \\) right there for us to nick! So just devide both sides by \\( \\rho \\) and ignore the dots at the end, and then we end up with:</p>
+      <div class=eqn> \\[ \\frac{d \\vec{u}}{dt}  =  - \\frac1{\\rho} \\nabla P - g \\hat{k}  \\] </div> 
+      <p>Meaning:</p>
+      <div class=eqn> \\[ \\frac{dK}{dt} = \\oint_\\Gamma \\left( \\frac{-1}{\\rho} \\nabla P - g \\hat{k} \\right) \\cdot d\\vec{\\ell} \\] </div> 
+      <p>Since the \\( \\ell \\) and the \\( \\hat{k} \\) are perpendicular to each other:</p>
+      <div class=eqn> \\[ g \\oint_\\Gamma \\hat{k} \\cdot d\\vec{\\ell} = 0 \\] </div> 
+      <p>Leaving:</p>
+      <div class=eqn> \\[ \\frac{dK}{dt} = \\oint_\\Gamma \\left( \\frac{-1}{\\rho} \\nabla P \\right) \\cdot d\\vec{\\ell} \\] </div> 
+      <p>This is true is the fluid is either:</p>
+      <ul>
+      <li><strong>INCOMPRESSIBLE</strong> In that case, the density if constant, meaning the \\( \\frac{-1}{\\rho} \\) term can be taken outside the integral. Meaning: <div class=eqn> \\[ \\frac{dK}{dt} = \\frac{-1}{\\rho} \\oint_\\Gamma ( \\nabla P ) \\cdot d\\vec{\\ell}<br>
+      = \\frac{-1}{\\rho} \\oint_\\Gamma dP = 0\\] </div>  As required.</li>
+      <li><strong>BAROTROPIC</strong> This means that the density depends on the pressure: <div class=eqn> \\[ \\rho = \\rho(P) \\] </div> For example, when the flow is <em>adiabatic</em> (where \\( \\frac{P}{\\rho \\gamma} \\)) or <em>isothermal</em> (where \\( \\frac{P}{\\rho} \\))</li>
+      </ul>
+      <p>Now we can apply Stokes' Theorem to the remaining integral:</p>
+      <div class=eqn> \\[ \\oint_\\Gamma \\left( -\\frac{\\nabla P}{\\rho(P)} \\right) \\cdot d\\vec{\\ell} = \\oint_S \\left( -\\frac{\\nabla P}{\\rho(P)} \\right) \\cdot d\\vec{S} \\] </div> 
+      <p>Then by using an identity:</p>
+      <div class=eqn> \\[ \\nabla \\times \\left(\\frac{\\vec{A}}{f}\\right) =
+          \\frac{\\nabla f \\times \\vec{A}}{f^2} + \\frac{\\nabla \\times \\vec{A}}{f} \\]
+       </div> 
+      <p>We get:</p>
+      <div class=eqn> \\[ \\nabla \\times \\left(\\frac{\\nabla P}{\\rho}\\right) =
+          \\frac{\\nabla \\rho \\times \\nabla P}{\\rho^2} + \\frac{\\nabla \\times (\\nabla P)}{\\rho}\\]
+       </div> 
+      <h3>Potential flow</h3>
+      <p>From usual mathematics, we know that if the curl of a vector is zero, then we can write:</p>
+      <div class=eqn> \\[ \\vec{u} = \\nabla \\phi \\] </div> 
+      <p>This means two things</p>
+      <ul>
+      <li><strong>THE FLOW IS NOW DESCRIBED BY A SCALAR</strong> Instead of using a velocity vector which requires 3 scalar functions (x, y, and z), we can use a single scalar function \\( \\phi \\). Since the curl of a gradient is 0: \\[ \\nabla \\times \\nabla \\phi \\] This automatically fulfils the <em>irrotational condition</em>.</li>
+      <li><strong>SOLUTIONS OF THE LAPLACIAN CAN BE INCLUDED</strong> If we also consider that the flow is <em>incompressible</em> (meaning the divergence of that vector is also zero, \\( \\nabla \\cdot \\vec{u} = 0 \\)), then that means \\( \\nabla^2 \\phi = 0 \\), or the Laplacian is zero. Any flow which solves the laplacian is called a <em>potential flow</em>. \\n Since the Laplace Equation is linear, any linear combination of solutions is also a solution: \\[ \\phi = a\\phi_1 + b\\phi_2 \\text{ is a solution}\\]</li>
+      </ul>
+      <h4>Example 1: Uniform Flow</h4>
+      <p>Here's an easy peezy lemon squeezy example of a potential flow:</p>
+      <div class=eqn> \\[ \\vec{u} = u_0 \\hat{i} \\] </div> 
+      <p>That means</p>
+      <div class=eqn> \\[ \\nabla \\phi = u_0 \\] </div> 
+      <p>Giving a solution</p>
+      <div class=eqn> \\[ \\phi = u_0 x + \\text{constant} \\] </div> 
+      <h4>Example 2: 2D Point Source</h4>
+      <div class=eqn> \\[ \\vec{u} = \\frac{q}{2πr} \\hat{r} \\] </div> 
+      <p>Is this an irrotational flow?</p>
+      <div class=eqn> \\[ \\nabla \\times \\vec{u} = \\frac1{r} \\begin{vmatrix} \\hat{r} & r\\hat{\\theta} & \\hat{z} \\\\ 
+          \\frac{\\partial}{\\partial r} & \\frac{\\partial}{\\partial \\theta} & \\frac{\\partial}{\\partial z} \\\\  
+          \\frac{q}{2πr} & 0 & 0 \\end{vmatrix} = 0 \\] </div> 
+      <p>Yes it is!!</p>
+      <div class=eqn> \\[ \\nabla \\cdot \\vec{u} = \\frac{1}{r}\\frac{\\partial}{\\partial r}(ru_r)
+          + \\frac{1}{r}\\frac{\\partial u_\\theta}{\\partial \\theta} + \\frac{\\partial u_z}{\\partial z} \\] </div> 
+      <p>Therefore our potential is:</p>
+      <div class=eqn> \\[ \\nabla\\phi = \\frac{q}{2πr} \\hat{r} \\] </div> 
+      <div class=eqn> \\[ \\phi = \\frac{q}{2π} \\ln{r} + C = \\frac{q}{4π} \\ln{(r^2)} + C \\] </div> 
+      <p>Then in cartesian:</p>
+      <div class=eqn> \\[ \\phi  = \\frac{q}{4π} \\ln{(x^2 + y^2)} + C \\] </div> 
+      <h3>Free vortex</h3>
+      <p>A <em>free vortex</em> has a circular path around an axis, but it fades out to zero away from it \\( \\nabla \\times \\vec{u} \\).</p>
+      <p>Since things are spinning, we have to use <em>cylindrical co-ordinates</em>. Since the fluid is only flowing around and arounda (i.e. not going up or outwards), the flow only has an angular component:</p>
+      <div class=eqn> \\[ \\vec{u} = u_\\theta \\hat{\\theta} \\] </div> 
+      <p>So with the whole curl being zero thing, that means:</p>
+      <div class=eqn> \\[ \\frac1{r} \\frac{\\partial}{\\partial r} ( r u_\\theta ) = 0 \\] </div> 
+      <p>Solved by:</p>
+      <div class=eqn> \\[ u_\\theta = \\frac1{r} \\frac{K}{2π} \\] </div> 
+      <p>Bare in mind, as \\( r \\) tends to zero, this would mean the flow speed becomes infinite. This is obviously impossible, there is a distance \\( \\delta \\) where the speed increases linearly</p>
+      <p>Anyway, let's calculate the circulation</p>
+      <div class=eqn> \\[ \\begin{align} \\oint_\\Gamma \\vec{u} \\cdot d\\vec{\\ell} 
+          &= \\int_0^{2π} u_\\theta r \\ d\\theta \\\\[6pt]
+          &= \\frac{K}{2π} \\int_0^{2π} u_\\theta \\ d\\theta \\\\[6pt]
+          &= K 
+      \\end{align} \\] </div> 
+      <p>In general, if the path \\( \\Gamma \\) goes around the axis, then \\( K \\neq 0 \\).</p>
+      <p>The potential is then:</p>
+      <div class=eqn> \\[ u_\\theta =  \\frac{K}{2π} \\theta + C \\] </div> 
+      <p>If we go farther out, the pressure becomes atmospheric pressure and the flow speed becomes zero. Take the radial component of the Navier-Stokes equation:</p>
+      <h3>TL;DR</h3>
+    `
+  },
+
+  "stat-intro": {
+    title: "Introduction to Statistical Mechanics",
+    content: `
+      <p>Hello and welcome to my summary of statistical mechanics! To give you a brief introduction, this is just a different way of looking at the physics we have already done.</p>
+      <p>Up until now, we have relied on <em>thermodynamics</em> to describe the thermal properties of an object. We assume there is a unique state an object can be in, known as thermal equilibrium. At this thermal equilibrium, Pressure (\\(P\\)), entropy (\\(S\\)), temperature (\\(T\\)) and internal energy (\\(U\\)) are related by <em>empirical laws</em>. In other words, all the formulae we learn about regarding these quantities are most accurate at <em>thermal equilibrium</em>. In fact, they are built under the assumption of thermal equilibrium.</p>
+      <p>Instead of thinking of things in terms of macroscopic properties like temperature and pressure, statistical mechanics defines properties in terms of how likely a system’s <em>microstates</em> are.</p>
+      <p>&quot;Microstate? What the cluck is a microstate?&quot; I hear you ask?</p>
+      <p>A <em>microstate</em> is a specific configuration of a system: any way the particles in a system can arrange themselves. So their position, their energies, etc. This microscopic property of the system is consistent with its previously mentioned macroscopic properties.</p>
+      <p>Here we introduce the <em>quantum oscillator</em>. Similar to how a classical oscillator moves around a particular location, a quantum oscillator describes an object which has an average energy, quantised in units of ℏω.</p>
+      <p>To explain what a microstate is, we can take up a simple quantum system with four quantum oscillators and a total energy of 6ℏω. One possible combination of energies for the oscillators to have is 1ℏω, 1ℏω, 4ℏω, 0ℏω. You could also have 2ℏω, 2ℏω, 2ℏω, 0ℏω. In each case, the system as a whole has total energy 6ℏω, and is therefore a possible option. Each “possible option” is a microstate.</p>
+      <p>The microcanonical ensemble for any system is the complete list of possible microstates that it can have with energy \\( E \\), volume \\( V \\) and particle number \\( N \\). The total number of microstates a system can have is represented as \\( Ω \\). For example, in this example, there are 24 possible ways for the 6ℏω to be divided, meaning:</p>
+      <div class=eqn> \\[ \\Omega( 6\\hbar \\omega ) = 24\\] </div>
+      <p>The more ways a system can exist, the more chaotic the system is. I mean, surely this just makes sense, because if a system only has two microstates, then it doesn’t really have much potential to spaz around. However, if it has a lot more microstates, it can do much crazier and more unpredictable things. This therefore, means that <em>the higher \\( Ω \\) is, the higher the entropy, \\( S \\)</em>.</p>
+      <p>Naturally, somebody found a formula to describe this exact idea:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ S = k_B \\ln{Ω} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Since \\( k_B \\) is constant, we can see here that as \\( Ω \\) increases, \\( S \\) increases with it (logarithmically, not that it really matters tbf). One thing you will have to get used to in statistical mechanics (and physics generally tbh) is physicists using maths to explain something which is easily explained in English.</p>
+      <p>When a system is in thermal equilibrium, we assume that every possible microstate is equally likely. And when you think about it, you don’t really have much choice. I mean, we don’t klnow anything about the system which would make any one state more likely than the other, so why the hell would we? Think about rolling a dice. Unless you know the dice is rigged, you will always assume that the odds of the dice landing on any side is 1/6, since there are six sides. Therefore, if we have Ω microstates, the likelihood of any state is 1/Ω</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "canonical-en": {
+    title: "The Canonical Ensemble",
+    content: `
+      <p>Before our system was completely isolated, no external interaction. Let’s now put our system into a heat bath. A heat bath is a very large system, which can change the temperature of our own system, but without having much change in its own temperature. Together, this forms a new, larger isolated system.</p>
+      <div class=eqn> \\[ E = E_\\nu + E_B \\] </div>
+      <p>Now that the system’s energy can change, each microstate is no longer equally likely. The possibility of finding that microstate ν with energy \\( E_ν \\) depends on what the energy \\( E_ν \\) is. The probability of being in a particular state is proportional to the number of states in the bath, \\( \\Omega_B (E−E_ν,V,N) \\)</p>
+      <div class=eqn> \\[ p_ν ∝ \\Omega_B (E−E_ν,V,N) = e^{\\frac{S_B(E−E_ν,V,N)}{k_B}}\\] </div>
+      <p>Using a Taylor expansion:</p>
+      <div class=eqn> \\[ S_B(E−E_ν,V,N) = S_B(E,V,N) - E_\\nu \\frac{\\partial S_B}{\\partial E} \\] </div>
+      <p>Now we feature a new character: Temperature (T), formally defined as 1/T = ∂S/∂E, or how much entropy increases with a change in energy, or how willing it is to give up energy.</p>
+      <div class=eqn> \\[ \\frac1{T} = \\frac{\\partial S_B}{\\partial E} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[p_ν ∝ e^{−\\frac{E_ν}{k_B T}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>For simplicity,</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[p_ν ∝ e^{−\\beta E_ν} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Using the probability formula, we can see that the probability of a microstate decreases as energy increases (lower energy is more likely), and that higher energies are much more likely with higher temperatures.</p>
+      <blockquote>
+      <p>The <em>canonical ensemble</em> looks at a system in a heat bath, considering the system's temperature, volume and number of particles (remember the microcanonical ensemble considered the system's energy, rather than temperature). The canonical ensemble is larger than the microcanonical ensemble as the energy is not fixed and <em>includes states with all energies</em>.</p>
+      </blockquote>
+      <h3>The Partition Function</h3>
+      <p>Great, we are one step of the way! Now we know what the probability of a microstate is <em>proportional to</em>, but how do we figure out what the probability actually is?</p>
+      <p>To move from proportionality to an actual value, we need to ensure that the total probabilities add up to one. By adding up all the \\( e^{−\\beta E_ν} \\)s, we get a constant which we can divide the result by, Z, the Partition function.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ Z = \\sum_\\nu e^{−\\beta E_ν} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Partition function
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>That gives the exact probability of a microstate</p>
+      <div class=eqn> \\[ p_ν = \\frac1{Z} e^{−\\beta E_ν} \\] </div>
+      <p>And I won't even lie to you... this \\( Z \\) guy might be the most hype thing in this entire module. Because if you know the Partition function, you can find out literally anything! Like say you wanna know the average energy, \\( \\langle E \\rangle \\). There's an equation for that:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\langle E \\rangle = -\\frac{\\partial \\ln{Z}}{\\partial \\beta} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Partition function
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>We’ll try this with a simple example: the system only has two possible energies, \\( E = 0 \\) and \\( E = ε \\). If \\( E=0 \\), then \\( p_ν = 1 \\). If \\( E = \\varepsilon \\), then \\( p_ν =e^{−\\beta \\varepsilon} \\). Adding them together gives</p>
+      <div class=eqn> \\[ Z = 1 + e^{−\\beta \\varepsilon} \\] </div>
+      <p>The average energy is then:</p>
+      <div class=eqn> \\[ \\begin{align} Z
+          &= p_0 E_0 + p_1 E_1 \\\\[6pt]
+          &= \\frac1{Z} \\varepsilon e^{−\\beta \\varepsilon} 
+          \\end{align} \\] </div>
+      <p>This will give us the average energy for any temperature. At very low temperature, we would expect there to be not enough energy, which works with the equation, bc as T =&gt; 0, <E> = 0. At higher temperatures, we would expect enough energy, which makes sense because as T = infinity, <E> = ε / 2</p>
+      <h4>Harmonic Oscillator</h4>
+      <div class=eqn> \\[ \\begin{align} \\langle E \\rangle 
+          &= \\sum_n e^{−\\beta E_n} \\\\[6pt]
+          &= e^{− \\frac{\\hbar\\omega}2 \\beta} + e^{− 3\\frac{\\hbar\\omega}2 \\beta} + e^{− 5\\frac{\\hbar\\omega}2 \\beta} + \\dots
+          \\end{align} \\] </div>
+      <p>This is a geometric series, meaning the sum is \\( \\frac{r}{1-r} \\)</p>
+      <div class=eqn> \\[ Z = \\frac{e^{−\\beta \\hbar\\omega / 2}}{1-e^{−\\beta \\hbar\\omega}} \\] </div>
+      <p>Taking logs:</p>
+      <div class=eqn> \\[ \\ln{Z} = -\\frac{\\beta \\hbar\\omega}2 - \\ln(1 - e^{−\\beta \\hbar\\omega}) \\] </div>
+      <p>And then differentiate</p>
+      <div class=eqn> \\[ \\langle E \\rangle = \\frac{\\hbar\\omega}2 + \\frac1{e^{\\beta \\hbar\\omega} - 1}\\hbar\\omega \\] </div>
+      <p>Even at temperature \\( T = 0 \\), there is \\( \\frac{\\hbar\\omega}2 \\) energy. This is the <em>zero-point energy</em></p>
+      <h3>Entropy</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ S = -k_B \\sum_\\nu p_\\nu \\ln{p_\\nu} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Combining Systems</h3>
+      <p>Now say we have two systems, one with \\( \\nu \\) and one with \\( \\mu \\). The combined partition function is now:</p>
+      <div class=eqn> \\[ Z = \\sum_\\nu e^{-\\beta E_\\nu} \\sum_\\mu e^{-\\beta E_\\mu} = Z_1 Z_2 \\] </div>
+      <div class=eqn> \\[ S = -k_B\\sum_(\\nu, \\mu) p_\\nu p_\\mu \\ln{p_\\nu, p_\\mu} = S_1 + S_2 \\] </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "partition": {
+    title: "Examples of Partition Functions",
+    content: `
+      <p>In the same way temperature results from being allowed to exchange energy, <em>pressure</em> results from being allowed to exchange volume. Take our system and put it into a moveable piston, connected to the heat bath we had before. There are now two ways we can define the pressure:</p>
+      <ol>
+      <li>The probability of the system having a volume \\( V \\) is proportional to the number of microstates the system has (the more states with different volumes a system can have, the more likely that one of those volumes is the one we want, \\( V \\)). This therefore means that it is proportional to entropy (as higher volume means higher entropy). \\[ P = T \\frac{\\partial S}{\\partial V} \\] This defines pressure as a systems tendency to maximise entropy. If a small increase in volume results in a large increase in microstates/entropy, the system pushes against the walls</li>
+      <li>If a microstate \\( ν \\) expands by a tiny amount, \\( ∆V \\), it does work on its surroundings. This means it must release energy to do the work \\[ΔE_ν =−PΔV\\]</li>
+      </ol>
+      <div class=eqn> \\[ E = E_\\nu + E_B \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[p_ν ∝ e^{−\\frac{E_ν}{k_B T}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "cl-thermo": {
+    title: "Classical Thermodynamics",
+    content: `
+      <p>We can now connect all of our classical/macroscopic properties with our statistical ones</p>
+      <ul>
+      <li><strong>Internal energy, \\(U\\) or \\(E\\)</strong> Instead of considering the internal kinetic energy of particles, in statistical mechanics, we rather look at the <em>average energy</em> of the whole system: \\[ \\langle E \\rangle = \\sum_ν p_νE_ν \\]</li>
+      <li><strong>Entropy, \\(S\\)</strong> Entropy usually measure how disordered a system is, however in statistical mechanics, we instead look to the <em>Gibbs entropy</em>, which... is basically the exact same thing, not gonna lie \\[ S =  k_B \\ln{Ω} \\]</li>
+      <li><strong>Temperature, \\(T\\)</strong> Temperature doesn't change, it's still our good friend we all know and love, except it's now got a fancy new definition \\[ \\frac1{T}  =  \\frac{\\partial S}{\\partial E} \\bigg|_{V, N}\\]</li>
+      <li><strong>Pressure, \\(P\\)</strong> Now we consider the <em>average mechanical pressure</em> \\[ P = −\\sum_ν p_ν \\frac{ \\partial E_ν}{ \\partial V} \\]</li>
+      </ul>
+      <p>We can also take a statistical mechanical look at the second law of thermodynamics. This states that a system’s entropy will always increase or remain the same. The system’s entropy is maximised at thermal equilibrium. An unequal distribution means there is a higher chance of it being in a certain microstate, meaning that the overall uncertainty/chaoticness of the system is lower. However, at thermal equilibrium, the chances are all the same, meaning maximum uncertainty and maximum entropy</p>
+      <h3>Recap of Thermodynamics</h3>
+      <p>We have a system (za sisutemo), the surroundings (za saraundinguzo) and the boundary (za baundorii)</p>
+      <h4>The zeroth law</h4>
+      <p>&quot;The zeroth law? Must have missed that bloody law, I didn't even know zero <em>had</em> an index form!&quot;</p>
+      <p>Well apparantly, it does! But don't worry about having not learnt it, it's basically just common sense:</p>
+      <blockquote>
+      <p><strong>Zeroth Law of Thermodynamics</strong> If two systems are in thermal equilibrium with a third system they must be in thermal equilibrium with each other.</p>
+      </blockquote>
+      <h4>The First Law</h4>
+      <blockquote>
+      <p><strong>First Law of Thermodynamics</strong> Energy is conserved</p>
+      </blockquote>
+      <div class="eqn"> \\[
+          dQ = dE + dW
+      \\] </div>
+      <p>Or for normal people:</p>
+      <div class="eqn"> \\[
+          Q = E + W
+      \\] </div>
+      <h4>The Second Law</h4>
+      <blockquote>
+      <p><strong>Second Law of Thermodynamics</strong> Heat can never pass from a colder to a warmer body without some other change, connected therewith, occurring at the same time.</p>
+      </blockquote>
+      <hr>
+      <ul>
+      <li><strong>Quasistatic Changes</strong> If a change is slow enough, then we can consider the system as if it is only through equilibrium states</li>
+      <li><strong>Reversible Changes</strong> If a change is quasistatic and there is nothing to dissipate the energy, like friction or turbulence or resistance, then we can reverse the change.</li>
+      </ul>
+      <p>If a change is reversible, then \\( dQ = TdS \\). Then the second law becomes</p>
+      <div class="eqn"> \\[
+          TdS = dE + dW
+      \\] </div>
+      <p>The work done is pressure energy, \\( dW = PdV \\)</p>
+      <div class="eqn"> \\[
+          TdS = dE + PdV
+      \\] </div>
+      <p>In general:</p>
+      <div class="eqn"> \\[
+          TdS \\geq dE + PdV
+      \\] </div>
+      <h3>Equilibrium</h3>
+      <p>There are 3 things we need to consider</p>
+      <ol>
+      <li><strong>HELMHOLTZ FREE ENERGY</strong> \\[ F = E − TS \\]</li>
+      <li><strong>GIBBS FREE ENERGY</strong> \\[ G = E − TS + PV \\]</li>
+      <li><strong>ENTHALPY</strong> \\[ H = E + PV \\]</li>
+      </ol>
+      <div class="eqn"> \\[ \\begin{align}
+          dF &= dE - TdS - SdT  \\\\[6pt]
+              &\\leq -PdV - SdT
+      \\end{align} \\] </div>
+      <p>This means that the Helmholtz Free Energy is a function of volume and temperature, <em>\\( F = F(V, T) \\)</em></p>
+      <p>We can do the same thing with Gibb's free energy:</p>
+      <div class="eqn"> \\[ \\begin{align}
+          dG &= dE - TdS - SdT +PdV + VdP \\\\[6pt]
+              &\\leq VdP - SdT
+      \\end{align} \\] </div>
+      <p>This means that the Helmholtz Free Energy is a function of pressure and temperature, <em>\\( G = G(P, T) \\)</em></p>
+      <div class="eqn"> \\[ \\begin{align}
+          dH &= dE +PdV + VdP  \\\\[6pt]
+              &\\leq TdS + VdP
+      \\end{align} \\] </div>
+      <p>This means that the enthalpy is a function of pressure and entropy, <em>\\( ∆H = T∆S \\)</em></p>
+      <h3>Thermodynamics and Microstates</h3>
+      <p>We defined <em>thermal equilibrium</em> as the point where each microstate is equally likely, where \\( S \\) is a maximum. Let's prove that using statistical mechanics. We know that:</p>
+      <div class="eqn"> \\[
+          S = -k_B \\sum_\\nu p_\\nu \\ln{p_\\nu}, \\quad \\sum_{\\nu=1}^\\Omega p_\\nu = 1
+      \\] </div>
+      <p>The probability of the \\( \\Omega \\)th (omegath?) microstate is one take away the sum of all the previous microstates</p>
+      <div class="eqn"> \\[
+          p_\\Omega = 1 - \\sum_{\\nu=1}^{\\Omega-1} p_\\nu 
+      \\] </div>
+      <p>To maximise something, we take the derivative and set it to zero. In this case, that means \\( \\frac{ \\partial S }{ \\partial p_\\nu } = 0 \\).</p>
+      <div class="eqn"> \\[ \\begin{align} \\frac{ \\partial S }{ \\partial p_\\nu } 
+          &= -k_B \\frac{ \\partial \\left( \\sum_\\nu p_\\nu \\ln{p_\\nu} + p_\\Omega \\ln{p_\\Omega} \\right) }{ \\partial p_\\nu } \\\\[6pt]
+          &= -k_B \\ln{p_\\nu} - k_B - (k_B \\ln{p_\\Omega} + k_B) \\frac{ \\partial p_\\Omega }{ \\partial p_\\nu } 
+      \\end{align} \\] </div>
+      <p>Since \\( \\frac{ \\partial p_\\Omega }{ \\partial p_\\nu } = -1 \\)</p>
+      <div class="eqn"> \\[
+          \\ln{p_\\Omega} = \\ln{p_\\nu} \\quad \\therefore \\quad p_\\Omega = p_\\nu
+      \\] </div>
+      <h4>Fixed volume and temperature</h4>
+      <div class="eqn"> \\[
+          dF \\leq -PdV - SdT = 0
+      \\] </div>
+      <div class="eqn"> \\[
+          F = \\langle E \\rangle - TS = \\sum_\\nu p_\\nu E_\\nu - k_B T \\sum_\\nu p_\\nu \\ln{p_\\nu}
+      \\] </div>
+      <div class="eqn"> \\[ \\begin{align} \\frac{ \\partial F }{ \\partial p_\\nu } 
+          &= E_\\nu + k_B T \\ln{p_\\nu} + k_B T + \\left( E_\\Omega + k_B T \\ln{p_\\Omega} + k_B T \\right) \\frac{ \\partial p_\\Omega}{ \\partial p_\\nu } \\\\[6pt]
+          &= (E_\\nu - E_\\Omega) - k_B T \\ln{\\left( \\frac{p_\\nu}{p_\\Omega} \\right)} = 0
+      \\end{align} \\] </div>
+      <p>That means</p>
+      <div class="eqn"> \\[
+          p_\\nu \\propto e^{-\\beta E_\\nu}
+      \\] </div>
+      <h4>Partition Function</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ F=−k_BT \\ln{Z} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
+    `
+  },
+
+  "grand-canon-en": {
+    title: "The Grand Canonical Ensemble",
+    content: `
+      <p>So far we hve had</p>
+      <ul>
+      <li><strong>MICROCANONICAL ENSEMBLE</strong> The possible states in a completely isolated thermodynamic system. It is characterised by a fixed number of particles (\\(N\\)), a fixed volume (\\(V\\)), and a constant total energy (\\(E\\)). Because it cannot exchange energy or matter with its surroundings, its total energy is strictly conserved.</li>
+      <li><strong>CANONICAL ENSEMBLE</strong> The possible states of a system in thermal equilibrium with a heat bath at a constant temperature \\(T\\). It assumes the system's particle number (\\(N\\)) and volume (\\(V\\)) remain fixed, while energy fluctuates.</li>
+      </ul>
+      <p>The <em>grand canonical ensemble</em> now allows for the exchange of particles with a reservoir, not just volume.</p>
+      <p>The derivations are pretty much the exact same as the ones used for the microcanonical and canonical ensembles.</p>
+      <div class="eqn"> \\[
+          E = E_R + E_\\nu, \\quad N = N_R + N_\\nu
+      \\] </div>
+      <p>The probability that the system is in microstate \\( \\nu \\) is proportional to the number of states the reservoir could be in with this energy and particle number, \\( \\Omega_R(E_R, N_R, V) \\):</p>
+      <div class=eqn> \\[ p_ν ∝ \\Omega_R (E−E_ν, N−N_ν, V) = e^{\\frac{S_R(E−E_ν, N−N_ν, V)}{k_B}}\\] </div>
+      <p>Use a Taylor expansion:</p>
+      <div class=eqn> \\[ 
+          S_R(E - E_\\nu, N - N_\\nu, V) \\approx S_R(E, N, V)
+          - E_\\nu \\frac{\\partial S_R}{\\partial E}
+          - N_\\nu \\frac{\\partial S_R}{\\partial N}
+      \\] </div>
+      <p>Therefore</p>
+      <div class=eqn> \\[ 
+          p_\\nu \\propto \\exp{\\left(
+          -\\frac{E_\\nu}{k_B}\\frac{\\partial S_R}{\\partial E}
+          -\\frac{N_\\nu}{k_B}\\frac{\\partial S_R}{\\partial N}
+          \\right)}
+      \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\mu = -T \\frac{\\partial S}{\\partial N} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>\\( \\mu \\) is the <em>chemical potential</em>...<br>
+      This means</p>
+      <div class=eqn> \\[ 
+          p_\\nu \\propto e^{-\\beta(E_\\nu - \\mu N_\\nu)}
+      \\] </div>
+      <div class=eqn> \\[ 
+          Z(T,V,µ) = \\sum_\\nu e^{-\\beta(E_\\nu - \\mu N_\\nu)}
+      \\] </div>
+      <blockquote>
+      <p><strong>CANONICAL ENSEMBLE</strong> The set of microstates of the system, which now allows energy and particle number to fluctuate</p>
+      </blockquote>
+      <h3>The Grand Potential</h3>
+      <p>Now that particles can be added and removed from the system, there is another source of energy:</p>
+      <div class=eqn> \\[ 
+          TdS ≥ dE + dW − µdN
+      \\] </div>
+      <p>Grand potential</p>
+      <div class=eqn> \\[ 
+          Φ_G = E−TS−µN
+      \\] </div>
+      <p>Then</p>
+      <div class=eqn> \\[ 
+          dΦ_G = dE − TdS - SdT − µdN - Nd\\mu \\leq −dW−SdT−Ndµ
+      \\] </div>
+      <p>We can get a definition of entropy:</p>
+      <div class=eqn> \\[ \\begin{align}
+          S &= -k_B \\sum_\\nu p_\\nu \\ln{p_\\nu}  \\\\[6pt]
+            &= -k_B \\sum_\\nu p_\\nu [-\\beta(E_\\nu - \\mu N_\\nu) - \\ln{Z}]  \\\\[6pt]
+            &= \\frac{ \\langle E \\rangle - \\mu \\langle N \\rangle }{ T } + k_B \\ln{Z}
+      \\end{align} \\] </div>
+      <div class=eqn> \\[ \\begin{align}
+          Φ_G &= \\langle E \\rangle − TS − \\mu \\langle N \\rangle \\\\[6pt]
+              &= -k_B T \\ln{Z}
+      \\end{align} \\] </div>
+      <h3>The Thermodynamic Limit</h3>
+      <h3>Density of States</h3>
+      <p>If a system is large enough, then the energies are no longer discrete, but become <em>continuous</em>. Now the partition function becomes:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ Z = \\int g(E) e^{-\\beta E_\\nu} \\ dE \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>\\( g(E) \\) is the <em>density of states</em></p>
+      <p>The number of states with energy less than that of wavenumber \\( k_E \\) is</p>
+      <div class=eqn> \\[ 
+          N(E) = k_E \\frac{L}π = \\frac{L}π \\left( \\frac{2mE}{\\hbar^2} \\right)^\\frac12
+      \\] </div>
+      <div class=eqn> \\[ 
+          g(E) \\ dE = \\frac{N(E)}{dE} dE = \\frac{L}π \\frac12 \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac12 \\frac1{E^\\frac12}dE
+      \\] </div>
+      <div class=eqn> \\[ 
+          g(E) = \\frac{L}π \\frac12 \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac12 \\frac1{E^\\frac12}
+      \\] </div>
+      <p>In 3D:</p>
+      <div class=eqn> \\[ 
+          N(E) = \\frac{\\frac14 π |k_E|^2}{π^2 / A} 
+      \\] </div>
+      <ul>
+      <li><strong>1-DIMENSIONAL</strong> \\[ g(E) = \\frac{L}{2π} \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac12 \\frac1{E^\\frac12} \\]</li>
+      <li><strong>2-DIMENSIONAL</strong> \\[ g(E) = \\frac{A}{4π} \\frac{m}{\\hbar^2} \\]</li>
+      <li><strong>3-DIMENSIONAL</strong> \\[ g(E) = \\frac{V}{4π^2} \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac32 E^\\frac12 \\]</li>
+      </ul>
+      <h3>Quantum Statistics</h3>
+      <h4>Fermion</h4>
+      <p>Since there can only be one fermion in a particular state, that means that they only have two microstates, \\( \\mu = 1 \\) (occupied) and \\( \\mu = 0 \\) (unoccupied). This means the partition function is:</p>
+      <div class=eqn> \\[ \\begin{align}
+         Z(T, \\mu) &= \\sum_{\\nu = 0}^1 e^{-\\beta(E_\\nu - \\mu N_\\nu)} \\\\[6pt]
+                   &= 1 + e^{-\\beta(E - \\mu)}
+      \\end{align} \\] </div>
+      <p>Calculate the average number of particles:</p>
+      <div class=eqn> \\[ \\begin{align}
+         \\langle N \\rangle &= \\sum_{\\nu = 0}^1 N_\\nu p_\\nu \\\\[6pt]
+                   &= \\frac{e^{-\\beta(E - \\mu)}}{1 + e^{-\\beta(E - \\mu)}}
+      \\end{align} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ n(E, \\mu) = \\frac{1}{e^{\\beta(E - \\mu)} + 1} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Boson</h4>
+      <p>Any amount of particles can occupy a boson</p>
+      <div class=eqn> \\[ \\begin{align} Z(T,\\mu)
+          &= \\sum_{\\nu} e^{-\\beta(E_\\nu-\\mu N_\\nu)} \\\\[6pt]
+          &= 1 + e^{-\\beta(E-\\mu)} + e^{-\\beta(2E-2\\mu)} + \\cdots + e^{-N\\beta(E-\\mu)} + \\cdots \\\\[6pt]
+          &= \\frac{1}{1-e^{-\\beta(E-\\mu)}}.
+      \\end{align} \\] </div>
+      <p>Then</p>
+      <div class=eqn> \\[ \\begin{align} n(T,\\mu) 
+          &= \\frac{1}{\\beta}\\frac{\\partial \\ln Z}{\\partial \\mu} \\\\[6pt]
+          &= \\frac{1}{\\beta}\\frac{\\partial}{\\partial \\mu}\\left[-\\ln\\left(1-e^{-\\beta(E-\\mu)}\\right)\\right] \\\\[6pt]
+          &= \\frac{1}{\\beta}\\frac{e^{-\\beta(E-\\mu)}}{1-e^{-\\beta(E-\\mu)}}\\,\\beta.
+      \\end{align} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ n(E, \\mu) = \\frac{1}{e^{\\beta(E - \\mu)} - 1} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Many-Particle Systems</h3>
+      <p>Now of course, a real system will have a lot of particles with a lot of different quantum levels. Like a metal</p>
+      <p>One thing these particles all have in common is that they are all <em>fermions</em>, meaning they follow the pauli exclusion principle.</p>
+      <p>We can model a multi-particle system like this:</p>
+      <ul>
+      <li>Every quantum level (meaning every given energy and spin) is thought of as its own system which can either have a fermion or not.</li>
+      <li>If there is no external energy input (i.e. \\( T = 0 \\)), then all the fermions go into the lowest possible energy state, up until the <em>Fermi Energy</em>, \\( E_F \\). If the energy of a state is lower than the Fermi energy, then the state is filled.</li>
+      </ul>
+      <p>In a closed system, no amount of particles can leave or enter. However in the grand canonical ensemble, we've kinda already assumed that particles entering or exiting <em>is</em> possible.</p>
+      <p>So in a closed system, \\( \\mu \\) is chosen in such a way that the total number of particles is the required value.</p>
+      <div class=eqn> \\[ 
+         N = \\sum_E g_E n_{FD}(E, \\mu)
+      \\] </div>
+      <p>Since it is continuous, use an integral instead:</p>
+      <div class=eqn> \\[ 
+         N = \\int g_E n_{FD}(E, \\mu) \\ dE
+      \\] </div>
+      <p>Now we can calculate the degeneracy:</p>
+      <div class=eqn> \\[ \\begin{align}
+      N   &= \\sum_E g_E\\, n_{\\mathrm{FD}}(E,E_F) \\\\[6pt]
+          &= V \\int_0^\\infty \\, \\frac{2}{4\\pi^2}\\left(\\frac{2m}{\\hbar^2}\\right)^{\\frac32} E^{\\frac12}\\, n_{\\mathrm{FD}}(E,E_F) \\ dE
+      \\end{align} \\] </div>
+      <p>Take the constant \\( \\alpha \\)</p>
+      <div class=eqn> \\[ \\begin{align}
+      N   &= \\alpha V \\int^{E_F}_0 E^{\\frac12} \\ dE \\\\[6pt]
+          &= \\frac23 \\alpha V E^{\\frac32}_{E_F}
+      \\end{align} \\] </div>
+      <p>Giving a Fermi Energy of:</p>
+      <div class=eqn> \\[
+          E_F = \\frac{\\hbar^2}{2m} (3π^2 \\rho)^\\frac23.
+      \\] </div>
+      <p>Then to get total energy:</p>
+      <div class=eqn> \\[ \\begin{align}
+          E_{\\mathrm{tot}}
+          &= \\sum_E g_E\\, E\\, n_{\\mathrm{FD}}(E, E_F) \\\\[6pt]
+          &= \\alpha V \\int_0^{E_F} E^{\\frac32} \\ dE \\\\[6pt]
+          &= \\frac25 \\alpha V E_F^{\\frac53}.
+      \\end{align} \\] </div>
+      <h4>Free Bose Gas</h4>
+      <p>Now if we do the same thing, but this time for bosons. Instead of using the <span class="definition" data-definition="\\[ n_\\text{FD} = \\frac{1}{e^{\\beta(E-\\mu)}+1} \\]"> Fermi-Dirac Distribution</span>, we'll use the <span class="definition" data-definition="\\[ n_\\text{BE} = \\frac{1}{e^{\\beta(E-\\mu)}-1} \\]"> Bose-Einstein Distribution</span>:</p>
+      <div class=eqn> \\[ \\begin{align}
+          N
+          &= \\sum_E g_E\\, n_{\\mathrm{BE}}(E,\\mu) \\\\[6pt]
+          &= V \\int_0^\\infty \\frac1{4\\pi^2}\\left(\\frac{2m}{\\hbar^2}\\right)^{3/2} E^{1/2}\\frac{1}{e^{\\beta(E-\\mu)}-1} \\ dE \\\\[6pt]
+          &= \\frac{\\pi}{4}\\left(\\frac{2mL^2 k_B T}{\\hbar^2 \\pi^2}\\right)^{3/2} \\int_0^\\infty \\frac{x^{1/2}}{e^{(x-\\beta\\mu)}-1} \\ dx
+      \\end{align} \\] </div>
+      <p>Hey, looks like a pretty standard formula to me, what's the problem?</p>
+      <p>Well, bellend, the problem is that, as the temperature tends to zero, \\( \\beta \\) will tend to infinity. And whilst beta is doing that, the denominator is becoming infinite too. Now this is a problem because that means that as the temperature becomes zero, the average number of particles becomes zero, which is obviously a bit tapped.</p>
+      <p>To fix this, let's try to calculate the maximum amount of particles the system <em>could</em> have, which we can do by setting the chamical potential to be zero. Take the ground state energy to be \\( E_0 = 0 \\). Then, if \\( \\mu &gt; 0 \\)</p>
+      <div class=eqn> \\[ \\begin{align}
+          N_{\\max}
+          &= \\frac{\\pi}{4}\\left(\\frac{2mL^2 k_B T}{\\hbar^2 \\pi^2}\\right)^{3/2}
+          \\int_0^\\infty dx\\, \\frac{x^{1/2}}{e^x - 1} \\\\
+          &= 2.61\\, \\frac{\\pi}{4}\\left(\\frac{2mL^2 k_B T}{\\hbar^2 \\pi^2}\\right)^{3/2}.
+      \\end{align} \\] </div>
+      <p>This would mean at low temperatures, states can only hold a finite number of states, tending to zero. So then the question becomes, what exactly happens to the remaining particles?</p>
+      <h3>TL;DR</h3>
+      <ul>
+      <li></li>
+      </ul>
     `
   }
 };

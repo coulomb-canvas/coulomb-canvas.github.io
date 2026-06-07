@@ -183,6 +183,12 @@ blockquote p {
   animation: bob 3s ease-in-out infinite;
 }
 
+blockquote strong {
+  background-color: rgba(255, 0, 0, 0.661);
+  padding: 0.5vh;
+  color: white;
+}
+
 
 .formula-box p {
   color: var(--text)
@@ -302,16 +308,18 @@ u {
   font-size: 1.5vw;
 }
 
+
+
 ol {
   list-style: decimal outside !important;   
   padding-left: 5vw;
   padding-right: 0vw;
 }
 
-li {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  color: var(--subtle);
+ul {
+  padding-left: 1vw;
+  padding-right: 0vw;
+  list-style: none;
 }
 
 
@@ -329,9 +337,48 @@ ol li::marker {
     color: var(--accent);       /* Makes the numbers red */
     font-weight: bold;    /* Makes the numbers bold */
     font-size: 2rem;    /* Makes the numbers slightly larger */
-    font-family: 'Courier New', Courier, monospace; /* Different font for numbers */
+    font-family: 'Njal'; /* Different font for numbers */
 }
 
+ol li strong {
+    font-size: 2rem;    /* Makes the numbers slightly larger */
+    font-family: 'Njal'; /* Different font for numbers */
+}
+
+ul li {
+    display: list-item;
+    font-size: 2vh;
+    margin: 1vh;
+    padding: 1vh;
+    background-color: #4f8dff32;
+    color: rgba(190, 213, 255, 0.988);
+    margin-bottom: 0.25em;
+}
+
+ul li strong {
+    font-size: 2vh;
+    margin: 0vh;
+    padding: 0.5vh;
+    background-color: #4f8dff5f;
+    color: rgba(116, 165, 255, 0.988);
+}
+
+
+ul li::before {
+  content: "• ";
+  position: absolute;
+  transform: translateX(-30px);
+  color: var(--accent);   
+  font-weight: bold;   
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace; 
+  line-height: 1;
+}
+
+li mjx-container {
+  filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+  color: white;
+}
 
 
 #logo {
@@ -1764,40 +1811,39 @@ body.dimmed::before {
 .definition {
   position: relative;
   cursor: help;
-  /* shows ? cursor */
   color: #4db8ff;
-  /* highlight key terms */
-}
-
-.definition::after {
-  content: attr(data-definition);
-  position: absolute;
-  bottom: -2.6em;
-  /* position below the word */
-  left: 50%;
-  /* anchor at middle */
-  background: #222;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 0.9em;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-50%) translateY(-5px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  z-index: 10;
-}
-
-.definition:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
 }
 
 .definition:hover {
   color: #91d7ff;
   text-decoration: underline dashed;
 }
+
+.definition-tooltip {
+  position: absolute;
+  display: none;
+  background: #222;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  max-width: 22rem;
+  white-space: normal;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.definition-tooltip.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 .simulation-content {
   display: flex;

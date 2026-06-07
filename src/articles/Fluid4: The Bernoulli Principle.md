@@ -20,7 +20,11 @@ Consider a regular old tube with a flow through it
 </div>
 
 
-<div class=eqn> \[ \mu \frac{\partial^2 u_x}{\partial y^2} = -Q  \] </div> 
+<div class=eqn> \[ \rho \frac{u_1^2}2 + \rho g H + \cancel{P_\text{atm}} = \rho \frac{u_2^2}2 + \cancel{P_\text{atm}}  \] </div> 
+
+<div class=eqn> \[ \rho gH = \frac{\rho}2 (u_2^2 - u_1^2) \] </div> 
+
+<div class=eqn> \[ u_2 = \sqrt{2gH} \] </div> 
 
 ### Deriving the B.P. from the N.S. Equation
 

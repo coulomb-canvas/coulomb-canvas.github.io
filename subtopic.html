@@ -258,8 +258,8 @@ document.querySelectorAll(".definition").forEach(item => {
 
     const rect = item.getBoundingClientRect();
     tooltip.style.left = `${window.scrollX + rect.left + rect.width / 2}px`;
-    tooltip.style.top = `${window.scrollY + rect.bottom + 8}px`;
-    tooltip.style.transform = "translateX(-50%) translateY(-5px)";
+    tooltip.style.top = `${window.scrollY + rect.bottom + 15}px`;
+
 
     tooltip.classList.add("show");
 

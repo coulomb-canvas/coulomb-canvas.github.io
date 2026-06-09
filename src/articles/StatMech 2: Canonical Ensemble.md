@@ -96,7 +96,7 @@ We’ll try this with a simple example: the system only has two possible energie
 
 The average energy is then:
 
-<div class=eqn> \[ \begin{align} Z
+<div class=eqn> \[ \begin{align} \langle E \rangle
     &= p_0 E_0 + p_1 E_1 \\[6pt]
     &= \frac1{Z} \varepsilon e^{−\beta \varepsilon} 
     \end{align} \] </div>
@@ -146,7 +146,7 @@ Now say we have two systems, one with \\( \nu \\) and one with \\( \mu \\). The 
 
 <div class=eqn> \[ Z = \sum_\nu e^{-\beta E_\nu} \sum_\mu e^{-\beta E_\mu} = Z_1 Z_2 \] </div>
 
-<div class=eqn> \[ S = -k_B\sum_(\nu, \mu) p_\nu p_\mu \ln{p_\nu, p_\mu} = S_1 + S_2 \] </div>
+<div class=eqn> \[ S = -k_B\sum_{\nu, \mu} p_\nu p_\mu \ln{p_\nu, p_\mu} = S_1 + S_2 \] </div>
 
 ### TL;DR
 

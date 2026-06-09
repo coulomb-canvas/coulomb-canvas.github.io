@@ -171,11 +171,329 @@ One down, three to go. Now we'll try and answer the next question:
 
 > What does matter do to *magnetic fields*?
 
-If a material is magnetised, then you can think of it as having a bunch
+If a material is magnetised, then you can think of it as having a bunch of teeny tiny little circular current in them, due to electrons moving in circular orbits (p.s. they don't, but pretend they do for now)
+
+Using similar logic to that of Stoke's Theorem, with uniform magnetisation, all the internal currents cancel out, leaving only one big one round the outside. That leads us to define a brand-new variable, the *magnetic moment*, which is the current around the outside, multiplies by the area, pointing normal to the surface in question
+
+<div class=eqn> \[ m = IA = I\Delta x \Delta y  \] </div> 
+
+And in the same way that polarisation came from electric dipole per unit volume, we can define the *magnetisation*, which is the magnetic moment per unit volume:
+
+<div class=eqn> \[ M = \frac{m}{V} = \frac{I\Delta x \Delta y}{\Delta x \Delta y \Delta z} = \frac{I}{\Delta z} \] </div> 
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \vec{M} = \frac{I}{\Delta z} \hat{z} \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+Before we were able to calculate the surface charge buildup due to the electric dipoles. This time we can do a similar thing, except considering the current which flows because of the magnetisation. The current which flows due to magnetisation can then be written as:
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \vec{j}_M = \vec{M} \times \hat{n} \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+#### Non-Uniform
+
+Time to make your life that bit harder! What is the tiny electron currents aren't uniform?
+
+If the distance between the two is small enough, then we can write:
+
+<div class=eqn> \[ ∆I = I(x + ∆x) − I(x) \] </div> 
+
+Using a <span class="definition" data-definition="\[ f(x+a) \approx f(x) + a\frac{df}{dx} \]">Taylor expansion</span>
+
+<div class=eqn> \[ I(x + ∆x) \approx I(x) + ∆x\frac{\partial I}{\partial x} \] </div> 
+
+Therefore
+
+<div class=eqn> \[ ∆I \approx ∆x\frac{\partial I}{\partial x} \] </div> 
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \vec{J}_M = \vec{\nabla} \times \vec{M} \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+### The Maxwell Equations
+
+#### Displacement, \\( D \\)
+
+The charge density can be split into the *bound* charge density and the *free* charge density:
+
+<div class=eqn> \[ \begin{align}
+    \rho &= \rho_f + \rho_P \\[6pt]
+         &= \rho_f - \vec{\nabla}\cdot\vec{P} 
+\end{align} \] </div> 
+
+Hey, pretty cool equation! But we can make it even cooler. If we take <span class="definition" data-definition="Maxwell's First Equation \[ \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\varepsilon_0} \]">**M1**</span> and rearrange it, we get a new equation for charge density \\( \rho \\):
+
+<div class=eqn> \[ \rho = \vec{\nabla} \cdot \varepsilon_0 \vec{E} \] </div> 
+
+Then we can re-arrange to get:
+
+<div class=eqn> \[ \vec{\nabla} \cdot (\varepsilon_0 \vec{E} + \vec{P} ) = ρ_f. \] </div> 
+
+And we are almost there! For some reason, Maxwell really didn't like the whole "\\( \varepsilon_0 \vec{E} + \vec{P} \\)" business, so he chose to replace it with the letter \\( D \\) for displacement. Now that we have \\( \vec{D} = \varepsilon_0 \vec{E} + \vec{P} \\), that means we get:
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \vec{\nabla} \cdot \vec{D} = ρ_f. \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+#### Magnetic Field Strength, \\( H \\)
+
+We can do a similar thing with magnetism. The total charge density \\( \vec{J} \\), can also be split up, but this time into three components. There's the *free current density* (\\( \vec{J}_f \\)) which is the current we can control, and then the *bound current density*, and I know that's still only two, but that's because the bound current density can be caused by either polarisation or magnetisation. 
+
+So we have a current density due to polarisation (which we proved earlier to be \\( \vec{J}_P = \frac{ \partial \vec{P} }{ \partial t } \\)) and a current density due to magnetisation (which we proved earlied to be \\( \vec{J}_M = \vec{\nabla} \times \vec{M} \\)) as separate terms. So then by doing the same thing as last time:
+
+<div class=eqn> \[ \begin{align}
+    \vec{J} &= \vec{J}_f + \vec{J}_M + \vec{J}_P \\[6pt]
+    &= \vec{J}_f + \nabla \times \vec{M} + \frac{\partial \vec{P}}{\partial t}
+\end{align} \] </div> 
+
+Subsitute into <span class="definition" data-definition="Maxwell's Fourth Equation \[ \vec{\nabla} \times \vec{B} = \mu_0 \left( \vec{J} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right) \]">**M4**</span> to get:
+
+<div class=eqn> \[ \begin{align}
+    \vec{\nabla} \times \vec{B} &= \mu_0 \left( \vec{J} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right) \\[6pt]
+    &= \mu_0 \left( \vec{J}_f + \nabla \times \vec{M} + \frac{\partial \vec{P}}{\partial t} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right)
+\end{align} \] </div> 
+
+Now I can't help but notice that there is a nabla (I mean the grad symbol, \\( \nabla \\)) on both sides. There's a nabla with a B on the left, and a nabla with a M (and a \\( \mu_0 \\)) on the right. I reckon they'd be good friends, so let's link 'em up by bringing the \\( \mu_0 \nabla \times M \\) onto the left side (i.e. subtract both sides by \\( \mu_0 \nabla \times M \\)):
+
+<div class=eqn> \[
+    \vec{\nabla} \times \vec{B} - \nabla \times \mu_0 \vec{M} = \mu_0 \left( \vec{J}_f + \frac{\partial \vec{P}}{\partial t} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right)
+\] </div> 
+
+And time for the best part of physics: *ragebaiting mathematicians*! Since both terms on the left have a curl \\( \nabla \times \\) on the front, we can take that out, so:
+
+<div class=eqn> \[
+    \vec{\nabla} \times (\vec{B} - \mu_0 \vec{M}) = \mu_0 \left( \vec{J}_f + \frac{\partial \vec{P}}{\partial t} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right)
+\] </div> 
+
+And let's divide both sides by that \\( \mu_0 \\), why not?
+
+<div class=eqn> \[
+    \vec{\nabla} \times \left( \frac{\vec{B}}{\mu_0} - \vec{M} \right) = \vec{J}_f + \frac{\partial \vec{P}}{\partial t} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\] </div> 
+
+Cool equation! But it looks like Maxwell is back, and he doesn't particularly like that "\\( \frac{\vec{B}}{\mu_0} - \vec{M} \\)" term now, so he is choosing to replace it with \\( H \\) for... magnetic field strength? Don't question it, he kinda just named things in alphabetical order, and this was the 8th variable he names.
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \vec{H} = \frac{\vec{B}}{\mu_0} - \vec{M} \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+Either way, we now get:
+
+<div class=eqn> \[
+    \vec{\nabla} \times \vec{H} = \vec{J}_f + \frac{\partial \vec{P}}{\partial t} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
+\] </div> 
+
+But we ain't done yet! The last two terms are actually what we get is we differentiate the displacement with respect to time, giving us the final Maxwell equation:
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \vec{\nabla} \times \vec{H} = \vec{J}_f + \frac{\partial \vec{D}}{\partial t} \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+Oh yeah, and the other two don't really change. There still ain't no magnetic monopoles
+
+- **M1 IN MATTER** \\[ \nabla \cdot \vec{D} = \rho_f \\]
+- **M2 (unchanged)** \\[ \nabla \cdot \vec{B} = 0 \\]
+- **M3 (unchanged)** \\[ \nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \\]
+- **M4 IN MATTER** \\[ \nabla \times \vec{H} = \vec{J}_f + \frac{\partial \vec{D}}{\partial t} \\]
+
+### Boundaries
+
+#### Boundary condition for Faraday's law
+
+Integrating <span class="definition" data-definition="\[ \vec{\nabla} \times \vec{E} = -\frac{\partial\vec{B}}{\partial t} \]">**M3**</span> and using a pinch of <span class="definition" data-definition="\[ \oint_C \vec{E} \cdot d\vec{l} = \int_S \vec{\nabla} \times \vec{E} \cdot d\vec{S} \]">Stoke's theorem</span> will get us back it's integral form:
+
+<div class=eqn> \[
+    \oint_S \vec{\nabla} \times \vec{E} \cdot d\vec{S} 
+    = \oint_C \vec{E} \cdot d\vec{\ell} 
+    = \oint_S -\frac{\partial\vec{B}}{\partial t} \cdot d\vec{S}
+\] </div> 
+
+Now let's say we have two materials, along this really curvy boundary. Then we'll create a *Gaussian surface*, being a rectangle with length \\( L \\) along the boundary and height \\( d \\) across the boundary. All that matters is that \\( L \\) is small enough that the electric field strength can be considered constant, and \\( d \\) is small enough that we can basically just ignore it.
+
+Let's calculate the left integral. That is just the field strengths times the distances, meaning it is:
+
+<div class=eqn> \[
+    \oint_C \vec{E} \cdot d\vec{\ell} 
+    = (E_{2, \ \parallel} - E_{1, \ \parallel})L
+\] </div> 
+
+*BTW if you are using the PX284 notes, they included this stupid \\( \mathcal{O}(d) \\) term, making the integral equal to \\( (E_{2, \ \parallel} - E_{1, \ \parallel})L + \mathcal{O}(d)\\). It's supposed to account for that tiny difference that \\( d \\) creates, but it's a bit pointless to include in a derivation if we are gonna make \\( d \\), and therefore \\( \mathcal{O}(d) \\), tend to zero anyway. IDK if they just wanted to show off the mathcal O, but you're best bet is to practically ignore it, ngl.*
+
+Now the left hand side. The surface \\( S \\) is just the area of the rectangle we considered, which is \\( Ld \\). And in this case the integral is basically just area times everything in the integral, meaning:
+
+<div class=eqn> \[
+    \oint_S -\frac{\partial\vec{B}}{\partial t} \cdot d\vec{S}
+    = -Ld \frac{\partial\vec{B}}{\partial t}
+\] </div> 
+
+And then since \\( d \\) is teeny tiny:
+
+<div class=eqn> \[
+    \oint_S -\frac{\partial\vec{B}}{\partial t} \cdot d\vec{S} = 0
+\] </div> 
+
+That means that:
+
+<div class=eqn> \[
+    (E_{2, \ \parallel} - E_{1, \ \parallel})L = 0
+\] </div> 
+
+And since \\( L \\) obviously ain't zero:
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ E_{2, \ \parallel} = E_{1, \ \parallel} \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+> At a boundary, the *tangential component of the electric field strength* doesn't change.
+
+#### Gauss' Law
+
+As usual, do the same with the other laws, this time <span class="definition" data-definition="\[ \vec{\nabla} \cdot \vec{D} = ρ_f \]">**M1 in matter**</span> , and using the <span class="definition" data-definition="\[ \int_S \vec{E} \cdot d\vec{S} = \int_V \vec{\nabla} \cdot \vec{E} \ dV \]">divergence theorem</span>:
+
+<div class=eqn> \[
+    \oint_V \vec{\nabla} \cdot \vec{D} \ dV = \oint_S \vec{D} \cdot d\vec{S}
+    = \int \rho_f \ dV = Q_f
+\] </div> 
+
+Now take a very squished cylinder, such that only the top and the bottom have any meaningful contribution
+
+<div class=eqn> \[
+    \oint_V \vec{\nabla} \cdot \vec{D} \ dV = (D_{1, \perp} - D_{2, \perp}) A = Q_f 
+\] </div> 
+
+The total charge of the cylinder is the charge enclosed in the volume, plus the charge at the surface:
+
+<div class=eqn> \[
+    Q_f = \rho_f A h + \sigma_f A
+\] </div> 
+
+Meaning:
+
+<div class=eqn> \[
+    (D_{1, \perp} - D_{2, \perp}) A = \rho_f A h + \sigma_f A
+\] </div> 
+
+Then by giving h the same treatment as we gave d:
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ D_{1, \perp} - D_{2, \perp} = \sigma_f \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+#### Solenoidal
+
+Then we can do the same thing using the solenoidal condition, to get:
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ B_{1, \perp} = B_{2, \perp} \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+The number of flux lines of \\( B \\) per unit area crossing the boundary is the same on both sides
+
+#### njdjs
+
+<div class="hover-wrapper">
+    <div class="formula-container">
+        <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+            \[ \hat{n} \times (\vec{H}_2 - \vec{H}_1) = \vec{j}_f  \]
+        </div>
+        <span class="formula-tooltip"><div class="formula-tooltip-title">
+            Formula 4:
+        </div><div class="formula-tooltip-desc">
+            ...
+        </div></span>
+    </div>
+</div>
+
+#### Conservation Equation
 
 
 ### TL;DR
 
 Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \rho \\) and \\( J \\) are zero
+
+- The components of E parallel to the boundary match \\[ \hat{n} × (\vec{E}_2 − \vec{E}_1) = 0 \\]
+- The perpendicular components of \\(D\\) are discontinuous by the surface charge density \\[ \hat{n} \cdot (\vec{D}_1 − \vec{D}_1) = \sigma_f \\]
 
 

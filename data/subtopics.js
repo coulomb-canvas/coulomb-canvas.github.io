@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 129 subtopics
-// Generated: 2026-06-07T15:40:40.186Z
+// AUTO-GENERATED FILE - Contains 131 subtopics
+// Generated: 2026-06-09T13:39:20.525Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 129 existing hand-written entries
-//   - 65 Markdown-generated entries
+//   - 131 existing hand-written entries
+//   - 67 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -17321,9 +17321,9 @@ const subtopics = {
       <h3>Maxwell's 1st equation</h3>
       <p>This process of using the Divergence theorem to get brand new equations is exactly what my boy Maxwell did to get his famous formulae. First we'll start with Gauss' law.</p>
       <div class=eqn> \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} = \\frac1{\\varepsilon_0} \\int_V \\rho \\ dV \\] </div> 
-      <p>Use the divergence theorem as we did before, and we end up with:</p>
-      <div class=eqn> \\[ \\oint_S \\vec{E} \\cdot d\\vec{S} =  \\int_V \\vec{\\nabla} \\cdot \\vec{E} \\ dV =  \\int_V \\frac{\\rho}{\\varepsilon_0} \\ dV \\] </div> 
-      <p>They are both integrals with respect to volume, so:</p>
+      <p>Use the <span class="definition" data-definition="\\[ \\int_S \\vec{E} \\cdot d\\vec{S} = \\int_V \\vec{\\nabla} \\cdot \\vec{E} \\ dV \\]">divergence theorem</span> as we did before, and we end up with:</p>
+      <div class=eqn> \\[ \\int_V \\vec{\\nabla} \\cdot \\vec{E} \\ dV =  \\int_V \\frac{\\rho}{\\varepsilon_0} \\ dV \\] </div> 
+      <p>Now, here's the part which I feel like might give mathematicians a fit. Here goes: Since they are both integrals with respect to volume, that means you can take the stuff on the right hand side, subtract it to bring it to the left hand side, and then take the integral outside:</p>
       <div class=eqn> \\[\\int_V \\left( \\vec{\\nabla} \\cdot \\vec{E} - \\frac{\\rho}{\\varepsilon_0} \\right) \\ dV \\] </div> 
       <p>And therefore, by using the same logic, we end up with the first Maxwell equation, or as I'll be calling it <strong>M1</strong>.</p>
       <div class="hover-wrapper">
@@ -17338,11 +17338,15 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Hey, since we are in the business of ragebaiting mathematicians, why not just hit 'em with a bit o' this; if you really want, you can just cancel out the integrals the same way you would cancel out any other constant or variable (as in like dividing by \\( \\int_V dV \\), crazy right?!)</p>
+      <div class=eqn> \\[ \\style{opacity: 30%}{\\cancel{\\int_V}} \\vec{\\nabla} \\cdot \\vec{E} \\ \\style{opacity: 30%}{\\cancel{dV}}  =  
+          \\style{opacity: 30%}{\\cancel{\\int_V}} \\frac{\\rho}{\\varepsilon_0} \\ \\style{opacity: 30%}{\\cancel{dV}} \\] </div> 
+      <p>And look at that, we have the exact same answer! And before the mathematicians start whinging, this is <em>literally</em> Maxwell's equation, how can you complain?</p>
       <h3>Maxwell's 2nd equation</h3>
-      <p>This is a lot of fun, isn't it? Let's try it again, this time with the <em>solenoidal condition</em>.</p>
+      <p>Pissing of mathematicians is a lot of fun, isn't it? Let's try it again, this time with the <em>solenoidal condition</em>.</p>
       <div class=eqn> \\[ \\oint_S \\vec{B} \\cdot d\\vec{S} = 0 \\] </div> 
-      <p>This is even bloody easy, because it already equals zero meaning we don't have to do any grift rearranging. Using the divergence theorem gives us:</p>
-      <div class=eqn> \\[ \\oint_S \\vec{B} \\cdot d\\vec{S} = \\int_V \\vec{\\nabla} \\cdot \\vec{B} \\ dV = 0 \\] </div> 
+      <p>This is even bloody easier, because it already equals zero meaning we don't have to do any grift rearranging. Using the <span class="definition" data-definition="\\[ \\int_S \\vec{B} \\cdot d\\vec{S} = \\int_V \\vec{\\nabla} \\cdot \\vec{B} \\ dV \\]">divergence theorem</span> again gives us:</p>
+      <div class=eqn> \\[ \\int_V \\vec{\\nabla} \\cdot \\vec{B} \\ dV = 0 \\] </div> 
       <p>And that must therefore mean that all the stuff inside the integral must be equal to zero, leaving us with Maxwell's 2nd equation (or <strong>M2</strong>)</p>
       <div class="hover-wrapper">
           <div class="formula-container">
@@ -17356,6 +17360,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Kind of unfortunate, since this is actually mathematically acceptable (last time I checked anyway), so moving on I guess.</p>
       <h3>Maxwell's 3rd equation</h3>
       <p>Next up, we're using <em>Faraday's law</em>:</p>
       <div class=eqn> \\[ \\oint_C \\vec{E} \\cdot d\\vec{l} = -\\frac{d}{dt} \\int_S \\vec{B} \\cdot d\\vec{S} \\] </div> 
@@ -17379,6 +17384,11 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Hey mathematicians!! Look at this!!</p>
+      <div class=eqn> \\[ 
+          \\style{opacity: 30%}{\\cancel{\\int_S}} \\vec{\\nabla} \\times \\vec{E} \\ \\style{opacity: 30%}{\\cancel{\\cdot dS}}  =  
+          \\style{opacity: 30%}{\\cancel{\\int_S}} -\\frac{\\partial\\vec{B}}{\\partial t} \\ \\style{opacity: 30%}{\\cancel{\\cdot dS}} 
+          \\] </div> 
       <h3>Maxwell's 4th Equation</h3>
       <p>Last but not least. We started with Gauss' Law, so we end with his magnetic cousin.</p>
       <div class=eqn> \\[ \\oint_C \\vec{B} \\cdot d\\vec{l} = \\mu_0 \\int_S \\vec{J} \\cdot d\\vec{S} \\] </div> 
@@ -17415,6 +17425,11 @@ const subtopics = {
           </div>
       </div>
       <p>Turns out, this displacement is so small that they often times just couldn't see it</p>
+      <p>Oh, and erm, I know I just spoke about how the equation isn't accurate, but anyway, quick ragebait:</p>
+      <div class=eqn> \\[ 
+          \\style{opacity: 30%}{\\cancel{\\int_S}} \\vec{\\nabla} \\times \\vec{B} \\ \\style{opacity: 30%}{\\cancel{\\cdot dS}}  =  
+          \\style{opacity: 30%}{\\cancel{\\int_S}} \\mu_0 \\vec{J} \\ \\style{opacity: 30%}{\\cancel{\\cdot dS}} 
+          \\] </div> 
       <h3>TL;DR</h3>
     `
   },
@@ -17429,12 +17444,12 @@ const subtopics = {
           \\vec{\\nabla} \\times \\vec{E} &= -\\frac{\\partial \\vec{B}}{\\partial t} \\\\[6pt]
           \\vec{\\nabla} \\times \\vec{B} &= \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t}
           \\end{align} \\] </div> 
-      <p>Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <strong>M3</strong></p>
+      <p>Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <span class="definition" data-definition="Maxwell's third law with no charge or current (\\( \\rho = 0, \\vec{J} = 0\\)): \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3'</strong></span></p>
       <div class=eqn> \\[ \\begin{align} \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{E}) 
           &= \\vec{\\nabla} \\times \\left( -\\frac{\\partial \\vec{B}}{\\partial t} \\right) \\\\[6pt]
           &= -\\frac{\\partial}{\\partial t} \\vec{\\nabla} \\times \\vec{B} 
           \\end{align} \\] </div> 
-      <p>Now we have that \\( \\vec{\\nabla} \\times \\vec{B} \\) from <strong>M4</strong>. In that case, we can just wack that value in:</p>
+      <p>Now we have that \\( \\vec{\\nabla} \\times \\vec{B} \\) from <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\]"><strong>M4'</strong></span>. In that case, we can just wack that value in:</p>
       <div class=eqn> \\[ \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{E}) = - \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\] </div> 
       <p>Then we can use the identity</p>
       <div class=eqn> \\[ \\vec{\\nabla}(\\vec{\\nabla} \\cdot \\vec{E}) - \\vec{\\nabla}^2 \\vec{E} = - \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\] </div> 
@@ -17451,7 +17466,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>Doing the same thing, except starting by taking the curl of <strong>M4</strong> instead of <strong>M3</strong> gives us:</p>
+      <p>Doing the same thing, except starting by taking the curl of <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\]"><strong>M4'</strong></span> instead of <strong>M3</strong> gives us:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
@@ -17506,7 +17521,7 @@ const subtopics = {
       <div class=eqn> \\[ \\begin{align} 
           \\vec{\\nabla} \\cdot \\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
           \\vec{\\nabla} \\cdot \\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)}
-          \\end{align} \\] </div> 
+      \\end{align} \\] </div> 
       <p>So taking the spacial derivatives gives us the same wave back, multiplied by \\( i\\vec{k} \\). Putting those into the Maxwell formulae from earlier, and dividing by \\( i \\) on both sides:</p>
       <div class=eqn> \\[ \\begin{align} 
           \\vec{k} \\cdot \\vec{E} &= 0 \\\\[6pt]
@@ -17533,10 +17548,10 @@ const subtopics = {
       <div class=eqn> \\[ \\begin{align} \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} 
           &= - \\vec{E} \\cdot \\left( \\frac1{\\mu_0} ( \\vec{\\nabla} \\times \\vec{B} ) - \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right) \\\\[6pt] 
           &= - \\vec{E} \\cdot \\frac1{\\mu_0} ( \\vec{\\nabla} \\times \\vec{B} ) + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t} 
-          \\end{align} \\] </div>
+      \\end{align} \\] </div>
       <p>By using an identity () we can turn this into:</p>
       <div class=eqn> \\[  \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} =  \\frac1{\\mu_0} \\vec{\\nabla} \\cdot  ( \\vec{E} \\times \\vec{B} ) - \\frac1{\\mu_0} \\vec{B} \\cdot  ( \\vec{\\nabla} \\times \\vec{E} ) + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t}. \\] </div> 
-      <p>We're going somewhere with this, I promise. Then by using <strong>M3</strong>, we can change the 3rd term:</p>
+      <p>We're going somewhere with this, I promise. Then by using <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3'</strong></span>, we can change the 3rd term:</p>
       <div class=eqn> \\[  \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} =  \\frac1{\\mu_0} \\vec{\\nabla} \\cdot  ( \\vec{E} \\times \\vec{B} ) + \\frac1{\\mu_0} \\vec{B} \\cdot  \\frac{\\partial \\vec{B}}{\\partial t} + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t}. \\] </div> 
       <p>Now notice the last two terms follow the \\( \\vec{W} \\frac{\\partial \\vec{W}}{\\partial t} \\) pattern. Now we use this fact:</p>
       <div class=eqn> \\[ \\vec{W} \\cdot \\frac{\\partial \\vec{W}}{\\partial t} = \\frac{\\partial}{\\partial t} \\left( \\frac{W^2}2 \\right)  \\] </div> 
@@ -17688,9 +17703,251 @@ const subtopics = {
       <blockquote>
       <p>What does matter do to <em>magnetic fields</em>?</p>
       </blockquote>
-      <p>If a material is magnetised, then you can think of it as having a bunch</p>
+      <p>If a material is magnetised, then you can think of it as having a bunch of teeny tiny little circular current in them, due to electrons moving in circular orbits (p.s. they don't, but pretend they do for now)</p>
+      <p>Using similar logic to that of Stoke's Theorem, with uniform magnetisation, all the internal currents cancel out, leaving only one big one round the outside. That leads us to define a brand-new variable, the <em>magnetic moment</em>, which is the current around the outside, multiplies by the area, pointing normal to the surface in question</p>
+      <div class=eqn> \\[ m = IA = I\\Delta x \\Delta y  \\] </div> 
+      <p>And in the same way that polarisation came from electric dipole per unit volume, we can define the <em>magnetisation</em>, which is the magnetic moment per unit volume:</p>
+      <div class=eqn> \\[ M = \\frac{m}{V} = \\frac{I\\Delta x \\Delta y}{\\Delta x \\Delta y \\Delta z} = \\frac{I}{\\Delta z} \\] </div> 
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{M} = \\frac{I}{\\Delta z} \\hat{z} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Before we were able to calculate the surface charge buildup due to the electric dipoles. This time we can do a similar thing, except considering the current which flows because of the magnetisation. The current which flows due to magnetisation can then be written as:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{j}_M = \\vec{M} \\times \\hat{n} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Non-Uniform</h4>
+      <p>Time to make your life that bit harder! What is the tiny electron currents aren't uniform?</p>
+      <p>If the distance between the two is small enough, then we can write:</p>
+      <div class=eqn> \\[ ∆I = I(x + ∆x) − I(x) \\] </div> 
+      <p>Using a <span class="definition" data-definition="\\[ f(x+a) \\approx f(x) + a\\frac{df}{dx} \\]">Taylor expansion</span></p>
+      <div class=eqn> \\[ I(x + ∆x) \\approx I(x) + ∆x\\frac{\\partial I}{\\partial x} \\] </div> 
+      <p>Therefore</p>
+      <div class=eqn> \\[ ∆I \\approx ∆x\\frac{\\partial I}{\\partial x} \\] </div> 
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{J}_M = \\vec{\\nabla} \\times \\vec{M} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>The Maxwell Equations</h3>
+      <h4>Displacement, \\( D \\)</h4>
+      <p>The charge density can be split into the <em>bound</em> charge density and the <em>free</em> charge density:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\rho &= \\rho_f + \\rho_P \\\\[6pt]
+               &= \\rho_f - \\vec{\\nabla}\\cdot\\vec{P} 
+      \\end{align} \\] </div> 
+      <p>Hey, pretty cool equation! But we can make it even cooler. If we take <span class="definition" data-definition="Maxwell's First Equation \\[ \\vec{\\nabla} \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0} \\]"><strong>M1</strong></span> and rearrange it, we get a new equation for charge density \\( \\rho \\):</p>
+      <div class=eqn> \\[ \\rho = \\vec{\\nabla} \\cdot \\varepsilon_0 \\vec{E} \\] </div> 
+      <p>Then we can re-arrange to get:</p>
+      <div class=eqn> \\[ \\vec{\\nabla} \\cdot (\\varepsilon_0 \\vec{E} + \\vec{P} ) = ρ_f. \\] </div> 
+      <p>And we are almost there! For some reason, Maxwell really didn't like the whole &quot;\\( \\varepsilon_0 \\vec{E} + \\vec{P} \\)&quot; business, so he chose to replace it with the letter \\( D \\) for displacement. Now that we have \\( \\vec{D} = \\varepsilon_0 \\vec{E} + \\vec{P} \\), that means we get:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\cdot \\vec{D} = ρ_f. \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Magnetic Field Strength, \\( H \\)</h4>
+      <p>We can do a similar thing with magnetism. The total charge density \\( \\vec{J} \\), can also be split up, but this time into three components. There's the <em>free current density</em> (\\( \\vec{J}_f \\)) which is the current we can control, and then the <em>bound current density</em>, and I know that's still only two, but that's because the bound current density can be caused by either polarisation or magnetisation.</p>
+      <p>So we have a current density due to polarisation (which we proved earlier to be \\( \\vec{J}_P = \\frac{ \\partial \\vec{P} }{ \\partial t } \\)) and a current density due to magnetisation (which we proved earlied to be \\( \\vec{J}_M = \\vec{\\nabla} \\times \\vec{M} \\)) as separate terms. So then by doing the same thing as last time:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\vec{J} &= \\vec{J}_f + \\vec{J}_M + \\vec{J}_P \\\\[6pt]
+          &= \\vec{J}_f + \\nabla \\times \\vec{M} + \\frac{\\partial \\vec{P}}{\\partial t}
+      \\end{align} \\] </div> 
+      <p>Subsitute into <span class="definition" data-definition="Maxwell's Fourth Equation \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\left( \\vec{J} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right) \\]"><strong>M4</strong></span> to get:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\vec{\\nabla} \\times \\vec{B} &= \\mu_0 \\left( \\vec{J} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right) \\\\[6pt]
+          &= \\mu_0 \\left( \\vec{J}_f + \\nabla \\times \\vec{M} + \\frac{\\partial \\vec{P}}{\\partial t} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right)
+      \\end{align} \\] </div> 
+      <p>Now I can't help but notice that there is a nabla (I mean the grad symbol, \\( \\nabla \\)) on both sides. There's a nabla with a B on the left, and a nabla with a M (and a \\( \\mu_0 \\)) on the right. I reckon they'd be good friends, so let's link 'em up by bringing the \\( \\mu_0 \\nabla \\times M \\) onto the left side (i.e. subtract both sides by \\( \\mu_0 \\nabla \\times M \\)):</p>
+      <div class=eqn> \\[
+          \\vec{\\nabla} \\times \\vec{B} - \\nabla \\times \\mu_0 \\vec{M} = \\mu_0 \\left( \\vec{J}_f + \\frac{\\partial \\vec{P}}{\\partial t} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right)
+      \\] </div> 
+      <p>And time for the best part of physics: <em>ragebaiting mathematicians</em>! Since both terms on the left have a curl \\( \\nabla \\times \\) on the front, we can take that out, so:</p>
+      <div class=eqn> \\[
+          \\vec{\\nabla} \\times (\\vec{B} - \\mu_0 \\vec{M}) = \\mu_0 \\left( \\vec{J}_f + \\frac{\\partial \\vec{P}}{\\partial t} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right)
+      \\] </div> 
+      <p>And let's divide both sides by that \\( \\mu_0 \\), why not?</p>
+      <div class=eqn> \\[
+          \\vec{\\nabla} \\times \\left( \\frac{\\vec{B}}{\\mu_0} - \\vec{M} \\right) = \\vec{J}_f + \\frac{\\partial \\vec{P}}{\\partial t} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t}
+      \\] </div> 
+      <p>Cool equation! But it looks like Maxwell is back, and he doesn't particularly like that &quot;\\( \\frac{\\vec{B}}{\\mu_0} - \\vec{M} \\)&quot; term now, so he is choosing to replace it with \\( H \\) for... magnetic field strength? Don't question it, he kinda just named things in alphabetical order, and this was the 8th variable he names.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{H} = \\frac{\\vec{B}}{\\mu_0} - \\vec{M} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Either way, we now get:</p>
+      <div class=eqn> \\[
+          \\vec{\\nabla} \\times \\vec{H} = \\vec{J}_f + \\frac{\\partial \\vec{P}}{\\partial t} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t}
+      \\] </div> 
+      <p>But we ain't done yet! The last two terms are actually what we get is we differentiate the displacement with respect to time, giving us the final Maxwell equation:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{\\nabla} \\times \\vec{H} = \\vec{J}_f + \\frac{\\partial \\vec{D}}{\\partial t} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Oh yeah, and the other two don't really change. There still ain't no magnetic monopoles</p>
+      <ul>
+      <li><strong>M1 IN MATTER</strong> \\[ \\nabla \\cdot \\vec{D} = \\rho_f \\]</li>
+      <li><strong>M2 (unchanged)</strong> \\[ \\nabla \\cdot \\vec{B} = 0 \\]</li>
+      <li><strong>M3 (unchanged)</strong> \\[ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]</li>
+      <li><strong>M4 IN MATTER</strong> \\[ \\nabla \\times \\vec{H} = \\vec{J}_f + \\frac{\\partial \\vec{D}}{\\partial t} \\]</li>
+      </ul>
+      <h3>Boundaries</h3>
+      <h4>Boundary condition for Faraday's law</h4>
+      <p>Integrating <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial\\vec{B}}{\\partial t} \\]"><strong>M3</strong></span> and using a pinch of <span class="definition" data-definition="\\[ \\oint_C \\vec{E} \\cdot d\\vec{l} = \\int_S \\vec{\\nabla} \\times \\vec{E} \\cdot d\\vec{S} \\]">Stoke's theorem</span> will get us back it's integral form:</p>
+      <div class=eqn> \\[
+          \\oint_S \\vec{\\nabla} \\times \\vec{E} \\cdot d\\vec{S} 
+          = \\oint_C \\vec{E} \\cdot d\\vec{\\ell} 
+          = \\oint_S -\\frac{\\partial\\vec{B}}{\\partial t} \\cdot d\\vec{S}
+      \\] </div> 
+      <p>Now let's say we have two materials, along this really curvy boundary. Then we'll create a <em>Gaussian surface</em>, being a rectangle with length \\( L \\) along the boundary and height \\( d \\) across the boundary. All that matters is that \\( L \\) is small enough that the electric field strength can be considered constant, and \\( d \\) is small enough that we can basically just ignore it.</p>
+      <p>Let's calculate the left integral. That is just the field strengths times the distances, meaning it is:</p>
+      <div class=eqn> \\[
+          \\oint_C \\vec{E} \\cdot d\\vec{\\ell} 
+          = (E_{2, \\ \\parallel} - E_{1, \\ \\parallel})L
+      \\] </div> 
+      <p><em>BTW if you are using the PX284 notes, they included this stupid \\( \\mathcal{O}(d) \\) term, making the integral equal to \\( (E_{2, \\ \\parallel} - E_{1, \\ \\parallel})L + \\mathcal{O}(d)\\). It's supposed to account for that tiny difference that \\( d \\) creates, but it's a bit pointless to include in a derivation if we are gonna make \\( d \\), and therefore \\( \\mathcal{O}(d) \\), tend to zero anyway. IDK if they just wanted to show off the mathcal O, but you're best bet is to practically ignore it, ngl.</em></p>
+      <p>Now the left hand side. The surface \\( S \\) is just the area of the rectangle we considered, which is \\( Ld \\). And in this case the integral is basically just area times everything in the integral, meaning:</p>
+      <div class=eqn> \\[
+          \\oint_S -\\frac{\\partial\\vec{B}}{\\partial t} \\cdot d\\vec{S}
+          = -Ld \\frac{\\partial\\vec{B}}{\\partial t}
+      \\] </div> 
+      <p>And then since \\( d \\) is teeny tiny:</p>
+      <div class=eqn> \\[
+          \\oint_S -\\frac{\\partial\\vec{B}}{\\partial t} \\cdot d\\vec{S} = 0
+      \\] </div> 
+      <p>That means that:</p>
+      <div class=eqn> \\[
+          (E_{2, \\ \\parallel} - E_{1, \\ \\parallel})L = 0
+      \\] </div> 
+      <p>And since \\( L \\) obviously ain't zero:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_{2, \\ \\parallel} = E_{1, \\ \\parallel} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <blockquote>
+      <p>At a boundary, the <em>tangential component of the electric field strength</em> doesn't change.</p>
+      </blockquote>
+      <h4>Gauss' Law</h4>
+      <p>As usual, do the same with the other laws, this time <span class="definition" data-definition="\\[ \\vec{\\nabla} \\cdot \\vec{D} = ρ_f \\]"><strong>M1 in matter</strong></span> , and using the <span class="definition" data-definition="\\[ \\int_S \\vec{E} \\cdot d\\vec{S} = \\int_V \\vec{\\nabla} \\cdot \\vec{E} \\ dV \\]">divergence theorem</span>:</p>
+      <div class=eqn> \\[
+          \\oint_V \\vec{\\nabla} \\cdot \\vec{D} \\ dV = \\oint_S \\vec{D} \\cdot d\\vec{S}
+          = \\int \\rho_f \\ dV = Q_f
+      \\] </div> 
+      <p>Now take a very squished cylinder, such that only the top and the bottom have any meaningful contribution</p>
+      <div class=eqn> \\[
+          \\oint_V \\vec{\\nabla} \\cdot \\vec{D} \\ dV = (D_{1, \\perp} - D_{2, \\perp}) A = Q_f 
+      \\] </div> 
+      <p>The total charge of the cylinder is the charge enclosed in the volume, plus the charge at the surface:</p>
+      <div class=eqn> \\[
+          Q_f = \\rho_f A h + \\sigma_f A
+      \\] </div> 
+      <p>Meaning:</p>
+      <div class=eqn> \\[
+          (D_{1, \\perp} - D_{2, \\perp}) A = \\rho_f A h + \\sigma_f A
+      \\] </div> 
+      <p>Then by giving h the same treatment as we gave d:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ D_{1, \\perp} - D_{2, \\perp} = \\sigma_f \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Solenoidal</h4>
+      <p>Then we can do the same thing using the solenoidal condition, to get:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ B_{1, \\perp} = B_{2, \\perp} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>The number of flux lines of \\( B \\) per unit area crossing the boundary is the same on both sides</p>
+      <h4>njdjs</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{n} \\times (\\vec{H}_2 - \\vec{H}_1) = \\vec{j}_f  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4:
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Conservation Equation</h4>
       <h3>TL;DR</h3>
       <p>Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \\rho \\) and \\( J \\) are zero</p>
+      <ul>
+      <li>The components of E parallel to the boundary match \\[ \\hat{n} × (\\vec{E}_2 − \\vec{E}_1) = 0 \\]</li>
+      <li>The perpendicular components of \\(D\\) are discontinuous by the surface charge density \\[ \\hat{n} \\cdot (\\vec{D}_1 − \\vec{D}_1) = \\sigma_f \\]</li>
+      </ul>
     `
   },
 
@@ -18247,7 +18504,7 @@ const subtopics = {
       <p>We’ll try this with a simple example: the system only has two possible energies, \\( E = 0 \\) and \\( E = ε \\). If \\( E=0 \\), then \\( p_ν = 1 \\). If \\( E = \\varepsilon \\), then \\( p_ν =e^{−\\beta \\varepsilon} \\). Adding them together gives</p>
       <div class=eqn> \\[ Z = 1 + e^{−\\beta \\varepsilon} \\] </div>
       <p>The average energy is then:</p>
-      <div class=eqn> \\[ \\begin{align} Z
+      <div class=eqn> \\[ \\begin{align} \\langle E \\rangle
           &= p_0 E_0 + p_1 E_1 \\\\[6pt]
           &= \\frac1{Z} \\varepsilon e^{−\\beta \\varepsilon} 
           \\end{align} \\] </div>
@@ -18280,7 +18537,7 @@ const subtopics = {
       <h3>Combining Systems</h3>
       <p>Now say we have two systems, one with \\( \\nu \\) and one with \\( \\mu \\). The combined partition function is now:</p>
       <div class=eqn> \\[ Z = \\sum_\\nu e^{-\\beta E_\\nu} \\sum_\\mu e^{-\\beta E_\\mu} = Z_1 Z_2 \\] </div>
-      <div class=eqn> \\[ S = -k_B\\sum_(\\nu, \\mu) p_\\nu p_\\mu \\ln{p_\\nu, p_\\mu} = S_1 + S_2 \\] </div>
+      <div class=eqn> \\[ S = -k_B\\sum_{\\nu, \\mu} p_\\nu p_\\mu \\ln{p_\\nu, p_\\mu} = S_1 + S_2 \\] </div>
       <h3>TL;DR</h3>
       <ul>
       <li></li>
@@ -18451,26 +18708,29 @@ const subtopics = {
       <li><strong>MICROCANONICAL ENSEMBLE</strong> The possible states in a completely isolated thermodynamic system. It is characterised by a fixed number of particles (\\(N\\)), a fixed volume (\\(V\\)), and a constant total energy (\\(E\\)). Because it cannot exchange energy or matter with its surroundings, its total energy is strictly conserved.</li>
       <li><strong>CANONICAL ENSEMBLE</strong> The possible states of a system in thermal equilibrium with a heat bath at a constant temperature \\(T\\). It assumes the system's particle number (\\(N\\)) and volume (\\(V\\)) remain fixed, while energy fluctuates.</li>
       </ul>
-      <p>The <em>grand canonical ensemble</em> now allows for the exchange of particles with a reservoir, not just volume.</p>
-      <p>The derivations are pretty much the exact same as the ones used for the microcanonical and canonical ensembles.</p>
+      <p>Unlike the microcanonical ensemble (which is completely isolated) and the canonical ensemble (which allows heat to be exchanged), the <em>grand canonical ensemble</em> now allows for the exchange of particles with a reservoir, not just volume.</p>
+      <h3>Chemical Potential &amp; Boltzmann-Gibbs Factors</h3>
+      <p>The derivations are pretty much the exact same as the ones used for the microcanonical and canonical ensembles. Start off with the total energy and particle number as being the sum of the energy and particle number in the system (\\( E_\\nu \\) and \\( N_\\nu \\)) and the energy and particle number in the reservoir (\\( E_R \\) and \\( N_R \\))</p>
       <div class="eqn"> \\[
           E = E_R + E_\\nu, \\quad N = N_R + N_\\nu
       \\] </div>
-      <p>The probability that the system is in microstate \\( \\nu \\) is proportional to the number of states the reservoir could be in with this energy and particle number, \\( \\Omega_R(E_R, N_R, V) \\):</p>
+      <p>The probability that the system is in microstate \\( \\nu \\) is proportional to the number of states the reservoir could be in with this energy and particle number, \\( \\Omega_R(E_R, N_R, V) \\), 'cus like, the more states there are, the more like it is for there to be a \\( \\nu \\) state:</p>
       <div class=eqn> \\[ p_ν ∝ \\Omega_R (E−E_ν, N−N_ν, V) = e^{\\frac{S_R(E−E_ν, N−N_ν, V)}{k_B}}\\] </div>
-      <p>Use a Taylor expansion:</p>
+      <p>Now at this point, we should use the good ol' <span class="definition" data-definition="\\[ f(x-a) = f(x) - a\\frac{df}{dx} \\]">Taylor expansion</span>, except now that we have two variables we are trying to approximate (\\( E_\\nu \\) and \\( N_\\nu \\)), we have to use an upgraded version of the Taylor series, which includes partial derivatives:</p>
       <div class=eqn> \\[ 
           S_R(E - E_\\nu, N - N_\\nu, V) \\approx S_R(E, N, V)
           - E_\\nu \\frac{\\partial S_R}{\\partial E}
           - N_\\nu \\frac{\\partial S_R}{\\partial N}
       \\] </div>
-      <p>Therefore</p>
+      <p>Put that into our equation for probability from like 30 seconds ago, and we get:</p>
       <div class=eqn> \\[ 
           p_\\nu \\propto \\exp{\\left(
           -\\frac{E_\\nu}{k_B}\\frac{\\partial S_R}{\\partial E}
           -\\frac{N_\\nu}{k_B}\\frac{\\partial S_R}{\\partial N}
           \\right)}
       \\] </div>
+      <p>Well, well, well, what do we have here? We know that \\( \\frac{\\partial S_R}{\\partial E} = \\frac1{T} \\) from last time, but what on <em>earth</em> is that \\( \\frac{\\partial S_R}{\\partial N} \\) supposed to be?</p>
+      <p>Well, let me tell you. This is related to a brand new quantity, \\( \\mu \\), which is the <em>chemical potential</em>.</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -18483,23 +18743,47 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>\\( \\mu \\) is the <em>chemical potential</em>...<br>
-      This means</p>
+      <p>A way to think about it is the <em>amount of energy required to add a partice to the system</em>. That's a good way to think about it because, well, that's exactly what it is. But another way to think about it, which is arguably better for the topic we are looking at in my opinion, is the <em>change in a system's free energy</em></p>
       <div class=eqn> \\[ 
-          p_\\nu \\propto e^{-\\beta(E_\\nu - \\mu N_\\nu)}
+          \\mu = \\Delta U - T\\Delta S
       \\] </div>
-      <div class=eqn> \\[ 
-          Z(T,V,µ) = \\sum_\\nu e^{-\\beta(E_\\nu - \\mu N_\\nu)}
-      \\] </div>
+      <p><em>Free energy</em> is the amount of energy a system has which is actually free to do work. Now this formula up here won't be used yet, but just keep it in mind, yeah? Cool beans!</p>
+      <p>Naturally, a system wants to decrease the amount of free energy it has ('cus it wants to use the energy to do things, y'know? S'no good just sitting there, right?).</p>
+      <p>Anywho, by placing that new chemical potential inside our probability thing, we get the <em>Boltzmann-Gibbs Factor</em>:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ p_\\nu \\propto e^{-\\beta(E_\\nu - \\mu N_\\nu)} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>And as usual, we get the *partition function just by summing up all the probabilities:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ Z(T, V, \\mu) = \\sum_\\nu e^{-\\beta(E_\\nu - \\mu N_\\nu)} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
       <blockquote>
-      <p><strong>CANONICAL ENSEMBLE</strong> The set of microstates of the system, which now allows energy and particle number to fluctuate</p>
+      <p><strong>CANONICAL ENSEMBLE</strong> The set of microstates of the system, which now allows <em>energy</em> and <em>particle number</em> to fluctuate.<br><br> <strong>CHEMICAL POTENTIAL, \\( \\mu \\)</strong> The change in a system's <em>free energy</em>.</p>
       </blockquote>
       <h3>The Grand Potential</h3>
       <p>Now that particles can be added and removed from the system, there is another source of energy:</p>
       <div class=eqn> \\[ 
           TdS ≥ dE + dW − µdN
       \\] </div>
-      <p>Grand potential</p>
+      <p>In the same way the canonical ensemble tries to minimise <em>Gibbs' free energy</em>, the grandcanonical ensemble tries to minimise <em>Grand potential</em> (or Landau) free energy</p>
       <div class=eqn> \\[ 
           Φ_G = E−TS−µN
       \\] </div>
@@ -18513,13 +18797,24 @@ const subtopics = {
             &= -k_B \\sum_\\nu p_\\nu [-\\beta(E_\\nu - \\mu N_\\nu) - \\ln{Z}]  \\\\[6pt]
             &= \\frac{ \\langle E \\rangle - \\mu \\langle N \\rangle }{ T } + k_B \\ln{Z}
       \\end{align} \\] </div>
-      <div class=eqn> \\[ \\begin{align}
-          Φ_G &= \\langle E \\rangle − TS − \\mu \\langle N \\rangle \\\\[6pt]
-              &= -k_B T \\ln{Z}
-      \\end{align} \\] </div>
-      <h3>The Thermodynamic Limit</h3>
+      <p>That gives us</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align}
+                      Φ_G &= \\langle E \\rangle − TS − \\mu \\langle N \\rangle \\\\[6pt]
+                          &= -k_B T \\ln{Z}
+                  \\end{align} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
       <h3>Density of States</h3>
-      <p>If a system is large enough, then the energies are no longer discrete, but become <em>continuous</em>. Now the partition function becomes:</p>
+      <p>If a system is large enough, then the energies are no longer discrete, but become <em>continuous</em>. So instead of using that <span class="definition" data-definition="\\[ Z(T, V, \\mu) = \\sum_\\nu e^{-\\beta(E_\\nu - \\mu N_\\nu)} \\]">pesky sum</span> we had before for the partition function, we now use an <em>integral</em>:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
@@ -18532,16 +18827,17 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>\\( g(E) \\) is the <em>density of states</em></p>
+      <p>\\( g(E) \\) is the <em>density of states</em>, which tells us how many states there are per unit energy. To get it, we just need to figure out the total number of states with energy less than \\( E \\), and then divide it by \\( E \\). Since we are in the business of using calculus:</p>
+      <div class=eqn> \\[ 
+          g(E) = \\frac{dN(E)}{dE}
+      \\] </div>
       <p>The number of states with energy less than that of wavenumber \\( k_E \\) is</p>
       <div class=eqn> \\[ 
           N(E) = k_E \\frac{L}π = \\frac{L}π \\left( \\frac{2mE}{\\hbar^2} \\right)^\\frac12
       \\] </div>
+      <p>And now all we've gotta do is differentiate that with respect to E. If you do that (bearing in mind that a bunch of these letters are just constants, meaning you can essentially just ignore 'em), you end up with</p>
       <div class=eqn> \\[ 
-          g(E) \\ dE = \\frac{N(E)}{dE} dE = \\frac{L}π \\frac12 \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac12 \\frac1{E^\\frac12}dE
-      \\] </div>
-      <div class=eqn> \\[ 
-          g(E) = \\frac{L}π \\frac12 \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac12 \\frac1{E^\\frac12}
+          g(E) \\frac{N(E)}{dE} = \\frac{L}π \\frac12 \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac12 \\frac1{E^\\frac12}
       \\] </div>
       <p>In 3D:</p>
       <div class=eqn> \\[ 
@@ -18553,7 +18849,9 @@ const subtopics = {
       <li><strong>3-DIMENSIONAL</strong> \\[ g(E) = \\frac{V}{4π^2} \\left( \\frac{2m}{\\hbar^2} \\right)^\\frac32 E^\\frac12 \\]</li>
       </ul>
       <h3>Quantum Statistics</h3>
+      <p>Quantum theory dictates that particles fall into two categories, which behave entirely differently when occupying quantum levels</p>
       <h4>Fermion</h4>
+      <p>Fermions are particles like electrons, protons, neutrons and similar stuff, and these have a half integer spin. More importantly, only one can be in a quantum state at a time</p>
       <p>Since there can only be one fermion in a particular state, that means that they only have two microstates, \\( \\mu = 1 \\) (occupied) and \\( \\mu = 0 \\) (unoccupied). This means the partition function is:</p>
       <div class=eqn> \\[ \\begin{align}
          Z(T, \\mu) &= \\sum_{\\nu = 0}^1 e^{-\\beta(E_\\nu - \\mu N_\\nu)} \\\\[6pt]
@@ -18564,20 +18862,22 @@ const subtopics = {
          \\langle N \\rangle &= \\sum_{\\nu = 0}^1 N_\\nu p_\\nu \\\\[6pt]
                    &= \\frac{e^{-\\beta(E - \\mu)}}{1 + e^{-\\beta(E - \\mu)}}
       \\end{align} \\] </div>
+      <p>Then cancelation leaves us with the Fermi-Dirac Distribution, describing the average number of particles in a given energy level:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ n(E, \\mu) = \\frac{1}{e^{\\beta(E - \\mu)} + 1} \\]
+                  \\[ n_\\text{FD}(E, \\mu) = \\frac{1}{e^{\\beta(E - \\mu)} \\style{color: cyan}{+} 1} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
-                  Formula 1: Entropy
+                  Formula 1: Fermi-Dirac Distribution
               </div><div class="formula-tooltip-desc">
                   ...
               </div></span>
           </div>
       </div>
+      <p><em>You might be wondering why I highlighted the plus sign. Trust me, I know what I'm doing, you'll see, just wait a sec, k?</em></p>
       <h4>Boson</h4>
-      <p>Any amount of particles can occupy a boson</p>
+      <p>Unlike our antisocial friends the fermions, any amount of bosons can occupy a single quantum level, meaning the partition function forms a geometric series:</p>
       <div class=eqn> \\[ \\begin{align} Z(T,\\mu)
           &= \\sum_{\\nu} e^{-\\beta(E_\\nu-\\mu N_\\nu)} \\\\[6pt]
           &= 1 + e^{-\\beta(E-\\mu)} + e^{-\\beta(2E-2\\mu)} + \\cdots + e^{-N\\beta(E-\\mu)} + \\cdots \\\\[6pt]
@@ -18589,10 +18889,11 @@ const subtopics = {
           &= \\frac{1}{\\beta}\\frac{\\partial}{\\partial \\mu}\\left[-\\ln\\left(1-e^{-\\beta(E-\\mu)}\\right)\\right] \\\\[6pt]
           &= \\frac{1}{\\beta}\\frac{e^{-\\beta(E-\\mu)}}{1-e^{-\\beta(E-\\mu)}}\\,\\beta.
       \\end{align} \\] </div>
+      <p>Then cancelation leaves us with the Bose-Einstein Distribution, describing the average number of bosons in a given energy level:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ n(E, \\mu) = \\frac{1}{e^{\\beta(E - \\mu)} - 1} \\]
+                  \\[ n_\\text{BE}(E, \\mu) = \\frac{1}{e^{\\beta(E - \\mu)} \\style{color: cyan}{-} 1} \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula 1: Entropy
@@ -18601,8 +18902,26 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Since the number of particles per state can't be negative. For this to be the case, the denominator must be more than zero</p>
+      <div class=eqn> \\[ \\begin{align}
+          e^{\\beta(E - \\mu)} - 1 &> 0 \\\\[6pt]
+          \\therefore e^{\\beta(E - \\mu)} &> 1
+      \\end{align} \\] </div>
+      <p>This means the exponent must be a positive number:</p>
+      <div class=eqn> \\[ \\begin{align}
+          E - \\mu &> 0 \\\\[6pt]
+          E &> \\mu
+      \\end{align} \\] </div>
+      <p>And since the lowest energy level is \\( E=0 \\):</p>
+      <div class=eqn> \\[ \\begin{align}
+          0 &> \\mu, \\text{ i.e. } \\mu \\text{ is negative}
+      \\end{align} \\] </div>
+      <blockquote>
+      <p>The chemical potential (\\(\\mu\\)) for a gas of bosons must be a <em>negative number</em> (\\(\\mu &lt; 0\\)), to stop the formula from giving a physically impossible &quot;negative number of particles&quot; in the ground state.</p>
+      </blockquote>
       <h3>Many-Particle Systems</h3>
-      <p>Now of course, a real system will have a lot of particles with a lot of different quantum levels. Like a metal</p>
+      <p>Now of course, a real system will have a lot of particles with a lot of different quantum levels. If the temperature were to go all the way to zero, then that would mean the particles don't have enough energy to go into higher energy states.</p>
+      <h4>Fermions</h4>
       <p>One thing these particles all have in common is that they are all <em>fermions</em>, meaning they follow the pauli exclusion principle.</p>
       <p>We can model a multi-particle system like this:</p>
       <ul>
@@ -18661,6 +18980,219 @@ const subtopics = {
       <ul>
       <li></li>
       </ul>
+    `
+  },
+
+  "time-arrow": {
+    title: "The arrow of time",
+    content: `
+      <p>Why does time flow forward?</p>
+      <p>We have the probability of being in a certain state at a certain time as \\( p_\\nu \\), as we've had all this while. Now let's say all the particles in the \\( \\nu \\) state are beginning to get sick and tired of the state theythere's some other state \\( \\nu' \\), with a probability \\( p_{\\nu'} \\)</p>
+      <p>With that said, some of the particles in the nu’ state are also beginning to get sick and tired, and want to enter the nu state.</p>
+      <p>Having said that, I’m a tyrant, and hence I don’t care what happens to the nu’ particles. What I wanna know is how much the probability of a particle nu state p_nu changes over time ()</p>
+      <p>The rate at which a particle transitions from one state to another is called the transmission rate, T. So, to calculate the number of nus which are converting, I just take the probability of a particle being a Neo, and multiply it by the rate at which these Neos convert to Primism</p>
+      <p>Now one might think that’s all, but there’s more. Since there are actually Primes which are becoming Neos, the rate of change increases by the amount that become Neos too:</p>
+      <div class="eqn"> \\[
+          \\frac{dp_\\nu}{dt} = \\sum_{\\nu'} T_{\\nu \\to \\nu'} p_{\\nu'} - \\sum_{\\nu'} T_{\\nu' \\to \\nu} p_\\nu
+      \\] </div>
+      <p>The principle of detailed balance tells us that, in equilibrium, the transition rates between any 2 specific states are the exact same:</p>
+      <div class="eqn"> \\[
+          T_{\\nu \\to \\nu'} = T_{\\nu' \\to \\nu}
+      \\] </div>
+      <p>That means we can sub out the transition rate:</p>
+      <div class="eqn"> \\[
+          \\frac{dp_\\nu}{dt} = T_{\\nu' \\to \\nu} \\sum_{\\nu'} (p_{\\nu'} - p_\\nu)
+      \\] </div>
+      <p>Here’s a brand-new quantity, the <em>magic \\(H\\)</em>:</p>
+      <p><em>Spoiler alert, it’s literally just the formula for entropy, except it’s negative for some bloody reason, and they removed the \\( k_B \\). Why they didn’t just use entropy, God knows, but whatever I doubt you actually care.</em></p>
+      <p>So, now let’s see how the <s>magic H</s> <em>entropy</em> changes over time. This is pretty easy, just take a derivative with respect to time. Since we are differentiating a product, we must use the <span class="definition" data-definition="\\[ \\frac{d}{dt}(uv) = u'v + uv' \\]"> product rule</span>. And when we do, we get:</p>
+      <div class="eqn"> \\[ \\begin{align} \\frac{dH}{dt} 
+          &= - \\sum_\\nu \\left( \\frac{dp_\\nu}{dt} \\ln p_\\nu + p_\\nu \\frac{1}{p_\\nu} \\frac{dp_\\nu}{dt} \\right) \\\\[6pt]
+          &= - \\sum_\\nu \\frac{dp_\\nu}{dt} \\ln p_\\nu - \\sum_\\nu \\frac{dp_\\nu}{dt}
+      \\end{align} \\] </div>
+      <p>As for that last time, the total probability won’t change over time, so we can ignore it, meaning:</p>
+      <div class="eqn"> \\[
+          \\frac{dH}{dt} = - \\sum_\\nu \\frac{dp_\\nu}{dt} \\ln p_\\nu
+      \\] </div>
+      <p>Put in the value for \\( \\frac{dp_\\nu}{dt} \\) we had before:</p>
+      <div class="eqn"> \\[ \\begin{align}
+          \\frac{dH}{dt} &= - \\sum_\\nu \\sum_{\\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_\\nu) \\ln p_\\nu \\\\[6pt]
+          &= - \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_\\nu) \\ln p_\\nu
+      \\end{align} \\] </div>
+      <p>Remember his formula, because it's gonna come in hand in a second. Anyway, here’s where things get a bit techy, so pay attention. Have you made your payment? Excellent, let’s go then!</p>
+      <p>I obviously described the particles in the \\( \\nu \\) state as the <em>Neos</em> and the particles in the \\( \\nu’ \\) state as the <em>Primes</em> for the sake of making the silly little political conflict story. Having said that, they aren’t actually any different mathematically (I guess you could say they are... <em>two wings of the same bird</em>?!). At the end of the day, \\( \\nu \\) is just “some state” and \\( \\nu’ \\) is just “some other state”. So, if switch all the Neos and the Primes around, mathematically there is no actual difference, the sum is the exact same:</p>
+      <div class="eqn"> \\[ \\begin{align}
+          \\frac{dH}{dt} &= - \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_\\nu) \\ln p_\\nu\\\\[6pt]
+          &= - \\sum_{\\nu, \\nu'} T_{\\nu \\to \\nu'} (p_{\\nu} - p_{\\nu'}) \\ln p_{\\nu'}
+      \\end{align} \\] </div>
+      <p>Then thanks to <span class="definition" data-definition="At equilibrium: \\[ T_{\\nu \\to \\nu'} = T_{\\nu' \\to \\nu} \\]">detailed balance</span>, we can switch the primes and the news on the transition term back around:</p>
+      <div class="eqn"> \\[
+          \\frac{dH}{dt} = - \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu} - p_{\\nu'}) \\ln p_{\\nu'}
+      \\] </div>
+      <p>Now let’s look at the term in the brackets. Now obviously you can’t just switch ‘em around, because that would give you a different answer. Like 1-2 is not the same as 2-1. Right?</p>
+      <p>Now normally I’d just leave it... but I really want to switch ‘em around. So, I will do so, and then put a negative sign outside:</p>
+      <div class="eqn"> \\[
+          \\frac{dH}{dt} = \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_{\\nu}) \\ln p_{\\nu'}
+      \\] </div>
+      <p>So now we have the <span class="definition" data-definition="\\[ \\frac{dH}{dt} = - \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_\\nu) \\ln p_\\nu \\]">original equation</span>, and this new and improved <span class="definition" data-definition="\\[ \\frac{dH}{dt} = \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_{\\nu}) \\ln p_{\\nu'} \\]">genetically modified version</span>. (<em>BTW if you are struggling to tell the difference, the original equation has a minus sign at the front, and the probability after the \\( \\ln \\) is \\(p_\\nu\\) instead of \\(p_{\\nu'}\\) like in the genetically modified version. I got a little bit confused typing this, so just thought I'd clarify it for y'all :P</em>)</p>
+      <p>So, we can add them together:</p>
+      <div class="eqn"> \\[
+          2\\frac{dH}{dt} = \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_\\nu) (\\ln p_{\\nu'} - \\ln p_\\nu)
+      \\] </div>
+      <p>Then just halve it to get:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dH}{dt} = \\frac12 \\sum_{\\nu, \\nu'} T_{\\nu' \\to \\nu} (p_{\\nu'} - p_\\nu) (\\ln p_{\\nu'} - \\ln p_\\nu) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Cool formula, ey? But why is this helpful, you ask? I’ll bloody tell you why m8! Look at the terms in the parentheses</p>
+      <ul>
+      <li>If the probability of a prime is <em>larger than</em> the probability of a neo, then the first bracket is positive. And since logarithms only increase, that means the other bracket is also positive, <em>meaning the product of the 2 brackets is positive</em></li>
+      <li>If the probability of a prime is lower than the probability of a neo, then the first bracket is negative, and so is the other bracket, <em>meaning the product of the 2 brackets is positive</em></li>
+      <li>In the boring and trivial case they are both the same, then <em>both brackets are zero</em>, meaning <em>the product of the 2 brackets is zero</em>.</li>
+      </ul>
+      <p>That means, in the end, the rate of change of H can only ever be more than zero:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac{dH}{dt} \\geq 0 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Entropy
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>This proves that entropy will only ever increase for a closed system until the probabilities are the same.</p>
+    `
+  },
+
+  "wave-density": {
+    title: "Wave and Energy Density",
+    content: `
+      <h3>EM Waves in dielectrics</h3>
+      <ul>
+      <li><strong>M1 IN MATTER [no charges]</strong> \\[ \\nabla \\cdot \\vec{D} = 0 \\]</li>
+      <li><strong>M2 (unchanged)</strong> \\[ \\nabla \\cdot \\vec{B} = 0 \\]</li>
+      <li><strong>M3 (unchanged)</strong> \\[ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]</li>
+      <li><strong>M4 IN MATTER [no charges]</strong> \\[ \\nabla \\times \\vec{H} = \\frac{\\partial \\vec{D}}{\\partial t} \\]</li>
+      </ul>
+      <p>We will assume</p>
+      <div class=eqn> \\[ 
+          \\vec{D} = \\varepsilon \\vec{E} = \\varepsilon_0 \\varepsilon_r \\vec{E} \\\\[6pt]
+          \\vec{H} = \\varepsilon \\vec{E} = \\mu_0 \\mu_r \\vec{E} \\] </div> 
+      <p>Take the curl of both sides of <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial\\vec{B}}{\\partial t} \\]"><strong>M3</strong></span>:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\nabla \\times (\\nabla \\times \\vec{E}) &= \\nabla \\times (-\\frac{\\partial \\vec{B}}{\\partial t}) \\\\[6pt]
+          &= -\\frac{\\partial}{\\partial t} ( \\nabla \\times \\vec{B} )
+      \\end{align} \\] </div> 
+      <p>Now we want to use the <span class="definition" data-definition="Maxwell's Fourth Equation \\[ ∇×(∇×\\vec{E})=∇(∇⋅\\vec{E})−∇^2\\vec{E} \\]">curl-of-curl identity</span>. But since we know that the divergence of the displacement is zero, that means the displacement of the electric field is also zero, meaning the identity is now:</p>
+      <div class=eqn> \\[ ∇×(∇×\\vec{E}) = −∇^2\\vec{E} \\] </div> 
+      <p>Put that in to give:</p>
+      <div class=eqn> \\[ −∇^2\\vec{E} =  -\\frac{\\partial}{\\partial t} ( \\nabla \\times \\vec{B} ) \\] </div> 
+      <p>Rearrange <span class="definition" data-definition="Maxwell's Fourth Equation \\[ \\nabla \\times \\vec{H} = \\frac{\\partial \\vec{D}}{\\partial t} \\]"><strong>M4 IN MATTER [no charges]</strong></span> to get the curl of \\( \\vec{B} \\):</p>
+      <div class=eqn> \\[ \\nabla \\times \\vec{B} = \\mu \\nabla \\times \\vec{H} =  \\mu \\frac{\\partial \\vec{D}}{\\partial t} = \\mu\\varepsilon \\frac{\\partial \\vec{E}}{\\partial t} \\] </div>
+      <p>So we put that in and cancel the negative signs:</p>
+      <div class=eqn> \\[ ∇^2\\vec{E} =  \\mu\\varepsilon \\frac{\\partial \\vec{E}}{\\partial t} \\] </div> 
+      <p>That's a bloody wave equation, meaning \\( \\frac1{v^2} = \\mu\\varepsilon \\), and therefore:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ v_\\phi = \\frac1{\\sqrt{\\mu\\varepsilon}} = \\frac1{\\sqrt{\\mu_0\\mu_r\\varepsilon_0\\varepsilon_r}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Surface charge density
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <p>The refractive index is defined</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ n = \\sqrt{\\mu\\varepsilon} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Refractive index
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\begin{align} 
+          \\vec{\\nabla} \\cdot \\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
+          \\vec{\\nabla} \\cdot \\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
+          \\vec{\\nabla} \\cdot \\vec{D}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{D}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
+          \\vec{\\nabla} \\cdot \\vec{H}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{H}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
+      \\end{align} \\] </div> 
+      <p>Then</p>
+      <div class=eqn> \\[ \\begin{align} 
+          \\vec{k} \\cdot \\vec{B} &= 0 \\\\[6pt]
+          \\vec{k} \\cdot \\vec{D} &= 0 \\\\[6pt]
+          \\vec{k} \\times \\vec{E} &= \\omega \\vec{B} \\\\[6pt]
+          \\vec{k} \\times \\vec{H} &= -\\omega \\vec{D}
+      \\end{align} \\] </div> 
+      <p>This means EM waves in media are still transverse</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ Z_0 = \\mu_0 c = \\sqrt{\\frac{\\mu}{\\varepsilon_0}} 376.73 Ω \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Refractive index
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <h3>Energy density and flux</h3>
+      <p>The <em>Poynting vector</em> is back!</p>
+      <div class=eqn> \\[ \\begin{align} 
+          \\frac{\\partial u}{\\partial t} + \\nabla \\cdot \\vec{S} &= -\\vec{E}\\cdot \\vec{J}_f \\\\[6pt]
+          &= -\\vec{E}\\cdot\\left(\\nabla \\times \\vec{H} - \\frac{\\partial \\vec{D}}{\\partial t}\\right)
+      \\end{align} \\] </div> 
+      <p>We can use the <span class="definition" data-definition="\\[ ∇⋅(\\vec{A}×\\vec{B})=\\vec{B}⋅(∇×\\vec{A})−\\vec{A}⋅(∇×\\vec{B}) \\]">divergence of a cross product</span> to turn this into:</p>
+      <div class=eqn> \\[
+          \\frac{\\partial u}{\\partial t} + \\nabla \\cdot \\vec{S} = \\nabla\\cdot(\\vec{E}\\times\\vec{H}) - \\vec{H}\\cdot(\\nabla\\times\\vec{E}) + \\vec{E}\\cdot\\frac{\\partial \\vec{D}}{\\partial t}
+      \\] </div> 
+      <p>And then with a cheeky <span class="definition" data-definition="Maxwell's third law \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3</strong></span>:</p>
+      <div class=eqn> \\[
+          \\frac{\\partial u}{\\partial t} + \\nabla \\cdot \\vec{S} = \\nabla\\cdot(\\vec{E}\\times\\vec{H}) + \\vec{H}\\cdot\\frac{\\partial \\vec{B}}{\\partial t} + \\vec{E}\\cdot\\frac{\\partial \\vec{D}}{\\partial t}
+      \\] </div> 
+      <p>So we have our Poynting vector:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{S} = \\vec{E}\\times\\vec{H} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Refractive index
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\vec{S} = \\frac12 (\\vec{E}\\cdot\\vec{D} + \\vec{H}\\cdot\\vec{B}) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Refractive index
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
     `
   }
 };

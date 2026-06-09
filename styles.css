@@ -1821,7 +1821,6 @@ body.dimmed::before {
 
 .definition-tooltip {
   position: absolute;
-  display: none;
   background: #222;
   color: #fff;
   padding: 6px 10px;
@@ -1832,15 +1831,19 @@ body.dimmed::before {
   line-height: 1.4;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-5px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform: translateX(-50%) translateY(-30px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
   z-index: 1000;
+  text-align: center;
+  visibility: hidden;
+  box-shadow: 0px 0px 10px black, 0px 0px 15px black, 0px 0px 10px black, 0px 0px 20px black;
 }
 
 .definition-tooltip.show {
-  display: block;
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
+  transform: translateX(-50%) translateY(+5%);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
 }
 
 

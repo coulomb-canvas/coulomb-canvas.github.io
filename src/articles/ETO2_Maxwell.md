@@ -59,11 +59,11 @@ This process of using the Divergence theorem to get brand new equations is exact
 
 <div class=eqn> \[ \oint_S \vec{E} \cdot d\vec{S} = \frac1{\varepsilon_0} \int_V \rho \ dV \] </div> 
 
-Use the divergence theorem as we did before, and we end up with:
+Use the <span class="definition" data-definition="\[ \int_S \vec{E} \cdot d\vec{S} = \int_V \vec{\nabla} \cdot \vec{E} \ dV \]">divergence theorem</span> as we did before, and we end up with:
 
-<div class=eqn> \[ \oint_S \vec{E} \cdot d\vec{S} =  \int_V \vec{\nabla} \cdot \vec{E} \ dV =  \int_V \frac{\rho}{\varepsilon_0} \ dV \] </div> 
+<div class=eqn> \[ \int_V \vec{\nabla} \cdot \vec{E} \ dV =  \int_V \frac{\rho}{\varepsilon_0} \ dV \] </div> 
 
-They are both integrals with respect to volume, so:
+Now, here's the part which I feel like might give mathematicians a fit. Here goes: Since they are both integrals with respect to volume, that means you can take the stuff on the right hand side, subtract it to bring it to the left hand side, and then take the integral outside:
 
 <div class=eqn> \[\int_V \left( \vec{\nabla} \cdot \vec{E} - \frac{\rho}{\varepsilon_0} \right) \ dV \] </div> 
 
@@ -82,15 +82,22 @@ And therefore, by using the same logic, we end up with the first Maxwell equatio
     </div>
 </div>
 
+Hey, since we are in the business of ragebaiting mathematicians, why not just hit 'em with a bit o' this; if you really want, you can just cancel out the integrals the same way you would cancel out any other constant or variable (as in like dividing by \\( \int_V dV \\), crazy right?!)
+
+<div class=eqn> \[ \style{opacity: 30%}{\cancel{\int_V}} \vec{\nabla} \cdot \vec{E} \ \style{opacity: 30%}{\cancel{dV}}  =  
+    \style{opacity: 30%}{\cancel{\int_V}} \frac{\rho}{\varepsilon_0} \ \style{opacity: 30%}{\cancel{dV}} \] </div> 
+
+And look at that, we have the exact same answer! And before the mathematicians start whinging, this is *literally* Maxwell's equation, how can you complain?
+
 ### Maxwell's 2nd equation
 
-This is a lot of fun, isn't it? Let's try it again, this time with the *solenoidal condition*.
+Pissing of mathematicians is a lot of fun, isn't it? Let's try it again, this time with the *solenoidal condition*.
 
 <div class=eqn> \[ \oint_S \vec{B} \cdot d\vec{S} = 0 \] </div> 
 
-This is even bloody easy, because it already equals zero meaning we don't have to do any grift rearranging. Using the divergence theorem gives us:
+This is even bloody easier, because it already equals zero meaning we don't have to do any grift rearranging. Using the <span class="definition" data-definition="\[ \int_S \vec{B} \cdot d\vec{S} = \int_V \vec{\nabla} \cdot \vec{B} \ dV \]">divergence theorem</span> again gives us:
 
-<div class=eqn> \[ \oint_S \vec{B} \cdot d\vec{S} = \int_V \vec{\nabla} \cdot \vec{B} \ dV = 0 \] </div> 
+<div class=eqn> \[ \int_V \vec{\nabla} \cdot \vec{B} \ dV = 0 \] </div> 
 
 And that must therefore mean that all the stuff inside the integral must be equal to zero, leaving us with Maxwell's 2nd equation (or **M2**)
 
@@ -106,6 +113,8 @@ And that must therefore mean that all the stuff inside the integral must be equa
         </div></span>
     </div>
 </div>
+
+Kind of unfortunate, since this is actually mathematically acceptable (last time I checked anyway), so moving on I guess.
 
 ### Maxwell's 3rd equation
 
@@ -141,6 +150,13 @@ Leaving us with Maxwell's 3rd equation, **M3**
         </div></span>
     </div>
 </div>
+
+Hey mathematicians!! Look at this!!
+
+<div class=eqn> \[ 
+    \style{opacity: 30%}{\cancel{\int_S}} \vec{\nabla} \times \vec{E} \ \style{opacity: 30%}{\cancel{\cdot dS}}  =  
+    \style{opacity: 30%}{\cancel{\int_S}} -\frac{\partial\vec{B}}{\partial t} \ \style{opacity: 30%}{\cancel{\cdot dS}} 
+    \] </div> 
 
 ### Maxwell's 4th Equation
 
@@ -199,6 +215,13 @@ So now we can replace \\( \vec{J} \\) with \\( \vec{J} + \varepsilon_0 \frac{d\v
 </div>
 
 Turns out, this displacement is so small that they often times just couldn't see it
+
+Oh, and erm, I know I just spoke about how the equation isn't accurate, but anyway, quick ragebait:
+
+<div class=eqn> \[ 
+    \style{opacity: 30%}{\cancel{\int_S}} \vec{\nabla} \times \vec{B} \ \style{opacity: 30%}{\cancel{\cdot dS}}  =  
+    \style{opacity: 30%}{\cancel{\int_S}} \mu_0 \vec{J} \ \style{opacity: 30%}{\cancel{\cdot dS}} 
+    \] </div> 
 
 ### TL;DR
 

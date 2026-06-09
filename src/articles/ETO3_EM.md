@@ -13,14 +13,14 @@ If we take our 4 Maxwell equations, and let's make it so that there is no charge
     \vec{\nabla} \times \vec{B} &= \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
     \end{align} \] </div> 
 
-Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of **M3**
+Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <span class="definition" data-definition="Maxwell's third law with no charge or current (\( \rho = 0, \vec{J} = 0\)): \[ \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \]">**M3'**</span>
 
 <div class=eqn> \[ \begin{align} \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) 
     &= \vec{\nabla} \times \left( -\frac{\partial \vec{B}}{\partial t} \right) \\[6pt]
     &= -\frac{\partial}{\partial t} \vec{\nabla} \times \vec{B} 
     \end{align} \] </div> 
 
-Now we have that \\( \vec{\nabla} \times \vec{B} \\) from **M4**. In that case, we can just wack that value in:
+Now we have that \\( \vec{\nabla} \times \vec{B} \\) from <span class="definition" data-definition="\[ \vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \]">**M4'**</span>. In that case, we can just wack that value in:
 
 <div class=eqn> \[ \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \] </div> 
 
@@ -43,7 +43,7 @@ Since there is no charge, the divergence is zero \\( \vec{\nabla} \cdot \vec{E} 
     </div>
 </div>
 
-Doing the same thing, except starting by taking the curl of **M4** instead of **M3** gives us:
+Doing the same thing, except starting by taking the curl of <span class="definition" data-definition="\[ \vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \]">**M4'**</span> instead of **M3** gives us:
 
 
 <div class="hover-wrapper">
@@ -118,7 +118,7 @@ Starting with the first two, now that we have actual formulae for \\( \vec{E} \\
 <div class=eqn> \[ \begin{align} 
     \vec{\nabla} \cdot \vec{E}_0 e^{i(\vec{k} \cdot \vec{r} - \omega t)} &= i\vec{k}\vec{E}_0 e^{i(\vec{k} \cdot \vec{r} - \omega t)} \\[6pt]
     \vec{\nabla} \cdot \vec{B}_0 e^{i(\vec{k} \cdot \vec{r} - \omega t)} &= i\vec{k}\vec{B}_0 e^{i(\vec{k} \cdot \vec{r} - \omega t)}
-    \end{align} \] </div> 
+\end{align} \] </div> 
 
 So taking the spacial derivatives gives us the same wave back, multiplied by \\( i\vec{k} \\). Putting those into the Maxwell formulae from earlier, and dividing by \\( i \\) on both sides:
 
@@ -163,13 +163,13 @@ Putting that in gives us:
 <div class=eqn> \[ \begin{align} \frac{du}{dt} + \vec{\nabla} \cdot \vec{S} 
     &= - \vec{E} \cdot \left( \frac1{\mu_0} ( \vec{\nabla} \times \vec{B} ) - \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right) \\[6pt] 
     &= - \vec{E} \cdot \frac1{\mu_0} ( \vec{\nabla} \times \vec{B} ) + \varepsilon_0 \vec{E} \cdot  \frac{\partial \vec{E}}{\partial t} 
-    \end{align} \] </div>
+\end{align} \] </div>
 
 By using an identity () we can turn this into:
 
 <div class=eqn> \[  \frac{du}{dt} + \vec{\nabla} \cdot \vec{S} =  \frac1{\mu_0} \vec{\nabla} \cdot  ( \vec{E} \times \vec{B} ) - \frac1{\mu_0} \vec{B} \cdot  ( \vec{\nabla} \times \vec{E} ) + \varepsilon_0 \vec{E} \cdot  \frac{\partial \vec{E}}{\partial t}. \] </div> 
 
-We're going somewhere with this, I promise. Then by using **M3**, we can change the 3rd term:
+We're going somewhere with this, I promise. Then by using <span class="definition" data-definition="\[ \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \]">**M3'**</span>, we can change the 3rd term:
 
 <div class=eqn> \[  \frac{du}{dt} + \vec{\nabla} \cdot \vec{S} =  \frac1{\mu_0} \vec{\nabla} \cdot  ( \vec{E} \times \vec{B} ) + \frac1{\mu_0} \vec{B} \cdot  \frac{\partial \vec{B}}{\partial t} + \varepsilon_0 \vec{E} \cdot  \frac{\partial \vec{E}}{\partial t}. \] </div> 
 

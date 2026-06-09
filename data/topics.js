@@ -671,6 +671,10 @@ const topics = [
         subid: "grand-canon-en",
         title: "Aren't planets and stars cool?",
       },
+      {
+        subid: "time-arrow",
+        title: "Aren't planets and stars cool?",
+      },
     ]
   },
   {
@@ -694,6 +698,10 @@ const topics = [
       {
         subid: "em-in-matter",
         title: "Maxwell Equations",
+      },
+      {
+        subid: "wave-density",
+        title: "Wave and Energy Density",
       },
     ]
   },

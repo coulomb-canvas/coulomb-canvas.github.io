@@ -95,6 +95,10 @@ em {
   color: #5680cf
 }
 
+blockquote em {
+  color: #dd7171
+}
+
 
 header {
   padding: 0rem 0rem;
@@ -1840,7 +1844,7 @@ body.dimmed::before {
 }
 
 .definition-tooltip.show {
-  opacity: 1;
+  opacity: 0.8;
   visibility: visible;
   transform: translateX(-50%) translateY(+5%);
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;

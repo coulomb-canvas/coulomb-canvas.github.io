@@ -225,4 +225,14 @@ Oh, and erm, I know I just spoke about how the equation isn't accurate, but anyw
 
 ### TL;DR
 
+Today we have derived the 4 Maxwell equations, as well as a bonus equation. You need to remember them, because they'll be coming up a lot!! Anywat, what have we learnt?
+
+- The **continuity equation** tells us that, if current is flowing out of a volume, then the amount of charge inside must decrease with it. \\[ \frac{\partial\rho}{\partial t} + \vec{\nabla} \cdot \vec{J} = 0 \\] It can be derived by differentiating the <span class="definition" data-definition="\[ Q = \int_V \rho \  dV \]">charge</span> (integral definition) with respect to time, equating it to <span class="definition" data-definition="\[ I = \int_S \vec{J} \cdot d\vec{S} \]">current</span> (also with the integral definition), and then applying the divergence theorem to the current integral.
+- **Maxwell's First Equation** states that electric charge is the source of electric fields. \\[ \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\varepsilon_0} \\] It comes from applying the divergence theorem to *Gauss' Law*.
+- **Maxwell's Second Equation** states that there are no magnetic monopoles and that magnetic flux is conserved. \\[ \vec{\nabla} \cdot \vec{B} = 0 \\] It comes from applying the divergence theorem to *the Solenoidal Condition*.
+- **Maxwell's Third Equation** states that there a time-varying magnetic field creates a circulating electric field. \\[ \vec{\nabla} \times \vec{E} = -\frac{\partial\vec{B}}{\partial t} \\] It comes from applying *Stoke's theorem* (notice how that's not the divergence theorem, remember that m8) to *Faraday's law*.
+- **Maxwell's Fourth Equation** states that electrical currents and time-varying electric fields create circulating magnetic fields. \\[ \vec{\nabla} \times \vec{B} = \mu_0 \left( \vec{J} + \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \right) \\] It comes from applying Stoke's theorem to *Ampere's law*.
+- Maxwell had to modify the 4th equation, because taking the divergence would imply that \\( \vec{\nabla} \cdot \vec{J} = 0 \\), which goes against the continuity equation. To do this, he rearranged his first equation to get a new value for \\( \rho \\), put *that* into the continuity equation, giving him: \\[ \vec{\nabla} \cdot \left( \varepsilon_0 \frac{d\vec{E}}{dt} + \vec{J} \right) = 0  \\] So by replacing every \\( \vec{J} \\) with \\( \varepsilon_0 \frac{d\vec{E}}{dt} + \vec{J} \\), he gets his fourth equation.
+
+And remember: Ragebaiting mathematicians is a lot of fun!
 

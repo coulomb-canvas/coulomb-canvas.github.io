@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 131 subtopics
-// Generated: 2026-06-09T13:39:20.525Z
+// AUTO-GENERATED FILE - Contains 141 subtopics
+// Generated: 2026-06-15T14:07:28.540Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 131 existing hand-written entries
-//   - 67 Markdown-generated entries
+//   - 141 existing hand-written entries
+//   - 76 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -17431,6 +17431,16 @@ const subtopics = {
           \\style{opacity: 30%}{\\cancel{\\int_S}} \\mu_0 \\vec{J} \\ \\style{opacity: 30%}{\\cancel{\\cdot dS}} 
           \\] </div> 
       <h3>TL;DR</h3>
+      <p>Today we have derived the 4 Maxwell equations, as well as a bonus equation. You need to remember them, because they'll be coming up a lot!! Anywat, what have we learnt?</p>
+      <ul>
+      <li>The <strong>continuity equation</strong> tells us that, if current is flowing out of a volume, then the amount of charge inside must decrease with it. \\[ \\frac{\\partial\\rho}{\\partial t} + \\vec{\\nabla} \\cdot \\vec{J} = 0 \\] It can be derived by differentiating the <span class="definition" data-definition="\\[ Q = \\int_V \\rho \\  dV \\]">charge</span> (integral definition) with respect to time, equating it to <span class="definition" data-definition="\\[ I = \\int_S \\vec{J} \\cdot d\\vec{S} \\]">current</span> (also with the integral definition), and then applying the divergence theorem to the current integral.</li>
+      <li><strong>Maxwell's First Equation</strong> states that electric charge is the source of electric fields. \\[ \\vec{\\nabla} \\cdot \\vec{E} = \\frac{\\rho}{\\varepsilon_0} \\] It comes from applying the divergence theorem to <em>Gauss' Law</em>.</li>
+      <li><strong>Maxwell's Second Equation</strong> states that there are no magnetic monopoles and that magnetic flux is conserved. \\[ \\vec{\\nabla} \\cdot \\vec{B} = 0 \\] It comes from applying the divergence theorem to <em>the Solenoidal Condition</em>.</li>
+      <li><strong>Maxwell's Third Equation</strong> states that there a time-varying magnetic field creates a circulating electric field. \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial\\vec{B}}{\\partial t} \\] It comes from applying <em>Stoke's theorem</em> (notice how that's not the divergence theorem, remember that m8) to <em>Faraday's law</em>.</li>
+      <li><strong>Maxwell's Fourth Equation</strong> states that electrical currents and time-varying electric fields create circulating magnetic fields. \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\left( \\vec{J} + \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right) \\] It comes from applying Stoke's theorem to <em>Ampere's law</em>.</li>
+      <li>Maxwell had to modify the 4th equation, because taking the divergence would imply that \\( \\vec{\\nabla} \\cdot \\vec{J} = 0 \\), which goes against the continuity equation. To do this, he rearranged his first equation to get a new value for \\( \\rho \\), put <em>that</em> into the continuity equation, giving him: \\[ \\vec{\\nabla} \\cdot \\left( \\varepsilon_0 \\frac{d\\vec{E}}{dt} + \\vec{J} \\right) = 0  \\] So by replacing every \\( \\vec{J} \\) with \\( \\varepsilon_0 \\frac{d\\vec{E}}{dt} + \\vec{J} \\), he gets his fourth equation.</li>
+      </ul>
+      <p>And remember: Ragebaiting mathematicians is a lot of fun!</p>
     `
   },
 
@@ -17438,18 +17448,18 @@ const subtopics = {
     title: "Electromagnetic Waves",
     content: `
       <p>If we take our 4 Maxwell equations, and let's make it so that there is no charge or current (\\( \\rho = 0, \\vec{J} = 0\\)). This gives us these:</p>
-      <div class=eqn> \\[ \\begin{align} 
-          \\vec{\\nabla} \\cdot \\vec{E} &= 0 \\\\[6pt]
-          \\vec{\\nabla} \\cdot \\vec{B} &= 0 \\\\[6pt]
-          \\vec{\\nabla} \\times \\vec{E} &= -\\frac{\\partial \\vec{B}}{\\partial t} \\\\[6pt]
-          \\vec{\\nabla} \\times \\vec{B} &= \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t}
-          \\end{align} \\] </div> 
-      <p>Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <span class="definition" data-definition="Maxwell's third law with no charge or current (\\( \\rho = 0, \\vec{J} = 0\\)): \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3'</strong></span></p>
+      <ul>
+      <li><strong>M1 [no charge]</strong> \\[ \\vec{\\nabla} \\cdot \\vec{E} = 0 \\]</li>
+      <li><strong>M2 (unchanged)</strong> \\[ \\vec{\\nabla} \\cdot \\vec{B} = 0 \\]</li>
+      <li><strong>M3 (unchanged)</strong> \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]</li>
+      <li><strong>M4 [no charge]</strong> \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\]</li>
+      </ul>
+      <p>Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <span class="definition" data-definition="Maxwell's third law: \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3</strong></span></p>
       <div class=eqn> \\[ \\begin{align} \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{E}) 
           &= \\vec{\\nabla} \\times \\left( -\\frac{\\partial \\vec{B}}{\\partial t} \\right) \\\\[6pt]
           &= -\\frac{\\partial}{\\partial t} \\vec{\\nabla} \\times \\vec{B} 
           \\end{align} \\] </div> 
-      <p>Now we have that \\( \\vec{\\nabla} \\times \\vec{B} \\) from <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\]"><strong>M4'</strong></span>. In that case, we can just wack that value in:</p>
+      <p>Now we have that \\( \\vec{\\nabla} \\times \\vec{B} \\) from <span class="definition" data-definition="Maxwell's fourth law with no charge or current (\\( \\rho = 0, \\vec{J} = 0\\)): \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\]"><strong>M4 [no charge]</strong></span>. In that case, we can just wack that value in:</p>
       <div class=eqn> \\[ \\vec{\\nabla} \\times (\\vec{\\nabla} \\times \\vec{E}) = - \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\] </div> 
       <p>Then we can use the identity</p>
       <div class=eqn> \\[ \\vec{\\nabla}(\\vec{\\nabla} \\cdot \\vec{E}) - \\vec{\\nabla}^2 \\vec{E} = - \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\] </div> 
@@ -17466,7 +17476,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
-      <p>Doing the same thing, except starting by taking the curl of <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\]"><strong>M4'</strong></span> instead of <strong>M3</strong> gives us:</p>
+      <p>Doing the same thing, except starting by taking the curl of <span class="definition" data-definition="Maxwell's fourth law with no charge or current (\\( \\rho = 0, \\vec{J} = 0\\)): \\[ \\vec{\\nabla} \\times \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\]"><strong>M4 [no charge]</strong></span> instead of <strong>M3</strong> gives us:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
@@ -17534,7 +17544,7 @@ const subtopics = {
           \\end{align} \\] </div> 
       <p>These show that \\( \\vec{E} \\) and \\( \\vec{B} \\) are perpendicular to each other.</p>
       <h3>Energy of an electromagnetic wave</h3>
-      <p>Remember from E&amp;M, that the energy of a wave is stored within the electric and magnetic fields.</p>
+      <p>Remember from E&amp;M, that the energy of a wave is stored within the electric and magnetic fields. Now I wanna know how much energy EM waves transfer through a surface</p>
       <p>Charges in an electric field gain energy from the electric field. This happens when a charge moves along the field. If it moves parallel to the field lines, then the field is doing all the work, meaning it</p>
       <div class=eqn> \\[ W = \\vec{E} \\cdot \\vec{J} \\] </div> 
       <p>The rate of change of energy</p>
@@ -17549,9 +17559,9 @@ const subtopics = {
           &= - \\vec{E} \\cdot \\left( \\frac1{\\mu_0} ( \\vec{\\nabla} \\times \\vec{B} ) - \\varepsilon_0 \\frac{\\partial \\vec{E}}{\\partial t} \\right) \\\\[6pt] 
           &= - \\vec{E} \\cdot \\frac1{\\mu_0} ( \\vec{\\nabla} \\times \\vec{B} ) + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t} 
       \\end{align} \\] </div>
-      <p>By using an identity () we can turn this into:</p>
+      <p>By using the <span class="definition" data-definition="\\[ ∇⋅(\\vec{A}×\\vec{B})=\\vec{B}⋅(∇×\\vec{A})−\\vec{A}⋅(∇×\\vec{B}) \\] In this case it's been rearranged a bit: \\[ ∇⋅(\\vec{A}×\\vec{B})-\\vec{B}⋅(∇×\\vec{A})=-\\vec{A}⋅(∇×\\vec{B}) \\]">divergence of a cross product</span> identity (and rearranging it a teeny bit) we can turn this into:</p>
       <div class=eqn> \\[  \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} =  \\frac1{\\mu_0} \\vec{\\nabla} \\cdot  ( \\vec{E} \\times \\vec{B} ) - \\frac1{\\mu_0} \\vec{B} \\cdot  ( \\vec{\\nabla} \\times \\vec{E} ) + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t}. \\] </div> 
-      <p>We're going somewhere with this, I promise. Then by using <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3'</strong></span>, we can change the 3rd term:</p>
+      <p>We're going somewhere with this, I promise. Then by using <span class="definition" data-definition="Maxwell's third law: \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3</strong></span>, we can change the 3rd term:</p>
       <div class=eqn> \\[  \\frac{du}{dt} + \\vec{\\nabla} \\cdot \\vec{S} =  \\frac1{\\mu_0} \\vec{\\nabla} \\cdot  ( \\vec{E} \\times \\vec{B} ) + \\frac1{\\mu_0} \\vec{B} \\cdot  \\frac{\\partial \\vec{B}}{\\partial t} + \\varepsilon_0 \\vec{E} \\cdot  \\frac{\\partial \\vec{E}}{\\partial t}. \\] </div> 
       <p>Now notice the last two terms follow the \\( \\vec{W} \\frac{\\partial \\vec{W}}{\\partial t} \\) pattern. Now we use this fact:</p>
       <div class=eqn> \\[ \\vec{W} \\cdot \\frac{\\partial \\vec{W}}{\\partial t} = \\frac{\\partial}{\\partial t} \\left( \\frac{W^2}2 \\right)  \\] </div> 
@@ -17574,7 +17584,17 @@ const subtopics = {
           \\vec{S} &= \\frac1{\\mu_0} ( \\vec{E} \\times \\vec{B} ) 
           \\end{align} \\] </div>
       <h3>TL;DR</h3>
-      <p>Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \\rho \\) and \\( J \\) are zero</p>
+      <p>Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \\rho \\) and \\( J \\) are zero.</p>
+      <ul>
+      <li>By assuming no charge or current and taking curls of Maxwell's third and fourth equation, we can get wave equations for the electric and magnetic components of electromagnetic waves \\[ \\vec{\\nabla}^2 \\vec{E} = \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{E}}{\\partial t^2} \\] \\[ \\vec{\\nabla}^2 \\vec{B} = \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\vec{B}}{\\partial t^2} \\]</li>
+      <li>Solving these wave equations shows that these waves propagate at the speed of light, proving light is an electromagnetic wave.</li>
+      <li>EM waves are <em>transverse</em>.</li>
+      <li>The electric and magnetic fields oscillate perpendicular to each other.</li>
+      <li>In a vacuum, the electric and magnetic fields oscillate perfectly in phase.</li>
+      <li>The electric field exerts a way stronger force on non-relativistic charges than the magnetic field component.</li>
+      <li>Em waves carry energy</li>
+      <li>The <strong>Poynting vector</strong> represents the direction and rate of energy flux.</li>
+      </ul>
     `
   },
 
@@ -17943,8 +17963,12 @@ const subtopics = {
       </div>
       <h4>Conservation Equation</h4>
       <h3>TL;DR</h3>
-      <p>Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \\rho \\) and \\( J \\) are zero</p>
+      <p>Then again, polarisation and magnetisation are kinda weird, 'cus we have to say an area is small enough that our approximations work, but big enough to contain a sensible average.</p>
       <ul>
+      <li>Applying an electric field shifts the bound charges in matter, creating dipole moments. This leads to surface and volume &quot;polarisation charges&quot; and &quot;polarisation currents&quot;.</li>
+      <li>Materials respond to magnetic fields via microscopic current loops, creating &quot;magnetisation currents&quot;.</li>
+      <li>The Displacement field (D) is introduced to isolate free charges from bound/polarisation charges.</li>
+      <li>The Magnetic field strength (H) is introduced to isolate free currents from bound/magnetisation currents.</li>
       <li>The components of E parallel to the boundary match \\[ \\hat{n} × (\\vec{E}_2 − \\vec{E}_1) = 0 \\]</li>
       <li>The perpendicular components of \\(D\\) are discontinuous by the surface charge density \\[ \\hat{n} \\cdot (\\vec{D}_1 − \\vec{D}_1) = \\sigma_f \\]</li>
       </ul>
@@ -19079,17 +19103,18 @@ const subtopics = {
     title: "Wave and Energy Density",
     content: `
       <h3>EM Waves in dielectrics</h3>
+      <p>Like we did the first time, we will take our Maxwell equations and assume there is no free charge or current (\\( \\rho = 0, \\vec{J} = 0\\)). This gives us these:</p>
       <ul>
       <li><strong>M1 IN MATTER [no charges]</strong> \\[ \\nabla \\cdot \\vec{D} = 0 \\]</li>
       <li><strong>M2 (unchanged)</strong> \\[ \\nabla \\cdot \\vec{B} = 0 \\]</li>
       <li><strong>M3 (unchanged)</strong> \\[ \\nabla \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]</li>
       <li><strong>M4 IN MATTER [no charges]</strong> \\[ \\nabla \\times \\vec{H} = \\frac{\\partial \\vec{D}}{\\partial t} \\]</li>
       </ul>
-      <p>We will assume</p>
+      <p>We will assume that the displacement and the magnetic field strength both scale linearly:</p>
       <div class=eqn> \\[ 
           \\vec{D} = \\varepsilon \\vec{E} = \\varepsilon_0 \\varepsilon_r \\vec{E} \\\\[6pt]
           \\vec{H} = \\varepsilon \\vec{E} = \\mu_0 \\mu_r \\vec{E} \\] </div> 
-      <p>Take the curl of both sides of <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial\\vec{B}}{\\partial t} \\]"><strong>M3</strong></span>:</p>
+      <p>And like we did the first time, we will take the curl of both sides of <span class="definition" data-definition="\\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial\\vec{B}}{\\partial t} \\]"><strong>M3</strong></span>:</p>
       <div class=eqn> \\[ \\begin{align}
           \\nabla \\times (\\nabla \\times \\vec{E}) &= \\nabla \\times (-\\frac{\\partial \\vec{B}}{\\partial t}) \\\\[6pt]
           &= -\\frac{\\partial}{\\partial t} ( \\nabla \\times \\vec{B} )
@@ -19098,7 +19123,7 @@ const subtopics = {
       <div class=eqn> \\[ ∇×(∇×\\vec{E}) = −∇^2\\vec{E} \\] </div> 
       <p>Put that in to give:</p>
       <div class=eqn> \\[ −∇^2\\vec{E} =  -\\frac{\\partial}{\\partial t} ( \\nabla \\times \\vec{B} ) \\] </div> 
-      <p>Rearrange <span class="definition" data-definition="Maxwell's Fourth Equation \\[ \\nabla \\times \\vec{H} = \\frac{\\partial \\vec{D}}{\\partial t} \\]"><strong>M4 IN MATTER [no charges]</strong></span> to get the curl of \\( \\vec{B} \\):</p>
+      <p>Also like we did the first time, rearrange <span class="definition" data-definition="Maxwell's Fourth Equation \\[ \\nabla \\times \\vec{H} = \\frac{\\partial \\vec{D}}{\\partial t} \\]"><strong>M4 IN MATTER [no charges]</strong></span> to get the curl of \\( \\vec{B} \\):</p>
       <div class=eqn> \\[ \\nabla \\times \\vec{B} = \\mu \\nabla \\times \\vec{H} =  \\mu \\frac{\\partial \\vec{D}}{\\partial t} = \\mu\\varepsilon \\frac{\\partial \\vec{E}}{\\partial t} \\] </div>
       <p>So we put that in and cancel the negative signs:</p>
       <div class=eqn> \\[ ∇^2\\vec{E} =  \\mu\\varepsilon \\frac{\\partial \\vec{E}}{\\partial t} \\] </div> 
@@ -19128,13 +19153,17 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>And, since the vast majority of things aren't magnetic (or 'weakly magnetisable' if you wanna get all fancy shmancy), that means that \\( \\mu_r \\) is usually round about 1, meaning we end up with the approximation:</p>
+      <div class=eqn> \\[ n = \\sqrt{\\varepsilon_0} \\] </div> 
+      <p>However, this assumes they are constant.</p>
+      <p>All the different fields can be described by waves:</p>
       <div class=eqn> \\[ \\begin{align} 
           \\vec{\\nabla} \\cdot \\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{E}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
           \\vec{\\nabla} \\cdot \\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{B}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
           \\vec{\\nabla} \\cdot \\vec{D}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{D}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
           \\vec{\\nabla} \\cdot \\vec{H}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} &= i\\vec{k}\\vec{H}_0 e^{i(\\vec{k} \\cdot \\vec{r} - \\omega t)} \\\\[6pt]
       \\end{align} \\] </div> 
-      <p>Then</p>
+      <p>Then, like we did before, all the derivatives with respect to time become \\( -i\\omega \\) and all the partial derivatives with respect to space become \\( i\\vec{k} \\), and that gives us:</p>
       <div class=eqn> \\[ \\begin{align} 
           \\vec{k} \\cdot \\vec{B} &= 0 \\\\[6pt]
           \\vec{k} \\cdot \\vec{D} &= 0 \\\\[6pt]
@@ -19142,13 +19171,15 @@ const subtopics = {
           \\vec{k} \\times \\vec{H} &= -\\omega \\vec{D}
       \\end{align} \\] </div> 
       <p>This means EM waves in media are still transverse</p>
+      <p>The impedance measures how well a medium resists an electromagnetic wave</p>
+      <p>Then we get a new quantity, called the impedence of free space, which tells us how much a vacuum resists an electromagnetic wave</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ Z_0 = \\mu_0 c = \\sqrt{\\frac{\\mu}{\\varepsilon_0}} 376.73 Ω \\]
+                  \\[ Z_0 = \\mu_0 c = \\sqrt{\\frac{\\mu}{\\varepsilon_0}} = 376.73 Ω \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
-                  Formula 1: Refractive index
+                  Formula 1: Impedence of Free Space
               </div><div class="formula-tooltip-desc">
                   The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
               </div></span>
@@ -19164,11 +19195,7 @@ const subtopics = {
       <div class=eqn> \\[
           \\frac{\\partial u}{\\partial t} + \\nabla \\cdot \\vec{S} = \\nabla\\cdot(\\vec{E}\\times\\vec{H}) - \\vec{H}\\cdot(\\nabla\\times\\vec{E}) + \\vec{E}\\cdot\\frac{\\partial \\vec{D}}{\\partial t}
       \\] </div> 
-      <p>And then with a cheeky <span class="definition" data-definition="Maxwell's third law \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3</strong></span>:</p>
-      <div class=eqn> \\[
-          \\frac{\\partial u}{\\partial t} + \\nabla \\cdot \\vec{S} = \\nabla\\cdot(\\vec{E}\\times\\vec{H}) + \\vec{H}\\cdot\\frac{\\partial \\vec{B}}{\\partial t} + \\vec{E}\\cdot\\frac{\\partial \\vec{D}}{\\partial t}
-      \\] </div> 
-      <p>So we have our Poynting vector:</p>
+      <p>That gives us the \\( \\nabla \\cdot \\vec{S} \\) we wanted:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
@@ -19181,10 +19208,15 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>And then with a cheeky <span class="definition" data-definition="Maxwell's third law \\[ \\vec{\\nabla} \\times \\vec{E} = -\\frac{\\partial \\vec{B}}{\\partial t} \\]"><strong>M3</strong></span>, we can get the \\( u \\) we are looking for:</p>
+      <div class=eqn> \\[ \\begin{align}
+          \\frac{\\partial u}{\\partial t} + \\nabla \\cdot \\vec{S} &= \\nabla\\cdot(\\vec{E}\\times\\vec{H}) + \\vec{H}\\cdot\\frac{\\partial \\vec{B}}{\\partial t} + \\vec{E}\\cdot\\frac{\\partial \\vec{D}}{\\partial t} \\\\[6pt]
+          &= \\nabla\\cdot(\\vec{E}\\times\\vec{H}) + \\frac{\\partial}{\\partial t} \\left( \\vec{H}\\cdot\\vec{B} + \\vec{E}\\cdot\\vec{D} \\right)
+      \\end{align} \\] </div> 
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[ \\vec{S} = \\frac12 (\\vec{E}\\cdot\\vec{D} + \\vec{H}\\cdot\\vec{B}) \\]
+                  \\[ u = \\frac12 (\\vec{E}\\cdot\\vec{D} + \\vec{H}\\cdot\\vec{B}) \\]
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula 1: Refractive index
@@ -19193,6 +19225,1033 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+    `
+  },
+
+  "wave-at-boundaries": {
+    title: "EM waves in matter with boundaries",
+    content: `
+      <p>I'm sure you know this about waves: in the case of a reflection, the angle of incidence, \\( i \\), is the same as the angle of reflection \\( r \\)</p>
+      <div class=eqn> \\[ i = r \\] </div> 
+      <p>In addition, the transmitted angle is given by Snell's law</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ n_1 \\sin{i} = n_2 \\sin{t} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Surface charge density
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <p>Now we will actually derive them.</p>
+      <p>In either medium, there are plane wave solutions which need to be equal on the boundary. That means that the frequencies don't change:</p>
+      <div class=eqn> \\[ \\omega_i = \\omega_r = \\omega_t \\] </div> 
+      <p>So that means we can ignore the &quot;\\( -i\\omega t \\)&quot;, since it's just a constant factor</p>
+      <div class=eqn> \\[ (k_r−k_i)·∆r= (k_t−k_i)·∆r= 0 , \\] </div> 
+      <p>This means all the \\(\\vec{k}\\)s are the same</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ r_S = \\frac{E_r}{E_i} = \\frac{n_1 \\cos{i} − n_2 \\cos{t}}{n_1 \\cos{i} + n_2 \\cos{t}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Surface charge density
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ t_S = \\frac{E_r}{E_i} = \\frac{2 n_1 \\cos{i}}{n_1 \\cos{i} + n_2 \\cos{t}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Surface charge density
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "qaia-intro": {
+    title: "Introduction to Quantum Mechanics",
+    content: `
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E = h\\nu \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Photon energy
+              </div><div class="formula-tooltip-desc">
+                  The energy of a photon is proportional to it's frequency
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ p = \\hbar k \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Photon momentum
+              </div><div class="formula-tooltip-desc">
+                  The momentum of a photon is proportional to it's wavenumber
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ ∆p∆x \\geq \\frac12 \\hbar \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Heisenberg's uncertainty principle
+              </div><div class="formula-tooltip-desc">
+                  The more certain we are of a particle's position, the less we know its momentum, and vice versa
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "schrodinger2": {
+    title: "The Schrödinger Equation (revisited)",
+    content: `
+      <p>From last year, remember:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ i\\hbar \\frac{\\partial \\psi(\\vec{r},t)}{\\partial t} = -\\frac{\\hbar^2}{2M}\\nabla^2\\psi(\\vec{r},t) + V(\\vec{r},t)\\psi(\\vec{r},t) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: 3D Time-Dependent Schrödinger Equation
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>In short, this is basically about energy conservation. We know from classical mechanics that the total energy is just the kinetic energy plus potential energy.</p>
+      <p>In quantum mechanics, we use operators rather than variables, which we will go into later. But for now, the operators become this.</p>
+      <p>As for the wave function, we don't really know what it does in real life, since it has imaginary numbers. However, we can take the square of the wave function to get the probability of a particle being in a particular place, called the probability density.</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ P(x,t)dx = |\\psi(x,t)|^2 = \\psi^*(x,t)\\psi(x,t) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 2: Born Postulate (Probability Density)
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>If we are gonna use this as a probability, it must follow the basic laws of statistics. Most notable, that the total probability of all its possibilities must be one. To normalise the wavefunction, such that it obeys this rule, we have to insist that the integral of the probability over all space must equal 1:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\int_{-\\infty}^{+\\infty} \\psi^*\\psi dx = 1 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Normalisation Condition
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Time Independent Schrodinger Equation</h3>
+      <p>This is quite difficult to solve altogether, since we have to consider time AND space. However, <span class="popup-trigger" data-popup-id="sep-of">by separation of variables</span>, we can remove the spacial component and only have the spacial component:</p>
+      <div class="popup" id="sep-of">
+          <div class="popup-content">
+              <button class="popup-close">&times;</button>
+              <h4 style="font-family: 'Njal', sans-serif; font-size: 30px; text-decoration: underline; 
+              margin-bottom: 0px; margin-top: 0px;">TISE ✪</h4>
+              <p>
+              Separate</p>
+              \\[
+                  \\psi = \\phi(x)T(t)
+              \\]
+              <p>Rearrange </p>
+              \\[
+                  i\\hbar \\frac1{T(x)} \\frac{\\partial T(t)}{\\partial t} = -\\frac{1}{\\phi(x)}\\frac{\\hbar^2}{2M}\\nabla^2 \\phi(x) + V(x)
+              \\]
+              <p>Both sides are constant</p>
+              \\[
+                  T(t) = e^{-iEt/\\hbar} \\\\
+                  \\psi = \\phi(x)e^{-iEt/\\hbar}
+              \\]
+              <p>Put that back in the Schrodinger Equation</p>
+              \\[
+                  i\\hbar \\cancel{e^{-iEt/\\hbar}}\\frac{\\partial \\phi(x)}{\\partial t} = -\\cancel{e^{-iEt/\\hbar}}\\frac{\\hbar^2}{2M}\\nabla^2\\phi(x)+ V(\\vec{r},t)\\phi(x)\\cancel{e^{-iEt/\\hbar}}
+              \\]
+              </p>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{H}\\phi = E\\phi \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4: Time-independent Schrödinger Equation (TISE)
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>This isn't a problem, since usually the potential isn't changing.</p>
+      <p>In a <em>stationary state</em>, the probability density doesn't change at all</p>
+      <h3>Boundary conditions</h3>
+      <p>The wave function needs to be continuous and single valued</p>
+      <p>Must be square integrable</p>
+      <p>1st derivative of the wave function must be continuous unless there is a potential step.<br>
+      The second spacial derivative would be infinite, meaning there is infinite potential energy, which is impossible</p>
+      <div class=eqn> \\[
+      V(r)= \\begin{cases}
+          0, & |x| \\le a, \\\\
+          \\infty, & |x| > a.
+      \\end{cases} \\] </div>
+      <p>Where potential is zero</p>
+      <div class=eqn> \\[ E \\phi(x) = \\frac{\\hbar^2}{2M}\\nabla^2\\phi(x) \\] </div>
+      <p>The solution is:</p>
+      <div class=eqn> \\[ \\phi(x) = A\\sin{kx} + B\\cos{kx} \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_n = \\frac{\\hbar^2 π^2}{8Ma^2} n^2 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 4: Time-independent Schrödinger Equation (TISE)
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Quantum tunnelling</h3>
+      <p>The kinetic energy does not change</p>
+      <h3>Harmonic oscillators</h3>
+      <p>This is the quantum mechanical equivalent of a spring, which models atoms vibrating</p>
+      <div class=eqn> \\[ V(x) = \\frac12 kx^2 \\] </div>
+      <p>Where k is the effective spring constant. By using \\( k = m\\omega^2 \\)</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ V(x) = \\frac12 m\\omega^2 x^2 \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 6: Potential of a 1D harmonic oscillator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E \\phi(x) = -\\frac{\\hbar^2}{2M}\\frac{\\partial^2 \\phi(x)}{\\partial x^2} + \\frac12 m\\omega^2 x^2 \\phi(x) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 7: 1D TDSE for a Harmonic Oscillator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E = \\left( \\frac12 + n \\right) \\hbar \\omega \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 8: Energy for a Harmonic Oscillator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>TL;DR</h3>
+      <ul>
+      <li>Classically, a particle in a well can have any energy, can be perfectly still (zero energy), and cannot escape its boundaries. Quantum mechanically, energy is restricted to discrete &quot;steps&quot; (quantised), it can never be perfectly still (zero-point energy), and it has a slight probability of being found outside the classical boundaries (quantum tunnelling).</li>
+      <li>The <em>Time-dependant Schrodinger equation</em> is the core equation used to find stationary energy levels. \\[ i\\hbar \\frac{\\partial}{\\partial t} \\Psi(\\mathbf{r}, t) = \\hat{H} \\Psi(\\mathbf{r}, t) + V(r, t) \\] For this system, the potential energy term is shaped like a parabola (proportional to \\( x^2 \\)), representing a restoring force.</li>
+      <li>A harmonic oscillator perfectly models the vibrational stretching between two atoms in a molecule. We simplify the maths by treating the two moving atoms as a single effective mass (the &quot;reduced mass&quot;) oscillating on a spring.</li>
+      <li>A particle oscillating in 3D space is mathematically treated as <em>three independent 1D oscillators</em> (one for \\(x\\), \\(y\\), and \\(z\\)). The total energy is the sum of the energies from all three directions, which often leads to degeneracy (different spatial states having the exact same total energy).</li>
+      <li>Normalising a wavefunction simply scales it so that the total probability of finding the particle anywhere in space equals exactly 1 (or 100%).</li>
+      </ul>
+    `
+  },
+
+  "qm-postulates": {
+    title: "Postulates of Quantum Mechanics",
+    content: `
+      <p>These are basically the rules of the gme</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ T(t) = e^{-iEt/\\hbar} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 5: Time-dependent Phase Factor
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>We have already touched on postulate one</p>
+      <ul>
+      <li>The wavefunction must be continuous</li>
+      <li>The derivative must be continuous, because if not the second derivative will be infinite</li>
+      <li>It must be normalisable (always normalise first)</li>
+      </ul>
+      <blockquote>
+      <p><strong>POSTULATE 1</strong> Any system has a wavefunction, \\( Psi(x, t) \\) which is continuous, square-integrable, and single-valued, from which we can make predictions about the state of the system</p>
+      </blockquote>
+      <p>Infinite potential will</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{H} = -\\frac{\\hbar^2}{2M} \\nabla^2 + V(r) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The Hamiltonian
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Operators</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\int f^* \\hat{Q} g \\ d\\tau = \\int g \\hat{Q}^* f^* \\ d\\tau \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Hermitian Operators
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\langle\\hat{Q}\\rangle = \\int \\psi^* \\hat{Q} \\psi d\\tau \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <blockquote>
+      <p><strong>POSTULATE 2</strong> Any variable is represented by a <em>Hermitian operator</em>, whose eigenvalues represent the possible results of the system</p>
+      </blockquote>
+      <p>The reason we need a Hermitian operator is because it needs to be real. <span class="popup-trigger" data-popup-id="v-u"> it can be proven</span></p>
+      <div class="popup" id="v-u">
+              <div class="popup-content">
+                <button class="popup-close">&times;</button>
+                <h4 style="font-family: 'Njal', sans-serif; font-size: 30px; text-decoration: underline; 
+                margin-bottom: 0px; margin-top: 0px;">Hermitian Operator ✪</h4>
+                <p>
+                  Start with the eigenvalues:</p>
+                  \\[
+                      \\hat{Q}\\phi_n = q_n \\phi_n \\text{ and } \\hat{Q}^* \\phi_n^* = q_n^* \\phi_n^*
+                  \\]
+                  <p>Multiply the first equation by the complex conjugate, and the second equation by the normal one. </p>
+                  \\[
+                      \\phi_n^*\\hat{Q}\\phi_n = q_n \\phi_n^* \\phi_n \\text{ and } \\phi_n \\hat{Q}^* \\phi_n^* = q_n^* \\phi_n \\phi_n^*
+                  \\]
+                  <p>Then integrate over all space:</p>
+                  \\[
+                      \\int \\phi_n^*\\hat{Q}\\phi_n \\ d\\tau = \\int q_n \\phi_n^* \\phi_n \\ d\\tau \\\\ 
+                      \\int \\phi_n \\hat{Q}^* \\phi_n^* \\ d\\tau = \\int q_n^* \\phi_n \\phi_n^* \\ d\\tau
+                  \\]
+                  <p>Then by using the definition of a Hermitian operator (<span class="definition" data-definition="\\[ \\int f^* (\\hat{Q} g) \\ d\\tau = \\int g (\\hat{Q}^* f^*) \\ d\\tau \\]">Equation ???</span>), we can see that the two integrals are the same, leaving us with:</p>
+                  \\[
+                      \\int q_n \\phi_n^* \\phi_n \\ d\\tau = \\int q_n^* \\phi_n \\phi_n^* \\ d\\tau \\\\
+                      \\therefore q_n = q_n^*
+                  \\]
+                  <p>The only numbers which are the same as their complex conjugates are <em>real numbers</em>.</p>
+                </p>
+              </div>
+            </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{P} = -i\\hbar\\nabla \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The momentum operator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\phi = Ae^{i\\vec{k}\\cdot\\vec{r}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The momentum operator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\int^{+\\infty}_{-\\infty} \\phi^* \\phi \\ d𝜏 = \\delta_{nm} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The commutator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <blockquote>
+      <p><strong>POSTULATE 3</strong> The position operator is \\( \\hat{X} = x \\), and the momentum operator is \\( \\hat{P} = -i\\hbar\\nabla \\). Any other operator can be created by combining those 2</p>
+      </blockquote>
+      <h3>Probability distributions</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ 𝜓 = \\sum_n a_n \\phi_n \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The commutator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <blockquote>
+      <p><strong>POSTULATE 4</strong> If you have a wavefunction which is a combination of a bunch of smaller wavefunctions (\\( \\Psi = \\sum_n a_n + \\phi_n \\)), and the apply some operator on it (which we will call \\( \\hat{Q} \\)), then the likelihood of geting a particular eigenvalue \\( q_m \\) is \\( |a_n|^2 \\)</p>
+      </blockquote>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ a_n = \\int 𝜙^*_𝑛 𝜓 \\ d𝜏.  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The commutator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Expectation value</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ ⟨\\hat{Q}⟩ = \\int 𝜓^* Q 𝜓 \\ d𝜏   \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expectation value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>This is an average value of a bunch of measurements</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\sqrt{ \\delta Q } = \\sqrt{ ⟨\\hat{Q}^2⟩ - ⟨\\hat{Q}⟩^2 }   \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expectation value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Commutation relations</h3>
+      <p>This is the definition of the commutator</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ [\\hat{Q}, \\hat{R}] = \\hat{Q}\\hat{R} - \\hat{R}\\hat{Q} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: The commutator
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>This tells us if 2 variables are compatible (can we know two variables are the same time)</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ [\\hat{P}_x, \\hat{X}] = -i\\hbar \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Most famously position and momentum</p>
+      <h3>The Generalised uncertainty principle</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ ∆q∆r = \\frac12 |⟨[\\hat{Q}, \\hat{R}]⟩| \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <blockquote>
+      <p><strong>POSTULATE 5</strong> Between measurements, time-dependance is governed by the TDSE \\[ i\\hbar \\frac{\\partial}{\\partial t} \\Psi(\\mathbf{r}, t) = \\hat{H} \\Psi(\\mathbf{r}, t) + V(r, t) \\]</p>
+      </blockquote>
+    `
+  },
+
+  "ladder-operators": {
+    title: "Ladder Operation",
+    content: `
+
+    `
+  },
+
+  "qm-ang-mom": {
+    title: "Angular Momentum",
+    content: `
+      <p>Classically, the angular momentum is just:</p>
+      <div class=eqn> \\[ \\vec{L} = \\vec{R} \\times \\vec{P} \\] </div>
+      <p>And in this case, it’s very simple, you just look at the particle, compute the position and the angular momentum, and voila, you have an angular momentum. However, this is quantum physics, of course it ain’t that bloody simple.</p>
+      <p>For one, if you remember, we don’t use simple values, we use operators. So, this becomes:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{\\vec{L}} = \\hat{\\vec{R}} \\times \\hat{\\vec{P}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Calculating these gives us the formulae for the angular momentum in different components:</p>
+      <div class=eqn> \\[ \\begin{align}
+      \\hat{L}_x &= \\hat{Y}\\hat{P}_z - \\hat{Z}\\hat{P}_y, \\\\
+      \\hat{L}_y &= \\hat{Z}\\hat{P}_x - \\hat{X}\\hat{P}_z, \\\\
+      \\hat{L}_z &= \\hat{X}\\hat{P}_y - \\hat{Y}\\hat{P}_x.
+      \\end{align} \\] </div>
+      <p>We know what these operators are, so that gives:</p>
+      <p>But now we have position and momentum, which we can’t know both of precisely. If we calculate the commutators, we end up with something interesting:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ [\\hat{L}_x, \\hat{L}_y] = i\\hbar\\hat{L}_z \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>However, never fear! We have a new and improved quantity, the total angular momentum:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{L}^2 = \\hat{L}^2_x + \\hat{L}^2_y + \\hat{L}^2_z \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>This can commute with any one of the operators. Usually we pick z,</p>
+      <h3>The eigenvalues and eigenfunctions</h3>
+      <p>We want to determine the eigenfunction of the total angular momentum and Lz</p>
+      <p>And we have to work in spherical co-ordinates.</p>
+      <p>Now ICL, whenever we work with spherical co-ordinates, the notes look ugly as hell, partially because of the nabla in spherical co-ordinates:</p>
+      <div class=eqn> \\[ \\nabla =
+      \\hat{\\mathbf{r}}_0 \\frac{\\partial}{\\partial r} +
+      \\frac{1}{r}\\hat{\\boldsymbol{\\theta}}_0 \\frac{\\partial}{\\partial \\theta} +
+      \\frac{1}{r\\sin\\theta}\\hat{\\boldsymbol{\\phi}}_0 \\frac{\\partial}{\\partial \\phi} \\] </div>
+      <p>As annoying as that is, it’s even worse in Cartesian co-ordinates, so be greatful</p>
+      <p>The angular momentum operator becomes:</p>
+      <div class=eqn> \\[ \\begin{align} \\hat{L}
+              &= -i\\hbar\\,\\hat{r}\\times\\nabla \\\\[6pt]
+              &= -i\\hbar\\left(\\hat{\\phi}_0\\frac{\\partial}{\\partial\\theta}
+              -\\frac{1}{\\sin\\theta}\\hat{\\theta}_0\\frac{\\partial}{\\partial\\phi}\\right).
+      \\end{align} \\] </div>
+      <p>We want this in the z component, which we can do by just doting:</p>
+      <div class=eqn> \\[ \\begin{align}
+      \\hat{L}_z &= \\hat{z}_0\\cdot\\hat{L} \\\\[6pt]
+              &= -i\\hbar\\frac{\\partial}{\\partial\\phi}.
+      \\end{align} \\] </div>
+      <p>Then we can apply the operator twice to get the total squared:</p>
+      <div class=eqn> \\[ \\begin{align}
+      \\hat{L}^2
+      &= -\\hbar^2(\\hat{r}\\times\\nabla)\\cdot(\\hat{r}\\times\\nabla) \\\\[6pt]
+      &= -\\hbar^2\\left[
+      \\frac{1}{\\sin\\theta}\\frac{\\partial}{\\partial\\theta}
+      \\left(\\sin\\theta\\frac{\\partial}{\\partial\\theta}\\right) +
+      \\frac{1}{\\sin^2\\theta}\\frac{\\partial^2}{\\partial\\phi^2}
+      \\right].
+      \\end{align} \\] </div>
+      <p>I don’t think you have to remember these, but bare ‘em in mind, k? More importantly, don't think too much about what's there. Rather, think about what's <em>not</em> there. We have three operators, and yet not a <em>single</em> r in any of them!</p>
+      <p>Notice that none of our equations actually depend on the radius at all. That means that Y only changes with respect to the two angles:</p>
+      <div class=eqn> \\[ Y = Y(\\theta, \\varphi) \\] </div>
+      <p>We can use separation of variables:</p>
+      <div class=eqn> \\[ Y(\\theta, \\varphi) = \\Theta(\\theta)\\Phi(\\phi) \\] </div>
+      <p>Apply <span class="definition" data-definition="\\[ \\hat{L}_z = -i\\hbar\\frac{\\partial}{\\partial\\varphi}. \\]">the \\( \\hat{L}_z \\) operator</span> to it:</p>
+      <div class=eqn> \\[ -i\\hbar\\frac{\\partial}{\\partial\\varphi}\\Theta(\\theta)\\Phi(\\varphi) = \\nu\\Theta(\\theta)\\Phi(\\varphi)  \\] </div>
+      <p>Divide both sides:</p>
+      <div class=eqn> \\[ -i\\hbar\\frac{\\partial\\Phi(\\varphi)}{\\partial\\varphi} = \\nu\\Phi(\\varphi)  \\] </div>
+      <p>Solving:</p>
+      <div class=eqn> \\[ \\Phi(\\varphi) = Ce^\\frac{i\\nu \\varphi}{\\hbar}  \\] </div>
+      <p>But this has to be quantised. Since the wavefunction needs to be single-valued, then that creates the boundary condition that by changing the angle by 2π, you get the same angle back, and so:</p>
+      <div class=eqn> \\[ \\Phi(\\varphi) = \\frac1{\\sqrt{2π}} e^{im \\varphi}  \\] </div>
+      <p>The eigenvalue is:</p>
+      <div class=eqn> \\[ \\nu = m \\hbar \\] </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{L}_z Y_{lm}(\\theta,\\varphi) = \\hbar m Y_{lm}(\\theta,\\varphi) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <hr>
+      <p>So now we have phi, but now we have to deal with this pain-in-the-arse theta, Apply <span class="definition" data-definition="\\[ \\hat{L}^2 = -\\hbar^2\\left[\\frac{1}{\\sin\\theta}\\frac{\\partial}{\\partial\\theta} \\left(\\sin\\theta\\frac{\\partial}{\\partial\\theta}\\right) + \\frac{1}{\\sin^2\\theta}\\frac{\\partial^2}{\\partial\\phi^2}\\right]. \\]">the \\( \\hat{L}^2 \\) operator</span>:</p>
+      <div class=large-eqn> \\[ -\\hbar^2 \\Phi(\\varphi)\\frac{1}{\\sin\\theta}\\frac{\\partial}{\\partial\\theta}
+      \\left(\\sin\\theta\\frac{\\partial \\Theta(\\theta)}{\\partial\\theta}\\right)
+      -\\hbar^2\\frac{\\Theta(\\theta)}{\\sin^2\\theta}\\frac{\\partial^2 \\Phi(\\varphi)}{\\partial\\varphi^2}
+      = \\lambda \\Theta(\\theta)\\Phi(\\varphi).  \\] </div>
+      <p>Bloody hell that's ugly. Having said that, after some calculation, we end up with:</p>
+      <div class=eqn> \\[ \\lambda = \\hbar^2 l(l+1) \\] </div>
+      <p>Giving</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{L}^2 Y_{lm}(\\theta,\\varphi) = \\hbar^2 l(l+1)Y_{lm}(\\theta,\\varphi) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <hr>
+    `
+  },
+
+  "qm-3d": {
+    title: "Systems in 3D",
+    content: `
+      <h3>Particle in 3D infinite potential well</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_{n_x, n_y, n_z} 
+                      = \\frac{\\hbar^2 π^2}{8M} \\left( 
+                          \\frac{n^2_x}{a^2} + \\frac{n^2_y}{b^2} + \\frac{n^2_z}{c^2}
+                      \\right)
+                  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Which is literally just the 1D one but with 3 D's. That's way too easy</p>
+      <p>What about degeneracy? Say we have:</p>
+      <div class=eqn> \\[  E_{n_x, n_y, n_z} 
+          = \\frac{\\hbar^2 π^2}{8M} \\left( 
+              \\frac{n^2_x + n^2_y}{a^2} + \\frac{n^2_z}{c^2}
+          \\right)
+      \\] </div>
+      <p>If any of the sides are equal in length, there is degeneracy</p>
+      <h3>Three dimensional harmonic oscillator</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\begin{align} 
+                      \\hat{V}(\\vec{r}) &= \\frac12 k_x \\hat{X}^2 + \\frac12 k_y \\hat{Y}^2 + \\frac12 k_z \\hat{Z}^2 \\\\[6pt]
+                      &= \\hat{V}_x(x) + \\hat{V}_y(y) + \\hat{V}_z(z) 
+                  \\end{align} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class=eqn> \\[ \\phi(x, y, z) = X(x)Y(y)Z(z) \\] </div>
+      <p>Once again, I can't be arsed to go over the derivation, but you end up with:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_{n_x, n_y, n_z} 
+                      = \\left( \\frac12 + n_x \\right) \\hbar \\omega_x 
+                      + \\left( \\frac12 + n_y \\right) \\hbar \\omega_y
+                      + \\left( \\frac12 + n_z \\right) \\hbar \\omega_z
+                  \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Spherical Co-ordinates</h3>
+      <div class=eqn> \\[  \\nabla^2 \\frac{1}{r^2}\\frac{\\partial}{\\partial r}\\left(r^2\\frac{\\partial \\phi(r,\\theta,\\varphi)}{\\partial r}\\right) +
+      \\frac{1}{r^2\\sin\\theta}\\frac{\\partial}{\\partial \\theta}\\left(\\sin\\theta\\frac{\\partial \\phi(r,\\theta,\\varphi)}{\\partial \\theta}\\right) +
+      \\frac{1}{r^2\\sin^2\\theta}\\frac{\\partial^2 \\phi(r,\\theta,\\varphi)}{\\partial \\varphi^2}
+      \\] </div>
+      <p><em>Spits out drink</em> What the hell it THIS?!! That is a pisstake m8!</p>
+      <div class=eqn> \\[
+      \\left[
+      -\\frac{\\hbar^2}{2M}\\frac{1}{R}\\frac{d}{dr}\\left(r^2\\frac{dR}{dr}\\right) + r^2V - r^2E
+      \\right]
+      -
+      \\frac{\\hbar^2}{2M}
+      \\left[
+      \\frac{1}{Y\\sin\\theta}\\frac{\\partial}{\\partial\\theta}\\left(\\sin\\theta\\frac{\\partial Y}{\\partial\\theta}\\right)
+      +
+      \\frac{1}{Y\\sin^2\\theta}\\frac{\\partial^2 Y}{\\partial\\varphi^2}
+      \\right]
+      = 0.
+      \\] </div>
+      <h4>Angular Part</h4>
+      <div class=eqn> \\[
+      \\frac{\\hbar^2}{2M}
+      \\left[
+      \\frac{1}{Y\\sin\\theta}\\frac{\\partial}{\\partial\\theta}
+      \\left(\\sin\\theta\\frac{\\partial Y}{\\partial\\theta}\\right)
+      +
+      \\frac{1}{Y\\sin^2\\theta}\\frac{\\partial^2 Y}{\\partial\\varphi^2}
+      \\right]
+      = \\lambda
+      \\] </div>
+      <p>This looks like <span class="definition" data-definition="\\[ \\hat{L}^2 = -\\hbar^2\\left[\\frac{1}{\\sin\\theta}\\frac{\\partial}{\\partial\\theta} \\left(\\sin\\theta\\frac{\\partial}{\\partial\\theta}\\right) + \\frac{1}{\\sin^2\\theta}\\frac{\\partial^2}{\\partial\\phi^2}\\right]. \\]">the \\( \\hat{L}^2 \\) operator</span>, so we can say:</p>
+      <div class=eqn> \\[ \\frac1{2YM} \\hat{L}^2Y = \\lambda, \\text{ where} \\lambda = \\hbar^2 l(l+1) \\] </div>
+      <h4>Radial Part</h4>
+      <div class=eqn> \\[
+      -\\frac{\\hbar^2}{2M}\\frac{d^2\\chi(r)}{dr^2}
+      + \\left[V(r)+\\frac{\\hbar^2}{2Mr^2}l(l+1)\\right]\\chi(r)
+      = E\\chi(r).
+      \\] </div>
+      <h3></h3>
+      <div class=eqn> \\[
+      V(r)= \\begin{cases}
+          0, & r \\le a, \\\\
+          \\infty, & r>a.
+      \\end{cases} \\] </div>
+      <p>There is still the extra potential term, so we can't just 'ignore' potential</p>
+      <p>There are two flavours of solutions: spherical Bessel functions \\( 𝑗_𝑙(𝑥) \\) and spherical Neumann functions \\( 𝑛_𝑙(𝑥) \\)</p>
+      <p>As r tends to zero, Neumann functions become infinite. So only Bessel functions work</p>
+      <h3>Hydrogen-like atoms</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ V(\\vec{r}) = \\frac{-Ze}{4π\\varepsilon_0 r} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ E_n = -\\frac{Mc^2\\alpha^2}{2}\\frac{1}{n^2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>n can have values 1, 2, 3<br>
+      l can have values 0, 1, 2, where \\( l &lt; n \\)<br>
+      m can have values \\( -l \\to l \\).</p>
+    `
+  },
+
+  "ladder-operator": {
+    title: "Ladder Operation",
+    content: `
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{P}_+ = \\hat{P} + i\\hat{X}\\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>This</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{P}_- = \\hat{P} - i\\hat{X}\\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "qm-additional": {
+    title: "Additional Interactions in atoms",
+    content: `
+      <p>Classically, to make a magnetic field, we take a coil of wire and put a current through it. That generates an magnetic dipole moment, \\mu. In a way, an electron orbiting a nucleus is basically the same thing, meanign it also creates a magnetic moment.</p>
+      <p>In quantum mechanics, we just promote the vectors to operators:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{\\vec{\\mu}} = -\\frac{e}{2M}\\hat{\\vec{L}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>Classically, if there was a B-field, there should be a torque to align the dipole, and there will be some resistance due to the angular momentum (like a spining top). This would cost energy:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\Delta E = \\mu_B B m \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>The Bohr Magneton is the fundamental unit of magnetism</p>
+      <h3>The Stern Gerlach Experiment</h3>
+      <p>They wanted to see this quantisation.</p>
+      <p>Shot atoms through a non-uniform electric field.</p>
+      <p>There are millions of atoms, pointing in random directions, meaning they are at random oblique angles, experiencing varying forces.</p>
+      <p>However, with m, since it is quantised, there should be a discrete splitting, causing 2l+1. They specifically chose silver, since their angular momentum is cancelled out, meaning only it’s valence electron contributes to its magnetism</p>
+      <p>In the s orbital, l = 0, meaning we expect 1 beam. But they saw two spots, which would require l = ½, but l needs to be an integer, so wagwan?</p>
+      <p>Electrons have internal angular momentum, called spin, independent of any actual movement</p>
+      <h3>Pauli spin matrices</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{S}_i = \\frac{1}{2}\\hbar\\sigma_i \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>They do not commute: you can’t know an electron’s spin in the x and y directions at the same time</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\delta E = g\\mu_B m_j B \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{H}_\\mathrm{LS} = f(\\vec{r}) (\\hat{J}^2 - \\hat{L}^2 - \\hat{S}^2) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\hat{H}_\\mathrm{B} = -\\frac{eB_0}{2M} (\\hat{L}_z + 2\\hat{S}_z) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ ∆\\hat{H} = \\hat{H}_\\mathrm{LS} + \\hat{H}_\\mathrm{B} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>The strong-field Zeeman effect</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ ∆E = \\frac{e \\hbar B_0}{2M} (m_l + 2m_s) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h4>Pure spin-orbit coupling</h4>
+      <h4>The weak-field Zeeman effect</h4>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\delta E = gµ_B m_j B \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <h3>Photon emission from atoms</h3>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ g = 1 + \\frac{j(j+1)-l(l+1)+s(s+1)}{2j(j+1)} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+    `
+  },
+
+  "sr-dirac": {
+    title: "Dirac Notation",
+    content: `
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+      \\[
+      -i\\hbar c\\left(
+      \\alpha_x\\frac{\\partial}{\\partial x}
+      +\\alpha_y\\frac{\\partial}{\\partial y}
+      +\\alpha_z\\frac{\\partial}{\\partial z}
+      +\\beta mc^2
+      \\right)\\Psi(\\mathbf{r},t)
+      =
+      i\\hbar\\frac{\\partial}{\\partial t}\\Psi(\\mathbf{r},t).
+      \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>The α matrices are comprised of four 2 ×2 matrices, the diagonal ones are zero and the off-diagonal ones are the Pauli spin matrices, σx, σy, σz and β has zero off-diagonal element, and upper 2 diagonal elements equal to one and the lower two equal to minus one.</p>
+      <p>Written out in full form, the Dirac equation is:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[
+      \\left(
+      -i\\hbar c
+      \\begin{pmatrix}
+      0 & 0 & 1 & 0\\\\
+      0 & 0 & 0 & \\bar{1}\\\\
+      1 & 0 & 0 & 0\\\\
+      0 & \\bar{1} & 0 & 0
+      \\end{pmatrix}
+      \\frac{\\partial}{\\partial z}
+      +
+      mc^2
+      \\begin{pmatrix}
+      1 & 0 & 0 & 0\\\\
+      0 & 1 & 0 & 0\\\\
+      0 & 0 & \\bar{1} & 0\\\\
+      0 & 0 & 0 & \\bar{1}
+      \\end{pmatrix}
+      \\right)
+      \\begin{pmatrix}
+      u_1(p)\\\\
+      u_2(p)\\\\
+      u_3(p)\\\\
+      u_4(p)
+      \\end{pmatrix}
+      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}
+      =
+      i\\hbar \\frac{\\partial}{\\partial t}
+      \\begin{pmatrix}
+      u_1(p)\\\\
+      u_2(p)\\\\
+      u_3(p)\\\\
+      u_4(p)
+      \\end{pmatrix}
+      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}
+      \\] 
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula X: Expected value
+              </div><div class="formula-tooltip-desc">
+                  ...
+              </div></span>
+          </div>
+      </div>
+      <p>In the non-relativistic limit (\\( c_2 \\to \\infty \\)) the Dirac Equation reduces to the Schrodinger Equation but now he have an explanation for spin. It can also explain spin-orbit coupling.</p>
+      <p>As for the negative energy states, it was interpreted to refer to a particle with the same mass but opposite charge, what we now know as anti-particles. This equation predicted them.</p>
     `
   }
 };

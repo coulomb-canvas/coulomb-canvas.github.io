@@ -703,6 +703,10 @@ const topics = [
         subid: "wave-density",
         title: "Wave and Energy Density",
       },
+      {
+        subid: "wave-at-boundaries",
+        title: "Wave and Energy Density",
+      },
     ]
   },
   {
@@ -752,8 +756,36 @@ const topics = [
     image: "images/Avatar/Topics 1/astro.png",
     subtopics: [
       {
-        subid: "astro-intro",
-        title: "Aren't planets and stars cool?",
+        subid: "qaia-intro",
+        title: "I can smell the failure",
+      },
+      {
+        subid: "schrodinger2",
+        title: "The Schrodinger Equation (revisited)",
+      },
+      {
+        subid: "qm-postulates",
+        title: "Postulates of Quantum Mechanics",
+      },
+      {
+        subid: "ladder-operator",
+        title: "Ladder Operators",
+      },
+      {
+        subid: "qm-ang-mom",
+        title: "Angular Momentum",
+      },
+      {
+        subid: "qm-3d",
+        title: "Systems in 3D",
+      },
+      {
+        subid: "qm-additional",
+        title: "Additional Interactions in atoms",
+      },
+      {
+        subid: "qaia-outro",
+        title: "Additional Interactions in atoms",
       },
     ]
   },
@@ -790,6 +822,10 @@ const topics = [
       {
         subid: "dirac",
         title: "Dirac Notation",
+      },
+      {
+        subid: "sr-dirac",
+        title: "Special Relativity",
       },
     ]
   },

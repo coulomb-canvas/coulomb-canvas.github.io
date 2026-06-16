@@ -6,21 +6,20 @@ topics: eto
 
 If we take our 4 Maxwell equations, and let's make it so that there is no charge or current (\\( \rho = 0, \vec{J} = 0\\)). This gives us these:
 
-<div class=eqn> \[ \begin{align} 
-    \vec{\nabla} \cdot \vec{E} &= 0 \\[6pt]
-    \vec{\nabla} \cdot \vec{B} &= 0 \\[6pt]
-    \vec{\nabla} \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} \\[6pt]
-    \vec{\nabla} \times \vec{B} &= \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}
-    \end{align} \] </div> 
 
-Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <span class="definition" data-definition="Maxwell's third law with no charge or current (\( \rho = 0, \vec{J} = 0\)): \[ \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \]">**M3'**</span>
+- **M1 [no charge]** \\[ \vec{\nabla} \cdot \vec{E} = 0 \\]
+- **M2 (unchanged)** \\[ \vec{\nabla} \cdot \vec{B} = 0 \\]
+- **M3 (unchanged)** \\[ \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \\]
+- **M4 [no charge]** \\[ \vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \\]
+
+Those last 2 equations are particularly interesting, so let's slice and dice 'em a little bit. Let's take the curl of <span class="definition" data-definition="Maxwell's third law: \[ \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \]">**M3**</span>
 
 <div class=eqn> \[ \begin{align} \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) 
     &= \vec{\nabla} \times \left( -\frac{\partial \vec{B}}{\partial t} \right) \\[6pt]
     &= -\frac{\partial}{\partial t} \vec{\nabla} \times \vec{B} 
     \end{align} \] </div> 
 
-Now we have that \\( \vec{\nabla} \times \vec{B} \\) from <span class="definition" data-definition="\[ \vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \]">**M4'**</span>. In that case, we can just wack that value in:
+Now we have that \\( \vec{\nabla} \times \vec{B} \\) from <span class="definition" data-definition="Maxwell's fourth law with no charge or current (\( \rho = 0, \vec{J} = 0\)): \[ \vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \]">**M4 [no charge]**</span>. In that case, we can just wack that value in:
 
 <div class=eqn> \[ \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) = - \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \] </div> 
 
@@ -43,7 +42,7 @@ Since there is no charge, the divergence is zero \\( \vec{\nabla} \cdot \vec{E} 
     </div>
 </div>
 
-Doing the same thing, except starting by taking the curl of <span class="definition" data-definition="\[ \vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \]">**M4'**</span> instead of **M3** gives us:
+Doing the same thing, except starting by taking the curl of <span class="definition" data-definition="Maxwell's fourth law with no charge or current (\( \rho = 0, \vec{J} = 0\)): \[ \vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \]">**M4 [no charge]**</span> instead of **M3** gives us:
 
 
 <div class="hover-wrapper">
@@ -138,7 +137,7 @@ These show that \\( \vec{E} \\) and \\( \vec{B} \\) are perpendicular to each ot
 
 ### Energy of an electromagnetic wave
 
-Remember from E&M, that the energy of a wave is stored within the electric and magnetic fields.
+Remember from E&M, that the energy of a wave is stored within the electric and magnetic fields. Now I wanna know how much energy EM waves transfer through a surface
 
 Charges in an electric field gain energy from the electric field. This happens when a charge moves along the field. If it moves parallel to the field lines, then the field is doing all the work, meaning it
 
@@ -165,11 +164,11 @@ Putting that in gives us:
     &= - \vec{E} \cdot \frac1{\mu_0} ( \vec{\nabla} \times \vec{B} ) + \varepsilon_0 \vec{E} \cdot  \frac{\partial \vec{E}}{\partial t} 
 \end{align} \] </div>
 
-By using an identity () we can turn this into:
+By using the <span class="definition" data-definition="\[ ∇⋅(\vec{A}×\vec{B})=\vec{B}⋅(∇×\vec{A})−\vec{A}⋅(∇×\vec{B}) \] In this case it's been rearranged a bit: \[ ∇⋅(\vec{A}×\vec{B})-\vec{B}⋅(∇×\vec{A})=-\vec{A}⋅(∇×\vec{B}) \]">divergence of a cross product</span> identity (and rearranging it a teeny bit) we can turn this into:
 
 <div class=eqn> \[  \frac{du}{dt} + \vec{\nabla} \cdot \vec{S} =  \frac1{\mu_0} \vec{\nabla} \cdot  ( \vec{E} \times \vec{B} ) - \frac1{\mu_0} \vec{B} \cdot  ( \vec{\nabla} \times \vec{E} ) + \varepsilon_0 \vec{E} \cdot  \frac{\partial \vec{E}}{\partial t}. \] </div> 
 
-We're going somewhere with this, I promise. Then by using <span class="definition" data-definition="\[ \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \]">**M3'**</span>, we can change the 3rd term:
+We're going somewhere with this, I promise. Then by using <span class="definition" data-definition="Maxwell's third law: \[ \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \]">**M3**</span>, we can change the 3rd term:
 
 <div class=eqn> \[  \frac{du}{dt} + \vec{\nabla} \cdot \vec{S} =  \frac1{\mu_0} \vec{\nabla} \cdot  ( \vec{E} \times \vec{B} ) + \frac1{\mu_0} \vec{B} \cdot  \frac{\partial \vec{B}}{\partial t} + \varepsilon_0 \vec{E} \cdot  \frac{\partial \vec{E}}{\partial t}. \] </div> 
 
@@ -203,6 +202,17 @@ That means:
 
 ### TL;DR
 
-Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \rho \\) and \\( J \\) are zero
+Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \rho \\) and \\( J \\) are zero.
+
+
+- By assuming no charge or current and taking curls of Maxwell's third and fourth equation, we can get wave equations for the electric and magnetic components of electromagnetic waves \\[ \vec{\nabla}^2 \vec{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2} \\] \\[ \vec{\nabla}^2 \vec{B} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2} \\]
+- Solving these wave equations shows that these waves propagate at the speed of light, proving light is an electromagnetic wave.
+- EM waves are *transverse*.
+- The electric and magnetic fields oscillate perpendicular to each other.
+- In a vacuum, the electric and magnetic fields oscillate perfectly in phase.
+- The electric field exerts a way stronger force on non-relativistic charges than the magnetic field component.
+- Em waves carry energy
+- The **Poynting vector** represents the direction and rate of energy flux.
+
 
 

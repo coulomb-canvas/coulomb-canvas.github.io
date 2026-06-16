@@ -491,8 +491,12 @@ The number of flux lines of \\( B \\) per unit area crossing the boundary is the
 
 ### TL;DR
 
-Everything we did here was relatively easy. Just remember tho, life ain't always this easy. If you have waves travelling through a solid, we can no longer assume that \\( \rho \\) and \\( J \\) are zero
+Then again, polarisation and magnetisation are kinda weird, 'cus we have to say an area is small enough that our approximations work, but big enough to contain a sensible average.
 
+- Applying an electric field shifts the bound charges in matter, creating dipole moments. This leads to surface and volume "polarisation charges" and "polarisation currents".
+- Materials respond to magnetic fields via microscopic current loops, creating "magnetisation currents".
+- The Displacement field (D) is introduced to isolate free charges from bound/polarisation charges.
+- The Magnetic field strength (H) is introduced to isolate free currents from bound/magnetisation currents.
 - The components of E parallel to the boundary match \\[ \hat{n} × (\vec{E}_2 − \vec{E}_1) = 0 \\]
 - The perpendicular components of \\(D\\) are discontinuous by the surface charge density \\[ \hat{n} \cdot (\vec{D}_1 − \vec{D}_1) = \sigma_f \\]
 

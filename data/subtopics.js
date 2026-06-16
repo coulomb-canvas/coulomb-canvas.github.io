@@ -1,5 +1,5 @@
 // AUTO-GENERATED FILE - Contains 141 subtopics
-// Generated: 2026-06-15T14:07:28.540Z
+// Generated: 2026-06-16T05:45:20.090Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
@@ -20182,7 +20182,7 @@ const subtopics = {
     content: `
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+              <div class="formula-box large-eqn" style="text-align: center; color: var(--text); margin: auto;">
       \\[
       -i\\hbar c\\left(
       \\alpha_x\\frac{\\partial}{\\partial x}
@@ -20205,9 +20205,8 @@ const subtopics = {
       <p>Written out in full form, the Dirac equation is:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
-              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
-                  \\[
-      \\left(
+              <div class="formula-box llarge-eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\style{font-size: 5vw}{\\left(
       -i\\hbar c
       \\begin{pmatrix}
       0 & 0 & 1 & 0\\\\
@@ -20240,7 +20239,7 @@ const subtopics = {
       u_3(p)\\\\
       u_4(p)
       \\end{pmatrix}
-      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}
+      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}}
       \\] 
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">

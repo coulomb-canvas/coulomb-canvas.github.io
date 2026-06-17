@@ -707,6 +707,14 @@ const topics = [
         subid: "wave-at-boundaries",
         title: "Wave and Energy Density",
       },
+      {
+        subid: "geo-optics",
+        title: "Geometric Optics",
+      },
+      {
+        subid: "wave-optics",
+        title: "Wave Optics",
+      },
     ]
   },
   {

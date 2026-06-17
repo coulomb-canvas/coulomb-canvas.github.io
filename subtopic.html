@@ -58,6 +58,7 @@
   <div id="bottom-subtopic-name">Hello</div>
 
   <div id="definition-tooltip" class="definition-tooltip"></div>
+  <div id="page-transition" class="active"></div>
 
   <script> {
     const param = new URLSearchParams(window.location.search).get("subid");
@@ -242,6 +243,18 @@ function shrinkAllToFit(selector) {
   });
 }
 
+      window.addEventListener("load", async () => {
+      const overlay = document.getElementById("page-transition");
+
+      if (window.MathJax && MathJax.typesetPromise) {
+        await MathJax.typesetPromise();
+      }
+
+      requestAnimationFrame(() => {
+        overlay.classList.remove("active");
+      });
+    });
+
 document.querySelectorAll(".image").forEach(box => {
   box.addEventListener("mouseenter", () => document.body.classList.add("dimmed"));
   box.addEventListener("mouseleave", () => document.body.classList.remove("dimmed"));
@@ -388,6 +401,9 @@ document.addEventListener('DOMContentLoaded', function() {
     rod.style.width = L + "px";
     lengthValue.textContent = Math.round(L);
   });
+
+
+
 
   
 

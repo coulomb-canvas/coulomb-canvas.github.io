@@ -1,10 +1,10 @@
-// AUTO-GENERATED FILE - Contains 141 subtopics
-// Generated: 2026-06-16T05:45:20.090Z
+// AUTO-GENERATED FILE - Contains 144 subtopics
+// Generated: 2026-06-17T16:15:48.240Z
 // Run 'npm run generate' to regenerate
 //
 // This file contains:
-//   - 141 existing hand-written entries
-//   - 76 Markdown-generated entries
+//   - 144 existing hand-written entries
+//   - 78 Markdown-generated entries
 
 const subtopics = {
   "welcome-intro": {
@@ -19247,11 +19247,28 @@ const subtopics = {
           </div>
       </div>
       <p>Now we will actually derive them.</p>
-      <p>In either medium, there are plane wave solutions which need to be equal on the boundary. That means that the frequencies don't change:</p>
+      <p>So, we’ll use the standard boring model for waves that we have always used forever. There are two materials, with a flat boundary between the two of them. The top layer has a refractive index of \\( n_1 \\) and the bottom layer has a refractive index of \\( n_2 \\)</p>
+      <p>There is now a plane wave, entering the material, with electric field:</p>
+      <p>In either medium, there are plane wave solutions which need to be equal on the boundary. The phases need to match. The angular frequencies would need to be the same, because if they weren’t then at some later time, they would break apart . That means that the frequencies don't change:</p>
       <div class=eqn> \\[ \\omega_i = \\omega_r = \\omega_t \\] </div> 
       <p>So that means we can ignore the &quot;\\( -i\\omega t \\)&quot;, since it's just a constant factor</p>
+      <p>The time can take up pretty much any value, but x is limited to the plane. That means the parallel components of the wavenumber cannot change, meaning that any changes in the wavenumber must be in the perpendicular component</p>
       <div class=eqn> \\[ (k_r−k_i)·∆r= (k_t−k_i)·∆r= 0 , \\] </div> 
       <p>This means all the \\(\\vec{k}\\)s are the same</p>
+      <p>Since we know that the frequency doesn’t change and the speed of light is a constant, then we know that k is proportional to n. That means that \\( k_i = k_r \\), since they are both in the same section with the same refractive index</p>
+      <h3>Fresnel Relations</h3>
+      <p>We know that the normal component of the displacement and the magnetic field are the same across the boundaries, whereas the tangential components</p>
+      <p>All light can be resolved into a vertical and a horizontal component, so we need to consider when the electric field is parallel to the plane (going into the page) and the electric field is oscillating perpendicular.</p>
+      <p>An easier way to think about, when the electric field comes out of the page (this is called s-polarisation) vs when the magnetic field comes out of the page (this is called p-polarisation). Then you can just use the right-hand gang symbol with thumb being electric field and pointy finger being magnetic field.</p>
+      <h4>S polarisation</h4>
+      <p>Let’s begin with our electric field going out of the page. There are 3 B-vectors, each of which can be split into a parallel and perpendicular component</p>
+      <p>So just to be clear, the first subscript tells us if it’s reflected or transmitted, and the second one tells us if it’s parallel or perpendicular.</p>
+      <p>Via the correspondence principle, we can see that the angle BTI makes with BI. Then by using basic trigonometry, we get:</p>
+      <div class=eqn> \\[ B_\\text{TI} = B_I \\cos{\\theta_i}, \\quad B_\\text{NI} = B_I \\cos{\\theta_i} \\] </div> 
+      <p>And there are similar relations for the other components</p>
+      <p>Even though technically it is the tangential component of H which is transfered across the boundary, since mu is usually 1, B often ends ub being the same too anyway.</p>
+      <p>So, the electric fields end up simply adding together</p>
+      <p>And the tangentials of the magnetic field add up:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
@@ -19264,6 +19281,7 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <p>Instead of submitting for the reflected term, do the transmitted term:</p>
       <div class="hover-wrapper">
           <div class="formula-container">
               <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
@@ -19276,6 +19294,150 @@ const subtopics = {
               </div></span>
           </div>
       </div>
+      <h4>P polarisation</h4>
+      <p>Now we have the magnetic field going out the page.</p>
+      <p>As before, each E can be split into a parallel and perpendicular component</p>
+      <p>Via the correspondence principle, we can see that the angle the wave makes with ETI. Then by using basic trigonometry, we get:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ r_P = \\frac{E_r}{E_i} = \\frac{n_1 \\cos{t} − n_2 \\cos{i}}{n_1 \\cos{t} + n_2 \\cos{i}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Surface charge density
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <p>Instead of submitting for the reflected term, do the transmitted term:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ t_S = \\frac{E_r}{E_i} = \\frac{2 n_1 \\cos{i}}{n_1 \\cos{t} + n_2 \\cos{i}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Surface charge density
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <h3>The Brewster Angle</h3>
+      <p>Snell’s law, if there is a boundary with \\( n_2 &gt; n_1\\), then \\(t &lt; i \\). Then, at <em>normal incidence</em> (\\(t = i = 0\\)) \\( r_s \\) is equal to \\( r_p \\), which is less than zero</p>
+      <p>Now try \\(t = i = 90\\) (<em>oblique incidence</em>), \\( r_s \\) becomes –1 and \\( r_p \\) becomes 1. This is total reflection, since nothing is transmitted. The minus sign describes a phase shift</p>
+      <p>This means, at least for the p-polarised light, there is a point at which \\( r_p \\) switches from positive to negative, where \\( r_p \\) = 0. This is called <em>Brewster’s angle</em>, \\( i_B \\)</p>
+      <p>(R = r^2 and T = 1-R)</p>
+      <blockquote>
+      <p><strong>BREWSTER ANGLE, \\( i_B \\)</strong> The value of \\( i \\) at which \\(r_P\\) is zero</p>
+      </blockquote>
+      <p>And we can derive this angle quite simply by finding the angle at which Snell's law and the Frensel relation for p-polarised light are both true at the same time. As usual, <span class="popup-trigger" data-popup-id="v-u"> can't be arsed to derive it</span>, but by taking those two equations, squaring them, and pissing about with 'em until you get an angle of incidence, you get this angle:</p>
+      <div class="popup" id="v-u">
+              <div class="popup-content">
+                <button class="popup-close">&times;</button>
+                <h4 style="font-family: 'Njal', sans-serif; font-size: 30px; text-decoration: underline; 
+                margin-bottom: 0px; margin-top: 0px;">Brewster Angle ✪✪✪</h4>
+                <p>
+                  Take the Fresnel equation and Snell's law, and square 'em: </p>
+                  \\[
+                      n_1^2 \\cos^2{t_B} = n_2^2 \\cos^2{i_B} \\\\ 
+                      n_1^2 \\sin^2{i_B} = n_2^2 \\sin^2{t_B}
+                  \\]
+                  <p>Multiply the top equation by \\( n_2^2 \\) and the bottom one by \\( n_1^2 \\)  </p>
+                  \\[
+                      n_2^2 n_1^2 \\cos^2{t_B} = n_2^4 \\cos^2{i_B} \\\\ 
+                      n_1^4 \\sin^2{i_B} = n_1^2 n_2^2 \\sin^2{t_B}
+                  \\]
+                  <p>Add ‘em together, then using the fact that \\( \\sin^2{\\theta} + \\cos^2{\\theta} = 1 \\): </p>
+                  \\[
+                      n_2^2 n_1^2 \\style{opacity: 30%}{\\cancel{(\\cos^2{t_B} + \\sin^2{t_B})}} = n_2^4 \\cos^2{i_B} + n_1^4 \\sin^2{i_B}
+                  \\]
+                  <p>Divide ‘em by cos^2, and then use the identity for <span class="definition" data-definition="\\[ \\frac1{\\cos{\\theta}} = 1+\\tan^2{\\theta} \\]">secants</span></p>
+                  \\[
+                      n_2^2 n_1^2 (1+\\tan^2{i_B}) = n_2^4 + n_1^4 \\tan^2{i_B}
+                  \\]
+                  <p>Take the tan terms onto one side, then take out a factor of \\( n_1^2 \\) on the left and \\( n_2^2 \\) on the right and then cancel</p>
+                  \\[
+                      n_2^2 n_1^2 \\tan^2{i_B} - n_1^4 \\tan^2{i_B} = n_2^4 - n_2^2 n_1^2 \\\\
+                      n_1^2 \\tan^2{i_B} \\style{opacity: 30%}{\\cancel{(n_2^2 - n_1^2)}} = n_2^2\\style{opacity: 30%}{\\cancel{(n_2^2 - n_1^2)}} \\\\
+                      n_1^2 \\tan^2{i_B} = n_2^2
+                  \\]
+                  <p>Then by simple algebra: </p>
+                  <div class="hover-wrapper">
+                      <div class="formula-container">
+                          <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                              \\[ i_B = \\tan^{-1}\\left( \\frac{n_2}{n_1} \\right) \\]
+                          </div>
+                          <span class="formula-tooltip"><div class="formula-tooltip-title">
+                              Formula 1: Brewster Angle
+                          </div><div class="formula-tooltip-desc">
+                              The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+                          </div></span>
+                      </div>
+                  </div>
+                </p>
+              </div>
+            </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ i_B = \\tan^-1{\\frac{n_2}{n_1}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Brewster Angle
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <h3>Total Internal Reflection</h3>
+      <p>If we have a boundary where \\( n_1 \\) is more than \\( n_2\\), then there is no solution for \\( t \\). That means the light is all reflected. This is called <em>total internal reflection</em></p>
+      <p>So remember like half a second ago, when I told you there wasn't a solution for \\( t \\)? Actually there is a solution for t, it’s just an exponential decay rather than a normal wave.</p>
+      <p>The transmitted wavefunction has a x component and a z component:</p>
+      <div class=eqn> \\[ k = k_x \\hat{x} + k_z \\hat{x} \\] </div> 
+      <p>\\( k_\\parallel \\) must be equal on both sides of the boundary, meaning</p>
+      <div class=eqn> \\[ k_{\\text{transmit}, x} = k_{\\text{incident}, x} + k_\\text{incident} \\sin{i}  \\] </div> 
+      <p>Magnitude squared:</p>
+      <div class=eqn> \\[ |k_\\text{incident}|^2 = |k_{\\text{transmit}, x}|^2 + |k_{\\text{transmit}, z}|^2 \\] </div> 
+      <div class=eqn> \\[ k = \\frac{\\omega n}{c}   \\] </div> 
+      <p>Just by squaring:</p>
+      <div class=eqn> \\[ k^2 = \\frac{\\omega^2}{c^2}(n_1sin)  \\] </div> 
+      <p>We end up with</p>
+      <div class=eqn> \\[ E_t \\propto e^{-kz} e^{i(k_{\\text{transmit}, x} x- \\omega t)}   \\] </div> 
+      <p>This is called an *evanescent wave *</p>
+      <h3>Conductors</h3>
+      <p>Currents are allowed, but no free charges.</p>
+      <div class=eqn> \\[ 
+          \\vec{D} = \\varepsilon\\vec{E} \\\\ 
+          \\vec{B} = \\mu\\vec{H} 
+      \\] </div> 
+      <p>We also introduce the <em>conductivity</em>:</p>
+      <div class=eqn> \\[ \\vec{J} = g\\vec{E}  \\] </div> 
+      <p>This is literally just saying that a more conductive field gives you a larger current fort the same field. Anyway we take the curl of M3, this is like the billionth time we've done this icl, you get the gist:</p>
+      <div class=eqn> \\[ k^2 = i \\mu g \\omega + \\mu \\varepsilon \\omega^2  \\] </div> 
+      <p>For a ‘good conductor’, where omega is way less than g, we can neglect the second term</p>
+      <div class=eqn> \\[ k^2 \\approx i \\mu g \\omega \\] </div> 
+      <p>That gives us a value for k:</p>
+      <div class=eqn> \\[ k \\approx ± \\frac{1+i}{\\sqrt2} \\sqrt{\\mu g \\omega} \\] </div> 
+      <p>Which we can rewrite as</p>
+      <div class=eqn> \\[ k \\approx ± \\frac{1+i}{\\delta} \\] </div> 
+      <p>From that you can see:</p>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\delta = \\sqrt{\\frac2{\\mu g \\omega}} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Skin Depth
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <p>The decaying and plane wave component are in the same direction</p>
+      <p>k, E and H are now out of phase</p>
+      <h3>Reflections on boundaries with conductors</h3>
+      <p>Conductivity is infinite in a perfect conductor</p>
     `
   },
 
@@ -20207,40 +20369,38 @@ const subtopics = {
           <div class="formula-container">
               <div class="formula-box llarge-eqn" style="text-align: center; color: var(--text); margin: auto;">
                   \\[ \\style{font-size: 5vw}{\\left(
-      -i\\hbar c
-      \\begin{pmatrix}
-      0 & 0 & 1 & 0\\\\
-      0 & 0 & 0 & \\bar{1}\\\\
-      1 & 0 & 0 & 0\\\\
-      0 & \\bar{1} & 0 & 0
-      \\end{pmatrix}
-      \\frac{\\partial}{\\partial z}
-      +
-      mc^2
-      \\begin{pmatrix}
-      1 & 0 & 0 & 0\\\\
-      0 & 1 & 0 & 0\\\\
-      0 & 0 & \\bar{1} & 0\\\\
-      0 & 0 & 0 & \\bar{1}
-      \\end{pmatrix}
-      \\right)
-      \\begin{pmatrix}
-      u_1(p)\\\\
-      u_2(p)\\\\
-      u_3(p)\\\\
-      u_4(p)
-      \\end{pmatrix}
-      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}
-      =
-      i\\hbar \\frac{\\partial}{\\partial t}
-      \\begin{pmatrix}
-      u_1(p)\\\\
-      u_2(p)\\\\
-      u_3(p)\\\\
-      u_4(p)
-      \\end{pmatrix}
-      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}}
-      \\] 
+                      -i\\hbar c
+                      \\begin{pmatrix}
+                      0 & 0 & 1 & 0\\\\
+                      0 & 0 & 0 & \\bar{1}\\\\
+                      1 & 0 & 0 & 0\\\\
+                      0 & \\bar{1} & 0 & 0
+                      \\end{pmatrix}
+                      \\frac{\\partial}{\\partial z}
+                      + mc^2
+                      \\begin{pmatrix}
+                      1 & 0 & 0 & 0\\\\
+                      0 & 1 & 0 & 0\\\\
+                      0 & 0 & \\bar{1} & 0\\\\
+                      0 & 0 & 0 & \\bar{1}
+                      \\end{pmatrix}
+                      \\right)
+                      \\begin{pmatrix}
+                      u_1(p)\\\\
+                      u_2(p)\\\\
+                      u_3(p)\\\\
+                      u_4(p)
+                      \\end{pmatrix}
+                      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}
+                      =
+                      i\\hbar \\frac{\\partial}{\\partial t}
+                      \\begin{pmatrix}
+                      u_1(p)\\\\
+                      u_2(p)\\\\
+                      u_3(p)\\\\
+                      u_4(p)
+                      \\end{pmatrix}
+                      e^{i\\left(\\frac{pz}{\\hbar}-\\frac{Et}{\\hbar}\\right)}} \\] 
               </div>
               <span class="formula-tooltip"><div class="formula-tooltip-title">
                   Formula X: Expected value
@@ -20251,6 +20411,304 @@ const subtopics = {
       </div>
       <p>In the non-relativistic limit (\\( c_2 \\to \\infty \\)) the Dirac Equation reduces to the Schrodinger Equation but now he have an explanation for spin. It can also explain spin-orbit coupling.</p>
       <p>As for the negative energy states, it was interpreted to refer to a particle with the same mass but opposite charge, what we now know as anti-particles. This equation predicted them.</p>
+    `
+  },
+
+  "geometric": {
+    title: "Geometric optics",
+    content: `
+      <p>I'm sure you know this about waves: in the case of a reflection, the angle of incidence, \\( i \\), is the same as the angle of reflection \\( r \\)</p>
+      <div class=eqn> \\[ ∆(\\text{Optical Path}) = ∆(\\int^B_A n \\ dl) = 0 \\] </div> 
+      <div class="container">
+          <div class="text">
+          <p> 
+              wag123
+          </p>
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/ETO/Magnifying Glass.png" class="pop-image" 
+              style="max-width: 100%; width: 150vw"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+              Figure 1: Magnifying Glass</div><div class="image-tooltip-desc">
+              You saw this something like this when you clicked onto this topic</div></span>
+          </div>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac1{u} + \\frac1{v} = \\frac1{f} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Thin Lens Equation
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac1{f} = (n-1) \\left( \\frac1{R_1} - \\frac1{R_2} \\right) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Thin Lens Equation
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <div class="container">
+          <div class="text">
+          <p> 
+              wag123
+          </p>
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/ETO/Telescope.png" class="pop-image" 
+              style="max-width: 100%; width: 150vw"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+              Figure 2: Telescope</div><div class="image-tooltip-desc">
+              You saw this something like this when you clicked onto this topic</div></span>
+          </div>
+          </div>
+      </div>
+    `
+  },
+
+  "geo-optics": {
+    title: "Geometric optics",
+    content: `
+      <p>Up until now, we’ve treated light as a ray, which is fine when the wavelength is way smaller than the object it is interacting with. Foe example, visible light</p>
+      <p>If not, we use Fermat’s principle, where we kinda think of it like a particle. This guy asked what path light takes between two points, and concluded it takes the path which takes the least time (the shortest optical path)</p>
+      <p>The change in phase comes from integrating the wavenumber along the path, which makes sense since a plane wave has exponent k.r, which is basically the phase, making it a phase difference:</p>
+      <div class=eqn> \\[ ∆\\phi_\\text{A to B} = \\int^B_A k \\ dl  \\] </div> 
+      <p>By virtue of the very fury lamb formula</p>
+      <div class=eqn> \\[ ∆\\phi_\\text{A to B} = \\int^B_A \\frac{\\omega}{v} \\ dl  \\] </div> 
+      <p>And by the relation</p>
+      <div class=eqn> \\[ ∆\\phi_\\text{A to B} = \\int^B_A \\frac{\\omega}{c}n  \\ dl  \\] </div> 
+      <p>The <em>optical path</em> is the refractive index over the path.</p>
+      <div class=eqn> \\[ \\tau = \\int^B_A n  \\ dl  \\] </div> 
+      <p>The time taken is the optical path over c</p>
+      <div class=eqn> \\[ \\text{Time taken} = \\int^B_A \\frac1{v} \\ dl = \\frac{\\tau}{c}  \\] </div> 
+      <p>If we take the sum of all paths from a to b, most of them will destructively interfere, <em>except at the shortest length</em> (well, technically it's at the extremum which could be the minimum length <em>or</em> the maximum length, but how the bloody 'ell do you plan on maximising a path length, ykwim?)</p>
+      <p>So, we have a light source, A, and then some form of imager, which does whatever, and then it converges at the point B.</p>
+      <blockquote>
+      <p>Ideal image: All rays should converge at B</p>
+      </blockquote>
+      <p>All paths should have the same optical pathlength to satisfy Fermat’s Theorem</p>
+      <div class=eqn> \\[ ∆(\\text{Optical Path}) = ∆\\left( \\int^B_A n \\ dl \\right) = 0 \\] </div> 
+      <h3>Imaging by a spherical interface</h3>
+      <div class="container">
+          <div class="text">
+          <p> 
+              Now we want to bend the light to our will. To do this we will look at the most basic example. We have a sphere, and light is entering into it.
+          </p>
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/ETO/Spherical Interface.png" class="pop-image" 
+              style="max-width: 100%; width: 30vw"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+              Figure 2: Telescope</div><div class="image-tooltip-desc">
+              You saw this something like this when you clicked onto this topic</div></span>
+          </div>
+          </div>
+      </div>
+      <p>We know the formula for optical path, which incorporated a whole integral and what not. But you don't actually have to integrate, since it's basically just refractive index times distance. We know the refractive indexes are \\( n_1 \\) and \\( n_2 \\), and then by pythagoras:</p>
+      <div class=eqn> \\[ \\begin{align} \\tau 
+          &= n_1\\sqrt{(u+x)^2+y^2} + n_2\\sqrt{(v-x)^2+y^2} \\\\[6pt]
+          &= n_1\\sqrt{u^2+2ux+x^2+y^2} + n_2\\sqrt{v^2-2vx+x^2+y^2}.
+      \\end{align} \\] </div> 
+      <p>Then there is a theorem which says when any two chords on a circle cross, then the products of the lengths of the two pieces<br>
+      of each chord are equal, meaning \\( x^2 + y^2 = 2Rx \\).</p>
+      <div class=eqn> \\[
+      \\tau(x)=n_1\\sqrt{u^2+2(R+u)x}+n_2\\sqrt{v^2+2(R-v)x}
+      \\] </div> 
+      <p>Then to extremise, differentiate and put equal to zero</p>
+      <div class=eqn> \\[ \\frac{d\\tau(x)}{dx} = \\frac{n_1(R+u)}{\\sqrt{u^2+2(R+u)x}} + \\frac{n_2(R-v)}{\\sqrt{v^2+2(R-v)x}} = 0 \\] </div> 
+      <p>Then is \\( x \\) is small (the <em>paraxial rays</em> approximation):</p>
+      <div class=eqn> \\[ \\frac{n_1(R+u)}{u} + \\frac{n_2(R-v)}{v} = 0 \\] </div> 
+      <p>Rearranging:</p>
+      <div class=eqn> \\[ \\frac{n_1}{u} + \\frac{n_2}{v} = \\frac{n_1 - n_2}{R} \\] </div> 
+      <h3>Thin lenses</h3>
+      <p>Now if you think about it, a lens is a bit like if you were to take one spherical surfave and superglue another one on top of it</p>
+      <p>Principle rays:</p>
+      <ol>
+      <li>Start parallel to optic axis</li>
+      <li>End parallel to optic axis</li>
+      <li>Straight all the way through</li>
+      </ol>
+      <p>Limits to resolution:</p>
+      <ul>
+      <li>Quality of the lens</li>
+      <li>Diffraction</li>
+      <li>Ability to resolve small angles</li>
+      </ul>
+      <p>To overcome these limits, we need to make the distance the light travels smaller, until we reach the limit of the ‘<em>near point</em>’, \\( d_\\text{NP} \\). If it does form below \\( d_\\text{NP} \\), then the image will form behind the retina, making it appear blurry</p>
+      <div class="container">
+          <div class="text">
+          <p> 
+              wag123
+          </p>
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/ETO/Magnifying Glass.png" class="pop-image" 
+              style="max-width: 100%; width: 100vw"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+              Figure 1: Magnifying Glass</div><div class="image-tooltip-desc">
+              You saw this something like this when you clicked onto this topic</div></span>
+          </div>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac1{u} + \\frac1{v} = \\frac1{f} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Thin Lens Equation
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ \\frac1{f} = (n-1) \\left( \\frac1{R_1} - \\frac1{R_2} \\right) \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 1: Thin Lens Equation
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <h3>Telescopes</h3>
+      <div class="container">
+          <div class="text">
+          <p> 
+              Light comes in from a very, very large distance, as near enough parallel rays. IT passes through the objective lens and is focused onto the focal plane at a difference f1from the objective lens. </p>
+          <p>
+              Then there is a second lens (the eyepiece) at a distance f2 from the focal plane. The light rays escape parallel fro the eyepiece 
+          </p>
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/ETO/Telescope.png" class="pop-image" 
+              style="max-width: 100%; width: 150vw"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+              Figure 2: Telescope</div><div class="image-tooltip-desc">
+              You saw this something like this when you clicked onto this topic</div></span>
+          </div>
+          </div>
+      </div>
+      <div class="hover-wrapper">
+          <div class="formula-container">
+              <div class="formula-box eqn" style="text-align: center; color: var(--text); margin: auto;">
+                  \\[ M = \\frac{f_1}{f_2} \\]
+              </div>
+              <span class="formula-tooltip"><div class="formula-tooltip-title">
+                  Formula 3: Magnification
+              </div><div class="formula-tooltip-desc">
+                  The surface charge density is positive on the side where the electric field lines point to it, and negative on the other side.
+              </div></span>
+          </div>
+      </div>
+      <div class="container">
+          <div class="text">
+          <p> 
+              wag123
+          </p>
+          </div>
+          <div class="image">
+          <div class="image-floater">
+              <div class="image-box">
+              <img src="images/ETO/Telescope 2.png" class="pop-image" 
+              style="max-width: 100%; width: 150vw"/>
+              </div>
+              <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+              Figure 3: Telescope</div><div class="image-tooltip-desc">
+              You saw this something like this when you clicked onto this topic</div></span>
+          </div>
+          </div>
+      </div>
+    `
+  },
+
+  "wave-optics": {
+    title: "Wave optics",
+    content: `
+      <div class="container">
+          <div class="text">
+              <p> 
+                  The diffraction of light can be understood with Huygen’s principle: 
+              </p>
+          </div>
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                  <img src="images/ETO/Wave Optics Interference.png" class="pop-image" 
+                  style="max-width: 100%; width: 30vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                  Figure 1: Magnifying Glass</div><div class="image-tooltip-desc">
+                  You saw this something like this when you clicked onto this topic</div></span>
+              </div>
+          </div>
+      </div>
+      <blockquote>
+      <p><strong>HUYGEN'S PRINCIPLE</strong> Every point on a wavefront acts as a source of spherical wavelets</p>
+      </blockquote>
+      <p>We cannot resolve rays which are less than O... apart</p>
+      <h3>Thin film interference</h3>
+      <div class="container">
+          <div class="image">
+              <div class="image-floater">
+                  <div class="image-box">
+                  <img src="images/ETO/Thin Film Interference.png" class="pop-image" 
+                  style="max-width: 100%; width: 100vw"/>
+                  </div>
+                  <span class="image-tooltip" style="left:-40%;"> <div class="image-tooltip-title">
+                  Figure 2: Thin Film Interference</div><div class="image-tooltip-desc">
+                  ...</div></span>
+              </div>
+          </div>
+          <div class="text">
+              <p> 
+                  We have a setup where we have two materials with refractive indexes \\( n_1 \\) and \\( n_3 \\), and there is a thin film (hey, that's in the name!) with a width \\( d \\) and a refractive index \\( n_2 \\) between them. The light comes from the \\( n_1 \\) material. Also, don't let the image fool you, the light is going straight down.
+              </p>
+              <p> 
+                  When it hits the interface, it reflects a bit and transmits a bit, as you'd expect of a wave by now. Then the transmitted wave hits the second boundary, and again, some reflects and some transmits. We don't really care about the transmitted stuff, all the interesting things happen with the <em>reflected wave</em>.
+              </p>
+          </div>
+      </div>
+      <p>Why is the reflected wave so interesting? Because it can then come back up into the first boundary and transmit a little bit. That means the original reflected wave and this new transmitted wave are travelling in the same direction, meaning they <em>interfere</em> (hey, that's in the name too!).</p>
+      <p>Since it's only going down and then back up, the path difference is simply \\( 2d \\). That means we will have reflective co-efficients:</p>
+      <div class=eqn> \\[ r = r_{12} + r_{23} e^{i(2dk_2)} \\] </div>  (k.r) 
+      <p>If we set \\( d = \\frac{\\lambda}4 = \\frac{\\pi}{2k} \\), then the second term becomes -1, and we end up with:</p>
+      <div class=eqn> \\[ r = r_{12} - r_{23} \\] </div>
+      <p>This is “Quarter-wave coating”</p>
+      <p>\\( r = 0 \\) when they are the same.</p>
+      <h3>Dielectric Mirrors</h3>
+      <h3>Angle Dependance</h3>
+      <p>Before I only made it appear like the light was at an angle, but it wasn't really. But now it actually is</p>
+      <div class=eqn> \\[ \\text{Path Difference} = 2d k_2 \\cos t \\] </div>
+      <h3>Fabry–Pérot interferometry</h3>
     `
   }
 };

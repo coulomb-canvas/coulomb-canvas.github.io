@@ -43,7 +43,7 @@
   <script>
     document.body.style.overflow = "hidden";
     const topicContainer = document.getElementById("topic-container");
-    let year = 1;
+    let year = Number(sessionStorage.getItem("year")) || 1;
     let radius = 320;
 
     const mq = window.matchMedia("(max-width: 100vh)");
@@ -115,7 +115,10 @@
       const nextYearButton = document.getElementById("next-year-button");
       const prevYearButton = document.getElementById("previous-year-button")
 
-      prevYearButton.style.display = "none"
+      prevYearButton.style.display = "inline-block"
+      if (year < 2) {
+            prevYearButton.style.display = "none"
+          }
       const suffix = ["st", "nd", "rd", "th"]
 
       function setYears() {
@@ -130,6 +133,7 @@
           year = year + 1;
           setYears();
           console.log(year)
+          sessionStorage.setItem("year", year)
           reset()
           if (year > 1) {
             prevYearButton.style.display = "inline-block"
@@ -147,6 +151,7 @@
           setYears();
           reset()
           console.log(year)
+          sessionStorage.setItem("year", year)
           if (year < 4) {
             nextYearButton.style.display = "inline-block"
           }
